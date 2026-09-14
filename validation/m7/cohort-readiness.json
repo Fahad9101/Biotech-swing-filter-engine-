@@ -32,22 +32,35 @@
     "admissible_as_outcome_truth": false
   },
   "source_acquisition_status": {
+    "regulatory_primary_batch_01": {
+      "path": "validation/m7/acquisition/regulatory-primary-batch-01.json",
+      "candidate_count": 33,
+      "exact_first_public_timestamps_resolved": 13,
+      "date_only_candidates_pending_exact_timestamp": 20,
+      "cik_resolved_count": 18,
+      "registry_sha256": "723d873f956fb64e0cbd1ac1eb8eec2b8bca7795814be6bffe33d3c3f6fb763a",
+      "calendar_span": "2018-2025",
+      "proposed_stratum": "REGULATORY",
+      "status": "PRIMARY_SOURCE_CANDIDATE_BATCH_COMMITTED_NOT_FROZEN",
+      "authoritative_events_promoted": 0,
+      "note": "Issuer IR releases, contemporaneous SEC exhibits/8-Ks, FDA pages, and issuer press-release distribution records now provide a regulatory candidate pool above the frozen >=30 stratum minimum. The rows remain pre-freeze because every candidate must still clear historical-universe, negative-event, financing-window, single-asset, point-in-time evidence, and any unresolved CIK/timestamp blockers. No market-return outcome was used to select this batch."
+    },
     "sec_primary_from_github_runner": {
       "issuer_seeds_attempted": 220,
       "authoritative_candidates_acquired": 0,
       "status": "BLOCKED_BY_REMOTE_HTTP_ACCESS",
-      "note": "A pinned ticker-to-CIK mirror can seed discovery, but SEC submissions/archive evidence could not be promoted from the GitHub-hosted acquisition run. Zero acquired candidates must not be interpreted as zero historical events."
+      "note": "A pinned ticker-to-CIK mirror can seed discovery, but SEC submissions/archive evidence could not be promoted from the GitHub-hosted acquisition run. Targeted SEC documents remain usable through other access paths; zero runner-acquired candidates must not be interpreted as zero historical events."
     },
     "clinicaltrials_current_records_from_github_runner": {
       "candidate_nct_records_attempted": 962,
       "official_current_records_acquired": 0,
       "fetch_failures": 962,
       "status": "BLOCKED_BY_REMOTE_HTTP_ACCESS",
-      "note": "Research labels remain excluded from outcome truth. Historical ClinicalTrials record versions are still mandatory before cohort promotion."
+      "note": "Research labels remain excluded from outcome truth. Historical ClinicalTrials record versions are still mandatory before clinical-event cohort promotion."
     },
     "openfda_regulatory_discovery": {
-      "status": "QUERY_REPAIR_IN_PROGRESS",
-      "note": "The acquisition adapter is implemented, but the first range query returned an API error before any regulatory candidates were committed. No FDA candidate has been promoted to the cohort."
+      "status": "NO_LONGER_REQUIRED_TO_ESTABLISH_REGULATORY_CANDIDATE_CAPACITY",
+      "note": "The earlier bulk range-query attempt failed, but regulatory candidate capacity has now been established independently from issuer, SEC, FDA, and press-distribution primary/contemporaneous sources. openFDA may still be used as supplementary evidence but is not allowed to substitute for the first material public timestamp."
     }
   },
   "historical_market_data_status": {
@@ -69,15 +82,17 @@
   },
   "blocking_findings": [
     "No authoritative frozen 120-event registry or cohort-manifest.json exists.",
-    "Discovery metadata does not establish the first material public event timestamp.",
-    "Current discovery coverage does not satisfy the full 2018-2025 calendar requirement or regulatory stratum.",
-    "GitHub-hosted source-acquisition runs could not retrieve SEC and ClinicalTrials evidence required for promotion.",
-    "Point-in-time SEC, financing, single-asset, valuation, and historical trial-version evidence has not been reconstructed for a real cohort.",
+    "The regulatory candidate pool now exceeds the >=30 numerical stratum minimum, but zero regulatory rows are yet promotable to the frozen cohort because historical-event blockers remain unresolved.",
+    "Twenty of 33 regulatory candidates still have date-only first-public evidence; 15 of 33 still require CIK/historical-security identity resolution.",
+    "The Phase II, Phase III, early-clinical, and conference/other strata still require primary-source promotion from discovery leads.",
+    "At least 40 negative underlying clinical/regulatory events must be acquired and classified independently of stock returns.",
+    "Financing/dilution T-90 through T+30 and single-asset status have not yet been resolved for enough candidates to satisfy the frozen >=20 requirements.",
+    "Point-in-time SEC, financing, valuation, and historical trial-version evidence has not been reconstructed for a real frozen cohort.",
     "Alpaca SIP raw bars plus separate corporate actions are a viable market-data route, but no real cohort has yet been reconstructed through that route.",
     "No real 2025 holdout has been locked before outcome inspection."
   ],
   "merge_ready": false,
   "milestone_complete": false,
   "milestone_8_allowed": false,
-  "required_action": "Continue primary-source event acquisition outside the blocked GitHub-runner paths, repair and validate the FDA discovery query, freeze the compliant 120-event cohort before outcome inspection, then execute all four BOE snapshots and the full M7 validation using leakage-safe Alpaca SIP raw bars and explicit corporate actions. Do not reduce requirements or alter BOE-1.0.0."
+  "required_action": "Promote the regulatory batch by resolving exact first-public timestamps, CIK/security identity, historical-universe status, financing-window and single-asset fields; acquire primary-source Phase II, Phase III, early-clinical, conference/other and negative-event batches; only then freeze the compliant >=120-event cohort before outcome inspection and execute all four BOE snapshots using leakage-safe Alpaca SIP raw bars plus explicit corporate actions. Do not reduce requirements or alter BOE-1.0.0."
 }
