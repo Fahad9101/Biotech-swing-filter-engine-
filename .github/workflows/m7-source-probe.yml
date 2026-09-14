@@ -16,7 +16,7 @@ jobs:
       - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
-      - name: Quantify candidate-discovery capacity
+      - name: Inspect candidate-discovery dataset
         run: |
           python - <<'PY'
           import csv, io, json, urllib.request, collections
@@ -24,10 +24,21 @@ jobs:
           base = 'https://huggingface.co/datasets/chufangao/CTO/resolve/main/'
           def load(path):
               with urllib.request.urlopen(base + path, timeout=60) as response:
-                  return list(csv.DictReader(io.StringIO(response.read().decode('utf-8-sig'))))
+                  text = response.read().decode('utf-8-sig')
+              reader = csv.DictReader(io.StringIO(text))
+              return reader.fieldnames or [], list(reader)
 
-          metadata = load('human_labels_2020_2024/human_labels_2020_2024.csv')
-          mappings = load('labels_and_tickers/labels_and_tickers.csv')
+          metadata_fields, metadata = load('human_labels_2020_2024/human_labels_2020_2024.csv')
+          mapping_fields, mappings = load('labels_and_tickers/labels_and_tickers.csv')
+          print('METADATA_FIELDS', json.dumps(metadata_fields))
+          print('MAPPING_FIELDS', json.dumps(mapping_fields))
+          print('METADATA_ROWS', len(metadata))
+          print('MAPPING_ROWS', len(mappings))
+          for idx, row in enumerate(metadata[:5]):
+              print('METADATA_SAMPLE', idx, json.dumps(row, sort_keys=True))
+          for idx, row in enumerate(mappings[:5]):
+              print('MAPPING_SAMPLE', idx, json.dumps(row, sort_keys=True))
+
           by_nct = collections.defaultdict(list)
           for row in mappings:
               ticker = (row.get('Ticker') or '').strip().upper()
@@ -41,21 +52,14 @@ jobs:
               year = (row.get('completion_year') or '').strip()
               source_class = (row.get('source_class') or '').strip()
               if nct in by_nct and phase in {'PHASE1', 'PHASE1/PHASE2', 'PHASE2', 'PHASE2/PHASE3', 'PHASE3'} and year in {'2020','2021','2022','2023','2024'}:
-                  joined.append((nct, phase, year, source_class, tuple(sorted(set(by_nct[nct]))), row.get('source','')))
+                  joined.append((nct, phase, year, source_class, tuple(sorted(set(by_nct[nct]))), row))
 
           print('JOINED_TRIALS', len(joined))
           print('UNIQUE_NCT', len({x[0] for x in joined}))
           print('UNIQUE_TICKERS', len({t for x in joined for t in x[4]}))
           print('BY_PHASE', json.dumps(collections.Counter(x[1] for x in joined), sort_keys=True))
           print('BY_YEAR', json.dumps(collections.Counter(x[2] for x in joined), sort_keys=True))
-          print('BY_PHASE_YEAR', json.dumps({f'{p}|{y}': n for (p,y),n in sorted(collections.Counter((x[1],x[2]) for x in joined).items())}, sort_keys=True))
           print('INDUSTRY', sum(x[3] == 'INDUSTRY' for x in joined))
-          print('SAMPLE_INDUSTRY')
-          shown = 0
-          for item in joined:
-              if item[3] == 'INDUSTRY':
-                  print(json.dumps({'nct':item[0], 'phase':item[1], 'year':item[2], 'tickers':item[4], 'sponsor':item[5]}))
-                  shown += 1
-                  if shown >= 25:
-                      break
+          for item in [x for x in joined if x[3] == 'INDUSTRY'][:10]:
+              print('JOINED_SAMPLE', json.dumps({'nct': item[0], 'phase': item[1], 'year': item[2], 'tickers': item[4], 'metadata': item[5]}, sort_keys=True))
           PY
