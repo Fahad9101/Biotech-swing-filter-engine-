@@ -31,6 +31,13 @@
     "admissible_as_authoritative_event_source": false,
     "admissible_as_outcome_truth": false
   },
+  "prefreeze_reserve_summary": {
+    "raw_candidate_rows_before_deduplication": 165,
+    "known_negative_candidate_rows_before_deduplication": 43,
+    "all_frozen_numerical_strata_have_reserve_capacity": true,
+    "eligible_authoritative_registry_count": 0,
+    "note": "Reserve counts are acquisition capacity only. They are not eligible-event counts and cannot be used to freeze the cohort until promotion blockers, cross-batch deduplication, issuer concentration, financing-window, single-asset, historical-universe, and point-in-time evidence requirements are resolved."
+  },
   "source_acquisition_status": {
     "regulatory_primary_batch_01": {
       "path": "validation/m7/acquisition/regulatory-primary-batch-01.json",
@@ -42,8 +49,20 @@
       "calendar_span": "2018-2025",
       "proposed_stratum": "REGULATORY",
       "status": "PRIMARY_SOURCE_CANDIDATE_BATCH_COMMITTED_NOT_FROZEN",
-      "authoritative_events_promoted": 0,
-      "note": "The regulatory reserve is numerically above the frozen >=30 requirement. Seven additional SEC-verified CIK identities were applied without using market outcomes. Rows remain pre-freeze pending full historical promotion fields."
+      "authoritative_events_promoted": 0
+    },
+    "phase2_primary_batch_01": {
+      "path": "validation/m7/acquisition/phase2-primary-batch-01.json",
+      "candidate_count": 36,
+      "exact_first_public_timestamps_resolved": 21,
+      "date_only_candidates_pending_exact_timestamp": 15,
+      "cik_resolved_count": 10,
+      "negative_event_candidates": 13,
+      "registry_sha256": "f3333568e0158708511a8080d1f075a64fc94967c1f295dce5fa8eda80334a07",
+      "calendar_span": "2018-2025",
+      "proposed_stratum": "PHASE_2_POC",
+      "status": "PRIMARY_SOURCE_CANDIDATE_BATCH_COMMITTED_NOT_FROZEN",
+      "authoritative_events_promoted": 0
     },
     "phase3_primary_batch_01": {
       "path": "validation/m7/acquisition/phase3-primary-batch-01.json",
@@ -56,8 +75,47 @@
       "calendar_span": "2018-2025",
       "proposed_stratum": "PHASE_3_PIVOTAL",
       "status": "PRIMARY_SOURCE_CANDIDATE_BATCH_COMMITTED_NOT_FROZEN",
+      "authoritative_events_promoted": 0
+    },
+    "early_clinical_primary_batch_01": {
+      "path": "validation/m7/acquisition/early-clinical-primary-batch-01.json",
+      "candidate_count": 31,
+      "exact_first_public_timestamps_resolved": 28,
+      "date_only_candidates_pending_exact_timestamp": 3,
+      "cik_resolved_count": 0,
+      "negative_event_candidates": 5,
+      "registry_sha256": "8726c486bd34c0897ef701125cdfbfb72c98526d19c5a74e5477731adaca6253",
+      "calendar_span": "2018-2025",
+      "proposed_stratum": "EARLY_CLINICAL",
+      "status": "PRIMARY_SOURCE_CANDIDATE_BATCH_COMMITTED_NOT_FROZEN",
+      "authoritative_events_promoted": 0
+    },
+    "conference_other_primary_batch_01": {
+      "path": "validation/m7/acquisition/conference-other-primary-batch-01.json",
+      "candidate_count": 26,
+      "exact_first_public_timestamps_resolved": 25,
+      "date_only_candidates_pending_exact_timestamp": 1,
+      "cik_resolved_count": 0,
+      "negative_event_candidates": 0,
+      "registry_sha256": "00084a670b361ebf6cc1ff18f898a7101f850062ac632e762e64f35ec6e22759",
+      "calendar_span": "2018-2025",
+      "proposed_stratum": "CONFERENCE_OTHER",
+      "status": "PRIMARY_SOURCE_CANDIDATE_BATCH_COMMITTED_NOT_FROZEN",
       "authoritative_events_promoted": 0,
-      "note": "Issuer/press-distribution result disclosures provide >30 Phase III candidates with both positive and failed/missed primary results. negative_event_candidate is derived only from the underlying clinical primary/co-primary result; no stock return, MFE, MAE, or BOE historical outcome has been attached or inspected for selection."
+      "note": "Conference rows require verification of abstract/poster/oral first-public availability and cross-stratum deduplication before promotion."
+    },
+    "negative_phase2_supplement_01": {
+      "path": "validation/m7/acquisition/negative-phase2-supplement-01.json",
+      "candidate_count": 8,
+      "exact_first_public_timestamps_resolved": 8,
+      "date_only_candidates_pending_exact_timestamp": 0,
+      "cik_resolved_count": 0,
+      "negative_event_candidates": 8,
+      "registry_sha256": "1fc09725940a26928d4bcb927053430fe59d973c1d7d7afa156ff5117ea26959",
+      "proposed_stratum": "PHASE_2_POC",
+      "status": "PRIMARY_SOURCE_NEGATIVE_SUPPLEMENT_COMMITTED_NOT_FROZEN",
+      "authoritative_events_promoted": 0,
+      "note": "Negative status is based on prespecified clinical endpoint failure, not market performance. Supplement must be deduplicated against the primary Phase II reserve before master-registry inclusion."
     },
     "sec_primary_from_github_runner": {
       "issuer_seeds_attempted": 220,
@@ -71,10 +129,6 @@
       "fetch_failures": 962,
       "status": "BLOCKED_BY_REMOTE_HTTP_ACCESS",
       "note": "Research labels remain excluded from outcome truth. Historical ClinicalTrials record versions remain mandatory before clinical-event promotion."
-    },
-    "openfda_regulatory_discovery": {
-      "status": "NO_LONGER_REQUIRED_TO_ESTABLISH_REGULATORY_CANDIDATE_CAPACITY",
-      "note": "Regulatory candidate capacity has been established independently from issuer, SEC, FDA, and press-distribution primary/contemporaneous sources. openFDA cannot substitute for first material public timestamp evidence."
     }
   },
   "historical_market_data_status": {
@@ -96,17 +150,17 @@
   },
   "blocking_findings": [
     "No authoritative frozen 120-event registry or cohort-manifest.json exists.",
-    "Regulatory and Phase III candidate reserves now each exceed their numerical >=30 stratum minima, but zero rows are yet promoted to the frozen cohort because historical-event blockers remain unresolved.",
-    "Twenty of 33 regulatory candidates and 4 of 31 Phase III candidates still have date-only first-public evidence; unresolved CIK/security identity remains substantial, especially in Phase III.",
-    "The Phase II, early-clinical, and conference/other strata still require primary-source acquisition/promotion.",
-    "The committed Phase III reserve contributes 17 underlying negative-event candidates, but the frozen cohort still requires >=40 negative events after full promotion and deterministic sampling.",
+    "All five numerical stratum minima now have pre-freeze reserve capacity, but no reserve row is automatically eligible for the authoritative cohort.",
+    "The pre-freeze negative reserve is 43 candidate rows before deduplication and promotion; the final frozen cohort still must contain at least 40 verified negative underlying events.",
+    "Cross-batch deduplication and primary-stratum assignment remain incomplete, especially for conference/other disclosures that may overlap clinical program updates.",
+    "Historical ticker/CIK/security identity and exact first-public availability remain unresolved for many rows.",
     "Financing/dilution T-90 through T+30 and single-asset status have not yet been resolved for enough candidates to satisfy the frozen >=20 requirements.",
-    "Point-in-time SEC, financing, valuation, and historical trial-version evidence has not been reconstructed for a real frozen cohort.",
+    "Historical BOE universe/investability status and point-in-time scientific, SEC, capital-structure, and valuation evidence have not yet been reconstructed for an eligible >=120-event registry.",
     "Alpaca SIP raw bars plus separate corporate actions are a viable market-data route, but no real cohort has yet been reconstructed through that route.",
     "No real 2025 holdout has been locked before outcome inspection."
   ],
   "merge_ready": false,
   "milestone_complete": false,
   "milestone_8_allowed": false,
-  "required_action": "Acquire primary-source Phase II, early-clinical, and conference/other reserves while continuing promotion of the regulatory and Phase III batches; resolve enough underlying negative events, financing-window cases, and single-asset issuers to satisfy frozen minima; only then freeze the compliant >=120-event cohort before outcome inspection and execute all four BOE snapshots using leakage-safe Alpaca SIP raw bars plus explicit corporate actions. Do not reduce requirements or alter BOE-1.0.0."
+  "required_action": "Stop expanding strata unless promotion attrition requires replacements. Consolidate and deduplicate the 165-row pre-freeze reserve, resolve historical identity/timestamps/universe status, establish >=20 financing-window and >=20 single-asset cases, verify enough point-in-time evidence to yield >=120 eligible events with all frozen constraints, then freeze with seed 100100 before any stock-outcome inspection. Do not reduce requirements or alter BOE-1.0.0."
 }
