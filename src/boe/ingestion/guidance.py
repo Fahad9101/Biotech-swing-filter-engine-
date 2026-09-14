@@ -56,6 +56,8 @@ def extract_catalyst_guidance(
         if window is None:
             continue
         start, end, confidence = window
+        if end < known_at.date():
+            continue
         observations.append(
             CatalystObservation(
                 issuer_id=issuer_id,
@@ -93,14 +95,14 @@ def _infer_catalyst_type(sentence: str, clinical_phase: str) -> CatalystType | N
         return CatalystType.REG_SUBMIT
     if any(token in lower for token in ("topline", "top-line", "readout", "data", "results")):
         phase = clinical_phase.lower().replace(" ", "")
-        if "3" in phase:
-            return CatalystType.CLIN_P3
         if "2/3" in phase or "2-3" in phase:
             return CatalystType.CLIN_P2_3
-        if "2" in phase:
-            return CatalystType.CLIN_P2
+        if "3" in phase:
+            return CatalystType.CLIN_P3
         if "1/2" in phase or "1-2" in phase:
             return CatalystType.CLIN_P1_2
+        if "2" in phase:
+            return CatalystType.CLIN_P2
         if "1" in phase:
             return CatalystType.CLIN_P1
         return CatalystType.CONF_DATA
