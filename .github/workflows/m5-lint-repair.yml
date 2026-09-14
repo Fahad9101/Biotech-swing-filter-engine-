@@ -1,0 +1,47 @@
+name: M5 lint repair
+
+on:
+  push:
+    branches: [milestone-5-science-pos-rnpv-scoring]
+
+permissions:
+  contents: write
+
+jobs:
+  repair:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: milestone-5-science-pos-rnpv-scoring
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Repair lint and format
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          path = Path('src/boe/gates.py')
+          text = path.read_text()
+          old = '            "single-asset failure leaves <12 months cash with no credible second asset and >60% downside",'
+          new = '            (\n                "single-asset failure leaves <12 months cash with no credible second asset "\n                "and >60% downside"\n            ),'
+          if old not in text:
+              raise SystemExit('expected gate explanation fragment not found')
+          path.write_text(text.replace(old, new))
+          PY
+          python -m pip install "ruff>=0.12,<1"
+          ruff check --fix .
+          ruff format .
+          ruff check .
+      - name: Commit repairs
+        run: |
+          if git diff --quiet; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src tests
+          git commit -m "style: repair Milestone 5 lint"
+          git push origin HEAD:milestone-5-science-pos-rnpv-scoring
