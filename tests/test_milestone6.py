@@ -60,9 +60,9 @@ def _synthetic_stooq_text(symbol: str) -> str:
                 Decimal("0.12"),
                 Decimal("-0.02"),
             )[index % 5]
-            close = (
-                Decimal("10.00") + Decimal("0.075") * index + cycle
-            ).quantize(Decimal("0.01"))
+            close = (Decimal("10.00") + Decimal("0.075") * index + cycle).quantize(
+                Decimal("0.01")
+            )
             open_ = (
                 close - Decimal("0.06") if index % 2 == 0 else close + Decimal("0.04")
             ).quantize(Decimal("0.01"))
@@ -77,9 +77,9 @@ def _synthetic_stooq_text(symbol: str) -> str:
                 Decimal("0.06"),
                 Decimal("-0.03"),
             )[index % 5]
-            close = (
-                Decimal("100.00") + Decimal("0.18") * index + cycle
-            ).quantize(Decimal("0.01"))
+            close = (Decimal("100.00") + Decimal("0.18") * index + cycle).quantize(
+                Decimal("0.01")
+            )
             open_ = (
                 close - Decimal("0.12") if index % 2 == 0 else close + Decimal("0.10")
             ).quantize(Decimal("0.01"))
@@ -309,9 +309,7 @@ def test_raw_split_adjustment_uses_only_splits_known_by_cutoff():
     assert adjusted.bars[0].volume == 2000
     assert adjusted.bars[1].adjusted_close == Decimal("52")
 
-    future_known = split.model_copy(
-        update={"known_at": datetime(2026, 4, 21, 21, 0, tzinfo=UTC)}
-    )
+    future_known = split.model_copy(update={"known_at": datetime(2026, 4, 21, 21, 0, tzinfo=UTC)})
     unadjusted = adjust_raw_bars_for_splits(
         symbol="ABC",
         provider="FIXTURE",
@@ -427,9 +425,9 @@ def _independent_metrics(security, benchmark):
     xs = [Decimal(index) for index in range(20)]
     x_mean = sum(xs, Decimal("0")) / Decimal(20)
     y_mean = sum(obv_values, Decimal("0")) / Decimal(20)
-    obv_slope = sum(
-        (x - x_mean) * (y - y_mean) for x, y in zip(xs, obv_values)
-    ) / sum((x - x_mean) ** 2 for x in xs)
+    obv_slope = sum((x - x_mean) * (y - y_mean) for x, y in zip(xs, obv_values)) / sum(
+        (x - x_mean) ** 2 for x in xs
+    )
 
     return {
         "close": closes[-1],
