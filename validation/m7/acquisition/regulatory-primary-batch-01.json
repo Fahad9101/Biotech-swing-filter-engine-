@@ -939,7 +939,7 @@
   "exact_timestamp_count": 13,
   "format_version": "1.0",
   "generated_at": "2026-09-14T19:20:00+00:00",
-  "registry_sha256": "d04bdce6474ca6b2bb1802f5c04de1f9be135365c581950adcb85b06a56dc46e",
+  "registry_sha256": "723d873f956fb64e0cbd1ac1eb8eec2b8bca7795814be6bffe33d3c3f6fb763a",
   "role": "PRIMARY_SOURCE_REGULATORY_CANDIDATES_NOT_FROZEN_COHORT",
   "rules_version": "BOE-1.0.0",
   "source_boundary": {
