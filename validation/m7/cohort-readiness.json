@@ -31,16 +31,53 @@
     "admissible_as_authoritative_event_source": false,
     "admissible_as_outcome_truth": false
   },
+  "source_acquisition_status": {
+    "sec_primary_from_github_runner": {
+      "issuer_seeds_attempted": 220,
+      "authoritative_candidates_acquired": 0,
+      "status": "BLOCKED_BY_REMOTE_HTTP_ACCESS",
+      "note": "A pinned ticker-to-CIK mirror can seed discovery, but SEC submissions/archive evidence could not be promoted from the GitHub-hosted acquisition run. Zero acquired candidates must not be interpreted as zero historical events."
+    },
+    "clinicaltrials_current_records_from_github_runner": {
+      "candidate_nct_records_attempted": 962,
+      "official_current_records_acquired": 0,
+      "fetch_failures": 962,
+      "status": "BLOCKED_BY_REMOTE_HTTP_ACCESS",
+      "note": "Research labels remain excluded from outcome truth. Historical ClinicalTrials record versions are still mandatory before cohort promotion."
+    },
+    "openfda_regulatory_discovery": {
+      "status": "QUERY_REPAIR_IN_PROGRESS",
+      "note": "The acquisition adapter is implemented, but the first range query returned an API error before any regulatory candidates were committed. No FDA candidate has been promoted to the cohort."
+    }
+  },
+  "historical_market_data_status": {
+    "status": "VIABLE_SOURCE_IDENTIFIED_NOT_YET_COHORT_EXECUTED",
+    "provider": "Alpaca",
+    "feed": "SIP",
+    "bar_mode": "RAW_AS_TRADED",
+    "corporate_actions_separate": true,
+    "validation_case": {
+      "symbol": "NVDA",
+      "pre_split_session": "2024-06-07",
+      "pre_split_close": 1208.88,
+      "post_split_session": "2024-06-10",
+      "post_split_close": 121.79,
+      "reported_action": "10-for-1 forward split",
+      "ex_date": "2024-06-10"
+    },
+    "note": "The connected SIP feed returned consolidated raw pre/post-split prices and a separate corporate-action record, which is compatible with leakage-safe reconstruction. This finding does not itself complete any historical BOE snapshot or outcome record."
+  },
   "blocking_findings": [
     "No authoritative frozen 120-event registry or cohort-manifest.json exists.",
     "Discovery metadata does not establish the first material public event timestamp.",
     "Current discovery coverage does not satisfy the full 2018-2025 calendar requirement or regulatory stratum.",
-    "Point-in-time SEC, financing, single-asset, and valuation evidence has not been reconstructed for a real cohort.",
-    "M6 validation-only market data cannot be reused from a later provider-adjusted snapshot for earlier historical cutoffs without violating leakage controls.",
+    "GitHub-hosted source-acquisition runs could not retrieve SEC and ClinicalTrials evidence required for promotion.",
+    "Point-in-time SEC, financing, single-asset, valuation, and historical trial-version evidence has not been reconstructed for a real cohort.",
+    "Alpaca SIP raw bars plus separate corporate actions are a viable market-data route, but no real cohort has yet been reconstructed through that route.",
     "No real 2025 holdout has been locked before outcome inspection."
   ],
   "merge_ready": false,
   "milestone_complete": false,
   "milestone_8_allowed": false,
-  "required_action": "Acquire and verify primary historical sources and point-in-time market data, freeze the compliant cohort, then execute the full M7 validation. Do not reduce requirements or alter BOE-1.0.0."
+  "required_action": "Continue primary-source event acquisition outside the blocked GitHub-runner paths, repair and validate the FDA discovery query, freeze the compliant 120-event cohort before outcome inspection, then execute all four BOE snapshots and the full M7 validation using leakage-safe Alpaca SIP raw bars and explicit corporate actions. Do not reduce requirements or alter BOE-1.0.0."
 }
