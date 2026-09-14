@@ -1,0 +1,46 @@
+{
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "m6_baseline_sha": "3060761a11f7bd85298f79efa8e262e5b8adedaf",
+  "reviewed_at": "2026-09-14",
+  "required_minimum_events": 120,
+  "authoritative_events_frozen": 0,
+  "authoritative_cohort_manifest_present": false,
+  "real_four_snapshot_reconstructions_complete": 0,
+  "real_outcomes_complete": 0,
+  "holdout_2025_locked_events": 0,
+  "discovery_probe": {
+    "source_role": "candidate_discovery_only",
+    "joined_trial_candidates": 962,
+    "unique_tickers": 153,
+    "industry_sponsored_records": 858,
+    "phase_counts": {
+      "PHASE1": 125,
+      "PHASE1_PHASE2": 46,
+      "PHASE2": 309,
+      "PHASE2_PHASE3": 29,
+      "PHASE3": 453
+    },
+    "completion_year_counts": {
+      "2020": 249,
+      "2021": 256,
+      "2022": 280,
+      "2023": 176,
+      "2024": 1
+    },
+    "admissible_as_authoritative_event_source": false,
+    "admissible_as_outcome_truth": false
+  },
+  "blocking_findings": [
+    "No authoritative frozen 120-event registry or cohort-manifest.json exists.",
+    "Discovery metadata does not establish the first material public event timestamp.",
+    "Current discovery coverage does not satisfy the full 2018-2025 calendar requirement or regulatory stratum.",
+    "Point-in-time SEC, financing, single-asset, and valuation evidence has not been reconstructed for a real cohort.",
+    "M6 validation-only market data cannot be reused from a later provider-adjusted snapshot for earlier historical cutoffs without violating leakage controls.",
+    "No real 2025 holdout has been locked before outcome inspection."
+  ],
+  "merge_ready": false,
+  "milestone_complete": false,
+  "milestone_8_allowed": false,
+  "required_action": "Acquire and verify primary historical sources and point-in-time market data, freeze the compliant cohort, then execute the full M7 validation. Do not reduce requirements or alter BOE-1.0.0."
+}
