@@ -157,7 +157,8 @@ def test_independent_indicator_recomputation_matches_golden(repository_root: Pat
         "up_down_dollar_volume_ratio",
         "obv_slope",
     ):
-        actual = getattr(snapshot, key)
+        snapshot_key = "benchmark_return_20d_pct" if key == "xbi_return_20d_pct" else key
+        actual = getattr(snapshot, snapshot_key)
         expected = Decimal(golden[key])
         independent = independently[key]
         assert abs(actual - expected) < Decimal("1e-20")
