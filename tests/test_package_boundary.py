@@ -1,7 +1,7 @@
 from pathlib import Path
 
 
-def test_milestone_three_stays_inside_approved_boundary(repository_root: Path):
+def test_milestone_four_stays_inside_approved_boundary(repository_root: Path):
     package_files = {
         path.relative_to(repository_root).as_posix()
         for path in (repository_root / "src").rglob("*.py")
@@ -9,9 +9,9 @@ def test_milestone_three_stays_inside_approved_boundary(repository_root: Path):
 
     assert any("catalyst" in path for path in package_files)
     assert any("clinical" in path for path in package_files)
+    assert any("financial" in path for path in package_files)
 
     forbidden_components = {
-        "financials",
         "market_data",
         "scoring",
         "technical",

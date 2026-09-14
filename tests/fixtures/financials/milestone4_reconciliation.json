@@ -1,0 +1,23 @@
+[
+  {
+    "field_name": "cash",
+    "observed": "500000000",
+    "expected": "500000000",
+    "absolute_tolerance": "1",
+    "relative_tolerance_pct": "0.01"
+  },
+  {
+    "field_name": "normalized_quarterly_burn",
+    "observed": "52500000",
+    "expected": "52500000",
+    "absolute_tolerance": "1",
+    "relative_tolerance_pct": "0.01"
+  },
+  {
+    "field_name": "fully_diluted_shares",
+    "observed": "107000000",
+    "expected": "107000000",
+    "absolute_tolerance": "1",
+    "relative_tolerance_pct": "0.01"
+  }
+]
