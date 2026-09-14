@@ -434,7 +434,10 @@ def _candidate_from_filing(
 def _write_outputs(seeds: list[IssuerSeed], candidates: list[CandidateEvent]) -> None:
     output_dir = Path("validation/m7/discovery")
     output_dir.mkdir(parents=True, exist_ok=True)
-    sorted_candidates = sorted(candidates, key=lambda item: (item.accepted_at, item.ticker, item.accession))
+    sorted_candidates = sorted(
+        candidates,
+        key=lambda item: (item.accepted_at, item.ticker, item.accession),
+    )
     registry_payload = {
         "format_version": "1.0",
         "role": "DISCOVERY_ONLY_NOT_FROZEN_COHORT",
