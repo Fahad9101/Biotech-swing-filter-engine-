@@ -16,10 +16,14 @@ from boe.models import ContractModel
 
 ALLOWED_HOSTS = frozenset(
     {
+        "api.fda.gov",
+        "clinicaltrials.gov",
         "data.sec.gov",
-        "www.sec.gov",
         "nasdaqtrader.com",
+        "www.clinicaltrials.gov",
+        "www.fda.gov",
         "www.nasdaqtrader.com",
+        "www.sec.gov",
     }
 )
 SEC_HOSTS = frozenset({"data.sec.gov", "www.sec.gov"})
@@ -67,7 +71,7 @@ class PublicDataClient:
         self._lock = threading.Lock()
         self._last_sec_request = 0.0
 
-    def __enter__(self) -> PublicDataClient:
+    def __enter__(self) -> Self:
         return self
 
     def __exit__(self, *_: object) -> None:
