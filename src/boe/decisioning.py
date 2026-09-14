@@ -63,7 +63,9 @@ def classify(input_: ClassificationInput, rules: ScorecardContract) -> Classific
         )
 
     watchlist = rules.classifications[Classification.WATCHLIST.value]
-    watchlist_score = input_.score.raw_total >= int(watchlist["raw_score_min"])
+    watchlist_score = input_.score.raw_total >= _integer(
+        watchlist["raw_score_min"], "WATCHLIST.raw_score_min"
+    )
     forced_coverage = input_.coverage_pct >= Decimal(
         str(watchlist["coverage_pct_min"])
     ) and input_.coverage_pct <= Decimal(str(watchlist["coverage_pct_max_for_forced_watchlist"]))
@@ -94,12 +96,13 @@ def _meets_high_conviction(
     rules: dict[str, object],
 ) -> bool:
     return (
-        input_.score.raw_total >= int(rules["raw_score_min"])
+        input_.score.raw_total >= _integer(rules["raw_score_min"], "high.raw_score_min")
         and input_.coverage_pct >= Decimal(str(rules["coverage_pct_min"]))
         and _factor_minimums(factor_points, rules["factor_min"])
-        and input_.timing_confidence.value in set(rules["allowed_timing_confidence"])
-        and input_.catalyst_days >= int(rules["catalyst_days_min"])
-        and input_.catalyst_days <= int(rules["catalyst_days_max"])
+        and input_.timing_confidence.value
+        in _string_set(rules["allowed_timing_confidence"], "high.allowed_timing_confidence")
+        and input_.catalyst_days >= _integer(rules["catalyst_days_min"], "high.catalyst_days_min")
+        and input_.catalyst_days <= _integer(rules["catalyst_days_max"], "high.catalyst_days_max")
         and input_.expected_value.base_ev_pct >= Decimal(str(rules["base_ev_min_pct"]))
         and input_.expected_value.conservative_ev_pct
         >= Decimal(str(rules["conservative_ev_min_pct"]))
@@ -122,12 +125,13 @@ def _meets_catalyst_swing(
         ):
             return False
     return (
-        input_.score.raw_total >= int(rules["raw_score_min"])
+        input_.score.raw_total >= _integer(rules["raw_score_min"], "swing.raw_score_min")
         and input_.coverage_pct >= Decimal(str(rules["coverage_pct_min"]))
         and _factor_minimums(factor_points, rules["factor_min"])
-        and input_.timing_confidence.value in set(rules["allowed_timing_confidence"])
-        and input_.catalyst_days >= int(rules["catalyst_days_min"])
-        and input_.catalyst_days <= int(rules["catalyst_days_max"])
+        and input_.timing_confidence.value
+        in _string_set(rules["allowed_timing_confidence"], "swing.allowed_timing_confidence")
+        and input_.catalyst_days >= _integer(rules["catalyst_days_min"], "swing.catalyst_days_min")
+        and input_.catalyst_days <= _integer(rules["catalyst_days_max"], "swing.catalyst_days_max")
         and input_.expected_value.base_ev_pct >= Decimal(str(rules["base_ev_min_pct"]))
         and input_.expected_value.conservative_ev_pct
         >= Decimal(str(rules["conservative_ev_min_pct"]))
@@ -137,18 +141,47 @@ def _meets_catalyst_swing(
 
 
 def _factor_minimums(factor_points: dict[str, int], raw: object) -> bool:
-    if not isinstance(raw, dict):
-        raise TypeError("classification factor_min must be a mapping")
+    minimums = _mapping(raw, "classification factor_min")
     for code in (
         FactorCode.CATALYST,
         FactorCode.SCIENCE,
         FactorCode.CASH_DILUTION,
         FactorCode.VALUATION,
     ):
-        minimum = raw.get(code.value)
-        if minimum is not None and factor_points.get(code.value, 0) < int(minimum):
+        minimum = minimums.get(code.value)
+        if minimum is not None and factor_points.get(code.value, 0) < _integer(
+            minimum, f"factor_min.{code.value}"
+        ):
             return False
     return True
+
+
+def _integer(raw: object, label: str) -> int:
+    if isinstance(raw, bool) or not isinstance(raw, int):
+        raise TypeError(f"{label} must be an integer")
+    return raw
+
+
+def _string_set(raw: object, label: str) -> set[str]:
+    if not isinstance(raw, list):
+        raise TypeError(f"{label} must be a list")
+    values: set[str] = set()
+    for item in raw:
+        if not isinstance(item, str):
+            raise TypeError(f"{label} entries must be strings")
+        values.add(item)
+    return values
+
+
+def _mapping(raw: object, label: str) -> dict[str, object]:
+    if not isinstance(raw, dict):
+        raise TypeError(f"{label} must be a mapping")
+    values: dict[str, object] = {}
+    for key, value in raw.items():
+        if not isinstance(key, str):
+            raise TypeError(f"{label} keys must be strings")
+        values[key] = value
+    return values
 
 
 def _result(
