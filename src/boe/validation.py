@@ -85,26 +85,26 @@ def audit_point_in_time(
         raise ValueError("cutoff must be timezone-aware")
     findings: list[LeakageFinding] = []
     inspected = 0
-    for item in observations:
+    for observation in observations:
         inspected += 1
-        if item.known_at > cutoff:
+        if observation.known_at > cutoff:
             findings.append(
                 LeakageFinding(
                     object_type="catalyst_observation",
-                    object_id=str(item.evidence_id),
-                    available_at=item.known_at,
+                    object_id=str(observation.evidence_id),
+                    available_at=observation.known_at,
                     cutoff=cutoff,
                     details="observation was not public by cutoff",
                 )
             )
-    for item in versions:
+    for version in versions:
         inspected += 1
-        if item.known_at > cutoff or item.resolved_at_cutoff > cutoff:
+        if version.known_at > cutoff or version.resolved_at_cutoff > cutoff:
             findings.append(
                 LeakageFinding(
                     object_type="catalyst_version",
-                    object_id=str(item.id),
-                    available_at=max(item.known_at, item.resolved_at_cutoff),
+                    object_id=str(version.id),
+                    available_at=max(version.known_at, version.resolved_at_cutoff),
                     cutoff=cutoff,
                     details="version contains or was resolved with post-cutoff information",
                 )
