@@ -1,0 +1,5 @@
+ACT Symbol|Security Name|Exchange|CQS Symbol|ETF|Round Lot Size|Test Issue|NASDAQ Symbol
+ADRZ|Example Bio plc American Depositary Shares|N|ADRZ|N|100|N|ADRZ
+DEVX|Example Device Corp Common Stock|A|DEVX|N|100|N|DEVX
+ARCX|Example Arca Company Common Stock|P|ARCX|N|100|N|ARCX
+File Creation Time: 0914202618:00|||||||

@@ -1,0 +1,9 @@
+{
+  "fields": ["cik", "name", "ticker", "exchange"],
+  "data": [
+    [1, "Arrow Example Therapeutics, Inc.", "ARWX", "Nasdaq"],
+    [2, "Example Bio plc", "ADRZ", "NYSE"],
+    [3, "Example Device Corp", "DEVX", "NYSE American"],
+    [4, "Unclassified Life Sciences Company", "UNKN", "Nasdaq"]
+  ]
+}

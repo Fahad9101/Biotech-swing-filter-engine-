@@ -1,0 +1,18 @@
+{
+  "cik": "1",
+  "entityType": "operating",
+  "sic": "2834",
+  "sicDescription": "Pharmaceutical Preparations",
+  "name": "Arrow Example Therapeutics, Inc.",
+  "tickers": ["ARWX"],
+  "exchanges": ["Nasdaq"],
+  "category": "Smaller reporting company",
+  "stateOfIncorporation": "DE",
+  "filings": {
+    "recent": {
+      "form": ["8-K", "10-Q", "10-K"],
+      "filingDate": ["2026-09-10", "2026-08-08", "2026-03-01"],
+      "acceptanceDateTime": ["20260910120000", "20260808150000", "20260301150000"]
+    }
+  }
+}

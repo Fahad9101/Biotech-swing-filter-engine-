@@ -9,5 +9,6 @@ htmlcov/
 dist/
 build/
 *.egg-info/
+*.db
 .env
 .DS_Store

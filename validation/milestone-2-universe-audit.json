@@ -1,0 +1,32 @@
+{
+  "audit": "BOE Milestone 2 universe boundary audit",
+  "as_of": "2026-09-14T20:00:00+00:00",
+  "rules_version": "BOE-1.0.0",
+  "fixture": "tests/fixtures/universe/universe_audit_cases.json",
+  "fixture_sha256": "3c2f5762d6fb985ccfc777e26c0ced44e5b3e695637304b75c2f9e99644cc5b4",
+  "case_count": 19,
+  "matched_expected": 19,
+  "unexplained_classifications": 0,
+  "deterministic_rerun_agreement_pct": 100,
+  "covered_reason_codes": [
+    "AMBIGUOUS_BUSINESS_CLASSIFICATION",
+    "INELIGIBLE_LISTING_FLAG",
+    "INELIGIBLE_SECURITY_TYPE",
+    "MATURE_DIVERSIFIED_PHARMA",
+    "MISSING_BUSINESS_EVIDENCE",
+    "MISSING_SEC_IDENTITY",
+    "NO_ACTIVE_THERAPEUTIC_ASSET",
+    "PRIMARY_THERAPEUTIC_BUSINESS",
+    "PURE_DEVICE",
+    "REPORTING_NOT_CURRENT",
+    "REPORTING_STATUS_UNKNOWN",
+    "THERAPEUTICS_NOT_PRIMARY_DRIVER",
+    "TICKER_CIK_MISMATCH",
+    "TICKER_EXCHANGE_MISMATCH",
+    "UNKNOWN_SECURITY_TYPE",
+    "UNSOURCED_THERAPEUTIC_CLASSIFICATION",
+    "UNSUPPORTED_EXCHANGE"
+  ],
+  "test": "tests/test_universe.py::test_universe_boundary_audit_is_exact_and_deterministic",
+  "result": "PASS"
+}

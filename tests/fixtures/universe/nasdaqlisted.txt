@@ -1,0 +1,7 @@
+Symbol|Security Name|Market Category|Test Issue|Financial Status|Round Lot Size|ETF|NextShares
+ARWX|Arrow Example Therapeutics, Inc. - Common Stock|Q|N|N|100|N|N
+BADW|Bad Instrument Holdings - Warrants|S|N|N|100|N|N
+BETF|Biotech Example Exchange Traded Fund|G|N|N|100|Y|N
+TEST|Nasdaq Test Issue - Common Stock|Q|Y|N|100|N|N
+UNKN|Unclassified Life Sciences Company|G|N|N|100|N|N
+File Creation Time: 0914202618:00|||||||

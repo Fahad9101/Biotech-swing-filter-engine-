@@ -1,4 +1,4 @@
-name: BOE contract quality
+name: BOE quality
 
 on:
   push:
@@ -38,8 +38,14 @@ jobs:
       - name: Type-check
         run: mypy src
 
-      - name: Test contracts
+      - name: Test package
         run: pytest
+
+      - name: Exercise database migration
+        run: BOE_DATABASE_URL=sqlite+pysqlite:///ci-migration.db alembic upgrade head
+
+      - name: Verify installed dependencies
+        run: python -m pip check
 
       - name: Exercise offline contract CLI
         run: boe-contracts --candidate tests/fixtures/valid_candidate.json

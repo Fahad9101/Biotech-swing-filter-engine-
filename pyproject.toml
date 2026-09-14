@@ -4,12 +4,15 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "biotech-opportunity-engine"
-version = "1.0.0.dev1"
-description = "Executable BOE-1.0.0 domain and data contracts"
+version = "1.0.0.dev2"
+description = "Auditable BOE-1.0.0 universe, evidence, and data contracts"
 readme = "readme.md"
 requires-python = ">=3.12,<3.14"
 dependencies = [
+  "alembic>=1.16,<2",
+  "httpx>=0.28,<1",
   "pydantic>=2.12,<3",
+  "sqlalchemy>=2.0,<3",
 ]
 
 [project.optional-dependencies]

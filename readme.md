@@ -4,7 +4,7 @@ BOE is a production-oriented research system for ranking U.S.-listed biotechnolo
 
 ## Current status
 
-**Milestone 1 complete: the frozen BOE-1.0.0 foundation now has executable data contracts. No investment or ingestion logic is implemented.**
+**Milestone 2 complete: BOE now has an auditable universe and evidence foundation. Catalyst, clinical, financial, scoring, valuation, market-data, and UI logic remain unimplemented.**
 
 The frozen foundation consists of:
 
@@ -13,6 +13,8 @@ The frozen foundation consists of:
 - [`docs/VALIDATION-AND-MILESTONES.md`](docs/VALIDATION-AND-MILESTONES.md) — historical validation, acceptance criteria, governance, and controlled milestone sequence.
 - [`contracts/boe-scorecard.v1.0.0.json`](contracts/boe-scorecard.v1.0.0.json) — machine-readable scorecard and decision thresholds.
 - [`contracts/candidate-output.schema.json`](contracts/candidate-output.schema.json) — machine-testable candidate-output contract.
+- [`docs/MILESTONE-2-REPORT.md`](docs/MILESTONE-2-REPORT.md) — implemented boundary, audit result, limitations, and handoff.
+- [`validation/milestone-2-universe-audit.json`](validation/milestone-2-universe-audit.json) — reproducible 19-case universe-classification audit result.
 
 ## Non-negotiable boundaries
 
@@ -45,6 +47,7 @@ ruff check .
 mypy src
 pytest
 boe-contracts --candidate tests/fixtures/valid_candidate.json
+BOE_DATABASE_URL=sqlite+pysqlite:///boe.db alembic upgrade head
 ```
 
-Milestone 2 must not begin without explicit approval.
+Milestone 3 must not begin without explicit approval.
