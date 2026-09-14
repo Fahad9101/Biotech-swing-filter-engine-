@@ -303,7 +303,10 @@ def evaluate_gates(input_: GateInput, rules: ScorecardContract) -> GateEvaluatio
         (
             _single_asset_failure_gate(input_, binary),
             "SINGLE_ASSET_FAILURE_FRAGILITY",
-            "single-asset failure leaves <12 months cash with no credible second asset and >60% downside",
+            (
+                "single-asset failure leaves <12 months cash with no credible second asset "
+                "and >60% downside"
+            ),
             (
                 f"runway={input_.post_failure_runway_months},"
                 f"downside={input_.failure_downside_pct},"

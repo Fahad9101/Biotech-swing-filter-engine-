@@ -7,7 +7,7 @@ from typing import Self
 
 from pydantic import Field, model_validator
 
-from boe.enums import CatalystType, PosConfidence
+from boe.enums import CatalystType
 from boe.models import (
     ContractModel,
     OrderedRange,
