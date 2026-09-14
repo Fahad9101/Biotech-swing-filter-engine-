@@ -60,9 +60,7 @@ class ManualScienceReview(ContractModel):
         if len(set(self.evidence_ids)) != len(self.evidence_ids):
             raise ValueError("science-review evidence IDs must be unique")
         missing_rationales = [
-            code
-            for code in SCIENCE_SUBFACTORS
-            if not self.rationales.get(code, "").strip()
+            code for code in SCIENCE_SUBFACTORS if not self.rationales.get(code, "").strip()
         ]
         if missing_rationales:
             raise ValueError(f"science-review rationales missing: {missing_rationales}")

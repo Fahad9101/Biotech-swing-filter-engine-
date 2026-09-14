@@ -64,11 +64,9 @@ def classify(input_: ClassificationInput, rules: ScorecardContract) -> Classific
 
     watchlist = rules.classifications[Classification.WATCHLIST.value]
     watchlist_score = input_.score.raw_total >= int(watchlist["raw_score_min"])
-    forced_coverage = (
-        input_.coverage_pct >= Decimal(str(watchlist["coverage_pct_min"]))
-        and input_.coverage_pct
-        <= Decimal(str(watchlist["coverage_pct_max_for_forced_watchlist"]))
-    )
+    forced_coverage = input_.coverage_pct >= Decimal(
+        str(watchlist["coverage_pct_min"])
+    ) and input_.coverage_pct <= Decimal(str(watchlist["coverage_pct_max_for_forced_watchlist"]))
     if (
         watchlist_score
         or forced_coverage

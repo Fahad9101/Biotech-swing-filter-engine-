@@ -210,9 +210,7 @@ def evaluate_gates(input_: GateInput, rules: ScorecardContract) -> GateEvaluatio
     financing = gate_rules["financing"]
     runway_now_threshold = Decimal(str(financing["runway_now_below_months"]))
     runway_event_threshold = Decimal(str(financing["runway_at_latest_catalyst_below_months"]))
-    dependence_threshold = Decimal(
-        str(financing["active_issuance_dependency_runway_below_months"])
-    )
+    dependence_threshold = Decimal(str(financing["active_issuance_dependency_runway_below_months"]))
     dilution_threshold = Decimal(str(financing["modeled_pre_catalyst_dilution_above_pct"]))
     financing_checks = (
         (
@@ -279,8 +277,7 @@ def evaluate_gates(input_: GateInput, rules: ScorecardContract) -> GateEvaluatio
         ),
         (
             input_.failure_downside_pct > Decimal(str(binary["failure_downside_above_pct"]))
-            and input_.success_upside_pct
-            < Decimal(str(binary["paired_success_upside_below_pct"])),
+            and input_.success_upside_pct < Decimal(str(binary["paired_success_upside_below_pct"])),
             "SEVERE_FAILURE_WITH_INSUFFICIENT_UPSIDE",
             "failure downside is >70% while success upside is <140%",
             f"down={input_.failure_downside_pct},up={input_.success_upside_pct}",
@@ -334,8 +331,7 @@ def evaluate_gates(input_: GateInput, rules: ScorecardContract) -> GateEvaluatio
             f"<={overextended['above_sma20_pct']}%",
         ),
         (
-            input_.rsi14 is not None
-            and input_.rsi14 >= Decimal(str(overextended["rsi14_min"])),
+            input_.rsi14 is not None and input_.rsi14 >= Decimal(str(overextended["rsi14_min"])),
             "RSI_EXTENSION",
             "RSI14 is at or above 80",
             str(input_.rsi14),
@@ -414,11 +410,10 @@ def _single_asset_failure_gate(input_: GateInput, rules: dict[str, object]) -> b
         return False
     if input_.post_failure_runway_months is None:
         return False
-    return (
-        input_.post_failure_runway_months
-        < Decimal(str(rules["single_asset_post_failure_runway_below_months"]))
-        and input_.failure_downside_pct
-        > Decimal(str(rules["single_asset_failure_downside_above_pct"]))
+    return input_.post_failure_runway_months < Decimal(
+        str(rules["single_asset_post_failure_runway_below_months"])
+    ) and input_.failure_downside_pct > Decimal(
+        str(rules["single_asset_failure_downside_above_pct"])
     )
 
 

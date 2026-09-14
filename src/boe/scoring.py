@@ -162,9 +162,7 @@ def score_catalyst(input_: CatalystScoreInput, rules: ScorecardContract) -> Fact
     if not isinstance(timing_mapping, dict):
         raise TypeError("timing-confidence mapping missing from scorecard")
     timing_points = int(timing_mapping[input_.timing_confidence.value])
-    values.append(
-        _subscore(definition, "TIMING_CONFIDENCE", timing_points, input_.evidence)
-    )
+    values.append(_subscore(definition, "TIMING_CONFIDENCE", timing_points, input_.evidence))
     days = (input_.window_start - input_.as_of.date()).days
     proximity_points = _proximity_points(days)
     values.append(_subscore(definition, "PROXIMITY", proximity_points, input_.evidence))
@@ -351,7 +349,10 @@ def score_sentiment(input_: SentimentScoreInput, rules: ScorecardContract) -> Fa
         and input_.five_day_to_prior_sixty_day_volume_ratio >= Decimal("1.5")
     )
     news_condition = input_.attributable_primary_news is True
-    if input_.five_day_to_prior_sixty_day_volume_ratio is None and input_.attributable_primary_news is None:
+    if (
+        input_.five_day_to_prior_sixty_day_volume_ratio is None
+        and input_.attributable_primary_news is None
+    ):
         attention = None
     elif ratio_condition and news_condition:
         attention = 2
@@ -361,12 +362,12 @@ def score_sentiment(input_: SentimentScoreInput, rules: ScorecardContract) -> Fa
         attention = 0
     if input_.independent_positive_revisions is None and input_.mixed_or_one_revision is None:
         direction = None
-    elif input_.independent_positive_revisions is not None and input_.independent_positive_revisions >= 2:
-        direction = 2
     elif (
-        input_.mixed_or_one_revision is True
-        or input_.independent_positive_revisions == 1
+        input_.independent_positive_revisions is not None
+        and input_.independent_positive_revisions >= 2
     ):
+        direction = 2
+    elif input_.mixed_or_one_revision is True or input_.independent_positive_revisions == 1:
         direction = 1
     else:
         direction = 0
@@ -609,9 +610,8 @@ def _structure_points(input_: TechnicalScoreInput) -> int | None:
     target_room = (input_.base_success_target / input_.close - Decimal("1")) * Decimal("100")
     if Decimal("0") <= support_distance <= Decimal("8") and target_room >= 15:
         return 2
-    if (
-        Decimal("8") < support_distance <= Decimal("15")
-        or Decimal("8") <= target_room <= Decimal("15")
+    if Decimal("8") < support_distance <= Decimal("15") or Decimal("8") <= target_room <= Decimal(
+        "15"
     ):
         return 1
     return 0

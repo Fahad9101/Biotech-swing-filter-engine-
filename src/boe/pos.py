@@ -107,8 +107,8 @@ def estimate_event_pos(input_: PosInput, rules: ScorecardContract) -> PosResult:
             if active:
                 penalties[code] = Decimal(str(penalty_rules[code]))
 
-    midpoint_before = prior + sum(adjustments.values(), Decimal("0")) + sum(
-        penalties.values(), Decimal("0")
+    midpoint_before = (
+        prior + sum(adjustments.values(), Decimal("0")) + sum(penalties.values(), Decimal("0"))
     )
     midpoint_limits = pos_rules["clamp_midpoint_pct"]
     midpoint = _clamp(
@@ -116,9 +116,7 @@ def estimate_event_pos(input_: PosInput, rules: ScorecardContract) -> PosResult:
         Decimal(str(midpoint_limits[0])),
         Decimal(str(midpoint_limits[1])),
     )
-    half_width = Decimal(
-        str(pos_rules["confidence_half_width_pp"][confidence.value])
-    )
+    half_width = Decimal(str(pos_rules["confidence_half_width_pp"][confidence.value]))
     bounds = pos_rules["clamp_bounds_pct"]
     low = _clamp(
         midpoint - half_width,

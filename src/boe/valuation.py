@@ -183,9 +183,7 @@ def calculate_rnpv(input_: RnpvInput) -> RnpvResult:
         asset_lineage: list[UUID] = []
         for cash_flow in asset.annual_cash_flows:
             discount = (Decimal("1") + rate) ** cash_flow.year_index
-            commercial_pv += (
-                cash_flow.commercial_after_tax_fcf * pos * economic_share / discount
-            )
+            commercial_pv += cash_flow.commercial_after_tax_fcf * pos * economic_share / discount
             development_cost_pv += (
                 cash_flow.remaining_development_cost
                 * (cash_flow.development_cost_probability_pct / Decimal("100"))
@@ -311,8 +309,7 @@ def build_valuation_assessment(
     current_fully_diluted_market_value = current_price * current_fully_diluted_shares
     scenario_results = (scenarios.conservative, scenarios.base, scenarios.bull)
     mos = [
-        (item.equity_value / current_fully_diluted_market_value - Decimal("1"))
-        * Decimal("100")
+        (item.equity_value / current_fully_diluted_market_value - Decimal("1")) * Decimal("100")
         for item in scenario_results
     ]
     success_returns = [

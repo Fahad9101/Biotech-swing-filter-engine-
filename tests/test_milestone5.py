@@ -430,7 +430,9 @@ def test_all_eight_factor_rubrics_and_coverage(scorecard_path: Path):
             support=Decimal("95"),
             base_success_target=Decimal("120"),
             rsi14=Decimal("60"),
-            evidence=_evidence("TREND", "RELATIVE_STRENGTH", "ACCUMULATION", "STRUCTURE", "EXTENSION"),
+            evidence=_evidence(
+                "TREND", "RELATIVE_STRENGTH", "ACCUMULATION", "STRUCTURE", "EXTENSION"
+            ),
         ),
         rules,
     )
@@ -547,7 +549,11 @@ GATE_CASES = [
         Classification.REJECT,
     ),
     ({"valuation_bounded": False}, "UNBOUNDED_VALUATION", Classification.REJECT),
-    ({"runway_now_months": Decimal("11.99")}, "FINANCING_RUNWAY_NOW", Classification.FINANCING_RISK),
+    (
+        {"runway_now_months": Decimal("11.99")},
+        "FINANCING_RUNWAY_NOW",
+        Classification.FINANCING_RISK,
+    ),
     (
         {"runway_at_catalyst_months": Decimal("5.99")},
         "FINANCING_POST_CATALYST_CASH",
@@ -572,15 +578,31 @@ GATE_CASES = [
         "PRE_CATALYST_DILUTION",
         Classification.FINANCING_RISK,
     ),
-    ({"base_ev_pct": Decimal("9.99")}, "BASE_EV_BELOW_10", Classification.BINARY_RISK_UNFAVORABLE_ASYMMETRY),
-    ({"reward_risk": Decimal("1.49")}, "REWARD_RISK_BELOW_1_5", Classification.BINARY_RISK_UNFAVORABLE_ASYMMETRY),
+    (
+        {"base_ev_pct": Decimal("9.99")},
+        "BASE_EV_BELOW_10",
+        Classification.BINARY_RISK_UNFAVORABLE_ASYMMETRY,
+    ),
+    (
+        {"reward_risk": Decimal("1.49")},
+        "REWARD_RISK_BELOW_1_5",
+        Classification.BINARY_RISK_UNFAVORABLE_ASYMMETRY,
+    ),
     (
         {"failure_downside_pct": Decimal("70.01"), "success_upside_pct": Decimal("139.99")},
         "SEVERE_FAILURE_WITH_INSUFFICIENT_UPSIDE",
         Classification.BINARY_RISK_UNFAVORABLE_ASYMMETRY,
     ),
-    ({"success_upside_pct": Decimal("19.99")}, "SUCCESS_UPSIDE_BELOW_20", Classification.BINARY_RISK_UNFAVORABLE_ASYMMETRY),
-    ({"conservative_ev_pct": Decimal("-20.01")}, "CONSERVATIVE_EV_BELOW_MINUS_20", Classification.BINARY_RISK_UNFAVORABLE_ASYMMETRY),
+    (
+        {"success_upside_pct": Decimal("19.99")},
+        "SUCCESS_UPSIDE_BELOW_20",
+        Classification.BINARY_RISK_UNFAVORABLE_ASYMMETRY,
+    ),
+    (
+        {"conservative_ev_pct": Decimal("-20.01")},
+        "CONSERVATIVE_EV_BELOW_MINUS_20",
+        Classification.BINARY_RISK_UNFAVORABLE_ASYMMETRY,
+    ),
     (
         {
             "single_asset": True,
@@ -591,7 +613,11 @@ GATE_CASES = [
         "SINGLE_ASSET_FAILURE_FRAGILITY",
         Classification.BINARY_RISK_UNFAVORABLE_ASYMMETRY,
     ),
-    ({"above_sma20_pct": Decimal("25.01")}, "ABOVE_SMA20_EXTENSION", Classification.OVEREXTENDED_DO_NOT_CHASE),
+    (
+        {"above_sma20_pct": Decimal("25.01")},
+        "ABOVE_SMA20_EXTENSION",
+        Classification.OVEREXTENDED_DO_NOT_CHASE,
+    ),
     ({"rsi14": Decimal("80")}, "RSI_EXTENSION", Classification.OVEREXTENDED_DO_NOT_CHASE),
     (
         {"distance_to_base_success_target_pct": Decimal("5")},
@@ -599,12 +625,19 @@ GATE_CASES = [
         Classification.OVEREXTENDED_DO_NOT_CHASE,
     ),
     (
-        {"ten_session_return_pct": Decimal("40"), "fundamental_value_increase_pct": Decimal("24.99")},
+        {
+            "ten_session_return_pct": Decimal("40"),
+            "fundamental_value_increase_pct": Decimal("24.99"),
+        },
         "TEN_SESSION_UNSUPPORTED_RUN",
         Classification.OVEREXTENDED_DO_NOT_CHASE,
     ),
     ({"earliest_catalyst_days": 85}, "CATALYST_TOO_EARLY", Classification.TOO_EARLY),
-    ({"timing_confidence": TimingConfidence.LOW}, "LOW_TIMING_CONFIDENCE", Classification.TOO_EARLY),
+    (
+        {"timing_confidence": TimingConfidence.LOW},
+        "LOW_TIMING_CONFIDENCE",
+        Classification.TOO_EARLY,
+    ),
     ({"required_evidence_pending": True}, "REQUIRED_EVIDENCE_PENDING", Classification.TOO_EARLY),
 ]
 
@@ -666,9 +699,7 @@ def _score_from_points(points: dict[str, int]) -> ScoreBreakdown:
         FactorCode.OWNERSHIP: 5,
         FactorCode.SENTIMENT: 5,
     }
-    factors = tuple(
-        _factor(code, points[code.value], maximum) for code, maximum in maxima.items()
-    )
+    factors = tuple(_factor(code, points[code.value], maximum) for code, maximum in maxima.items())
     return ScoreBreakdown(raw_total=sum(points.values()), factors=factors)
 
 
