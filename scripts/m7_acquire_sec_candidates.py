@@ -25,6 +25,10 @@ import httpx
 
 SEC_BASE = "https://www.sec.gov"
 SEC_DATA = "https://data.sec.gov"
+SEC_TICKER_MIRROR = (
+    "https://raw.githubusercontent.com/ryansmccoy/py-sec-edgar/"
+    "1603502fec209d186615b086bd28d17cc86589b1/refdata/company_tickers.json"
+)
 RESEARCH_MAPPING = (
     "https://huggingface.co/datasets/chufangao/CTO/resolve/main/"
     "labels_and_tickers/labels_and_tickers.csv"
@@ -203,17 +207,34 @@ def _research_tickers(client: httpx.Client) -> set[str]:
     }
 
 
+def _ticker_payload_from_pinned_mirror(client: httpx.Client) -> dict[str, Any]:
+    response = client.get(SEC_TICKER_MIRROR, timeout=30.0, follow_redirects=True)
+    response.raise_for_status()
+    payload = response.json()
+    if not isinstance(payload, dict):
+        raise ValueError("pinned SEC ticker mirror did not return an object")
+    return payload
+
+
 def _issuer_seeds(sec: SecClient) -> list[IssuerSeed]:
-    ticker_payload = sec.get_json("https://www.sec.gov/files/company_tickers.json")
-    with httpx.Client() as research_client:
-        research_tickers = _research_tickers(research_client)
+    with httpx.Client() as discovery_client:
+        ticker_payload = _ticker_payload_from_pinned_mirror(discovery_client)
+        research_tickers = _research_tickers(discovery_client)
 
     records: list[IssuerSeed] = []
     for record in ticker_payload.values():
+        if not isinstance(record, dict):
+            continue
         ticker = _safe_str(record.get("ticker")).upper()
         title = _safe_str(record.get("title"))
-        cik_value = record.get("cik_str")
-        if not ticker or not isinstance(cik_value, int):
+        raw_cik = record.get("cik_str")
+        if isinstance(raw_cik, int):
+            cik_value = raw_cik
+        elif isinstance(raw_cik, str) and raw_cik.isdigit():
+            cik_value = int(raw_cik)
+        else:
+            continue
+        if not ticker:
             continue
         lower_title = title.lower()
         bases: list[str] = []
@@ -445,6 +466,8 @@ def _write_outputs(seeds: list[IssuerSeed], candidates: list[CandidateEvent]) ->
         "years": [2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025],
         "issuer_seed_count": len(seeds),
         "candidate_count": len(sorted_candidates),
+        "issuer_mapping_source": SEC_TICKER_MIRROR,
+        "issuer_mapping_role": "DISCOVERY_ONLY",
         "candidates": [asdict(item) for item in sorted_candidates],
     }
     canonical = json.dumps(registry_payload, sort_keys=True, separators=(",", ":"))
