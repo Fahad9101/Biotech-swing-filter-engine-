@@ -5,7 +5,6 @@ from __future__ import annotations
 import json
 from dataclasses import dataclass
 from datetime import date
-from typing import Any
 from urllib.parse import quote_plus
 
 from boe.ingestion.http import FetchedPayload, PublicDataClient
@@ -39,7 +38,9 @@ class FDAAdapter:
         encoded = quote_plus(f'application_number:"{value}"')
         return f"{OPENFDA_DRUGSFDA}?search={encoded}&limit={limit}"
 
-    def fetch_application(self, application_number: str) -> tuple[FetchedPayload, tuple[FDAApplicationAction, ...]]:
+    def fetch_application(
+        self, application_number: str
+    ) -> tuple[FetchedPayload, tuple[FDAApplicationAction, ...]]:
         payload = self._client.fetch(self.application_url(application_number))
         return payload, self.parse_drugsfda(payload.content)
 
@@ -98,10 +99,14 @@ class FDAAdapter:
                         sponsor_name=sponsor,
                         product_name=product_name,
                         active_ingredients=tuple(dict.fromkeys(ingredients)),
-                        action_date=cls._parse_fda_date(submission_raw.get("submission_status_date")),
+                        action_date=cls._parse_fda_date(
+                            submission_raw.get("submission_status_date")
+                        ),
                         action_type=cls._optional_text(submission_raw.get("submission_type")),
                         submission=cls._optional_text(submission_raw.get("submission_number")),
-                        submission_status=cls._optional_text(submission_raw.get("submission_status")),
+                        submission_status=cls._optional_text(
+                            submission_raw.get("submission_status")
+                        ),
                     )
                 )
         return tuple(actions)
