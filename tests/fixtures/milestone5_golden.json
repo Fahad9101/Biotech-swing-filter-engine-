@@ -1,0 +1,49 @@
+{
+  "pos_phase2": {
+    "prior_pct": 40,
+    "science": {
+      "prior_human_evidence": 4,
+      "trial_design": 4,
+      "efficacy_robustness": 2,
+      "safety": 2,
+      "external_validation": 2
+    },
+    "confidence": "HIGH",
+    "expected_mid_pct": 62,
+    "expected_low_pct": 57,
+    "expected_high_pct": 67
+  },
+  "expected_value": {
+    "pos_low_pct": 57,
+    "pos_mid_pct": 62,
+    "success_low_pct": 30,
+    "success_mid_pct": 60,
+    "failure_worst_pct": -70,
+    "failure_mid_pct": -40,
+    "expected_base_ev_pct": 22,
+    "expected_conservative_ev_pct": -13,
+    "expected_reward_risk": 1.5
+  },
+  "classification": {
+    "raw_score": 82,
+    "coverage_pct": 90,
+    "factor_points": {
+      "CATALYST": 21,
+      "SCIENCE": 16,
+      "MARKET_IMPACT": 12,
+      "CASH_DILUTION": 8,
+      "VALUATION": 8,
+      "TECHNICAL": 7,
+      "OWNERSHIP": 5,
+      "SENTIMENT": 5
+    },
+    "base_ev_pct": 22,
+    "conservative_ev_pct": 0,
+    "reward_risk": 2,
+    "success_upside_pct": 35,
+    "failure_downside_pct": 50,
+    "catalyst_days": 30,
+    "timing_confidence": "HIGH",
+    "expected_classification": "HIGH_CONVICTION_CATALYST_SWING"
+  }
+}
