@@ -7,6 +7,18 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 REGULATORY_BATCH = ROOT / "validation/m7/acquisition/regulatory-primary-batch-01.json"
+PHASE3_BATCH = ROOT / "validation/m7/acquisition/phase3-primary-batch-01.json"
+
+FORBIDDEN_OUTCOME_FIELDS = {
+    "return_t1_pct",
+    "return_t5_pct",
+    "return_t20_pct",
+    "xbi_relative_t20_pct",
+    "mfe_t20_pct",
+    "mae_t20_pct",
+    "severe_loss",
+    "swing_success",
+}
 
 
 def _canonical_sha256(payload: dict[str, object]) -> str:
@@ -16,14 +28,12 @@ def _canonical_sha256(payload: dict[str, object]) -> str:
     return hashlib.sha256(canonical.encode()).hexdigest()
 
 
-def test_regulatory_acquisition_batch_is_prefreeze_and_self_consistent() -> None:
-    payload = json.loads(REGULATORY_BATCH.read_text(encoding="utf-8"))
+def _assert_common_prefreeze_integrity(payload: dict[str, object]) -> list[dict[str, object]]:
     events = payload["events"]
-
-    assert payload["role"] == "PRIMARY_SOURCE_REGULATORY_CANDIDATES_NOT_FROZEN_COHORT"
+    assert isinstance(events, list)
     assert payload["rules_version"] == "BOE-1.0.0"
     assert payload["authoritative_events_frozen"] == 0
-    assert payload["candidate_count"] == len(events) == 33
+    assert payload["candidate_count"] == len(events)
     assert payload["exact_timestamp_count"] == sum(
         event["first_public_timestamp"] is not None for event in events
     )
@@ -35,23 +45,43 @@ def test_regulatory_acquisition_batch_is_prefreeze_and_self_consistent() -> None
 
     candidate_ids = [event["candidate_id"] for event in events]
     assert len(candidate_ids) == len(set(candidate_ids))
-    assert any(event["first_public_date"].startswith("2018-") for event in events)
-    assert any(event["first_public_date"].startswith("2025-") for event in events)
+    assert any(str(event["first_public_date"]).startswith("2018-") for event in events)
+    assert any(str(event["first_public_date"]).startswith("2025-") for event in events)
 
-    forbidden_outcome_fields = {
-        "return_t1_pct",
-        "return_t5_pct",
-        "return_t20_pct",
-        "xbi_relative_t20_pct",
-        "mfe_t20_pct",
-        "mae_t20_pct",
-        "severe_loss",
-        "swing_success",
-    }
     for event in events:
-        assert event["proposed_primary_stratum"] == "REGULATORY"
         assert event["cohort_frozen"] is False
         assert event["outcome_inspected_for_selection"] is False
-        assert event["source_url"].startswith("https://")
+        assert str(event["source_url"]).startswith("https://")
         assert event["promotion_blockers"]
-        assert forbidden_outcome_fields.isdisjoint(event)
+        assert FORBIDDEN_OUTCOME_FIELDS.isdisjoint(event)
+    return events
+
+
+def test_regulatory_acquisition_batch_is_prefreeze_and_self_consistent() -> None:
+    payload = json.loads(REGULATORY_BATCH.read_text(encoding="utf-8"))
+    events = _assert_common_prefreeze_integrity(payload)
+
+    assert payload["role"] == "PRIMARY_SOURCE_REGULATORY_CANDIDATES_NOT_FROZEN_COHORT"
+    assert payload["candidate_count"] == 33
+    assert payload["cik_resolved_count"] == 25
+    for event in events:
+        assert event["proposed_primary_stratum"] == "REGULATORY"
+
+
+def test_phase3_acquisition_batch_is_prefreeze_and_outcome_blinded() -> None:
+    payload = json.loads(PHASE3_BATCH.read_text(encoding="utf-8"))
+    events = _assert_common_prefreeze_integrity(payload)
+
+    assert payload["role"] == "PRIMARY_SOURCE_PHASE3_CANDIDATES_NOT_FROZEN_COHORT"
+    assert payload["candidate_count"] == 31
+    assert payload["candidate_count"] >= 30
+    assert payload["negative_event_candidate_count"] == sum(
+        event["negative_event_candidate"] is True for event in events
+    )
+    assert payload["negative_event_candidate_count"] == 17
+    assert payload["exact_timestamp_count"] == 27
+    assert payload["date_only_count"] == 4
+    for event in events:
+        assert event["proposed_primary_stratum"] == "PHASE_3_PIVOTAL"
+        assert event["clinical_phase"] == "PHASE_3"
+        assert event["result_direction"]
