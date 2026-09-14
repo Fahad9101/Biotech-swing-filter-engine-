@@ -57,7 +57,9 @@ def upgrade() -> None:
     op.create_table(
         "market_bars_daily",
         sa.Column("id", sa.String(36), primary_key=True),
-        sa.Column("batch_id", sa.String(36), sa.ForeignKey("market_bar_batches.id"), nullable=False),
+        sa.Column(
+            "batch_id", sa.String(36), sa.ForeignKey("market_bar_batches.id"), nullable=False
+        ),
         sa.Column("security_id", sa.String(36), sa.ForeignKey("securities.id"), nullable=False),
         sa.Column("session_date", sa.String(10), nullable=False),
         sa.Column("open", sa.Text(), nullable=False),
