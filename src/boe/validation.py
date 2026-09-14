@@ -29,7 +29,10 @@ class PrecisionRecallAudit(ContractModel):
 
     @model_validator(mode="after")
     def reconcile(self) -> Self:
-        if self.true_positive + self.false_positive + self.true_negative + self.false_negative != self.total:
+        if (
+            self.true_positive + self.false_positive + self.true_negative + self.false_negative
+            != self.total
+        ):
             raise ValueError("audit confusion matrix does not reconcile to total")
         return self
 
