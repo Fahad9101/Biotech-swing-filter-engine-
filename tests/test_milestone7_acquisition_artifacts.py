@@ -140,6 +140,7 @@ def test_conference_other_batch_is_prefreeze_and_outcome_blinded() -> None:
         assert event["proposed_catalyst_type"] == "CONF_DATA"
         assert event["result_direction"]
         assert "VERIFY_CONFERENCE_FIRST_PUBLIC_AVAILABILITY" in event["promotion_blockers"]
-        assert "VERIFY_UNDERLYING_CLINICAL_PHASE_AND_EVENT_DEDUPLICATION" in event[
-            "promotion_blockers"
-        ]
+        assert (
+            "VERIFY_UNDERLYING_CLINICAL_PHASE_AND_EVENT_DEDUPLICATION"
+            in event["promotion_blockers"]
+        )
