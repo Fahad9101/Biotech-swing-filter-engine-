@@ -1,7 +1,7 @@
 from pathlib import Path
 
 
-def test_milestone_six_stays_inside_approved_boundary(repository_root: Path):
+def test_milestone_seven_stays_inside_approved_boundary(repository_root: Path):
     package_files = {
         path.relative_to(repository_root).as_posix()
         for path in (repository_root / "src").rglob("*.py")
@@ -14,15 +14,18 @@ def test_milestone_six_stays_inside_approved_boundary(repository_root: Path):
     assert any("valuation" in path for path in package_files)
     assert any(Path(path).stem == "market" for path in package_files)
     assert any(Path(path).stem == "technicals" for path in package_files)
+    assert any(Path(path).stem == "historical_validation" for path in package_files)
 
     forbidden_components = {
         "ranking",
         "ui",
         "dashboard",
-        "historical_validation",
-        "backtest",
+        "live_shadow",
+        "shadow_validation",
         "portfolio",
         "execution",
+        "broker",
+        "trading",
     }
     for package_file in package_files:
         components = set(Path(package_file).parts)
