@@ -1,0 +1,148 @@
+{
+  "format_version": "1.0",
+  "contract": "BOE scorecard",
+  "version": "BOE-1.0.0",
+  "currency": "USD",
+  "score_max": 100,
+  "time_windows_days": {"discovery_max": 180, "actionable_min": 7, "actionable_max": 84},
+  "investability_floor": {"adjusted_close_min_usd": 1.0, "median_dollar_volume_20d_min_usd": 2000000, "market_cap_min_usd": 50000000, "valid_trading_sessions_min": 60},
+  "catalyst_types": ["CLIN_P1", "CLIN_P1_2", "CLIN_P2", "CLIN_P2_3", "CLIN_P3", "REG_SUBMIT", "REG_ADCOM", "REG_DECISION", "REG_OTHER", "CONF_DATA", "PUBLICATION", "PARTNER", "COMMERCIAL", "FINANCING"],
+  "missing_data": {
+    "score_missing_as_zero": true,
+    "rescale": false,
+    "coverage_reject_below_pct": 80,
+    "coverage_investable_min_pct": 90,
+    "critical_field_missing_classification": "REJECT",
+    "critical_fields": [
+      "ticker",
+      "cik",
+      "security_type",
+      "price.value",
+      "price.as_of",
+      "capital_structure.fully_diluted_shares",
+      "cash",
+      "debt",
+      "normalized_quarterly_burn",
+      "catalyst.type",
+      "catalyst.window_start",
+      "catalyst.window_end",
+      "catalyst.primary_source",
+      "asset",
+      "indication",
+      "clinical_phase",
+      "evidence_cutoff",
+      "valuation.failure_value"
+    ]
+  },
+  "factors": [
+    {
+      "code": "CATALYST",
+      "name": "Catalyst Quality & Proximity",
+      "max_points": 25,
+      "subfactors": [
+        {"code": "MATERIALITY", "max_points": 8, "allowed_points": [0, 2, 4, 6, 8]},
+        {"code": "TIMING_CONFIDENCE", "max_points": 5, "mapping": {"UNVERIFIED": 0, "LOW": 2, "MODERATE": 4, "HIGH": 5}},
+        {"code": "PROXIMITY", "max_points": 4, "bands": [{"min_days": 181, "points": 0}, {"min_days": 85, "max_days": 180, "points": 1}, {"min_days": 43, "max_days": 84, "points": 3}, {"min_days": 7, "max_days": 42, "points": 4}, {"min_days": 0, "max_days": 6, "points": 2}]},
+        {"code": "MATURITY", "max_points": 5, "mapping": {"PRECLINICAL_OTHER": 1, "PHASE_1": 2, "PHASE_1_2_OR_FILING_ACCEPTANCE": 3, "PHASE_2_OR_MATERIAL_REGULATORY": 4, "PHASE_2_3_PHASE_3_ADCOM_DECISION": 5}},
+        {"code": "NOVEL_INFORMATION", "max_points": 3, "allowed_points": [0, 1, 2, 3]}
+      ]
+    },
+    {
+      "code": "SCIENCE",
+      "name": "Clinical/Scientific Quality",
+      "max_points": 20,
+      "subfactors": [
+        {"code": "BIOLOGICAL_RATIONALE", "max_points": 3, "allowed_points": [0, 1, 2, 3]},
+        {"code": "PRIOR_HUMAN_EVIDENCE", "max_points": 5, "allowed_points": [0, 1, 2, 3, 4, 5]},
+        {"code": "TRIAL_DESIGN", "max_points": 5, "allowed_points": [0, 1, 2, 3, 4, 5]},
+        {"code": "EFFICACY_ROBUSTNESS", "max_points": 3, "allowed_points": [0, 1, 2, 3]},
+        {"code": "SAFETY", "max_points": 2, "allowed_points": [0, 1, 2]},
+        {"code": "EXTERNAL_VALIDATION", "max_points": 2, "allowed_points": [0, 1, 2]}
+      ]
+    },
+    {
+      "code": "MARKET_IMPACT",
+      "name": "Market Impact & Expectation Gap",
+      "max_points": 15,
+      "subfactors": [
+        {"code": "ASSET_VALUE_CONCENTRATION", "max_points": 5, "bands_pct": [{"max_exclusive": 10, "points": 1}, {"min": 10, "max_exclusive": 25, "points": 2}, {"min": 25, "max_exclusive": 50, "points": 3}, {"min": 50, "max_exclusive": 75, "points": 4}, {"min": 75, "points": 5}], "zero_if_immaterial": true},
+        {"code": "SUCCESS_RERATING", "max_points": 4, "bands_pct": [{"max_exclusive": 10, "points": 0}, {"min": 10, "max_exclusive": 20, "points": 1}, {"min": 20, "max_exclusive": 40, "points": 2}, {"min": 40, "max_exclusive": 75, "points": 3}, {"min": 75, "points": 4}]},
+        {"code": "EXPECTATION_GAP", "max_points": 4, "allowed_points": [0, 1, 2, 3, 4], "max_requires_independent_supports": 2},
+        {"code": "COMPETITIVE_POSITION", "max_points": 2, "allowed_points": [0, 1, 2]}
+      ]
+    },
+    {
+      "code": "CASH_DILUTION",
+      "name": "Cash Runway & Dilution Risk",
+      "max_points": 10,
+      "subfactors": [
+        {"code": "RUNWAY", "max_points": 5, "bands_months": [{"max_exclusive": 12, "points": 0}, {"min": 12, "max_exclusive": 18, "points": 1}, {"min": 18, "max_exclusive": 24, "points": 3}, {"min": 24, "max_exclusive": 30, "points": 4}, {"min": 30, "points": 5}], "low_confidence_18_to_24_points": 2},
+        {"code": "FINANCING_OVERHANG", "max_points": 3, "mapping": {"IMMINENT": 0, "HIGH": 1, "MODERATE": 2, "LOW": 3}},
+        {"code": "BALANCE_SHEET_FLEXIBILITY", "max_points": 2, "allowed_points": [0, 1, 2]}
+      ]
+    },
+    {
+      "code": "VALUATION",
+      "name": "Valuation Asymmetry / rNPV",
+      "max_points": 10,
+      "subfactors": [
+        {"code": "CONSERVATIVE_MOS", "max_points": 4, "bands_pct": [{"max_exclusive": -25, "points": 0}, {"min": -25, "max_exclusive": 0, "points": 1}, {"min": 0, "max_exclusive": 25, "points": 2}, {"min": 25, "max_exclusive": 50, "points": 3}, {"min": 50, "points": 4}]},
+        {"code": "BASE_MOS", "max_points": 3, "bands_pct": [{"max_exclusive": 0, "points": 0}, {"min": 0, "max_exclusive": 25, "points": 1}, {"min": 25, "max_exclusive": 75, "points": 2}, {"min": 75, "points": 3}]},
+        {"code": "FAILURE_VALUE_SUPPORT", "max_points": 3, "bands_downside_pct": [{"min_exclusive": 70, "points": 0}, {"min_exclusive": 50, "max_inclusive": 70, "points": 1}, {"min_exclusive": 30, "max_inclusive": 50, "points": 2}, {"max_inclusive": 30, "points": 3}]}
+      ]
+    },
+    {
+      "code": "TECHNICAL",
+      "name": "Technical Setup",
+      "max_points": 10,
+      "subfactors": [
+        {"code": "TREND", "max_points": 2, "allowed_points": [0, 1, 2]},
+        {"code": "RELATIVE_STRENGTH", "max_points": 2, "bands_pp": [{"max_exclusive": 0, "points": 0}, {"min": 0, "max_exclusive": 10, "points": 1}, {"min": 10, "points": 2}]},
+        {"code": "ACCUMULATION", "max_points": 2, "up_down_ratio_threshold": 1.5, "allowed_points": [0, 1, 2]},
+        {"code": "STRUCTURE", "max_points": 2, "support_distance_full_max_pct": 8, "support_distance_partial_max_pct": 15, "target_room_full_min_pct": 15, "target_room_partial_min_pct": 8},
+        {"code": "EXTENSION", "max_points": 2, "full_sma20_max_pct": 8, "full_rsi_min": 45, "full_rsi_max": 70, "partial_sma20_max_pct": 15, "partial_rsi_max_exclusive": 75}
+      ]
+    },
+    {
+      "code": "OWNERSHIP",
+      "name": "Institutional & Insider Signal",
+      "max_points": 5,
+      "subfactors": [
+        {"code": "SPECIALIST_OWNERSHIP", "max_points": 3, "allowed_points": [0, 1, 2, 3]},
+        {"code": "INSIDER_SIGNAL", "max_points": 2, "open_market_purchase_min_usd": 50000, "lookback_days": 180, "allowed_points": [0, 1, 2]}
+      ]
+    },
+    {
+      "code": "SENTIMENT",
+      "name": "Momentum & Sentiment",
+      "max_points": 5,
+      "subfactors": [
+        {"code": "ATTENTION_VOLUME", "max_points": 2, "volume_ratio_threshold": 1.5, "allowed_points": [0, 1, 2]},
+        {"code": "EXPECTATION_DIRECTION", "max_points": 2, "max_requires_independent_supports": 2, "allowed_points": [0, 1, 2]},
+        {"code": "SECTOR_REGIME", "max_points": 1, "benchmark": "XBI", "allowed_points": [0, 1]}
+      ]
+    }
+  ],
+  "pos": {
+    "clamp_midpoint_pct": [10, 90],
+    "clamp_bounds_pct": [5, 95],
+    "base_midpoint_pct": {"CLIN_P1": 70, "CLIN_P1_2": 45, "CLIN_P2": 40, "CLIN_P2_3": 50, "CLIN_P3": 55, "REG_SUBMIT": 85, "REG_ADCOM": 60, "REG_DECISION": 75, "REG_OTHER": 50},
+    "adjustment_pp": {"prior_human_evidence": {"center": 2, "multiplier": 4}, "trial_design": {"center": 3, "multiplier": 4}, "efficacy_robustness": {"center": 1, "multiplier": 4}, "safety": {"center": 1, "multiplier": 3}, "external_validation": {"center": 1, "multiplier": 3}},
+    "penalty_pp": {"single_arm_when_comparator_required": -10, "multiplicity_or_endpoint_ambiguity": -10, "material_unresolved_safety_imbalance": -15},
+    "confidence_half_width_pp": {"HIGH": 5, "MODERATE": 10, "LOW": 15}
+  },
+  "gates": {
+    "precedence": ["REJECT", "FINANCING_RISK", "BINARY_RISK_UNFAVORABLE_ASYMMETRY", "OVEREXTENDED_DO_NOT_CHASE", "TOO_EARLY"],
+    "reject_codes": ["OUTSIDE_UNIVERSE", "BELOW_INVESTABILITY_FLOOR", "INSUFFICIENT_CRITICAL_DATA", "COVERAGE_BELOW_80", "UNRESOLVED_CLINICAL_HOLD", "UNBOUNDED_SAFETY_RISK", "UNRELIABLE_PROVENANCE_OR_CAPITAL_STRUCTURE", "UNVERIFIED_OR_UNBOUNDED_CATALYST", "FATAL_TRIAL_INTERPRETABILITY_DEFECT", "UNBOUNDED_VALUATION"],
+    "financing": {"runway_now_below_months": 12, "runway_at_latest_catalyst_below_months": 6, "active_issuance_dependency_runway_below_months": 18, "modeled_pre_catalyst_dilution_above_pct": 15},
+    "binary": {"base_ev_below_pct": 10, "reward_risk_below": 1.5, "failure_downside_above_pct": 70, "paired_success_upside_below_pct": 140, "success_upside_below_pct": 20, "conservative_ev_below_pct": -20, "single_asset_failure_downside_above_pct": 60, "single_asset_post_failure_runway_below_months": 12},
+    "overextended": {"above_sma20_pct": 25, "rsi14_min": 80, "within_base_success_target_pct": 5, "ten_session_return_min_pct": 40, "required_fundamental_value_increase_pct": 25},
+    "too_early": {"earliest_catalyst_days_above": 84, "timing_confidence": "LOW"}
+  },
+  "classifications": {
+    "precedence": ["REJECT", "FINANCING_RISK", "BINARY_RISK_UNFAVORABLE_ASYMMETRY", "OVEREXTENDED_DO_NOT_CHASE", "TOO_EARLY", "HIGH_CONVICTION_CATALYST_SWING", "CATALYST_SWING", "WATCHLIST"],
+    "HIGH_CONVICTION_CATALYST_SWING": {"raw_score_min": 80, "coverage_pct_min": 90, "factor_min": {"CATALYST": 20, "SCIENCE": 15, "CASH_DILUTION": 7, "VALUATION": 7}, "catalyst_days_min": 7, "catalyst_days_max": 84, "base_ev_min_pct": 20, "conservative_ev_min_pct": 0, "reward_risk_min": 2.0, "success_upside_min_pct": 30, "failure_downside_max_pct": 55, "allowed_timing_confidence": ["HIGH", "MODERATE"]},
+    "CATALYST_SWING": {"raw_score_min": 70, "coverage_pct_min": 90, "factor_min": {"CATALYST": 17, "SCIENCE": 12, "CASH_DILUTION": 5, "VALUATION": 5}, "catalyst_days_min": 0, "catalyst_days_max": 84, "base_ev_min_pct": 10, "conservative_ev_min_pct": -10, "reward_risk_min": 1.5, "success_upside_min_pct": 20, "allowed_timing_confidence": ["HIGH", "MODERATE"], "inside_seven_days_critical_refresh_hours_max": 24},
+    "WATCHLIST": {"raw_score_min": 60, "coverage_pct_min": 80, "coverage_pct_max_for_forced_watchlist": 89}
+  }
+}
