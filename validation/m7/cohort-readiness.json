@@ -37,13 +37,13 @@
       "candidate_count": 33,
       "exact_first_public_timestamps_resolved": 13,
       "date_only_candidates_pending_exact_timestamp": 20,
-      "cik_resolved_count": 18,
-      "registry_sha256": "723d873f956fb64e0cbd1ac1eb8eec2b8bca7795814be6bffe33d3c3f6fb763a",
+      "cik_resolved_count": 25,
+      "registry_sha256": "470d1b55887d4a55b130d613fd5d96893e1c3fbccb3ca4df42365e4867d811ec",
       "calendar_span": "2018-2025",
       "proposed_stratum": "REGULATORY",
       "status": "PRIMARY_SOURCE_CANDIDATE_BATCH_COMMITTED_NOT_FROZEN",
       "authoritative_events_promoted": 0,
-      "note": "Issuer IR releases, contemporaneous SEC exhibits/8-Ks, FDA pages, and issuer press-release distribution records now provide a regulatory candidate pool above the frozen >=30 stratum minimum. The rows remain pre-freeze because every candidate must still clear historical-universe, negative-event, financing-window, single-asset, point-in-time evidence, and any unresolved CIK/timestamp blockers. No market-return outcome was used to select this batch."
+      "note": "Issuer IR releases, contemporaneous SEC exhibits/8-Ks, FDA pages, and issuer press-release distribution records provide a regulatory candidate pool above the frozen >=30 stratum minimum. Seven additional SEC-verified CIK identities were applied without using market outcomes. The rows remain pre-freeze because every candidate must still clear historical-universe, negative-event, financing-window, single-asset, point-in-time evidence, and any unresolved timestamp/identity blockers."
     },
     "sec_primary_from_github_runner": {
       "issuer_seeds_attempted": 220,
@@ -60,7 +60,7 @@
     },
     "openfda_regulatory_discovery": {
       "status": "NO_LONGER_REQUIRED_TO_ESTABLISH_REGULATORY_CANDIDATE_CAPACITY",
-      "note": "The earlier bulk range-query attempt failed, but regulatory candidate capacity has now been established independently from issuer, SEC, FDA, and press-distribution primary/contemporaneous sources. openFDA may still be used as supplementary evidence but is not allowed to substitute for the first material public timestamp."
+      "note": "The earlier bulk range-query attempt failed, but regulatory candidate capacity has been established independently from issuer, SEC, FDA, and press-distribution primary/contemporaneous sources. openFDA may still be supplementary evidence but cannot substitute for the first material public timestamp."
     }
   },
   "historical_market_data_status": {
@@ -78,12 +78,12 @@
       "reported_action": "10-for-1 forward split",
       "ex_date": "2024-06-10"
     },
-    "note": "The connected SIP feed returned consolidated raw pre/post-split prices and a separate corporate-action record, which is compatible with leakage-safe reconstruction. This finding does not itself complete any historical BOE snapshot or outcome record."
+    "note": "The connected SIP feed returned consolidated raw pre/post-split prices and a separate corporate-action record, compatible with leakage-safe reconstruction. This finding does not itself complete any historical BOE snapshot or outcome record."
   },
   "blocking_findings": [
     "No authoritative frozen 120-event registry or cohort-manifest.json exists.",
-    "The regulatory candidate pool now exceeds the >=30 numerical stratum minimum, but zero regulatory rows are yet promotable to the frozen cohort because historical-event blockers remain unresolved.",
-    "Twenty of 33 regulatory candidates still have date-only first-public evidence; 15 of 33 still require CIK/historical-security identity resolution.",
+    "The regulatory candidate pool exceeds the >=30 numerical stratum minimum, but zero regulatory rows are yet promotable to the frozen cohort because historical-event blockers remain unresolved.",
+    "Twenty of 33 regulatory candidates still have date-only first-public evidence; 8 of 33 still require CIK/historical-security identity resolution.",
     "The Phase II, Phase III, early-clinical, and conference/other strata still require primary-source promotion from discovery leads.",
     "At least 40 negative underlying clinical/regulatory events must be acquired and classified independently of stock returns.",
     "Financing/dilution T-90 through T+30 and single-asset status have not yet been resolved for enough candidates to satisfy the frozen >=20 requirements.",
@@ -94,5 +94,5 @@
   "merge_ready": false,
   "milestone_complete": false,
   "milestone_8_allowed": false,
-  "required_action": "Promote the regulatory batch by resolving exact first-public timestamps, CIK/security identity, historical-universe status, financing-window and single-asset fields; acquire primary-source Phase II, Phase III, early-clinical, conference/other and negative-event batches; only then freeze the compliant >=120-event cohort before outcome inspection and execute all four BOE snapshots using leakage-safe Alpaca SIP raw bars plus explicit corporate actions. Do not reduce requirements or alter BOE-1.0.0."
+  "required_action": "Continue regulatory promotion by resolving the remaining exact first-public timestamps, CIK/security identities, historical-universe status, financing-window and single-asset fields; acquire primary-source Phase II, Phase III, early-clinical, conference/other and negative-event batches; only then freeze the compliant >=120-event cohort before outcome inspection and execute all four BOE snapshots using leakage-safe Alpaca SIP raw bars plus explicit corporate actions. Do not reduce requirements or alter BOE-1.0.0."
 }
