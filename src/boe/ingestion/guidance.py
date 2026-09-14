@@ -45,7 +45,9 @@ def extract_catalyst_guidance(
     """Extract explicit future catalyst timing statements; never infer missing dates."""
 
     if source_tier not in {EvidenceTier.SEC_FILING, EvidenceTier.ISSUER_RELATIONS}:
-        raise GuidanceExtractionError("guidance extractor accepts SEC or issuer primary sources only")
+        raise GuidanceExtractionError(
+            "guidance extractor accepts SEC or issuer primary sources only"
+        )
     sentences = _sentences(text)
     observations: list[CatalystObservation] = []
     for sentence in sentences:
@@ -87,11 +89,24 @@ def _sentences(text: str) -> tuple[str, ...]:
 
 def _infer_catalyst_type(sentence: str, clinical_phase: str) -> CatalystType | None:
     lower = sentence.lower()
-    if any(token in lower for token in ("pdufa", "fda decision", "regulatory decision", "action date")):
+    if any(
+        token in lower
+        for token in ("pdufa", "fda decision", "regulatory decision", "action date")
+    ):
         return CatalystType.REG_DECISION
     if any(token in lower for token in ("advisory committee", "adcom")):
         return CatalystType.REG_ADCOM
-    if any(token in lower for token in ("submit", "submission", "file an nda", "file a bla", "nda filing", "bla filing")):
+    if any(
+        token in lower
+        for token in (
+            "submit",
+            "submission",
+            "file an nda",
+            "file a bla",
+            "nda filing",
+            "bla filing",
+        )
+    ):
         return CatalystType.REG_SUBMIT
     if any(token in lower for token in ("topline", "top-line", "readout", "data", "results")):
         phase = clinical_phase.lower().replace(" ", "")
@@ -111,9 +126,7 @@ def _infer_catalyst_type(sentence: str, clinical_phase: str) -> CatalystType | N
     return None
 
 
-def _extract_window(
-    sentence: str, known_on: date
-) -> tuple[date, date, TimingConfidence] | None:
+def _extract_window(sentence: str, known_on: date) -> tuple[date, date, TimingConfidence] | None:
     lower = sentence.lower()
     exact = re.search(
         rf"\b({_MONTH_PATTERN})\s+(\d{{1,2}})(?:st|nd|rd|th)?[,]?\s+(20\d{{2}})\b",
