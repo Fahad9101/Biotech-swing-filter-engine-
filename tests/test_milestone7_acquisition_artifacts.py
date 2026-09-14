@@ -8,6 +8,7 @@ PHASE2_BATCH = ROOT / "validation/m7/acquisition/phase2-primary-batch-01.json"
 PHASE3_BATCH = ROOT / "validation/m7/acquisition/phase3-primary-batch-01.json"
 EARLY_CLINICAL_BATCH = ROOT / "validation/m7/acquisition/early-clinical-primary-batch-01.json"
 CONFERENCE_OTHER_BATCH = ROOT / "validation/m7/acquisition/conference-other-primary-batch-01.json"
+NEGATIVE_PHASE2_SUPPLEMENT = ROOT / "validation/m7/acquisition/negative-phase2-supplement-01.json"
 
 FORBIDDEN_OUTCOME_FIELDS = {
     "return_t1_pct",
@@ -46,7 +47,6 @@ def _assert_common_prefreeze_integrity(payload: dict[str, object]) -> list[dict[
     candidate_ids = [event["candidate_id"] for event in events]
     assert len(candidate_ids) == len(set(candidate_ids))
     assert any(str(event["first_public_date"]).startswith("2018-") for event in events)
-    assert any(str(event["first_public_date"]).startswith("2025-") for event in events)
 
     for event in events:
         assert event["cohort_frozen"] is False
@@ -64,6 +64,7 @@ def test_regulatory_acquisition_batch_is_prefreeze_and_self_consistent() -> None
     assert payload["role"] == "PRIMARY_SOURCE_REGULATORY_CANDIDATES_NOT_FROZEN_COHORT"
     assert payload["candidate_count"] == 33
     assert payload["cik_resolved_count"] == 25
+    assert any(str(event["first_public_date"]).startswith("2025-") for event in events)
     for event in events:
         assert event["proposed_primary_stratum"] == "REGULATORY"
 
@@ -81,6 +82,7 @@ def test_phase2_acquisition_batch_is_prefreeze_and_outcome_blinded() -> None:
     assert payload["negative_event_candidate_count"] == 13
     assert payload["exact_timestamp_count"] == 21
     assert payload["date_only_count"] == 15
+    assert any(str(event["first_public_date"]).startswith("2025-") for event in events)
     for event in events:
         assert event["proposed_primary_stratum"] == "PHASE_2_POC"
         assert event["clinical_phase"] == "PHASE_2"
@@ -100,6 +102,7 @@ def test_phase3_acquisition_batch_is_prefreeze_and_outcome_blinded() -> None:
     assert payload["negative_event_candidate_count"] == 17
     assert payload["exact_timestamp_count"] == 27
     assert payload["date_only_count"] == 4
+    assert any(str(event["first_public_date"]).startswith("2025-") for event in events)
     for event in events:
         assert event["proposed_primary_stratum"] == "PHASE_3_PIVOTAL"
         assert event["clinical_phase"] == "PHASE_3"
@@ -119,6 +122,7 @@ def test_early_clinical_batch_is_prefreeze_and_outcome_blinded() -> None:
     assert payload["negative_event_candidate_count"] == 5
     assert payload["exact_timestamp_count"] == 28
     assert payload["date_only_count"] == 3
+    assert any(str(event["first_public_date"]).startswith("2025-") for event in events)
     for event in events:
         assert event["proposed_primary_stratum"] == "EARLY_CLINICAL"
         assert event["clinical_phase"] in {"PHASE_1", "PHASE_1_2"}
@@ -135,6 +139,7 @@ def test_conference_other_batch_is_prefreeze_and_outcome_blinded() -> None:
     assert payload["negative_event_candidate_count"] == 0
     assert payload["exact_timestamp_count"] == 25
     assert payload["date_only_count"] == 1
+    assert any(str(event["first_public_date"]).startswith("2025-") for event in events)
     for event in events:
         assert event["proposed_primary_stratum"] == "CONFERENCE_OTHER"
         assert event["proposed_catalyst_type"] == "CONF_DATA"
@@ -144,3 +149,19 @@ def test_conference_other_batch_is_prefreeze_and_outcome_blinded() -> None:
             "VERIFY_UNDERLYING_CLINICAL_PHASE_AND_EVENT_DEDUPLICATION"
             in event["promotion_blockers"]
         )
+
+
+def test_negative_phase2_supplement_is_prefreeze_and_price_outcome_blinded() -> None:
+    payload = json.loads(NEGATIVE_PHASE2_SUPPLEMENT.read_text(encoding="utf-8"))
+    events = _assert_common_prefreeze_integrity(payload)
+
+    assert payload["role"] == "PRIMARY_SOURCE_NEGATIVE_PHASE2_SUPPLEMENT_NOT_FROZEN_COHORT"
+    assert payload["candidate_count"] == 8
+    assert payload["negative_event_candidate_count"] == 8
+    assert payload["exact_timestamp_count"] == 8
+    assert payload["date_only_count"] == 0
+    for event in events:
+        assert event["proposed_primary_stratum"] == "PHASE_2_POC"
+        assert event["clinical_phase"] == "PHASE_2"
+        assert event["negative_event_candidate"] is True
+        assert str(event["result_direction"]).startswith("NEGATIVE")
