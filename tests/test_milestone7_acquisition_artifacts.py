@@ -2,7 +2,6 @@ import hashlib
 import json
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[1]
 REGULATORY_BATCH = ROOT / "validation/m7/acquisition/regulatory-primary-batch-01.json"
 PHASE2_BATCH = ROOT / "validation/m7/acquisition/phase2-primary-batch-01.json"
