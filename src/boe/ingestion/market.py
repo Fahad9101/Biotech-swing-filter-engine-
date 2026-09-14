@@ -93,8 +93,7 @@ def _select_member(names: list[str], symbol: str) -> str:
     candidates = [
         name
         for name in names
-        if name.lower().endswith((".txt", ".csv"))
-        and normalized in Path(name).stem.lower()
+        if name.lower().endswith((".txt", ".csv")) and normalized in Path(name).stem.lower()
     ]
     if len(candidates) == 1:
         return candidates[0]
