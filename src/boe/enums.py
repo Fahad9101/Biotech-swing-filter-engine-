@@ -1,0 +1,91 @@
+"""Closed enumerations shared by BOE-1.0.0 contracts."""
+
+from enum import IntEnum, StrEnum
+
+
+class DataState(StrEnum):
+    OBSERVED = "OBSERVED"
+    DERIVED = "DERIVED"
+    ESTIMATED = "ESTIMATED"
+    MISSING = "MISSING"
+
+
+class TimingConfidence(StrEnum):
+    UNVERIFIED = "UNVERIFIED"
+    LOW = "LOW"
+    MODERATE = "MODERATE"
+    HIGH = "HIGH"
+
+
+class PosConfidence(StrEnum):
+    LOW = "LOW"
+    MODERATE = "MODERATE"
+    HIGH = "HIGH"
+
+
+class CatalystType(StrEnum):
+    CLIN_P1 = "CLIN_P1"
+    CLIN_P1_2 = "CLIN_P1_2"
+    CLIN_P2 = "CLIN_P2"
+    CLIN_P2_3 = "CLIN_P2_3"
+    CLIN_P3 = "CLIN_P3"
+    REG_SUBMIT = "REG_SUBMIT"
+    REG_ADCOM = "REG_ADCOM"
+    REG_DECISION = "REG_DECISION"
+    REG_OTHER = "REG_OTHER"
+    CONF_DATA = "CONF_DATA"
+    PUBLICATION = "PUBLICATION"
+    PARTNER = "PARTNER"
+    COMMERCIAL = "COMMERCIAL"
+    FINANCING = "FINANCING"
+
+
+class FactorCode(StrEnum):
+    CATALYST = "CATALYST"
+    SCIENCE = "SCIENCE"
+    MARKET_IMPACT = "MARKET_IMPACT"
+    CASH_DILUTION = "CASH_DILUTION"
+    VALUATION = "VALUATION"
+    TECHNICAL = "TECHNICAL"
+    OWNERSHIP = "OWNERSHIP"
+    SENTIMENT = "SENTIMENT"
+
+
+class Classification(StrEnum):
+    HIGH_CONVICTION_CATALYST_SWING = "HIGH_CONVICTION_CATALYST_SWING"
+    CATALYST_SWING = "CATALYST_SWING"
+    WATCHLIST = "WATCHLIST"
+    TOO_EARLY = "TOO_EARLY"
+    OVEREXTENDED_DO_NOT_CHASE = "OVEREXTENDED_DO_NOT_CHASE"
+    FINANCING_RISK = "FINANCING_RISK"
+    BINARY_RISK_UNFAVORABLE_ASYMMETRY = "BINARY_RISK_UNFAVORABLE_ASYMMETRY"
+    REJECT = "REJECT"
+
+
+class Exchange(StrEnum):
+    NASDAQ = "NASDAQ"
+    NYSE = "NYSE"
+    NYSE_AMERICAN = "NYSE_AMERICAN"
+
+
+class SecurityType(StrEnum):
+    COMMON_STOCK = "COMMON_STOCK"
+    ADR = "ADR"
+
+
+class DilutionRisk(StrEnum):
+    LOW = "LOW"
+    MODERATE = "MODERATE"
+    HIGH = "HIGH"
+    IMMINENT = "IMMINENT"
+
+
+class EvidenceTier(IntEnum):
+    FDA_REGULATOR = 1
+    SEC_FILING = 2
+    CLINICAL_TRIALS_REGISTRY = 3
+    PRIMARY_SCIENCE = 4
+    ISSUER_RELATIONS = 5
+    EXCHANGE_MARKET_DATA = 6
+    SECONDARY_CONTEXT = 7
+    SOCIAL_RISK_MONITORING_ONLY = 8

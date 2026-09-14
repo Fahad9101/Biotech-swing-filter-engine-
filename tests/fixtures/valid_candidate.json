@@ -1,0 +1,193 @@
+{
+  "meta": {
+    "analysis_run_id": "123e4567-e89b-12d3-a456-426614174000",
+    "generated_at": "2026-09-14T20:05:00Z",
+    "as_of": "2026-09-14T20:00:00Z",
+    "evidence_cutoff": "2026-09-14T20:00:00Z",
+    "rules_version": "BOE-1.0.0",
+    "rules_checksum": "11cffb776ffd6bbd943b1d23dfcf6541ab02fcbfec753f13d00a7f4acee8b569",
+    "code_commit_sha": "9f19a091e6980fd03cf2564595f471be1c424c69",
+    "data_coverage_pct": 100
+  },
+  "identity": {
+    "ticker": "TEST",
+    "company": "BOE Offline Fixture Therapeutics",
+    "cik": "0000000001",
+    "exchange": "NASDAQ",
+    "security_type": "COMMON_STOCK",
+    "universe_eligible": true,
+    "market_cap": {"value": "400000000", "currency": "USD"},
+    "enterprise_value": {"value": "300000000", "currency": "USD"}
+  },
+  "catalyst": {
+    "type": "CLIN_P2",
+    "lead_asset": "BOE-101",
+    "indication": "Synthetic validation indication",
+    "clinical_phase": "Phase II",
+    "title": "Synthetic randomized Phase II readout",
+    "window_start": "2026-10-15",
+    "window_end": "2026-10-31",
+    "timing_confidence": "MODERATE",
+    "primary_source_id": "src-sec-1"
+  },
+  "score": {
+    "raw_total": 73,
+    "factors": [
+      {
+        "code": "CATALYST",
+        "points": 20,
+        "max_points": 25,
+        "subfactors": [
+          {"code": "MATERIALITY", "points": 6, "max_points": 8, "data_state": "OBSERVED", "rationale": "Lead-asset readout can re-rate value.", "evidence_ids": ["src-sec-1"]},
+          {"code": "TIMING_CONFIDENCE", "points": 5, "max_points": 5, "data_state": "OBSERVED", "rationale": "Company-confirmed bounded window.", "evidence_ids": ["src-sec-1"]},
+          {"code": "PROXIMITY", "points": 4, "max_points": 4, "data_state": "DERIVED", "rationale": "Window begins in 31 days.", "evidence_ids": ["src-sec-1"]},
+          {"code": "MATURITY", "points": 3, "max_points": 5, "data_state": "OBSERVED", "rationale": "Phase II program.", "evidence_ids": ["src-sec-1"]},
+          {"code": "NOVEL_INFORMATION", "points": 2, "max_points": 3, "data_state": "ESTIMATED", "rationale": "First randomized efficacy evidence.", "evidence_ids": ["src-sec-1"]}
+        ]
+      },
+      {
+        "code": "SCIENCE",
+        "points": 15,
+        "max_points": 20,
+        "subfactors": [
+          {"code": "BIOLOGICAL_RATIONALE", "points": 2, "max_points": 3, "data_state": "OBSERVED", "rationale": "Human target support.", "evidence_ids": ["src-sec-1"]},
+          {"code": "PRIOR_HUMAN_EVIDENCE", "points": 4, "max_points": 5, "data_state": "OBSERVED", "rationale": "Replicated early signal.", "evidence_ids": ["src-sec-1"]},
+          {"code": "TRIAL_DESIGN", "points": 4, "max_points": 5, "data_state": "OBSERVED", "rationale": "Randomized controlled design.", "evidence_ids": ["src-sec-1"]},
+          {"code": "EFFICACY_ROBUSTNESS", "points": 2, "max_points": 3, "data_state": "OBSERVED", "rationale": "Coherent but not yet pivotal.", "evidence_ids": ["src-sec-1"]},
+          {"code": "SAFETY", "points": 1, "max_points": 2, "data_state": "OBSERVED", "rationale": "Monitorable uncertainty.", "evidence_ids": ["src-sec-1"]},
+          {"code": "EXTERNAL_VALIDATION", "points": 2, "max_points": 2, "data_state": "OBSERVED", "rationale": "Independent class validation.", "evidence_ids": ["src-sec-1"]}
+        ]
+      },
+      {
+        "code": "MARKET_IMPACT",
+        "points": 11,
+        "max_points": 15,
+        "subfactors": [
+          {"code": "ASSET_VALUE_CONCENTRATION", "points": 4, "max_points": 5, "data_state": "ESTIMATED", "rationale": "Lead asset drives most value.", "evidence_ids": ["src-sec-1"]},
+          {"code": "SUCCESS_RERATING", "points": 3, "max_points": 4, "data_state": "ESTIMATED", "rationale": "Success case implies material re-rating.", "evidence_ids": ["src-sec-1"]},
+          {"code": "EXPECTATION_GAP", "points": 3, "max_points": 4, "data_state": "ESTIMATED", "rationale": "Valuation indicates underappreciation.", "evidence_ids": ["src-sec-1"]},
+          {"code": "COMPETITIVE_POSITION", "points": 1, "max_points": 2, "data_state": "OBSERVED", "rationale": "Viable competitive position.", "evidence_ids": ["src-sec-1"]}
+        ]
+      },
+      {
+        "code": "CASH_DILUTION",
+        "points": 7,
+        "max_points": 10,
+        "subfactors": [
+          {"code": "RUNWAY", "points": 4, "max_points": 5, "data_state": "DERIVED", "rationale": "Twenty-seven months of runway.", "evidence_ids": ["src-sec-1"]},
+          {"code": "FINANCING_OVERHANG", "points": 2, "max_points": 3, "data_state": "ESTIMATED", "rationale": "Moderate overhang.", "evidence_ids": ["src-sec-1"]},
+          {"code": "BALANCE_SHEET_FLEXIBILITY", "points": 1, "max_points": 2, "data_state": "DERIVED", "rationale": "Adequate net cash.", "evidence_ids": ["src-sec-1"]}
+        ]
+      },
+      {
+        "code": "VALUATION",
+        "points": 7,
+        "max_points": 10,
+        "subfactors": [
+          {"code": "CONSERVATIVE_MOS", "points": 3, "max_points": 4, "data_state": "ESTIMATED", "rationale": "Conservative margin is 30%.", "evidence_ids": ["src-sec-1"]},
+          {"code": "BASE_MOS", "points": 2, "max_points": 3, "data_state": "ESTIMATED", "rationale": "Base margin is 50%.", "evidence_ids": ["src-sec-1"]},
+          {"code": "FAILURE_VALUE_SUPPORT", "points": 2, "max_points": 3, "data_state": "ESTIMATED", "rationale": "Failure downside is 40%.", "evidence_ids": ["src-sec-1"]}
+        ]
+      },
+      {
+        "code": "TECHNICAL",
+        "points": 7,
+        "max_points": 10,
+        "subfactors": [
+          {"code": "TREND", "points": 2, "max_points": 2, "data_state": "DERIVED", "rationale": "Aligned moving averages.", "evidence_ids": ["src-market-1"]},
+          {"code": "RELATIVE_STRENGTH", "points": 1, "max_points": 2, "data_state": "DERIVED", "rationale": "Positive relative strength.", "evidence_ids": ["src-market-1"]},
+          {"code": "ACCUMULATION", "points": 1, "max_points": 2, "data_state": "DERIVED", "rationale": "One accumulation condition met.", "evidence_ids": ["src-market-1"]},
+          {"code": "STRUCTURE", "points": 2, "max_points": 2, "data_state": "DERIVED", "rationale": "Price is near support with target room.", "evidence_ids": ["src-market-1"]},
+          {"code": "EXTENSION", "points": 1, "max_points": 2, "data_state": "DERIVED", "rationale": "Not severely extended.", "evidence_ids": ["src-market-1"]}
+        ]
+      },
+      {
+        "code": "OWNERSHIP",
+        "points": 3,
+        "max_points": 5,
+        "subfactors": [
+          {"code": "SPECIALIST_OWNERSHIP", "points": 2, "max_points": 3, "data_state": "OBSERVED", "rationale": "Two specialists accumulated.", "evidence_ids": ["src-sec-1"]},
+          {"code": "INSIDER_SIGNAL", "points": 1, "max_points": 2, "data_state": "OBSERVED", "rationale": "Neutral insider signal.", "evidence_ids": ["src-sec-1"]}
+        ]
+      },
+      {
+        "code": "SENTIMENT",
+        "points": 3,
+        "max_points": 5,
+        "subfactors": [
+          {"code": "ATTENTION_VOLUME", "points": 1, "max_points": 2, "data_state": "DERIVED", "rationale": "Volume condition only.", "evidence_ids": ["src-market-1"]},
+          {"code": "EXPECTATION_DIRECTION", "points": 1, "max_points": 2, "data_state": "ESTIMATED", "rationale": "One positive revision.", "evidence_ids": ["src-sec-1"]},
+          {"code": "SECTOR_REGIME", "points": 1, "max_points": 1, "data_state": "DERIVED", "rationale": "XBI regime is constructive.", "evidence_ids": ["src-market-1"]}
+        ]
+      }
+    ]
+  },
+  "decision": {
+    "classification": "CATALYST_SWING",
+    "final_decision": "Synthetic fixture clears contract boundaries; it is not an investment recommendation.",
+    "triggered_gates": [],
+    "preferred_entry_zone": {"low": {"value": "9.00", "currency": "USD"}, "high": {"value": "10.00", "currency": "USD"}},
+    "do_not_chase_price": {"value": "12.50", "currency": "USD"},
+    "bull_target": {"value": "17.00", "currency": "USD"},
+    "base_target": {"value": "14.50", "currency": "USD"},
+    "failure_value": {"value": "6.00", "currency": "USD"}
+  },
+  "probability": {
+    "event_success_pct": {"low": 35, "mid": 45, "high": 55},
+    "confidence": "MODERATE",
+    "prior_pct": 40,
+    "adjustments": [{"code": "PRIOR_HUMAN_EVIDENCE", "percentage_points": 5, "rationale": "Synthetic prior human signal."}]
+  },
+  "financials": {
+    "cash": {"value": "120000000", "currency": "USD"},
+    "short_term_investments": {"value": "30000000", "currency": "USD"},
+    "debt": {"value": "50000000", "currency": "USD"},
+    "normalized_quarterly_burn": {"value": "16666667", "currency": "USD"},
+    "runway_months": 27,
+    "runway_at_catalyst_months": 25.5,
+    "dilution_risk": "MODERATE",
+    "fully_diluted_shares": "40000000"
+  },
+  "valuation": {
+    "conservative_rnpv": {"value": "520000000", "currency": "USD"},
+    "base_rnpv": {"value": "600000000", "currency": "USD"},
+    "bull_rnpv": {"value": "800000000", "currency": "USD"},
+    "margin_of_safety_pct": {"low": 30, "mid": 50, "high": 100},
+    "success_return_pct": {"low": 30, "mid": 45, "high": 70},
+    "failure_return_pct": {"low": -50, "mid": -40, "high": -30},
+    "base_expected_return_pct": 18,
+    "conservative_expected_return_pct": -5,
+    "reward_risk": 1.8
+  },
+  "technicals": {
+    "price": {"value": "10.00", "currency": "USD"},
+    "support": {"value": "9.40", "currency": "USD"},
+    "resistance": {"value": "11.80", "currency": "USD"},
+    "sma20": {"value": "9.60", "currency": "USD"},
+    "sma50": {"value": "9.10", "currency": "USD"},
+    "rsi14": 64,
+    "atr14": {"value": "0.70", "currency": "USD"},
+    "xbi_relative_return_20d_pct": 6,
+    "setup_summary": "Synthetic constructive setup near support."
+  },
+  "risks": {
+    "scientific": ["Synthetic efficacy may not replicate."],
+    "financial": ["A post-catalyst financing remains possible."],
+    "regulatory": ["Development path is not yet pivotal."],
+    "technical": ["Biotech-sector volatility may overwhelm support."]
+  },
+  "thesis": {
+    "summary": "A synthetic Phase II readout may close an expectation gap while the balance sheet preserves survivability.",
+    "must_happen": ["Primary endpoint must be clinically meaningful."],
+    "breakers": ["Material safety imbalance.", "Catalyst delay beyond the actionable window."],
+    "next_refresh": "2026-09-15T20:00:00Z"
+  },
+  "provenance": {
+    "sources": [
+      {"id": "src-sec-1", "url": "https://www.sec.gov/Archives/example", "available_at": "2026-09-10T12:00:00Z", "retrieved_at": "2026-09-14T19:00:00Z", "tier": 2, "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"},
+      {"id": "src-market-1", "url": "https://example.com/offline-market-fixture", "available_at": "2026-09-14T16:00:00Z", "retrieved_at": "2026-09-14T19:00:00Z", "tier": 6, "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"}
+    ],
+    "conflicts": [],
+    "input_manifest_sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+  }
+}

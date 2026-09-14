@@ -4,7 +4,7 @@ BOE is a production-oriented research system for ranking U.S.-listed biotechnolo
 
 ## Current status
 
-**Milestone 0 complete: BOE-1.0.0 foundation is specified, not implemented.**
+**Milestone 1 complete: the frozen BOE-1.0.0 foundation now has executable data contracts. No investment or ingestion logic is implemented.**
 
 The frozen foundation consists of:
 
@@ -32,4 +32,19 @@ BOE does not equate a nearby catalyst with an opportunity. A company must clear 
 3. Does price leave a conservative margin of safety and positive expected value?
 4. Is the balance sheet and trade structure survivable if the thesis fails?
 
-The next approved development step is **Milestone 1: repository scaffold and executable domain contracts**. It must not begin without explicit approval.
+## Local contract validation
+
+Python 3.12 is required. No Docker or paid data service is needed.
+
+```bash
+python -m venv .venv
+. .venv/bin/activate
+python -m pip install -e ".[dev]"
+ruff format --check .
+ruff check .
+mypy src
+pytest
+boe-contracts --candidate tests/fixtures/valid_candidate.json
+```
+
+Milestone 2 must not begin without explicit approval.
