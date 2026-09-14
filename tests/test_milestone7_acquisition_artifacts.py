@@ -6,6 +6,7 @@ ROOT = Path(__file__).resolve().parents[1]
 REGULATORY_BATCH = ROOT / "validation/m7/acquisition/regulatory-primary-batch-01.json"
 PHASE2_BATCH = ROOT / "validation/m7/acquisition/phase2-primary-batch-01.json"
 PHASE3_BATCH = ROOT / "validation/m7/acquisition/phase3-primary-batch-01.json"
+EARLY_CLINICAL_BATCH = ROOT / "validation/m7/acquisition/early-clinical-primary-batch-01.json"
 
 FORBIDDEN_OUTCOME_FIELDS = {
     "return_t1_pct",
@@ -101,4 +102,23 @@ def test_phase3_acquisition_batch_is_prefreeze_and_outcome_blinded() -> None:
     for event in events:
         assert event["proposed_primary_stratum"] == "PHASE_3_PIVOTAL"
         assert event["clinical_phase"] == "PHASE_3"
+        assert event["result_direction"]
+
+
+def test_early_clinical_batch_is_prefreeze_and_outcome_blinded() -> None:
+    payload = json.loads(EARLY_CLINICAL_BATCH.read_text(encoding="utf-8"))
+    events = _assert_common_prefreeze_integrity(payload)
+
+    assert payload["role"] == "PRIMARY_SOURCE_EARLY_CLINICAL_CANDIDATES_NOT_FROZEN_COHORT"
+    assert payload["candidate_count"] == 31
+    assert payload["candidate_count"] >= 15
+    assert payload["negative_event_candidate_count"] == sum(
+        event["negative_event_candidate"] is True for event in events
+    )
+    assert payload["negative_event_candidate_count"] == 5
+    assert payload["exact_timestamp_count"] == 28
+    assert payload["date_only_count"] == 3
+    for event in events:
+        assert event["proposed_primary_stratum"] == "EARLY_CLINICAL"
+        assert event["clinical_phase"] in {"PHASE_1", "PHASE_1_2"}
         assert event["result_direction"]
