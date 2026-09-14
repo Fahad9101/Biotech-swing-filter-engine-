@@ -6,6 +6,7 @@ import statistics
 from datetime import date, datetime
 from decimal import Decimal
 from typing import Self
+from uuid import UUID
 
 from pydantic import Field, model_validator
 
@@ -144,7 +145,10 @@ def build_technical_snapshot(
             "ATR14 = Wilder smoothing of true range.",
             "Up/down dollar-volume ratio = sum(close*volume on up sessions) / down sessions.",
             "OBV slope = OLS slope of 20-session cumulative OBV.",
-            "Validated support = highest eligible SMA20, SMA50, or explicitly validated pivot below close.",
+            (
+                "Validated support = highest eligible SMA20, SMA50, or explicitly "
+                "validated pivot below close."
+            ),
         ),
         notes=tuple(notes),
     )
@@ -247,7 +251,7 @@ def market_capitalization(close: Decimal, shares_outstanding: Decimal) -> Decima
 
 
 def technical_evidence(
-    evidence_id,
+    evidence_id: UUID,
     *,
     rationale_prefix: str = "Milestone 6 deterministic market calculation",
 ) -> dict[str, SubfactorEvidence]:
@@ -296,7 +300,7 @@ def _wilder_rsi(closes: tuple[Decimal, ...], period: int) -> Decimal:
     losses = tuple(max(-change, Decimal("0")) for change in changes)
     avg_gain = _mean(gains[:period])
     avg_loss = _mean(losses[:period])
-    for gain, loss in zip(gains[period:], losses[period:]):
+    for gain, loss in zip(gains[period:], losses[period:], strict=True):
         avg_gain = (avg_gain * Decimal(period - 1) + gain) / Decimal(period)
         avg_loss = (avg_loss * Decimal(period - 1) + loss) / Decimal(period)
     if avg_loss == 0:
@@ -332,7 +336,7 @@ def _up_down_dollar_volume_ratio(
         raise ValueError("up/down dollar-volume ratio requires 20 return sessions")
     up = Decimal("0")
     down = Decimal("0")
-    for previous, current in zip(bars, bars[1:]):
+    for previous, current in zip(bars, bars[1:], strict=False):
         dollar_volume = current.adjusted_close * Decimal(current.volume)
         if current.adjusted_close > previous.adjusted_close:
             up += dollar_volume
@@ -353,7 +357,7 @@ def _obv_slope(bars: tuple[MarketBar, ...]) -> Decimal:
         raise ValueError("OBV slope requires 20 return sessions")
     obv = Decimal("0")
     values: list[Decimal] = []
-    for previous, current in zip(bars, bars[1:]):
+    for previous, current in zip(bars, bars[1:], strict=False):
         if current.adjusted_close > previous.adjusted_close:
             obv += Decimal(current.volume)
         elif current.adjusted_close < previous.adjusted_close:

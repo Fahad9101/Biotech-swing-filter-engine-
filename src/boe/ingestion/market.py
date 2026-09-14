@@ -12,7 +12,7 @@ import csv
 import hashlib
 import io
 import zipfile
-from datetime import UTC, datetime
+from datetime import UTC, date, datetime
 from decimal import Decimal
 from pathlib import Path
 
@@ -41,10 +41,22 @@ def stooq_validation_license(reviewed_at: datetime) -> MarketDataLicenseAudit:
         validation_path_approved=True,
         access_mode="LOCAL_BULK_SNAPSHOT",
         notes=(
-            "Milestone 6 uses operator-supplied bulk history only; BOE performs no automated download.",
-            "BOE assumes no commercial rights; the operator must obtain the snapshot under applicable terms.",
-            "Commercial production remains blocked pending an explicitly licensed market-data source.",
-            "Historical point-in-time use requires an archived snapshot from the relevant cutoff date.",
+            (
+                "Milestone 6 uses operator-supplied bulk history only; BOE performs "
+                "no automated download."
+            ),
+            (
+                "BOE assumes no commercial rights; the operator must obtain the snapshot "
+                "under applicable terms."
+            ),
+            (
+                "Commercial production remains blocked pending an explicitly licensed "
+                "market-data source."
+            ),
+            (
+                "Historical point-in-time use requires an archived snapshot from the "
+                "relevant cutoff date."
+            ),
         ),
     )
 
@@ -154,9 +166,7 @@ def _parse_rows(text: str, *, symbol: str) -> tuple[RawMarketBar, ...]:
     return tuple(sorted(parsed, key=lambda item: item.session_date))
 
 
-def _parse_date(value: str):
-    from datetime import date
-
+def _parse_date(value: str) -> date:
     stripped = value.strip()
     if len(stripped) == 8 and stripped.isdigit():
         return date(int(stripped[:4]), int(stripped[4:6]), int(stripped[6:8]))

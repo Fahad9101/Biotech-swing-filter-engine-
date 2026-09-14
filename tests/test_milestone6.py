@@ -378,7 +378,7 @@ def _independent_metrics(security, benchmark):
     losses = [max(-change, Decimal("0")) for change in changes]
     avg_gain = sum(gains[:14], Decimal("0")) / Decimal(14)
     avg_loss = sum(losses[:14], Decimal("0")) / Decimal(14)
-    for gain, loss in zip(gains[14:], losses[14:]):
+    for gain, loss in zip(gains[14:], losses[14:], strict=True):
         avg_gain = (avg_gain * 13 + gain) / 14
         avg_loss = (avg_loss * 13 + loss) / 14
     if avg_loss == 0:
@@ -407,7 +407,7 @@ def _independent_metrics(security, benchmark):
     window = security[-21:]
     obv = Decimal("0")
     obv_values = []
-    for previous, current in zip(window, window[1:]):
+    for previous, current in zip(window, window[1:], strict=False):
         dollar_volume = current["close"] * Decimal(current["volume"])
         if current["close"] > previous["close"]:
             up += dollar_volume
@@ -421,7 +421,7 @@ def _independent_metrics(security, benchmark):
     xs = [Decimal(index) for index in range(20)]
     x_mean = sum(xs, Decimal("0")) / Decimal(20)
     y_mean = sum(obv_values, Decimal("0")) / Decimal(20)
-    obv_slope = sum((x - x_mean) * (y - y_mean) for x, y in zip(xs, obv_values)) / sum(
+    obv_slope = sum((x - x_mean) * (y - y_mean) for x, y in zip(xs, obv_values, strict=True)) / sum(
         (x - x_mean) ** 2 for x in xs
     )
 
