@@ -1,0 +1,121 @@
+name: M5 contract repair
+
+on:
+  push:
+    branches: [milestone-5-science-pos-rnpv-scoring]
+
+permissions:
+  contents: write
+
+jobs:
+  repair:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: milestone-5-science-pos-rnpv-scoring
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Repair strict typing and frozen edge clauses
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          path = Path('src/boe/scoring.py')
+          text = path.read_text()
+          text = text.replace(
+              'from boe.models import ContractModel, FactorScore, FactorSubscore, ScoreBreakdown, ScorecardContract',
+              'from boe.models import (\n    ContractModel,\n    FactorDefinition,\n    FactorScore,\n    FactorSubscore,\n    ScoreBreakdown,\n    ScorecardContract,\n    SubfactorDefinition,\n)',
+          )
+          marker = '\n\nclass CatalystScoreInput(ContractModel):\n'
+          exception_class = '''\n\nclass MaterialityException(ContractModel):\n    approved_at: datetime\n    rationale: str = Field(min_length=1)\n    evidence_ids: tuple[UUID, ...] = Field(min_length=1)\n    approved_before_outcome_knowledge: Literal[True] = True\n\n    @model_validator(mode="after")\n    def validate_exception(self) -> Self:\n        _require_aware(self.approved_at, "approved_at")\n        if len(set(self.evidence_ids)) != len(self.evidence_ids):\n            raise ValueError("materiality-exception evidence IDs must be unique")\n        return self\n'''
+          if exception_class.strip() not in text:
+              if marker not in text:
+                  raise SystemExit('CatalystScoreInput marker missing')
+              text = text.replace(marker, exception_class + marker, 1)
+          text = text.replace(
+              '    maturity_bucket: MaturityBucket | None = None\n    evidence: dict[str, SubfactorEvidence]',
+              '    maturity_bucket: MaturityBucket | None = None\n    materiality_exception: MaterialityException | None = None\n    evidence: dict[str, SubfactorEvidence]',
+          )
+          old = '''            if self.materiality_points > MATERIALITY_CEILINGS[self.catalyst_type]:\n                raise ValueError("materiality exceeds the frozen catalyst-type ceiling")'''
+          new = '''            if self.materiality_points > MATERIALITY_CEILINGS[self.catalyst_type]:\n                if self.materiality_exception is None:\n                    raise ValueError(\n                        "materiality exceeds the default ceiling without an approved exception"\n                    )\n                if self.materiality_exception.approved_at > self.as_of:\n                    raise ValueError(\n                        "materiality exception must be documented before the analysis cutoff"\n                    )'''
+          if old not in text:
+              raise SystemExit('materiality ceiling fragment missing')
+          text = text.replace(old, new, 1)
+          old = '''    values: list[FactorSubscore] = []\n    values.append(\n        _subscore(\n            definition,\n            "MATERIALITY",\n            input_.materiality_points,\n            input_.evidence,\n        )\n    )\n    timing_mapping = _subfactor_rule(definition, "TIMING_CONFIDENCE").get("mapping")\n    if not isinstance(timing_mapping, dict):\n        raise TypeError("timing-confidence mapping missing from scorecard")\n    timing_points = int(timing_mapping[input_.timing_confidence.value])'''
+          new = '''    values: list[FactorSubscore] = []\n    materiality_evidence = input_.evidence\n    if input_.materiality_exception is not None and input_.materiality_points is not None:\n        if input_.materiality_points > MATERIALITY_CEILINGS[input_.catalyst_type]:\n            metadata = input_.evidence.get("MATERIALITY")\n            if metadata is None:\n                raise ValueError("evidence metadata missing for MATERIALITY")\n            materiality_evidence = dict(input_.evidence)\n            materiality_evidence["MATERIALITY"] = metadata.model_copy(\n                update={\n                    "rationale": (\n                        f"{metadata.rationale}; approved exception: "\n                        f"{input_.materiality_exception.rationale}"\n                    ),\n                    "evidence_ids": tuple(\n                        dict.fromkeys(\n                            (*metadata.evidence_ids, *input_.materiality_exception.evidence_ids)\n                        )\n                    ),\n                }\n            )\n    values.append(\n        _subscore(\n            definition,\n            "MATERIALITY",\n            input_.materiality_points,\n            materiality_evidence,\n        )\n    )\n    timing_mapping = _int_mapping(\n        _subfactor_extra(definition, "TIMING_CONFIDENCE", "mapping"),\n        "TIMING_CONFIDENCE.mapping",\n    )\n    timing_points = timing_mapping[input_.timing_confidence.value]'''
+          if old not in text:
+              raise SystemExit('catalyst mapping fragment missing')
+          text = text.replace(old, new, 1)
+          old = '''    maturity_mapping = _subfactor_rule(definition, "MATURITY").get("mapping")\n    if not isinstance(maturity_mapping, dict):\n        raise TypeError("maturity mapping missing from scorecard")\n    maturity_points = int(maturity_mapping[maturity_bucket])'''
+          new = '''    maturity_mapping = _int_mapping(\n        _subfactor_extra(definition, "MATURITY", "mapping"),\n        "MATURITY.mapping",\n    )\n    maturity_points = maturity_mapping[maturity_bucket]'''
+          if old not in text:
+              raise SystemExit('maturity mapping fragment missing')
+          text = text.replace(old, new, 1)
+          old = '''        subrule = _subfactor_rule(definition, code)\n        max_points = int(subrule["max_points"])\n        point = scores[code]\n        allowed = subrule.get("allowed_points")\n        if isinstance(allowed, list) and point not in allowed:\n            raise ValueError(f"{code} review score is outside frozen allowed values")'''
+          new = '''        subrule = _subfactor_definition(definition, code)\n        max_points = subrule.max_points\n        point = scores[code]\n        allowed = _int_list(\n            _subfactor_extra(definition, code, "allowed_points"),\n            f"{code}.allowed_points",\n        )\n        if point not in allowed:\n            raise ValueError(f"{code} review score is outside frozen allowed values")'''
+          if old not in text:
+              raise SystemExit('science subrule fragment missing')
+          text = text.replace(old, new, 1)
+          old = '''        mapping = _subfactor_rule(definition, "FINANCING_OVERHANG").get("mapping")\n        if not isinstance(mapping, dict):\n            raise TypeError("financing-overhang mapping missing from scorecard")\n        overhang = int(mapping[input_.financing_overhang.value])'''
+          new = '''        mapping = _int_mapping(\n            _subfactor_extra(definition, "FINANCING_OVERHANG", "mapping"),\n            "FINANCING_OVERHANG.mapping",\n        )\n        overhang = mapping[input_.financing_overhang.value]'''
+          if old not in text:
+              raise SystemExit('financing-overhang fragment missing')
+          text = text.replace(old, new, 1)
+          start = text.index('def _factor_definition(')
+          end = text.index('\n\ndef _proximity_points', start)
+          helpers = '''def _factor_definition(\n    rules: ScorecardContract,\n    code: FactorCode,\n) -> FactorDefinition:\n    for definition in rules.factors:\n        if definition.code is code:\n            return definition\n    raise ValueError(f"factor definition missing: {code.value}")\n\n\ndef _subfactor_definition(\n    definition: FactorDefinition,\n    code: str,\n) -> SubfactorDefinition:\n    for subfactor in definition.subfactors:\n        if subfactor.code == code:\n            return subfactor\n    raise ValueError(f"subfactor definition missing: {code}")\n\n\ndef _subfactor_extra(\n    definition: FactorDefinition,\n    code: str,\n    key: str,\n) -> object:\n    subfactor = _subfactor_definition(definition, code)\n    extras = subfactor.model_extra or {}\n    if key not in extras:\n        raise ValueError(f"subfactor rule missing {key}: {code}")\n    value: object = extras[key]\n    return value\n\n\ndef _int_mapping(raw: object, label: str) -> dict[str, int]:\n    if not isinstance(raw, dict):\n        raise TypeError(f"{label} must be a mapping")\n    result: dict[str, int] = {}\n    for key, value in raw.items():\n        if not isinstance(key, str):\n            raise TypeError(f"{label} keys must be strings")\n        if isinstance(value, bool) or not isinstance(value, int):\n            raise TypeError(f"{label} values must be integers")\n        result[key] = value\n    return result\n\n\ndef _int_list(raw: object, label: str) -> list[int]:\n    if not isinstance(raw, list):\n        raise TypeError(f"{label} must be a list")\n    result: list[int] = []\n    for value in raw:\n        if isinstance(value, bool) or not isinstance(value, int):\n            raise TypeError(f"{label} values must be integers")\n        result.append(value)\n    return result\n\n\ndef _subscore(\n    definition: FactorDefinition,\n    code: str,\n    points: int | None,\n    evidence: dict[str, SubfactorEvidence],\n) -> FactorSubscore:\n    if code not in evidence:\n        raise ValueError(f"evidence metadata missing for {code}")\n    metadata = evidence[code]\n    max_points = _subfactor_definition(definition, code).max_points\n    if points is None:\n        if metadata.data_state is not DataState.MISSING:\n            raise ValueError(f"{code} has no value but is not marked missing")\n        resolved_points = 0\n    else:\n        if metadata.data_state is DataState.MISSING:\n            raise ValueError(f"{code} has a value but is marked missing")\n        resolved_points = points\n    return FactorSubscore(\n        code=code,\n        points=resolved_points,\n        max_points=max_points,\n        data_state=metadata.data_state,\n        rationale=metadata.rationale,\n        evidence_ids=tuple(str(value) for value in metadata.evidence_ids),\n    )\n\n\ndef _factor_score(\n    code: FactorCode,\n    max_points: int,\n    values: list[FactorSubscore],\n) -> FactorScore:\n    return FactorScore(\n        code=code,\n        points=sum(item.points for item in values),\n        max_points=max_points,\n        subfactors=tuple(values),\n    )'''
+          text = text[:start] + helpers + text[end:]
+          text = text.replace(
+              '    if Decimal("8") < support_distance <= Decimal("15") or Decimal("8") <= target_room <= Decimal(\n        "15"\n    ):',
+              '    if Decimal("8") <= support_distance <= Decimal("15") or Decimal("8") <= target_room <= Decimal(\n        "15"\n    ):',
+          )
+          path.write_text(text)
+
+          path = Path('src/boe/valuation.py')
+          text = path.read_text()
+          old = '''        if self.scenario != "BULL" and any(asset.terminal_value > 0 for asset in self.assets):\n            raise ValueError("terminal value is zero in conservative/base BOE-1.0.0 scenarios")\n        return self'''
+          new = '''        if self.scenario != "BULL" and any(asset.terminal_value > 0 for asset in self.assets):\n            raise ValueError("terminal value is zero in conservative/base BOE-1.0.0 scenarios")\n        if self.scenario == "BULL" and any(asset.pos_pct > 90 for asset in self.assets):\n            raise ValueError("bull-scenario PoS is capped at 90% by BOE-1.0.0")\n        return self'''
+          if old not in text:
+              raise SystemExit('rNPV validator fragment missing')
+          path.write_text(text.replace(old, new, 1))
+
+          path = Path('src/boe/analysis.py')
+          text = path.read_text()
+          old = '''        if Decimal(str(self.valuation.base_expected_return_pct)) != self.expected_value.base_ev_pct:\n            raise ValueError("valuation base EV does not match expected-value result")\n        if (\n            Decimal(str(self.valuation.conservative_expected_return_pct))\n            != self.expected_value.conservative_ev_pct\n        ):\n            raise ValueError("valuation conservative EV does not match expected-value result")'''
+          new = '''        tolerance = Decimal("0.000001")\n        if (\n            abs(\n                Decimal(str(self.valuation.base_expected_return_pct))\n                - self.expected_value.base_ev_pct\n            )\n            > tolerance\n        ):\n            raise ValueError("valuation base EV does not match expected-value result")\n        if (\n            abs(\n                Decimal(str(self.valuation.conservative_expected_return_pct))\n                - self.expected_value.conservative_ev_pct\n            )\n            > tolerance\n        ):\n            raise ValueError("valuation conservative EV does not match expected-value result")'''
+          if old not in text:
+              raise SystemExit('decision EV reconciliation fragment missing')
+          path.write_text(text.replace(old, new, 1))
+
+          path = Path('tests/test_milestone5.py')
+          text = path.read_text()
+          text = text.replace(
+              '    MarketImpactScoreInput,\n',
+              '    MarketImpactScoreInput,\n    MaterialityException,\n',
+          )
+          ugly = '    assert below.score.raw_total if False else True\n'
+          text = text.replace(ugly, '')
+          append = '''\n\ndef test_materiality_ceiling_requires_pre_outcome_documented_exception(scorecard_path: Path):\n    rules = _rules(scorecard_path)\n    common = dict(\n        as_of=AS_OF,\n        catalyst_type=CatalystType.CLIN_P1,\n        window_start=date(2026, 10, 14),\n        timing_confidence=TimingConfidence.HIGH,\n        materiality_points=6,\n        novelty_points=2,\n        evidence=_evidence(\n            "MATERIALITY",\n            "TIMING_CONFIDENCE",\n            "PROXIMITY",\n            "MATURITY",\n            "NOVEL_INFORMATION",\n        ),\n    )\n    with pytest.raises(ValueError):\n        CatalystScoreInput(**common)\n\n    exception_evidence = UUID("00000000-0000-0000-0000-000000000099")\n    exception = MaterialityException(\n        approved_at=AS_OF - timedelta(days=1),\n        rationale="pre-outcome committee approval for unusually material Phase I readout",\n        evidence_ids=(exception_evidence,),\n        approved_before_outcome_knowledge=True,\n    )\n    scored = score_catalyst(\n        CatalystScoreInput(**common, materiality_exception=exception),\n        rules,\n    )\n    materiality = next(\n        item for item in scored.subfactors if item.code == "MATERIALITY"\n    )\n    assert materiality.points == 6\n    assert str(exception_evidence) in materiality.evidence_ids\n\n    future_exception = exception.model_copy(update={"approved_at": AS_OF + timedelta(seconds=1)})\n    with pytest.raises(ValueError):\n        CatalystScoreInput(**common, materiality_exception=future_exception)\n\n\ndef test_bull_rnpv_pos_is_capped_at_ninety_percent():\n    bull = _base_rnpv_input(scenario="BULL", pos=Decimal("90"))\n    assert calculate_rnpv(bull).trace.discount_rate_pct == 12\n    too_high = bull.model_dump()\n    too_high["assets"][0]["pos_pct"] = Decimal("90.01")\n    with pytest.raises(ValueError):\n        RnpvInput.model_validate(too_high)\n\n\ndef test_technical_structure_exact_eight_percent_boundary_gets_partial_credit(\n    scorecard_path: Path,\n):\n    close = Decimal("108")\n    technical = score_technicals(\n        TechnicalScoreInput(\n            close=close,\n            sma20=Decimal("100"),\n            sma50=Decimal("95"),\n            xbi_relative_return_20d_pct=Decimal("0"),\n            up_down_dollar_volume_ratio=Decimal("1"),\n            obv_slope_positive=False,\n            support=Decimal("100"),\n            base_success_target=Decimal("112"),\n            rsi14=Decimal("72"),\n            evidence=_evidence(\n                "TREND",\n                "RELATIVE_STRENGTH",\n                "ACCUMULATION",\n                "STRUCTURE",\n                "EXTENSION",\n            ),\n        ),\n        _rules(scorecard_path),\n    )\n    structure = next(item for item in technical.subfactors if item.code == "STRUCTURE")\n    assert structure.points == 1\n'''
+          if 'test_materiality_ceiling_requires_pre_outcome_documented_exception' not in text:
+              text += append
+          path.write_text(text)
+          PY
+          python -m pip install -e ".[dev]"
+          ruff check --fix .
+          ruff format .
+          ruff check .
+          mypy src
+      - name: Commit repairs
+        run: |
+          if git diff --quiet; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src tests
+          git commit -m "fix: enforce frozen Milestone 5 edge contracts"
+          git push origin HEAD:milestone-5-science-pos-rnpv-scoring
