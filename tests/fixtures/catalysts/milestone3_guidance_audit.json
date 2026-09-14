@@ -1,0 +1,22 @@
+[
+  {"case_id":"p01","expected":true,"text":"We expect topline Phase 2 data in Q4 2026."},
+  {"case_id":"p02","expected":true,"text":"The company expects the Phase 2 readout in H1 2027."},
+  {"case_id":"p03","expected":true,"text":"The PDUFA action date is October 14, 2026."},
+  {"case_id":"p04","expected":true,"text":"We plan to submit the BLA in Q1 2027."},
+  {"case_id":"p05","expected":true,"text":"An FDA advisory committee meeting is expected in March 2027."},
+  {"case_id":"p06","expected":true,"text":"Top-line data are expected in January 2027."},
+  {"case_id":"p07","expected":true,"text":"We expect results in Q3 2027."},
+  {"case_id":"p08","expected":true,"text":"We expect topline results by the end of 2026."},
+  {"case_id":"p09","expected":true,"text":"Conference data are planned for September 2026."},
+  {"case_id":"p10","expected":true,"text":"The Phase 2 readout remains expected in 2H 2027."},
+  {"case_id":"p11","expected":true,"text":"The FDA decision is expected May 5, 2027."},
+  {"case_id":"p12","expected":true,"text":"We intend to file an NDA in June 2027."},
+  {"case_id":"n01","expected":false,"text":"Cash runway is expected through Q4 2026."},
+  {"case_id":"n02","expected":false,"text":"Revenue guidance for Q4 2026 remains unchanged."},
+  {"case_id":"n03","expected":false,"text":"Enrollment is expected to complete in Q1 2027."},
+  {"case_id":"n04","expected":false,"text":"The company expects continued operational progress in 2027."},
+  {"case_id":"n05","expected":false,"text":"The market opportunity could expand in H1 2027."},
+  {"case_id":"n06","expected":false,"text":"We reported Phase 2 data in June 2026."},
+  {"case_id":"n07","expected":false,"text":"The board approved the annual plan in September 2026."},
+  {"case_id":"n08","expected":false,"text":"Manufacturing capacity is expected in Q2 2027."}
+]
