@@ -45,6 +45,6 @@ jobs:
               rows = (((payload.get("data") or {}).get("tradesTable") or {}).get("rows") or [])
               print(symbol, json.dumps(rows[:20], sort_keys=True))
 
-          fetch("NVDA", "2024-06-05", "2024-06-12")
-          fetch("XBI", "2024-06-05", "2024-06-12")
+          fetch("NVDA", "06/05/2024", "06/12/2024")
+          fetch("XBI", "06/05/2024", "06/12/2024")
           PY
