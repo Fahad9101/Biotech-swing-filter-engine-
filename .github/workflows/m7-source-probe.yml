@@ -1,0 +1,44 @@
+name: M7 source probe
+
+on:
+  push:
+    branches: [milestone-7-historical-validation]
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Probe public CTO candidate-discovery files
+        run: |
+          python - <<'PY'
+          import csv, io, json, urllib.request
+
+          base = 'https://huggingface.co/datasets/chufangao/CTO/resolve/main/'
+          for name in ['phase1_CTO_rf.csv', 'phase2_CTO_rf.csv', 'phase3_CTO_rf.csv']:
+              with urllib.request.urlopen(base + name, timeout=60) as response:
+                  text = response.read().decode('utf-8-sig')
+              reader = csv.DictReader(io.StringIO(text))
+              rows = []
+              for i, row in enumerate(reader):
+                  rows.append(row)
+                  if i >= 2:
+                      break
+              print('\nFILE', name)
+              print('COLUMNS', json.dumps(reader.fieldnames))
+              print('SAMPLE', json.dumps(rows, default=str)[:6000])
+
+          api = 'https://huggingface.co/api/datasets/chufangao/CTO/tree/main/labels_and_tickers?recursive=true&expand=false'
+          with urllib.request.urlopen(api, timeout=60) as response:
+              items = json.load(response)
+          print('\nLABELS_AND_TICKERS_FILES')
+          for item in items:
+              print(item.get('path'), item.get('size'))
+          PY
