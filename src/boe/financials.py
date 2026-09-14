@@ -424,7 +424,10 @@ def build_cash_position(
     balance_sheet_date = max(balance_dates)
     liquidity = cash_fact.value + marketable
     trace = CalculationTrace(
-        formula="liquidity = unrestricted_cash + current_marketable_securities; debt uses aggregate debt when available, otherwise current + noncurrent debt",
+        formula=(
+            "liquidity = unrestricted_cash + current_marketable_securities; "
+            "debt uses aggregate debt when available, otherwise current + noncurrent debt"
+        ),
         inputs=tuple(
             [f"cash={cash_fact.value}", f"marketable_securities={marketable}", f"debt={debt}"]
         ),
@@ -547,7 +550,10 @@ def normalize_cash_burn(
 
     evidence_ids = _unique_uuid(evidence_id for item in latest for evidence_id in item.evidence_ids)
     trace = CalculationTrace(
-        formula="normalized quarterly burn = median(latest four comparable negative operating cash-flow quarters); with <3 quarters use max(latest burn, available-quarter median)",
+        formula=(
+            "normalized quarterly burn = median(latest four comparable negative operating "
+            "cash-flow quarters); with <3 quarters use max(latest burn, available-quarter median)"
+        ),
         inputs=tuple(f"{item.period_end.isoformat()}={item.normalized_burn}" for item in latest),
         evidence_ids=evidence_ids,
         result=f"normalized_quarterly_burn={normalized_burn};method={method};confidence={confidence}",
@@ -594,7 +600,11 @@ def build_capital_structure_snapshot(
     fully_diluted = basic.value + sum(by_kind.values(), Decimal("0"))
     projected = fully_diluted + expected_financing_shares
     trace = CalculationTrace(
-        formula="current fully diluted shares = basic + options + warrants + RSUs + convertible shares + other dilutive shares; projected fully diluted shares additionally include expected financing shares",
+        formula=(
+            "current fully diluted shares = basic + options + warrants + RSUs + convertible "
+            "shares + other dilutive shares; projected fully diluted shares additionally "
+            "include expected financing shares"
+        ),
         inputs=(
             f"basic={basic.value}",
             f"options={by_kind['OPTIONS']}",
@@ -648,7 +658,11 @@ def calculate_survival(
         evidence_id for quarter in burn.quarters for evidence_id in quarter.evidence_ids
     )
     trace = CalculationTrace(
-        formula="runway_months = (cash + current marketable securities) / normalized_quarterly_burn * 3; runway_at_catalyst = max(runway_months - calendar_days_to_latest_catalyst/30.4375, 0)",
+        formula=(
+            "runway_months = (cash + current marketable securities) / normalized_quarterly_burn "
+            "* 3; runway_at_catalyst = max(runway_months - "
+            "calendar_days_to_latest_catalyst/30.4375, 0)"
+        ),
         inputs=(
             f"liquidity={cash_position.liquidity}",
             f"quarterly_burn={burn.normalized_quarterly_burn}",
@@ -705,7 +719,10 @@ def build_financing_risk_inputs(
         evidence_id for facility in known_facilities for evidence_id in facility.evidence_ids
     )
     trace = CalculationTrace(
-        formula="Milestone 4 exposes atomic financing-risk inputs only; modeled dilution percent = expected financing shares / current fully diluted shares * 100",
+        formula=(
+            "Milestone 4 exposes atomic financing-risk inputs only; modeled dilution percent = "
+            "expected financing shares / current fully diluted shares * 100"
+        ),
         inputs=(
             f"runway_months={survival.runway_months}",
             f"runway_at_catalyst_months={survival.runway_at_catalyst_months}",
