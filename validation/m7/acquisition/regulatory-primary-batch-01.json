@@ -1,7 +1,7 @@
 {
   "authoritative_events_frozen": 0,
   "candidate_count": 33,
-  "cik_resolved_count": 18,
+  "cik_resolved_count": 25,
   "date_only_count": 20,
   "date_range": {
     "end": "2025-12-31",
@@ -39,7 +39,7 @@
     {
       "asset": "TIBSOVO (ivosidenib)",
       "candidate_id": "REG-2018-AGIO-TIBSOVO",
-      "cik": null,
+      "cik": "0001439222",
       "clinical_phase": "REGULATORY_DECISION",
       "cohort_frozen": false,
       "company": "Agios Pharmaceuticals, Inc.",
@@ -49,7 +49,6 @@
       "notes": "Issuer announcement distributed by GlobeNewswire with explicit publication time.",
       "outcome_inspected_for_selection": false,
       "promotion_blockers": [
-        "RESOLVE_CIK_AND_HISTORICAL_SECURITY_IDENTITY",
         "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
         "RESOLVE_NEGATIVE_EVENT_STATUS",
         "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
@@ -152,7 +151,7 @@
     {
       "asset": "OXBRYTA (voxelotor)",
       "candidate_id": "REG-2019-GBT-OXBRYTA",
-      "cik": null,
+      "cik": "0001629137",
       "clinical_phase": "REGULATORY_DECISION",
       "cohort_frozen": false,
       "company": "Global Blood Therapeutics, Inc.",
@@ -162,7 +161,6 @@
       "notes": "Issuer announcement with explicit publication time.",
       "outcome_inspected_for_selection": false,
       "promotion_blockers": [
-        "RESOLVE_CIK_AND_HISTORICAL_SECURITY_IDENTITY",
         "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
         "RESOLVE_NEGATIVE_EVENT_STATUS",
         "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
@@ -207,7 +205,7 @@
     {
       "asset": "IMCIVREE (setmelanotide)",
       "candidate_id": "REG-2020-RYTM-IMCIVREE",
-      "cik": null,
+      "cik": "0001649904",
       "clinical_phase": "REGULATORY_DECISION",
       "cohort_frozen": false,
       "company": "Rhythm Pharmaceuticals, Inc.",
@@ -217,7 +215,6 @@
       "notes": "Issuer announcement with explicit publication time.",
       "outcome_inspected_for_selection": false,
       "promotion_blockers": [
-        "RESOLVE_CIK_AND_HISTORICAL_SECURITY_IDENTITY",
         "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
         "RESOLVE_NEGATIVE_EVENT_STATUS",
         "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
@@ -262,7 +259,7 @@
     {
       "asset": "SKYTROFA (lonapegsomatropin-tcgd)",
       "candidate_id": "REG-2021-ASND-SKYTROFA",
-      "cik": null,
+      "cik": "0001612042",
       "clinical_phase": "REGULATORY_DECISION",
       "cohort_frozen": false,
       "company": "Ascendis Pharma A/S",
@@ -272,7 +269,6 @@
       "notes": "Issuer IR announcement with explicit timestamp.",
       "outcome_inspected_for_selection": false,
       "promotion_blockers": [
-        "RESOLVE_CIK_AND_HISTORICAL_SECURITY_IDENTITY",
         "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
         "RESOLVE_NEGATIVE_EVENT_STATUS",
         "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
@@ -345,7 +341,7 @@
     {
       "asset": "ZTALMY (ganaxolone)",
       "candidate_id": "REG-2022-MRNS-ZTALMY",
-      "cik": null,
+      "cik": "0001267813",
       "clinical_phase": "REGULATORY_DECISION",
       "cohort_frozen": false,
       "company": "Marinus Pharmaceuticals, Inc.",
@@ -355,7 +351,6 @@
       "notes": "Issuer IR page; exact publication clock and CIK unresolved.",
       "outcome_inspected_for_selection": false,
       "promotion_blockers": [
-        "RESOLVE_CIK_AND_HISTORICAL_SECURITY_IDENTITY",
         "RESOLVE_EXACT_FIRST_PUBLIC_TIMESTAMP",
         "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
         "RESOLVE_NEGATIVE_EVENT_STATUS",
@@ -374,7 +369,7 @@
     {
       "asset": "RELYVRIO (sodium phenylbutyrate and taurursodiol)",
       "candidate_id": "REG-2022-AMLX-RELYVRIO",
-      "cik": null,
+      "cik": "0001658551",
       "clinical_phase": "REGULATORY_DECISION",
       "cohort_frozen": false,
       "company": "Amylyx Pharmaceuticals, Inc.",
@@ -384,7 +379,6 @@
       "notes": "Issuer IR page; exact publication clock and CIK unresolved.",
       "outcome_inspected_for_selection": false,
       "promotion_blockers": [
-        "RESOLVE_CIK_AND_HISTORICAL_SECURITY_IDENTITY",
         "RESOLVE_EXACT_FIRST_PUBLIC_TIMESTAMP",
         "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
         "RESOLVE_NEGATIVE_EVENT_STATUS",
@@ -487,7 +481,7 @@
     {
       "asset": "FILSPARI (sparsentan)",
       "candidate_id": "REG-2023-TVTX-FILSPARI",
-      "cik": null,
+      "cik": "0001438533",
       "clinical_phase": "REGULATORY_DECISION",
       "cohort_frozen": false,
       "company": "Travere Therapeutics, Inc.",
@@ -497,7 +491,6 @@
       "notes": "Issuer announcement with explicit publication time; CIK unresolved.",
       "outcome_inspected_for_selection": false,
       "promotion_blockers": [
-        "RESOLVE_CIK_AND_HISTORICAL_SECURITY_IDENTITY",
         "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
         "RESOLVE_NEGATIVE_EVENT_STATUS",
         "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
@@ -939,7 +932,7 @@
   "exact_timestamp_count": 13,
   "format_version": "1.0",
   "generated_at": "2026-09-14T19:20:00+00:00",
-  "registry_sha256": "723d873f956fb64e0cbd1ac1eb8eec2b8bca7795814be6bffe33d3c3f6fb763a",
+  "registry_sha256": "470d1b55887d4a55b130d613fd5d96893e1c3fbccb3ca4df42365e4867d811ec",
   "role": "PRIMARY_SOURCE_REGULATORY_CANDIDATES_NOT_FROZEN_COHORT",
   "rules_version": "BOE-1.0.0",
   "source_boundary": {
