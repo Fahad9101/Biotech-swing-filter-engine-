@@ -5,6 +5,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 REGULATORY_BATCH = ROOT / "validation/m7/acquisition/regulatory-primary-batch-01.json"
+PHASE2_BATCH = ROOT / "validation/m7/acquisition/phase2-primary-batch-01.json"
 PHASE3_BATCH = ROOT / "validation/m7/acquisition/phase3-primary-batch-01.json"
 
 FORBIDDEN_OUTCOME_FIELDS = {
@@ -64,6 +65,25 @@ def test_regulatory_acquisition_batch_is_prefreeze_and_self_consistent() -> None
     assert payload["cik_resolved_count"] == 25
     for event in events:
         assert event["proposed_primary_stratum"] == "REGULATORY"
+
+
+def test_phase2_acquisition_batch_is_prefreeze_and_outcome_blinded() -> None:
+    payload = json.loads(PHASE2_BATCH.read_text(encoding="utf-8"))
+    events = _assert_common_prefreeze_integrity(payload)
+
+    assert payload["role"] == "PRIMARY_SOURCE_PHASE2_CANDIDATES_NOT_FROZEN_COHORT"
+    assert payload["candidate_count"] == 36
+    assert payload["candidate_count"] >= 30
+    assert payload["negative_event_candidate_count"] == sum(
+        event["negative_event_candidate"] is True for event in events
+    )
+    assert payload["negative_event_candidate_count"] == 13
+    assert payload["exact_timestamp_count"] == 21
+    assert payload["date_only_count"] == 15
+    for event in events:
+        assert event["proposed_primary_stratum"] == "PHASE_2_POC"
+        assert event["clinical_phase"] == "PHASE_2"
+        assert event["result_direction"]
 
 
 def test_phase3_acquisition_batch_is_prefreeze_and_outcome_blinded() -> None:
