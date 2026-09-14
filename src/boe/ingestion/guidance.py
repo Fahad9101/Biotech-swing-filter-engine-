@@ -90,8 +90,7 @@ def _sentences(text: str) -> tuple[str, ...]:
 def _infer_catalyst_type(sentence: str, clinical_phase: str) -> CatalystType | None:
     lower = sentence.lower()
     if any(
-        token in lower
-        for token in ("pdufa", "fda decision", "regulatory decision", "action date")
+        token in lower for token in ("pdufa", "fda decision", "regulatory decision", "action date")
     ):
         return CatalystType.REG_DECISION
     if any(token in lower for token in ("advisory committee", "adcom")):
