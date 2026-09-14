@@ -178,7 +178,9 @@ def normalize_catalyst(
     digest = hashlib.sha256(
         json.dumps(version_payload, sort_keys=True, separators=(",", ":")).encode()
     ).hexdigest()
-    matching_prior = [item for item in prior_versions if item.canonical_key == primary.canonical_key]
+    matching_prior = [
+        item for item in prior_versions if item.canonical_key == primary.canonical_key
+    ]
     for prior in matching_prior:
         if prior.version_sha256 == digest:
             return prior
@@ -222,9 +224,13 @@ def require_human_confirmation(
     if confirmation.confirmed_at > cutoff:
         raise HumanConfirmationRequired("confirmation was not available at the requested cutoff")
     if confirmation.confirmed_at < catalyst.known_at:
-        raise HumanConfirmationRequired("confirmation predates the evidence used by the catalyst version")
+        raise HumanConfirmationRequired(
+            "confirmation predates the evidence used by the catalyst version"
+        )
     if not set(catalyst.supporting_evidence_ids).issubset(set(confirmation.evidence_ids_reviewed)):
-        raise HumanConfirmationRequired("reviewer did not confirm all evidence used by catalyst version")
+        raise HumanConfirmationRequired(
+            "reviewer did not confirm all evidence used by catalyst version"
+        )
     if confirmation.decision != "CONFIRMED":
         return RankabilityDecision(
             rankable=False,
