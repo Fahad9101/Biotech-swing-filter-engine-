@@ -16,25 +16,40 @@ jobs:
       - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
-      - name: Probe public CTO candidate-discovery mappings
+      - name: Probe CTO linkage and human-label metadata
         run: |
           python - <<'PY'
-          import csv, io, json, urllib.request, collections
+          import json, urllib.request, csv, io
 
-          base = 'https://huggingface.co/datasets/chufangao/CTO/resolve/main/'
-          url = base + 'labels_and_tickers/labels_and_tickers.csv'
-          with urllib.request.urlopen(url, timeout=60) as response:
-              text = response.read().decode('utf-8-sig')
-          reader = csv.DictReader(io.StringIO(text))
-          rows = list(reader)
-          print('COLUMNS', json.dumps(reader.fieldnames))
-          print('ROWS', len(rows))
-          print('SAMPLE', json.dumps(rows[:8], default=str)[:12000])
-          for field in reader.fieldnames or []:
-              nonempty = sum(bool((row.get(field) or '').strip()) for row in rows)
-              print('NONEMPTY', field, nonempty)
-          for candidate in ('phase', 'trial_phase', 'ticker', 'tickers', 'completion_date', 'start_date', 'nct_id'):
-              if candidate in (reader.fieldnames or []):
-                  values = collections.Counter((row.get(candidate) or '').strip() for row in rows)
-                  print('TOP', candidate, values.most_common(15))
+          api_base = 'https://huggingface.co/api/datasets/chufangao/CTO/tree/main/'
+          for folder in ['Merged_all_trial_linkage_outcome_df__FDA_updated', 'human_labels_2020_2024']:
+              url = api_base + folder + '?recursive=true&expand=false'
+              with urllib.request.urlopen(url, timeout=60) as response:
+                  items = json.load(response)
+              print('\nFOLDER', folder)
+              for item in items[:100]:
+                  print(item.get('path'), item.get('size'))
+
+          resolve = 'https://huggingface.co/datasets/chufangao/CTO/resolve/main/'
+          candidates = [
+              'human_labels_2020_2024/human_labels.csv',
+              'human_labels_2020_2024/human_labels_2020_2024.csv',
+              'Merged_all_trial_linkage_outcome_df__FDA_updated/Merged_all_trial_linkage_outcome_df__FDA_updated.csv',
+          ]
+          for path in candidates:
+              try:
+                  with urllib.request.urlopen(resolve + path, timeout=60) as response:
+                      text = response.read().decode('utf-8-sig')
+              except Exception as exc:
+                  print('MISS', path, type(exc).__name__, str(exc)[:200])
+                  continue
+              reader = csv.DictReader(io.StringIO(text))
+              rows = []
+              for i, row in enumerate(reader):
+                  rows.append(row)
+                  if i >= 4:
+                      break
+              print('\nFILE', path)
+              print('COLUMNS', json.dumps(reader.fieldnames))
+              print('SAMPLE', json.dumps(rows, default=str)[:16000])
           PY
