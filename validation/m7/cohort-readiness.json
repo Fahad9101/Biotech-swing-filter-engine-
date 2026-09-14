@@ -43,24 +43,38 @@
       "proposed_stratum": "REGULATORY",
       "status": "PRIMARY_SOURCE_CANDIDATE_BATCH_COMMITTED_NOT_FROZEN",
       "authoritative_events_promoted": 0,
-      "note": "Issuer IR releases, contemporaneous SEC exhibits/8-Ks, FDA pages, and issuer press-release distribution records provide a regulatory candidate pool above the frozen >=30 stratum minimum. Seven additional SEC-verified CIK identities were applied without using market outcomes. The rows remain pre-freeze because every candidate must still clear historical-universe, negative-event, financing-window, single-asset, point-in-time evidence, and any unresolved timestamp/identity blockers."
+      "note": "The regulatory reserve is numerically above the frozen >=30 requirement. Seven additional SEC-verified CIK identities were applied without using market outcomes. Rows remain pre-freeze pending full historical promotion fields."
+    },
+    "phase3_primary_batch_01": {
+      "path": "validation/m7/acquisition/phase3-primary-batch-01.json",
+      "candidate_count": 31,
+      "exact_first_public_timestamps_resolved": 27,
+      "date_only_candidates_pending_exact_timestamp": 4,
+      "cik_resolved_count": 2,
+      "negative_event_candidates": 17,
+      "registry_sha256": "c353e90c4dbcc57d38eaacd3352d90351147eeeb991be0109e2e7f605a58a192",
+      "calendar_span": "2018-2025",
+      "proposed_stratum": "PHASE_3_PIVOTAL",
+      "status": "PRIMARY_SOURCE_CANDIDATE_BATCH_COMMITTED_NOT_FROZEN",
+      "authoritative_events_promoted": 0,
+      "note": "Issuer/press-distribution result disclosures provide >30 Phase III candidates with both positive and failed/missed primary results. negative_event_candidate is derived only from the underlying clinical primary/co-primary result; no stock return, MFE, MAE, or BOE historical outcome has been attached or inspected for selection."
     },
     "sec_primary_from_github_runner": {
       "issuer_seeds_attempted": 220,
       "authoritative_candidates_acquired": 0,
       "status": "BLOCKED_BY_REMOTE_HTTP_ACCESS",
-      "note": "A pinned ticker-to-CIK mirror can seed discovery, but SEC submissions/archive evidence could not be promoted from the GitHub-hosted acquisition run. Targeted SEC documents remain usable through other access paths; zero runner-acquired candidates must not be interpreted as zero historical events."
+      "note": "Targeted SEC documents remain usable through other access paths; zero runner-acquired candidates must not be interpreted as zero historical events."
     },
     "clinicaltrials_current_records_from_github_runner": {
       "candidate_nct_records_attempted": 962,
       "official_current_records_acquired": 0,
       "fetch_failures": 962,
       "status": "BLOCKED_BY_REMOTE_HTTP_ACCESS",
-      "note": "Research labels remain excluded from outcome truth. Historical ClinicalTrials record versions are still mandatory before clinical-event cohort promotion."
+      "note": "Research labels remain excluded from outcome truth. Historical ClinicalTrials record versions remain mandatory before clinical-event promotion."
     },
     "openfda_regulatory_discovery": {
       "status": "NO_LONGER_REQUIRED_TO_ESTABLISH_REGULATORY_CANDIDATE_CAPACITY",
-      "note": "The earlier bulk range-query attempt failed, but regulatory candidate capacity has been established independently from issuer, SEC, FDA, and press-distribution primary/contemporaneous sources. openFDA may still be supplementary evidence but cannot substitute for the first material public timestamp."
+      "note": "Regulatory candidate capacity has been established independently from issuer, SEC, FDA, and press-distribution primary/contemporaneous sources. openFDA cannot substitute for first material public timestamp evidence."
     }
   },
   "historical_market_data_status": {
@@ -78,14 +92,14 @@
       "reported_action": "10-for-1 forward split",
       "ex_date": "2024-06-10"
     },
-    "note": "The connected SIP feed returned consolidated raw pre/post-split prices and a separate corporate-action record, compatible with leakage-safe reconstruction. This finding does not itself complete any historical BOE snapshot or outcome record."
+    "note": "The connected SIP feed returned consolidated raw pre/post-split prices and a separate corporate-action record, compatible with leakage-safe reconstruction. No real frozen-cohort snapshot or outcome is yet complete."
   },
   "blocking_findings": [
     "No authoritative frozen 120-event registry or cohort-manifest.json exists.",
-    "The regulatory candidate pool exceeds the >=30 numerical stratum minimum, but zero regulatory rows are yet promotable to the frozen cohort because historical-event blockers remain unresolved.",
-    "Twenty of 33 regulatory candidates still have date-only first-public evidence; 8 of 33 still require CIK/historical-security identity resolution.",
-    "The Phase II, Phase III, early-clinical, and conference/other strata still require primary-source promotion from discovery leads.",
-    "At least 40 negative underlying clinical/regulatory events must be acquired and classified independently of stock returns.",
+    "Regulatory and Phase III candidate reserves now each exceed their numerical >=30 stratum minima, but zero rows are yet promoted to the frozen cohort because historical-event blockers remain unresolved.",
+    "Twenty of 33 regulatory candidates and 4 of 31 Phase III candidates still have date-only first-public evidence; unresolved CIK/security identity remains substantial, especially in Phase III.",
+    "The Phase II, early-clinical, and conference/other strata still require primary-source acquisition/promotion.",
+    "The committed Phase III reserve contributes 17 underlying negative-event candidates, but the frozen cohort still requires >=40 negative events after full promotion and deterministic sampling.",
     "Financing/dilution T-90 through T+30 and single-asset status have not yet been resolved for enough candidates to satisfy the frozen >=20 requirements.",
     "Point-in-time SEC, financing, valuation, and historical trial-version evidence has not been reconstructed for a real frozen cohort.",
     "Alpaca SIP raw bars plus separate corporate actions are a viable market-data route, but no real cohort has yet been reconstructed through that route.",
@@ -94,5 +108,5 @@
   "merge_ready": false,
   "milestone_complete": false,
   "milestone_8_allowed": false,
-  "required_action": "Continue regulatory promotion by resolving the remaining exact first-public timestamps, CIK/security identities, historical-universe status, financing-window and single-asset fields; acquire primary-source Phase II, Phase III, early-clinical, conference/other and negative-event batches; only then freeze the compliant >=120-event cohort before outcome inspection and execute all four BOE snapshots using leakage-safe Alpaca SIP raw bars plus explicit corporate actions. Do not reduce requirements or alter BOE-1.0.0."
+  "required_action": "Acquire primary-source Phase II, early-clinical, and conference/other reserves while continuing promotion of the regulatory and Phase III batches; resolve enough underlying negative events, financing-window cases, and single-asset issuers to satisfy frozen minima; only then freeze the compliant >=120-event cohort before outcome inspection and execute all four BOE snapshots using leakage-safe Alpaca SIP raw bars plus explicit corporate actions. Do not reduce requirements or alter BOE-1.0.0."
 }
