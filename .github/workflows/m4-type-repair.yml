@@ -66,6 +66,7 @@ jobs:
           path.write_text(text.replace(old, new))
           PY
           python -m pip install "ruff>=0.12,<1"
+          ruff check --fix .
           ruff format .
           ruff check .
       - name: Commit repairs
