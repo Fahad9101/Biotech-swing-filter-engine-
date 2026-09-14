@@ -214,9 +214,7 @@ def test_companyfacts_adapter_enforces_point_in_time_cutoff() -> None:
     )
 
     cash_values = {
-        fact.value
-        for fact in facts
-        if fact.concept == "CashAndCashEquivalentsAtCarryingValue"
+        fact.value for fact in facts if fact.concept == "CashAndCashEquivalentsAtCarryingValue"
     }
     assert cash_values == {Decimal("500000000")}
     assert all(fact.source_available_at <= _as_of() for fact in facts)
@@ -407,9 +405,7 @@ def test_financial_facts_as_of_excludes_post_cutoff_objects() -> None:
     assert all(fact.source_available_at <= cutoff for fact in filtered)
     assert all(fact.instant is None or fact.instant <= cutoff.date() for fact in filtered)
     assert Decimal("600000000") not in {
-        fact.value
-        for fact in filtered
-        if fact.concept == "CashAndCashEquivalentsAtCarryingValue"
+        fact.value for fact in filtered if fact.concept == "CashAndCashEquivalentsAtCarryingValue"
     }
 
 

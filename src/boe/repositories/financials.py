@@ -60,9 +60,7 @@ class FinancialFactRow(Base):
 
 class CapitalStructureSnapshotRow(Base):
     __tablename__ = "capital_structure_snapshots"
-    __table_args__ = (
-        UniqueConstraint("issuer_id", "as_of", name="uq_capital_structure_snapshot"),
-    )
+    __table_args__ = (UniqueConstraint("issuer_id", "as_of", name="uq_capital_structure_snapshot"),)
 
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
     issuer_id: Mapped[str] = mapped_column(ForeignKey("issuers.id"), index=True)
@@ -163,9 +161,7 @@ class FinancingFacilityRow(Base):
 
 class FinancingRiskSnapshotRow(Base):
     __tablename__ = "financing_risk_snapshots"
-    __table_args__ = (
-        UniqueConstraint("issuer_id", "as_of", name="uq_financing_risk_snapshot"),
-    )
+    __table_args__ = (UniqueConstraint("issuer_id", "as_of", name="uq_financing_risk_snapshot"),)
 
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
     issuer_id: Mapped[str] = mapped_column(ForeignKey("issuers.id"), index=True)
@@ -305,9 +301,7 @@ class Milestone4Repository:
                     opened_at=facility.opened_at.isoformat(),
                     capacity_usd=str(facility.capacity_usd) if facility.capacity_usd else None,
                     used_usd=str(facility.used_usd) if facility.used_usd else None,
-                    remaining_usd=(
-                        str(facility.remaining_usd) if facility.remaining_usd else None
-                    ),
+                    remaining_usd=(str(facility.remaining_usd) if facility.remaining_usd else None),
                     observed_issuance_dependence=facility.observed_issuance_dependence,
                     management_guided_use_before_catalyst=(
                         facility.management_guided_use_before_catalyst

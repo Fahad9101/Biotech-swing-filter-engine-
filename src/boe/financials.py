@@ -539,17 +539,13 @@ def normalize_cash_burn(
             "MEDIAN_LATEST_COMPARABLE"
         )
         normalized_burn = median_burn
-        confidence: Literal["LOW", "MODERATE", "HIGH"] = (
-            "HIGH" if len(latest) == 4 else "MODERATE"
-        )
+        confidence: Literal["LOW", "MODERATE", "HIGH"] = "HIGH" if len(latest) == 4 else "MODERATE"
     else:
         method = "CONSERVATIVE_SHORT_HISTORY"
         normalized_burn = max(latest[-1].normalized_burn, median_burn)
         confidence = "LOW"
 
-    evidence_ids = _unique_uuid(
-        evidence_id for item in latest for evidence_id in item.evidence_ids
-    )
+    evidence_ids = _unique_uuid(evidence_id for item in latest for evidence_id in item.evidence_ids)
     trace = CalculationTrace(
         formula="normalized quarterly burn = median(latest four comparable negative operating cash-flow quarters); with <3 quarters use max(latest burn, available-quarter median)",
         inputs=tuple(f"{item.period_end.isoformat()}={item.normalized_burn}" for item in latest),
@@ -580,7 +576,9 @@ def build_capital_structure_snapshot(
     basic = _latest_instant_fact(eligible, BASIC_SHARES_CONCEPTS, "shares")
     if basic is None or basic.value <= 0:
         raise FinancialDataError("basic shares outstanding cannot be bounded")
-    eligible_components = [component for component in share_components if component.as_of <= as_of.date()]
+    eligible_components = [
+        component for component in share_components if component.as_of <= as_of.date()
+    ]
     by_kind: dict[str, Decimal] = {
         "OPTIONS": Decimal("0"),
         "WARRANTS": Decimal("0"),
@@ -696,9 +694,7 @@ def build_financing_risk_inputs(
         for item in known_facilities
     )
     observed_dependence = any(item.observed_issuance_dependence for item in known_facilities)
-    management_guided = any(
-        item.management_guided_use_before_catalyst for item in known_facilities
-    )
+    management_guided = any(item.management_guided_use_before_catalyst for item in known_facilities)
     mathematically_necessary = survival.runway_at_catalyst_months <= 0
     dilution_pct = (
         capital_structure.expected_financing_shares

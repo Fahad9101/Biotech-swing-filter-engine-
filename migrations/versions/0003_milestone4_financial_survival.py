@@ -52,9 +52,7 @@ def upgrade() -> None:
     )
     op.create_index("ix_financial_facts_issuer_id", "financial_facts", ["issuer_id"])
     op.create_index("ix_financial_facts_accession", "financial_facts", ["accession"])
-    op.create_index(
-        "ix_financial_facts_available_at", "financial_facts", ["source_available_at"]
-    )
+    op.create_index("ix_financial_facts_available_at", "financial_facts", ["source_available_at"])
 
     op.create_table(
         "capital_structure_snapshots",
@@ -162,9 +160,7 @@ def upgrade() -> None:
         sa.Column("created_at", sa.String(40), nullable=False),
     )
     op.create_index("ix_financing_facilities_issuer", "financing_facilities", ["issuer_id"])
-    op.create_index(
-        "ix_financing_facilities_confirmed", "financing_facilities", ["confirmed_at"]
-    )
+    op.create_index("ix_financing_facilities_confirmed", "financing_facilities", ["confirmed_at"])
 
     op.create_table(
         "financing_risk_snapshots",
@@ -176,9 +172,7 @@ def upgrade() -> None:
         sa.Column("created_at", sa.String(40), nullable=False),
         sa.UniqueConstraint("issuer_id", "as_of", name="uq_financing_risk_snapshot"),
     )
-    op.create_index(
-        "ix_financing_risk_snapshots_issuer", "financing_risk_snapshots", ["issuer_id"]
-    )
+    op.create_index("ix_financing_risk_snapshots_issuer", "financing_risk_snapshots", ["issuer_id"])
 
 
 def downgrade() -> None:
