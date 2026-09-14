@@ -103,7 +103,8 @@ def _extract_candidates(results: list[object]) -> list[dict[str, Any]]:
             submission_type = _text(raw_submission.get("submission_type"))
             submission_status = _text(raw_submission.get("submission_status"))
             review_priority = _text(raw_submission.get("review_priority"))
-            query_url = f"{OPENFDA}?{urlencode({'search': f'application_number:\"{application}\"', 'limit': 1})}"
+            query_search = f'application_number:"{application}"'
+            query_url = f"{OPENFDA}?{urlencode({'search': query_search, 'limit': 1})}"
             candidates.append(
                 {
                     "candidate_id": _candidate_id(application, submission_number, status_date),
