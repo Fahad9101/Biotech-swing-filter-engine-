@@ -60,9 +60,7 @@ def _synthetic_stooq_text(symbol: str) -> str:
                 Decimal("0.12"),
                 Decimal("-0.02"),
             )[index % 5]
-            close = (Decimal("10.00") + Decimal("0.075") * index + cycle).quantize(
-                Decimal("0.01")
-            )
+            close = (Decimal("10.00") + Decimal("0.075") * index + cycle).quantize(Decimal("0.01"))
             open_ = (
                 close - Decimal("0.06") if index % 2 == 0 else close + Decimal("0.04")
             ).quantize(Decimal("0.01"))
@@ -77,9 +75,7 @@ def _synthetic_stooq_text(symbol: str) -> str:
                 Decimal("0.06"),
                 Decimal("-0.03"),
             )[index % 5]
-            close = (Decimal("100.00") + Decimal("0.18") * index + cycle).quantize(
-                Decimal("0.01")
-            )
+            close = (Decimal("100.00") + Decimal("0.18") * index + cycle).quantize(Decimal("0.01"))
             open_ = (
                 close - Decimal("0.12") if index % 2 == 0 else close + Decimal("0.10")
             ).quantize(Decimal("0.01"))
