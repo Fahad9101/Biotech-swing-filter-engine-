@@ -7,6 +7,7 @@ REGULATORY_BATCH = ROOT / "validation/m7/acquisition/regulatory-primary-batch-01
 PHASE2_BATCH = ROOT / "validation/m7/acquisition/phase2-primary-batch-01.json"
 PHASE3_BATCH = ROOT / "validation/m7/acquisition/phase3-primary-batch-01.json"
 EARLY_CLINICAL_BATCH = ROOT / "validation/m7/acquisition/early-clinical-primary-batch-01.json"
+CONFERENCE_OTHER_BATCH = ROOT / "validation/m7/acquisition/conference-other-primary-batch-01.json"
 
 FORBIDDEN_OUTCOME_FIELDS = {
     "return_t1_pct",
@@ -122,3 +123,23 @@ def test_early_clinical_batch_is_prefreeze_and_outcome_blinded() -> None:
         assert event["proposed_primary_stratum"] == "EARLY_CLINICAL"
         assert event["clinical_phase"] in {"PHASE_1", "PHASE_1_2"}
         assert event["result_direction"]
+
+
+def test_conference_other_batch_is_prefreeze_and_outcome_blinded() -> None:
+    payload = json.loads(CONFERENCE_OTHER_BATCH.read_text(encoding="utf-8"))
+    events = _assert_common_prefreeze_integrity(payload)
+
+    assert payload["role"] == "PRIMARY_SOURCE_CONFERENCE_OTHER_CANDIDATES_NOT_FROZEN_COHORT"
+    assert payload["candidate_count"] == 26
+    assert payload["candidate_count"] >= 15
+    assert payload["negative_event_candidate_count"] == 0
+    assert payload["exact_timestamp_count"] == 25
+    assert payload["date_only_count"] == 1
+    for event in events:
+        assert event["proposed_primary_stratum"] == "CONFERENCE_OTHER"
+        assert event["proposed_catalyst_type"] == "CONF_DATA"
+        assert event["result_direction"]
+        assert "VERIFY_CONFERENCE_FIRST_PUBLIC_AVAILABILITY" in event["promotion_blockers"]
+        assert "VERIFY_UNDERLYING_CLINICAL_PHASE_AND_EVENT_DEDUPLICATION" in event[
+            "promotion_blockers"
+        ]
