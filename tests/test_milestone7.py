@@ -171,7 +171,9 @@ def test_validation_periods_are_frozen():
 
 def test_snapshot_cutoffs_and_source_availability_are_point_in_time():
     event = datetime(2024, 6, 30, 20, 0, tzinfo=UTC)
-    assert snapshot_cutoff(event, SnapshotLabel.T_MINUS_30, date(2024, 6, 28)) == event - timedelta(days=30)
+    assert snapshot_cutoff(event, SnapshotLabel.T_MINUS_30, date(2024, 6, 28)) == event - timedelta(
+        days=30
+    )
     last = snapshot_cutoff(event, SnapshotLabel.LAST_COMPLETE_SESSION, date(2024, 6, 28))
     assert last.date() == date(2024, 6, 28)
 
@@ -214,8 +216,12 @@ def test_swing_success_rejects_earlier_25_percent_drawdown():
     t0 = align_t0_session(event_at, tuple(sessions))
     t0_index = sessions.index(t0)
     base = security[t0_index - 1].adjusted_close
-    security[t0_index + 1] = PriceObservation(session_date=sessions[t0_index + 1], adjusted_close=base * Decimal("0.74"))
-    security[t0_index + 5] = PriceObservation(session_date=sessions[t0_index + 5], adjusted_close=base * Decimal("1.30"))
+    security[t0_index + 1] = PriceObservation(
+        session_date=sessions[t0_index + 1], adjusted_close=base * Decimal("0.74")
+    )
+    security[t0_index + 5] = PriceObservation(
+        session_date=sessions[t0_index + 5], adjusted_close=base * Decimal("1.30")
+    )
     outcome = calculate_outcome(
         event_id="EV",
         event_at=event_at,
@@ -235,8 +241,12 @@ def test_severe_loss_is_path_dependent():
     t0 = align_t0_session(event_at, tuple(sessions))
     t0_index = sessions.index(t0)
     base = security[t0_index - 1].adjusted_close
-    security[t0_index + 5] = PriceObservation(session_date=sessions[t0_index + 5], adjusted_close=base * Decimal("0.59"))
-    security[t0_index + 20] = PriceObservation(session_date=sessions[t0_index + 20], adjusted_close=base * Decimal("1.20"))
+    security[t0_index + 5] = PriceObservation(
+        session_date=sessions[t0_index + 5], adjusted_close=base * Decimal("0.59")
+    )
+    security[t0_index + 20] = PriceObservation(
+        session_date=sessions[t0_index + 20], adjusted_close=base * Decimal("1.20")
+    )
     outcome = calculate_outcome(
         event_id="EV",
         event_at=event_at,
@@ -260,7 +270,12 @@ def test_brier_and_failure_register_are_deterministic():
     )
     annotations = {
         "FP": ((FailureCategory.SCIENCE,), True, "Science was overestimated.", ("E-FP",)),
-        "FN": ((FailureCategory.VALUATION,), True, "Expectation gap was underestimated.", ("E-FN",)),
+        "FN": (
+            (FailureCategory.VALUATION,),
+            True,
+            "Expectation gap was underestimated.",
+            ("E-FN",),
+        ),
     }
     records = build_failure_register(decisions, outcomes, annotations)
     assert {record.event_id for record in records} == {"FP", "FN"}
@@ -268,7 +283,9 @@ def test_brier_and_failure_register_are_deterministic():
 
 def test_unrepaired_leakage_blocks_validation():
     findings = (
-        LeakageFinding(event_id="EV", code="FUTURE_SEC", description="future filing", detected=True),
+        LeakageFinding(
+            event_id="EV", code="FUTURE_SEC", description="future filing", detected=True
+        ),
     )
     with pytest.raises(ValueError, match="leakage remains"):
         assert_zero_unrepaired_leakage(findings)

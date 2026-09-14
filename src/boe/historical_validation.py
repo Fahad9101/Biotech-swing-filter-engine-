@@ -248,7 +248,9 @@ def validation_period(event_date: date) -> ValidationPeriod:
     raise ValueError("event date is outside frozen validation periods")
 
 
-def snapshot_cutoff(event_at: datetime, label: SnapshotLabel, last_complete_session: date) -> datetime:
+def snapshot_cutoff(
+    event_at: datetime, label: SnapshotLabel, last_complete_session: date
+) -> datetime:
     _require_aware(event_at, "event_at")
     if label is SnapshotLabel.T_MINUS_60:
         return event_at - timedelta(days=60)
@@ -269,14 +271,18 @@ def validate_source_cutoff(available_at: datetime, cutoff: datetime) -> None:
 
 
 def registry_sha256(events: tuple[HistoricalEvent, ...]) -> str:
-    return _canonical_hash([event.model_dump(mode="json") for event in sorted(events, key=lambda item: item.event_id)])
+    return _canonical_hash(
+        [event.model_dump(mode="json") for event in sorted(events, key=lambda item: item.event_id)]
+    )
 
 
 def cohort_sha256(events: tuple[HistoricalEvent, ...], seed: int = VALIDATION_SEED) -> str:
     return _canonical_hash(
         {
             "seed": seed,
-            "event_ids": [event.event_id for event in sorted(events, key=lambda item: item.event_id)],
+            "event_ids": [
+                event.event_id for event in sorted(events, key=lambda item: item.event_id)
+            ],
         }
     )
 
@@ -409,7 +415,9 @@ def calculate_outcome(
         return _return_pct(base_benchmark, benchmark_map[common[index + offset]])
 
     path = [security_return(offset) for offset in range(0, 21)]
-    first_success_index = next((offset for offset, value in enumerate(path) if value >= Decimal("20")), None)
+    first_success_index = next(
+        (offset for offset, value in enumerate(path) if value >= Decimal("20")), None
+    )
     swing_success = first_success_index is not None and not any(
         value <= Decimal("-25") for value in path[:first_success_index]
     )
@@ -437,7 +445,10 @@ def calculate_outcome(
 def brier_score(predicted_pct: tuple[float, ...], observed: tuple[bool, ...]) -> float:
     if len(predicted_pct) != len(observed) or not predicted_pct:
         raise ValueError("Brier score requires equal non-empty prediction/outcome arrays")
-    errors = [((prediction / 100.0) - float(outcome)) ** 2 for prediction, outcome in zip(predicted_pct, observed, strict=True)]
+    errors = [
+        ((prediction / 100.0) - float(outcome)) ** 2
+        for prediction, outcome in zip(predicted_pct, observed, strict=True)
+    ]
     return sum(errors) / len(errors)
 
 
@@ -448,7 +459,9 @@ def wilson_rate(successes: int, total: int, z: float = 1.96) -> MetricEstimate:
     denominator = 1 + z * z / total
     center = (p + z * z / (2 * total)) / denominator
     margin = z * math.sqrt((p * (1 - p) + z * z / (4 * total)) / total) / denominator
-    return MetricEstimate(value=p, n=total, ci_low=max(0.0, center - margin), ci_high=min(1.0, center + margin))
+    return MetricEstimate(
+        value=p, n=total, ci_low=max(0.0, center - margin), ci_high=min(1.0, center + margin)
+    )
 
 
 def build_failure_register(
@@ -456,7 +469,9 @@ def build_failure_register(
     outcomes: tuple[HistoricalOutcome, ...],
     annotations: dict[str, tuple[tuple[FailureCategory, ...], bool, str, tuple[str, ...]]],
 ) -> tuple[FailureAnalysisRecord, ...]:
-    primary = {item.event_id: item for item in decisions if item.snapshot_label is SnapshotLabel.T_MINUS_30}
+    primary = {
+        item.event_id: item for item in decisions if item.snapshot_label is SnapshotLabel.T_MINUS_30
+    }
     outcome_map = {item.event_id: item for item in outcomes}
     required: list[tuple[str, bool, bool]] = []
     investable = {Classification.HIGH_CONVICTION_CATALYST_SWING, Classification.CATALYST_SWING}
@@ -464,8 +479,12 @@ def build_failure_register(
         decision = primary.get(event_id)
         if decision is None:
             continue
-        false_positive = decision.classification in investable and outcome.return_t20_pct <= Decimal("-20")
-        false_negative = decision.classification not in investable and outcome.mfe_t20_pct >= Decimal("40")
+        false_positive = (
+            decision.classification in investable and outcome.return_t20_pct <= Decimal("-20")
+        )
+        false_negative = (
+            decision.classification not in investable and outcome.mfe_t20_pct >= Decimal("40")
+        )
         if false_positive or false_negative:
             required.append((event_id, false_positive, false_negative))
     missing = sorted(event_id for event_id, _, _ in required if event_id not in annotations)
@@ -506,7 +525,9 @@ def summarize_validation(
     deterministic_rerun_agreement_pct: float,
     catalyst_interval_precision_pct: float,
 ) -> ValidationSummary:
-    primary = {item.event_id: item for item in decisions if item.snapshot_label is SnapshotLabel.T_MINUS_30}
+    primary = {
+        item.event_id: item for item in decisions if item.snapshot_label is SnapshotLabel.T_MINUS_30
+    }
     matched = [(primary[item.event_id], item) for item in outcomes if item.event_id in primary]
     if not matched:
         raise ValueError("validation summary requires matched T-30 decisions and outcomes")
@@ -516,11 +537,23 @@ def summarize_validation(
     brier = brier_score(predicted, observed)
     base_brier = brier_score(priors, observed)
     investable_set = {Classification.HIGH_CONVICTION_CATALYST_SWING, Classification.CATALYST_SWING}
-    investable = [float(outcome.xbi_relative_t20_pct) for decision, outcome in matched if decision.classification in investable_set]
-    gated = [float(outcome.xbi_relative_t20_pct) for decision, outcome in matched if decision.classification not in investable_set]
+    investable = [
+        float(outcome.xbi_relative_t20_pct)
+        for decision, outcome in matched
+        if decision.classification in investable_set
+    ]
+    gated = [
+        float(outcome.xbi_relative_t20_pct)
+        for decision, outcome in matched
+        if decision.classification not in investable_set
+    ]
     investable_median = statistics.median(investable) if investable else None
     gated_median = statistics.median(gated) if gated else None
-    median_delta = investable_median - gated_median if investable_median is not None and gated_median is not None else None
+    median_delta = (
+        investable_median - gated_median
+        if investable_median is not None and gated_median is not None
+        else None
+    )
 
     ordered = sorted(matched, key=lambda pair: (pair[0].raw_score, pair[0].event_id))
     quintile = max(1, len(ordered) // 5)
@@ -529,10 +562,21 @@ def summarize_validation(
     top_rate = wilson_rate(sum(outcome.swing_success for _, outcome in top), len(top))
     bottom_rate = wilson_rate(sum(outcome.swing_success for _, outcome in bottom), len(bottom))
 
-    high = [(decision, outcome) for decision, outcome in matched if decision.classification is Classification.HIGH_CONVICTION_CATALYST_SWING]
+    high = [
+        (decision, outcome)
+        for decision, outcome in matched
+        if decision.classification is Classification.HIGH_CONVICTION_CATALYST_SWING
+    ]
     high_loss = wilson_rate(sum(outcome.severe_loss for _, outcome in high), len(high))
-    financing_gate = [(decision, outcome) for decision, outcome in matched if "FINANCING_RISK" in decision.gate_codes or decision.classification is Classification.FINANCING_RISK]
-    financing_precision = wilson_rate(sum(outcome.financing_through_t30 for _, outcome in financing_gate), len(financing_gate))
+    financing_gate = [
+        (decision, outcome)
+        for decision, outcome in matched
+        if "FINANCING_RISK" in decision.gate_codes
+        or decision.classification is Classification.FINANCING_RISK
+    ]
+    financing_precision = wilson_rate(
+        sum(outcome.financing_through_t30 for _, outcome in financing_gate), len(financing_gate)
+    )
     unrepaired = sum(item.detected and not item.repaired for item in leakage_findings)
     acceptance = {
         "critical_field_completeness": critical_field_completeness_pct >= 95.0,
@@ -542,7 +586,10 @@ def summarize_validation(
         "catalyst_interval_precision": catalyst_interval_precision_pct >= 85.0,
         "pos_brier_vs_prior": brier <= base_brier,
         "investable_median_advantage": median_delta is not None and median_delta >= 10.0,
-        "top_bottom_swing_success": bottom_rate.value == 0.0 and top_rate.value > 0.0 or bottom_rate.value > 0.0 and top_rate.value >= 1.5 * bottom_rate.value,
+        "top_bottom_swing_success": bottom_rate.value == 0.0
+        and top_rate.value > 0.0
+        or bottom_rate.value > 0.0
+        and top_rate.value >= 1.5 * bottom_rate.value,
         "high_conviction_severe_loss": high_loss.n > 0 and high_loss.value <= 0.15,
         "financing_gate_precision": financing_precision.n > 0 and financing_precision.value >= 0.60,
     }
@@ -569,7 +616,12 @@ def summarize_validation(
 
 
 def _recommendation(acceptance: dict[str, bool], unrepaired_leakage: int) -> Recommendation:
-    if unrepaired_leakage or not acceptance["critical_field_completeness"] or not acceptance["source_lineage"] or not acceptance["deterministic_rerun"]:
+    if (
+        unrepaired_leakage
+        or not acceptance["critical_field_completeness"]
+        or not acceptance["source_lineage"]
+        or not acceptance["deterministic_rerun"]
+    ):
         return Recommendation.REPAIR
     predictive = (
         acceptance["pos_brier_vs_prior"]

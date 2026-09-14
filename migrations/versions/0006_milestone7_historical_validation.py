@@ -28,7 +28,12 @@ def upgrade() -> None:
     op.create_table(
         "historical_events",
         sa.Column("id", sa.String(36), primary_key=True),
-        sa.Column("manifest_id", sa.String(36), sa.ForeignKey("historical_cohort_manifests.id"), nullable=False),
+        sa.Column(
+            "manifest_id",
+            sa.String(36),
+            sa.ForeignKey("historical_cohort_manifests.id"),
+            nullable=False,
+        ),
         sa.Column("event_id", sa.String(), nullable=False),
         sa.Column("issuer_id", sa.String(), nullable=False),
         sa.Column("ticker", sa.String(), nullable=False),
