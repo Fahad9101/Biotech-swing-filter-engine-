@@ -6,6 +6,7 @@ score, classify, value, or rank BOE candidates.
 
 from __future__ import annotations
 
+from collections.abc import Iterable
 from datetime import date, datetime
 from decimal import Decimal
 from statistics import median
@@ -848,12 +849,10 @@ def _quarter_from_facts(
     )
 
 
-def _unique_uuid(values: object) -> tuple[UUID, ...]:
+def _unique_uuid(values: Iterable[UUID]) -> tuple[UUID, ...]:
     result: list[UUID] = []
     seen: set[UUID] = set()
-    for value in values:  # type: ignore[union-attr]
-        if not isinstance(value, UUID):
-            raise TypeError("expected UUID lineage value")
+    for value in values:
         if value not in seen:
             seen.add(value)
             result.append(value)

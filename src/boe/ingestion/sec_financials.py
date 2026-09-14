@@ -6,7 +6,7 @@ import json
 import re
 from datetime import UTC, date, datetime, time
 from decimal import Decimal, InvalidOperation
-from typing import Any
+from typing import Any, Literal
 from uuid import NAMESPACE_URL, UUID, uuid5
 
 from boe.financials import (
@@ -152,7 +152,7 @@ def parse_financing_filings(
         document = str(primary_document).strip()
         if not accession_text or not document:
             continue
-        category: str
+        category: Literal["SHELF", "PROSPECTUS_SUPPLEMENT", "OTHER_FINANCING_FILING"]
         if normalized_form.startswith("S-3"):
             category = "SHELF"
         elif normalized_form.startswith("424B"):
@@ -200,7 +200,7 @@ def extract_financing_disclosures(
     observations: list[FinancingDisclosureObservation] = []
     for sentence in _SENTENCE_RE.split(cleaned):
         lower = sentence.lower()
-        kind: str | None = None
+        kind: Literal["ATM", "SHELF", "OFFERING"] | None = None
         if any(
             phrase in lower
             for phrase in (
@@ -224,8 +224,11 @@ def extract_financing_disclosures(
             kind = "OFFERING"
         if kind is None:
             continue
-        amounts = [_money_decimal(match) for match in _MONEY_RE.finditer(sentence)]
-        amounts = [value for value in amounts if value is not None]
+        amounts = [
+            value
+            for match in _MONEY_RE.finditer(sentence)
+            if (value := _money_decimal(match)) is not None
+        ]
         capacity = max(amounts) if amounts else None
         observations.append(
             FinancingDisclosureObservation(

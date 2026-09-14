@@ -6,6 +6,7 @@ import json
 from datetime import UTC, datetime
 from uuid import uuid4
 
+from pydantic import BaseModel
 from sqlalchemy import Boolean, ForeignKey, String, Text, UniqueConstraint
 from sqlalchemy.orm import Mapped, mapped_column
 
@@ -331,11 +332,12 @@ class Milestone4Repository:
 
 
 def _json(value: object) -> str:
-    if hasattr(value, "model_dump"):
-        payload = value.model_dump(mode="json")  # type: ignore[attr-defined]
+    payload: object
+    if isinstance(value, BaseModel):
+        payload = value.model_dump(mode="json")
     elif isinstance(value, tuple):
         payload = [
-            item.model_dump(mode="json") if hasattr(item, "model_dump") else str(item)
+            item.model_dump(mode="json") if isinstance(item, BaseModel) else str(item)
             for item in value
         ]
     else:
