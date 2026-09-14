@@ -15,7 +15,15 @@ from uuid import UUID
 from pydantic import Field, model_validator
 
 from boe.enums import CatalystType, DataState, DilutionRisk, FactorCode, TimingConfidence
-from boe.models import ContractModel, FactorScore, FactorSubscore, ScoreBreakdown, ScorecardContract
+from boe.models import (
+    ContractModel,
+    FactorDefinition,
+    FactorScore,
+    FactorSubscore,
+    ScoreBreakdown,
+    ScorecardContract,
+    SubfactorDefinition,
+)
 from boe.science_review import ManualScienceReview
 
 MaturityBucket = Literal[
@@ -59,6 +67,20 @@ class SubfactorEvidence(ContractModel):
         return self
 
 
+class MaterialityException(ContractModel):
+    approved_at: datetime
+    rationale: str = Field(min_length=1)
+    evidence_ids: tuple[UUID, ...] = Field(min_length=1)
+    approved_before_outcome_knowledge: Literal[True] = True
+
+    @model_validator(mode="after")
+    def validate_exception(self) -> Self:
+        _require_aware(self.approved_at, "approved_at")
+        if len(set(self.evidence_ids)) != len(self.evidence_ids):
+            raise ValueError("materiality-exception evidence IDs must be unique")
+        return self
+
+
 class CatalystScoreInput(ContractModel):
     as_of: datetime
     catalyst_type: CatalystType
@@ -67,6 +89,7 @@ class CatalystScoreInput(ContractModel):
     materiality_points: int | None = None
     novelty_points: int | None = None
     maturity_bucket: MaturityBucket | None = None
+    materiality_exception: MaterialityException | None = None
     evidence: dict[str, SubfactorEvidence]
 
     @model_validator(mode="after")
@@ -76,7 +99,14 @@ class CatalystScoreInput(ContractModel):
             if self.materiality_points not in {0, 2, 4, 6, 8}:
                 raise ValueError("materiality must use the frozen allowed point values")
             if self.materiality_points > MATERIALITY_CEILINGS[self.catalyst_type]:
-                raise ValueError("materiality exceeds the frozen catalyst-type ceiling")
+                if self.materiality_exception is None:
+                    raise ValueError(
+                        "materiality exceeds the default ceiling without an approved exception"
+                    )
+                if self.materiality_exception.approved_at > self.as_of:
+                    raise ValueError(
+                        "materiality exception must be documented before the analysis cutoff"
+                    )
         if self.novelty_points is not None and self.novelty_points not in {0, 1, 2, 3}:
             raise ValueError("novel-information points outside frozen rubric")
         return self
@@ -150,18 +180,39 @@ class SentimentScoreInput(ContractModel):
 def score_catalyst(input_: CatalystScoreInput, rules: ScorecardContract) -> FactorScore:
     definition = _factor_definition(rules, FactorCode.CATALYST)
     values: list[FactorSubscore] = []
+    materiality_evidence = input_.evidence
+    if input_.materiality_exception is not None and input_.materiality_points is not None:
+        if input_.materiality_points > MATERIALITY_CEILINGS[input_.catalyst_type]:
+            metadata = input_.evidence.get("MATERIALITY")
+            if metadata is None:
+                raise ValueError("evidence metadata missing for MATERIALITY")
+            materiality_evidence = dict(input_.evidence)
+            materiality_evidence["MATERIALITY"] = metadata.model_copy(
+                update={
+                    "rationale": (
+                        f"{metadata.rationale}; approved exception: "
+                        f"{input_.materiality_exception.rationale}"
+                    ),
+                    "evidence_ids": tuple(
+                        dict.fromkeys(
+                            (*metadata.evidence_ids, *input_.materiality_exception.evidence_ids)
+                        )
+                    ),
+                }
+            )
     values.append(
         _subscore(
             definition,
             "MATERIALITY",
             input_.materiality_points,
-            input_.evidence,
+            materiality_evidence,
         )
     )
-    timing_mapping = _subfactor_rule(definition, "TIMING_CONFIDENCE").get("mapping")
-    if not isinstance(timing_mapping, dict):
-        raise TypeError("timing-confidence mapping missing from scorecard")
-    timing_points = int(timing_mapping[input_.timing_confidence.value])
+    timing_mapping = _int_mapping(
+        _subfactor_extra(definition, "TIMING_CONFIDENCE", "mapping"),
+        "TIMING_CONFIDENCE.mapping",
+    )
+    timing_points = timing_mapping[input_.timing_confidence.value]
     values.append(_subscore(definition, "TIMING_CONFIDENCE", timing_points, input_.evidence))
     days = (input_.window_start - input_.as_of.date()).days
     proximity_points = _proximity_points(days)
@@ -169,10 +220,11 @@ def score_catalyst(input_: CatalystScoreInput, rules: ScorecardContract) -> Fact
     maturity_bucket = input_.maturity_bucket or _derived_maturity_bucket(input_.catalyst_type)
     if maturity_bucket is None:
         raise ValueError("catalyst type requires an explicit underlying maturity bucket")
-    maturity_mapping = _subfactor_rule(definition, "MATURITY").get("mapping")
-    if not isinstance(maturity_mapping, dict):
-        raise TypeError("maturity mapping missing from scorecard")
-    maturity_points = int(maturity_mapping[maturity_bucket])
+    maturity_mapping = _int_mapping(
+        _subfactor_extra(definition, "MATURITY", "mapping"),
+        "MATURITY.mapping",
+    )
+    maturity_points = maturity_mapping[maturity_bucket]
     values.append(_subscore(definition, "MATURITY", maturity_points, input_.evidence))
     values.append(
         _subscore(definition, "NOVEL_INFORMATION", input_.novelty_points, input_.evidence)
@@ -193,11 +245,14 @@ def score_science(review: ManualScienceReview, rules: ScorecardContract) -> Fact
         "SAFETY",
         "EXTERNAL_VALIDATION",
     ):
-        subrule = _subfactor_rule(definition, code)
-        max_points = int(subrule["max_points"])
+        subrule = _subfactor_definition(definition, code)
+        max_points = subrule.max_points
         point = scores[code]
-        allowed = subrule.get("allowed_points")
-        if isinstance(allowed, list) and point not in allowed:
+        allowed = _int_list(
+            _subfactor_extra(definition, code, "allowed_points"),
+            f"{code}.allowed_points",
+        )
+        if point not in allowed:
             raise ValueError(f"{code} review score is outside frozen allowed values")
         values.append(
             FactorSubscore(
@@ -256,10 +311,11 @@ def score_cash_dilution(
         runway = _runway_points(input_.runway_months, input_.burn_confidence)
     overhang = None
     if input_.financing_overhang is not None:
-        mapping = _subfactor_rule(definition, "FINANCING_OVERHANG").get("mapping")
-        if not isinstance(mapping, dict):
-            raise TypeError("financing-overhang mapping missing from scorecard")
-        overhang = int(mapping[input_.financing_overhang.value])
+        mapping = _int_mapping(
+            _subfactor_extra(definition, "FINANCING_OVERHANG", "mapping"),
+            "FINANCING_OVERHANG.mapping",
+        )
+        overhang = mapping[input_.financing_overhang.value]
     flexibility = _balance_sheet_flexibility(input_)
     values = [
         _subscore(definition, "RUNWAY", runway, input_.evidence),
@@ -400,22 +456,65 @@ def calculate_coverage_pct(score: ScoreBreakdown) -> Decimal:
     return Decimal(observed_maximum)
 
 
-def _factor_definition(rules: ScorecardContract, code: FactorCode):
+def _factor_definition(
+    rules: ScorecardContract,
+    code: FactorCode,
+) -> FactorDefinition:
     for definition in rules.factors:
         if definition.code is code:
             return definition
     raise ValueError(f"factor definition missing: {code.value}")
 
 
-def _subfactor_rule(definition, code: str) -> dict[str, object]:
+def _subfactor_definition(
+    definition: FactorDefinition,
+    code: str,
+) -> SubfactorDefinition:
     for subfactor in definition.subfactors:
         if subfactor.code == code:
-            return subfactor.model_dump()
+            return subfactor
     raise ValueError(f"subfactor definition missing: {code}")
 
 
+def _subfactor_extra(
+    definition: FactorDefinition,
+    code: str,
+    key: str,
+) -> object:
+    subfactor = _subfactor_definition(definition, code)
+    extras = subfactor.model_extra or {}
+    if key not in extras:
+        raise ValueError(f"subfactor rule missing {key}: {code}")
+    value: object = extras[key]
+    return value
+
+
+def _int_mapping(raw: object, label: str) -> dict[str, int]:
+    if not isinstance(raw, dict):
+        raise TypeError(f"{label} must be a mapping")
+    result: dict[str, int] = {}
+    for key, value in raw.items():
+        if not isinstance(key, str):
+            raise TypeError(f"{label} keys must be strings")
+        if isinstance(value, bool) or not isinstance(value, int):
+            raise TypeError(f"{label} values must be integers")
+        result[key] = value
+    return result
+
+
+def _int_list(raw: object, label: str) -> list[int]:
+    if not isinstance(raw, list):
+        raise TypeError(f"{label} must be a list")
+    result: list[int] = []
+    for value in raw:
+        if isinstance(value, bool) or not isinstance(value, int):
+            raise TypeError(f"{label} values must be integers")
+        result.append(value)
+    return result
+
+
 def _subscore(
-    definition,
+    definition: FactorDefinition,
     code: str,
     points: int | None,
     evidence: dict[str, SubfactorEvidence],
@@ -423,7 +522,7 @@ def _subscore(
     if code not in evidence:
         raise ValueError(f"evidence metadata missing for {code}")
     metadata = evidence[code]
-    max_points = int(_subfactor_rule(definition, code)["max_points"])
+    max_points = _subfactor_definition(definition, code).max_points
     if points is None:
         if metadata.data_state is not DataState.MISSING:
             raise ValueError(f"{code} has no value but is not marked missing")
@@ -442,7 +541,11 @@ def _subscore(
     )
 
 
-def _factor_score(code: FactorCode, max_points: int, values: list[FactorSubscore]) -> FactorScore:
+def _factor_score(
+    code: FactorCode,
+    max_points: int,
+    values: list[FactorSubscore],
+) -> FactorScore:
     return FactorScore(
         code=code,
         points=sum(item.points for item in values),
@@ -610,7 +713,7 @@ def _structure_points(input_: TechnicalScoreInput) -> int | None:
     target_room = (input_.base_success_target / input_.close - Decimal("1")) * Decimal("100")
     if Decimal("0") <= support_distance <= Decimal("8") and target_room >= 15:
         return 2
-    if Decimal("8") < support_distance <= Decimal("15") or Decimal("8") <= target_room <= Decimal(
+    if Decimal("8") <= support_distance <= Decimal("15") or Decimal("8") <= target_room <= Decimal(
         "15"
     ):
         return 1

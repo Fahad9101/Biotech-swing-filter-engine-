@@ -33,6 +33,7 @@ from boe.scoring import (
     CashDilutionScoreInput,
     CatalystScoreInput,
     MarketImpactScoreInput,
+    MaterialityException,
     OwnershipScoreInput,
     SentimentScoreInput,
     SubfactorEvidence,
@@ -780,7 +781,6 @@ def test_watchlist_and_below_sixty_reject_classification(scorecard_path: Path):
         ),
         rules,
     )
-    assert below.score.raw_total if False else True
     assert below.classification is Classification.REJECT
 
 
@@ -788,3 +788,81 @@ def test_analysis_review_does_not_accept_naive_future_cutoff():
     future_review = _review().model_copy(update={"evidence_cutoff": AS_OF + timedelta(days=1)})
     with pytest.raises(ValueError):
         require_review_cutoff(future_review, AS_OF)
+
+
+def test_materiality_ceiling_requires_pre_outcome_documented_exception(scorecard_path: Path):
+    rules = _rules(scorecard_path)
+    common = dict(
+        as_of=AS_OF,
+        catalyst_type=CatalystType.CLIN_P1,
+        window_start=date(2026, 10, 14),
+        timing_confidence=TimingConfidence.HIGH,
+        materiality_points=6,
+        novelty_points=2,
+        evidence=_evidence(
+            "MATERIALITY",
+            "TIMING_CONFIDENCE",
+            "PROXIMITY",
+            "MATURITY",
+            "NOVEL_INFORMATION",
+        ),
+    )
+    with pytest.raises(ValueError):
+        CatalystScoreInput(**common)
+
+    exception_evidence = UUID("00000000-0000-0000-0000-000000000099")
+    exception = MaterialityException(
+        approved_at=AS_OF - timedelta(days=1),
+        rationale="pre-outcome committee approval for unusually material Phase I readout",
+        evidence_ids=(exception_evidence,),
+        approved_before_outcome_knowledge=True,
+    )
+    scored = score_catalyst(
+        CatalystScoreInput(**common, materiality_exception=exception),
+        rules,
+    )
+    materiality = next(item for item in scored.subfactors if item.code == "MATERIALITY")
+    assert materiality.points == 6
+    assert str(exception_evidence) in materiality.evidence_ids
+
+    future_exception = exception.model_copy(update={"approved_at": AS_OF + timedelta(seconds=1)})
+    with pytest.raises(ValueError):
+        CatalystScoreInput(**common, materiality_exception=future_exception)
+
+
+def test_bull_rnpv_pos_is_capped_at_ninety_percent():
+    bull = _base_rnpv_input(scenario="BULL", pos=Decimal("90"))
+    assert calculate_rnpv(bull).trace.discount_rate_pct == 12
+    too_high = bull.model_dump()
+    too_high["assets"][0]["pos_pct"] = Decimal("90.01")
+    with pytest.raises(ValueError):
+        RnpvInput.model_validate(too_high)
+
+
+def test_technical_structure_exact_eight_percent_boundary_gets_partial_credit(
+    scorecard_path: Path,
+):
+    close = Decimal("108")
+    technical = score_technicals(
+        TechnicalScoreInput(
+            close=close,
+            sma20=Decimal("100"),
+            sma50=Decimal("95"),
+            xbi_relative_return_20d_pct=Decimal("0"),
+            up_down_dollar_volume_ratio=Decimal("1"),
+            obv_slope_positive=False,
+            support=Decimal("100"),
+            base_success_target=Decimal("112"),
+            rsi14=Decimal("72"),
+            evidence=_evidence(
+                "TREND",
+                "RELATIVE_STRENGTH",
+                "ACCUMULATION",
+                "STRUCTURE",
+                "EXTENSION",
+            ),
+        ),
+        _rules(scorecard_path),
+    )
+    structure = next(item for item in technical.subfactors if item.code == "STRUCTURE")
+    assert structure.points == 1

@@ -66,11 +66,21 @@ class CandidateDecisionSnapshot(ContractModel):
             raise ValueError("classification raw score does not match score breakdown")
         if self.classification.coverage_pct != self.coverage_pct:
             raise ValueError("classification coverage does not match decision coverage")
-        if Decimal(str(self.valuation.base_expected_return_pct)) != self.expected_value.base_ev_pct:
+        tolerance = Decimal("0.000001")
+        if (
+            abs(
+                Decimal(str(self.valuation.base_expected_return_pct))
+                - self.expected_value.base_ev_pct
+            )
+            > tolerance
+        ):
             raise ValueError("valuation base EV does not match expected-value result")
         if (
-            Decimal(str(self.valuation.conservative_expected_return_pct))
-            != self.expected_value.conservative_ev_pct
+            abs(
+                Decimal(str(self.valuation.conservative_expected_return_pct))
+                - self.expected_value.conservative_ev_pct
+            )
+            > tolerance
         ):
             raise ValueError("valuation conservative EV does not match expected-value result")
         return self

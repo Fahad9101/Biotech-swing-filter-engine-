@@ -75,6 +75,8 @@ class RnpvInput(ContractModel):
         _require_aware(self.as_of, "as_of")
         if self.scenario != "BULL" and any(asset.terminal_value > 0 for asset in self.assets):
             raise ValueError("terminal value is zero in conservative/base BOE-1.0.0 scenarios")
+        if self.scenario == "BULL" and any(asset.pos_pct > 90 for asset in self.assets):
+            raise ValueError("bull-scenario PoS is capped at 90% by BOE-1.0.0")
         return self
 
 
