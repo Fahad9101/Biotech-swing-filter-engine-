@@ -1,0 +1,12 @@
+{
+  "approximate_date_year_counts": {},
+  "authoritative_cohort_events": 0,
+  "cohort_frozen": false,
+  "fetch_failure_count": 962,
+  "generated_at": "2026-09-14T17:53:22.260426+00:00",
+  "official_current_record_count": 0,
+  "phase_counts": {},
+  "point_in_time_record_versions_selected": 0,
+  "registry_sha256": "ae5fc44fb4d7ae72fb3a0b0ff6be15a4439b0602e001734c62f8deea7f68c20c",
+  "unique_tickers": 0
+}
