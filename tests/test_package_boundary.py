@@ -9,9 +9,17 @@ def test_milestone_three_stays_inside_approved_boundary(repository_root: Path):
 
     assert any("catalyst" in path for path in package_files)
     assert any("clinical" in path for path in package_files)
-    assert not any("scoring" in path for path in package_files)
-    assert not any("valuation" in path for path in package_files)
-    assert not any("financial" in path for path in package_files)
-    assert not any("market_data" in path for path in package_files)
-    assert not any("technical" in path for path in package_files)
-    assert not any("ui" in path for path in package_files)
+
+    forbidden_components = {
+        "financials",
+        "market_data",
+        "scoring",
+        "technical",
+        "ui",
+        "valuation",
+    }
+    for package_file in package_files:
+        components = set(Path(package_file).parts)
+        stem = Path(package_file).stem
+        assert not (forbidden_components & components)
+        assert stem not in forbidden_components
