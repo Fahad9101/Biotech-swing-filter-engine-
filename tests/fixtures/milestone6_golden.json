@@ -1,0 +1,18 @@
+{
+  "as_of_session": "2026-04-23",
+  "close": "15.90",
+  "sma20": "15.2385",
+  "sma50": "14.1132",
+  "rsi14": "78.69948926067314678332956271",
+  "atr14": "0.4006148793890322519487335521",
+  "security_return_20d_pct": "10.41666666666666666666666670",
+  "xbi_return_20d_pct": "3.255267203182927932001085100",
+  "xbi_relative_return_20d_pct": "7.161399463483738734665581600",
+  "up_down_dollar_volume_ratio": "1.485007956725163690303097778",
+  "obv_slope": "256898.4962406015037593984962",
+  "validated_support": "15.2385",
+  "median_dollar_volume_20d": "22341750.00",
+  "technical_score_with_base_target_20": 6,
+  "abc_sha256": "909cbb9a7aa6d1d901fda438e904cf52c5813c72802091eb0e1205073c5c93c8",
+  "xbi_sha256": "b2602c98665002d5655f9042cb88e65b6513d50b4d7e541e162be8bba8320a86"
+}

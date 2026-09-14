@@ -21,18 +21,22 @@ EXPECTED_TABLES = {
     "financing_risk_snapshots",
     "gate_results",
     "issuers",
+    "market_bar_batches",
+    "market_bars_daily",
+    "market_data_source_audits",
     "raw_payloads",
     "science_reviews",
     "scientific_evidence_packs",
     "securities",
     "survival_snapshots",
+    "technical_snapshots",
     "universe_snapshots",
     "valuation_assumptions",
     "valuation_snapshots",
 }
 
 
-def test_alembic_builds_milestone_five_schema(tmp_path, repository_root, monkeypatch):
+def test_alembic_builds_milestone_six_schema(tmp_path, repository_root, monkeypatch):
     database_path = tmp_path / "migration.db"
     url = f"sqlite+pysqlite:///{database_path}"
     monkeypatch.setenv("BOE_DATABASE_URL", url)
