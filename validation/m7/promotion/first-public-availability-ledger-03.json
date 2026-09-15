@@ -1,0 +1,29 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-15",
+  "role": "PREFREEZE_FIRST_PUBLIC_AVAILABILITY_EVIDENCE",
+  "market_outcomes_inspected": false,
+  "cohort_frozen": false,
+  "rows": [
+    {
+      "candidate_id": "P3-2023-GERN-IMERGE",
+      "event_date": "2023-01-04",
+      "ticker": "GERN",
+      "first_public_timestamp": "2023-01-04T08:00:00-05:00",
+      "timestamp_precision": "EXACT_TO_MINUTE",
+      "session_classification": "PRE_MARKET",
+      "last_complete_session_before_event": "2023-01-03",
+      "source_type": "ISSUER_IR_BUSINESS_WIRE_RELEASE",
+      "source_url": "https://ir.geron.com/news-releases/news-release-details/geron-announces-positive-top-line-results-imerge-phase-3-trial",
+      "source_displayed_time": "Wed, 01/04/2023 - 08:00",
+      "status": "RESOLVED",
+      "outcome_inspected_for_selection": false
+    }
+  ],
+  "summary": {
+    "resolved_rows": 1,
+    "pending": 0
+  }
+}
