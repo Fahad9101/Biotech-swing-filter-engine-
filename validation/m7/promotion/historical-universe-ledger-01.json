@@ -1,0 +1,58 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-15",
+  "role": "PREFREEZE_HISTORICAL_UNIVERSE_AND_INVESTABILITY_EVIDENCE",
+  "market_outcomes_inspected": false,
+  "cohort_frozen": false,
+  "frozen_investability_floor": {
+    "last_adjusted_close_min_usd": 1.0,
+    "median_daily_dollar_volume_20_session_min_usd": 2000000,
+    "market_cap_min_usd": 50000000,
+    "minimum_valid_sessions_after_listing_or_reorganization": 60,
+    "continuity_rule": "No trading halt, bankruptcy process, or unresolved going-concern event that prevents bounded valuation."
+  },
+  "rows": [
+    {
+      "candidate_id": "NEG-P2-2018-MNLO-ATOMIK",
+      "event_date": "2018-04-08",
+      "first_public_timestamp": "2018-04-08T18:00:00-04:00",
+      "pre_event_cutoff_session": "2018-04-06",
+      "ticker": "MNLO",
+      "security_identity_status": "CONFIRMED",
+      "source_population_exchange_status": "ELIGIBLE_NASDAQ_GLOBAL_SELECT_MARKET",
+      "first_trade_session": "2018-01-25",
+      "valid_trading_sessions_through_cutoff": 50,
+      "minimum_valid_sessions_required": 60,
+      "session_continuity_pass": false,
+      "last_raw_close_usd": 35.22,
+      "raw_bar_provider": "Alpaca",
+      "raw_bar_feed": "SIP",
+      "raw_bar_adjustment_mode": "RAW_AS_TRADED",
+      "bar_window_start": "2018-01-25",
+      "bar_window_end_exclusive": "2018-04-08",
+      "bar_record_count": 50,
+      "price_floor_pass": true,
+      "liquidity_floor_pass": null,
+      "market_cap_floor_pass": null,
+      "continuity_other_than_session_count_pass": null,
+      "historical_universe_eligible": false,
+      "exclusion_reason": "INVESTABILITY_FLOOR_FEWER_THAN_60_VALID_TRADING_SESSIONS_AFTER_LISTING",
+      "determination_sufficiency": "A single frozen investability-floor failure is sufficient to reject the event; later floor components are not required to reverse this result.",
+      "outcome_inspected_for_selection": false,
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1566044/000162828018000648/exhibit991.htm",
+        "https://www.sec.gov/Archives/edgar/data/1566044/000162828018000648/exhibit992.htm"
+      ],
+      "market_data_retrieval_note": "SIP daily bars were requested only to establish pre-event listing continuity. Event-day and post-event bars were not used in the eligibility determination."
+    }
+  ],
+  "summary": {
+    "evaluated": 1,
+    "eligible": 0,
+    "excluded": 1,
+    "pending": 0,
+    "single_asset_quota_attrition": 1
+  }
+}
