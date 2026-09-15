@@ -274,18 +274,14 @@ def build_ledger() -> dict[str, Any]:
 def main() -> None:
     payload = build_ledger()
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    OUTPUT_PATH.write_text(
-        json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8"
-    )
+    OUTPUT_PATH.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     print(
         json.dumps(
             {
                 "ledger_sha256": payload["ledger_sha256"],
                 "raw_candidate_count": payload["raw_candidate_count"],
                 "negative_candidate_count": payload["negative_candidate_count"],
-                "potential_duplicate_group_count": payload[
-                    "potential_duplicate_group_count"
-                ],
+                "potential_duplicate_group_count": payload["potential_duplicate_group_count"],
             },
             sort_keys=True,
         )
