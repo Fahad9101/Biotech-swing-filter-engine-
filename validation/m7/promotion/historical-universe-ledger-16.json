@@ -1,0 +1,50 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-15",
+  "role": "PREFREEZE_HISTORICAL_UNIVERSE_AND_INVESTABILITY_EVIDENCE",
+  "market_outcomes_inspected": false,
+  "cohort_frozen": false,
+  "rows": [
+    {
+      "candidate_id": "P2-2025-ACTU-ELRAGLUSIB-NORMALIZED-2025-05-06",
+      "original_candidate_id": "P2-2025-ACTU-ELRAGLUSIB",
+      "normalized_event_date": "2025-05-06",
+      "first_public_timestamp": "2025-05-06T08:00:00-04:00",
+      "pre_event_cutoff_session": "2025-05-05",
+      "ticker": "ACTU",
+      "security_identity_status": "CONFIRMED",
+      "source_population_exchange_status": "ELIGIBLE_NASDAQ_COMMON_EQUITY",
+      "last_complete_pre_event_raw_close_usd": 9.89,
+      "price_floor_pass": true,
+      "liquidity_window_start": "2025-04-07",
+      "liquidity_window_end": "2025-05-05",
+      "liquidity_sessions": 20,
+      "median_daily_dollar_volume_close_x_volume_usd": 403566.51,
+      "median_daily_dollar_volume_vwap_x_volume_usd": 407650.21,
+      "liquidity_floor_pass": false,
+      "event_session_sensitivity_if_2025_05_06_regular_session_were_included": {
+        "median_daily_dollar_volume_close_x_volume_usd": 412071.45,
+        "median_daily_dollar_volume_vwap_x_volume_usd": 413333.14,
+        "determination_unchanged": true
+      },
+      "valid_session_floor_pass": true,
+      "valid_session_floor_evidence": "ACTU began Nasdaq trading in August 2024 and had more than the frozen 60 valid-session minimum before the normalized May 2025 event.",
+      "corporate_action_query_status": "TRANSIENT_PROVIDER_ERROR_DURING_THIS_BATCH_NOT_REQUIRED_TO_REVERSE_INDEPENDENT_LIQUIDITY_REJECTION",
+      "continuity_note": "The pre-event 2024 annual filing contains a going-concern disclosure that remains relevant to later point-in-time valuation review, but the event is already independently rejected by the frozen liquidity floor.",
+      "historical_universe_eligible": false,
+      "exclusion_reason": "INVESTABILITY_FLOOR_20_SESSION_MEDIAN_DAILY_DOLLAR_VOLUME_BELOW_2000000",
+      "determination_sufficiency": "The liquidity failure independently rejects the event under BOE-1.0.0. Neither a corporate-action recheck nor resolution of the separate going-concern valuation issue can convert this event into an investable historical-universe member.",
+      "outcome_inspected_for_selection": false,
+      "event_normalization_lineage": "validation/m7/promotion/event-normalization-ledger-01.json"
+    }
+  ],
+  "summary": {
+    "evaluated": 1,
+    "eligible": 0,
+    "excluded": 1,
+    "pending": 0,
+    "single_asset_quota_attrition": 1
+  }
+}
