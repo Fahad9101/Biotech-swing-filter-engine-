@@ -22,15 +22,15 @@ def test_committed_status_is_derived_and_pending_is_not_pass() -> None:
     assert (ROOT / module.ROWS_OUTPUT).read_text() == module.render(rows)
     assert status["candidate_counts"] == {
         "total": 179,
-        "pass": 38,
+        "pass": 45,
         "fail": 12,
-        "pending": 129,
+        "pending": 122,
         "not_yet_excluded": 167,
     }
     negative = status["negative_reserve"]
     assert negative["not_yet_excluded"] == 42
-    assert negative["pass"] == 9
-    assert negative["pending"] == 33
+    assert negative["pass"] == 12
+    assert negative["pending"] == 30
     assert negative["final_negative_quota_satisfied"] is False
     assert status["financing_reserve"]["pass"] == 20
     assert status["single_asset_reserve"]["pass"] == 20

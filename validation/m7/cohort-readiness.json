@@ -19,8 +19,8 @@
   "candidate_counts": {
     "fail": 12,
     "not_yet_excluded": 167,
-    "pass": 38,
-    "pending": 129,
+    "pass": 45,
+    "pending": 122,
     "total": 179
   },
   "decision_locks_complete": 0,
@@ -45,14 +45,14 @@
     "final_negative_quota_satisfied": false,
     "maximum_provisional_buffer": 2,
     "not_yet_excluded": 42,
-    "pass": 9,
-    "pending": 33,
+    "pass": 12,
+    "pending": 30,
     "requirement": 40,
     "total": 50
   },
   "real_four_snapshot_reconstructions_complete": 0,
   "real_outcomes_complete": 0,
-  "reconciled_rows_sha256": "495a385c8d2b4e4aed30192e88a1ec0b34febf2c72844008fd351414aad0f65a",
+  "reconciled_rows_sha256": "b85eac6f21320802d18567e73026b495f103ec26fb9a161ee55948efda4917e2",
   "required_action": "Complete outcome-blind evidence promotion and review; do not freeze, inspect returns or merge based on reserve counts.",
   "required_minimum_events": 120,
   "rules_version": "BOE-1.0.0",
@@ -107,6 +107,7 @@
     "validation/m7/promotion/historical-universe-ledger-18.json": "27827900198888a5047b696863e7f0fee12f650899c5a28803e707904e5c37f0",
     "validation/m7/promotion/historical-universe-ledger-19.json": "62ec08629a6afacdc43a9b784f2527b9222d902c614105ce2e2cb33b5e5c53e9",
     "validation/m7/promotion/historical-universe-ledger-20.json": "295c7f1f35e4022faad9e6ebf278c7c7ca8090f9c51ccd552dabc5e2744671a4",
+    "validation/m7/promotion/historical-universe-ledger-21.json": "8becec0bfeae1ab48ed2b1b47af6374f36364ecb196d70ca8a43ceaa2ddee9bd",
     "validation/m7/promotion/negative-reserve-integration-01.json": "6c363ca516f872d8721b6fc9d2bb95197956f4db63e4c926f79860285f6e8604",
     "validation/m7/promotion/single-asset-evidence-ledger-01.json": "abae416444a4d37f97861036d4a78a010c234fef283278d83a351da2f36d3fbd",
     "validation/m7/promotion/single-asset-evidence-ledger-02.json": "40802ef22876d8be63d1dcb2fe30799961b8163f6000d1ea0e4cab862fb2917e",
@@ -143,8 +144,8 @@
     "PHASE_3_PIVOTAL": {
       "fail": 2,
       "not_yet_excluded": 32,
-      "pass": 7,
-      "pending": 25,
+      "pass": 14,
+      "pending": 18,
       "total": 34
     },
     "REGULATORY": {

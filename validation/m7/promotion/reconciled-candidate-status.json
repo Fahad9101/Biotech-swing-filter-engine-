@@ -1924,8 +1924,8 @@
       "stratum": "PHASE_3_PIVOTAL",
       "ticker": "RARE",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-21.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/phase3-primary-batch-01.json",
@@ -1960,8 +1960,8 @@
       "stratum": "PHASE_3_PIVOTAL",
       "ticker": "AXSM",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-21.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/phase3-primary-batch-01.json",
@@ -1978,8 +1978,8 @@
       "stratum": "PHASE_3_PIVOTAL",
       "ticker": "ICPT",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-21.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/phase3-primary-batch-01.json",
@@ -1996,8 +1996,8 @@
       "stratum": "PHASE_3_PIVOTAL",
       "ticker": "NVAX",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-21.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/phase3-primary-batch-01.json",
@@ -2014,8 +2014,8 @@
       "stratum": "PHASE_3_PIVOTAL",
       "ticker": "AGIO",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-21.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/phase3-primary-batch-01.json",
@@ -2032,8 +2032,8 @@
       "stratum": "PHASE_3_PIVOTAL",
       "ticker": "APRE",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-21.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/targeted-negative-supplement-02.json",
@@ -2068,8 +2068,8 @@
       "stratum": "PHASE_3_PIVOTAL",
       "ticker": "CYTK",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-21.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/phase3-primary-batch-01.json",
