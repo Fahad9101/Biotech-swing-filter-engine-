@@ -1,0 +1,37 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-15",
+  "role": "PREFREEZE_TARGETED_SINGLE_ASSET_REPLACEMENT_EVIDENCE",
+  "market_outcome_fields_permitted": false,
+  "cohort_frozen": false,
+  "rows": [
+    {
+      "candidate_id": "P3-2023-GERN-IMERGE",
+      "event_date": "2023-01-04",
+      "ticker": "GERN",
+      "issuer": "Geron Corporation",
+      "asset": "imetelstat",
+      "historical_pipeline_snapshot_date": "2022-09-30",
+      "meaningful_active_therapeutic_assets": ["imetelstat"],
+      "determination": "QUALIFIES",
+      "evidence_summary": "The pre-event Q3 2022 Form 10-Q repeatedly states that imetelstat was Geron's sole/only product candidate, that Geron had no other products or product candidates, and that the company expected imetelstat to remain its sole product candidate for the foreseeable future. Early discovery work for a possible next-generation oral telomerase inhibitor had not yielded a product candidate and therefore is not counted as a distinct meaningful active therapeutic asset under the frozen definition.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/886744/000095017022022712/gern-20220930.htm"
+      ],
+      "source_dates": ["2022-11-07"],
+      "status": "QUALIFIES",
+      "ambiguity": "EARLY_DISCOVERY_PROGRAM_WITHOUT_A_PRODUCT_CANDIDATE_DOES_NOT_CREATE_A_SECOND_ACTIVE_THERAPEUTIC_ASSET",
+      "quota_replacement_candidate": true,
+      "outcome_inspected_for_selection": false
+    }
+  ],
+  "summary": {
+    "reviewed": 1,
+    "qualifies": 1,
+    "does_not_qualify": 0,
+    "pending": 0
+  },
+  "promotion_boundary": "Single-asset status alone does not freeze or promote this event. Historical universe, timestamp, financing, point-in-time evidence, concentration and registry checks remain mandatory."
+}
