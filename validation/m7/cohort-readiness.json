@@ -17,10 +17,10 @@
     "Existing source-side unblinding findings require audit before any leakage PASS."
   ],
   "candidate_counts": {
-    "fail": 32,
-    "not_yet_excluded": 147,
-    "pass": 96,
-    "pending": 51,
+    "fail": 45,
+    "not_yet_excluded": 134,
+    "pass": 105,
+    "pending": 29,
     "total": 179
   },
   "decision_locks_complete": 0,
@@ -52,7 +52,7 @@
   },
   "real_four_snapshot_reconstructions_complete": 0,
   "real_outcomes_complete": 0,
-  "reconciled_rows_sha256": "6ae5dad3ccd017291e507ad9d9fe07bad0a026862d752bfad9c9072beda431a8",
+  "reconciled_rows_sha256": "0956bf365cc1a14fa7197cca49344aadd60a459bcc8b84f97028399e2c139d3a",
   "required_action": "Complete outcome-blind evidence promotion and review; do not freeze, inspect returns or merge based on reserve counts.",
   "required_minimum_events": 120,
   "rules_version": "BOE-1.0.0",
@@ -115,6 +115,7 @@
     "validation/m7/promotion/historical-universe-ledger-25.json": "07ff3ef62345c31d5b41ac83b78220bc8cacf5d88340facdd8e11cd6825ab7da",
     "validation/m7/promotion/historical-universe-ledger-26.json": "2722ac5dcf343f658fc1d67c8eadf0c9fe2b8fc63c6894a8b9f1365c0d2da86e",
     "validation/m7/promotion/historical-universe-ledger-27.json": "d4bde8d0fd9d824da04c79cc6da59165b29b5f10e0d6c11a3bf93f9b7adf7885",
+    "validation/m7/promotion/historical-universe-ledger-28.json": "6c3a2b4946a6ea84c94b3b79c9c3e3b7eda6ed8f39e643bb9a184699fedf9276",
     "validation/m7/promotion/negative-reserve-integration-01.json": "6c363ca516f872d8721b6fc9d2bb95197956f4db63e4c926f79860285f6e8604",
     "validation/m7/promotion/single-asset-evidence-ledger-01.json": "abae416444a4d37f97861036d4a78a010c234fef283278d83a351da2f36d3fbd",
     "validation/m7/promotion/single-asset-evidence-ledger-02.json": "40802ef22876d8be63d1dcb2fe30799961b8163f6000d1ea0e4cab862fb2917e",
@@ -128,11 +129,11 @@
   },
   "strata": {
     "CONFERENCE_OTHER": {
-      "fail": 0,
-      "maximum_provisional_buffer": 11,
-      "not_yet_excluded": 26,
-      "pass": 3,
-      "pending": 23,
+      "fail": 13,
+      "maximum_provisional_buffer": -2,
+      "not_yet_excluded": 13,
+      "pass": 12,
+      "pending": 1,
       "requirement": 15,
       "total": 26
     },

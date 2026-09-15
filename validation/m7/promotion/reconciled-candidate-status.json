@@ -16,8 +16,8 @@
       "stratum": "CONFERENCE_OTHER",
       "ticker": "ZIOP",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-28.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/conference-other-primary-batch-01.json",
@@ -34,8 +34,8 @@
       "stratum": "CONFERENCE_OTHER",
       "ticker": "AUTL",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-28.json",
+      "universe_status": "FAIL"
     },
     {
       "acquisition_path": "validation/m7/acquisition/conference-other-primary-batch-01.json",
@@ -52,8 +52,8 @@
       "stratum": "CONFERENCE_OTHER",
       "ticker": "BGNE",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-28.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/conference-other-primary-batch-01.json",
@@ -88,8 +88,8 @@
       "stratum": "CONFERENCE_OTHER",
       "ticker": "AUTL",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-28.json",
+      "universe_status": "FAIL"
     },
     {
       "acquisition_path": "validation/m7/acquisition/conference-other-primary-batch-01.json",
@@ -124,8 +124,8 @@
       "stratum": "CONFERENCE_OTHER",
       "ticker": "TRIL",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-28.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/conference-other-primary-batch-01.json",
@@ -142,8 +142,8 @@
       "stratum": "CONFERENCE_OTHER",
       "ticker": "HARP",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-28.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/conference-other-primary-batch-01.json",
@@ -160,8 +160,8 @@
       "stratum": "CONFERENCE_OTHER",
       "ticker": "IGMS",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-28.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/conference-other-primary-batch-01.json",
@@ -178,8 +178,8 @@
       "stratum": "CONFERENCE_OTHER",
       "ticker": "IMRA",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-28.json",
+      "universe_status": "FAIL"
     },
     {
       "acquisition_path": "validation/m7/acquisition/conference-other-primary-batch-01.json",
@@ -196,8 +196,8 @@
       "stratum": "CONFERENCE_OTHER",
       "ticker": "IOVA",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-28.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/conference-other-primary-batch-01.json",
@@ -214,8 +214,8 @@
       "stratum": "CONFERENCE_OTHER",
       "ticker": "AUTL",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-28.json",
+      "universe_status": "FAIL"
     },
     {
       "acquisition_path": "validation/m7/acquisition/conference-other-primary-batch-01.json",
@@ -250,8 +250,8 @@
       "stratum": "CONFERENCE_OTHER",
       "ticker": "APTO",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-28.json",
+      "universe_status": "FAIL"
     },
     {
       "acquisition_path": "validation/m7/acquisition/conference-other-primary-batch-01.json",
@@ -268,8 +268,8 @@
       "stratum": "CONFERENCE_OTHER",
       "ticker": "GRCL",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-28.json",
+      "universe_status": "FAIL"
     },
     {
       "acquisition_path": "validation/m7/acquisition/conference-other-primary-batch-01.json",
@@ -304,8 +304,8 @@
       "stratum": "CONFERENCE_OTHER",
       "ticker": "MOLN",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-28.json",
+      "universe_status": "FAIL"
     },
     {
       "acquisition_path": "validation/m7/acquisition/conference-other-primary-batch-01.json",
@@ -322,8 +322,8 @@
       "stratum": "CONFERENCE_OTHER",
       "ticker": "APLM",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-28.json",
+      "universe_status": "FAIL"
     },
     {
       "acquisition_path": "validation/m7/acquisition/conference-other-primary-batch-01.json",
@@ -340,8 +340,8 @@
       "stratum": "CONFERENCE_OTHER",
       "ticker": "AUTL",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-28.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/conference-other-primary-batch-01.json",
@@ -358,8 +358,8 @@
       "stratum": "CONFERENCE_OTHER",
       "ticker": "CYCC",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-28.json",
+      "universe_status": "FAIL"
     },
     {
       "acquisition_path": "validation/m7/acquisition/conference-other-primary-batch-01.json",
@@ -376,8 +376,8 @@
       "stratum": "CONFERENCE_OTHER",
       "ticker": "GMAB",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-28.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/conference-other-primary-batch-01.json",
@@ -394,8 +394,8 @@
       "stratum": "CONFERENCE_OTHER",
       "ticker": "KROS",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-28.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/conference-other-primary-batch-01.json",
@@ -412,8 +412,8 @@
       "stratum": "CONFERENCE_OTHER",
       "ticker": "MOLN",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-28.json",
+      "universe_status": "FAIL"
     },
     {
       "acquisition_path": "validation/m7/acquisition/conference-other-primary-batch-01.json",
@@ -430,8 +430,8 @@
       "stratum": "CONFERENCE_OTHER",
       "ticker": "ALXO",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-28.json",
+      "universe_status": "FAIL"
     },
     {
       "acquisition_path": "validation/m7/acquisition/conference-other-primary-batch-01.json",
@@ -448,8 +448,8 @@
       "stratum": "CONFERENCE_OTHER",
       "ticker": "BCTX",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-28.json",
+      "universe_status": "FAIL"
     },
     {
       "acquisition_path": "validation/m7/acquisition/conference-other-primary-batch-01.json",
@@ -466,8 +466,8 @@
       "stratum": "CONFERENCE_OTHER",
       "ticker": "MOLN",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-28.json",
+      "universe_status": "FAIL"
     },
     {
       "acquisition_path": "validation/m7/acquisition/early-clinical-primary-batch-01.json",
