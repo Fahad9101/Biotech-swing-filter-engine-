@@ -1,0 +1,46 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-15",
+  "role": "TARGETED_SINGLE_ASSET_QUOTA_REPLACEMENT_ACQUISITION_NOT_FROZEN",
+  "trigger": "P2-2023-AEON-ABP450 failed the frozen 20-session median daily dollar-volume floor after the first Geron replacement restored earlier attrition. Broad acquisition remains closed; this file adds only the minimum targeted replacement needed for the single-asset reserve.",
+  "market_outcomes_inspected": false,
+  "cohort_frozen": false,
+  "events": [
+    {
+      "candidate_id": "REG-2023-GERN-IMETELSTAT-NDA-ACCEPT",
+      "company": "Geron Corporation",
+      "ticker": "GERN",
+      "cik": "0000886744",
+      "asset": "imetelstat",
+      "indication": "transfusion-dependent anemia in lower-risk myelodysplastic syndromes",
+      "clinical_phase": "REGULATORY_FILING_ACCEPTANCE",
+      "first_public_date": "2023-08-21",
+      "first_public_timestamp": "2023-08-21T08:00:00-04:00",
+      "timestamp_precision": "EXACT_TO_MINUTE_WITH_PRIMARY_DATE_AND_AUTHORIZED_DISTRIBUTOR_CLOCK",
+      "proposed_catalyst_type": "REG_SUBMIT",
+      "proposed_primary_stratum": "REGULATORY",
+      "negative_event_candidate": false,
+      "result_direction": "POSITIVE_REGULATORY_ACCEPTANCE",
+      "source_role": "FIRST_PUBLIC_REGULATORY_DISCLOSURE_CANDIDATE",
+      "source_type": "ISSUER_DISCLOSURE_WITH_BUSINESS_WIRE_DISTRIBUTION",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/886744/000095017023043949/gern-20230821.htm",
+        "https://www.geron.com/about/history/",
+        "https://www.businesswire.com/news/home/20230821960985/en/"
+      ],
+      "promotion_blockers": [
+        "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE",
+        "FINAL_CONCENTRATION_AND_REGISTRY_CHECK"
+      ],
+      "outcome_inspected_for_selection": false
+    }
+  ],
+  "summary": {
+    "targeted_rows_added": 1,
+    "broad_acquisition_reopened": false,
+    "authoritative_events_promoted": 0
+  }
+}
