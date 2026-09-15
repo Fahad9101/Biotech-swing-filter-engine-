@@ -1,0 +1,42 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-15",
+  "role": "PREFREEZE_FINANCING_EVIDENCE_PROMOTION_INTEGRATION",
+  "market_outcomes_inspected": false,
+  "cohort_frozen": false,
+  "source_financing_ledger": "validation/m7/promotion/financing-evidence-ledger-01.json",
+  "quota_requirement": 20,
+  "rows": [
+    {"candidate_id":"EC-2020-SLS-GPS","ticker":"SLS","financing_status":"QUALIFIES","historical_universe_status":"PENDING"},
+    {"candidate_id":"REG-2023-TVTX-FILSPARI","ticker":"TVTX","financing_status":"QUALIFIES","historical_universe_status":"PENDING"},
+    {"candidate_id":"EC-2020-CRNX-CRN01941","ticker":"CRNX","financing_status":"QUALIFIES","historical_universe_status":"PENDING"},
+    {"candidate_id":"REG-2024-IOVA-AMTAGVI","ticker":"IOVA","financing_status":"QUALIFIES","historical_universe_status":"PENDING"},
+    {"candidate_id":"CO-2019-CNST-MANIFEST","ticker":"CNST","financing_status":"QUALIFIES","historical_universe_status":"PENDING"},
+    {"candidate_id":"CO-2020-ONCT-CIRLLASH","ticker":"ONCT","financing_status":"QUALIFIES","historical_universe_status":"PENDING"},
+    {"candidate_id":"P2-2019-RETA-MOXIE","ticker":"RETA","financing_status":"QUALIFIES","historical_universe_status":"PENDING"},
+    {"candidate_id":"EC-2021-RUBY-RTX240","ticker":"RUBY","financing_status":"QUALIFIES","historical_universe_status":"PENDING"},
+    {"candidate_id":"NEG-P2-2018-MNLO-ATOMIK","ticker":"MNLO","financing_status":"QUALIFIES","historical_universe_status":"FAIL","universe_reason":"INVESTABILITY_FLOOR_MINIMUM_VALID_SESSION_COUNT_BELOW_60"},
+    {"candidate_id":"REG-2021-ASND-SKYTROFA","ticker":"ASND","financing_status":"QUALIFIES","historical_universe_status":"PENDING"},
+    {"candidate_id":"EC-2020-CRSP-CTX001","ticker":"CRSP","financing_status":"QUALIFIES","historical_universe_status":"PENDING"},
+    {"candidate_id":"P2-2023-ETNB-ENLIVEN","ticker":"ETNB","financing_status":"QUALIFIES","historical_universe_status":"PASS"},
+    {"candidate_id":"P2-2019-TGTX-UNITYNHL","ticker":"TGTX","financing_status":"QUALIFIES","historical_universe_status":"PENDING"},
+    {"candidate_id":"P2-2022-AKRO-HARMONY","ticker":"AKRO","financing_status":"QUALIFIES","historical_universe_status":"PASS"},
+    {"candidate_id":"P2-2022-CINC-BRIGHTN","ticker":"CINC","financing_status":"QUALIFIES","historical_universe_status":"PASS"},
+    {"candidate_id":"P2-2023-MLTX-MIRA","ticker":"MLTX","financing_status":"QUALIFIES","historical_universe_status":"PASS"},
+    {"candidate_id":"P2-2024-GPCR-GSBR1290","ticker":"GPCR","financing_status":"QUALIFIES","historical_universe_status":"PENDING"},
+    {"candidate_id":"P2-2024-RXRX-SYCAMORE","ticker":"RXRX","financing_status":"QUALIFIES","historical_universe_status":"PENDING"},
+    {"candidate_id":"P2-2023-FWBI-SPAN","ticker":"FWBI","financing_status":"QUALIFIES","historical_universe_status":"PENDING"},
+    {"candidate_id":"CO-2022-KROS-KER050ASH","ticker":"KROS","financing_status":"QUALIFIES","historical_universe_status":"PENDING"}
+  ],
+  "summary": {
+    "financing_qualified_candidates": 20,
+    "historical_universe_pass": 4,
+    "historical_universe_fail": 1,
+    "historical_universe_pending": 15,
+    "current_financing_survivor_reserve": 19,
+    "final_frozen_financing_quota_met": false
+  },
+  "next_action": "Prioritize the 15 financing-qualified universe-pending events for exact first-public, security identity and historical investability verification. A financing replacement reserve may be required if any additional financing cases fail final eligibility."
+}
