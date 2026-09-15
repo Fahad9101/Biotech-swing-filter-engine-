@@ -1,0 +1,63 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-15",
+  "role": "PREFREEZE_HISTORICAL_UNIVERSE_AND_INVESTABILITY_EVIDENCE",
+  "market_outcomes_inspected": false,
+  "cohort_frozen": false,
+  "method": {
+    "market_data_provider": "Alpaca",
+    "feed": "SIP",
+    "bars": "RAW_AS_TRADED_DAILY",
+    "corporate_actions": "EXPLICIT_SEPARATE_QUERY",
+    "outcome_boundary": "The first-public OHTUVAYRE disclosure occurred after-hours at 16:57 ET on 2024-06-26, so the June 26 regular session is the final complete pre-event session and post-disclosure June 27 trading is excluded."
+  },
+  "rows": [
+    {
+      "candidate_id": "REG-2024-VRNA-OHTUVAYRE",
+      "event_date": "2024-06-26",
+      "first_public_timestamp": "2024-06-26T16:57:00-04:00",
+      "session_classification": "AFTER_HOURS",
+      "pre_event_cutoff_session": "2024-06-26",
+      "ticker": "VRNA",
+      "security_identity": "Nasdaq-listed American Depositary Shares, each representing eight ordinary shares",
+      "source_population_exchange": "Nasdaq Global Market",
+      "security_eligibility_pass": true,
+      "last_complete_pre_event_raw_close_usd": 14.69,
+      "price_floor_pass": true,
+      "liquidity_window_start": "2024-05-30",
+      "liquidity_window_end": "2024-06-26",
+      "liquidity_sessions": 20,
+      "median_daily_dollar_volume_close_x_volume_usd": 16879709.83,
+      "median_daily_dollar_volume_vwap_x_volume_usd": 17062115.86,
+      "liquidity_floor_pass": true,
+      "ordinary_shares_outstanding": 648654174,
+      "ads_ratio_ordinary_shares_per_ads": 8,
+      "ads_equivalent_shares_outstanding": 81081772,
+      "shares_source_date": "2024-05-02",
+      "pre_event_market_cap_proxy_usd": 1191091230.68,
+      "market_cap_formula": "last_complete_pre_event_US_ADS_raw_close_x_pre_event_ordinary_shares_outstanding_divided_by_8",
+      "market_cap_floor_pass": true,
+      "valid_session_floor_evidence": "The VRNA ADS had traded on Nasdaq since April 2017, far exceeding the frozen >=60 valid-session requirement before the June 2024 event.",
+      "valid_session_floor_pass": true,
+      "corporate_actions_through_cutoff": [],
+      "corporate_action_adjustment_required_for_floor_check": false,
+      "continuity_status": "CURRENT_FOREIGN_ISSUER_EQUIVALENT_REPORTING_WITH_CONTINUOUS_US_ADS_TRADING; NO_BANKRUPTCY_OR_UNRESOLVED_GOING_CONCERN_EVENT_PREVENTING_BOUNDED_VALUATION_IDENTIFIED_PRE_EVENT",
+      "continuity_floor_pass": true,
+      "historical_universe_eligible": true,
+      "outcome_inspected_for_selection": false,
+      "sec_evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1657312/000165731224000019/vrna-20240331.htm",
+        "https://www.sec.gov/Archives/edgar/data/1657312/000165731224000007/vrna-20231231.htm"
+      ],
+      "notes": "The U.S. event security is the ADS, not the underlying ordinary share. The pre-event Q1 2024 filing reports 648,654,174 ordinary shares as of May 2, 2024, equivalent to 81,081,772.25 ADS at the 8:1 depositary ratio; the market-cap proxy uses 81,081,772 whole ADS equivalents conservatively. Alpaca's separate corporate-action query returned no VRNA actions through the event date."
+    }
+  ],
+  "summary": {
+    "evaluated": 1,
+    "eligible": 1,
+    "excluded": 0,
+    "pending": 0
+  }
+}
