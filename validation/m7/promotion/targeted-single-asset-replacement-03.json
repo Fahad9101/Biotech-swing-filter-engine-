@@ -1,0 +1,83 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-15",
+  "role": "TARGETED_REPLACEMENT_ACQUISITION_AFTER_SINGLE_ASSET_QUOTA_ATTRITION",
+  "market_outcomes_inspected": false,
+  "cohort_frozen": false,
+  "selection_rule": "Candidates were sought only because prior single-asset reserve events failed frozen investability criteria. Selection favored already-verified single-asset issuers with distinct primary clinical datasets and established U.S.-listed securities. No stock return, MFE, MAE, swing-success, or post-event price behavior was used.",
+  "rows": [
+    {
+      "candidate_id": "P2-2022-CINC-HALO",
+      "event_date": "2022-11-28",
+      "ticker": "CINC",
+      "issuer": "CinCor Pharma, Inc.",
+      "asset": "baxdrostat",
+      "clinical_phase": "PHASE_2",
+      "proposed_primary_stratum": "PHASE_2_POC",
+      "first_public_timestamp": "2022-11-28T07:30:00-05:00",
+      "source_url": "https://www.globenewswire.com/news-release/2022/11/28/2563048/0/en/cincor-pharma-announces-topline-data-for-phase-2-halo-trial-evaluating-selective-aldosterone-synthase-inhibitor-baxdrostat-in-uncontrolled-hypertension.html",
+      "sec_event_url": "https://www.sec.gov/Archives/edgar/data/1868734/000095017022025707/cinc-20221128.htm",
+      "event_identity": "HALO randomized Phase 2 uncontrolled-hypertension trial",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2023-AKRO-SYMMETRY-COHORT-D",
+      "event_date": "2023-06-05",
+      "ticker": "AKRO",
+      "issuer": "Akero Therapeutics, Inc.",
+      "asset": "efruxifermin (EFX)",
+      "clinical_phase": "PHASE_2",
+      "proposed_primary_stratum": "PHASE_2_POC",
+      "first_public_timestamp": "2023-06-05T07:00:00-04:00",
+      "source_url": "https://www.globenewswire.com/news-release/2023/06/05/2681816/0/en/Akero-Therapeutics-Phase-2b-SYMMETRY-Cohort-D-Study-Met-Safety-Tolerability-Endpoints-and-Showed-Adding-EFX-to-GLP-1-Therapy-Significantly-Improved-Non-Invasive-Markers-of-NASH-Rel.html",
+      "event_identity": "SYMMETRY Cohort D expansion cohort in patients on GLP-1 therapy with T2D and F1-F3 NASH fibrosis; independent patient cohort and distinct primary safety/tolerability aim",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2023-AKRO-SYMMETRY-MAIN",
+      "event_date": "2023-10-10",
+      "ticker": "AKRO",
+      "issuer": "Akero Therapeutics, Inc.",
+      "asset": "efruxifermin (EFX)",
+      "clinical_phase": "PHASE_2",
+      "proposed_primary_stratum": "PHASE_2_POC",
+      "first_public_timestamp": "2023-10-10T07:00:00-04:00",
+      "source_url": "https://www.globenewswire.com/news-release/2023/10/10/2757329/0/en/akero-therapeutics-reports-encouraging-36-week-analysis-of-96-week-phase-2b-symmetry-study-with-a-trend-on-fibrosis-improvement-and-statistically-significant-results-for-nash-resol.html",
+      "event_identity": "SYMMETRY main randomized Phase 2b study in biopsy-confirmed compensated cirrhosis F4; separate from Cohort D and HARMONY",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2023-MLTX-ARGO",
+      "event_date": "2023-11-05",
+      "ticker": "MLTX",
+      "issuer": "MoonLake Immunotherapeutics",
+      "asset": "sonelokimab",
+      "clinical_phase": "PHASE_2",
+      "proposed_primary_stratum": "PHASE_2_POC",
+      "first_public_timestamp": "2023-11-05T11:00:00-05:00",
+      "source_url": "https://www.globenewswire.com/news-release/2023/11/05/2773591/0/en/moonlake-immunotherapeutics-announces-landmark-phase-2-results-for-nanobody-sonelokimab-in-active-psoriatic-arthritis.html",
+      "event_identity": "ARGO randomized Phase 2 active psoriatic-arthritis trial; separate indication and trial from MIRA hidradenitis suppurativa",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2022-ETNB-ENTRIGUE",
+      "event_date": "2022-06-28",
+      "ticker": "ETNB",
+      "issuer": "89bio, Inc.",
+      "asset": "pegozafermin",
+      "clinical_phase": "PHASE_2",
+      "proposed_primary_stratum": "PHASE_2_POC",
+      "first_public_timestamp": "2022-06-28T16:01:00-04:00",
+      "source_url": "https://www.globenewswire.com/news-release/2022/06/28/2470796/0/en/89bio-Reports-Positive-Topline-Results-from-ENTRIGUE-Phase-2-Trial-of-Pegozafermin-in-Patients-with-Severe-Hypertriglyceridemia-SHTG.html",
+      "event_identity": "ENTRIGUE Phase 2 severe-hypertriglyceridemia trial; separate indication and trial from ENLIVEN NASH",
+      "outcome_inspected_for_selection": false
+    }
+  ],
+  "summary": {
+    "targeted_candidates": 5,
+    "market_outcomes_used_for_selection": 0
+  },
+  "promotion_boundary": "These rows are candidate acquisitions only. Single-asset, duplicate/material-distinct, security identity, historical-universe, timestamp, point-in-time evidence, concentration and final registry requirements remain separate."
+}
