@@ -1807,7 +1807,7 @@
       "eligible_registry_status": "NOT_PROMOTED",
       "financing_evidence_path": "validation/m7/promotion/financing-evidence-ledger-01.json",
       "financing_status": "QUALIFIES",
-      "first_public_timestamp": null,
+      "first_public_timestamp": "2024-06-03T07:30:00-04:00",
       "negative_label_path": "validation/m7/acquisition/phase2-primary-batch-01.json",
       "negative_label_recorded": false,
       "normalization_path": null,
@@ -1815,7 +1815,7 @@
       "single_asset_status": "PENDING",
       "stratum": "PHASE_2_POC",
       "ticker": "GPCR",
-      "timestamp_evidence_path": null,
+      "timestamp_evidence_path": "validation/m7/promotion/first-public-availability-ledger-07.json",
       "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-19.json",
       "universe_status": "PASS"
     },
