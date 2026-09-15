@@ -1,0 +1,86 @@
+"""Status drift, alias binding and reserve accounting regressions."""
+
+import importlib.util
+import json
+import shutil
+from pathlib import Path
+
+import pytest
+
+ROOT = Path(__file__).resolve().parents[1]
+spec = importlib.util.spec_from_file_location(
+    "readiness", ROOT / "scripts/m7_reconcile_readiness.py"
+)
+assert spec and spec.loader
+module = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(module)
+
+
+def test_committed_status_is_derived_and_pending_is_not_pass() -> None:
+    status, rows = module.build()
+    assert (ROOT / module.OUTPUT).read_text() == module.render(status)
+    assert (ROOT / module.ROWS_OUTPUT).read_text() == module.render(rows)
+    assert status["candidate_counts"] == {
+        "total": 179,
+        "pass": 38,
+        "fail": 12,
+        "pending": 129,
+        "not_yet_excluded": 167,
+    }
+    negative = status["negative_reserve"]
+    assert negative["not_yet_excluded"] == 42
+    assert negative["pass"] == 9
+    assert negative["pending"] == 33
+    assert negative["final_negative_quota_satisfied"] is False
+    assert status["financing_reserve"]["pass"] == 20
+    assert status["single_asset_reserve"]["pass"] == 20
+    assert status["audit_findings"]
+    by_id = {r["candidate_id"]: r for r in rows["rows"]}
+    assert by_id["P3-2023-RAIN-MANTRA"]["universe_status"] == "FAIL"
+    assert by_id["P2-2025-ACTU-ELRAGLUSIB-TOPLINE"]["universe_status"] == "FAIL"
+    assert "P2-2025-ACTU-ELRAGLUSIB" not in by_id
+
+
+@pytest.fixture
+def copied(tmp_path: Path) -> Path:
+    shutil.copytree(ROOT / "validation/m7", tmp_path / "validation/m7")
+    shutil.copytree(ROOT / "contracts", tmp_path / "contracts")
+    return tmp_path
+
+
+def test_new_evidence_changes_status_without_manual_counts(copied: Path) -> None:
+    before, rows = module.build(copied)
+    candidate = next(
+        r["candidate_id"]
+        for r in rows["rows"]
+        if r["negative_label_recorded"] and r["universe_status"] == "PENDING"
+    )
+    path = copied / "validation/m7/promotion/historical-universe-ledger-21.json"
+    path.write_text(
+        json.dumps({"rows": [{"candidate_id": candidate, "historical_universe_eligible": False}]})
+    )
+    after, _ = module.build(copied)
+    assert after["negative_reserve"]["not_yet_excluded"] == 41
+    assert after["negative_reserve"]["pending"] == 32
+    assert before["source_sha256"] != after["source_sha256"]
+
+
+def test_conflicting_universe_determination_is_not_silently_overwritten(copied: Path) -> None:
+    path = copied / "validation/m7/promotion/historical-universe-ledger-21.json"
+    path.write_text(
+        json.dumps(
+            {
+                "rows": [
+                    {"candidate_id": "P3-2023-RAIN-MANTRA", "historical_universe_eligible": True}
+                ]
+            }
+        )
+    )
+    with pytest.raises(ValueError, match="Conflicting/repeated"):
+        module.build(copied)
+
+
+def test_manifest_presence_cannot_automatically_mark_complete(copied: Path) -> None:
+    (copied / "validation/m7/cohort-manifest.json").write_text("{}")
+    with pytest.raises(ValueError, match="authoritative frozen validation"):
+        module.build(copied)

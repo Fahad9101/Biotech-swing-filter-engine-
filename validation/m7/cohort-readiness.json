@@ -1,119 +1,157 @@
 {
-  "milestone": 7,
-  "rules_version": "BOE-1.0.0",
-  "m6_baseline_sha": "3060761a11f7bd85298f79efa8e262e5b8adedaf",
-  "scorecard": {
-    "path": "contracts/boe-scorecard.v1.0.0.json",
-    "expected_git_blob": "e9019ecb9975c21e62371c25dcd7d2b114de60e4",
-    "status": "FROZEN_UNCHANGED"
-  },
-  "reviewed_at": "2026-09-15",
-  "required_minimum_events": 120,
-  "authoritative_events_frozen": 0,
-  "authoritative_cohort_manifest_present": false,
-  "eligible_authoritative_registry_count": 0,
-  "real_four_snapshot_reconstructions_complete": 0,
-  "decision_locks_complete": 0,
-  "real_outcomes_complete": 0,
-  "holdout_2025_locked_events": 0,
-  "prefreeze_reserve_summary": {
-    "broad_acquisition_rows_before_targeted_replacements": 165,
-    "targeted_replacement_rows_added_after_attrition": 8,
-    "current_candidate_rows_including_targeted_replacements": 173,
-    "known_negative_candidate_rows_in_broad_reserve_before_final_deduplication": 43,
-    "all_frozen_numerical_strata_have_broad_reserve_capacity": true,
-    "note": "The broad 165-row acquisition reserve remains closed. Eight targeted rows were added only to repair documented single-asset reserve attrition; financing reserve repair used already-acquired events and added no new catalyst rows."
-  },
-  "source_acquisition_status": {
-    "regulatory_primary_batch_01": {"path":"validation/m7/acquisition/regulatory-primary-batch-01.json","candidate_count":33,"exact_first_public_timestamps_resolved":13,"date_only_candidates_pending_exact_timestamp":20,"cik_resolved_count":25,"proposed_stratum":"REGULATORY","status":"PRIMARY_SOURCE_CANDIDATE_BATCH_COMMITTED_NOT_FROZEN"},
-    "phase2_primary_batch_01": {"path":"validation/m7/acquisition/phase2-primary-batch-01.json","candidate_count":36,"exact_first_public_timestamps_resolved":21,"date_only_candidates_pending_exact_timestamp":15,"cik_resolved_count":10,"negative_event_candidates":13,"proposed_stratum":"PHASE_2_POC","status":"PRIMARY_SOURCE_CANDIDATE_BATCH_COMMITTED_NOT_FROZEN"},
-    "phase3_primary_batch_01": {"path":"validation/m7/acquisition/phase3-primary-batch-01.json","candidate_count":31,"exact_first_public_timestamps_resolved":27,"date_only_candidates_pending_exact_timestamp":4,"cik_resolved_count":2,"negative_event_candidates":17,"proposed_stratum":"PHASE_3_PIVOTAL","status":"PRIMARY_SOURCE_CANDIDATE_BATCH_COMMITTED_NOT_FROZEN"},
-    "early_clinical_primary_batch_01": {"path":"validation/m7/acquisition/early-clinical-primary-batch-01.json","candidate_count":31,"exact_first_public_timestamps_resolved":28,"date_only_candidates_pending_exact_timestamp":3,"cik_resolved_count":0,"negative_event_candidates":5,"proposed_stratum":"EARLY_CLINICAL","status":"PRIMARY_SOURCE_CANDIDATE_BATCH_COMMITTED_NOT_FROZEN"},
-    "conference_other_primary_batch_01": {"path":"validation/m7/acquisition/conference-other-primary-batch-01.json","candidate_count":26,"exact_first_public_timestamps_resolved":25,"date_only_candidates_pending_exact_timestamp":1,"cik_resolved_count":0,"negative_event_candidates":0,"proposed_stratum":"CONFERENCE_OTHER","status":"PRIMARY_SOURCE_CANDIDATE_BATCH_COMMITTED_NOT_FROZEN"},
-    "negative_phase2_supplement_01": {"path":"validation/m7/acquisition/negative-phase2-supplement-01.json","candidate_count":8,"negative_event_candidates":8,"exact_first_public_timestamps_resolved":8,"status":"PRIMARY_SOURCE_NEGATIVE_SUPPLEMENT_COMMITTED_NOT_FROZEN"},
-    "targeted_replacements": {
-      "paths": ["validation/m7/acquisition/targeted-single-asset-replacement-01.json","validation/m7/acquisition/targeted-single-asset-replacement-02.json","validation/m7/promotion/targeted-single-asset-replacement-03.json","validation/m7/acquisition/targeted-single-asset-replacement-04.json"],
-      "rows_added": 8,
-      "reason": "ONLY_TO_REPAIR_SINGLE_ASSET_RESERVE_ATTRITION",
-      "market_outcomes_used_for_selection": false
+  "audit_findings": [
+    {
+      "candidate_id": "P2-2025-ACTU-ELRAGLUSIB-TOPLINE",
+      "finding": "Existing pre-freeze ledger contains event-session liquidity sensitivity after a pre-market disclosure. Quarantine this sensitivity from selection and audit unblinding.",
+      "path": "validation/m7/promotion/historical-universe-ledger-16.json"
     }
-  },
-  "promotion_evidence_status": {
-    "duplicate_review": {"path":"validation/m7/promotion/duplicate-review-01.json","flagged_groups":6,"resolved_groups":6,"pending_groups":0,"duplicate_based_exclusions":0,"status":"RESOLVED_PREFREEZE_NO_MARKET_OUTCOMES"},
-    "financing_evidence": {
-      "source_paths": ["validation/m7/promotion/financing-evidence-ledger-01.json","validation/m7/promotion/financing-evidence-ledger-02.json","validation/m7/promotion/financing-evidence-ledger-03.json"],
-      "integration_path": "validation/m7/promotion/financing-promotion-integration-02.json",
-      "quota_requirement": 20,
-      "financing_qualified_candidate_count": 24,
-      "historical_universe_pass": 20,
-      "historical_universe_fail": 4,
-      "historical_universe_pending": 0,
-      "candidate_level_universe_stage_quota_met": true,
-      "candidate_level_universe_stage_buffer": 0,
-      "final_frozen_financing_quota_met": false,
-      "known_universe_exclusion_ids": ["NEG-P2-2018-MNLO-ATOMIK","EC-2020-SLS-GPS","EC-2020-CRNX-CRN01941","P2-2023-FWBI-SPAN"],
-      "latest_repair_ids": ["P3-2022-MDGL-MAESTRO-NASH","REG-2022-AMLX-RELYVRIO","EC-2024-TSHA-TSHA102"],
-      "status": "UNIVERSE_STAGE_RESERVE_AT_20_FINAL_FROZEN_QUOTA_NOT_YET_MET"
-    },
-    "single_asset_evidence": {
-      "primary_path": "validation/m7/promotion/single-asset-evidence-ledger-01.json",
-      "supplemental_paths": ["validation/m7/promotion/single-asset-evidence-ledger-02.json","validation/m7/promotion/single-asset-evidence-ledger-03.json","validation/m7/promotion/single-asset-evidence-ledger-04.json","validation/m7/promotion/single-asset-evidence-ledger-05.json","validation/m7/promotion/single-asset-evidence-ledger-06.json","validation/m7/promotion/single-asset-evidence-ledger-07.json","validation/m7/promotion/single-asset-evidence-ledger-08.json"],
-      "quota_requirement": 20,
-      "original_quota_candidates": 20,
-      "original_candidate_attrition_total": 8,
-      "original_universe_attrition_count": 7,
-      "original_single_asset_definition_attrition_count": 1,
-      "original_single_asset_definition_exclusion_ids": ["CO-2021-IMRA-IMR687ASH"],
-      "targeted_replacement_universe_survivors": 8,
-      "targeted_replacement_universe_failures": 2,
-      "historical_universe_pass_single_asset_reserve": 20,
-      "historical_universe_pending_single_asset_reserve": 0,
-      "known_not_yet_excluded_single_asset_reserve": 20,
-      "candidate_level_universe_stage_quota_met": true,
-      "latest_replacement_survivor": "P3-2022-MDGL-MAESTRO-NASH",
-      "status": "UNIVERSE_STAGE_RESERVE_AT_20_FINAL_FROZEN_QUOTA_NOT_YET_MET"
-    },
-    "first_public_availability": {
-      "latest_path": "validation/m7/promotion/first-public-availability-ledger-06.json",
-      "status": "ACTIVE_PREFREEZE_TIMESTAMP_RESOLUTION",
-      "known_universe_pass_timestamp_pending_ids": ["P2-2019-TGTX-UNITYNHL","P2-2024-GPCR-GSBR1290"],
-      "conference_availability_still_requires_row_level_resolution": true
-    },
-    "historical_security_identity": {
-      "original_summary_path": "validation/m7/promotion/historical-security-identity-summary-01.json",
-      "latest_batch_path": "validation/m7/promotion/historical-security-identity-ledger-11.json",
-      "status": "CURRENT_SINGLE_ASSET_AND_FINANCING_PRIORITY_UNIVERSE_EVIDENCE_ADVANCED; WIDER_173_ROW_POPULATION_NOT_COMPLETE"
-    },
-    "historical_universe_investability": {
-      "source_ledger_range": "validation/m7/promotion/historical-universe-ledger-01.json through historical-universe-ledger-19.json",
-      "evaluated": 44,
-      "eligible": 32,
-      "excluded": 12,
-      "latest_batch": {"path":"validation/m7/promotion/historical-universe-ledger-19.json","evaluated":15,"eligible":12,"excluded":3},
-      "status": "ACTIVE_PREFREEZE_PROMOTION_TESTING_NO_OUTCOMES"
-    },
-    "integration": {"path":"validation/m7/promotion/promotion-evidence-integration-01.json","master_promotion_status":"NO_EVENT_IS_FROZEN_OR_OUTCOME_ELIGIBLE_UNTIL_ALL_ROW_BLOCKERS_CLEAR","market_outcomes_inspected":false}
-  },
-  "historical_market_data_status": {
-    "status": "VIABLE_SOURCE_ACTIVE_PREFREEZE_INVESTABILITY_TESTING",
-    "provider": "Alpaca",
-    "feed": "SIP",
-    "bar_mode": "RAW_AS_TRADED",
-    "corporate_actions_separate": true,
-    "prefreeze_promotion_progress": {"historical_universe_events_evaluated":44,"historical_universe_events_passed":32,"historical_universe_events_failed":12},
-    "note": "No stock outcome, MFE, MAE or post-event performance field has been used for candidate selection. Same-day regular-session bars are used only where first-public availability is after the close."
-  },
-  "blocking_findings": [
-    "No authoritative eligible-registry.json or frozen 120-event cohort-manifest.json exists.",
-    "Single-asset and financing candidate reserves each have 20 historical-universe PASS events, but neither final frozen quota is met until all remaining timestamp/conference, point-in-time evidence, concentration, registry and cohort-freeze checks pass.",
-    "The 173-row candidate population has 44 historical-universe determinations so far: 32 pass and 12 fail. Enough additional outcome-blind promotion is still required to yield an eligible registry of at least 120 events.",
-    "The final frozen cohort must contain at least 40 verified negative clinical/regulatory events; the broad pre-freeze negative reserve is only 43 before promotion attrition, making negative-event survival the next hard quota risk.",
-    "Conference/other rows require earliest material abstract/poster/oral availability verification before promotion.",
-    "Point-in-time science, SEC capital structure, catalyst evidence, valuation/rNPV and technical evidence readiness are not yet complete across an eligible >=120-event registry.",
-    "No real BOE four-snapshot reconstruction, decision lock, historical outcome set or untouched 2025 holdout has been completed."
   ],
+  "authoritative_cohort_manifest_present": false,
+  "authoritative_events_frozen": 0,
+  "blocking_findings": [
+    "Universe PASS is not full eligibility; pending is not PASS.",
+    "No eligible registry, frozen cohort, four-snapshot set or decision locks exist.",
+    "Prior negative reserve of 43 omitted broad RAIN/MANTRA failure; only explicitly recorded negative labels count here.",
+    "Timestamp, trial identity, conference earliest availability, point-in-time science/capital structure, concentration and review gates remain unresolved.",
+    "Human confirmations and scientific reviews cannot be fabricated or backdated.",
+    "Existing source-side unblinding findings require audit before any leakage PASS."
+  ],
+  "candidate_counts": {
+    "fail": 12,
+    "not_yet_excluded": 167,
+    "pass": 38,
+    "pending": 129,
+    "total": 179
+  },
+  "decision_locks_complete": 0,
+  "eligible_authoritative_registry_count": 0,
+  "financing_reserve": {
+    "fail": 4,
+    "not_yet_excluded": 20,
+    "pass": 20,
+    "pending": 0,
+    "requirement": 20,
+    "total": 24
+  },
+  "generator": "python scripts/m7_reconcile_readiness.py",
+  "holdout_2025_locked_events": 0,
+  "m6_baseline_sha": "3060761a11f7bd85298f79efa8e262e5b8adedaf",
   "merge_ready": false,
-  "milestone_complete": false,
+  "milestone": 7,
   "milestone_8_allowed": false,
-  "required_action": "Do not reopen broad acquisition while existing reserve capacity remains. Prioritize the 43 pre-freeze negative candidates for exact first-public, identity and historical-universe survival because the frozen cohort requires >=40 negative events. In parallel resolve conference earliest-public availability and the remaining universe-pass timestamp blockers, then establish point-in-time evidence readiness across enough survivors to construct and hash an eligible >=120-event registry. Enforce concentration and period quotas and run zero-outcome-leakage audit before deterministic seed-100100 cohort freeze. Do not alter BOE-1.0.0, merge PR #5, inspect stock outcomes, or begin Milestone 8."
+  "milestone_complete": false,
+  "negative_reserve": {
+    "fail": 8,
+    "final_negative_quota_satisfied": false,
+    "maximum_provisional_buffer": 2,
+    "not_yet_excluded": 42,
+    "pass": 9,
+    "pending": 33,
+    "requirement": 40,
+    "total": 50
+  },
+  "real_four_snapshot_reconstructions_complete": 0,
+  "real_outcomes_complete": 0,
+  "reconciled_rows_sha256": "bcb5529a97f831fcc35c0d1416a6d4f889cbb4514fa79ad55e6ec0d6b2d45757",
+  "required_action": "Complete outcome-blind evidence promotion and review; do not freeze, inspect returns or merge based on reserve counts.",
+  "required_minimum_events": 120,
+  "rules_version": "BOE-1.0.0",
+  "single_asset_reserve": {
+    "fail": 9,
+    "not_yet_excluded": 21,
+    "pass": 20,
+    "pending": 1,
+    "requirement": 20,
+    "total": 30
+  },
+  "source_sha256": {
+    "contracts/boe-scorecard.v1.0.0.json": "11cffb776ffd6bbd943b1d23dfcf6541ab02fcbfec753f13d00a7f4acee8b569",
+    "validation/m7/acquisition/conference-other-primary-batch-01.json": "ac544b684d9c944899c0703c1be9624b293f3aae8c3049505a8dc04d1419f8fd",
+    "validation/m7/acquisition/early-clinical-primary-batch-01.json": "20959a41f9948e0cb5f5522d931f41b3244ee0a77208a8f274949333e9ff31c2",
+    "validation/m7/acquisition/negative-phase2-supplement-01.json": "fdd94c511634ce42374b0e90b94f54be49759ebe102dadb7cbbd64f6e2643aa9",
+    "validation/m7/acquisition/phase2-primary-batch-01.json": "3c9c97b0be51f54a94d0d8a44502fbe0ca365231b0acd463127e32ecfe6176e6",
+    "validation/m7/acquisition/phase3-primary-batch-01.json": "cb6fc69d6159a7b48662a9115723bc7dc20de2d207246ac75a5ab890bc65f384",
+    "validation/m7/acquisition/regulatory-primary-batch-01.json": "d315b56db9f1816280adde691ecc4265c8c39174c3a88ef312f12abf0d08ff45",
+    "validation/m7/acquisition/targeted-negative-supplement-02.json": "c92a851dc5cbde5484abf8362fbad63115aae94ca001dcc042963d193be9c72a",
+    "validation/m7/acquisition/targeted-single-asset-replacement-01.json": "5d508487e2e95d6a7e23f5c244b906326cdf544315295a7479ec7c332a6c9cc0",
+    "validation/m7/acquisition/targeted-single-asset-replacement-02.json": "d4b0ae6cd40759bbefa78a940db5f4ba2d34c4434aac766be777f31a5020b21c",
+    "validation/m7/acquisition/targeted-single-asset-replacement-04.json": "42a4a1d73d8e4d384d65dcfb36e793e5a5a0a5529b54268066f0eb821f66b7ce",
+    "validation/m7/promotion/event-normalization-ledger-01.json": "f2a724eb13811367ecefbea4f804798a9d5482efa3a977851c07d708bf705812",
+    "validation/m7/promotion/financing-evidence-ledger-01.json": "a8829c184803afbced970b1d290641800081bb13aaa35effbe146d0185c6b69c",
+    "validation/m7/promotion/financing-evidence-ledger-02.json": "9d5e37e21e9e3ea4d05cb803151f3d34d53c1a1a9fb2571ce6973d366c72cfd9",
+    "validation/m7/promotion/financing-evidence-ledger-03.json": "cdb95a491f33f607f7c0fbec05f62e9fcd66501ec1c2318ae8a2edf31f348bed",
+    "validation/m7/promotion/first-public-availability-ledger-01.json": "ba0702db89c080f923433995f83fc16e2f2f7606ea0b44a564fcdc07202f4a89",
+    "validation/m7/promotion/first-public-availability-ledger-02.json": "2ec953f839b8f1852db9f9232f243c5daa3aa73f69e975d930b6bef6b5da60c2",
+    "validation/m7/promotion/first-public-availability-ledger-03.json": "1c1f232ac587c8eff4e24fd32ecc5cf3c3e6641a3c8010fe3745a6fdaaf4ea46",
+    "validation/m7/promotion/first-public-availability-ledger-04.json": "906fbfdc3c08091bd1070a7d1017aca5eef089ad84455b17abdb389514ece220",
+    "validation/m7/promotion/first-public-availability-ledger-05.json": "5625c90bdd3000c4ec9a43c81f5f1bd7cf38943f81b4a11d2ed474ab7bfead6e",
+    "validation/m7/promotion/first-public-availability-ledger-06.json": "3181462a4ca54917ec81f268f1a22fe9743656f36636071c53112b4c284b7355",
+    "validation/m7/promotion/historical-universe-ledger-01.json": "104946c8a3439ae08d5be2da4540b473bf87b622055b27293098c727435438b8",
+    "validation/m7/promotion/historical-universe-ledger-02.json": "a1205aab631730fcf0427369bf1c2d63175b3c9706c32326cd8f01d3a9b30c0e",
+    "validation/m7/promotion/historical-universe-ledger-03.json": "fe4df8d08e4de147edfaba1a526295d5e75d84babf3f066265b0664cbcbe0a62",
+    "validation/m7/promotion/historical-universe-ledger-04.json": "76e0e3fb6dfbfefbc9cf97765b7b11d2ada13d1687cd507c4d53a3b3a8631d4a",
+    "validation/m7/promotion/historical-universe-ledger-05.json": "00e2aa891a7c7f3b6282425b6b64b9f6dc57a623b90850f26e2f2445ef900230",
+    "validation/m7/promotion/historical-universe-ledger-06.json": "108b69435dfe888d029f5fc2dea656a459e8ce13512cfd8ec51f77835745a2f7",
+    "validation/m7/promotion/historical-universe-ledger-07.json": "24d2467c5a513e9789f6d1d39ea7e300f91f07005625e500a4ae8d8098c0aa51",
+    "validation/m7/promotion/historical-universe-ledger-08.json": "4630d0b894e8a89130e84bb7edb32bf5e22b0cc1887886483cac53a60b2be433",
+    "validation/m7/promotion/historical-universe-ledger-09.json": "0e20ae1b13fc0bb417a1659fe818f18d7622afded90d9e7c3e0f547549e6fb06",
+    "validation/m7/promotion/historical-universe-ledger-10.json": "9252bbff6e72fadce95cdf847b1006d85f3256e2b25168a6f0dab147059dc85a",
+    "validation/m7/promotion/historical-universe-ledger-11.json": "d10196aa564341705eb2ac63963dc600d86628dee09988dbcf46c53652166981",
+    "validation/m7/promotion/historical-universe-ledger-12.json": "0f80ac31576bf721cd896235646a780a25466de191406763e39b74fecd71af02",
+    "validation/m7/promotion/historical-universe-ledger-13.json": "792ca88f990dba773a94c5380831becabb546e0887fdf5ce5491ae922bbfae20",
+    "validation/m7/promotion/historical-universe-ledger-14.json": "11211c48af9affc964a02ff7654deefce788e6c9f65e5f4e30e9363182f3c23c",
+    "validation/m7/promotion/historical-universe-ledger-15.json": "be2b3b1e6f63dc2620362f34ee0c39e8a48124aaceab8661075e8ae45ba0dda4",
+    "validation/m7/promotion/historical-universe-ledger-16.json": "176b1cc1b908dd33ca0bcbad0404ef95c39707a7a306848b0eceecbbf4c10329",
+    "validation/m7/promotion/historical-universe-ledger-17.json": "beda6c330a32df9313f249da47068e2448a11f75915303e41d2279800ce644c5",
+    "validation/m7/promotion/historical-universe-ledger-18.json": "27827900198888a5047b696863e7f0fee12f650899c5a28803e707904e5c37f0",
+    "validation/m7/promotion/historical-universe-ledger-19.json": "62ec08629a6afacdc43a9b784f2527b9222d902c614105ce2e2cb33b5e5c53e9",
+    "validation/m7/promotion/historical-universe-ledger-20.json": "295c7f1f35e4022faad9e6ebf278c7c7ca8090f9c51ccd552dabc5e2744671a4",
+    "validation/m7/promotion/negative-reserve-integration-01.json": "6c363ca516f872d8721b6fc9d2bb95197956f4db63e4c926f79860285f6e8604",
+    "validation/m7/promotion/single-asset-evidence-ledger-01.json": "abae416444a4d37f97861036d4a78a010c234fef283278d83a351da2f36d3fbd",
+    "validation/m7/promotion/single-asset-evidence-ledger-02.json": "40802ef22876d8be63d1dcb2fe30799961b8163f6000d1ea0e4cab862fb2917e",
+    "validation/m7/promotion/single-asset-evidence-ledger-03.json": "e3405189d65b8dca3a059c3e860410afe3ee1f235cce73beb1ef34f8f1853945",
+    "validation/m7/promotion/single-asset-evidence-ledger-04.json": "8bf62942d01a29650c0076b81a024ac3a171829ff940f665cdf0e23230ecb166",
+    "validation/m7/promotion/single-asset-evidence-ledger-05.json": "1e437f3ccffc3c549c5017a8466d3d411b203537079218a7739c29ba915f6953",
+    "validation/m7/promotion/single-asset-evidence-ledger-06.json": "afe090631b7084fa155ca58f5e034121bffc63b809162127cb4df8d0f083ae92",
+    "validation/m7/promotion/single-asset-evidence-ledger-07.json": "2444d201c38fb7d074b70e243022cc99861513a4c1eb0122eb895bd9adb4e77b",
+    "validation/m7/promotion/single-asset-evidence-ledger-08.json": "b8e314ba17733bc368665a56b7bd902b57183dfa0d76708e5947c13208e29e17",
+    "validation/m7/promotion/targeted-single-asset-replacement-03.json": "7037bf6d01938da4f42fd18b84cf66e680f93f84f44db7340da16226a7661956"
+  },
+  "strata": {
+    "CONFERENCE_OTHER": {
+      "fail": 0,
+      "not_yet_excluded": 26,
+      "pass": 3,
+      "pending": 23,
+      "total": 26
+    },
+    "EARLY_CLINICAL": {
+      "fail": 2,
+      "not_yet_excluded": 29,
+      "pass": 3,
+      "pending": 26,
+      "total": 31
+    },
+    "PHASE_2_POC": {
+      "fail": 7,
+      "not_yet_excluded": 42,
+      "pass": 13,
+      "pending": 29,
+      "total": 49
+    },
+    "PHASE_3_PIVOTAL": {
+      "fail": 2,
+      "not_yet_excluded": 32,
+      "pass": 7,
+      "pending": 25,
+      "total": 34
+    },
+    "REGULATORY": {
+      "fail": 1,
+      "not_yet_excluded": 38,
+      "pass": 12,
+      "pending": 26,
+      "total": 39
+    }
+  }
 }
