@@ -1,13 +1,39 @@
 {
   "cohort_frozen": false,
   "format_version": "1.0",
-  "ledger_sha256": "be1c81eb41da9c7a2c774d5bdc48b76a3429d56bac3fe8fd5eaa0e8e7d8c0e91",
+  "ledger_sha256": "d3caf3ba376df42d6781ec781fe3d39feebc44ed5b78da9e7f310b26d67e2f4c",
   "market_outcome_fields_permitted": false,
   "milestone": 7,
   "negative_candidate_count": 43,
-  "potential_duplicate_candidate_count": 0,
-  "potential_duplicate_group_count": 0,
-  "potential_duplicate_groups": {},
+  "potential_duplicate_candidate_count": 13,
+  "potential_duplicate_group_count": 6,
+  "potential_duplicate_groups": {
+    "DUP-001": [
+      "REG-2020-IMMU-TRODELVY",
+      "P3-2020-IMMU-ASCENT"
+    ],
+    "DUP-002": [
+      "P2-2019-AXSM-AXS05-SMOKING",
+      "P3-2019-AXSM-GEMINI"
+    ],
+    "DUP-003": [
+      "P3-2023-GMAB-INNOVATV301",
+      "CO-2024-GMAB-TVASCO"
+    ],
+    "DUP-004": [
+      "P3-2024-NAMS-BROOKLYN",
+      "P3-2024-NAMS-BROADWAY"
+    ],
+    "DUP-005": [
+      "P3-2024-SAVA-RETHINK",
+      "P3-2025-SAVA-REFOCUS"
+    ],
+    "DUP-006": [
+      "CO-2023-MOLN-MP0533ASH",
+      "CO-2024-MOLN-MP0533ASH",
+      "CO-2025-MOLN-MP0533ASH"
+    ]
+  },
   "promotion_counts": {
     "eligible": 0,
     "excluded": 0,
@@ -288,8 +314,8 @@
       "cik": "0000722830",
       "clinical_phase": "REGULATORY_DECISION",
       "company": "Immunomedics, Inc.",
-      "cross_stratum_duplicate_result": "NO_POTENTIAL_DUPLICATE_FOUND",
-      "duplicate_group_id": null,
+      "cross_stratum_duplicate_result": "PENDING_REVIEW",
+      "duplicate_group_id": "DUP-001",
       "exchange": null,
       "exclusion_reason": null,
       "financing_t_minus_90_to_t_plus_30": null,
@@ -318,7 +344,8 @@
         "RESOLVE_NEGATIVE_EVENT_STATUS",
         "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
         "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
-        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE",
+        "RESOLVE_CROSS_STRATUM_DUPLICATE"
       ],
       "verification_provenance": "DETERMINISTIC_NORMALIZATION_NO_MARKET_OUTCOMES"
     },
@@ -1693,8 +1720,8 @@
       "cik": null,
       "clinical_phase": "PHASE_2",
       "company": "Axsome Therapeutics, Inc.",
-      "cross_stratum_duplicate_result": "NO_POTENTIAL_DUPLICATE_FOUND",
-      "duplicate_group_id": null,
+      "cross_stratum_duplicate_result": "PENDING_REVIEW",
+      "duplicate_group_id": "DUP-002",
       "exchange": null,
       "exclusion_reason": null,
       "financing_t_minus_90_to_t_plus_30": null,
@@ -1724,7 +1751,8 @@
         "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
         "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
         "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
-        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE",
+        "RESOLVE_CROSS_STRATUM_DUPLICATE"
       ],
       "verification_provenance": "DETERMINISTIC_NORMALIZATION_NO_MARKET_OUTCOMES"
     },
@@ -3238,8 +3266,8 @@
       "cik": null,
       "clinical_phase": "PHASE_3",
       "company": "Axsome Therapeutics, Inc.",
-      "cross_stratum_duplicate_result": "NO_POTENTIAL_DUPLICATE_FOUND",
-      "duplicate_group_id": null,
+      "cross_stratum_duplicate_result": "PENDING_REVIEW",
+      "duplicate_group_id": "DUP-002",
       "exchange": null,
       "exclusion_reason": null,
       "financing_t_minus_90_to_t_plus_30": null,
@@ -3269,7 +3297,8 @@
         "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
         "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
         "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
-        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE",
+        "RESOLVE_CROSS_STRATUM_DUPLICATE"
       ],
       "verification_provenance": "DETERMINISTIC_NORMALIZATION_NO_MARKET_OUTCOMES"
     },
@@ -3326,8 +3355,8 @@
       "cik": "0000722830",
       "clinical_phase": "PHASE_3",
       "company": "Immunomedics, Inc.",
-      "cross_stratum_duplicate_result": "NO_POTENTIAL_DUPLICATE_FOUND",
-      "duplicate_group_id": null,
+      "cross_stratum_duplicate_result": "PENDING_REVIEW",
+      "duplicate_group_id": "DUP-001",
       "exchange": null,
       "exclusion_reason": null,
       "financing_t_minus_90_to_t_plus_30": null,
@@ -3356,7 +3385,8 @@
         "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
         "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
         "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
-        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE",
+        "RESOLVE_CROSS_STRATUM_DUPLICATE"
       ],
       "verification_provenance": "DETERMINISTIC_NORMALIZATION_NO_MARKET_OUTCOMES"
     },
@@ -3900,8 +3930,8 @@
       "cik": null,
       "clinical_phase": "PHASE_3",
       "company": "Genmab A/S",
-      "cross_stratum_duplicate_result": "NO_POTENTIAL_DUPLICATE_FOUND",
-      "duplicate_group_id": null,
+      "cross_stratum_duplicate_result": "PENDING_REVIEW",
+      "duplicate_group_id": "DUP-003",
       "exchange": null,
       "exclusion_reason": null,
       "financing_t_minus_90_to_t_plus_30": null,
@@ -3932,7 +3962,8 @@
         "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
         "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
         "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE",
-        "RESOLVE_ECONOMIC_SECURITY_ATTRIBUTION"
+        "RESOLVE_ECONOMIC_SECURITY_ATTRIBUTION",
+        "RESOLVE_CROSS_STRATUM_DUPLICATE"
       ],
       "verification_provenance": "DETERMINISTIC_NORMALIZATION_NO_MARKET_OUTCOMES"
     },
@@ -4033,8 +4064,8 @@
       "cik": null,
       "clinical_phase": "PHASE_3",
       "company": "NewAmsterdam Pharma Company N.V.",
-      "cross_stratum_duplicate_result": "NO_POTENTIAL_DUPLICATE_FOUND",
-      "duplicate_group_id": null,
+      "cross_stratum_duplicate_result": "PENDING_REVIEW",
+      "duplicate_group_id": "DUP-004",
       "exchange": null,
       "exclusion_reason": null,
       "financing_t_minus_90_to_t_plus_30": null,
@@ -4065,7 +4096,8 @@
         "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
         "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
         "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
-        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE",
+        "RESOLVE_CROSS_STRATUM_DUPLICATE"
       ],
       "verification_provenance": "DETERMINISTIC_NORMALIZATION_NO_MARKET_OUTCOMES"
     },
@@ -4078,8 +4110,8 @@
       "cik": null,
       "clinical_phase": "PHASE_3",
       "company": "NewAmsterdam Pharma Company N.V.",
-      "cross_stratum_duplicate_result": "NO_POTENTIAL_DUPLICATE_FOUND",
-      "duplicate_group_id": null,
+      "cross_stratum_duplicate_result": "PENDING_REVIEW",
+      "duplicate_group_id": "DUP-004",
       "exchange": null,
       "exclusion_reason": null,
       "financing_t_minus_90_to_t_plus_30": null,
@@ -4109,7 +4141,8 @@
         "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
         "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
         "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
-        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE",
+        "RESOLVE_CROSS_STRATUM_DUPLICATE"
       ],
       "verification_provenance": "DETERMINISTIC_NORMALIZATION_NO_MARKET_OUTCOMES"
     },
@@ -4122,8 +4155,8 @@
       "cik": null,
       "clinical_phase": "PHASE_3",
       "company": "Cassava Sciences, Inc.",
-      "cross_stratum_duplicate_result": "NO_POTENTIAL_DUPLICATE_FOUND",
-      "duplicate_group_id": null,
+      "cross_stratum_duplicate_result": "PENDING_REVIEW",
+      "duplicate_group_id": "DUP-005",
       "exchange": null,
       "exclusion_reason": null,
       "financing_t_minus_90_to_t_plus_30": null,
@@ -4153,7 +4186,8 @@
         "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
         "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
         "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
-        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE",
+        "RESOLVE_CROSS_STRATUM_DUPLICATE"
       ],
       "verification_provenance": "DETERMINISTIC_NORMALIZATION_NO_MARKET_OUTCOMES"
     },
@@ -4210,8 +4244,8 @@
       "cik": null,
       "clinical_phase": "PHASE_3",
       "company": "Cassava Sciences, Inc.",
-      "cross_stratum_duplicate_result": "NO_POTENTIAL_DUPLICATE_FOUND",
-      "duplicate_group_id": null,
+      "cross_stratum_duplicate_result": "PENDING_REVIEW",
+      "duplicate_group_id": "DUP-005",
       "exchange": null,
       "exclusion_reason": null,
       "financing_t_minus_90_to_t_plus_30": null,
@@ -4241,7 +4275,8 @@
         "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
         "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
         "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
-        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE",
+        "RESOLVE_CROSS_STRATUM_DUPLICATE"
       ],
       "verification_provenance": "DETERMINISTIC_NORMALIZATION_NO_MARKET_OUTCOMES"
     },
@@ -6518,8 +6553,8 @@
       "cik": null,
       "clinical_phase": "PHASE_1_2",
       "company": "Molecular Partners AG",
-      "cross_stratum_duplicate_result": "NO_POTENTIAL_DUPLICATE_FOUND",
-      "duplicate_group_id": null,
+      "cross_stratum_duplicate_result": "PENDING_REVIEW",
+      "duplicate_group_id": "DUP-006",
       "exchange": null,
       "exclusion_reason": null,
       "financing_t_minus_90_to_t_plus_30": null,
@@ -6550,7 +6585,8 @@
         "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
         "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
         "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
-        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE",
+        "RESOLVE_CROSS_STRATUM_DUPLICATE"
       ],
       "verification_provenance": "DETERMINISTIC_NORMALIZATION_NO_MARKET_OUTCOMES"
     },
@@ -6608,8 +6644,8 @@
       "cik": null,
       "clinical_phase": "PHASE_2",
       "company": "Genmab A/S",
-      "cross_stratum_duplicate_result": "NO_POTENTIAL_DUPLICATE_FOUND",
-      "duplicate_group_id": null,
+      "cross_stratum_duplicate_result": "PENDING_REVIEW",
+      "duplicate_group_id": "DUP-003",
       "exchange": null,
       "exclusion_reason": null,
       "financing_t_minus_90_to_t_plus_30": null,
@@ -6640,7 +6676,8 @@
         "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
         "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
         "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
-        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE",
+        "RESOLVE_CROSS_STRATUM_DUPLICATE"
       ],
       "verification_provenance": "DETERMINISTIC_NORMALIZATION_NO_MARKET_OUTCOMES"
     },
@@ -6698,8 +6735,8 @@
       "cik": null,
       "clinical_phase": "PHASE_1_2",
       "company": "Molecular Partners AG",
-      "cross_stratum_duplicate_result": "NO_POTENTIAL_DUPLICATE_FOUND",
-      "duplicate_group_id": null,
+      "cross_stratum_duplicate_result": "PENDING_REVIEW",
+      "duplicate_group_id": "DUP-006",
       "exchange": null,
       "exclusion_reason": null,
       "financing_t_minus_90_to_t_plus_30": null,
@@ -6730,7 +6767,8 @@
         "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
         "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
         "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
-        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE",
+        "RESOLVE_CROSS_STRATUM_DUPLICATE"
       ],
       "verification_provenance": "DETERMINISTIC_NORMALIZATION_NO_MARKET_OUTCOMES"
     },
@@ -6878,8 +6916,8 @@
       "cik": null,
       "clinical_phase": "PHASE_1_2",
       "company": "Molecular Partners AG",
-      "cross_stratum_duplicate_result": "NO_POTENTIAL_DUPLICATE_FOUND",
-      "duplicate_group_id": null,
+      "cross_stratum_duplicate_result": "PENDING_REVIEW",
+      "duplicate_group_id": "DUP-006",
       "exchange": null,
       "exclusion_reason": null,
       "financing_t_minus_90_to_t_plus_30": null,
@@ -6910,7 +6948,8 @@
         "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
         "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
         "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
-        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE",
+        "RESOLVE_CROSS_STRATUM_DUPLICATE"
       ],
       "verification_provenance": "DETERMINISTIC_NORMALIZATION_NO_MARKET_OUTCOMES"
     },
