@@ -10,20 +10,52 @@
     "validation/m7/promotion/historical-security-identity-ledger-01.json",
     "validation/m7/promotion/historical-security-identity-ledger-02.json",
     "validation/m7/promotion/historical-security-identity-ledger-03.json",
-    "validation/m7/promotion/historical-security-identity-ledger-04.json"
+    "validation/m7/promotion/historical-security-identity-ledger-04.json",
+    "validation/m7/promotion/historical-security-identity-ledger-05.json",
+    "validation/m7/promotion/historical-security-identity-ledger-06.json"
   ],
-  "single_asset_quota_reserve": {
+  "original_single_asset_quota_reserve": {
     "candidate_count": 20,
     "identity_confirmed": 20,
     "us_exchange_listing_confirmed": 20,
-    "identity_pending": 0,
-    "historical_boe_universe_eligible_confirmed": 0,
-    "historical_boe_universe_pending": 20
+    "identity_pending": 0
+  },
+  "targeted_replacement_identity": {
+    "candidate_count": 2,
+    "candidate_ids": [
+      "P3-2023-RAIN-MANTRA",
+      "P2-2021-GHRS-GH001"
+    ],
+    "identity_confirmed": 2,
+    "us_exchange_listing_confirmed": 2,
+    "identity_pending": 0
+  },
+  "combined_identity_and_completed_universe_status": {
+    "candidate_count": 22,
+    "identity_confirmed": 22,
+    "us_exchange_listing_confirmed": 22,
+    "historical_universe_evaluated": 7,
+    "historical_universe_eligible_confirmed": 5,
+    "historical_universe_excluded": 2,
+    "historical_universe_pending": 15,
+    "known_not_yet_excluded_single_asset_reserve": 20,
+    "eligible_candidate_ids": [
+      "P2-2022-CINC-BRIGHTN",
+      "P2-2022-AKRO-HARMONY",
+      "P2-2023-ETNB-ENLIVEN",
+      "P2-2023-MLTX-MIRA",
+      "P2-2021-GHRS-GH001"
+    ],
+    "excluded_candidate_ids": [
+      "NEG-P2-2018-MNLO-ATOMIK",
+      "P3-2023-RAIN-MANTRA"
+    ],
+    "boundary_note": "Known-not-yet-excluded is not frozen eligibility. Fifteen identity-confirmed candidates still require historical-universe testing and all candidates still require the remaining M7 promotion checks."
   },
   "special_cases": [
     {
       "candidate_id": "P2-2023-AEON-ABP450",
-      "issue": "The event security traded on NYSE American after the July 2023 business combination, not Nasdaq. Full frozen BOE-universe admissibility must be checked before promotion."
+      "issue": "The event security traded on NYSE American after the July 2023 business combination, not Nasdaq. NYSE American is allowed by the frozen BOE source-population contract, but all investability floors still must be verified before promotion."
     },
     {
       "candidate_id": "P3-2025-OPT-COAST",
@@ -40,7 +72,11 @@
     {
       "candidate_id": "P2-2023-PRDS-POMOTRELVIR",
       "issue": "The public parent/security arose from the earlier business combination; PRDS identity is confirmed pre-event and must not be confused with Old Pardes subsidiary identity."
+    },
+    {
+      "candidate_id": "P2-2021-GHRS-GH001",
+      "issue": "GHRS is a foreign-private-issuer ordinary share directly listed on Nasdaq, not an ADR. The pre-IPO corporate reorganization and 2.50-for-1 share consolidation occurred before listed trading and must not be treated as a post-listing continuity break."
     }
   ],
-  "promotion_boundary": "Security identity and listing proof are complete for the 20 single-asset quota reserve events, but no row is promoted or marked historical_universe_eligible solely from this summary."
+  "promotion_boundary": "Security identity/listing proof is complete for the original 20 single-asset quota reserve events plus two targeted replacements. Historical-universe testing has resolved seven of those 22: five pass and two fail. No row is promoted into the authoritative registry from identity or investability evidence alone."
 }
