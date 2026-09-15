@@ -1,0 +1,324 @@
+{
+  "confirmed_qualifying_count": 20,
+  "entries": [
+    {
+      "candidate_id": "EC-2020-SLS-GPS",
+      "event_date": "2020-12-21",
+      "evidence_summary": "Issuer reported a December 13 securities purchase agreement for 2.32 million common shares at $7.00 per share, approximately $16.2 million gross; closing December 16.",
+      "financing_date": "2020-12-13",
+      "financing_type": "REGISTERED_DIRECT_OFFERING",
+      "gross_proceeds_usd": 16200000,
+      "relative_day": -8,
+      "shares_or_units": "2,320,000 common shares",
+      "source_urls": [
+        "https://ir.sellaslifesciences.com/news/News-Details/2020/SELLAS-Strengthens-Year-End-Balance-Sheet-with-Addition-of-Approximately-30.5-Million/default.aspx"
+      ],
+      "status": "QUALIFIES",
+      "ticker": "SLS"
+    },
+    {
+      "candidate_id": "REG-2023-TVTX-FILSPARI",
+      "event_date": "2023-02-17",
+      "evidence_summary": "Travere announced a public offering ten days after the event and later reported completion with gross proceeds of approximately $230 million.",
+      "financing_date": "2023-02-27",
+      "financing_type": "UNDERWRITTEN_PUBLIC_OFFERING",
+      "gross_proceeds_usd": 230000000,
+      "relative_day": 10,
+      "shares_or_units": "common stock and pre-funded warrants",
+      "source_urls": [
+        "https://travere.com/news/travere-therapeutics-announces-proposed-public-offering-of-common-stock/",
+        "https://ir.travere.com/press-releases/news-details/2023/Travere-Therapeutics-Announces-Completion-of-Public-Offering-of-Common-Stock-and-Pre-Funded-Warrants-and-Exercise-in-Full-of-Underwriters-Option-to-Purchase-Additional-Shares-03-03-2023/default.aspx"
+      ],
+      "status": "QUALIFIES",
+      "ticker": "TVTX"
+    },
+    {
+      "candidate_id": "EC-2020-CRNX-CRN01941",
+      "event_date": "2020-04-06",
+      "evidence_summary": "Crinetics entered the underwriting agreement eight days after the event; the offering subsequently closed including the underwriters' option for approximately $115.1 million gross.",
+      "financing_date": "2020-04-14",
+      "financing_type": "UNDERWRITTEN_PUBLIC_OFFERING",
+      "gross_proceeds_usd": 115100000,
+      "relative_day": 8,
+      "shares_or_units": "7,150,000 base common shares plus option exercised",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1658247/000119312520108092/d866892d8k.htm"
+      ],
+      "status": "QUALIFIES",
+      "ticker": "CRNX"
+    },
+    {
+      "candidate_id": "REG-2024-IOVA-AMTAGVI",
+      "event_date": "2024-02-16",
+      "evidence_summary": "Iovance priced an underwritten common-stock offering four days after the event, with approximately $211 million gross proceeds.",
+      "financing_date": "2024-02-20",
+      "financing_type": "UNDERWRITTEN_PUBLIC_OFFERING",
+      "gross_proceeds_usd": 211000000,
+      "relative_day": 4,
+      "shares_or_units": "23,014,000 common shares",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1425205/000110465924025617/tm246746d1_ex99-1.htm"
+      ],
+      "status": "QUALIFIES",
+      "ticker": "IOVA"
+    },
+    {
+      "candidate_id": "CO-2019-CNST-MANIFEST",
+      "event_date": "2019-12-09",
+      "evidence_summary": "Constellation announced an underwritten public offering on the event date; pricing followed December 10 and closing December 13.",
+      "financing_date": "2019-12-09",
+      "financing_type": "UNDERWRITTEN_PUBLIC_OFFERING",
+      "gross_proceeds_usd": null,
+      "relative_day": 0,
+      "shares_or_units": "common stock",
+      "source_urls": [
+        "https://www.globenewswire.com/news-release/2019/12/09/1958219/0/en/Constellation-Pharmaceuticals-Announces-Proposed-Public-Offering-of-Common-Stock.html"
+      ],
+      "status": "QUALIFIES",
+      "ticker": "CNST"
+    },
+    {
+      "candidate_id": "CO-2020-ONCT-CIRLLASH",
+      "event_date": "2020-12-07",
+      "evidence_summary": "Oncternal closed an $86.2 million bought-deal equity offering seven days after the event.",
+      "financing_date": "2020-12-14",
+      "financing_type": "BOUGHT_DEAL_PUBLIC_OFFERING",
+      "gross_proceeds_usd": 86200000,
+      "relative_day": 7,
+      "shares_or_units": "19,161,667 common shares including option",
+      "source_urls": [
+        "https://www.globenewswire.com/news-release/2020/12/14/2144873/0/en/Oncternal-Therapeutics-Announces-Closing-of-86-2-Million-Bought-Deal-and-Full-Exercise-of-Option-to-Purchase-Additional-Shares.html"
+      ],
+      "status": "QUALIFIES",
+      "ticker": "ONCT"
+    },
+    {
+      "candidate_id": "P2-2019-RETA-MOXIE",
+      "event_date": "2019-10-14",
+      "evidence_summary": "Reata entered an underwriting agreement exactly T+30 for 2.4 million common shares at $183 per share, before any option exercise.",
+      "financing_date": "2019-11-13",
+      "financing_type": "UNDERWRITTEN_PUBLIC_OFFERING",
+      "gross_proceeds_usd": 439200000,
+      "relative_day": 30,
+      "shares_or_units": "2,400,000 common shares plus 360,000-share option",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1358762/000119312519292453/d835716d8k.htm"
+      ],
+      "status": "QUALIFIES",
+      "ticker": "RETA"
+    },
+    {
+      "candidate_id": "EC-2021-RUBY-RTX240",
+      "event_date": "2021-03-15",
+      "evidence_summary": "Rubius commenced a $150 million underwritten common-stock offering on the event date.",
+      "financing_date": "2021-03-15",
+      "financing_type": "UNDERWRITTEN_PUBLIC_OFFERING",
+      "gross_proceeds_usd": 150000000,
+      "relative_day": 0,
+      "shares_or_units": "common stock",
+      "source_urls": [
+        "https://www.globenewswire.com/news-release/2021/03/15/2193194/0/en/Rubius-Therapeutics-Announces-Proposed-Public-Offering-of-Common-Stock.html"
+      ],
+      "status": "QUALIFIES",
+      "ticker": "RUBY"
+    },
+    {
+      "candidate_id": "NEG-P2-2018-MNLO-ATOMIK",
+      "event_date": "2018-04-08",
+      "evidence_summary": "Menlo completed its IPO 69 days before the event, an issuer equity financing inside the frozen T-90 to T+30 window.",
+      "financing_date": "2018-01-29",
+      "financing_type": "INITIAL_PUBLIC_OFFERING",
+      "gross_proceeds_usd": 136900000,
+      "relative_day": -69,
+      "shares_or_units": "8,050,000 common shares including option",
+      "source_urls": [
+        "https://www.globenewswire.com/news-release/2018/01/29/1313681/0/en/Menlo-Therapeutics-Inc-Announces-Closing-of-Initial-Public-Offering.html"
+      ],
+      "status": "QUALIFIES",
+      "ticker": "MNLO"
+    },
+    {
+      "candidate_id": "REG-2021-ASND-SKYTROFA",
+      "event_date": "2021-08-25",
+      "evidence_summary": "Ascendis priced 2.5 million ADSs at $160 each seven days after the event, approximately $400 million gross.",
+      "financing_date": "2021-09-01",
+      "financing_type": "UNDERWRITTEN_ADS_OFFERING",
+      "gross_proceeds_usd": 400000000,
+      "relative_day": 7,
+      "shares_or_units": "2,500,000 ADSs",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1612042/000119312521264544/d158006d424b5.htm"
+      ],
+      "status": "QUALIFIES",
+      "ticker": "ASND"
+    },
+    {
+      "candidate_id": "EC-2020-CRSP-CTX001",
+      "event_date": "2020-06-12",
+      "evidence_summary": "CRISPR Therapeutics commenced an underwritten offering 17 days after the event; pricing was 6,428,572 shares at $70 per share.",
+      "financing_date": "2020-06-29",
+      "financing_type": "UNDERWRITTEN_PUBLIC_OFFERING",
+      "gross_proceeds_usd": 450000040,
+      "relative_day": 17,
+      "shares_or_units": "6,428,572 common shares",
+      "source_urls": [
+        "https://ir.crisprtx.com/news-releases/news-release-details/crispr-therapeutics-announces-proposed-offering-common-shares/"
+      ],
+      "status": "QUALIFIES",
+      "ticker": "CRSP"
+    },
+    {
+      "candidate_id": "P2-2023-ETNB-ENLIVEN",
+      "event_date": "2023-03-22",
+      "evidence_summary": "89bio commenced an underwritten offering on the event date and priced an upsized $275 million offering two days later.",
+      "financing_date": "2023-03-22",
+      "financing_type": "UNDERWRITTEN_PUBLIC_OFFERING",
+      "gross_proceeds_usd": 275000000,
+      "relative_day": 0,
+      "shares_or_units": "16,923,077 common shares at pricing",
+      "source_urls": [
+        "https://ir.89bio.com/news-releases/news-release-details/89bio-inc-announces-proposed-underwritten-public-offering-0/",
+        "https://ir.89bio.com/news-releases/news-release-details/89bio-inc-announces-upsized-pricing-275-million-public-offering"
+      ],
+      "status": "QUALIFIES",
+      "ticker": "ETNB"
+    },
+    {
+      "candidate_id": "P2-2019-TGTX-UNITYNHL",
+      "event_date": "2019-02-28",
+      "evidence_summary": "TG Therapeutics reported an equity offering immediately after the event, with expected gross proceeds of approximately $25.2 million.",
+      "financing_date": "2019-03-01",
+      "financing_type": "UNDERWRITTEN_PUBLIC_OFFERING",
+      "gross_proceeds_usd": 25200000,
+      "relative_day": 1,
+      "shares_or_units": "approximately 4.1 million common shares plus option",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1001316/000165495419002189/v030119_10k.htm"
+      ],
+      "status": "QUALIFIES",
+      "ticker": "TGTX"
+    },
+    {
+      "candidate_id": "P2-2022-AKRO-HARMONY",
+      "event_date": "2022-09-13",
+      "evidence_summary": "Akero entered an underwriting agreement one day after the event and later closed 8,846,154 shares at $26 per share.",
+      "financing_date": "2022-09-14",
+      "financing_type": "UNDERWRITTEN_PUBLIC_OFFERING",
+      "gross_proceeds_usd": 230000004,
+      "relative_day": 1,
+      "shares_or_units": "8,846,154 common shares including option",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1744659/000119312522246357/d386189d8k.htm"
+      ],
+      "status": "QUALIFIES",
+      "ticker": "AKRO"
+    },
+    {
+      "candidate_id": "P2-2022-CINC-BRIGHTN",
+      "event_date": "2022-08-08",
+      "evidence_summary": "CinCor closed an upsized public offering seven days after the event; later reporting cited approximately $242.9 million net proceeds.",
+      "financing_date": "2022-08-15",
+      "financing_type": "UNDERWRITTEN_PUBLIC_OFFERING",
+      "gross_proceeds_usd": null,
+      "relative_day": 7,
+      "shares_or_units": "8,625,000 common/pre-funded shares including option",
+      "source_urls": [
+        "https://www.globenewswire.com/news-release/2022/08/15/2498594/0/en/CinCor-Pharma-Announces-Closing-of-Upsized-Public-Offering-and-Full-Exercise-of-Option-to-Purchase-Additional-Shares.html"
+      ],
+      "status": "QUALIFIES",
+      "ticker": "CINC"
+    },
+    {
+      "candidate_id": "P2-2023-MLTX-MIRA",
+      "event_date": "2023-06-25",
+      "evidence_summary": "MoonLake commenced an underwritten public offering one day after the event and subsequently priced a $400 million offering.",
+      "financing_date": "2023-06-26",
+      "financing_type": "UNDERWRITTEN_PUBLIC_OFFERING",
+      "gross_proceeds_usd": 400000000,
+      "relative_day": 1,
+      "shares_or_units": "ordinary shares",
+      "source_urls": [
+        "https://www.globenewswire.com/news-release/2023/06/26/2694829/0/en/moonlake-immunotherapeutics-announces-proposed-underwritten-public-offering.html",
+        "https://ir.moonlaketx.com/news-releases/news-release-details/moonlake-immunotherapeutics-announces-pricing-400-million"
+      ],
+      "status": "QUALIFIES",
+      "ticker": "MLTX"
+    },
+    {
+      "candidate_id": "P2-2024-GPCR-GSBR1290",
+      "event_date": "2024-06-03",
+      "evidence_summary": "Structure priced an upsized ADS offering two days after the event and closed approximately $547.4 million gross including the option.",
+      "financing_date": "2024-06-05",
+      "financing_type": "UNDERWRITTEN_ADS_OFFERING",
+      "gross_proceeds_usd": 547400000,
+      "relative_day": 2,
+      "shares_or_units": "ADSs including underwriters' option",
+      "source_urls": [
+        "https://ir.structuretx.com/news-releases/news-release-details/structure-therapeutics-announces-pricing-upsized-476-million",
+        "https://ir.structuretx.com/news-releases/news-release-details/structure-therapeutics-announces-closing-upsized-public-offering"
+      ],
+      "status": "QUALIFIES",
+      "ticker": "GPCR"
+    },
+    {
+      "candidate_id": "P2-2024-RXRX-SYCAMORE",
+      "event_date": "2024-09-03",
+      "evidence_summary": "Recursion entered an underwriting agreement 69 days before the event for 30,769,230 shares at $6.50, approximately $200 million gross.",
+      "financing_date": "2024-06-26",
+      "financing_type": "UNDERWRITTEN_PUBLIC_OFFERING",
+      "gross_proceeds_usd": 200000000,
+      "relative_day": -69,
+      "shares_or_units": "30,769,230 common shares",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1601830/000160183024000091/rxrx-20240626.htm"
+      ],
+      "status": "QUALIFIES",
+      "ticker": "RXRX"
+    },
+    {
+      "candidate_id": "P2-2023-FWBI-SPAN",
+      "event_date": "2023-07-13",
+      "evidence_summary": "First Wave priced a $2.1 million public offering of common/pre-funded units with warrants six days after the event.",
+      "financing_date": "2023-07-19",
+      "financing_type": "PUBLIC_OFFERING_WITH_WARRANTS",
+      "gross_proceeds_usd": 2100000,
+      "relative_day": 6,
+      "shares_or_units": "common/pre-funded units with warrants",
+      "source_urls": [
+        "https://www.globenewswire.com/news-release/2023/07/19/2707279/0/en/first-wave-biopharma-inc-announces-pricing-of-2-1-million-public-offering.html"
+      ],
+      "status": "QUALIFIES",
+      "ticker": "FWBI"
+    },
+    {
+      "candidate_id": "CO-2022-KROS-KER050ASH",
+      "event_date": "2022-12-12",
+      "evidence_summary": "Keros reported 1,947,747 ATM shares sold through Sep. 30, 2022 for $59.1M gross and 3,410,384 shares for full-year 2022 for $121.4M gross. Therefore 1,462,637 additional shares and about $62.3M gross were sold during Q4 2022. For the Dec. 12 event, all Q4 dates lie inside T-90 to T+30.",
+      "financing_date": "2022-Q4",
+      "financing_type": "ATM_COMMON_STOCK_SALES",
+      "gross_proceeds_usd": 62300000,
+      "relative_day": null,
+      "shares_or_units": "1,462,637 incremental Q4 shares inferred from audited period totals",
+      "source_urls": [
+        "https://ir.kerostx.com/static-files/070c9537-656b-4493-acf6-76e3e634b0ad",
+        "https://www.sec.gov/Archives/edgar/data/1664710/000166471023000021/kros-20221231.htm"
+      ],
+      "status": "QUALIFIES_BY_CONTAINED_REPORTING_INTERVAL",
+      "ticker": "KROS"
+    }
+  ],
+  "format_version": "1.0",
+  "ledger_sha256": "885bf120a57099a8fd5ba6d2bafb39d48b1255c129f074e0ff5715fa75fcf948",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "notes": [
+    "Only actual issuer equity financings or completed/entered equity-sale transactions are counted; shelf capacity alone is not qualifying.",
+    "Non-dilutive royalty/debt funding is excluded from this equity-financing/dilution count.",
+    "KROS qualifies from contained reporting intervals: the incremental Q4 ATM sales interval is wholly inside the candidate event window."
+  ],
+  "pending_count": 0,
+  "quota_requirement": 20,
+  "role": "PREFREEZE_FINANCING_DILUTION_EVIDENCE_LEDGER",
+  "rules_version": "BOE-1.0.0",
+  "window_definition": "T_MINUS_90_THROUGH_T_PLUS_30_CALENDAR_DAYS_INCLUSIVE"
+}
