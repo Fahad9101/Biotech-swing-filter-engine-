@@ -277,7 +277,7 @@
       "eligible_registry_status": "NOT_PROMOTED",
       "financing_evidence_path": null,
       "financing_status": "PENDING",
-      "first_public_timestamp": null,
+      "first_public_timestamp": "2023-12-09T12:00:00-05:00",
       "negative_label_path": "validation/m7/acquisition/conference-other-primary-batch-01.json",
       "negative_label_recorded": false,
       "normalization_path": null,
@@ -285,9 +285,9 @@
       "single_asset_status": "PENDING",
       "stratum": "CONFERENCE_OTHER",
       "ticker": "IPSC",
-      "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "timestamp_evidence_path": "validation/m7/promotion/first-public-availability-ledger-09.json",
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-29.json",
+      "universe_status": "FAIL"
     },
     {
       "acquisition_path": "validation/m7/acquisition/conference-other-primary-batch-01.json",
@@ -1172,6 +1172,24 @@
       "universe_status": "FAIL"
     },
     {
+      "acquisition_path": "validation/m7/acquisition/newly-sourced-batch-01.json",
+      "candidate_id": "NEG-P3-2018-VTVT-STEADFAST",
+      "eligible_registry_status": "NOT_PROMOTED",
+      "financing_evidence_path": null,
+      "financing_status": "PENDING",
+      "first_public_timestamp": "2018-04-09T17:15:00-04:00",
+      "negative_label_path": "validation/m7/acquisition/newly-sourced-batch-01.json",
+      "negative_label_recorded": true,
+      "normalization_path": null,
+      "single_asset_evidence_path": null,
+      "single_asset_status": "PENDING",
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "VTVT",
+      "timestamp_evidence_path": null,
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-29.json",
+      "universe_status": "FAIL"
+    },
+    {
       "acquisition_path": "validation/m7/acquisition/phase2-primary-batch-01.json",
       "candidate_id": "P2-2018-BIIB-BAN2401",
       "eligible_registry_status": "NOT_PROMOTED",
@@ -1843,7 +1861,7 @@
       "eligible_registry_status": "NOT_PROMOTED",
       "financing_evidence_path": null,
       "financing_status": "PENDING",
-      "first_public_timestamp": null,
+      "first_public_timestamp": "2024-11-20T06:40:00-05:00",
       "negative_label_path": "validation/m7/acquisition/phase2-primary-batch-01.json",
       "negative_label_recorded": true,
       "normalization_path": null,
@@ -1851,9 +1869,9 @@
       "single_asset_status": "PENDING",
       "stratum": "PHASE_2_POC",
       "ticker": "SAGE",
-      "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "timestamp_evidence_path": "validation/m7/promotion/first-public-availability-ledger-09.json",
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-29.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/phase2-primary-batch-01.json",
@@ -2617,7 +2635,7 @@
       "eligible_registry_status": "NOT_PROMOTED",
       "financing_evidence_path": null,
       "financing_status": "PENDING",
-      "first_public_timestamp": null,
+      "first_public_timestamp": "2019-03-19T21:08:00-04:00",
       "negative_label_path": "validation/m7/acquisition/regulatory-primary-batch-01.json",
       "negative_label_recorded": false,
       "normalization_path": null,
@@ -2625,9 +2643,9 @@
       "single_asset_status": "PENDING",
       "stratum": "REGULATORY",
       "ticker": "SAGE",
-      "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "timestamp_evidence_path": "validation/m7/promotion/first-public-availability-ledger-09.json",
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-29.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/targeted-negative-supplement-02.json",
