@@ -1,0 +1,92 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-15",
+  "role": "PREFREEZE_FIRST_PUBLIC_AVAILABILITY_EVIDENCE",
+  "market_outcomes_inspected": false,
+  "cohort_frozen": false,
+  "rows": [
+    {
+      "candidate_id": "P2-2022-CINC-HALO",
+      "event_date": "2022-11-28",
+      "ticker": "CINC",
+      "first_public_timestamp": "2022-11-28T07:30:00-05:00",
+      "timestamp_precision": "EXACT_TO_MINUTE",
+      "session_classification": "PRE_MARKET",
+      "last_complete_session_before_event": "2022-11-25",
+      "source_type": "ISSUER_GLOBENEWSWIRE_RELEASE",
+      "source_url": "https://www.globenewswire.com/news-release/2022/11/28/2563048/0/en/cincor-pharma-announces-topline-data-for-phase-2-halo-trial-evaluating-selective-aldosterone-synthase-inhibitor-baxdrostat-in-uncontrolled-hypertension.html",
+      "corroborating_sec_url": "https://www.sec.gov/Archives/edgar/data/1868734/000095017022025707/cinc-20221128.htm",
+      "source_displayed_time": "November 28, 2022 07:30 ET",
+      "status": "RESOLVED",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2023-AKRO-SYMMETRY-COHORT-D",
+      "event_date": "2023-06-05",
+      "ticker": "AKRO",
+      "first_public_timestamp": "2023-06-05T07:00:00-04:00",
+      "timestamp_precision": "EXACT_TO_MINUTE",
+      "session_classification": "PRE_MARKET",
+      "last_complete_session_before_event": "2023-06-02",
+      "source_type": "ISSUER_GLOBENEWSWIRE_RELEASE",
+      "source_url": "https://www.globenewswire.com/news-release/2023/06/05/2681816/0/en/akero-therapeutics-phase-2b-symmetry-cohort-d-study-met-safety-tolerability-endpoints-and-showed-adding-efx-to-glp-1-therapy-significantly-improved-non-invasive-markers-of-nash-rel.html",
+      "corroborating_sec_url": "https://www.sec.gov/Archives/edgar/data/1744659/000119312523160325/d513466d8k.htm",
+      "source_displayed_time": "June 05, 2023 07:00 ET",
+      "status": "RESOLVED",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2023-AKRO-SYMMETRY-MAIN",
+      "event_date": "2023-10-10",
+      "ticker": "AKRO",
+      "first_public_timestamp": "2023-10-10T07:00:00-04:00",
+      "timestamp_precision": "EXACT_TO_MINUTE",
+      "session_classification": "PRE_MARKET",
+      "last_complete_session_before_event": "2023-10-09",
+      "source_type": "ISSUER_GLOBENEWSWIRE_RELEASE",
+      "source_url": "https://www.globenewswire.com/news-release/2023/10/10/2757329/0/en/Akero-Therapeutics-Reports-Encouraging-36-Week-Analysis-of-96-Week-Phase-2b-SYMMETRY-Study-with-a-Trend-on-Fibrosis-Improvement-and-Statistically-Significant-Results-for-NASH-Resol.html",
+      "corroborating_sec_url": "https://www.sec.gov/Archives/edgar/data/1744659/000119312523253123/d512932d8k.htm",
+      "source_displayed_time": "October 10, 2023 07:00 ET",
+      "status": "RESOLVED",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2023-MLTX-ARGO",
+      "event_date": "2023-11-05",
+      "ticker": "MLTX",
+      "first_public_timestamp": "2023-11-05T11:00:00-05:00",
+      "timestamp_precision": "EXACT_TO_MINUTE",
+      "session_classification": "NON_TRADING_DAY",
+      "last_complete_session_before_event": "2023-11-03",
+      "source_type": "ISSUER_GLOBENEWSWIRE_RELEASE",
+      "source_url": "https://www.globenewswire.com/news-release/2023/11/05/2773591/0/en/moonlake-immunotherapeutics-announces-landmark-phase-2-results-for-nanobody-sonelokimab-in-active-psoriatic-arthritis.html",
+      "corroborating_sec_url": "https://www.sec.gov/Archives/edgar/data/1821586/000162828023036888/mltx-20231105.htm",
+      "source_displayed_time": "November 05, 2023 11:00 ET",
+      "status": "RESOLVED",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2022-ETNB-ENTRIGUE",
+      "event_date": "2022-06-28",
+      "ticker": "ETNB",
+      "first_public_timestamp": "2022-06-28T16:01:00-04:00",
+      "timestamp_precision": "EXACT_TO_MINUTE",
+      "session_classification": "AFTER_HOURS",
+      "last_complete_session_before_event": "2022-06-28",
+      "source_type": "ISSUER_GLOBENEWSWIRE_RELEASE",
+      "source_url": "https://www.globenewswire.com/news-release/2022/06/28/2470796/0/en/89bio-Reports-Positive-Topline-Results-from-ENTRIGUE-Phase-2-Trial-of-Pegozafermin-in-Patients-with-Severe-Hypertriglyceridemia-SHTG.html",
+      "source_displayed_time": "June 28, 2022 16:01 ET",
+      "status": "RESOLVED",
+      "outcome_inspected_for_selection": false
+    }
+  ],
+  "summary": {
+    "resolved_rows": 5,
+    "pending": 0,
+    "pre_market": 3,
+    "after_hours": 1,
+    "non_trading_day": 1
+  }
+}

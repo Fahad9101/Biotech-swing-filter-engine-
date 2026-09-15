@@ -1,0 +1,56 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-15",
+  "role": "PREFREEZE_HISTORICAL_UNIVERSE_AND_INVESTABILITY_EVIDENCE",
+  "market_outcomes_inspected": false,
+  "cohort_frozen": false,
+  "method": {
+    "market_data_provider": "Alpaca",
+    "feed": "SIP",
+    "bars": "RAW_AS_TRADED_DAILY",
+    "corporate_actions": "EXPLICIT_SEPARATE_QUERY",
+    "liquidity_threshold_usd": 2000000,
+    "liquidity_window_sessions": 20,
+    "liquidity_ambiguity_rule": "Both raw close x volume and raw VWAP x volume were evaluated. The event is rejected because both 20-session medians are below the frozen $2,000,000 threshold.",
+    "outcome_boundary": "The 2020-02-26 event-session bar is excluded because the clinical result was disclosed pre-market at 07:30 ET."
+  },
+  "rows": [
+    {
+      "candidate_id": "NEG-P2-2020-MNLO-CPUO",
+      "event_date": "2020-02-26",
+      "first_public_timestamp": "2020-02-26T07:30:00-05:00",
+      "pre_event_cutoff_session": "2020-02-25",
+      "ticker": "MNLO",
+      "security_identity_status": "CONFIRMED",
+      "source_population_exchange_status": "ELIGIBLE_NASDAQ_COMMON_EQUITY",
+      "last_complete_pre_event_raw_close_usd": 4.40,
+      "price_floor_pass": true,
+      "liquidity_window_start": "2020-01-28",
+      "liquidity_window_end": "2020-02-25",
+      "liquidity_sessions": 20,
+      "median_daily_dollar_volume_close_x_volume_usd": 1020756.15,
+      "median_daily_dollar_volume_vwap_x_volume_usd": 1011805.05,
+      "liquidity_floor_pass": false,
+      "valid_session_floor_pass": true,
+      "valid_session_floor_evidence": "MNLO had traded since its January 2018 IPO, so the February 2020 event had far more than 60 valid post-listing sessions.",
+      "corporate_actions_through_cutoff": [],
+      "historical_universe_eligible": false,
+      "exclusion_reason": "INVESTABILITY_FLOOR_20_SESSION_MEDIAN_DAILY_DOLLAR_VOLUME_BELOW_2000000",
+      "determination_sufficiency": "The frozen liquidity-floor failure independently rejects the event; market-cap and other non-rescuing floors cannot reverse this result.",
+      "outcome_inspected_for_selection": false,
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1566044/000156459020008442/mnlo-10k_20191231.htm"
+      ],
+      "market_data_retrieval_note": "Only complete pre-event SIP daily bars were used. Event-day and post-event bars were not used in the eligibility determination."
+    }
+  ],
+  "summary": {
+    "evaluated": 1,
+    "eligible": 0,
+    "excluded": 1,
+    "pending": 0,
+    "single_asset_quota_attrition": 1
+  }
+}

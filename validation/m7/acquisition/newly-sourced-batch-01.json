@@ -1,0 +1,39 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "role": "NEWLY_SOURCED_CANDIDATES_POST_HANDOFF",
+  "generated_at": "2026-09-15",
+  "sourcing_note": "Candidates added after the M7 handoff specifically to address the confirmed shortfalls in PHASE_3_PIVOTAL, the negative-event reserve, and CONFERENCE_OTHER once the pre-existing 179-candidate acquisition pool was fully worked through. Sourced via targeted primary-source research (web search cross-checked against SEC EDGAR and issuer press releases), not the broken discovery pipeline. Each candidate is deduplicated against the full existing ticker/candidate_id set before inclusion. No candidate here was selected or excluded based on its post-event stock outcome - inclusion is based solely on being a genuine, verifiable, in-window (2018-01-01 through 2025-12-31) US-listed therapeutic-biotech disclosure event; whether it then passes the historical-universe investability floor is a separate, later determination.",
+  "events": [
+    {
+      "asset": "azeliragon",
+      "candidate_id": "NEG-P3-2018-VTVT-STEADFAST",
+      "cik": "1641489",
+      "clinical_phase": "PHASE_3",
+      "cohort_frozen": false,
+      "company": "vTv Therapeutics Inc.",
+      "first_public_date": "2018-04-09",
+      "first_public_timestamp": "2018-04-09T17:15:00-04:00",
+      "indication": "mild Alzheimer's disease",
+      "negative_event_candidate": true,
+      "outcome_inspected_for_selection": false,
+      "promotion_blockers": [
+        "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+        "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+        "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+      ],
+      "proposed_catalyst_type": "CLIN_P3",
+      "proposed_primary_stratum": "PHASE_3_PIVOTAL",
+      "result_direction": "NEGATIVE_PRIMARY",
+      "source_role": "FIRST_PUBLIC_RESULT_DISCLOSURE_CANDIDATE",
+      "source_type": "ISSUER_SEC_8K_EXHIBIT_991",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1641489/000095014218000857/eh1800541_ex9901.htm",
+      "corroborating_sec_accepted": "2018-04-09 17:15:25 ET (Form 8-K, CIK 0001641489, accession 0000950142-18-000857)",
+      "ticker": "VTVT",
+      "timestamp_precision": "EXACT_TO_MINUTE_SEC_ACCEPTANCE_PROXY",
+      "timestamp_ambiguity": "Neither the SEC exhibit nor available mirrors display an explicit release clock time; the SEC 8-K acceptance timestamp (17:15:25 ET, after the 16:00 close) is used as the primary-source proxy. Session classification (OUTSIDE_MARKET_HOURS_AFTER_CLOSE, cutoff = the same day's already-completed regular session) is not sensitive to the exact minute.",
+      "universe_result_preview": "FAILS the liquidity floor (20-session median dollar volume well under $2,000,000) as of the 2018-04-09 cutoff; recorded in historical-universe-ledger-29.json. Does not currently help the Phase III or negative-event shortfall, but is preserved as evidence of a genuine, non-cherry-picked sourcing attempt."
+    }
+  ]
+}

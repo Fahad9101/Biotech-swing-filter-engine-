@@ -1,0 +1,161 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-15",
+  "role": "PREFREEZE_TARGETED_NEGATIVE_HISTORICAL_SECURITY_IDENTITY_EVIDENCE",
+  "market_outcomes_inspected": false,
+  "cohort_frozen": false,
+  "rows": [
+    {
+      "candidate_id": "REG-2020-ICPT-OCA-CRL",
+      "event_date": "2020-06-29",
+      "legal_issuer": "Intercept Pharmaceuticals, Inc.",
+      "historical_ticker": "ICPT",
+      "cik": "0001270073",
+      "exchange": "The Nasdaq Global Select Market",
+      "security_identity": "Common Stock",
+      "listing_evidence": "Pre-event SEC filing identifies ICPT common stock as U.S.-listed on The Nasdaq Global Select Market; no pre-event action was identified that breaks the event-date security continuity.",
+      "ticker_change_or_reorganization_before_event": "NONE_IDENTIFIED_MATERIALLY_AFFECTING_EVENT_SECURITY",
+      "identity_status": "IDENTITY_CONFIRMED",
+      "us_listing_status": "US_LISTING_CONFIRMED",
+      "historical_universe_eligible": true,
+      "pre_event_share_count_reference": {
+        "shares_outstanding": 32853066,
+        "as_of": "2019-12-31",
+        "source": "Pre-event SEC filing"
+      },
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1270073/000155837020001314/icpt-20191231x10k93558c.htm"
+      ],
+      "ambiguity": "NONE_MATERIAL_FOR_EVENT_DATE_SECURITY_IDENTITY",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2020-BMRN-VALROX-CRL",
+      "event_date": "2020-08-19",
+      "legal_issuer": "BioMarin Pharmaceutical Inc.",
+      "historical_ticker": "BMRN",
+      "cik": "0001048477",
+      "exchange": "The Nasdaq Global Select Market",
+      "security_identity": "Common Stock",
+      "listing_evidence": "Pre-event SEC filing identifies BMRN common stock as U.S.-listed on The Nasdaq Global Select Market; no pre-event action was identified that breaks the event-date security continuity.",
+      "ticker_change_or_reorganization_before_event": "NONE_IDENTIFIED_MATERIALLY_AFFECTING_EVENT_SECURITY",
+      "identity_status": "IDENTITY_CONFIRMED",
+      "us_listing_status": "US_LISTING_CONFIRMED",
+      "historical_universe_eligible": true,
+      "pre_event_share_count_reference": {
+        "shares_outstanding": 181349597,
+        "as_of": "2020-07-30",
+        "source": "Pre-event SEC filing"
+      },
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1048477/000104847720000023/bmrn-20200630.htm"
+      ],
+      "ambiguity": "NONE_MATERIAL_FOR_EVENT_DATE_SECURITY_IDENTITY",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P3-2020-CRBP-RESOLVE1",
+      "event_date": "2020-09-08",
+      "legal_issuer": "Corbus Pharmaceuticals Holdings, Inc.",
+      "historical_ticker": "CRBP",
+      "cik": "0001595097",
+      "exchange": "The Nasdaq Global Market",
+      "security_identity": "Common Stock",
+      "listing_evidence": "Pre-event SEC filing identifies CRBP common stock as U.S.-listed on The Nasdaq Global Market; no pre-event action was identified that breaks the event-date security continuity.",
+      "ticker_change_or_reorganization_before_event": "NONE_IDENTIFIED_MATERIALLY_AFFECTING_EVENT_SECURITY",
+      "identity_status": "IDENTITY_CONFIRMED",
+      "us_listing_status": "US_LISTING_CONFIRMED",
+      "historical_universe_eligible": true,
+      "pre_event_share_count_reference": {
+        "shares_outstanding": 81712134,
+        "as_of": "2020-07-31",
+        "source": "Pre-event SEC filing"
+      },
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1595097/000149315220017022/form10-qa.htm"
+      ],
+      "ambiguity": "NONE_MATERIAL_FOR_EVENT_DATE_SECURITY_IDENTITY",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2021-ATNX-ORALPAC-CRL",
+      "event_date": "2021-03-01",
+      "legal_issuer": "Athenex, Inc.",
+      "historical_ticker": "ATNX",
+      "cik": "0001300699",
+      "exchange": "The Nasdaq Global Market",
+      "security_identity": "Common Stock",
+      "listing_evidence": "Pre-event SEC filing identifies ATNX common stock as U.S.-listed on The Nasdaq Global Market; no pre-event action was identified that breaks the event-date security continuity.",
+      "ticker_change_or_reorganization_before_event": "NONE_IDENTIFIED_MATERIALLY_AFFECTING_EVENT_SECURITY",
+      "identity_status": "IDENTITY_CONFIRMED",
+      "us_listing_status": "US_LISTING_CONFIRMED",
+      "historical_universe_eligible": true,
+      "pre_event_share_count_reference": {
+        "shares_outstanding": 93454700,
+        "as_of": "2021-02-19",
+        "source": "Pre-event SEC filing"
+      },
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1300699/000156459021009879/atnx-10k_20201231.htm"
+      ],
+      "ambiguity": "NONE_MATERIAL_FOR_EVENT_DATE_SECURITY_IDENTITY",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2021-FGEN-ROXADUSTAT-CRL",
+      "event_date": "2021-08-11",
+      "legal_issuer": "FibroGen, Inc.",
+      "historical_ticker": "FGEN",
+      "cik": "0000921299",
+      "exchange": "The Nasdaq Global Select Market",
+      "security_identity": "Common Stock",
+      "listing_evidence": "Pre-event SEC filing identifies FGEN common stock as U.S.-listed on The Nasdaq Global Select Market; no pre-event action was identified that breaks the event-date security continuity.",
+      "ticker_change_or_reorganization_before_event": "NONE_IDENTIFIED_MATERIALLY_AFFECTING_EVENT_SECURITY",
+      "identity_status": "IDENTITY_CONFIRMED",
+      "us_listing_status": "US_LISTING_CONFIRMED",
+      "historical_universe_eligible": true,
+      "pre_event_share_count_reference": {
+        "shares_outstanding": 92621941,
+        "as_of": "2021-07-31",
+        "source": "Pre-event SEC filing"
+      },
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/921299/000156459021042639/fgen-10q_20210630.htm"
+      ],
+      "ambiguity": "NONE_MATERIAL_FOR_EVENT_DATE_SECURITY_IDENTITY",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2022-CHRS-TORIPALIMAB-CRL",
+      "event_date": "2022-05-02",
+      "legal_issuer": "Coherus BioSciences, Inc.",
+      "historical_ticker": "CHRS",
+      "cik": "0001512762",
+      "exchange": "The Nasdaq Global Market",
+      "security_identity": "Common Stock",
+      "listing_evidence": "Pre-event SEC filing identifies CHRS common stock as U.S.-listed on The Nasdaq Global Market; no pre-event action was identified that breaks the event-date security continuity.",
+      "ticker_change_or_reorganization_before_event": "NONE_IDENTIFIED_MATERIALLY_AFFECTING_EVENT_SECURITY",
+      "identity_status": "IDENTITY_CONFIRMED",
+      "us_listing_status": "US_LISTING_CONFIRMED",
+      "historical_universe_eligible": true,
+      "pre_event_share_count_reference": {
+        "shares_outstanding": 77275299,
+        "as_of": "2022-01-31",
+        "source": "Pre-event SEC filing"
+      },
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1512762/000155837022001764/chrs-20211231x10k.htm"
+      ],
+      "ambiguity": "NONE_MATERIAL_FOR_EVENT_DATE_SECURITY_IDENTITY",
+      "outcome_inspected_for_selection": false
+    }
+  ],
+  "summary": {
+    "rows": 6,
+    "identity_confirmed": 6,
+    "us_listing_confirmed": 6,
+    "historical_boe_universe_eligible_confirmed": 6
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-15",
+  "role": "PREFREEZE_TARGETED_SINGLE_ASSET_REPLACEMENT_EVIDENCE",
+  "market_outcome_fields_permitted": false,
+  "cohort_frozen": false,
+  "evidence_rule": "Only source material publicly available on or before the candidate event date may support the single-asset determination.",
+  "rows": [
+    {
+      "candidate_id": "P2-2022-CINC-HALO",
+      "event_date": "2022-11-28",
+      "ticker": "CINC",
+      "issuer": "CinCor Pharma, Inc.",
+      "asset": "baxdrostat",
+      "meaningful_active_therapeutic_assets": ["baxdrostat"],
+      "determination": "QUALIFIES",
+      "evidence_summary": "Pre-event SEC disclosures describe CinCor as focused on baxdrostat and the existing frozen single-asset review established baxdrostat as CinCor's only product candidate. The November 2022 HALO event is a distinct trial of the same sole therapeutic asset.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1868734/000095017022021582/cinc-20220930.htm",
+        "https://www.sec.gov/Archives/edgar/data/1868734/000119312522219819/d335310d424b4.htm"
+      ],
+      "source_dates": ["2022-11-03", "2022-08-15"],
+      "status": "QUALIFIES",
+      "ambiguity": "NONE_MATERIAL",
+      "quota_replacement_candidate": true,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2023-AKRO-SYMMETRY-COHORT-D",
+      "event_date": "2023-06-05",
+      "ticker": "AKRO",
+      "issuer": "Akero Therapeutics, Inc.",
+      "asset": "efruxifermin (EFX)",
+      "meaningful_active_therapeutic_assets": ["efruxifermin"],
+      "determination": "QUALIFIES",
+      "evidence_summary": "Akero's pre-event 2022 Form 10-K explicitly states that EFX was its only product candidate. Cohort D is an expansion cohort of the same single therapeutic asset and does not introduce a second therapeutic candidate.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1744659/000095017023008566/akro-20221231.htm"
+      ],
+      "source_dates": ["2023-03-16"],
+      "status": "QUALIFIES",
+      "ambiguity": "MULTIPLE_TRIALS_AND_COHORTS_SAME_ASSET",
+      "quota_replacement_candidate": true,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2023-AKRO-SYMMETRY-MAIN",
+      "event_date": "2023-10-10",
+      "ticker": "AKRO",
+      "issuer": "Akero Therapeutics, Inc.",
+      "asset": "efruxifermin (EFX)",
+      "meaningful_active_therapeutic_assets": ["efruxifermin"],
+      "determination": "QUALIFIES",
+      "evidence_summary": "Akero's pre-event 2022 Form 10-K explicitly states that EFX was its only product candidate. The main SYMMETRY study is another clinical study of the same single therapeutic asset.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1744659/000095017023008566/akro-20221231.htm"
+      ],
+      "source_dates": ["2023-03-16"],
+      "status": "QUALIFIES",
+      "ambiguity": "MULTIPLE_TRIALS_SAME_ASSET",
+      "quota_replacement_candidate": true,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2023-MLTX-ARGO",
+      "event_date": "2023-11-05",
+      "ticker": "MLTX",
+      "issuer": "MoonLake Immunotherapeutics",
+      "asset": "sonelokimab",
+      "meaningful_active_therapeutic_assets": ["sonelokimab"],
+      "determination": "QUALIFIES",
+      "evidence_summary": "MoonLake's pre-event 2022 Form 10-K describes its development pipeline as sonelokimab across inflammatory indications, with no distinct second therapeutic candidate. ARGO is a distinct trial/indication of the same single therapeutic asset.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1821586/000162828023008604/mnlk-20221231.htm"
+      ],
+      "source_dates": ["2023-03-20"],
+      "status": "QUALIFIES",
+      "ambiguity": "MULTIPLE_INDICATIONS_AND_TRIALS_SAME_ASSET",
+      "quota_replacement_candidate": true,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2022-ETNB-ENTRIGUE",
+      "event_date": "2022-06-28",
+      "ticker": "ETNB",
+      "issuer": "89bio, Inc.",
+      "asset": "pegozafermin",
+      "meaningful_active_therapeutic_assets": ["pegozafermin"],
+      "determination": "QUALIFIES",
+      "evidence_summary": "The pre-event 2021 Form 10-K describes pegozafermin as 89bio's development candidate across NASH and severe hypertriglyceridemia and does not identify a distinct second active therapeutic candidate. ENTRIGUE and ENLIVEN are different trials/indications of the same asset.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1785173/000156459022011706/etnb-10k_20211231.htm"
+      ],
+      "source_dates": ["2022-03-10"],
+      "status": "QUALIFIES",
+      "ambiguity": "MULTIPLE_INDICATIONS_SAME_ASSET",
+      "quota_replacement_candidate": true,
+      "outcome_inspected_for_selection": false
+    }
+  ],
+  "summary": {
+    "reviewed": 5,
+    "qualifies": 5,
+    "does_not_qualify": 0,
+    "pending": 0
+  },
+  "promotion_boundary": "Single-asset determinations do not establish final eligibility. The historical-universe ledger independently rejects ETNB ENTRIGUE on liquidity."
+}

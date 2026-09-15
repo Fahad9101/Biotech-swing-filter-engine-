@@ -1,0 +1,43 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-15",
+  "role": "PREFREEZE_HISTORICAL_SECURITY_IDENTITY_EVIDENCE",
+  "market_outcomes_inspected": false,
+  "cohort_frozen": false,
+  "rows": [
+    {
+      "candidate_id": "REG-2023-GERN-IMETELSTAT-NDA-ACCEPT",
+      "event_date": "2023-08-21",
+      "legal_issuer": "Geron Corporation",
+      "historical_ticker": "GERN",
+      "cik": "0000886744",
+      "exchange": "The Nasdaq Stock Market LLC",
+      "security_identity": "Common Stock, $0.001 par value",
+      "listing_evidence": "The pre-event Q2 2023 Form 10-Q identifies GERN common stock as Section 12(b)-registered on The Nasdaq Stock Market LLC, states that Geron was current in its reporting obligations, and states that Geron was not a shell company.",
+      "ticker_change_or_reorganization_before_event": "NONE_IDENTIFIED_MATERIALLY_AFFECTING_EVENT_SECURITY",
+      "identity_status": "IDENTITY_CONFIRMED",
+      "us_listing_status": "US_LISTING_CONFIRMED",
+      "historical_universe_eligible": true,
+      "pre_event_share_count_reference": {
+        "shares_outstanding": 523370675,
+        "as_of": "2023-07-27",
+        "source": "Q2 2023 Form 10-Q cover"
+      },
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/886744/000095017023036695/gern-20230630.htm",
+        "https://www.sec.gov/Archives/edgar/data/886744/000095017023043949/gern-20230821.htm"
+      ],
+      "evidence_dates": ["2023-08-03", "2023-08-21"],
+      "ambiguity": "NONE_MATERIAL_FOR_EVENT_DATE_SECURITY_IDENTITY",
+      "outcome_inspected_for_selection": false
+    }
+  ],
+  "summary": {
+    "rows": 1,
+    "identity_confirmed": 1,
+    "us_listing_confirmed": 1,
+    "historical_boe_universe_eligible_confirmed": 1
+  }
+}

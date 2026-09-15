@@ -1,0 +1,59 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-15",
+  "role": "PREFREEZE_VERSIONED_EVENT_NORMALIZATION",
+  "market_outcomes_inspected": false,
+  "cohort_frozen": false,
+  "rows": [
+    {
+      "normalization_id": "NORM-ACTU-ELRAGLUSIB-20250506-V1",
+      "source_candidate_id": "P2-2025-ACTU-ELRAGLUSIB",
+      "source_candidate_event_date": "2025-05-31",
+      "canonical_candidate_id": "P2-2025-ACTU-ELRAGLUSIB-TOPLINE",
+      "canonical_event_version": 1,
+      "ticker": "ACTU",
+      "cik": "0001652935",
+      "issuer": "Actuate Therapeutics, Inc.",
+      "asset": "elraglusib",
+      "indication": "first-line metastatic pancreatic ductal adenocarcinoma",
+      "clinical_phase": "PHASE_2",
+      "proposed_primary_stratum": "PHASE_2_POC",
+      "proposed_catalyst_type": "CLIN_P2",
+      "canonical_first_public_timestamp": "2025-05-06T08:00:00-04:00",
+      "timestamp_precision": "EXACT_TO_MINUTE",
+      "session_classification": "PRE_MARKET",
+      "last_complete_session_before_event": "2025-05-05",
+      "result_direction_for_negative_stratification": "POSITIVE_PRIMARY",
+      "normalization_reason": "The May 6 issuer release and contemporaneous Form 8-K state that the randomized Phase 2 trial met its primary endpoint and announced statistically significant topline overall-survival results. The May 31 ASCO presentation explicitly describes those topline data as previously announced on May 6. Therefore May 6 is the earliest material result disclosure for the underlying event.",
+      "source_lineage": {
+        "original_acquisition_row_preserved": true,
+        "original_row_status": "SUPERSEDED_FOR_FIRST_PUBLIC_EVENT_PURPOSES_NOT_DELETED",
+        "later_may31_presentation_status": "NOT_A_SEPARATE_EVENT_UNLESS_INCREMENTAL_MATERIAL_INFORMATION_IS_PROVEN_UNDER_DUPLICATE_AND_MATERIALITY_RULES"
+      },
+      "primary_evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1652935/000168316825003163/actuate_8k.htm",
+        "https://www.sec.gov/Archives/edgar/data/1652935/000168316825003163/actuate_ex9901.htm",
+        "https://www.sec.gov/Archives/edgar/data/1652935/000168316825004117/actuate_8k.htm",
+        "https://www.globenewswire.com/news-release/2025/05/06/3074989/0/en/actuate-therapeutics-announces-statistically-significant-topline-results-from-global-phase-2-trial-of-elraglusib-in-first-line-treatment-of-metastatic-pancreatic-cancer.html"
+      ],
+      "sec_8k_accepted_at": "2025-05-06T08:09:06-04:00",
+      "status": "CANONICAL_EVENT_VERSION_CREATED_REQUIRES_FULL_PROMOTION_RERUN",
+      "required_rechecks": [
+        "historical_security_identity_as_of_2025-05-06",
+        "historical_universe_investability_as_of_2025-05-06",
+        "financing_window_T_MINUS_90_TO_T_PLUS_30_FROM_2025-05-06",
+        "single_asset_status_as_of_2025-05-06",
+        "point_in_time_science_and_capital_structure",
+        "issuer_concentration_and_final_registry_eligibility"
+      ],
+      "outcome_inspected_for_selection": false
+    }
+  ],
+  "summary": {
+    "normalized_events": 1,
+    "original_rows_deleted": 0,
+    "market_outcome_fields_used": 0
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-15",
+  "role": "TARGETED_SINGLE_ASSET_QUOTA_REPLACEMENT_ACQUISITION_NOT_FROZEN",
+  "trigger": "CO-2021-IMRA-IMR687ASH was superseded from QUALIFIES to DOES_NOT_QUALIFY after contemporaneous pre-event evidence established a second active therapeutic asset, IMR-261. Broad acquisition remains closed; this file adds exactly one targeted replacement candidate for the resulting single-asset reserve deficit.",
+  "market_outcomes_inspected": false,
+  "cohort_frozen": false,
+  "events": [
+    {
+      "candidate_id": "P3-2022-MDGL-MAESTRO-NASH",
+      "company": "Madrigal Pharmaceuticals, Inc.",
+      "ticker": "MDGL",
+      "cik": "0001157601",
+      "asset": "resmetirom",
+      "indication": "nonalcoholic steatohepatitis with liver fibrosis",
+      "clinical_phase": "PHASE_3",
+      "first_public_date": "2022-12-19",
+      "first_public_timestamp": "2022-12-19T07:00:00-05:00",
+      "timestamp_precision": "EXACT_TO_MINUTE",
+      "proposed_catalyst_type": "CLIN_P3",
+      "proposed_primary_stratum": "PHASE_3_PIVOTAL",
+      "negative_event_candidate": false,
+      "result_direction": "POSITIVE_PRIMARY",
+      "source_role": "FIRST_PUBLIC_RESULT_DISCLOSURE_CANDIDATE",
+      "source_type": "ISSUER_GLOBENEWSWIRE_RELEASE",
+      "source_urls": [
+        "https://www.globenewswire.com/news-release/2022/12/19/2576163/0/en/Madrigal-Announces-Positive-Topline-Results-from-the-Pivotal-Phase-3-MAESTRO-NASH-Clinical-Trial-of-Resmetirom-for-the-Treatment-of-NASH-and-Liver-Fibrosis.html",
+        "https://www.globenewswire.com/news-release/2022/12/18/2575865/0/en/Madrigal-Pharmaceuticals-To-Announce-Topline-Results-from-the-Phase-3-MAESTRO-NASH-Study-of-Resmetirom-on-Monday-December-19th.html",
+        "https://www.sec.gov/Archives/edgar/data/1157601/0001193125-22-307935-index.html"
+      ],
+      "promotion_blockers": [
+        "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+        "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE",
+        "FINAL_CONCENTRATION_AND_REGISTRY_CHECK"
+      ],
+      "outcome_inspected_for_selection": false
+    }
+  ],
+  "summary": {
+    "targeted_rows_added": 1,
+    "broad_acquisition_reopened": false,
+    "authoritative_events_promoted": 0
+  }
+}

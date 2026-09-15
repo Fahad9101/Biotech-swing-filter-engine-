@@ -1,0 +1,47 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-15",
+  "role": "PREFREEZE_NEGATIVE_EVENT_QUOTA_ATTRITION_INTEGRATION",
+  "market_outcomes_inspected": false,
+  "cohort_frozen": false,
+  "quota_requirement": 40,
+  "broad_reserve": {
+    "source": "validation/m7/promotion/candidate-promotion-ledger.json",
+    "negative_candidate_count": 43,
+    "known_broad_negative_historical_universe_failures": [
+      {"candidate_id":"NEG-P2-2018-MNLO-ATOMIK","reason":"MINIMUM_VALID_SESSION_COUNT_BELOW_60"},
+      {"candidate_id":"NEG-P2-2020-MNLO-CPUO","reason":"20_SESSION_MEDIAN_DOLLAR_VOLUME_BELOW_2000000"},
+      {"candidate_id":"P2-2023-PRDS-POMOTRELVIR","reason":"20_SESSION_MEDIAN_DOLLAR_VOLUME_BELOW_2000000"},
+      {"candidate_id":"P2-2023-AEON-ABP450","reason":"FROZEN_HISTORICAL_UNIVERSE_INVESTABILITY_FAILURE"},
+      {"candidate_id":"P3-2025-OPT-COAST","reason":"20_SESSION_MEDIAN_DOLLAR_VOLUME_BELOW_2000000"},
+      {"candidate_id":"EC-2020-CRNX-CRN01941","reason":"20_SESSION_MEDIAN_DOLLAR_VOLUME_BELOW_2000000"},
+      {"candidate_id":"P2-2023-FWBI-SPAN","reason":"20_SESSION_MEDIAN_DOLLAR_VOLUME_BELOW_2000000"}
+    ],
+    "known_failure_count": 7,
+    "maximum_broad_negative_not_yet_excluded": 36
+  },
+  "targeted_negative_rows_already_present": [
+    {
+      "candidate_id": "P2-2022-CINC-HALO",
+      "negative_event_basis": "PHASE_2_PRIMARY_ENDPOINT_NOT_MET",
+      "historical_universe_status": "PASS",
+      "counts_as_not_yet_excluded_negative": true
+    },
+    {
+      "candidate_id": "P3-2023-RAIN-MANTRA",
+      "negative_event_basis": "PHASE_3_PRIMARY_ENDPOINT_NOT_MET",
+      "historical_universe_status": "FAIL",
+      "counts_as_not_yet_excluded_negative": false
+    }
+  ],
+  "pre_repair_summary": {
+    "maximum_known_not_yet_excluded_negative_reserve": 37,
+    "quota_requirement": 40,
+    "demonstrated_deficit": 3,
+    "targeted_negative_acquisition_permitted": true,
+    "broad_acquisition_reopened": false
+  },
+  "selection_boundary": "The deficit is derived only from clinical/regulatory negative-event labels and frozen pre-event investability failures. No stock return, MFE, MAE, swing-success, or post-event price behavior was inspected. Targeted acquisition may add only enough robust negative candidates to repair the demonstrated quota shortage with a reasonable attrition buffer."
+}

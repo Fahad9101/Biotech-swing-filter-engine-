@@ -1,0 +1,3860 @@
+{
+  "fetch_failures": [
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT00116142"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT00493870"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT00529035"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT00556374"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT00585195"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT00634231"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT00658021"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT00660673"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT00703326"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT00948675"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT00982111"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01036087"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01120028"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01218555"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01239797"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01265030"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01335399"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01395641"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01421069"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01436656"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01454102"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01460160"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01470612"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01496118"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01506609"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01515748"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01541215"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01554618"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01557244"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01564537"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01593254"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01594229"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01610206"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01625286"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01626833"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01639001"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01642004"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01668784"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01673867"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01682616"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01690702"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01711658"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01721746"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01721772"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01740297"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01740427"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01750281"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01774721"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01815736"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01847274"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01850004"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01860976"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01865747"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01889186"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01908426"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01920061"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01924533"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01926587"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01940341"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01940471"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01942135"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01945775"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01949311"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01968213"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01972217"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT01991873"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02005471"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02008357"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02040857"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02041533"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02047318"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02052882"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02065557"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02065570"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02065700"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02066636"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02088112"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02101034"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02104817"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02105636"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02117713"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02125461"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02128958"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02129699"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02130557"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02141282"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02148705"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02160782"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02166905"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02167945"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02178358"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02184195"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02211131"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02213289"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02214160"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02219490"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02228369"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02261883"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02264990"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02265731"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02270957"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02282020"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02301156"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02307513"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02315066"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02319044"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02332590"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02343120"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02352948"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02366195"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02369653"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02369874"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02393859"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02394795"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02403193"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02407990"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02415556"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02426086"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02426125"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02435433"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02448381"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02448771"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02450539"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02454933"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02464228"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02464657"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02481830"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02485899"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02486406"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02492711"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02494570"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02499120"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02504268"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02507687"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02510261"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02514382"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02527434"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02528643"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02534935"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02535078"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02538666"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02539225"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02547922"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02549092"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02551159"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02565914"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02569476"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02573324"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02574078"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02574455"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02575404"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02580058"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02586155"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02593045"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02593786"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02599402"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02601014"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02603432"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02606461"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02607930"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02607956"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02609828"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02612311"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02613416"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02613507"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02614261"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02617589"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02618434"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02623699"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02624869"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02628574"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02635386"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02646748"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02647359"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02648347"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02654132"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02657343"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02659020"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02663895"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02675426"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02680574"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02683239"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02684032"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02689141"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02691182"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02706847"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02706873"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02706951"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02709655"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02714218"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02718300"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02720523"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02720744"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02725593"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02737475"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02738450"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02741570"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02742090"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02755597"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02756611"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02756845"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02758626"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02758665"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02759588"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02771860"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02781584"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02793128"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02794168"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02794285"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02807883"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02809131"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02819635"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02823574"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02833844"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02841579"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02856113"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02864251"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02865850"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02867813"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02870920"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02880956"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02882308"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02891226"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02892149"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02896192"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02898077"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02899195"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02899299"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02904954"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02914522"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02914561"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02915744"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02917772"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02923921"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02924376"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02927314"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02928224"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02929329"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02933697"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02939014"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02948959"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02949830"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02955212"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02958865"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02959658"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02963766"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02968849"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02971683"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02980731"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02983006"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02987543"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02988973"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02990338"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT02993406"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03001882"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03013491"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03018730"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03019185"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03022045"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03022097"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03036150"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03047395"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03053440"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03057951"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03057977"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03060447"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03061812"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03064126"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03072771"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03073200"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03077412"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03085485"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03086343"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03086369"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03095612"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03099304"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03104413"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03105128"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03106987"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03110380"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03112603"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03117049"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03118570"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03118674"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03128411"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03129100"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03136653"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03139604"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03145064"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03148795"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03149549"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03156621"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03158688"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03161093"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03161132"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03167619"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03170271"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03175367"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03178487"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03180684"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03181893"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03181932"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03183128"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03185013"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03186209"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03188666"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03194867"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03205761"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03206918"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03206970"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03209973"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03213457"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03214250"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03226522"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03234907"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03237325"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03251144"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03252587"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03257267"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03277248"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03277261"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03279289"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03283371"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03284723"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03286842"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03287960"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03292146"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03298893"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03303066"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03304054"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03304379"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03317002"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03317457"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03322540"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03322566"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03325816"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03329092"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03329690"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03332173"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03332212"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03334435"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03334851"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03335371"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03336216"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03338010"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03338816"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03340974"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03345810"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03345836"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03345849"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03346434"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03347279"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03353350"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03359785"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03364309"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03367403"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03371355"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03374488"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03377699"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03380130"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03382639"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03385239"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03387761"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03394924"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03395080"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03397134"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03398148"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03399786"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03401229"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03406078"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03414983"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03416179"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03416244"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03419897"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03422653"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03424122"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03427125"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03427814"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03428100"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03428126"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03430843"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03432533"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03434158"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03435081"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03438396"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03439943"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03440814"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03442751"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03448978"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03452488"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03473977"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03476239"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03478787"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03480022"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03482011"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03482752"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03485911"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03485976"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03486457"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03486899"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03486912"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03493282"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03499795"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03500549"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03502616"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03510715"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03510884"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03525600"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03525613"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03529773"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03535194"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03546907"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03548220"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03548415"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03548935"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03548987"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03552757"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03553563"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03557307"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03559699"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03561883"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03570697"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03571828"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03573297"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03574597"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03575065"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03590210"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03594747"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03595618"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03601637"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03606213"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03611582"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03611751"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03614923"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03616964"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03619213"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03620747"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03624127"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03625505"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03626012"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03626662"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03627767"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03631732"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03633396"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03633617"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03635983"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03636269"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03639714"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03650452"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03653026"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03661138"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03666143"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03668119"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03669588"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03670810"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03672175"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03682705"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03682770"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03688074"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03689374"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03689712"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03689946"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03689972"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03691779"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03691974"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03693430"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03694353"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03706040"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03714152"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03714828"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03715829"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03720470"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03721172"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03725852"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03729362"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03730662"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03730961"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03732638"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03732807"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03736785"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03737240"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03738215"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03738397"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03739203"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03739866"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03740919"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03744676"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03745638"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03745651"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03745820"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03746522"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03750552"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03751436"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03751657"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03755934"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03759392"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03759587"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03762447"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03762564"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03767543"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03770403"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03773978"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03775200"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03777436"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03779841"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03781479"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03782532"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03785925"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03796676"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03798080"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03798366"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03800472"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03809988"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03811574"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03812224"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03818256"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03818308"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03818607"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03821402"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03823391"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03827018"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03827655"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03830281"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03830866"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03831880"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03836053"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03837743"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03838731"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03845517"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03846427"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03850483"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03852433"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03856047"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03858634"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03859427"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03861039"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03861052"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03862716"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03873116"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03875482"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03877224"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03877237"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03881059"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03882970"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03883113"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03884842"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03889639"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03895372"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03903822"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03905330"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03907969"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03912259"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03922750"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03925246"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03926117"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03926130"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03926169"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03926195"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03929744"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03930732"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03931291"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03931785"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03934216"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03934307"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03941873"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03951077"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03951753"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03951805"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03952130"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03952143"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03954834"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03960645"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03962738"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03963232"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03963401"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03968159"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03969719"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03970733"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03978520"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03978611"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03979313"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03985293"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03987451"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03987919"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03989232"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03990363"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT03991884"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04003974"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04004221"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04016779"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04017832"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04026165"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04030598"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04038437"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04039503"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04040192"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04042740"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04043806"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04045145"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04050553"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04052425"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04057573"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04057937"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04058028"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04071366"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04074161"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04079803"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04081337"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04081350"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04083222"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04085601"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04091087"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04091360"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04091646"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04092452"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04102007"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04102189"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04102579"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04105972"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04106557"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04109547"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04112303"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04116632"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04120194"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04124926"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04125810"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04126733"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04128007"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04130802"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04134091"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04134936"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04140695"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04143594"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04143945"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04146363"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04150341"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04157751"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04167462"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04167670"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04170543"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04176991"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04178967"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04181723"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04183335"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04186871"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04188379"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04197479"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04198363"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04202679"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04206605"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04209114"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04210245"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04211363"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04211389"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04212169"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04214860"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04217590"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04230213"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04232813"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04233034"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04235959"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04243837"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04250337"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04250350"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04251156"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04259346"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04260191"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04268069"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04270760"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04276207"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04281472"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04285229"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04285580"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04292730"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04292899"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04294472"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04297917"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04299048"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04305275"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04305405"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04308681"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04311411"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04315298"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04322604"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04322708"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04327024"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04327388"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04345367"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04345471"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04349098"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04353817"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04360187"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04362137"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04364035"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04375397"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04378569"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04379713"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04380142"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04382586"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04383938"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04396756"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04399538"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04402866"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04405245"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04408924"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04409262"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04413617"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04416906"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04417894"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04421027"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04426695"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04427501"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04430855"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04431453"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04433585"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04440163"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04442490"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04442503"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04449861"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04450394"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04451720"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04452318"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04459767"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04460885"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04461483"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04469114"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04470908"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04474197"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04476030"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04476043"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04483505"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04484935"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04491604"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04492020"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04493502"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04493541"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04495179"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04497987"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04507906"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04509674"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04510493"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04513704"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04515849"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04516291"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04516746"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04518410"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04519567"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04523571"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04524403"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04530344"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04530604"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04530838"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04533399"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04534842"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04535986"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04537923"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04539262"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04541186"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04542057"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04545060"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04546425"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04551898"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04556734"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04556760"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04563702"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04568031"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04570657"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04571060"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04574362"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04577781"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04577794"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04580407"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04585776"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04588259"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04588298"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04588727"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04590586"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04591626"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04592419"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04595370"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04598269"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04605991"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04607980"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04612725"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04616027"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04617275"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04625972"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04626297"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04627532"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04629703"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04630067"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04631016"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04634253"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04634409"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04642079"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04648241"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04652102"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04652479"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04652518"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04656301"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04657003"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04657016"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04657666"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04659161"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04660643"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04661514"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04664153"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04666441"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04675021"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04677543"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04681729"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04682639"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04687137"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04688164"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04702997"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04706793"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04707313"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04707469"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04709575"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04709835"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04712110"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04712903"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04713592"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04723394"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04724837"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04725240"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04735432"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04738123"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04747197"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04753606"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04756531"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04760314"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04760626"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04763564"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04768855"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04769869"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04770389"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04770532"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04772885"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04773587"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04773600"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04776746"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04783766"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04788511"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04795531"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04799158"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04809220"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04811040"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04817332"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04818346"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04833855"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04842747"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04843761"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04844918"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04846231"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04848480"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04852978"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04855240"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04856007"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04856891"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04856917"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04862416"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04867785"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04870112"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04875533"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04880850"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04881760"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04887064"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04896541"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04902885"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04912063"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04913675"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04916470"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04927247"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04927975"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04952597"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04957914"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04958226"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04960202"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04962022"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04962230"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04964089"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04964557"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04973228"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04973449"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04977336"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04982575"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04988867"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04992065"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04994106"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04998201"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT04999839"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05005312"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05006885"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05021978"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05024032"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05032950"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05033080"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05035095"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05038904"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05038982"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05047601"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05048719"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05051579"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05062759"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05064449"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05064735"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05064800"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05070312"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05076149"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05082116"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05086445"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05094050"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05096208"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05098041"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05099640"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05108922"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05112419"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05112536"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05127421"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05127473"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05134727"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05137717"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05144984"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05153148"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05165394"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05175131"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05177770"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05195528"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05262387"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05266456"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05266586"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05270460"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05274269"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05299359"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05310084"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05320094"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05320393"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05351047"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05375955"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05408429"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05413369"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05421078"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05437848"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05444569"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05450549"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05453942"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05463068"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05478252"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05486195"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05533411"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05538312"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05576662"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05623839"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05652660"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05673889"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05799495"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT05804162"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT06022224"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT06049329"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT06067191"
+    },
+    {
+      "error": "HTTPStatusError",
+      "nct_id": "NCT06091579"
+    }
+  ],
+  "format_version": "1.0",
+  "generated_at": "2026-09-14T17:53:22.260426+00:00",
+  "official_current_record_count": 0,
+  "records": [],
+  "registry_sha256": "ae5fc44fb4d7ae72fb3a0b0ff6be15a4439b0602e001734c62f8deea7f68c20c",
+  "research_mapping_role": "NCT_TICKER_CANDIDATE_DISCOVERY_ONLY",
+  "research_outcome_labels_used": false,
+  "role": "CLINICAL_DISCOVERY_ONLY_NOT_FROZEN_COHORT"
+}

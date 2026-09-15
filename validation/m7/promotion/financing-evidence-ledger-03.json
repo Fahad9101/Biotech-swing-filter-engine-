@@ -1,0 +1,82 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-15",
+  "role": "PREFREEZE_TARGETED_FINANCING_QUOTA_REPAIR_WITHIN_EXISTING_CANDIDATE_POPULATION",
+  "market_outcomes_inspected": false,
+  "cohort_frozen": false,
+  "trigger": "Historical-universe screening of the original financing evidence set reduced the universe-stage financing survivor reserve to 17, creating an exact deficit of three versus the frozen >=20 financing requirement. Existing acquired candidates were searched before reopening event acquisition.",
+  "qualification_rule": "Count only actual issuer equity or equity-linked dilution occurring from T-90 through T+30. Theoretical shelf or ATM capacity without actual issuance is not sufficient.",
+  "rows": [
+    {
+      "candidate_id": "P3-2022-MDGL-MAESTRO-NASH",
+      "event_date": "2022-12-19",
+      "ticker": "MDGL",
+      "issuer": "Madrigal Pharmaceuticals, Inc.",
+      "historical_universe_status": "PASS",
+      "financing_date": "2022-12-23",
+      "relative_day": 4,
+      "financing_type": "REGISTERED_DIRECT_COMMON_AND_CONVERTIBLE_PREFERRED_STOCK",
+      "gross_proceeds_usd": 100000000,
+      "securities": "400,000 Series B Convertible Preferred shares convertible into common stock plus 44,444 common shares",
+      "evidence_summary": "Madrigal entered a definitive securities purchase agreement on December 21, 2022, two days after the MAESTRO-NASH catalyst, for $90 million of Series B convertible preferred stock and $10 million of common stock. SEC closing counsel documentation dated December 23, 2022 confirms the issuance and sale transaction. This is actual equity-linked dilution, not unused financing capacity.",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1157601/000119312522311537/d434336d8k.htm",
+        "https://www.sec.gov/Archives/edgar/data/1157601/000119312522311537/d434336dex51.htm",
+        "https://www.sec.gov/Archives/edgar/data/1157601/000119312522311537/d434336dex991.htm"
+      ],
+      "status": "QUALIFIES",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2022-AMLX-RELYVRIO",
+      "event_date": "2022-09-29",
+      "ticker": "AMLX",
+      "issuer": "Amylyx Pharmaceuticals, Inc.",
+      "historical_universe_status": "PASS",
+      "financing_date": "2022-10-11",
+      "relative_day": 12,
+      "financing_type": "UNDERWRITTEN_PUBLIC_OFFERING_OF_COMMON_STOCK",
+      "gross_proceeds_usd": 246300000,
+      "net_proceeds_usd": 230800000,
+      "securities": "7,697,812 common shares including full underwriter option",
+      "evidence_summary": "Following the September 29 RELYVRIO approval, Amylyx priced its upsized follow-on offering on October 6 and completed the sale on October 11, 2022. Contemporaneous SEC reporting states gross proceeds were approximately $246.3 million and net proceeds approximately $230.8 million.",
+      "source_urls": [
+        "https://investors.amylyx.com/news-releases/news-release-details/amylyx-pharmaceuticals-announces-pricing-upsized-public-offering",
+        "https://investors.amylyx.com/news-releases/news-release-details/amylyx-pharmaceuticals-announces-closing-upsized-public-offering",
+        "https://www.sec.gov/Archives/edgar/data/1658551/000095017022024465/amlx-20220930.htm"
+      ],
+      "status": "QUALIFIES",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "EC-2024-TSHA-TSHA102",
+      "event_date": "2024-06-18",
+      "ticker": "TSHA",
+      "issuer": "Taysha Gene Therapies, Inc.",
+      "historical_universe_status": "PASS",
+      "financing_date": "2024-06-27",
+      "relative_day": 9,
+      "financing_type": "UNDERWRITTEN_PUBLIC_OFFERING_OF_COMMON_STOCK_AND_PRE_FUNDED_WARRANTS",
+      "gross_proceeds_usd_initial": 75000000,
+      "total_net_proceeds_usd_including_option": 76800000,
+      "securities": "14,361,113 common shares plus pre-funded warrants for 18,972,221 shares at initial closing; later underwriter option exercise remained inside T+30",
+      "evidence_summary": "After the June 18 TSHA-102 clinical-data catalyst, Taysha commenced the offering June 25, priced it June 26 and completed the initial closing June 27. Q2 2024 SEC reporting records the actual issuance and approximately $76.8 million total net proceeds including the later option exercise, which also occurred within T+30.",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1806310/000119312524169191/d857341d8k.htm",
+        "https://www.sec.gov/Archives/edgar/data/1806310/000119312524169191/d857341dex991.htm",
+        "https://www.sec.gov/Archives/edgar/data/1806310/000095017024095082/tsha-20240630.htm"
+      ],
+      "status": "QUALIFIES",
+      "outcome_inspected_for_selection": false
+    }
+  ],
+  "summary": {
+    "required_replacement_survivors": 3,
+    "qualified_existing_candidate_replacements": 3,
+    "new_event_acquisition_required": false,
+    "market_outcomes_used_for_selection": 0
+  },
+  "promotion_boundary": "These three rows restore candidate-level financing reserve only because each already has historical-universe PASS. Final financing quota remains provisional until timestamp/conference, point-in-time evidence, concentration, eligible-registry and deterministic cohort-freeze requirements are satisfied."
+}

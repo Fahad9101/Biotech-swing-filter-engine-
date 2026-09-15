@@ -1,0 +1,53 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-15",
+  "role": "PREFREEZE_FINANCING_EVIDENCE_PROMOTION_INTEGRATION",
+  "market_outcomes_inspected": false,
+  "cohort_frozen": false,
+  "source_financing_ledgers": [
+    "validation/m7/promotion/financing-evidence-ledger-01.json",
+    "validation/m7/promotion/financing-evidence-ledger-02.json",
+    "validation/m7/promotion/financing-evidence-ledger-03.json"
+  ],
+  "latest_universe_batch": "validation/m7/promotion/historical-universe-ledger-19.json",
+  "quota_requirement": 20,
+  "rows": [
+    {"candidate_id":"EC-2020-SLS-GPS","ticker":"SLS","financing_status":"QUALIFIES","historical_universe_status":"FAIL","universe_reason":"INVESTABILITY_FLOOR_20_SESSION_MEDIAN_DAILY_DOLLAR_VOLUME_BELOW_2000000"},
+    {"candidate_id":"REG-2023-TVTX-FILSPARI","ticker":"TVTX","financing_status":"QUALIFIES","historical_universe_status":"PASS"},
+    {"candidate_id":"EC-2020-CRNX-CRN01941","ticker":"CRNX","financing_status":"QUALIFIES","historical_universe_status":"FAIL","universe_reason":"INVESTABILITY_FLOOR_20_SESSION_MEDIAN_DAILY_DOLLAR_VOLUME_BELOW_2000000"},
+    {"candidate_id":"REG-2024-IOVA-AMTAGVI","ticker":"IOVA","financing_status":"QUALIFIES","historical_universe_status":"PASS"},
+    {"candidate_id":"CO-2019-CNST-MANIFEST","ticker":"CNST","financing_status":"QUALIFIES","historical_universe_status":"PASS","remaining_promotion_blocker":"VERIFY_CONFERENCE_EARLIEST_MATERIAL_AVAILABILITY"},
+    {"candidate_id":"CO-2020-ONCT-CIRLLASH","ticker":"ONCT","financing_status":"QUALIFIES","historical_universe_status":"PASS","remaining_promotion_blocker":"VERIFY_CONFERENCE_EARLIEST_MATERIAL_AVAILABILITY"},
+    {"candidate_id":"P2-2019-RETA-MOXIE","ticker":"RETA","financing_status":"QUALIFIES","historical_universe_status":"PASS"},
+    {"candidate_id":"EC-2021-RUBY-RTX240","ticker":"RUBY","financing_status":"QUALIFIES","historical_universe_status":"PASS"},
+    {"candidate_id":"NEG-P2-2018-MNLO-ATOMIK","ticker":"MNLO","financing_status":"QUALIFIES","historical_universe_status":"FAIL","universe_reason":"INVESTABILITY_FLOOR_MINIMUM_VALID_SESSION_COUNT_BELOW_60"},
+    {"candidate_id":"REG-2021-ASND-SKYTROFA","ticker":"ASND","financing_status":"QUALIFIES","historical_universe_status":"PASS"},
+    {"candidate_id":"EC-2020-CRSP-CTX001","ticker":"CRSP","financing_status":"QUALIFIES","historical_universe_status":"PASS"},
+    {"candidate_id":"P2-2023-ETNB-ENLIVEN","ticker":"ETNB","financing_status":"QUALIFIES","historical_universe_status":"PASS"},
+    {"candidate_id":"P2-2019-TGTX-UNITYNHL","ticker":"TGTX","financing_status":"QUALIFIES","historical_universe_status":"PASS","remaining_promotion_blocker":"RESOLVE_EXACT_FIRST_PUBLIC_TIMESTAMP"},
+    {"candidate_id":"P2-2022-AKRO-HARMONY","ticker":"AKRO","financing_status":"QUALIFIES","historical_universe_status":"PASS"},
+    {"candidate_id":"P2-2022-CINC-BRIGHTN","ticker":"CINC","financing_status":"QUALIFIES","historical_universe_status":"PASS"},
+    {"candidate_id":"P2-2023-MLTX-MIRA","ticker":"MLTX","financing_status":"QUALIFIES","historical_universe_status":"PASS"},
+    {"candidate_id":"P2-2024-GPCR-GSBR1290","ticker":"GPCR","financing_status":"QUALIFIES","historical_universe_status":"PASS","remaining_promotion_blocker":"RESOLVE_EXACT_FIRST_PUBLIC_TIMESTAMP"},
+    {"candidate_id":"P2-2024-RXRX-SYCAMORE","ticker":"RXRX","financing_status":"QUALIFIES","historical_universe_status":"PASS"},
+    {"candidate_id":"P2-2023-FWBI-SPAN","ticker":"FWBI","financing_status":"QUALIFIES","historical_universe_status":"FAIL","universe_reason":"INVESTABILITY_FLOOR_20_SESSION_MEDIAN_DAILY_DOLLAR_VOLUME_BELOW_2000000"},
+    {"candidate_id":"CO-2022-KROS-KER050ASH","ticker":"KROS","financing_status":"QUALIFIES","historical_universe_status":"PASS","remaining_promotion_blocker":"VERIFY_CONFERENCE_EARLIEST_MATERIAL_AVAILABILITY"},
+    {"candidate_id":"P3-2023-GERN-IMERGE","ticker":"GERN","financing_status":"QUALIFIES","historical_universe_status":"PASS","single_asset_status":"QUALIFIES","source_ledger":"validation/m7/promotion/financing-evidence-ledger-02.json"},
+    {"candidate_id":"P3-2022-MDGL-MAESTRO-NASH","ticker":"MDGL","financing_status":"QUALIFIES","historical_universe_status":"PASS","single_asset_status":"QUALIFIES","source_ledger":"validation/m7/promotion/financing-evidence-ledger-03.json"},
+    {"candidate_id":"REG-2022-AMLX-RELYVRIO","ticker":"AMLX","financing_status":"QUALIFIES","historical_universe_status":"PASS","single_asset_status":"QUALIFIES","source_ledger":"validation/m7/promotion/financing-evidence-ledger-03.json"},
+    {"candidate_id":"EC-2024-TSHA-TSHA102","ticker":"TSHA","financing_status":"QUALIFIES","historical_universe_status":"PASS","single_asset_status":"QUALIFIES","source_ledger":"validation/m7/promotion/financing-evidence-ledger-03.json"}
+  ],
+  "summary": {
+    "financing_qualified_candidates": 24,
+    "historical_universe_pass": 20,
+    "historical_universe_fail": 4,
+    "historical_universe_pending": 0,
+    "current_financing_survivor_reserve": 20,
+    "candidate_level_universe_stage_quota_buffer": 0,
+    "final_frozen_financing_quota_met": false,
+    "new_event_acquisition_required_for_financing_repair": false
+  },
+  "next_action": "Financing reserve is restored to exactly twenty historical-universe PASS candidates. Preserve all twenty through exact timestamp/conference availability, point-in-time evidence, concentration, eligible-registry and deterministic cohort-freeze checks. If any later attrition occurs, first search the existing 173-row population for another independently verified actual financing before reopening targeted acquisition."
+}

@@ -1,0 +1,44 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-15",
+  "role": "PREFREEZE_HISTORICAL_SECURITY_IDENTITY_EVIDENCE",
+  "market_outcomes_inspected": false,
+  "cohort_frozen": false,
+  "scope": "Security identity for the targeted GH Research single-asset replacement candidate.",
+  "rows": [
+    {
+      "candidate_id": "P2-2021-GHRS-GH001",
+      "event_date": "2021-12-06",
+      "legal_issuer": "GH Research PLC",
+      "historical_ticker": "GHRS",
+      "cik": "0001855129",
+      "exchange": "The Nasdaq Global Market",
+      "security_identity": "Ordinary shares, nominal value $0.025 per share",
+      "listing_evidence": "The pre-event registration statement applied to list GH Research PLC ordinary shares on the Nasdaq Global Market under GHRS. Contemporaneous SEC interim financial statements document that the company completed its Nasdaq Global Market IPO in June 2021, and Alpaca SIP contains continuous GHRS daily trading history beginning June 25, 2021.",
+      "ticker_change_or_reorganization_before_event": "PRE_IPO_CORPORATE_REORGANIZATION_AND_2_50_FOR_1_SHARE_CONSOLIDATION_COMPLETED_BEFORE_LISTED_TRADING; NO_POST_LISTING_TICKER_CHANGE_OR_REORGANIZATION_IDENTIFIED_BEFORE_EVENT",
+      "identity_status": "IDENTITY_CONFIRMED",
+      "us_listing_status": "US_LISTING_CONFIRMED_BOE_UNIVERSE_PENDING",
+      "historical_universe_eligible": null,
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1855129/000114036121021557/nt10022430x4_f1a.htm",
+        "https://www.sec.gov/Archives/edgar/data/1855129/000095010321014497/dp158172_ex9901.htm",
+        "https://www.sec.gov/Archives/edgar/data/1855129/000114036121021842/nt10022430x7_8a12b.htm"
+      ],
+      "evidence_dates": [
+        "2021-06-21",
+        "2021-09-23",
+        "2021-06-22"
+      ],
+      "ambiguity": "FOREIGN_PRIVATE_ISSUER_ORDINARY_SHARES_DIRECTLY_LISTED_ON_NASDAQ_NOT_ADR",
+      "outcome_inspected_for_selection": false
+    }
+  ],
+  "summary": {
+    "rows": 1,
+    "identity_confirmed": 1,
+    "us_listing_confirmed": 1,
+    "historical_boe_universe_eligible_confirmed": 0
+  }
+}

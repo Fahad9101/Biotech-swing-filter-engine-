@@ -1,0 +1,82 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-15",
+  "role": "PREFREEZE_HISTORICAL_SECURITY_IDENTITY_SUMMARY",
+  "market_outcomes_inspected": false,
+  "cohort_frozen": false,
+  "source_ledgers": [
+    "validation/m7/promotion/historical-security-identity-ledger-01.json",
+    "validation/m7/promotion/historical-security-identity-ledger-02.json",
+    "validation/m7/promotion/historical-security-identity-ledger-03.json",
+    "validation/m7/promotion/historical-security-identity-ledger-04.json",
+    "validation/m7/promotion/historical-security-identity-ledger-05.json",
+    "validation/m7/promotion/historical-security-identity-ledger-06.json"
+  ],
+  "original_single_asset_quota_reserve": {
+    "candidate_count": 20,
+    "identity_confirmed": 20,
+    "us_exchange_listing_confirmed": 20,
+    "identity_pending": 0
+  },
+  "targeted_replacement_identity": {
+    "candidate_count": 2,
+    "candidate_ids": [
+      "P3-2023-RAIN-MANTRA",
+      "P2-2021-GHRS-GH001"
+    ],
+    "identity_confirmed": 2,
+    "us_exchange_listing_confirmed": 2,
+    "identity_pending": 0
+  },
+  "combined_identity_and_completed_universe_status": {
+    "candidate_count": 22,
+    "identity_confirmed": 22,
+    "us_exchange_listing_confirmed": 22,
+    "historical_universe_evaluated": 7,
+    "historical_universe_eligible_confirmed": 5,
+    "historical_universe_excluded": 2,
+    "historical_universe_pending": 15,
+    "known_not_yet_excluded_single_asset_reserve": 20,
+    "eligible_candidate_ids": [
+      "P2-2022-CINC-BRIGHTN",
+      "P2-2022-AKRO-HARMONY",
+      "P2-2023-ETNB-ENLIVEN",
+      "P2-2023-MLTX-MIRA",
+      "P2-2021-GHRS-GH001"
+    ],
+    "excluded_candidate_ids": [
+      "NEG-P2-2018-MNLO-ATOMIK",
+      "P3-2023-RAIN-MANTRA"
+    ],
+    "boundary_note": "Known-not-yet-excluded is not frozen eligibility. Fifteen identity-confirmed candidates still require historical-universe testing and all candidates still require the remaining M7 promotion checks."
+  },
+  "special_cases": [
+    {
+      "candidate_id": "P2-2023-AEON-ABP450",
+      "issue": "The event security traded on NYSE American after the July 2023 business combination, not Nasdaq. NYSE American is allowed by the frozen BOE source-population contract, but all investability floors still must be verified before promotion."
+    },
+    {
+      "candidate_id": "P3-2025-OPT-COAST",
+      "issue": "The U.S. event security is the Nasdaq-listed OPT ADS, each representing eight Australian ordinary shares. U.S. historical market reconstruction must use the ADS security rather than the ASX ordinary shares."
+    },
+    {
+      "candidate_id": "REG-2024-VRNA-OHTUVAYRE",
+      "issue": "The U.S. event security is the Nasdaq-listed VRNA ADS, each representing eight ordinary shares. The ordinary shares themselves were no longer publicly traded after AIM cancellation."
+    },
+    {
+      "candidate_id": "NEG-P2-2020-MNLO-CPUO",
+      "issue": "MNLO is correct at the February 2020 event. The later VYNE corporate name/ticker change occurred in September 2020 and must not be back-applied."
+    },
+    {
+      "candidate_id": "P2-2023-PRDS-POMOTRELVIR",
+      "issue": "The public parent/security arose from the earlier business combination; PRDS identity is confirmed pre-event and must not be confused with Old Pardes subsidiary identity."
+    },
+    {
+      "candidate_id": "P2-2021-GHRS-GH001",
+      "issue": "GHRS is a foreign-private-issuer ordinary share directly listed on Nasdaq, not an ADR. The pre-IPO corporate reorganization and 2.50-for-1 share consolidation occurred before listed trading and must not be treated as a post-listing continuity break."
+    }
+  ],
+  "promotion_boundary": "Security identity/listing proof is complete for the original 20 single-asset quota reserve events plus two targeted replacements. Historical-universe testing has resolved seven of those 22: five pass and two fail. No row is promoted into the authoritative registry from identity or investability evidence alone."
+}

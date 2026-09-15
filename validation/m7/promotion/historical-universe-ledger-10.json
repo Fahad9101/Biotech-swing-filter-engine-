@@ -1,0 +1,60 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-15",
+  "role": "PREFREEZE_HISTORICAL_UNIVERSE_AND_INVESTABILITY_EVIDENCE",
+  "market_outcomes_inspected": false,
+  "cohort_frozen": false,
+  "method": {
+    "market_data_provider": "Alpaca",
+    "feed": "SIP",
+    "bars": "RAW_AS_TRADED_DAILY",
+    "corporate_actions": "EXPLICIT_SEPARATE_QUERY",
+    "liquidity_check": "20 complete pre-event sessions ending 2023-01-03; both raw close x volume and raw VWAP x volume exceed the frozen $2,000,000 median threshold.",
+    "outcome_boundary": "The 2023-01-04 event-session bar is excluded because the first-public IMerge disclosure occurred pre-market at 08:00 ET."
+  },
+  "rows": [
+    {
+      "candidate_id": "P3-2023-GERN-IMERGE",
+      "event_date": "2023-01-04",
+      "first_public_timestamp": "2023-01-04T08:00:00-05:00",
+      "pre_event_cutoff_session": "2023-01-03",
+      "ticker": "GERN",
+      "source_population_exchange": "The Nasdaq Stock Market LLC",
+      "security_eligibility_pass": true,
+      "last_complete_pre_event_raw_close_usd": 2.40,
+      "price_floor_pass": true,
+      "liquidity_window_start": "2022-12-05",
+      "liquidity_window_end": "2023-01-03",
+      "liquidity_sessions": 20,
+      "median_daily_dollar_volume_close_x_volume_usd": 12488356.66,
+      "median_daily_dollar_volume_vwap_x_volume_usd": 12475884.61,
+      "liquidity_floor_pass": true,
+      "shares_outstanding": 381235046,
+      "shares_source_date": "2022-11-01",
+      "pre_event_market_cap_proxy_usd": 914964110.40,
+      "market_cap_formula": "last_complete_pre_event_raw_close_x_latest_pre_event_disclosed_common_shares_outstanding",
+      "market_cap_floor_pass": true,
+      "valid_session_floor_evidence": "GERN had been Nasdaq-listed for many years before the January 2023 catalyst, far exceeding the frozen 60-valid-session minimum.",
+      "valid_session_floor_pass": true,
+      "corporate_actions_through_cutoff": [],
+      "corporate_action_adjustment_required_for_floor_check": false,
+      "continuity_status": "CURRENT_PERIODIC_REPORTING_NON_SHELL_WITH_CONTINUOUS_PRE_EVENT_TRADING; NO_UNRESOLVED_GOING_CONCERN_OR_BANKRUPTCY_PROCESS_PREVENTING_BOUNDED_VALUATION_IDENTIFIED_IN_THE_PRE_EVENT_Q3_2022_FORM_10_Q",
+      "continuity_floor_pass": true,
+      "historical_universe_eligible": true,
+      "outcome_inspected_for_selection": false,
+      "sec_evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/886744/000095017022022712/gern-20220930.htm"
+      ],
+      "notes": "The Q3 2022 Form 10-Q reports 381,235,046 common shares outstanding as of November 1, 2022, confirms current reporting and non-shell status, and does not disclose a going-concern condition. Alpaca's separate corporate-action query returned no GERN corporate actions from 2022-01-01 through the catalyst date."
+    }
+  ],
+  "summary": {
+    "evaluated": 1,
+    "eligible": 1,
+    "excluded": 0,
+    "pending": 0,
+    "targeted_single_asset_replacement_survives_historical_universe": 1
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-15",
+  "role": "PREFREEZE_PROMOTION_EVIDENCE_INTEGRATION",
+  "market_outcomes_inspected": false,
+  "cohort_frozen": false,
+  "source_ledgers": {
+    "candidate_promotion_ledger": "validation/m7/promotion/candidate-promotion-ledger.json",
+    "financing_evidence_ledger": "validation/m7/promotion/financing-evidence-ledger-01.json",
+    "single_asset_evidence_ledger": "validation/m7/promotion/single-asset-evidence-ledger-01.json",
+    "duplicate_review": "validation/m7/promotion/duplicate-review-01.json"
+  },
+  "duplicate_resolution": {
+    "group_count": 6,
+    "resolved_count": 6,
+    "pending_count": 0,
+    "candidate_exclusions_from_duplicate_review": 0,
+    "resolution": "All six flagged groups are distinct catalysts/trials/indications or longitudinal releases with materially new clinical data. Conference rows still require earliest-availability verification before promotion."
+  },
+  "financing": {
+    "quota_requirement": 20,
+    "confirmed_candidate_level_count": 20,
+    "pending_count": 0,
+    "candidate_ids": [
+      "EC-2020-SLS-GPS",
+      "REG-2023-TVTX-FILSPARI",
+      "EC-2020-CRNX-CRN01941",
+      "REG-2024-IOVA-AMTAGVI",
+      "CO-2019-CNST-MANIFEST",
+      "CO-2020-ONCT-CIRLLASH",
+      "P2-2019-RETA-MOXIE",
+      "EC-2021-RUBY-RTX240",
+      "NEG-P2-2018-MNLO-ATOMIK",
+      "REG-2021-ASND-SKYTROFA",
+      "EC-2020-CRSP-CTX001",
+      "P2-2023-ETNB-ENLIVEN",
+      "P2-2019-TGTX-UNITYNHL",
+      "P2-2022-AKRO-HARMONY",
+      "P2-2022-CINC-BRIGHTN",
+      "P2-2023-MLTX-MIRA",
+      "P2-2024-GPCR-GSBR1290",
+      "P2-2024-RXRX-SYCAMORE",
+      "P2-2023-FWBI-SPAN",
+      "CO-2022-KROS-KER050ASH"
+    ],
+    "promotion_rule": "For these candidate IDs, financing_t_minus_90_to_t_plus_30 may be set true once the master promotion ledger is deterministically regenerated from source ledgers. This does not make the row otherwise eligible."
+  },
+  "single_asset": {
+    "quota_requirement": 20,
+    "confirmed_candidate_level_count": 20,
+    "qualified_not_quota_counted_count": 1,
+    "quota_candidate_ids": [
+      "NEG-P2-2018-MNLO-ATOMIK",
+      "NEG-P2-2020-MNLO-CPUO",
+      "CO-2021-IMRA-IMR687ASH",
+      "REG-2024-GERN-RYTELO",
+      "REG-2024-VRNA-OHTUVAYRE",
+      "REG-2022-AMLX-RELYVRIO",
+      "REG-2022-MRNS-ZTALMY",
+      "P2-2023-AEON-ABP450",
+      "P2-2023-ETNB-ENLIVEN",
+      "P2-2022-AKRO-HARMONY",
+      "P2-2022-CINC-BRIGHTN",
+      "P2-2023-MLTX-MIRA",
+      "P3-2024-NAMS-BROOKLYN",
+      "P3-2024-NAMS-BROADWAY",
+      "P3-2024-SAVA-RETHINK",
+      "P3-2025-SAVA-REFOCUS",
+      "P3-2025-OPT-COAST",
+      "P2-2025-ACTU-ELRAGLUSIB",
+      "EC-2024-TSHA-TSHA102",
+      "P2-2023-PRDS-POMOTRELVIR"
+    ],
+    "qualified_not_quota_counted_candidate_ids": ["P2-2020-ORPH-GAUCHER"],
+    "promotion_rule": "For quota candidate IDs, single_asset_issuer may be set true once the master promotion ledger is deterministically regenerated. Orphazyme remains single-asset but is not counted because separate U.S. historical-universe eligibility is unresolved/adverse."
+  },
+  "master_promotion_ledger_status": {
+    "raw_candidate_count": 165,
+    "promotion_status_counts_unchanged_until_remaining_blockers_are_resolved": {
+      "eligible": 0,
+      "excluded": 0,
+      "pending": 165
+    },
+    "note": "This integration artifact resolves specific evidence dimensions without falsely promoting candidates. Historical identity, exact event availability, historical universe, point-in-time science/capital structure and other row-specific blockers remain."
+  }
+}

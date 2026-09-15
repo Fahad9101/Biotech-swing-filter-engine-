@@ -1,0 +1,36 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-15",
+  "role": "PREFREEZE_HISTORICAL_SECURITY_IDENTITY_EVIDENCE",
+  "market_outcomes_inspected": false,
+  "cohort_frozen": false,
+  "scope": "Security identity for the targeted Rain Oncology single-asset replacement candidate.",
+  "rows": [
+    {
+      "candidate_id": "P3-2023-RAIN-MANTRA",
+      "event_date": "2023-05-22",
+      "legal_issuer": "Rain Oncology Inc.",
+      "historical_ticker": "RAIN",
+      "cik": "0001724979",
+      "exchange": "The Nasdaq Global Select Market",
+      "security_identity": "Common Stock, par value $0.001 per share",
+      "listing_evidence": "The pre-event 2022 Form 10-K identifies RAIN common stock as registered and traded on The Nasdaq Global Select Market. It also documents the April 2021 IPO, well before the event.",
+      "ticker_change_or_reorganization_before_event": "FORMER_CORPORATE_NAME_RAIN_THERAPEUTICS_INC_CHANGED_TO_RAIN_ONCOLOGY_INC; TICKER_REMAINED_RAIN",
+      "identity_status": "IDENTITY_CONFIRMED",
+      "us_listing_status": "US_LISTING_CONFIRMED_BOE_UNIVERSE_PENDING",
+      "historical_universe_eligible": null,
+      "evidence_urls": ["https://www.sec.gov/Archives/edgar/data/1724979/000155837023003331/rain-20221231x10k.htm"],
+      "evidence_dates": ["2023-03-09"],
+      "ambiguity": "NONE_MATERIAL_FOR_EVENT_DATE_SECURITY_IDENTITY",
+      "outcome_inspected_for_selection": false
+    }
+  ],
+  "summary": {
+    "rows": 1,
+    "identity_confirmed": 1,
+    "us_listing_confirmed": 1,
+    "historical_boe_universe_eligible_confirmed": 0
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "format_version": "1.1",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "role": "PREFREEZE_CROSS_BATCH_DUPLICATE_REVIEW",
+  "market_outcomes_inspected": false,
+  "reviewed_at": "2026-09-15",
+  "groups": [
+    {
+      "duplicate_group_id": "DUP-001",
+      "candidate_ids": ["REG-2020-IMMU-TRODELVY", "P3-2020-IMMU-ASCENT"],
+      "review_result": "NOT_DUPLICATE_DISTINCT_CATALYSTS",
+      "retained_primary_event": null,
+      "rationale": "The Phase III ASCENT efficacy readout and the separate FDA Trodelvy regulatory decision are distinct material catalysts even though they concern the same issuer/asset program.",
+      "source_urls": [
+        "https://www.globenewswire.com/news-release/2020/04/22/2020193/0/en/FDA-Grants-Accelerated-Approval-for-Immunomedics-Trodelvy-in-Previously-Treated-Metastatic-Triple-Negative-Breast-Cancer.html",
+        "https://www.globenewswire.com/news-release/2020/07/06/2057876/0/en/Immunomedics-Announces-Positive-Results-from-Phase-3-ASCENT-Study-of-TRODELVY-in-Previously-Treated-Patients-with-Metastatic-Triple-Negative-Breast-Cancer-mTNBC.html"
+      ],
+      "automatic_exclusion": false
+    },
+    {
+      "duplicate_group_id": "DUP-002",
+      "candidate_ids": ["P2-2019-AXSM-AXS05-SMOKING", "P3-2019-AXSM-GEMINI"],
+      "review_result": "NOT_DUPLICATE_DISTINCT_TRIALS_INDICATIONS",
+      "retained_primary_event": null,
+      "rationale": "These AXS-05 events concern different clinical programs and indications and are not the same underlying trial or dataset.",
+      "source_urls": [
+        "https://www.globenewswire.com/news-release/2019/04/15/1803810/0/en/Axsome-Therapeutics-Announces-AXS-05-Achieves-Primary-Endpoint-in-Phase-2-Trial-in-Smoking-Cessation.html",
+        "https://www.globenewswire.com/news-release/2019/12/16/1960786/33090/en/axsome-therapeutics-announces-axs-05-achieves-primary-endpoint-in-gemini-phase-3-trial-in-major-depressive-disorder.html"
+      ],
+      "automatic_exclusion": false
+    },
+    {
+      "duplicate_group_id": "DUP-003",
+      "candidate_ids": ["P3-2023-GMAB-INNOVATV301", "CO-2024-GMAB-TVASCO"],
+      "review_result": "NOT_DUPLICATE_DISTINCT_TRIALS_INDICATIONS",
+      "retained_primary_event": null,
+      "rationale": "The 2023 event is the Phase III innovaTV 301 cervical-cancer result. The 2024 ASCO row is a Phase II tisotumab vedotin dataset in recurrent/metastatic head-and-neck squamous cell carcinoma. Same asset does not make these the same underlying clinical event.",
+      "source_urls": [
+        "https://www.globenewswire.com/news-release/2023/09/04/2736906/0/en/Genmab-and-Seagen-Announce-That-TIVDAK-tisotumab-vedotin-tftv-Met-its-Primary-Endpoint-of-Improved-Overall-Survival-in-Patients-with-Recurrent-or-Metastatic-Cervical-Cancer-Compare.html",
+        "https://www.globenewswire.com/news-release/2024/06/03/2892268/0/en/investigational-tisotumab-vedotin-phase-2-data-demonstrates-encouraging-antitumor-activity-in-patients-with-recurrent-or-metastatic-head-and-neck-squamous-cell-carcinoma-hnscc.html"
+      ],
+      "automatic_exclusion": false
+    },
+    {
+      "duplicate_group_id": "DUP-004",
+      "candidate_ids": ["P3-2024-NAMS-BROOKLYN", "P3-2024-NAMS-BROADWAY"],
+      "review_result": "NOT_DUPLICATE_SEPARATE_PIVOTAL_TRIALS",
+      "retained_primary_event": null,
+      "rationale": "BROOKLYN and BROADWAY are separate pivotal studies with separate patient populations and separate first-public result disclosures.",
+      "source_urls": [
+        "https://www.globenewswire.com/news-release/2024/07/29/2920256/0/en/newamsterdam-pharma-announces-positive-topline-data-from-pivotal-phase-3-brooklyn-clinical-trial-evaluating-obicetrapib-in-patients-with-heterozygous-familial-hypercholesterolemia.html",
+        "https://www.globenewswire.com/news-release/2024/12/10/2994358/0/en/newamsterdam-pharma-announces-positive-topline-data-from-pivotal-phase-3-broadway-clinical-trial-evaluating-obicetrapib-in-patients-with-atherosclerotic-cardiovascular-disease-and-.html"
+      ],
+      "automatic_exclusion": false
+    },
+    {
+      "duplicate_group_id": "DUP-005",
+      "candidate_ids": ["P3-2024-SAVA-RETHINK", "P3-2025-SAVA-REFOCUS"],
+      "review_result": "NOT_DUPLICATE_SEPARATE_PIVOTAL_TRIALS",
+      "retained_primary_event": null,
+      "rationale": "RETHINK-ALZ and REFOCUS-ALZ are separate Phase III trials with separate result disclosures.",
+      "source_urls": [
+        "https://www.globenewswire.com/news-release/2024/11/25/2986578/8339/en/Cassava-Sciences-Topline-Phase-3-Data-Did-Not-Meet-Co-Primary-Endpoints.html",
+        "https://www.globenewswire.com/news-release/2025/03/25/3048697/8339/en/Cassava-Sciences-Reports-Topline-Phase-3-REFOCUS-ALZ-Data.html"
+      ],
+      "automatic_exclusion": false
+    },
+    {
+      "duplicate_group_id": "DUP-006",
+      "candidate_ids": ["CO-2023-MOLN-MP0533ASH", "CO-2024-MOLN-MP0533ASH", "CO-2025-MOLN-MP0533ASH"],
+      "review_result": "NOT_DUPLICATE_LONGITUDINAL_MATERIAL_NEW_DATASETS",
+      "retained_primary_event": null,
+      "rationale": "All three rows arise from the same Phase 1/2a MP0533 trial, but each annual ASH disclosure contains materially new clinical information first reported for additional dosing cohorts/regimens: 2023 initial cohorts 1-4 including a previously undisclosed complete response; 2024 comprehensive cohorts 1-7 plus a protocol/dosing redesign; and 2025 regimens through 9 with optimized dosing, higher exposure and an expanded responder dataset. They may remain distinct candidate catalysts, subject to separate first-public abstract/poster availability checks before promotion.",
+      "source_urls": [
+        "https://investors.molecularpartners.com/news-releases/news-release-details/molecular-partners-presents-positive-initial-data-first-four/",
+        "https://investors.molecularpartners.com/news-releases/news-release-details/molecular-partners-presents-clinical-data-supporting-its-ongoing",
+        "https://investors.molecularpartners.com/news-releases/news-release-details/molecular-partners-presents-updated-data-ongoing-phase-12a-trial/"
+      ],
+      "automatic_exclusion": false,
+      "promotion_caveat": "Conference first-public timing must use the earliest material abstract/poster/oral availability, not automatically the issuer press-release time."
+    }
+  ],
+  "resolved_nonduplicate_group_count": 6,
+  "pending_group_count": 0,
+  "excluded_candidate_count": 0,
+  "cohort_frozen": false
+}
