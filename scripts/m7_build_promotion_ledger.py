@@ -28,6 +28,7 @@ ACQUISITION_FILES = (
     "early-clinical-primary-batch-01.json",
     "conference-other-primary-batch-01.json",
     "negative-phase2-supplement-01.json",
+    "targeted-negative-supplement-02.json",
 )
 
 FORBIDDEN_MARKET_OUTCOME_FIELDS = {
