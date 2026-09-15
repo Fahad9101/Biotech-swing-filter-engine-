@@ -6,6 +6,7 @@
   "role": "PREFREEZE_TARGETED_SINGLE_ASSET_REPLACEMENT_EVIDENCE",
   "market_outcome_fields_permitted": false,
   "cohort_frozen": false,
+  "evidence_rule": "Only source material publicly available on or before the candidate event date may support the single-asset determination.",
   "rows": [
     {
       "candidate_id": "P2-2022-CINC-HALO",
@@ -70,12 +71,11 @@
       "asset": "sonelokimab",
       "meaningful_active_therapeutic_assets": ["sonelokimab"],
       "determination": "QUALIFIES",
-      "evidence_summary": "MoonLake's pre-event 2022 Form 10-K and 2023 reporting identify its development pipeline as sonelokimab across inflammatory indications. The company remained a single-asset company; ARGO is a distinct trial/indication of the same therapeutic asset.",
+      "evidence_summary": "MoonLake's pre-event 2022 Form 10-K describes its development pipeline as sonelokimab across inflammatory indications, with no distinct second therapeutic candidate. ARGO is a distinct trial/indication of the same single therapeutic asset.",
       "evidence_urls": [
-        "https://www.sec.gov/Archives/edgar/data/1821586/000162828023008604/mnlk-20221231.htm",
-        "https://www.sec.gov/Archives/edgar/data/1821586/000182158623000022/mnlk-20230930.htm"
+        "https://www.sec.gov/Archives/edgar/data/1821586/000162828023008604/mnlk-20221231.htm"
       ],
-      "source_dates": ["2023-03-20", "2023-11-08"],
+      "source_dates": ["2023-03-20"],
       "status": "QUALIFIES",
       "ambiguity": "MULTIPLE_INDICATIONS_AND_TRIALS_SAME_ASSET",
       "quota_replacement_candidate": true,
@@ -89,13 +89,13 @@
       "asset": "pegozafermin",
       "meaningful_active_therapeutic_assets": ["pegozafermin"],
       "determination": "QUALIFIES",
-      "evidence_summary": "89bio's pipeline was centered on pegozafermin across metabolic indications; ENTRIGUE and ENLIVEN are distinct trials of the same therapeutic asset rather than separate product candidates.",
+      "evidence_summary": "The pre-event 2021 Form 10-K describes pegozafermin as 89bio's development candidate across NASH and severe hypertriglyceridemia and does not identify a distinct second active therapeutic candidate. ENTRIGUE and ENLIVEN are different trials/indications of the same asset.",
       "evidence_urls": [
-        "https://www.sec.gov/Archives/edgar/data/1785173/000095017023007929/etnb-20221231.htm"
+        "https://www.sec.gov/Archives/edgar/data/1785173/000156459022011706/etnb-10k_20211231.htm"
       ],
-      "source_dates": ["2023-03-14"],
+      "source_dates": ["2022-03-10"],
       "status": "QUALIFIES",
-      "ambiguity": "LATER_ANNUAL_REPORT_CORROBORATES_SAME_ASSET_PIPELINE_BUT_HISTORICAL_UNIVERSE_FAILURE_PREVENTS_QUOTA_USE",
+      "ambiguity": "MULTIPLE_INDICATIONS_SAME_ASSET",
       "quota_replacement_candidate": true,
       "outcome_inspected_for_selection": false
     }
