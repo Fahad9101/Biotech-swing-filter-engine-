@@ -1,0 +1,54 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-15",
+  "role": "PREFREEZE_TARGETED_REPLACEMENT_DUPLICATE_AND_MATERIALITY_REVIEW",
+  "market_outcomes_inspected": false,
+  "cohort_frozen": false,
+  "decision_rule": "A later disclosure is not a separate event when it merely republishes the same underlying dataset. A distinct trial, indication, independently enrolled cohort with a different prespecified clinical question, or regulator milestone may be retained when the new information is independently valuation-relevant and first-public at the new event date.",
+  "groups": [
+    {
+      "group_id": "TD-01-CINC",
+      "candidate_ids": ["P2-2022-CINC-BRIGHTN", "P2-2022-CINC-HALO"],
+      "decision": "MATERIALLY_DISTINCT_EVENTS",
+      "rationale": "BrigHtn and HALO were separate randomized Phase 2 trials in resistant versus uncontrolled hypertension, with separately enrolled populations and separate first-public topline disclosures. HALO is not a conference repetition of BrigHtn data.",
+      "retained_candidate_ids": ["P2-2022-CINC-BRIGHTN", "P2-2022-CINC-HALO"],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "group_id": "TD-02-AKRO",
+      "candidate_ids": ["P2-2022-AKRO-HARMONY", "P2-2023-AKRO-SYMMETRY-COHORT-D", "P2-2023-AKRO-SYMMETRY-MAIN"],
+      "decision": "MATERIALLY_DISTINCT_EVENTS",
+      "rationale": "HARMONY is a separate F2-F3 pre-cirrhotic Phase 2b trial. SYMMETRY Cohort D is an independently enrolled expansion cohort of 31 patients already receiving GLP-1 therapy with T2D and F1-F3 fibrosis, with a 12-week primary safety/tolerability aim. The SYMMETRY main study is a separately randomized 182-patient compensated-cirrhosis F4 study with a 36-week histologic primary endpoint. Cohort D and the main study therefore answer different prespecified clinical questions in different patient cohorts and are not duplicate releases of one dataset.",
+      "retained_candidate_ids": ["P2-2022-AKRO-HARMONY", "P2-2023-AKRO-SYMMETRY-COHORT-D", "P2-2023-AKRO-SYMMETRY-MAIN"],
+      "evidence_urls": [
+        "https://www.globenewswire.com/news-release/2023/06/05/2681816/0/en/Akero-Therapeutics-Phase-2b-SYMMETRY-Cohort-D-Study-Met-Safety-Tolerability-Endpoints-and-Showed-Adding-EFX-to-GLP-1-Therapy-Significantly-Improved-Non-Invasive-Markers-of-NASH-Rel.html",
+        "https://www.globenewswire.com/news-release/2023/10/10/2757329/0/en/akero-therapeutics-reports-encouraging-36-week-analysis-of-96-week-phase-2b-symmetry-study-with-a-trend-on-fibrosis-improvement-and-statistically-significant-results-for-nash-resol.html"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "group_id": "TD-03-MLTX",
+      "candidate_ids": ["P2-2023-MLTX-MIRA", "P2-2023-MLTX-ARGO"],
+      "decision": "MATERIALLY_DISTINCT_EVENTS",
+      "rationale": "MIRA and ARGO are separate randomized Phase 2 trials of sonelokimab in hidradenitis suppurativa and active psoriatic arthritis respectively. They are separate indications, patient populations, protocols and first-public datasets.",
+      "retained_candidate_ids": ["P2-2023-MLTX-MIRA", "P2-2023-MLTX-ARGO"],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "group_id": "TD-04-ETNB",
+      "candidate_ids": ["P2-2022-ETNB-ENTRIGUE", "P2-2023-ETNB-ENLIVEN"],
+      "decision": "MATERIALLY_DISTINCT_EVENTS_BUT_EARLIER_EVENT_FAILS_SEPARATE_INVESTABILITY_GATE",
+      "rationale": "ENTRIGUE and ENLIVEN are separate Phase 2 programs of pegozafermin in severe hypertriglyceridemia and NASH, with separate protocols and datasets. ENTRIGUE is not excluded as a duplicate; it is excluded separately by the frozen liquidity floor.",
+      "retained_candidate_ids_before_other_gates": ["P2-2022-ETNB-ENTRIGUE", "P2-2023-ETNB-ENLIVEN"],
+      "outcome_inspected_for_selection": false
+    }
+  ],
+  "summary": {
+    "groups_reviewed": 4,
+    "duplicate_based_exclusions": 0,
+    "materially_distinct_groups": 4,
+    "market_outcomes_used": 0
+  }
+}
