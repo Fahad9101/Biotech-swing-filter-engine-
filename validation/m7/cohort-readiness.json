@@ -2,7 +2,7 @@
   "milestone": 7,
   "rules_version": "BOE-1.0.0",
   "m6_baseline_sha": "3060761a11f7bd85298f79efa8e262e5b8adedaf",
-  "reviewed_at": "2026-09-14",
+  "reviewed_at": "2026-09-15",
   "required_minimum_events": 120,
   "authoritative_events_frozen": 0,
   "authoritative_cohort_manifest_present": false,
@@ -36,7 +36,7 @@
     "known_negative_candidate_rows_before_deduplication": 43,
     "all_frozen_numerical_strata_have_reserve_capacity": true,
     "eligible_authoritative_registry_count": 0,
-    "note": "Reserve counts are acquisition capacity only. They are not eligible-event counts and cannot be used to freeze the cohort until promotion blockers, cross-batch deduplication, issuer concentration, financing-window, single-asset, historical-universe, and point-in-time evidence requirements are resolved."
+    "note": "Reserve counts are acquisition capacity only. They are not eligible-event counts and cannot be used to freeze the cohort until promotion blockers, issuer concentration, historical-universe, point-in-time evidence and all remaining promotion requirements are resolved."
   },
   "source_acquisition_status": {
     "regulatory_primary_batch_01": {
@@ -102,7 +102,7 @@
       "proposed_stratum": "CONFERENCE_OTHER",
       "status": "PRIMARY_SOURCE_CANDIDATE_BATCH_COMMITTED_NOT_FROZEN",
       "authoritative_events_promoted": 0,
-      "note": "Conference rows require verification of abstract/poster/oral first-public availability and cross-stratum deduplication before promotion."
+      "note": "Conference rows require verification of abstract/poster/oral first-public availability before promotion. Cross-batch duplicate flags have been resolved separately."
     },
     "negative_phase2_supplement_01": {
       "path": "validation/m7/acquisition/negative-phase2-supplement-01.json",
@@ -115,7 +115,7 @@
       "proposed_stratum": "PHASE_2_POC",
       "status": "PRIMARY_SOURCE_NEGATIVE_SUPPLEMENT_COMMITTED_NOT_FROZEN",
       "authoritative_events_promoted": 0,
-      "note": "Negative status is based on prespecified clinical endpoint failure, not market performance. Supplement must be deduplicated against the primary Phase II reserve before master-registry inclusion."
+      "note": "Negative status is based on prespecified clinical endpoint failure, not market performance. Supplement must still survive all promotion checks."
     },
     "sec_primary_from_github_runner": {
       "issuer_seeds_attempted": 220,
@@ -129,6 +129,36 @@
       "fetch_failures": 962,
       "status": "BLOCKED_BY_REMOTE_HTTP_ACCESS",
       "note": "Research labels remain excluded from outcome truth. Historical ClinicalTrials record versions remain mandatory before clinical-event promotion."
+    }
+  },
+  "promotion_evidence_status": {
+    "duplicate_review": {
+      "path": "validation/m7/promotion/duplicate-review-01.json",
+      "flagged_groups": 6,
+      "resolved_groups": 6,
+      "pending_groups": 0,
+      "duplicate_based_exclusions": 0,
+      "status": "RESOLVED_PREFREEZE_NO_MARKET_OUTCOMES"
+    },
+    "financing_evidence": {
+      "path": "validation/m7/promotion/financing-evidence-ledger-01.json",
+      "quota_requirement": 20,
+      "confirmed_candidate_level_count": 20,
+      "pending_count": 0,
+      "status": "CANDIDATE_LEVEL_QUOTA_MET_MUST_SURVIVE_FINAL_ELIGIBILITY"
+    },
+    "single_asset_evidence": {
+      "path": "validation/m7/promotion/single-asset-evidence-ledger-01.json",
+      "quota_requirement": 20,
+      "confirmed_quota_candidate_count": 20,
+      "additional_single_asset_not_quota_counted": 1,
+      "status": "CANDIDATE_LEVEL_QUOTA_MET_MUST_SURVIVE_FINAL_ELIGIBILITY",
+      "note": "Orphazyme is retained as a single-asset determination but not quota-counted because separate historical U.S.-universe eligibility at the event appears unresolved/adverse."
+    },
+    "integration": {
+      "path": "validation/m7/promotion/promotion-evidence-integration-01.json",
+      "master_promotion_status": "ALL_165_ROWS_REMAIN_PENDING_UNTIL_ALL_ROW_BLOCKERS_CLEAR",
+      "market_outcomes_inspected": false
     }
   },
   "historical_market_data_status": {
@@ -150,17 +180,17 @@
   },
   "blocking_findings": [
     "No authoritative frozen 120-event registry or cohort-manifest.json exists.",
-    "All five numerical stratum minima now have pre-freeze reserve capacity, but no reserve row is automatically eligible for the authoritative cohort.",
-    "The pre-freeze negative reserve is 43 candidate rows before deduplication and promotion; the final frozen cohort still must contain at least 40 verified negative underlying events.",
-    "Cross-batch deduplication and primary-stratum assignment remain incomplete, especially for conference/other disclosures that may overlap clinical program updates.",
+    "All five numerical stratum minima have pre-freeze reserve capacity, but no reserve row is automatically eligible for the authoritative cohort.",
+    "The pre-freeze negative reserve is 43 candidate rows; the final frozen cohort still must contain at least 40 verified negative underlying events after all promotion checks.",
+    "All six pre-freeze duplicate-review groups are resolved without market outcomes; conference rows still require earliest material abstract/poster/oral availability verification.",
     "Historical ticker/CIK/security identity and exact first-public availability remain unresolved for many rows.",
-    "Financing/dilution T-90 through T+30 and single-asset status have not yet been resolved for enough candidates to satisfy the frozen >=20 requirements.",
-    "Historical BOE universe/investability status and point-in-time scientific, SEC, capital-structure, and valuation evidence have not yet been reconstructed for an eligible >=120-event registry.",
+    "Candidate-level financing and single-asset evidence quotas are now each >=20, but those rows must still survive historical-universe, timestamp, point-in-time evidence, concentration and final registry eligibility checks before the frozen quotas can be declared met.",
+    "Historical BOE universe/investability status and point-in-time scientific, SEC, capital-structure and valuation evidence have not yet been reconstructed for an eligible >=120-event registry.",
     "Alpaca SIP raw bars plus separate corporate actions are a viable market-data route, but no real cohort has yet been reconstructed through that route.",
     "No real 2025 holdout has been locked before outcome inspection."
   ],
   "merge_ready": false,
   "milestone_complete": false,
   "milestone_8_allowed": false,
-  "required_action": "Stop expanding strata unless promotion attrition requires replacements. Consolidate and deduplicate the 165-row pre-freeze reserve, resolve historical identity/timestamps/universe status, establish >=20 financing-window and >=20 single-asset cases, verify enough point-in-time evidence to yield >=120 eligible events with all frozen constraints, then freeze with seed 100100 before any stock-outcome inspection. Do not reduce requirements or alter BOE-1.0.0."
+  "required_action": "Do not expand strata unless promotion attrition creates a quota shortage. Continue promotion by resolving historical security identity, exact first-public availability, historical BOE universe/investability and point-in-time evidence readiness across enough candidates to yield >=120 eligible events. Candidate-level duplicate review is complete and financing/single-asset evidence each have >=20 reserves, but frozen quotas are not satisfied until those rows survive eligibility and deterministic cohort freeze. Freeze the eligible registry with seed 100100 before any stock-outcome inspection. Do not reduce requirements or alter BOE-1.0.0."
 }
