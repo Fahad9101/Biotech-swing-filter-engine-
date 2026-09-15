@@ -22,16 +22,16 @@ def test_committed_status_is_derived_and_pending_is_not_pass() -> None:
     assert (ROOT / module.ROWS_OUTPUT).read_text() == module.render(rows)
     assert status["candidate_counts"] == {
         "total": 179,
-        "pass": 68,
-        "fail": 17,
-        "pending": 94,
-        "not_yet_excluded": 162,
+        "pass": 83,
+        "fail": 21,
+        "pending": 75,
+        "not_yet_excluded": 158,
     }
     negative = status["negative_reserve"]
-    assert negative["not_yet_excluded"] == 37
-    assert negative["pass"] == 17
-    assert negative["pending"] == 20
-    assert negative["maximum_provisional_buffer"] == -3
+    assert negative["not_yet_excluded"] == 34
+    assert negative["pass"] == 23
+    assert negative["pending"] == 11
+    assert negative["maximum_provisional_buffer"] == -6
     assert negative["final_negative_quota_satisfied"] is False
     assert status["financing_reserve"]["pass"] == 20
     assert status["single_asset_reserve"]["pass"] == 20
@@ -43,6 +43,9 @@ def test_committed_status_is_derived_and_pending_is_not_pass() -> None:
     assert strata["REGULATORY"]["pass"] == 22
     assert strata["REGULATORY"]["pending"] == 16
     assert strata["REGULATORY"]["maximum_provisional_buffer"] == 8
+    assert strata["PHASE_2_POC"]["pass"] == 28
+    assert strata["PHASE_2_POC"]["pending"] == 10
+    assert strata["PHASE_2_POC"]["maximum_provisional_buffer"] == 8
     for key, requirement in module.STRATUM_REQUIREMENTS.items():
         assert strata[key]["requirement"] == requirement
         assert strata[key]["maximum_provisional_buffer"] == (

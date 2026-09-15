@@ -60,7 +60,7 @@ def alpaca_daily_bars(ticker: str, start: str, end: str, feed: str = "sip") -> l
     while True:
         u = url + (f"&page_token={page_token}" if page_token else "")
         d = _get(u, _ALPACA_HEADERS)
-        bars.extend(d.get("bars", []))
+        bars.extend(d.get("bars") or [])
         page_token = d.get("next_page_token")
         if not page_token:
             break
@@ -102,12 +102,26 @@ def sec_shares_outstanding_history(cik: str) -> tuple[list[dict], str | None]:
 def latest_shares_outstanding_before(cik: str, cutoff_date: str) -> dict | None:
     """Most recent disclosed share count whose FILING date is <= cutoff_date (point-in-time).
     Returned dict includes a "concept" key naming the XBRL tag it came from.
+
+    Skips non-positive values: SEC XBRL occasionally contains a filer's tagging
+    error (observed: a Summit Therapeutics 6-K tagged
+    dei:EntityCommonStockSharesOutstanding=0, evidently a boilerplate/blank cover
+    page default, while its adjacent 20-F correctly showed ~73.6M) - a company
+    with 0 shares outstanding while actively trading is definitionally wrong, so
+    such rows are excluded rather than trusted at face value.
+
+    Among eligible rows, selects by latest "end" (period-end) date, not latest
+    "filed" date: a single 10-K/10-Q reports several comparative-year period-end
+    values that all share the same filed date (observed for Biogen: one FY2020
+    10-K, filed once, tags 197.2M for FY2018, 174.2M for FY2019 and 152.4M for
+    FY2020 as of the *same* filed date), so picking by filed date alone can pick
+    an arbitrary stale comparative-year figure instead of the most current one.
     """
     history, concept = sec_shares_outstanding_history(cik)
-    eligible = [h for h in history if h["filed"] <= cutoff_date]
+    eligible = [h for h in history if h["filed"] <= cutoff_date and h["val"] > 0]
     if not eligible:
         return None
-    row = max(eligible, key=lambda x: x["filed"])
+    row = max(eligible, key=lambda x: (x["end"], x["filed"]))
     return {**row, "concept": concept}
 
 
