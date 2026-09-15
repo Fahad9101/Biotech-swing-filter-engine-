@@ -1942,8 +1942,8 @@
       "stratum": "PHASE_3_PIVOTAL",
       "ticker": "VBLT",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-22.json",
+      "universe_status": "FAIL"
     },
     {
       "acquisition_path": "validation/m7/acquisition/phase3-primary-batch-01.json",
@@ -2140,8 +2140,8 @@
       "stratum": "PHASE_3_PIVOTAL",
       "ticker": "ONTX",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-22.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/phase3-primary-batch-01.json",
@@ -2212,8 +2212,8 @@
       "stratum": "PHASE_3_PIVOTAL",
       "ticker": "ERYP",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-22.json",
+      "universe_status": "FAIL"
     },
     {
       "acquisition_path": "validation/m7/acquisition/phase3-primary-batch-01.json",
@@ -2248,8 +2248,8 @@
       "stratum": "PHASE_3_PIVOTAL",
       "ticker": "IFRX",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-22.json",
+      "universe_status": "FAIL"
     },
     {
       "acquisition_path": "validation/m7/acquisition/targeted-single-asset-replacement-04.json",
@@ -2284,8 +2284,8 @@
       "stratum": "PHASE_3_PIVOTAL",
       "ticker": "VBLT",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-22.json",
+      "universe_status": "FAIL"
     },
     {
       "acquisition_path": "validation/m7/acquisition/targeted-single-asset-replacement-01.json",
@@ -2356,8 +2356,8 @@
       "stratum": "PHASE_3_PIVOTAL",
       "ticker": "ANNX",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-22.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/phase3-primary-batch-01.json",
@@ -2374,8 +2374,8 @@
       "stratum": "PHASE_3_PIVOTAL",
       "ticker": "FULC",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-22.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/phase3-primary-batch-01.json",
@@ -2446,8 +2446,8 @@
       "stratum": "PHASE_3_PIVOTAL",
       "ticker": "ALEC",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-22.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/phase3-primary-batch-01.json",
@@ -2464,8 +2464,8 @@
       "stratum": "PHASE_3_PIVOTAL",
       "ticker": "CAPR",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-22.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/phase3-primary-batch-01.json",

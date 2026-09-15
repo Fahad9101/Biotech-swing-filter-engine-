@@ -22,15 +22,16 @@ def test_committed_status_is_derived_and_pending_is_not_pass() -> None:
     assert (ROOT / module.ROWS_OUTPUT).read_text() == module.render(rows)
     assert status["candidate_counts"] == {
         "total": 179,
-        "pass": 45,
-        "fail": 12,
-        "pending": 122,
-        "not_yet_excluded": 167,
+        "pass": 50,
+        "fail": 16,
+        "pending": 113,
+        "not_yet_excluded": 163,
     }
     negative = status["negative_reserve"]
-    assert negative["not_yet_excluded"] == 42
-    assert negative["pass"] == 12
-    assert negative["pending"] == 30
+    assert negative["not_yet_excluded"] == 38
+    assert negative["pass"] == 15
+    assert negative["pending"] == 23
+    assert negative["maximum_provisional_buffer"] == -2
     assert negative["final_negative_quota_satisfied"] is False
     assert status["financing_reserve"]["pass"] == 20
     assert status["single_asset_reserve"]["pass"] == 20
@@ -55,18 +56,23 @@ def test_new_evidence_changes_status_without_manual_counts(copied: Path) -> None
         for r in rows["rows"]
         if r["negative_label_recorded"] and r["universe_status"] == "PENDING"
     )
-    path = copied / "validation/m7/promotion/historical-universe-ledger-21.json"
+    before_reserve = before["negative_reserve"]
+    # A reserved, never-sequentially-issued filename: real batches use
+    # historical-universe-ledger-01, -02, ... in order, so this cannot
+    # collide with a committed ledger and silently overwrite real evidence.
+    path = copied / "validation/m7/promotion/historical-universe-ledger-999-test-only.json"
     path.write_text(
         json.dumps({"rows": [{"candidate_id": candidate, "historical_universe_eligible": False}]})
     )
     after, _ = module.build(copied)
-    assert after["negative_reserve"]["not_yet_excluded"] == 41
-    assert after["negative_reserve"]["pending"] == 32
+    assert after["negative_reserve"]["not_yet_excluded"] == before_reserve["not_yet_excluded"] - 1
+    assert after["negative_reserve"]["pending"] == before_reserve["pending"] - 1
+    assert after["negative_reserve"]["fail"] == before_reserve["fail"] + 1
     assert before["source_sha256"] != after["source_sha256"]
 
 
 def test_conflicting_universe_determination_is_not_silently_overwritten(copied: Path) -> None:
-    path = copied / "validation/m7/promotion/historical-universe-ledger-21.json"
+    path = copied / "validation/m7/promotion/historical-universe-ledger-999-test-only.json"
     path.write_text(
         json.dumps(
             {
