@@ -92,8 +92,18 @@ def _session_classification(event: dict[str, Any]) -> tuple[str, str | None]:
 
 
 def _potential_duplicate(left: dict[str, Any], right: dict[str, Any]) -> bool:
+    """Flag plausible reuse of the same underlying result for human review.
+
+    This deliberately favors recall. A flag never excludes a row automatically.
+    Conference updates can trail an issuer topline release by months, so the review
+    window is wider than an exact-event deduplication rule would be.
+    """
+
     if left["ticker"] != right["ticker"]:
         return False
+    if left["candidate_id"] == right["candidate_id"]:
+        return True
+
     left_date = datetime.fromisoformat(left["first_public_date"]).date()
     right_date = datetime.fromisoformat(right["first_public_date"]).date()
     day_gap = abs((left_date - right_date).days)
@@ -101,9 +111,10 @@ def _potential_duplicate(left: dict[str, Any], right: dict[str, Any]) -> bool:
     indication_similarity = _jaccard(
         _tokens(left.get("indication")), _tokens(right.get("indication"))
     )
-    if asset_similarity >= 0.67 and day_gap <= 45:
+
+    if asset_similarity >= 0.50 and day_gap <= 365:
         return True
-    return indication_similarity >= 0.75 and asset_similarity >= 0.35 and day_gap <= 14
+    return indication_similarity >= 0.65 and asset_similarity >= 0.30 and day_gap <= 120
 
 
 def _duplicate_groups(events: list[dict[str, Any]]) -> dict[int, str | None]:
