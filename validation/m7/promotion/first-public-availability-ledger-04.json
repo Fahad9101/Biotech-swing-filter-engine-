@@ -1,0 +1,33 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-15",
+  "role": "PREFREEZE_FIRST_PUBLIC_AVAILABILITY_EVIDENCE",
+  "market_outcomes_inspected": false,
+  "cohort_frozen": false,
+  "rows": [
+    {
+      "candidate_id": "REG-2023-GERN-IMETELSTAT-NDA-ACCEPT",
+      "event_date": "2023-08-21",
+      "ticker": "GERN",
+      "first_public_timestamp": "2023-08-21T08:00:00-04:00",
+      "timestamp_precision": "EXACT_TO_MINUTE",
+      "session_classification": "PRE_MARKET",
+      "last_complete_session_before_event": "2023-08-18",
+      "source_type": "ISSUER_DISCLOSURE_WITH_AUTHORIZED_BUSINESS_WIRE_DISTRIBUTION",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/886744/000095017023043949/gern-20230821.htm",
+        "https://www.businesswire.com/news/home/20230821960985/en/"
+      ],
+      "source_displayed_time": "August 21, 2023 08:00 ET",
+      "source_conflict_resolution": "The SEC 8-K establishes August 21, 2023 as the announced FDA filing-acceptance date. The issuer-authorized Business Wire distribution supplies the 08:00 ET publication clock. No earlier material public disclosure was identified in the promotion evidence used for this targeted replacement.",
+      "status": "RESOLVED",
+      "outcome_inspected_for_selection": false
+    }
+  ],
+  "summary": {
+    "resolved_rows": 1,
+    "pending": 0
+  }
+}
