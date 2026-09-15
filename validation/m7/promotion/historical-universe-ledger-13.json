@@ -1,0 +1,63 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-15",
+  "role": "PREFREEZE_HISTORICAL_UNIVERSE_AND_INVESTABILITY_EVIDENCE",
+  "market_outcomes_inspected": false,
+  "cohort_frozen": false,
+  "method": {
+    "market_data_provider": "Alpaca",
+    "feed": "SIP",
+    "bars": "RAW_AS_TRADED_DAILY",
+    "corporate_actions": "EXPLICIT_SEPARATE_QUERY",
+    "liquidity_threshold_usd": 2000000,
+    "liquidity_window_sessions": 20,
+    "liquidity_ambiguity_rule": "Both raw close x volume and raw VWAP x volume were evaluated and both medians independently exceed the frozen threshold.",
+    "outcome_boundary": "FDA filing acceptance was disclosed pre-market at 08:00 ET on 2023-08-21, so 2023-08-18 is the final complete pre-event regular session."
+  },
+  "rows": [
+    {
+      "candidate_id": "REG-2023-GERN-IMETELSTAT-NDA-ACCEPT",
+      "event_date": "2023-08-21",
+      "first_public_timestamp": "2023-08-21T08:00:00-04:00",
+      "pre_event_cutoff_session": "2023-08-18",
+      "ticker": "GERN",
+      "source_population_exchange_status": "ELIGIBLE_NASDAQ_COMMON_EQUITY",
+      "security_identity_status": "CONFIRMED",
+      "valid_trading_sessions_verified_from_2023_05_15_through_cutoff": 67,
+      "minimum_valid_sessions_required": 60,
+      "valid_session_floor_pass": true,
+      "last_complete_pre_event_raw_close_usd": 2.61,
+      "price_floor_pass": true,
+      "liquidity_window_start": "2023-07-24",
+      "liquidity_window_end": "2023-08-18",
+      "liquidity_sessions": 20,
+      "median_daily_dollar_volume_close_x_volume_usd": 9962360.01,
+      "median_daily_dollar_volume_vwap_x_volume_usd": 9973523.71,
+      "liquidity_floor_pass": true,
+      "pre_event_shares_outstanding": 523370675,
+      "shares_as_of": "2023-07-27",
+      "conservative_market_cap_proxy_usd": 1365997461.75,
+      "market_cap_floor_pass": true,
+      "corporate_actions_before_event_in_verified_interval": [],
+      "corporate_action_status": "NO_ACTIONS_RETURNED_FOR_GERN_FROM_2023_01_05_THROUGH_2023_08_21",
+      "continuity_or_going_concern_blocker_identified": false,
+      "historical_universe_eligible": true,
+      "exclusion_reason": null,
+      "determination_sufficiency": "The event clears the frozen price, 20-session median dollar-volume, market-cap, >=60-session continuity, eligible-security and corporate-action checks using only pre-event evidence. Financing, point-in-time BOE reconstruction, concentration and final registry checks remain separate.",
+      "outcome_inspected_for_selection": false,
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/886744/000095017023036695/gern-20230630.htm",
+        "https://www.sec.gov/Archives/edgar/data/886744/000095017023043949/gern-20230821.htm"
+      ]
+    }
+  ],
+  "summary": {
+    "evaluated": 1,
+    "eligible": 1,
+    "excluded": 0,
+    "pending": 0,
+    "single_asset_quota_replacement_survivors_added": 1
+  }
+}
