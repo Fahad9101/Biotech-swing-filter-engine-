@@ -1,0 +1,138 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-15",
+  "role": "PREFREEZE_HISTORICAL_SECURITY_IDENTITY_EVIDENCE",
+  "market_outcomes_inspected": false,
+  "cohort_frozen": false,
+  "scope": "Third identity batch covering NewAmsterdam, Cassava, Opthea and Taysha single-asset reserve events.",
+  "summary": {
+    "rows": 6,
+    "identity_confirmed": 6,
+    "us_listing_confirmed": 6,
+    "full_boe_historical_universe_eligible": 0,
+    "pending_identity": 0
+  },
+  "rows": [
+    {
+      "candidate_id": "P3-2024-NAMS-BROOKLYN",
+      "event_date": "2024-07-29",
+      "legal_issuer": "NewAmsterdam Pharma Company N.V.",
+      "historical_ticker": "NAMS",
+      "cik": "0001936258",
+      "exchange": "The Nasdaq Stock Market LLC / Nasdaq Global Market",
+      "security_identity": "Ordinary shares, nominal value €0.12 per share",
+      "listing_evidence": "The pre-event 2023 Form 10-K identifies NAMS ordinary shares as Section 12(b)-registered on The Nasdaq Stock Market LLC and states the ordinary shares trade on the Nasdaq Global Market under NAMS.",
+      "ticker_change_or_reorganization_before_event": "2023_BUSINESS_COMBINATION_COMPLETED_BEFORE_EVENT; POST_COMBINATION_NAMS_ORDINARY_SHARES_CONFIRMED",
+      "identity_status": "IDENTITY_CONFIRMED",
+      "us_listing_status": "US_LISTING_CONFIRMED_BOE_UNIVERSE_PENDING",
+      "historical_universe_eligible": null,
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1936258/000095017024021668/nams-20231231.htm",
+        "https://www.sec.gov/Archives/edgar/data/1936258/000095017024021668/0000950170-24-021668-index.htm"
+      ],
+      "evidence_dates": ["2024-02-28T08:00:22Z"],
+      "ambiguity": "BUSINESS_COMBINATION_HISTORY_DOCUMENTED_NO_EVENT_DATE_IDENTITY_AMBIGUITY"
+    },
+    {
+      "candidate_id": "P3-2024-NAMS-BROADWAY",
+      "event_date": "2024-12-10",
+      "legal_issuer": "NewAmsterdam Pharma Company N.V.",
+      "historical_ticker": "NAMS",
+      "cik": "0001936258",
+      "exchange": "The Nasdaq Stock Market LLC / Nasdaq Global Market",
+      "security_identity": "Ordinary shares, nominal value €0.12 per share",
+      "listing_evidence": "The 2023 Form 10-K establishes the same post-business-combination NAMS ordinary-share security trading on Nasdaq before the December 2024 event.",
+      "ticker_change_or_reorganization_before_event": "2023_BUSINESS_COMBINATION_COMPLETED_BEFORE_EVENT; NO_LATER_EVENT_DATE_SECURITY_CHANGE_IDENTIFIED",
+      "identity_status": "IDENTITY_CONFIRMED",
+      "us_listing_status": "US_LISTING_CONFIRMED_BOE_UNIVERSE_PENDING",
+      "historical_universe_eligible": null,
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1936258/000095017024021668/nams-20231231.htm"
+      ],
+      "evidence_dates": ["2024-02-28"],
+      "ambiguity": "NONE_MATERIAL_FOR_SECURITY_IDENTITY"
+    },
+    {
+      "candidate_id": "P3-2024-SAVA-RETHINK",
+      "event_date": "2024-11-25",
+      "legal_issuer": "Cassava Sciences, Inc.",
+      "historical_ticker": "SAVA",
+      "cik": "0001069530",
+      "exchange": "NASDAQ Capital Market",
+      "security_identity": "Common Stock, $0.001 par value",
+      "listing_evidence": "The pre-event 2023 Form 10-K identifies SAVA common stock as registered on the NASDAQ Capital Market and states the stock is quoted on Nasdaq under SAVA.",
+      "ticker_change_or_reorganization_before_event": "NONE_IDENTIFIED_MATERIALLY_AFFECTING_EVENT_SECURITY",
+      "identity_status": "IDENTITY_CONFIRMED",
+      "us_listing_status": "US_LISTING_CONFIRMED_BOE_UNIVERSE_PENDING",
+      "historical_universe_eligible": null,
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1069530/000143774924005894/sava20231231_10k.htm",
+        "https://www.sec.gov/Archives/edgar/data/1069530/000143774924005894/0001437749-24-005894-index.htm"
+      ],
+      "evidence_dates": ["2024-02-28T16:01:07Z"],
+      "ambiguity": "SEPARATE_LISTED_WARRANTS_EXIST_BUT_EVENT_SECURITY_IS_SAVA_COMMON_STOCK"
+    },
+    {
+      "candidate_id": "P3-2025-SAVA-REFOCUS",
+      "event_date": "2025-03-25",
+      "legal_issuer": "Cassava Sciences, Inc.",
+      "historical_ticker": "SAVA",
+      "cik": "0001069530",
+      "exchange": "NASDAQ Capital Market",
+      "security_identity": "Common Stock, $0.001 par value",
+      "listing_evidence": "The pre-event 2024 Form 10-K identifies SAVA common stock as registered on the NASDAQ Capital Market.",
+      "ticker_change_or_reorganization_before_event": "NONE_IDENTIFIED_MATERIALLY_AFFECTING_EVENT_SECURITY",
+      "identity_status": "IDENTITY_CONFIRMED",
+      "us_listing_status": "US_LISTING_CONFIRMED_BOE_UNIVERSE_PENDING",
+      "historical_universe_eligible": null,
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1069530/000143774925005919/sava20241231c_10k.htm"
+      ],
+      "evidence_dates": ["2025-02"],
+      "ambiguity": "SEPARATE_LISTED_WARRANTS_EXIST_BUT_EVENT_SECURITY_IS_SAVA_COMMON_STOCK"
+    },
+    {
+      "candidate_id": "P3-2025-OPT-COAST",
+      "event_date": "2025-03-24",
+      "legal_issuer": "Opthea Limited",
+      "historical_ticker": "OPT",
+      "cik": "0001815620",
+      "exchange": "Nasdaq Global Select Market",
+      "security_identity": "American Depositary Shares, each representing eight ordinary shares",
+      "listing_evidence": "SEC disclosure identifies the U.S.-traded OPT security as ADSs representing eight ordinary shares; the ADSs have been listed on the Nasdaq Global Select Market under OPT since October 16, 2020. The Australian ordinary shares are a distinct ASX-listed security.",
+      "ticker_change_or_reorganization_before_event": "NO_EVENT_DATE_TICKER_CHANGE; US_MARKET_RECONSTRUCTION_MUST_USE_NASDAQ_ADS_NOT_ASX_ORDINARY_SHARES",
+      "identity_status": "IDENTITY_CONFIRMED",
+      "us_listing_status": "US_LISTING_CONFIRMED_BOE_UNIVERSE_PENDING",
+      "historical_universe_eligible": null,
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1815620/000119312520267263/d947560df1a.htm",
+        "https://www.sec.gov/Archives/edgar/data/1815620/000156459022032651/R1.htm"
+      ],
+      "evidence_dates": ["2020-10", "2022"],
+      "ambiguity": "DUAL_MARKET_IDENTITY_REQUIRES_US_ADS_FOR_ALPACA_MARKET_DATA"
+    },
+    {
+      "candidate_id": "EC-2024-TSHA-TSHA102",
+      "event_date": "2024-06-18",
+      "legal_issuer": "Taysha Gene Therapies, Inc.",
+      "historical_ticker": "TSHA",
+      "cik": "0001806310",
+      "exchange": "The Nasdaq Stock Market LLC",
+      "security_identity": "Common stock, par value $0.00001 per share",
+      "listing_evidence": "The pre-event 2023 Form 10-K identifies TSHA common stock as registered on The Nasdaq Stock Market LLC.",
+      "ticker_change_or_reorganization_before_event": "NONE_IDENTIFIED_MATERIALLY_AFFECTING_EVENT_SECURITY",
+      "identity_status": "IDENTITY_CONFIRMED",
+      "us_listing_status": "US_LISTING_CONFIRMED_BOE_UNIVERSE_PENDING",
+      "historical_universe_eligible": null,
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1806310/000095017024033484/tsha-20231231.htm",
+        "https://www.sec.gov/Archives/edgar/data/1806310/000095017024033484/0000950170-24-033484-index.htm"
+      ],
+      "evidence_dates": ["2024-03-19T16:15:31Z"],
+      "ambiguity": "NONE_MATERIAL_FOR_SECURITY_IDENTITY"
+    }
+  ],
+  "promotion_boundary": "Identity and U.S.-listing confirmation do not establish full BOE historical-universe/investability eligibility."
+}
