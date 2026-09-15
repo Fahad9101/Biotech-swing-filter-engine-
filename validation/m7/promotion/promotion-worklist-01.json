@@ -15,30 +15,30 @@
       "ticker": "BIIB"
     },
     {
-      "asset": "mitapivat",
-      "candidate_id": "P3-2020-AGIO-ACTIVATE",
-      "cik": "0001439222",
-      "event_date": "2020-12-01",
-      "event_timestamp": "2020-12-01T07:00:00-05:00",
+      "asset": "lenabasum",
+      "candidate_id": "P3-2020-CRBP-RESOLVE1",
+      "cik": "0001595097",
+      "event_date": "2020-09-08",
+      "event_timestamp": "2020-09-08T07:05:00-04:00",
       "financing_window_status": "PENDING",
-      "indication": "pyruvate kinase deficiency in adults not regularly transfused",
-      "negative_event": false,
+      "indication": "diffuse cutaneous systemic sclerosis",
+      "negative_event": true,
       "single_asset_status": "PENDING",
       "stratum": "PHASE_3_PIVOTAL",
-      "ticker": "AGIO"
+      "ticker": "CRBP"
     },
     {
-      "asset": "OXBRYTA (voxelotor)",
-      "candidate_id": "REG-2019-GBT-OXBRYTA",
-      "cik": "0001629137",
-      "event_date": "2019-11-25",
-      "event_timestamp": "2019-11-25T16:03:00-05:00",
+      "asset": "TIBSOVO (ivosidenib)",
+      "candidate_id": "REG-2018-AGIO-TIBSOVO",
+      "cik": "0001439222",
+      "event_date": "2018-07-20",
+      "event_timestamp": "2018-07-20T10:45:00-04:00",
       "financing_window_status": "PENDING",
-      "indication": "sickle cell disease",
+      "indication": "relapsed or refractory acute myeloid leukemia with susceptible IDH1 mutation",
       "negative_event": false,
       "single_asset_status": "PENDING",
       "stratum": "REGULATORY",
-      "ticker": "GBT"
+      "ticker": "AGIO"
     },
     {
       "asset": "ATYR1923",
@@ -93,17 +93,17 @@
       "ticker": "VBLT"
     },
     {
-      "asset": "IMCIVREE (setmelanotide)",
-      "candidate_id": "REG-2020-RYTM-IMCIVREE",
-      "cik": "0001649904",
-      "event_date": "2020-11-27",
-      "event_timestamp": "2020-11-27T07:30:00-05:00",
+      "asset": "OXBRYTA (voxelotor)",
+      "candidate_id": "REG-2019-GBT-OXBRYTA",
+      "cik": "0001629137",
+      "event_date": "2019-11-25",
+      "event_timestamp": "2019-11-25T16:03:00-05:00",
       "financing_window_status": "PENDING",
-      "indication": "chronic weight management in genetic obesity due to POMC, PCSK1, or LEPR deficiency",
+      "indication": "sickle cell disease",
       "negative_event": false,
       "single_asset_status": "PENDING",
       "stratum": "REGULATORY",
-      "ticker": "RYTM"
+      "ticker": "GBT"
     },
     {
       "asset": "NYX-458",
@@ -158,17 +158,17 @@
       "ticker": "RARE"
     },
     {
-      "asset": "EMPAVELI (pegcetacoplan)",
-      "candidate_id": "REG-2021-APLS-EMPAVELI",
-      "cik": "0001492422",
-      "event_date": "2021-05-14",
-      "event_timestamp": "2021-05-14T18:25:00-04:00",
+      "asset": "obeticholic acid",
+      "candidate_id": "REG-2020-ICPT-OCA-CRL",
+      "cik": "0001270073",
+      "event_date": "2020-06-29",
+      "event_timestamp": "2020-06-29T07:00:00-04:00",
       "financing_window_status": "PENDING",
-      "indication": "paroxysmal nocturnal hemoglobinuria",
-      "negative_event": false,
+      "indication": "fibrosis due to nonalcoholic steatohepatitis",
+      "negative_event": true,
       "single_asset_status": "PENDING",
       "stratum": "REGULATORY",
-      "ticker": "APLS"
+      "ticker": "ICPT"
     },
     {
       "asset": "CPI-006",
@@ -210,30 +210,30 @@
       "ticker": "MNLO"
     },
     {
-      "asset": "obeticholic acid",
-      "candidate_id": "P3-2019-ICPT-REGENERATE",
+      "asset": "ResVax",
+      "candidate_id": "P3-2019-NVAX-PREPARE",
       "cik": null,
-      "event_date": "2019-02-19",
-      "event_timestamp": "2019-02-19T07:00:00-05:00",
+      "event_date": "2019-02-28",
+      "event_timestamp": "2019-02-28T07:00:00-05:00",
       "financing_window_status": "PENDING",
-      "indication": "NASH with liver fibrosis",
-      "negative_event": false,
+      "indication": "prevention of RSV disease in infants via maternal immunization",
+      "negative_event": true,
       "single_asset_status": "PENDING",
       "stratum": "PHASE_3_PIVOTAL",
-      "ticker": "ICPT"
+      "ticker": "NVAX"
     },
     {
-      "asset": "SKYTROFA (lonapegsomatropin-tcgd)",
-      "candidate_id": "REG-2021-ASND-SKYTROFA",
-      "cik": "0001612042",
-      "event_date": "2021-08-25",
-      "event_timestamp": "2021-08-25T15:24:00-04:00",
+      "asset": "valoctocogene roxaparvovec",
+      "candidate_id": "REG-2020-BMRN-VALROX-CRL",
+      "cik": "0001048477",
+      "event_date": "2020-08-19",
+      "event_timestamp": "2020-08-19T08:00:00-04:00",
       "financing_window_status": "PENDING",
-      "indication": "pediatric growth hormone deficiency",
-      "negative_event": false,
+      "indication": "severe hemophilia A",
+      "negative_event": true,
       "single_asset_status": "PENDING",
       "stratum": "REGULATORY",
-      "ticker": "ASND"
+      "ticker": "BMRN"
     },
     {
       "asset": "ETX0282",
@@ -275,30 +275,30 @@
       "ticker": "VICL"
     },
     {
-      "asset": "ResVax",
-      "candidate_id": "P3-2019-NVAX-PREPARE",
+      "asset": "Libtayo (cemiplimab)",
+      "candidate_id": "P3-2020-REGN-LIBTAYO-NSCLC",
       "cik": null,
-      "event_date": "2019-02-28",
-      "event_timestamp": "2019-02-28T07:00:00-05:00",
+      "event_date": "2020-04-27",
+      "event_timestamp": "2020-04-27T06:59:00-04:00",
       "financing_window_status": "PENDING",
-      "indication": "prevention of RSV disease in infants via maternal immunization",
-      "negative_event": true,
+      "indication": "first-line advanced non-small cell lung cancer with high PD-L1",
+      "negative_event": false,
       "single_asset_status": "PENDING",
       "stratum": "PHASE_3_PIVOTAL",
-      "ticker": "NVAX"
+      "ticker": "REGN"
     },
     {
-      "asset": "OPZELURA (ruxolitinib) cream",
-      "candidate_id": "REG-2021-INCY-OPZELURA",
-      "cik": "0000879169",
-      "event_date": "2021-09-21",
-      "event_timestamp": "2021-09-21T08:00:00-04:00",
+      "asset": "IMCIVREE (setmelanotide)",
+      "candidate_id": "REG-2020-RYTM-IMCIVREE",
+      "cik": "0001649904",
+      "event_date": "2020-11-27",
+      "event_timestamp": "2020-11-27T07:30:00-05:00",
       "financing_window_status": "PENDING",
-      "indication": "mild-to-moderate atopic dermatitis",
+      "indication": "chronic weight management in genetic obesity due to POMC, PCSK1, or LEPR deficiency",
       "negative_event": false,
       "single_asset_status": "PENDING",
       "stratum": "REGULATORY",
-      "ticker": "INCY"
+      "ticker": "RYTM"
     },
     {
       "asset": "UBX0101",
@@ -340,30 +340,30 @@
       "ticker": "IDRA"
     },
     {
-      "asset": "Libtayo (cemiplimab)",
-      "candidate_id": "P3-2020-REGN-LIBTAYO-NSCLC",
+      "asset": "subcutaneous daratumumab",
+      "candidate_id": "P3-2020-GMAB-ANDROMEDA",
       "cik": null,
-      "event_date": "2020-04-27",
-      "event_timestamp": "2020-04-27T06:59:00-04:00",
+      "event_date": "2020-05-28",
+      "event_timestamp": "2020-05-28T12:14:00-04:00",
       "financing_window_status": "PENDING",
-      "indication": "first-line advanced non-small cell lung cancer with high PD-L1",
+      "indication": "newly diagnosed light-chain AL amyloidosis",
       "negative_event": false,
       "single_asset_status": "PENDING",
       "stratum": "PHASE_3_PIVOTAL",
-      "ticker": "REGN"
+      "ticker": "GMAB"
     },
     {
-      "asset": "FILSPARI (sparsentan)",
-      "candidate_id": "REG-2023-TVTX-FILSPARI",
-      "cik": "0001438533",
-      "event_date": "2023-02-17",
-      "event_timestamp": "2023-02-17T16:04:00-05:00",
+      "asset": "oral paclitaxel plus encequidar",
+      "candidate_id": "REG-2021-ATNX-ORALPAC-CRL",
+      "cik": "0001300699",
+      "event_date": "2021-03-01",
+      "event_timestamp": "2021-03-01T07:00:00-05:00",
       "financing_window_status": "PENDING",
-      "indication": "reduction of proteinuria in primary IgA nephropathy",
-      "negative_event": false,
+      "indication": "metastatic breast cancer",
+      "negative_event": true,
       "single_asset_status": "PENDING",
       "stratum": "REGULATORY",
-      "ticker": "TVTX"
+      "ticker": "ATNX"
     },
     {
       "asset": "suvodirsen",
@@ -405,30 +405,30 @@
       "ticker": "SMMT"
     },
     {
-      "asset": "subcutaneous daratumumab",
-      "candidate_id": "P3-2020-GMAB-ANDROMEDA",
+      "asset": "rigosertib",
+      "candidate_id": "P3-2020-ONTX-INSPIRE",
       "cik": null,
-      "event_date": "2020-05-28",
-      "event_timestamp": "2020-05-28T12:14:00-04:00",
+      "event_date": "2020-08-24",
+      "event_timestamp": "2020-08-24T07:30:00-04:00",
       "financing_window_status": "PENDING",
-      "indication": "newly diagnosed light-chain AL amyloidosis",
-      "negative_event": false,
+      "indication": "higher-risk myelodysplastic syndromes",
+      "negative_event": true,
       "single_asset_status": "PENDING",
       "stratum": "PHASE_3_PIVOTAL",
-      "ticker": "GMAB"
+      "ticker": "ONTX"
     },
     {
-      "asset": "AMTAGVI (lifileucel)",
-      "candidate_id": "REG-2024-IOVA-AMTAGVI",
-      "cik": "0001425205",
-      "event_date": "2024-02-16",
-      "event_timestamp": "2024-02-16T15:19:00-05:00",
+      "asset": "EMPAVELI (pegcetacoplan)",
+      "candidate_id": "REG-2021-APLS-EMPAVELI",
+      "cik": "0001492422",
+      "event_date": "2021-05-14",
+      "event_timestamp": "2021-05-14T18:25:00-04:00",
       "financing_window_status": "PENDING",
-      "indication": "unresectable or metastatic melanoma after prior therapy",
+      "indication": "paroxysmal nocturnal hemoglobinuria",
       "negative_event": false,
       "single_asset_status": "PENDING",
       "stratum": "REGULATORY",
-      "ticker": "IOVA"
+      "ticker": "APLS"
     },
     {
       "asset": "CRN01941",
@@ -470,30 +470,30 @@
       "ticker": "RETA"
     },
     {
-      "asset": "rigosertib",
-      "candidate_id": "P3-2020-ONTX-INSPIRE",
+      "asset": "omecamtiv mecarbil",
+      "candidate_id": "P3-2020-CYTK-GALACTIC-HF",
       "cik": null,
-      "event_date": "2020-08-24",
-      "event_timestamp": "2020-08-24T07:30:00-04:00",
+      "event_date": "2020-11-13",
+      "event_timestamp": "2020-11-13T11:35:00-05:00",
       "financing_window_status": "PENDING",
-      "indication": "higher-risk myelodysplastic syndromes",
-      "negative_event": true,
-      "single_asset_status": "PENDING",
-      "stratum": "PHASE_3_PIVOTAL",
-      "ticker": "ONTX"
-    },
-    {
-      "asset": "REVUFORJ (revumenib)",
-      "candidate_id": "REG-2024-SNDX-REVUFORJ",
-      "cik": "0001395937",
-      "event_date": "2024-11-15",
-      "event_timestamp": "2024-11-15T17:29:00-05:00",
-      "financing_window_status": "PENDING",
-      "indication": "relapsed or refractory acute leukemia with KMT2A translocation",
+      "indication": "heart failure with reduced ejection fraction",
       "negative_event": false,
       "single_asset_status": "PENDING",
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "CYTK"
+    },
+    {
+      "asset": "roxadustat",
+      "candidate_id": "REG-2021-FGEN-ROXADUSTAT-CRL",
+      "cik": "0000921299",
+      "event_date": "2021-08-11",
+      "event_timestamp": "2021-08-11T07:00:00-04:00",
+      "financing_window_status": "PENDING",
+      "indication": "anemia of chronic kidney disease",
+      "negative_event": true,
+      "single_asset_status": "PENDING",
       "stratum": "REGULATORY",
-      "ticker": "SNDX"
+      "ticker": "FGEN"
     },
     {
       "asset": "CTX001",
@@ -509,17 +509,17 @@
       "ticker": "CRSP"
     },
     {
-      "asset": "IGM-2323",
-      "candidate_id": "CO-2021-IGMS-IGM2323ASH",
+      "asset": "lifileucel + pembrolizumab",
+      "candidate_id": "CO-2021-IOVA-LIFILEUCELASCO",
       "cik": null,
-      "event_date": "2021-12-11",
-      "event_timestamp": "2021-12-11T13:31:00-05:00",
+      "event_date": "2021-06-04",
+      "event_timestamp": "2021-06-04T09:08:00-04:00",
       "financing_window_status": "PENDING",
-      "indication": "advanced B-cell malignancies",
+      "indication": "advanced melanoma",
       "negative_event": false,
       "single_asset_status": "PENDING",
       "stratum": "CONFERENCE_OTHER",
-      "ticker": "IGMS"
+      "ticker": "IOVA"
     },
     {
       "asset": "arimoclomol",
@@ -535,30 +535,30 @@
       "ticker": "ORPH"
     },
     {
-      "asset": "omecamtiv mecarbil",
-      "candidate_id": "P3-2020-CYTK-GALACTIC-HF",
+      "asset": "eprenetapopt + azacitidine",
+      "candidate_id": "P3-2020-APRE-P3MDS",
       "cik": null,
-      "event_date": "2020-11-13",
-      "event_timestamp": "2020-11-13T11:35:00-05:00",
+      "event_date": "2020-12-28",
+      "event_timestamp": "2020-12-28T08:00:00-05:00",
       "financing_window_status": "PENDING",
-      "indication": "heart failure with reduced ejection fraction",
-      "negative_event": false,
+      "indication": "TP53-mutant myelodysplastic syndromes",
+      "negative_event": true,
       "single_asset_status": "PENDING",
       "stratum": "PHASE_3_PIVOTAL",
-      "ticker": "CYTK"
+      "ticker": "APRE"
     },
     {
-      "asset": "ATTRUBY (acoramidis)",
-      "candidate_id": "REG-2024-BBIO-ATTRUBY",
-      "cik": "0001743881",
-      "event_date": "2024-11-22",
-      "event_timestamp": "2024-11-22T19:11:00-05:00",
+      "asset": "SKYTROFA (lonapegsomatropin-tcgd)",
+      "candidate_id": "REG-2021-ASND-SKYTROFA",
+      "cik": "0001612042",
+      "event_date": "2021-08-25",
+      "event_timestamp": "2021-08-25T15:24:00-04:00",
       "financing_window_status": "PENDING",
-      "indication": "transthyretin amyloid cardiomyopathy",
+      "indication": "pediatric growth hormone deficiency",
       "negative_event": false,
       "single_asset_status": "PENDING",
       "stratum": "REGULATORY",
-      "ticker": "BBIO"
+      "ticker": "ASND"
     },
     {
       "asset": "galinpepimut-S (GPS)",
@@ -574,17 +574,17 @@
       "ticker": "SLS"
     },
     {
-      "asset": "tovinontrine (IMR-687)",
-      "candidate_id": "CO-2021-IMRA-IMR687ASH",
+      "asset": "IGM-2323",
+      "candidate_id": "CO-2021-IGMS-IGM2323ASH",
       "cik": null,
-      "event_date": "2021-12-13",
-      "event_timestamp": "2021-12-13T07:00:00-05:00",
+      "event_date": "2021-12-11",
+      "event_timestamp": "2021-12-11T13:31:00-05:00",
       "financing_window_status": "PENDING",
-      "indication": "sickle cell disease",
+      "indication": "advanced B-cell malignancies",
       "negative_event": false,
       "single_asset_status": "PENDING",
       "stratum": "CONFERENCE_OTHER",
-      "ticker": "IMRA"
+      "ticker": "IGMS"
     },
     {
       "asset": "imsidolimab",
@@ -600,30 +600,30 @@
       "ticker": "ANAB"
     },
     {
-      "asset": "eprenetapopt + azacitidine",
-      "candidate_id": "P3-2020-APRE-P3MDS",
+      "asset": "eryaspase",
+      "candidate_id": "P3-2021-ERYP-TRYBECA1",
       "cik": null,
-      "event_date": "2020-12-28",
-      "event_timestamp": "2020-12-28T08:00:00-05:00",
+      "event_date": "2021-10-25",
+      "event_timestamp": "2021-10-25T01:00:00-04:00",
       "financing_window_status": "PENDING",
-      "indication": "TP53-mutant myelodysplastic syndromes",
+      "indication": "second-line advanced pancreatic cancer",
       "negative_event": true,
       "single_asset_status": "PENDING",
       "stratum": "PHASE_3_PIVOTAL",
-      "ticker": "APRE"
+      "ticker": "ERYP"
     },
     {
-      "asset": "ELEVIDYS (delandistrogene moxeparvovec-rokl)",
-      "candidate_id": "REG-2023-SRPT-ELEVIDYS",
-      "cik": null,
-      "event_date": "2023-06-22",
-      "event_timestamp": "2023-06-22T14:02:00-04:00",
+      "asset": "OPZELURA (ruxolitinib) cream",
+      "candidate_id": "REG-2021-INCY-OPZELURA",
+      "cik": "0000879169",
+      "event_date": "2021-09-21",
+      "event_timestamp": "2021-09-21T08:00:00-04:00",
       "financing_window_status": "PENDING",
-      "indication": "Duchenne muscular dystrophy",
+      "indication": "mild-to-moderate atopic dermatitis",
       "negative_event": false,
       "single_asset_status": "PENDING",
       "stratum": "REGULATORY",
-      "ticker": "SRPT"
+      "ticker": "INCY"
     },
     {
       "asset": "RTX-240",
@@ -639,17 +639,17 @@
       "ticker": "RUBY"
     },
     {
-      "asset": "KER-050 / KER-047",
-      "candidate_id": "CO-2022-KROS-KER050ASH",
+      "asset": "tovinontrine (IMR-687)",
+      "candidate_id": "CO-2021-IMRA-IMR687ASH",
       "cik": null,
-      "event_date": "2022-12-12",
-      "event_timestamp": "2022-12-12T10:00:00-05:00",
+      "event_date": "2021-12-13",
+      "event_timestamp": "2021-12-13T07:00:00-05:00",
       "financing_window_status": "PENDING",
-      "indication": "MDS, myelofibrosis and IRIDA",
+      "indication": "sickle cell disease",
       "negative_event": false,
       "single_asset_status": "PENDING",
       "stratum": "CONFERENCE_OTHER",
-      "ticker": "KROS"
+      "ticker": "IMRA"
     }
   ],
   "format_version": "1.0",

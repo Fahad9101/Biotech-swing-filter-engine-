@@ -1,10 +1,10 @@
 {
   "cohort_frozen": false,
   "format_version": "1.0",
-  "ledger_sha256": "d3caf3ba376df42d6781ec781fe3d39feebc44ed5b78da9e7f310b26d67e2f4c",
+  "ledger_sha256": "504bcc66149ac2b61a4a2e83f395effb73460b20c14ef08b014f49c072787f3b",
   "market_outcome_fields_permitted": false,
   "milestone": 7,
-  "negative_candidate_count": 43,
+  "negative_candidate_count": 49,
   "potential_duplicate_candidate_count": 13,
   "potential_duplicate_group_count": 6,
   "potential_duplicate_groups": {
@@ -37,9 +37,9 @@
   "promotion_counts": {
     "eligible": 0,
     "excluded": 0,
-    "pending": 165
+    "pending": 171
   },
-  "raw_candidate_count": 165,
+  "raw_candidate_count": 171,
   "role": "PREFREEZE_CANDIDATE_PROMOTION_LEDGER",
   "rows": [
     {
@@ -7349,6 +7349,259 @@
         "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
       ],
       "verification_provenance": "DETERMINISTIC_NORMALIZATION_NO_MARKET_OUTCOMES"
+    },
+    {
+      "asset": "valoctocogene roxaparvovec",
+      "authoritative_source_ids": [
+        "SRC-b215b0568695a47fe25e"
+      ],
+      "candidate_id": "REG-2020-BMRN-VALROX-CRL",
+      "cik": "0001048477",
+      "clinical_phase": "REGULATORY_DECISION",
+      "company": "BioMarin Pharmaceutical Inc.",
+      "cross_stratum_duplicate_result": "NO_POTENTIAL_DUPLICATE_FOUND",
+      "duplicate_group_id": null,
+      "exchange": null,
+      "exclusion_reason": null,
+      "financing_t_minus_90_to_t_plus_30": null,
+      "first_public_date": "2020-08-19",
+      "first_public_timestamp": "2020-08-19T08:00:00-04:00",
+      "historical_security_identity_status": "PARTIALLY_RESOLVED_CIK_PRESENT",
+      "historical_ticker": "BMRN",
+      "historical_universe_eligible": null,
+      "indication": "severe hemophilia A",
+      "market_session_classification": "PRE_MARKET",
+      "negative_event": true,
+      "negative_event_basis": "NEGATIVE_REGULATORY_CRL",
+      "point_in_time_evidence_ready": null,
+      "promotion_status": "PENDING",
+      "proposed_primary_stratum": "REGULATORY",
+      "single_asset_issuer": null,
+      "source_acquisition_file": "validation/m7/acquisition/targeted-negative-supplement-02.json",
+      "source_url_sha256": "b215b0568695a47fe25e7985a2b87cd3fe8909614b125987693644e8ef9370b7",
+      "source_urls": [
+        "https://www.prnewswire.com/news-releases/biomarin-receives-complete-response-letter-crl-from-fda-for-valoctocogene-roxaparvovec-gene-therapy-for-severe-hemophilia-a-301114587.html"
+      ],
+      "timestamp_precision": "EXACT_TO_MINUTE",
+      "timezone": "America/New_York",
+      "unresolved_blockers": [
+        "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
+        "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+        "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+      ],
+      "verification_provenance": "DETERMINISTIC_NORMALIZATION_NO_MARKET_OUTCOMES"
+    },
+    {
+      "asset": "obeticholic acid",
+      "authoritative_source_ids": [
+        "SRC-8abcd28b721c7c8e1ebc"
+      ],
+      "candidate_id": "REG-2020-ICPT-OCA-CRL",
+      "cik": "0001270073",
+      "clinical_phase": "REGULATORY_DECISION",
+      "company": "Intercept Pharmaceuticals, Inc.",
+      "cross_stratum_duplicate_result": "NO_POTENTIAL_DUPLICATE_FOUND",
+      "duplicate_group_id": null,
+      "exchange": null,
+      "exclusion_reason": null,
+      "financing_t_minus_90_to_t_plus_30": null,
+      "first_public_date": "2020-06-29",
+      "first_public_timestamp": "2020-06-29T07:00:00-04:00",
+      "historical_security_identity_status": "PARTIALLY_RESOLVED_CIK_PRESENT",
+      "historical_ticker": "ICPT",
+      "historical_universe_eligible": null,
+      "indication": "fibrosis due to nonalcoholic steatohepatitis",
+      "market_session_classification": "PRE_MARKET",
+      "negative_event": true,
+      "negative_event_basis": "NEGATIVE_REGULATORY_CRL",
+      "point_in_time_evidence_ready": null,
+      "promotion_status": "PENDING",
+      "proposed_primary_stratum": "REGULATORY",
+      "single_asset_issuer": null,
+      "source_acquisition_file": "validation/m7/acquisition/targeted-negative-supplement-02.json",
+      "source_url_sha256": "8abcd28b721c7c8e1ebcd94201660045f131c981851fa243928c7f3414fc3cbe",
+      "source_urls": [
+        "https://www.globenewswire.com/news-release/2020/06/29/2054576/0/en/Intercept-Receives-Complete-Response-Letter-from-FDA-for-Obeticholic-Acid-for-the-Treatment-of-Fibrosis-Due-to-NASH.html"
+      ],
+      "timestamp_precision": "EXACT_TO_MINUTE",
+      "timezone": "America/New_York",
+      "unresolved_blockers": [
+        "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
+        "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+        "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+      ],
+      "verification_provenance": "DETERMINISTIC_NORMALIZATION_NO_MARKET_OUTCOMES"
+    },
+    {
+      "asset": "lenabasum",
+      "authoritative_source_ids": [
+        "SRC-f2d6c7593c843228d62d"
+      ],
+      "candidate_id": "P3-2020-CRBP-RESOLVE1",
+      "cik": "0001595097",
+      "clinical_phase": "PHASE_3",
+      "company": "Corbus Pharmaceuticals Holdings, Inc.",
+      "cross_stratum_duplicate_result": "NO_POTENTIAL_DUPLICATE_FOUND",
+      "duplicate_group_id": null,
+      "exchange": null,
+      "exclusion_reason": null,
+      "financing_t_minus_90_to_t_plus_30": null,
+      "first_public_date": "2020-09-08",
+      "first_public_timestamp": "2020-09-08T07:05:00-04:00",
+      "historical_security_identity_status": "PARTIALLY_RESOLVED_CIK_PRESENT",
+      "historical_ticker": "CRBP",
+      "historical_universe_eligible": null,
+      "indication": "diffuse cutaneous systemic sclerosis",
+      "market_session_classification": "PRE_MARKET",
+      "negative_event": true,
+      "negative_event_basis": "NEGATIVE_PRIMARY_AND_SECONDARY",
+      "point_in_time_evidence_ready": null,
+      "promotion_status": "PENDING",
+      "proposed_primary_stratum": "PHASE_3_PIVOTAL",
+      "single_asset_issuer": null,
+      "source_acquisition_file": "validation/m7/acquisition/targeted-negative-supplement-02.json",
+      "source_url_sha256": "f2d6c7593c843228d62d0327913c5e16f6e769befe0eb0058d42bd2440550699",
+      "source_urls": [
+        "https://ir.corbuspharma.com/news-events/press-releases/detail/341/corbus-pharmaceuticals-announces-topline-results-from-resolve-1-phase-3-study-of-lenabasum-for-treatment-of-systemic-sclerosis"
+      ],
+      "timestamp_precision": "EXACT_TO_MINUTE",
+      "timezone": "America/New_York",
+      "unresolved_blockers": [
+        "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+        "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
+        "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+        "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+      ],
+      "verification_provenance": "DETERMINISTIC_NORMALIZATION_NO_MARKET_OUTCOMES"
+    },
+    {
+      "asset": "oral paclitaxel plus encequidar",
+      "authoritative_source_ids": [
+        "SRC-54284475ff1b765b5336"
+      ],
+      "candidate_id": "REG-2021-ATNX-ORALPAC-CRL",
+      "cik": "0001300699",
+      "clinical_phase": "REGULATORY_DECISION",
+      "company": "Athenex, Inc.",
+      "cross_stratum_duplicate_result": "NO_POTENTIAL_DUPLICATE_FOUND",
+      "duplicate_group_id": null,
+      "exchange": null,
+      "exclusion_reason": null,
+      "financing_t_minus_90_to_t_plus_30": null,
+      "first_public_date": "2021-03-01",
+      "first_public_timestamp": "2021-03-01T07:00:00-05:00",
+      "historical_security_identity_status": "PARTIALLY_RESOLVED_CIK_PRESENT",
+      "historical_ticker": "ATNX",
+      "historical_universe_eligible": null,
+      "indication": "metastatic breast cancer",
+      "market_session_classification": "PRE_MARKET",
+      "negative_event": true,
+      "negative_event_basis": "NEGATIVE_REGULATORY_CRL",
+      "point_in_time_evidence_ready": null,
+      "promotion_status": "PENDING",
+      "proposed_primary_stratum": "REGULATORY",
+      "single_asset_issuer": null,
+      "source_acquisition_file": "validation/m7/acquisition/targeted-negative-supplement-02.json",
+      "source_url_sha256": "54284475ff1b765b5336b18e662285c9c7221679f14d00769651e6f63e62fb16",
+      "source_urls": [
+        "https://www.globenewswire.com/news-release/2021/03/01/2184118/0/en/athenex-receives-fda-complete-response-letter-for-oral-paclitaxel-plus-encequidar-for-the-treatment-of-metastatic-breast-cancer.html"
+      ],
+      "timestamp_precision": "EXACT_TO_MINUTE",
+      "timezone": "America/New_York",
+      "unresolved_blockers": [
+        "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
+        "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+        "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+      ],
+      "verification_provenance": "DETERMINISTIC_NORMALIZATION_NO_MARKET_OUTCOMES"
+    },
+    {
+      "asset": "roxadustat",
+      "authoritative_source_ids": [
+        "SRC-8467eeab146698cb3dd1"
+      ],
+      "candidate_id": "REG-2021-FGEN-ROXADUSTAT-CRL",
+      "cik": "0000921299",
+      "clinical_phase": "REGULATORY_DECISION",
+      "company": "FibroGen, Inc.",
+      "cross_stratum_duplicate_result": "NO_POTENTIAL_DUPLICATE_FOUND",
+      "duplicate_group_id": null,
+      "exchange": null,
+      "exclusion_reason": null,
+      "financing_t_minus_90_to_t_plus_30": null,
+      "first_public_date": "2021-08-11",
+      "first_public_timestamp": "2021-08-11T07:00:00-04:00",
+      "historical_security_identity_status": "PARTIALLY_RESOLVED_CIK_PRESENT",
+      "historical_ticker": "FGEN",
+      "historical_universe_eligible": null,
+      "indication": "anemia of chronic kidney disease",
+      "market_session_classification": "PRE_MARKET",
+      "negative_event": true,
+      "negative_event_basis": "NEGATIVE_REGULATORY_CRL",
+      "point_in_time_evidence_ready": null,
+      "promotion_status": "PENDING",
+      "proposed_primary_stratum": "REGULATORY",
+      "single_asset_issuer": null,
+      "source_acquisition_file": "validation/m7/acquisition/targeted-negative-supplement-02.json",
+      "source_url_sha256": "8467eeab146698cb3dd131c9d6e2d0c8599c642979eb32441eb82938f4dd3d6b",
+      "source_urls": [
+        "https://www.globenewswire.com/news-release/2021/08/11/2278626/33525/en/fibrogen-receives-complete-response-letter-from-the-fda-for-roxadustat-for-anemia-of-chronic-kidney-disease.html"
+      ],
+      "timestamp_precision": "EXACT_TO_MINUTE",
+      "timezone": "America/New_York",
+      "unresolved_blockers": [
+        "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
+        "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+        "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+      ],
+      "verification_provenance": "DETERMINISTIC_NORMALIZATION_NO_MARKET_OUTCOMES"
+    },
+    {
+      "asset": "toripalimab",
+      "authoritative_source_ids": [
+        "SRC-0287a6a89199294cbe5d"
+      ],
+      "candidate_id": "REG-2022-CHRS-TORIPALIMAB-CRL",
+      "cik": "0001512762",
+      "clinical_phase": "REGULATORY_DECISION",
+      "company": "Coherus BioSciences, Inc.",
+      "cross_stratum_duplicate_result": "NO_POTENTIAL_DUPLICATE_FOUND",
+      "duplicate_group_id": null,
+      "exchange": null,
+      "exclusion_reason": null,
+      "financing_t_minus_90_to_t_plus_30": null,
+      "first_public_date": "2022-05-02",
+      "first_public_timestamp": "2022-05-02T07:00:00-04:00",
+      "historical_security_identity_status": "PARTIALLY_RESOLVED_CIK_PRESENT",
+      "historical_ticker": "CHRS",
+      "historical_universe_eligible": null,
+      "indication": "advanced recurrent or metastatic nasopharyngeal carcinoma",
+      "market_session_classification": "PRE_MARKET",
+      "negative_event": true,
+      "negative_event_basis": "NEGATIVE_REGULATORY_CRL",
+      "point_in_time_evidence_ready": null,
+      "promotion_status": "PENDING",
+      "proposed_primary_stratum": "REGULATORY",
+      "single_asset_issuer": null,
+      "source_acquisition_file": "validation/m7/acquisition/targeted-negative-supplement-02.json",
+      "source_url_sha256": "0287a6a89199294cbe5d2274621f3e4384adfbc74b9686872831fdf54c0765ba",
+      "source_urls": [
+        "https://www.globenewswire.com/news-release/2022/05/02/2433328/33333/en/Coherus-and-Junshi-Biosciences-Receive-Complete-Response-Letter-from-U-S-FDA-for-Toripalimab-BLA.html"
+      ],
+      "timestamp_precision": "EXACT_TO_MINUTE",
+      "timezone": "America/New_York",
+      "unresolved_blockers": [
+        "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
+        "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+        "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+      ],
+      "verification_provenance": "DETERMINISTIC_NORMALIZATION_NO_MARKET_OUTCOMES"
     }
   ],
   "rules_version": "BOE-1.0.0",
@@ -7359,7 +7612,8 @@
     "phase3-primary-batch-01.json",
     "early-clinical-primary-batch-01.json",
     "conference-other-primary-batch-01.json",
-    "negative-phase2-supplement-01.json"
+    "negative-phase2-supplement-01.json",
+    "targeted-negative-supplement-02.json"
   ],
   "source_candidate_counts": {
     "conference-other-primary-batch-01.json": 26,
@@ -7367,6 +7621,7 @@
     "negative-phase2-supplement-01.json": 8,
     "phase2-primary-batch-01.json": 36,
     "phase3-primary-batch-01.json": 31,
-    "regulatory-primary-batch-01.json": 33
+    "regulatory-primary-batch-01.json": 33,
+    "targeted-negative-supplement-02.json": 6
   }
 }
