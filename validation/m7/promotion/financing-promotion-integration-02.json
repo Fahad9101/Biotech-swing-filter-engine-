@@ -8,7 +8,8 @@
   "cohort_frozen": false,
   "source_financing_ledgers": [
     "validation/m7/promotion/financing-evidence-ledger-01.json",
-    "validation/m7/promotion/financing-evidence-ledger-02.json"
+    "validation/m7/promotion/financing-evidence-ledger-02.json",
+    "validation/m7/promotion/financing-evidence-ledger-03.json"
   ],
   "latest_universe_batch": "validation/m7/promotion/historical-universe-ledger-19.json",
   "quota_requirement": 20,
@@ -33,16 +34,20 @@
     {"candidate_id":"P2-2024-RXRX-SYCAMORE","ticker":"RXRX","financing_status":"QUALIFIES","historical_universe_status":"PASS"},
     {"candidate_id":"P2-2023-FWBI-SPAN","ticker":"FWBI","financing_status":"QUALIFIES","historical_universe_status":"FAIL","universe_reason":"INVESTABILITY_FLOOR_20_SESSION_MEDIAN_DAILY_DOLLAR_VOLUME_BELOW_2000000"},
     {"candidate_id":"CO-2022-KROS-KER050ASH","ticker":"KROS","financing_status":"QUALIFIES","historical_universe_status":"PASS","remaining_promotion_blocker":"VERIFY_CONFERENCE_EARLIEST_MATERIAL_AVAILABILITY"},
-    {"candidate_id":"P3-2023-GERN-IMERGE","ticker":"GERN","financing_status":"QUALIFIES","historical_universe_status":"PASS","single_asset_status":"QUALIFIES","source_ledger":"validation/m7/promotion/financing-evidence-ledger-02.json"}
+    {"candidate_id":"P3-2023-GERN-IMERGE","ticker":"GERN","financing_status":"QUALIFIES","historical_universe_status":"PASS","single_asset_status":"QUALIFIES","source_ledger":"validation/m7/promotion/financing-evidence-ledger-02.json"},
+    {"candidate_id":"P3-2022-MDGL-MAESTRO-NASH","ticker":"MDGL","financing_status":"QUALIFIES","historical_universe_status":"PASS","single_asset_status":"QUALIFIES","source_ledger":"validation/m7/promotion/financing-evidence-ledger-03.json"},
+    {"candidate_id":"REG-2022-AMLX-RELYVRIO","ticker":"AMLX","financing_status":"QUALIFIES","historical_universe_status":"PASS","single_asset_status":"QUALIFIES","source_ledger":"validation/m7/promotion/financing-evidence-ledger-03.json"},
+    {"candidate_id":"EC-2024-TSHA-TSHA102","ticker":"TSHA","financing_status":"QUALIFIES","historical_universe_status":"PASS","single_asset_status":"QUALIFIES","source_ledger":"validation/m7/promotion/financing-evidence-ledger-03.json"}
   ],
   "summary": {
-    "financing_qualified_candidates": 21,
-    "historical_universe_pass": 17,
+    "financing_qualified_candidates": 24,
+    "historical_universe_pass": 20,
     "historical_universe_fail": 4,
     "historical_universe_pending": 0,
-    "current_financing_survivor_reserve": 17,
-    "financing_universe_stage_deficit_to_quota": 3,
-    "final_frozen_financing_quota_met": false
+    "current_financing_survivor_reserve": 20,
+    "candidate_level_universe_stage_quota_buffer": 0,
+    "final_frozen_financing_quota_met": false,
+    "new_event_acquisition_required_for_financing_repair": false
   },
-  "next_action": "Fill exactly three financing survivor reserve slots from already-acquired candidates using independently verified actual dilutive financing in T-90 to T+30 and historical-universe PASS. Do not use theoretical ATM capacity or stock outcomes. Only if the existing candidate population cannot fill the demonstrated deficit may targeted financing acquisition reopen."
+  "next_action": "Financing reserve is restored to exactly twenty historical-universe PASS candidates. Preserve all twenty through exact timestamp/conference availability, point-in-time evidence, concentration, eligible-registry and deterministic cohort-freeze checks. If any later attrition occurs, first search the existing 173-row population for another independently verified actual financing before reopening targeted acquisition."
 }
