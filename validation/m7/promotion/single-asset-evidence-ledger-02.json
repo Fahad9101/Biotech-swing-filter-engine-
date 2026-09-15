@@ -1,0 +1,37 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-15",
+  "role": "PREFREEZE_TARGETED_SINGLE_ASSET_REPLACEMENT_EVIDENCE",
+  "market_outcome_fields_permitted": false,
+  "cohort_frozen": false,
+  "trigger": "Targeted replacement review after NEG-P2-2018-MNLO-ATOMIK failed the frozen >=60-valid-session investability floor.",
+  "rows": [
+    {
+      "candidate_id": "P3-2023-RAIN-MANTRA",
+      "event_date": "2023-05-22",
+      "ticker": "RAIN",
+      "issuer": "Rain Oncology Inc.",
+      "asset": "milademetan",
+      "historical_pipeline_snapshot_date": "2023-03-09",
+      "meaningful_active_therapeutic_assets": ["milademetan"],
+      "determination": "QUALIFIES",
+      "evidence_summary": "Rain's pre-event 2022 Form 10-K states its RAD52 preclinical program was discontinued in February 2023 to focus financial and personnel resources on milademetan. The same filing describes milademetan as the lead clinical candidate across MANTRA, MANTRA-2 and planned MANTRA-4. Therefore, immediately before the May 22, 2023 MANTRA catalyst, milademetan was the single meaningful active therapeutic product candidate under the conservative M7 rule.",
+      "evidence_urls": ["https://www.sec.gov/Archives/edgar/data/1724979/000155837023003331/rain-20221231x10k.htm"],
+      "source_dates": ["2023-03-09"],
+      "status": "QUALIFIES",
+      "ambiguity": "RAD52_LICENSE_AND_PRECLINICAL_PROGRAM_WERE_EXPLICITLY_DISCONTINUED_BEFORE_EVENT",
+      "quota_replacement_candidate": true,
+      "outcome_inspected_for_selection": false
+    }
+  ],
+  "summary": {
+    "reviewed": 1,
+    "qualifies": 1,
+    "does_not_qualify": 0,
+    "pending": 0,
+    "replacement_reserve_after_known_menlo_2018_attrition": 1
+  },
+  "promotion_boundary": "This restores a 20-event single-asset candidate reserve after the known Menlo 2018 investability failure, but Rain still must pass security identity, timestamp, historical universe/investability, point-in-time evidence, concentration and all other M7 eligibility checks."
+}
