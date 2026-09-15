@@ -24,7 +24,7 @@ def build(root: Path = ROOT) -> tuple[dict[str, Any], dict[str, Any]]:
 
     def read(path: Path) -> Any:
         data = path.read_bytes()
-        hashes[str(path.relative_to(root))] = hashlib.sha256(data).hexdigest()
+        hashes[path.relative_to(root).as_posix()] = hashlib.sha256(data).hexdigest()
         return json.loads(data)
 
     def ledgers(pattern: str) -> list[tuple[str, dict[str, Any]]]:
@@ -32,7 +32,7 @@ def build(root: Path = ROOT) -> tuple[dict[str, Any], dict[str, Any]]:
         for path in sorted((base / "promotion").glob(pattern)):
             data = read(path)
             result.extend(
-                (str(path.relative_to(root)), row)
+                (path.relative_to(root).as_posix(), row)
                 for row in data.get("rows", data.get("entries", []))
             )
         return result
@@ -44,13 +44,19 @@ def build(root: Path = ROOT) -> tuple[dict[str, Any], dict[str, Any]]:
             key = row["candidate_id"]
             if key in candidates:
                 raise ValueError(f"Duplicate acquisition ID: {key}")
-            candidates[key] = {**row, "acquisition_path": str(path.relative_to(root))}
+            candidates[key] = {
+                **row,
+                "acquisition_path": path.relative_to(root).as_posix(),
+            }
     replacement = base / "promotion/targeted-single-asset-replacement-03.json"
     for row in read(replacement)["rows"]:
         key = row["candidate_id"]
         if key in candidates:
             raise ValueError(f"Duplicate targeted acquisition ID: {key}")
-        candidates[key] = {**row, "acquisition_path": str(replacement.relative_to(root))}
+        candidates[key] = {
+            **row,
+            "acquisition_path": replacement.relative_to(root).as_posix(),
+        }
 
     aliases = {}
     for path, row in ledgers("event-normalization-ledger-*.json"):
@@ -172,7 +178,7 @@ def build(root: Path = ROOT) -> tuple[dict[str, Any], dict[str, Any]]:
     blob = hashlib.sha1(b"blob " + str(len(raw)).encode() + b"\0" + raw).hexdigest()
     if blob != "e9019ecb9975c21e62371c25dcd7d2b114de60e4":
         raise ValueError("Frozen scorecard changed")
-    hashes[str(scorecard.relative_to(root))] = hashlib.sha256(raw).hexdigest()
+    hashes[scorecard.relative_to(root).as_posix()] = hashlib.sha256(raw).hexdigest()
     registry = {
         "role": "DERIVED_PREFREEZE_STATUS_NOT_ELIGIBLE_REGISTRY",
         "rules_version": "BOE-1.0.0",
