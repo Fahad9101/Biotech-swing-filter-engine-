@@ -148,12 +148,57 @@
       "status": "CANDIDATE_LEVEL_QUOTA_MET_MUST_SURVIVE_FINAL_ELIGIBILITY"
     },
     "single_asset_evidence": {
-      "path": "validation/m7/promotion/single-asset-evidence-ledger-01.json",
+      "primary_path": "validation/m7/promotion/single-asset-evidence-ledger-01.json",
+      "supplemental_paths": [
+        "validation/m7/promotion/single-asset-evidence-ledger-02.json",
+        "validation/m7/promotion/single-asset-evidence-ledger-03.json"
+      ],
       "quota_requirement": 20,
-      "confirmed_quota_candidate_count": 20,
+      "original_confirmed_quota_candidate_count": 20,
       "additional_single_asset_not_quota_counted": 1,
-      "status": "CANDIDATE_LEVEL_QUOTA_MET_MUST_SURVIVE_FINAL_ELIGIBILITY",
-      "note": "Orphazyme is retained as a single-asset determination but not quota-counted because separate historical U.S.-universe eligibility at the event appears unresolved/adverse."
+      "targeted_replacement_candidates_qualifying_single_asset": 2,
+      "targeted_replacement_candidates_rejected_single_asset": 1,
+      "known_investability_exclusions_among_single_asset_reserve": 2,
+      "known_not_yet_excluded_single_asset_reserve": 20,
+      "known_investability_exclusion_ids": [
+        "NEG-P2-2018-MNLO-ATOMIK",
+        "P3-2023-RAIN-MANTRA"
+      ],
+      "latest_replacement_surviving_investability": "P2-2021-GHRS-GH001",
+      "status": "CANDIDATE_LEVEL_RESERVE_RESTORED_TO_20_AFTER_KNOWN_INVESTABILITY_ATTRITION_NOT_FROZEN_QUOTA",
+      "note": "The 20 not-yet-excluded single-asset reserve events are not authoritative eligible events. Fifteen still require historical-universe testing and all surviving rows must clear timestamp, point-in-time evidence, concentration, registry and deterministic cohort-freeze requirements. Orphazyme remains separately uncounted because of historical U.S.-universe concerns."
+    },
+    "historical_security_identity": {
+      "summary_path": "validation/m7/promotion/historical-security-identity-summary-01.json",
+      "identity_confirmed_including_targeted_replacements": 22,
+      "us_exchange_listing_confirmed": 22,
+      "identity_pending": 0,
+      "status": "IDENTITY_CONFIRMED_FOR_SINGLE_ASSET_RESERVE_AND_TARGETED_REPLACEMENTS"
+    },
+    "historical_universe_investability": {
+      "source_ledgers": [
+        "validation/m7/promotion/historical-universe-ledger-01.json",
+        "validation/m7/promotion/historical-universe-ledger-02.json",
+        "validation/m7/promotion/historical-universe-ledger-03.json",
+        "validation/m7/promotion/historical-universe-ledger-04.json",
+        "validation/m7/promotion/historical-universe-ledger-05.json"
+      ],
+      "evaluated": 7,
+      "eligible": 5,
+      "excluded": 2,
+      "pending_within_22_identity_confirmed_candidates": 15,
+      "eligible_candidate_ids": [
+        "P2-2022-CINC-BRIGHTN",
+        "P2-2022-AKRO-HARMONY",
+        "P2-2023-ETNB-ENLIVEN",
+        "P2-2023-MLTX-MIRA",
+        "P2-2021-GHRS-GH001"
+      ],
+      "excluded_candidate_ids": [
+        "NEG-P2-2018-MNLO-ATOMIK",
+        "P3-2023-RAIN-MANTRA"
+      ],
+      "status": "ACTIVE_PREFREEZE_PROMOTION_TESTING_NO_OUTCOMES"
     },
     "integration": {
       "path": "validation/m7/promotion/promotion-evidence-integration-01.json",
@@ -162,7 +207,7 @@
     }
   },
   "historical_market_data_status": {
-    "status": "VIABLE_SOURCE_IDENTIFIED_NOT_YET_COHORT_EXECUTED",
+    "status": "VIABLE_SOURCE_ACTIVE_PREFREEZE_INVESTABILITY_TESTING",
     "provider": "Alpaca",
     "feed": "SIP",
     "bar_mode": "RAW_AS_TRADED",
@@ -176,21 +221,27 @@
       "reported_action": "10-for-1 forward split",
       "ex_date": "2024-06-10"
     },
-    "note": "The connected SIP feed returned consolidated raw pre/post-split prices and a separate corporate-action record, compatible with leakage-safe reconstruction. No real frozen-cohort snapshot or outcome is yet complete."
+    "prefreeze_promotion_progress": {
+      "historical_universe_events_evaluated": 7,
+      "historical_universe_events_passed": 5,
+      "historical_universe_events_failed": 2
+    },
+    "note": "The connected SIP feed returns consolidated raw prices and separate corporate-action records, compatible with leakage-safe reconstruction. It is now being used for pre-freeze investability promotion checks only. No frozen-cohort snapshot or outcome has been reconstructed."
   },
   "blocking_findings": [
     "No authoritative frozen 120-event registry or cohort-manifest.json exists.",
     "All five numerical stratum minima have pre-freeze reserve capacity, but no reserve row is automatically eligible for the authoritative cohort.",
     "The pre-freeze negative reserve is 43 candidate rows; the final frozen cohort still must contain at least 40 verified negative underlying events after all promotion checks.",
     "All six pre-freeze duplicate-review groups are resolved without market outcomes; conference rows still require earliest material abstract/poster/oral availability verification.",
-    "Historical ticker/CIK/security identity and exact first-public availability remain unresolved for many rows.",
-    "Candidate-level financing and single-asset evidence quotas are now each >=20, but those rows must still survive historical-universe, timestamp, point-in-time evidence, concentration and final registry eligibility checks before the frozen quotas can be declared met.",
-    "Historical BOE universe/investability status and point-in-time scientific, SEC, capital-structure and valuation evidence have not yet been reconstructed for an eligible >=120-event registry.",
-    "Alpaca SIP raw bars plus separate corporate actions are a viable market-data route, but no real cohort has yet been reconstructed through that route.",
+    "Historical security identity is confirmed for the original 20 single-asset quota reserve events plus Rain and GHRS targeted replacements, but exact first-public availability and identity remain unresolved for many of the wider 165-row acquisition population.",
+    "Candidate-level financing evidence has 20 confirmed cases but those cases must survive historical-universe, timestamp, point-in-time evidence, concentration and final registry eligibility before the frozen financing quota can be declared met.",
+    "Single-asset evidence has enough candidate reserve after targeted GHRS replacement, but Menlo 2018 and Rain are already excluded by frozen investability rules; 15 of the 22 identity-confirmed single-asset/replacement candidates still require historical-universe testing and no frozen single-asset quota has been declared.",
+    "Historical BOE universe/investability promotion has evaluated 7 single-asset/replacement events: 5 pass and 2 fail. Point-in-time scientific, SEC, capital-structure and valuation evidence has not yet been reconstructed for an eligible >=120-event registry.",
+    "Alpaca SIP raw bars plus separate corporate actions are a viable market-data route, but no real frozen cohort has yet been reconstructed through that route.",
     "No real 2025 holdout has been locked before outcome inspection."
   ],
   "merge_ready": false,
   "milestone_complete": false,
   "milestone_8_allowed": false,
-  "required_action": "Do not expand strata unless promotion attrition creates a quota shortage. Continue promotion by resolving historical security identity, exact first-public availability, historical BOE universe/investability and point-in-time evidence readiness across enough candidates to yield >=120 eligible events. Candidate-level duplicate review is complete and financing/single-asset evidence each have >=20 reserves, but frozen quotas are not satisfied until those rows survive eligibility and deterministic cohort freeze. Freeze the eligible registry with seed 100100 before any stock-outcome inspection. Do not reduce requirements or alter BOE-1.0.0."
+  "required_action": "Do not expand strata unless promotion attrition creates a quota shortage. Continue pre-freeze promotion by completing historical BOE universe/investability checks across the remaining identity-confirmed single-asset reserve and then across enough wider candidates to yield >=120 eligible events; resolve exact first-public availability and point-in-time evidence in parallel where needed. Keep financing and single-asset quotas outcome-blind and provisional until final eligibility. Freeze the eligible registry with seed 100100 before any stock-outcome inspection. Do not reduce requirements or alter BOE-1.0.0."
 }
