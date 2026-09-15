@@ -2536,8 +2536,8 @@
       "stratum": "REGULATORY",
       "ticker": "AGIO",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-25.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/regulatory-primary-batch-01.json",
@@ -2608,8 +2608,8 @@
       "stratum": "REGULATORY",
       "ticker": "GBT",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-25.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/regulatory-primary-batch-01.json",
@@ -2680,8 +2680,8 @@
       "stratum": "REGULATORY",
       "ticker": "IMMU",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-25.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/regulatory-primary-batch-01.json",
@@ -2698,8 +2698,8 @@
       "stratum": "REGULATORY",
       "ticker": "RYTM",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-25.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/regulatory-primary-batch-01.json",
@@ -2716,8 +2716,8 @@
       "stratum": "REGULATORY",
       "ticker": "APLS",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-25.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/regulatory-primary-batch-01.json",
@@ -2806,8 +2806,8 @@
       "stratum": "REGULATORY",
       "ticker": "INCY",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-25.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/regulatory-primary-batch-01.json",
@@ -2950,8 +2950,8 @@
       "stratum": "REGULATORY",
       "ticker": "BLUE",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-25.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/regulatory-primary-batch-01.json",
@@ -3040,8 +3040,8 @@
       "stratum": "REGULATORY",
       "ticker": "SRPT",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-25.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/regulatory-primary-batch-01.json",
@@ -3076,8 +3076,8 @@
       "stratum": "REGULATORY",
       "ticker": "BBIO",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-25.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/regulatory-primary-batch-01.json",
@@ -3166,8 +3166,8 @@
       "stratum": "REGULATORY",
       "ticker": "SNDX",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-25.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/regulatory-primary-batch-01.json",

@@ -19,8 +19,8 @@
   "candidate_counts": {
     "fail": 17,
     "not_yet_excluded": 162,
-    "pass": 58,
-    "pending": 104,
+    "pass": 68,
+    "pending": 94,
     "total": 179
   },
   "decision_locks_complete": 0,
@@ -52,7 +52,7 @@
   },
   "real_four_snapshot_reconstructions_complete": 0,
   "real_outcomes_complete": 0,
-  "reconciled_rows_sha256": "8f4caad6a4130ede325e302fdb57d774fc9bdf87725d7811b9cf50298750e514",
+  "reconciled_rows_sha256": "56ade72540ea72df53b56190f1fb1e6471d13df47873bd49da858f0607dfb214",
   "required_action": "Complete outcome-blind evidence promotion and review; do not freeze, inspect returns or merge based on reserve counts.",
   "required_minimum_events": 120,
   "rules_version": "BOE-1.0.0",
@@ -112,6 +112,7 @@
     "validation/m7/promotion/historical-universe-ledger-22.json": "73709d901647a11c0ed7987723bdee68dcd7287c843542fcf93e0afa990f5f16",
     "validation/m7/promotion/historical-universe-ledger-23.json": "f081adec4ba83bc0ee87e6ea5a9de6ad5057b29de60012dcee88964884712e6c",
     "validation/m7/promotion/historical-universe-ledger-24.json": "ce6d66634ffdc8c5819611784a7acc984352db7b2bcdc76c755512af65c369ff",
+    "validation/m7/promotion/historical-universe-ledger-25.json": "07ff3ef62345c31d5b41ac83b78220bc8cacf5d88340facdd8e11cd6825ab7da",
     "validation/m7/promotion/negative-reserve-integration-01.json": "6c363ca516f872d8721b6fc9d2bb95197956f4db63e4c926f79860285f6e8604",
     "validation/m7/promotion/single-asset-evidence-ledger-01.json": "abae416444a4d37f97861036d4a78a010c234fef283278d83a351da2f36d3fbd",
     "validation/m7/promotion/single-asset-evidence-ledger-02.json": "40802ef22876d8be63d1dcb2fe30799961b8163f6000d1ea0e4cab862fb2917e",
@@ -164,8 +165,8 @@
       "fail": 1,
       "maximum_provisional_buffer": 8,
       "not_yet_excluded": 38,
-      "pass": 12,
-      "pending": 26,
+      "pass": 22,
+      "pending": 16,
       "requirement": 30,
       "total": 39
     }

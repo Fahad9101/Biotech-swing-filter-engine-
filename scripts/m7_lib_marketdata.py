@@ -80,15 +80,20 @@ _SHARES_OUTSTANDING_CONCEPTS = [
 def sec_shares_outstanding_history(cik: str) -> tuple[list[dict], str | None]:
     """(rows, concept_used) from SEC XBRL company facts, oldest first. rows is []
     and concept_used is None if the issuer tags none of the known concepts.
+
+    Uses the bulk companyfacts endpoint rather than per-tag companyconcept: the
+    latter has been observed to return an empty {} units object for a tag that
+    companyfacts shows has real data (e.g. Incyte's us-gaap:CommonStockSharesOutstanding),
+    an apparent SEC-side inconsistency between the two endpoints.
     """
     cik10 = cik.zfill(10)
+    try:
+        d = _get(f"https://data.sec.gov/api/xbrl/companyfacts/CIK{cik10}.json", SEC_UA)
+    except urllib.error.HTTPError:
+        return [], None
+    facts = d.get("facts", {})
     for ns, tag in _SHARES_OUTSTANDING_CONCEPTS:
-        url = f"https://data.sec.gov/api/xbrl/companyconcept/CIK{cik10}/{ns}/{tag}.json"
-        try:
-            d = _get(url, SEC_UA)
-        except urllib.error.HTTPError:
-            continue
-        units = d.get("units", {}).get("shares", [])
+        units = facts.get(ns, {}).get(tag, {}).get("units", {}).get("shares", [])
         if units:
             return sorted(units, key=lambda x: x["end"]), f"{ns}:{tag}"
     return [], None
