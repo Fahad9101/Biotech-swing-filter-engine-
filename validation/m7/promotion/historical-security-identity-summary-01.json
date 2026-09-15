@@ -1,0 +1,46 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-15",
+  "role": "PREFREEZE_HISTORICAL_SECURITY_IDENTITY_SUMMARY",
+  "market_outcomes_inspected": false,
+  "cohort_frozen": false,
+  "source_ledgers": [
+    "validation/m7/promotion/historical-security-identity-ledger-01.json",
+    "validation/m7/promotion/historical-security-identity-ledger-02.json",
+    "validation/m7/promotion/historical-security-identity-ledger-03.json",
+    "validation/m7/promotion/historical-security-identity-ledger-04.json"
+  ],
+  "single_asset_quota_reserve": {
+    "candidate_count": 20,
+    "identity_confirmed": 20,
+    "us_exchange_listing_confirmed": 20,
+    "identity_pending": 0,
+    "historical_boe_universe_eligible_confirmed": 0,
+    "historical_boe_universe_pending": 20
+  },
+  "special_cases": [
+    {
+      "candidate_id": "P2-2023-AEON-ABP450",
+      "issue": "The event security traded on NYSE American after the July 2023 business combination, not Nasdaq. Full frozen BOE-universe admissibility must be checked before promotion."
+    },
+    {
+      "candidate_id": "P3-2025-OPT-COAST",
+      "issue": "The U.S. event security is the Nasdaq-listed OPT ADS, each representing eight Australian ordinary shares. U.S. historical market reconstruction must use the ADS security rather than the ASX ordinary shares."
+    },
+    {
+      "candidate_id": "REG-2024-VRNA-OHTUVAYRE",
+      "issue": "The U.S. event security is the Nasdaq-listed VRNA ADS, each representing eight ordinary shares. The ordinary shares themselves were no longer publicly traded after AIM cancellation."
+    },
+    {
+      "candidate_id": "NEG-P2-2020-MNLO-CPUO",
+      "issue": "MNLO is correct at the February 2020 event. The later VYNE corporate name/ticker change occurred in September 2020 and must not be back-applied."
+    },
+    {
+      "candidate_id": "P2-2023-PRDS-POMOTRELVIR",
+      "issue": "The public parent/security arose from the earlier business combination; PRDS identity is confirmed pre-event and must not be confused with Old Pardes subsidiary identity."
+    }
+  ],
+  "promotion_boundary": "Security identity and listing proof are complete for the 20 single-asset quota reserve events, but no row is promoted or marked historical_universe_eligible solely from this summary."
+}
