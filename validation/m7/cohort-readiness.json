@@ -22,104 +22,42 @@
     "current_candidate_rows_including_targeted_replacements": 173,
     "known_negative_candidate_rows_in_broad_reserve_before_final_deduplication": 43,
     "all_frozen_numerical_strata_have_broad_reserve_capacity": true,
-    "note": "The broad 165-row acquisition reserve remains closed. Eight targeted rows were added only to repair documented single-asset reserve attrition; none is frozen or selected using stock outcomes."
+    "note": "The broad 165-row acquisition reserve remains closed. Eight targeted rows were added only to repair documented single-asset reserve attrition; financing reserve repair used already-acquired events and added no new catalyst rows."
   },
   "source_acquisition_status": {
-    "regulatory_primary_batch_01": {
-      "path": "validation/m7/acquisition/regulatory-primary-batch-01.json",
-      "candidate_count": 33,
-      "exact_first_public_timestamps_resolved": 13,
-      "date_only_candidates_pending_exact_timestamp": 20,
-      "cik_resolved_count": 25,
-      "proposed_stratum": "REGULATORY",
-      "status": "PRIMARY_SOURCE_CANDIDATE_BATCH_COMMITTED_NOT_FROZEN"
-    },
-    "phase2_primary_batch_01": {
-      "path": "validation/m7/acquisition/phase2-primary-batch-01.json",
-      "candidate_count": 36,
-      "exact_first_public_timestamps_resolved": 21,
-      "date_only_candidates_pending_exact_timestamp": 15,
-      "cik_resolved_count": 10,
-      "negative_event_candidates": 13,
-      "proposed_stratum": "PHASE_2_POC",
-      "status": "PRIMARY_SOURCE_CANDIDATE_BATCH_COMMITTED_NOT_FROZEN"
-    },
-    "phase3_primary_batch_01": {
-      "path": "validation/m7/acquisition/phase3-primary-batch-01.json",
-      "candidate_count": 31,
-      "exact_first_public_timestamps_resolved": 27,
-      "date_only_candidates_pending_exact_timestamp": 4,
-      "cik_resolved_count": 2,
-      "negative_event_candidates": 17,
-      "proposed_stratum": "PHASE_3_PIVOTAL",
-      "status": "PRIMARY_SOURCE_CANDIDATE_BATCH_COMMITTED_NOT_FROZEN"
-    },
-    "early_clinical_primary_batch_01": {
-      "path": "validation/m7/acquisition/early-clinical-primary-batch-01.json",
-      "candidate_count": 31,
-      "exact_first_public_timestamps_resolved": 28,
-      "date_only_candidates_pending_exact_timestamp": 3,
-      "cik_resolved_count": 0,
-      "negative_event_candidates": 5,
-      "proposed_stratum": "EARLY_CLINICAL",
-      "status": "PRIMARY_SOURCE_CANDIDATE_BATCH_COMMITTED_NOT_FROZEN"
-    },
-    "conference_other_primary_batch_01": {
-      "path": "validation/m7/acquisition/conference-other-primary-batch-01.json",
-      "candidate_count": 26,
-      "exact_first_public_timestamps_resolved": 25,
-      "date_only_candidates_pending_exact_timestamp": 1,
-      "cik_resolved_count": 0,
-      "negative_event_candidates": 0,
-      "proposed_stratum": "CONFERENCE_OTHER",
-      "status": "PRIMARY_SOURCE_CANDIDATE_BATCH_COMMITTED_NOT_FROZEN"
-    },
-    "negative_phase2_supplement_01": {
-      "path": "validation/m7/acquisition/negative-phase2-supplement-01.json",
-      "candidate_count": 8,
-      "negative_event_candidates": 8,
-      "exact_first_public_timestamps_resolved": 8,
-      "status": "PRIMARY_SOURCE_NEGATIVE_SUPPLEMENT_COMMITTED_NOT_FROZEN"
-    },
+    "regulatory_primary_batch_01": {"path":"validation/m7/acquisition/regulatory-primary-batch-01.json","candidate_count":33,"exact_first_public_timestamps_resolved":13,"date_only_candidates_pending_exact_timestamp":20,"cik_resolved_count":25,"proposed_stratum":"REGULATORY","status":"PRIMARY_SOURCE_CANDIDATE_BATCH_COMMITTED_NOT_FROZEN"},
+    "phase2_primary_batch_01": {"path":"validation/m7/acquisition/phase2-primary-batch-01.json","candidate_count":36,"exact_first_public_timestamps_resolved":21,"date_only_candidates_pending_exact_timestamp":15,"cik_resolved_count":10,"negative_event_candidates":13,"proposed_stratum":"PHASE_2_POC","status":"PRIMARY_SOURCE_CANDIDATE_BATCH_COMMITTED_NOT_FROZEN"},
+    "phase3_primary_batch_01": {"path":"validation/m7/acquisition/phase3-primary-batch-01.json","candidate_count":31,"exact_first_public_timestamps_resolved":27,"date_only_candidates_pending_exact_timestamp":4,"cik_resolved_count":2,"negative_event_candidates":17,"proposed_stratum":"PHASE_3_PIVOTAL","status":"PRIMARY_SOURCE_CANDIDATE_BATCH_COMMITTED_NOT_FROZEN"},
+    "early_clinical_primary_batch_01": {"path":"validation/m7/acquisition/early-clinical-primary-batch-01.json","candidate_count":31,"exact_first_public_timestamps_resolved":28,"date_only_candidates_pending_exact_timestamp":3,"cik_resolved_count":0,"negative_event_candidates":5,"proposed_stratum":"EARLY_CLINICAL","status":"PRIMARY_SOURCE_CANDIDATE_BATCH_COMMITTED_NOT_FROZEN"},
+    "conference_other_primary_batch_01": {"path":"validation/m7/acquisition/conference-other-primary-batch-01.json","candidate_count":26,"exact_first_public_timestamps_resolved":25,"date_only_candidates_pending_exact_timestamp":1,"cik_resolved_count":0,"negative_event_candidates":0,"proposed_stratum":"CONFERENCE_OTHER","status":"PRIMARY_SOURCE_CANDIDATE_BATCH_COMMITTED_NOT_FROZEN"},
+    "negative_phase2_supplement_01": {"path":"validation/m7/acquisition/negative-phase2-supplement-01.json","candidate_count":8,"negative_event_candidates":8,"exact_first_public_timestamps_resolved":8,"status":"PRIMARY_SOURCE_NEGATIVE_SUPPLEMENT_COMMITTED_NOT_FROZEN"},
     "targeted_replacements": {
-      "paths": [
-        "validation/m7/acquisition/targeted-single-asset-replacement-01.json",
-        "validation/m7/acquisition/targeted-single-asset-replacement-02.json",
-        "validation/m7/promotion/targeted-single-asset-replacement-03.json",
-        "validation/m7/acquisition/targeted-single-asset-replacement-04.json"
-      ],
+      "paths": ["validation/m7/acquisition/targeted-single-asset-replacement-01.json","validation/m7/acquisition/targeted-single-asset-replacement-02.json","validation/m7/promotion/targeted-single-asset-replacement-03.json","validation/m7/acquisition/targeted-single-asset-replacement-04.json"],
       "rows_added": 8,
       "reason": "ONLY_TO_REPAIR_SINGLE_ASSET_RESERVE_ATTRITION",
       "market_outcomes_used_for_selection": false
     }
   },
   "promotion_evidence_status": {
-    "duplicate_review": {
-      "path": "validation/m7/promotion/duplicate-review-01.json",
-      "flagged_groups": 6,
-      "resolved_groups": 6,
-      "pending_groups": 0,
-      "duplicate_based_exclusions": 0,
-      "status": "RESOLVED_PREFREEZE_NO_MARKET_OUTCOMES"
-    },
+    "duplicate_review": {"path":"validation/m7/promotion/duplicate-review-01.json","flagged_groups":6,"resolved_groups":6,"pending_groups":0,"duplicate_based_exclusions":0,"status":"RESOLVED_PREFREEZE_NO_MARKET_OUTCOMES"},
     "financing_evidence": {
-      "path": "validation/m7/promotion/financing-evidence-ledger-01.json",
+      "source_paths": ["validation/m7/promotion/financing-evidence-ledger-01.json","validation/m7/promotion/financing-evidence-ledger-02.json","validation/m7/promotion/financing-evidence-ledger-03.json"],
+      "integration_path": "validation/m7/promotion/financing-promotion-integration-02.json",
       "quota_requirement": 20,
-      "confirmed_candidate_level_count": 20,
-      "pending_count": 0,
-      "status": "CANDIDATE_LEVEL_QUOTA_MET_MUST_SURVIVE_FINAL_ELIGIBILITY"
+      "financing_qualified_candidate_count": 24,
+      "historical_universe_pass": 20,
+      "historical_universe_fail": 4,
+      "historical_universe_pending": 0,
+      "candidate_level_universe_stage_quota_met": true,
+      "candidate_level_universe_stage_buffer": 0,
+      "final_frozen_financing_quota_met": false,
+      "known_universe_exclusion_ids": ["NEG-P2-2018-MNLO-ATOMIK","EC-2020-SLS-GPS","EC-2020-CRNX-CRN01941","P2-2023-FWBI-SPAN"],
+      "latest_repair_ids": ["P3-2022-MDGL-MAESTRO-NASH","REG-2022-AMLX-RELYVRIO","EC-2024-TSHA-TSHA102"],
+      "status": "UNIVERSE_STAGE_RESERVE_AT_20_FINAL_FROZEN_QUOTA_NOT_YET_MET"
     },
     "single_asset_evidence": {
       "primary_path": "validation/m7/promotion/single-asset-evidence-ledger-01.json",
-      "supplemental_paths": [
-        "validation/m7/promotion/single-asset-evidence-ledger-02.json",
-        "validation/m7/promotion/single-asset-evidence-ledger-03.json",
-        "validation/m7/promotion/single-asset-evidence-ledger-04.json",
-        "validation/m7/promotion/single-asset-evidence-ledger-05.json",
-        "validation/m7/promotion/single-asset-evidence-ledger-06.json",
-        "validation/m7/promotion/single-asset-evidence-ledger-07.json",
-        "validation/m7/promotion/single-asset-evidence-ledger-08.json"
-      ],
+      "supplemental_paths": ["validation/m7/promotion/single-asset-evidence-ledger-02.json","validation/m7/promotion/single-asset-evidence-ledger-03.json","validation/m7/promotion/single-asset-evidence-ledger-04.json","validation/m7/promotion/single-asset-evidence-ledger-05.json","validation/m7/promotion/single-asset-evidence-ledger-06.json","validation/m7/promotion/single-asset-evidence-ledger-07.json","validation/m7/promotion/single-asset-evidence-ledger-08.json"],
       "quota_requirement": 20,
       "original_quota_candidates": 20,
       "original_candidate_attrition_total": 8,
@@ -132,55 +70,29 @@
       "historical_universe_pending_single_asset_reserve": 0,
       "known_not_yet_excluded_single_asset_reserve": 20,
       "candidate_level_universe_stage_quota_met": true,
-      "known_original_universe_exclusion_ids": [
-        "NEG-P2-2018-MNLO-ATOMIK",
-        "NEG-P2-2020-MNLO-CPUO",
-        "P2-2023-AEON-ABP450",
-        "P2-2023-PRDS-POMOTRELVIR",
-        "P3-2025-OPT-COAST",
-        "REG-2022-MRNS-ZTALMY",
-        "P2-2025-ACTU-ELRAGLUSIB"
-      ],
-      "known_targeted_universe_exclusion_ids": [
-        "P3-2023-RAIN-MANTRA",
-        "P2-2022-ETNB-ENTRIGUE"
-      ],
       "latest_replacement_survivor": "P3-2022-MDGL-MAESTRO-NASH",
-      "status": "UNIVERSE_STAGE_RESERVE_AT_20_FINAL_FROZEN_QUOTA_NOT_YET_MET",
-      "note": "The 20-event single-asset reserve now has explicit historical-universe PASS determinations, including SAVA REFOCUS and targeted Madrigal MAESTRO-NASH. Final quota remains provisional until timestamp, point-in-time evidence, concentration, eligible-registry and deterministic cohort-freeze requirements all pass."
+      "status": "UNIVERSE_STAGE_RESERVE_AT_20_FINAL_FROZEN_QUOTA_NOT_YET_MET"
     },
     "first_public_availability": {
       "latest_path": "validation/m7/promotion/first-public-availability-ledger-06.json",
-      "latest_rows_resolved": 2,
-      "latest_rows_pending": 0,
-      "conference_normalization_flag": "CO-2021-IMRA-IMR687ASH requires earliest ASH abstract availability normalization if retained in the wider general cohort reserve; December 13 issuer presentation is not assumed to be earliest public availability.",
-      "status": "ACTIVE_PREFREEZE_TIMESTAMP_RESOLUTION"
+      "status": "ACTIVE_PREFREEZE_TIMESTAMP_RESOLUTION",
+      "known_universe_pass_timestamp_pending_ids": ["P2-2019-TGTX-UNITYNHL","P2-2024-GPCR-GSBR1290"],
+      "conference_availability_still_requires_row_level_resolution": true
     },
     "historical_security_identity": {
       "original_summary_path": "validation/m7/promotion/historical-security-identity-summary-01.json",
       "latest_batch_path": "validation/m7/promotion/historical-security-identity-ledger-11.json",
-      "status": "CURRENT_SINGLE_ASSET_RESERVE_IDENTITY_SUFFICIENT; WIDER_173_ROW_POPULATION_NOT_COMPLETE"
+      "status": "CURRENT_SINGLE_ASSET_AND_FINANCING_PRIORITY_UNIVERSE_EVIDENCE_ADVANCED; WIDER_173_ROW_POPULATION_NOT_COMPLETE"
     },
     "historical_universe_investability": {
-      "source_ledger_range": "validation/m7/promotion/historical-universe-ledger-01.json through historical-universe-ledger-18.json",
-      "evaluated": 29,
-      "eligible": 20,
-      "excluded": 9,
-      "pending_within_current_single_asset_reserve": 0,
-      "latest_batch": {
-        "path": "validation/m7/promotion/historical-universe-ledger-18.json",
-        "evaluated": 2,
-        "eligible": 2,
-        "excluded": 0,
-        "candidate_ids": ["P3-2025-SAVA-REFOCUS", "P3-2022-MDGL-MAESTRO-NASH"]
-      },
+      "source_ledger_range": "validation/m7/promotion/historical-universe-ledger-01.json through historical-universe-ledger-19.json",
+      "evaluated": 44,
+      "eligible": 32,
+      "excluded": 12,
+      "latest_batch": {"path":"validation/m7/promotion/historical-universe-ledger-19.json","evaluated":15,"eligible":12,"excluded":3},
       "status": "ACTIVE_PREFREEZE_PROMOTION_TESTING_NO_OUTCOMES"
     },
-    "integration": {
-      "path": "validation/m7/promotion/promotion-evidence-integration-01.json",
-      "master_promotion_status": "NO_EVENT_IS_FROZEN_OR_OUTCOME_ELIGIBLE_UNTIL_ALL_ROW_BLOCKERS_CLEAR",
-      "market_outcomes_inspected": false
-    }
+    "integration": {"path":"validation/m7/promotion/promotion-evidence-integration-01.json","master_promotion_status":"NO_EVENT_IS_FROZEN_OR_OUTCOME_ELIGIBLE_UNTIL_ALL_ROW_BLOCKERS_CLEAR","market_outcomes_inspected":false}
   },
   "historical_market_data_status": {
     "status": "VIABLE_SOURCE_ACTIVE_PREFREEZE_INVESTABILITY_TESTING",
@@ -188,24 +100,20 @@
     "feed": "SIP",
     "bar_mode": "RAW_AS_TRADED",
     "corporate_actions_separate": true,
-    "prefreeze_promotion_progress": {
-      "historical_universe_events_evaluated": 29,
-      "historical_universe_events_passed": 20,
-      "historical_universe_events_failed": 9
-    },
+    "prefreeze_promotion_progress": {"historical_universe_events_evaluated":44,"historical_universe_events_passed":32,"historical_universe_events_failed":12},
     "note": "No stock outcome, MFE, MAE or post-event performance field has been used for candidate selection. Same-day regular-session bars are used only where first-public availability is after the close."
   },
   "blocking_findings": [
     "No authoritative eligible-registry.json or frozen 120-event cohort-manifest.json exists.",
-    "The single-asset candidate reserve has recovered to 20 historical-universe PASS events, but final frozen single-asset quota is not met until those events survive all remaining point-in-time evidence, concentration, registry and cohort-freeze checks.",
-    "The candidate-level financing ledger contains 20 confirmed financing cases, but final financing quota is not met until at least 20 survive all remaining eligibility and cohort-freeze requirements.",
-    "The 173-row candidate population still requires enough exact first-public, historical-universe, point-in-time science, SEC, capital-structure, catalyst, valuation and technical evidence to yield an eligible registry of at least 120 events.",
-    "The final frozen cohort must contain at least 40 verified negative clinical/regulatory events; the broad pre-freeze negative reserve is 43 before promotion attrition.",
-    "Conference/other rows still require earliest material abstract/poster/oral availability verification; IMRA specifically has a documented earlier-availability concern if retained outside the single-asset quota.",
+    "Single-asset and financing candidate reserves each have 20 historical-universe PASS events, but neither final frozen quota is met until all remaining timestamp/conference, point-in-time evidence, concentration, registry and cohort-freeze checks pass.",
+    "The 173-row candidate population has 44 historical-universe determinations so far: 32 pass and 12 fail. Enough additional outcome-blind promotion is still required to yield an eligible registry of at least 120 events.",
+    "The final frozen cohort must contain at least 40 verified negative clinical/regulatory events; the broad pre-freeze negative reserve is only 43 before promotion attrition, making negative-event survival the next hard quota risk.",
+    "Conference/other rows require earliest material abstract/poster/oral availability verification before promotion.",
+    "Point-in-time science, SEC capital structure, catalyst evidence, valuation/rNPV and technical evidence readiness are not yet complete across an eligible >=120-event registry.",
     "No real BOE four-snapshot reconstruction, decision lock, historical outcome set or untouched 2025 holdout has been completed."
   ],
   "merge_ready": false,
   "milestone_complete": false,
   "milestone_8_allowed": false,
-  "required_action": "With the universe-stage single-asset reserve restored to 20, stop targeted single-asset acquisition. Continue outcome-blind promotion across the wider candidate population: resolve exact first-public availability and historical-universe eligibility for likely survivors, integrate the 20 financing cases, verify at least 40 negative survivors, establish point-in-time evidence readiness, enforce issuer/stratum concentration and period quotas, then build and hash eligible-registry.json. Freeze the registry/cohort with seed 100100 only after zero-outcome-leakage audit. Do not alter BOE-1.0.0, merge PR #5, or begin Milestone 8."
+  "required_action": "Do not reopen broad acquisition while existing reserve capacity remains. Prioritize the 43 pre-freeze negative candidates for exact first-public, identity and historical-universe survival because the frozen cohort requires >=40 negative events. In parallel resolve conference earliest-public availability and the remaining universe-pass timestamp blockers, then establish point-in-time evidence readiness across enough survivors to construct and hash an eligible >=120-event registry. Enforce concentration and period quotas and run zero-outcome-leakage audit before deterministic seed-100100 cohort freeze. Do not alter BOE-1.0.0, merge PR #5, inspect stock outcomes, or begin Milestone 8."
 }
