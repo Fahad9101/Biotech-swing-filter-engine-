@@ -2113,7 +2113,7 @@
       "eligible_registry_status": "NOT_PROMOTED",
       "financing_evidence_path": null,
       "financing_status": "PENDING",
-      "first_public_timestamp": null,
+      "first_public_timestamp": "2020-04-28T07:00:00-04:00",
       "negative_label_path": "validation/m7/acquisition/phase3-primary-batch-01.json",
       "negative_label_recorded": false,
       "normalization_path": null,
@@ -2121,9 +2121,9 @@
       "single_asset_status": "PENDING",
       "stratum": "PHASE_3_PIVOTAL",
       "ticker": "OCUL",
-      "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "timestamp_evidence_path": "validation/m7/promotion/first-public-availability-ledger-08.json",
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-24.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/phase3-primary-batch-01.json",
@@ -2185,7 +2185,7 @@
       "eligible_registry_status": "NOT_PROMOTED",
       "financing_evidence_path": null,
       "financing_status": "PENDING",
-      "first_public_timestamp": null,
+      "first_public_timestamp": "2021-10-17T16:20:00-04:00",
       "negative_label_path": "validation/m7/acquisition/phase3-primary-batch-01.json",
       "negative_label_recorded": true,
       "normalization_path": null,
@@ -2193,9 +2193,9 @@
       "single_asset_status": "PENDING",
       "stratum": "PHASE_3_PIVOTAL",
       "ticker": "BIIB",
-      "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "timestamp_evidence_path": "validation/m7/promotion/first-public-availability-ledger-08.json",
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-24.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/phase3-primary-batch-01.json",
@@ -2221,7 +2221,7 @@
       "eligible_registry_status": "NOT_PROMOTED",
       "financing_evidence_path": null,
       "financing_status": "PENDING",
-      "first_public_timestamp": null,
+      "first_public_timestamp": "2022-10-12T07:00:00-04:00",
       "negative_label_path": "validation/m7/acquisition/phase3-primary-batch-01.json",
       "negative_label_recorded": false,
       "normalization_path": null,
@@ -2229,9 +2229,9 @@
       "single_asset_status": "PENDING",
       "stratum": "PHASE_3_PIVOTAL",
       "ticker": "BGNE",
-      "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "timestamp_evidence_path": "validation/m7/promotion/first-public-availability-ledger-08.json",
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-24.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/phase3-primary-batch-01.json",
