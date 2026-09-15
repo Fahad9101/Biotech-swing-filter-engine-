@@ -22,19 +22,27 @@ def test_committed_status_is_derived_and_pending_is_not_pass() -> None:
     assert (ROOT / module.ROWS_OUTPUT).read_text() == module.render(rows)
     assert status["candidate_counts"] == {
         "total": 179,
-        "pass": 50,
-        "fail": 16,
-        "pending": 113,
-        "not_yet_excluded": 163,
+        "pass": 55,
+        "fail": 17,
+        "pending": 107,
+        "not_yet_excluded": 162,
     }
     negative = status["negative_reserve"]
-    assert negative["not_yet_excluded"] == 38
-    assert negative["pass"] == 15
-    assert negative["pending"] == 23
-    assert negative["maximum_provisional_buffer"] == -2
+    assert negative["not_yet_excluded"] == 37
+    assert negative["pass"] == 16
+    assert negative["pending"] == 21
+    assert negative["maximum_provisional_buffer"] == -3
     assert negative["final_negative_quota_satisfied"] is False
     assert status["financing_reserve"]["pass"] == 20
     assert status["single_asset_reserve"]["pass"] == 20
+    strata = status["strata"]
+    assert strata["PHASE_3_PIVOTAL"]["requirement"] == 30
+    assert strata["PHASE_3_PIVOTAL"]["maximum_provisional_buffer"] == -3
+    for key, requirement in module.STRATUM_REQUIREMENTS.items():
+        assert strata[key]["requirement"] == requirement
+        assert strata[key]["maximum_provisional_buffer"] == (
+            strata[key]["not_yet_excluded"] - requirement
+        )
     assert status["audit_findings"]
     by_id = {r["candidate_id"]: r for r in rows["rows"]}
     assert by_id["P3-2023-RAIN-MANTRA"]["universe_status"] == "FAIL"
@@ -69,6 +77,33 @@ def test_new_evidence_changes_status_without_manual_counts(copied: Path) -> None
     assert after["negative_reserve"]["pending"] == before_reserve["pending"] - 1
     assert after["negative_reserve"]["fail"] == before_reserve["fail"] + 1
     assert before["source_sha256"] != after["source_sha256"]
+
+
+def test_stratum_buffer_reacts_to_a_new_failure(copied: Path) -> None:
+    """A stratum's maximum_provisional_buffer must fall when a pending candidate in
+    that stratum is newly excluded, so a stratum going mathematically infeasible
+    (not_yet_excluded < requirement) is always caught by --check, not just noticed
+    by accident (as happened for PHASE_3_PIVOTAL before this check existed).
+    """
+    before, rows = module.build(copied)
+    candidate = next(r for r in rows["rows"] if r["universe_status"] == "PENDING" and r["stratum"])
+    stratum = candidate["stratum"]
+    before_buffer = before["strata"][stratum]["maximum_provisional_buffer"]
+    path = copied / "validation/m7/promotion/historical-universe-ledger-999-test-only.json"
+    path.write_text(
+        json.dumps(
+            {
+                "rows": [
+                    {
+                        "candidate_id": candidate["candidate_id"],
+                        "historical_universe_eligible": False,
+                    }
+                ]
+            }
+        )
+    )
+    after, _ = module.build(copied)
+    assert after["strata"][stratum]["maximum_provisional_buffer"] == before_buffer - 1
 
 
 def test_conflicting_universe_determination_is_not_silently_overwritten(copied: Path) -> None:

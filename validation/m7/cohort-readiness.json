@@ -17,10 +17,10 @@
     "Existing source-side unblinding findings require audit before any leakage PASS."
   ],
   "candidate_counts": {
-    "fail": 16,
-    "not_yet_excluded": 163,
-    "pass": 50,
-    "pending": 113,
+    "fail": 17,
+    "not_yet_excluded": 162,
+    "pass": 55,
+    "pending": 107,
     "total": 179
   },
   "decision_locks_complete": 0,
@@ -41,18 +41,18 @@
   "milestone_8_allowed": false,
   "milestone_complete": false,
   "negative_reserve": {
-    "fail": 12,
+    "fail": 13,
     "final_negative_quota_satisfied": false,
-    "maximum_provisional_buffer": -2,
-    "not_yet_excluded": 38,
-    "pass": 15,
-    "pending": 23,
+    "maximum_provisional_buffer": -3,
+    "not_yet_excluded": 37,
+    "pass": 16,
+    "pending": 21,
     "requirement": 40,
     "total": 50
   },
   "real_four_snapshot_reconstructions_complete": 0,
   "real_outcomes_complete": 0,
-  "reconciled_rows_sha256": "f10bcb6282f002a5b07fe70878a7ef3f0d61e7858f181fbbba2b2585de85ee13",
+  "reconciled_rows_sha256": "b4dc20a6a17891f29e941de4b24a73129102882e309841234e1827af575c2070",
   "required_action": "Complete outcome-blind evidence promotion and review; do not freeze, inspect returns or merge based on reserve counts.",
   "required_minimum_events": 120,
   "rules_version": "BOE-1.0.0",
@@ -109,6 +109,7 @@
     "validation/m7/promotion/historical-universe-ledger-20.json": "295c7f1f35e4022faad9e6ebf278c7c7ca8090f9c51ccd552dabc5e2744671a4",
     "validation/m7/promotion/historical-universe-ledger-21.json": "8becec0bfeae1ab48ed2b1b47af6374f36364ecb196d70ca8a43ceaa2ddee9bd",
     "validation/m7/promotion/historical-universe-ledger-22.json": "73709d901647a11c0ed7987723bdee68dcd7287c843542fcf93e0afa990f5f16",
+    "validation/m7/promotion/historical-universe-ledger-23.json": "f081adec4ba83bc0ee87e6ea5a9de6ad5057b29de60012dcee88964884712e6c",
     "validation/m7/promotion/negative-reserve-integration-01.json": "6c363ca516f872d8721b6fc9d2bb95197956f4db63e4c926f79860285f6e8604",
     "validation/m7/promotion/single-asset-evidence-ledger-01.json": "abae416444a4d37f97861036d4a78a010c234fef283278d83a351da2f36d3fbd",
     "validation/m7/promotion/single-asset-evidence-ledger-02.json": "40802ef22876d8be63d1dcb2fe30799961b8163f6000d1ea0e4cab862fb2917e",
@@ -123,37 +124,47 @@
   "strata": {
     "CONFERENCE_OTHER": {
       "fail": 0,
+      "maximum_provisional_buffer": 11,
       "not_yet_excluded": 26,
       "pass": 3,
       "pending": 23,
+      "requirement": 15,
       "total": 26
     },
     "EARLY_CLINICAL": {
       "fail": 2,
+      "maximum_provisional_buffer": 14,
       "not_yet_excluded": 29,
       "pass": 3,
       "pending": 26,
+      "requirement": 15,
       "total": 31
     },
     "PHASE_2_POC": {
       "fail": 7,
+      "maximum_provisional_buffer": 12,
       "not_yet_excluded": 42,
       "pass": 13,
       "pending": 29,
+      "requirement": 30,
       "total": 49
     },
     "PHASE_3_PIVOTAL": {
-      "fail": 6,
-      "not_yet_excluded": 28,
-      "pass": 19,
-      "pending": 9,
+      "fail": 7,
+      "maximum_provisional_buffer": -3,
+      "not_yet_excluded": 27,
+      "pass": 24,
+      "pending": 3,
+      "requirement": 30,
       "total": 34
     },
     "REGULATORY": {
       "fail": 1,
+      "maximum_provisional_buffer": 8,
       "not_yet_excluded": 38,
       "pass": 12,
       "pending": 26,
+      "requirement": 30,
       "total": 39
     }
   }

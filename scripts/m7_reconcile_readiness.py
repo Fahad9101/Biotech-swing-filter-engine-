@@ -13,6 +13,15 @@ ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = Path("validation/m7/cohort-readiness.json")
 ROWS_OUTPUT = Path("validation/m7/promotion/reconciled-candidate-status.json")
 
+# Frozen per-stratum minimums from docs/VALIDATION-AND-MILESTONES.md section 2.1.
+STRATUM_REQUIREMENTS = {
+    "PHASE_2_POC": 30,
+    "PHASE_3_PIVOTAL": 30,
+    "REGULATORY": 30,
+    "EARLY_CLINICAL": 15,
+    "CONFERENCE_OTHER": 15,
+}
+
 
 def render(value: Any) -> str:
     return json.dumps(value, indent=2, sort_keys=True) + "\n"
@@ -209,7 +218,11 @@ def build(root: Path = ROOT) -> tuple[dict[str, Any], dict[str, Any]]:
         "single_asset_reserve": {**single, "requirement": 20},
         "financing_reserve": {**funds, "requirement": 20},
         "strata": {
-            k: counts([r for r in rows if r["stratum"] == k])
+            k: {
+                **(c := counts([r for r in rows if r["stratum"] == k])),
+                "requirement": STRATUM_REQUIREMENTS[k],
+                "maximum_provisional_buffer": c["not_yet_excluded"] - STRATUM_REQUIREMENTS[k],
+            }
             for k in sorted({r["stratum"] for r in rows})
         },
         "audit_findings": warnings,

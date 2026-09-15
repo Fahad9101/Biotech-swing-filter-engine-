@@ -67,25 +67,43 @@ def alpaca_daily_bars(ticker: str, start: str, end: str, feed: str = "sip") -> l
     return bars
 
 
-def sec_shares_outstanding_history(cik: str) -> list[dict]:
-    """(end_date, value, filed_date, form) tuples from SEC XBRL company facts, oldest first."""
+# Tried in order: the standard dei cover-page concept first, then the two
+# most common fallbacks for filers that don't tag it (domestic GAAP filers
+# tagging only the balance-sheet concept; IFRS-taxonomy foreign filers).
+_SHARES_OUTSTANDING_CONCEPTS = [
+    ("dei", "EntityCommonStockSharesOutstanding"),
+    ("us-gaap", "CommonStockSharesOutstanding"),
+    ("ifrs-full", "NumberOfSharesOutstanding"),
+]
+
+
+def sec_shares_outstanding_history(cik: str) -> tuple[list[dict], str | None]:
+    """(rows, concept_used) from SEC XBRL company facts, oldest first. rows is []
+    and concept_used is None if the issuer tags none of the known concepts.
+    """
     cik10 = cik.zfill(10)
-    url = f"https://data.sec.gov/api/xbrl/companyconcept/CIK{cik10}/dei/EntityCommonStockSharesOutstanding.json"
-    try:
-        d = _get(url, SEC_UA)
-    except urllib.error.HTTPError:
-        return []
-    units = d.get("units", {}).get("shares", [])
-    return sorted(units, key=lambda x: x["end"])
+    for ns, tag in _SHARES_OUTSTANDING_CONCEPTS:
+        url = f"https://data.sec.gov/api/xbrl/companyconcept/CIK{cik10}/{ns}/{tag}.json"
+        try:
+            d = _get(url, SEC_UA)
+        except urllib.error.HTTPError:
+            continue
+        units = d.get("units", {}).get("shares", [])
+        if units:
+            return sorted(units, key=lambda x: x["end"]), f"{ns}:{tag}"
+    return [], None
 
 
 def latest_shares_outstanding_before(cik: str, cutoff_date: str) -> dict | None:
-    """Most recent disclosed share count whose FILING date is <= cutoff_date (point-in-time)."""
-    history = sec_shares_outstanding_history(cik)
+    """Most recent disclosed share count whose FILING date is <= cutoff_date (point-in-time).
+    Returned dict includes a "concept" key naming the XBRL tag it came from.
+    """
+    history, concept = sec_shares_outstanding_history(cik)
     eligible = [h for h in history if h["filed"] <= cutoff_date]
     if not eligible:
         return None
-    return max(eligible, key=lambda x: x["filed"])
+    row = max(eligible, key=lambda x: x["filed"])
+    return {**row, "concept": concept}
 
 
 def sec_submissions(cik: str) -> dict:
@@ -111,6 +129,7 @@ class UniverseCheck:
     shares_source_date: str | None
     shares_source_form: str | None
     shares_source_accn: str | None
+    shares_source_concept: str | None
     market_cap_proxy_usd: float | None
     market_cap_floor_pass: bool | None
     all_floors_pass: bool
@@ -172,6 +191,7 @@ def run_universe_check(
         shares_source_date=shares_row["end"] if shares_row else None,
         shares_source_form=shares_row["form"] if shares_row else None,
         shares_source_accn=shares_row["accn"] if shares_row else None,
+        shares_source_concept=shares_row["concept"] if shares_row else None,
         market_cap_proxy_usd=mcap,
         market_cap_floor_pass=mcap_pass,
         all_floors_pass=all_pass,

@@ -2086,8 +2086,8 @@
       "stratum": "PHASE_3_PIVOTAL",
       "ticker": "GMAB",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-23.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/phase3-primary-batch-01.json",
@@ -2104,8 +2104,8 @@
       "stratum": "PHASE_3_PIVOTAL",
       "ticker": "IMMU",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-23.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/phase3-primary-batch-01.json",
@@ -2158,8 +2158,8 @@
       "stratum": "PHASE_3_PIVOTAL",
       "ticker": "REGN",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-23.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/phase3-primary-batch-01.json",
@@ -2176,8 +2176,8 @@
       "stratum": "PHASE_3_PIVOTAL",
       "ticker": "BIIB",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-23.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/phase3-primary-batch-01.json",
@@ -2320,8 +2320,8 @@
       "stratum": "PHASE_3_PIVOTAL",
       "ticker": "GMAB",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-23.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/phase3-primary-batch-01.json",
@@ -2482,8 +2482,8 @@
       "stratum": "PHASE_3_PIVOTAL",
       "ticker": "IOBT",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-23.json",
+      "universe_status": "FAIL"
     },
     {
       "acquisition_path": "validation/m7/acquisition/phase3-primary-batch-01.json",
