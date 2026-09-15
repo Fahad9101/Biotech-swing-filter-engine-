@@ -1,0 +1,55 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "role": "PREFREEZE_CROSS_BATCH_DUPLICATE_REVIEW",
+  "market_outcomes_inspected": false,
+  "groups": [
+    {
+      "duplicate_group_id": "DUP-001",
+      "candidate_ids": ["REG-2020-IMMU-TRODELVY", "P3-2020-IMMU-ASCENT"],
+      "review_result": "NOT_DUPLICATE_DISTINCT_CATALYSTS",
+      "rationale": "The Phase III ASCENT efficacy readout and the separate FDA Trodelvy regulatory decision are distinct material catalysts even though they concern the same issuer/asset program.",
+      "automatic_exclusion": false
+    },
+    {
+      "duplicate_group_id": "DUP-002",
+      "candidate_ids": ["P2-2019-AXSM-AXS05-SMOKING", "P3-2019-AXSM-GEMINI"],
+      "review_result": "NOT_DUPLICATE_DISTINCT_TRIALS_INDICATIONS",
+      "rationale": "These AXS-05 events concern different clinical programs/indications and are not the same underlying dataset.",
+      "automatic_exclusion": false
+    },
+    {
+      "duplicate_group_id": "DUP-003",
+      "candidate_ids": ["P3-2023-GMAB-INNOVATV301", "CO-2024-GMAB-TVASCO"],
+      "review_result": "PENDING_SOURCE_CONFIRMATION_POSSIBLE_REUSE",
+      "rationale": "The later ASCO Tivdak disclosure may reuse or update the INNOVATV301 pivotal dataset. The conference row must not be counted separately until the abstract/presentation is compared with the earlier first-public pivotal result.",
+      "automatic_exclusion": false
+    },
+    {
+      "duplicate_group_id": "DUP-004",
+      "candidate_ids": ["P3-2024-NAMS-BROOKLYN", "P3-2024-NAMS-BROADWAY"],
+      "review_result": "NOT_DUPLICATE_SEPARATE_PIVOTAL_TRIALS",
+      "rationale": "BROOKLYN and BROADWAY are separate pivotal studies and may be retained as distinct events if their individual first-public disclosures and other promotion requirements are verified.",
+      "automatic_exclusion": false
+    },
+    {
+      "duplicate_group_id": "DUP-005",
+      "candidate_ids": ["P3-2024-SAVA-RETHINK", "P3-2025-SAVA-REFOCUS"],
+      "review_result": "NOT_DUPLICATE_SEPARATE_PIVOTAL_TRIALS",
+      "rationale": "RETHINK-ALZ and REFOCUS-ALZ are separate Phase III trials with separate result disclosures.",
+      "automatic_exclusion": false
+    },
+    {
+      "duplicate_group_id": "DUP-006",
+      "candidate_ids": ["CO-2023-MOLN-MP0533ASH", "CO-2024-MOLN-MP0533ASH", "CO-2025-MOLN-MP0533ASH"],
+      "review_result": "PENDING_LONGITUDINAL_DATASET_REVIEW",
+      "rationale": "Annual ASH MP0533 disclosures may represent longitudinal updates of the same early clinical program. Each may only be retained if it contains a separately material dataset first made public at that event and satisfies the frozen conference-event definition.",
+      "automatic_exclusion": false
+    }
+  ],
+  "resolved_nonduplicate_group_count": 4,
+  "pending_group_count": 2,
+  "excluded_candidate_count": 0,
+  "cohort_frozen": false
+}
