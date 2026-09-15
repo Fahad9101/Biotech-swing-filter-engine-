@@ -1,0 +1,77 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-15",
+  "role": "PREFREEZE_TARGETED_SINGLE_ASSET_REPLACEMENT_EVIDENCE",
+  "market_outcome_fields_permitted": false,
+  "cohort_frozen": false,
+  "trigger": "Targeted replacement review after the Rain Oncology replacement failed the frozen 20-session median dollar-volume floor.",
+  "definition": "At the event date, the issuer had one meaningful active therapeutic product candidate or active therapeutic asset. Multiple indications or formulations of the same therapeutic asset still count as one asset; distinct meaningful active therapeutic candidates do not.",
+  "rows": [
+    {
+      "candidate_id": "P2-2021-GHRS-GH001",
+      "event_date": "2021-12-06",
+      "ticker": "GHRS",
+      "issuer": "GH Research PLC",
+      "asset": "mebufotenin (5-MeO-DMT)",
+      "historical_pipeline_snapshot_date": "2021-12-06",
+      "meaningful_active_therapeutic_assets": [
+        "mebufotenin (5-MeO-DMT)"
+      ],
+      "product_formulations": [
+        "GH001 inhaled mebufotenin",
+        "GH002 injectable mebufotenin",
+        "GH003 intranasal mebufotenin"
+      ],
+      "determination": "QUALIFIES",
+      "evidence_summary": "Contemporaneous SEC/issuer materials identify GH001, GH002 and GH003 as formulations of the same active therapeutic molecule, mebufotenin (5-MeO-DMT), differentiated by inhaled, injectable and intranasal administration. The frozen M7 single-asset definition explicitly permits multiple formulations of the same therapeutic asset; no distinct second active therapeutic molecule is identified in the contemporaneous pipeline materials.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1855129/000114036121021557/nt10022430x4_f1a.htm",
+        "https://www.sec.gov/Archives/edgar/data/1855129/000114036121040385/ny20001270x7_ex99-3.htm",
+        "https://investor.ghres.com/news-releases/news-release-details/gh-research-announces-successful-outcome-phase-2-part-its-phase/"
+      ],
+      "source_dates": [
+        "2021-06-21",
+        "2021-12-06",
+        "2021-12-06T07:00:00-05:00"
+      ],
+      "status": "QUALIFIES",
+      "ambiguity": "MULTIPLE_FORMULATIONS_AND_ROUTES_OF_SAME_MEBUFOTENIN_THERAPEUTIC_ASSET",
+      "quota_replacement_candidate": true,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "EC-2024-TSBX-TIDAL01",
+      "event_date": "2024-08-14",
+      "ticker": "TSBX",
+      "issuer": "Turnstone Biologics Corp.",
+      "asset": "TIDAL-01",
+      "historical_pipeline_snapshot_date": "2023-12-31",
+      "meaningful_active_therapeutic_assets": [
+        "TIDAL-01",
+        "TIDAL-02"
+      ],
+      "determination": "DOES_NOT_QUALIFY",
+      "evidence_summary": "The pre-event 2023 Form 10-K states that Turnstone was advancing TIDAL-01 clinically and actively developing TIDAL-02 as its next Selected-TIL therapeutic program in preclinical development. TIDAL-02 is a distinct therapeutic product program rather than only another indication or formulation of TIDAL-01, so the issuer does not meet the conservative single-asset definition at the event date.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1764974/000095017024034974/tsbx-20231231.htm"
+      ],
+      "source_dates": [
+        "2024-03-28"
+      ],
+      "status": "DOES_NOT_QUALIFY",
+      "ambiguity": "NONE_MATERIAL_TIDAL02_WAS_AN_ACTIVE_DISTINCT_PRECLINICAL_THERAPEUTIC_PROGRAM",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    }
+  ],
+  "summary": {
+    "reviewed": 2,
+    "qualifies": 1,
+    "does_not_qualify": 1,
+    "pending": 0,
+    "replacement_reserve_after_known_menlo_and_rain_investability_attrition": 1
+  },
+  "promotion_boundary": "GHRS restores one targeted single-asset reserve candidate after known Menlo 2018 and Rain investability attrition, but it counts toward the frozen >=20 quota only if it survives security identity, historical-universe, timestamp, point-in-time evidence, concentration and final deterministic cohort selection. No market outcomes were used."
+}
