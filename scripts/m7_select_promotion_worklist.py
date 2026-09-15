@@ -76,12 +76,16 @@ def main() -> None:
         if not advanced:
             break
 
+    selection_rule = (
+        "exact timestamp, no potential duplicate group, one row per ticker, "
+        "deterministic stratum round-robin; no market outcomes"
+    )
     payload = {
         "format_version": "1.0",
         "milestone": 7,
         "rules_version": "BOE-1.0.0",
         "role": "PREFREEZE_PROMOTION_EVIDENCE_WORKLIST",
-        "selection_rule": "exact timestamp, no potential duplicate group, one row per ticker, deterministic stratum round-robin; no market outcomes",
+        "selection_rule": selection_rule,
         "candidate_count": len(selected),
         "market_outcomes_inspected": False,
         "candidates": selected,
