@@ -1,0 +1,122 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-15",
+  "role": "PREFREEZE_HISTORICAL_SECURITY_IDENTITY_EVIDENCE",
+  "market_outcomes_inspected": false,
+  "cohort_frozen": false,
+  "scope": "First high-value identity batch prioritizing candidates already supported by both financing-window and single-asset ledgers.",
+  "status_definitions": {
+    "IDENTITY_CONFIRMED": "Legal issuer, historical ticker, SEC CIK, U.S. exchange and traded security class are supported by contemporaneous primary evidence before the event.",
+    "US_LISTING_CONFIRMED_BOE_UNIVERSE_PENDING": "U.S. exchange listing is proven but full frozen BOE historical-universe/investability criteria remain a separate promotion check."
+  },
+  "summary": {
+    "rows": 5,
+    "identity_confirmed": 5,
+    "us_listing_confirmed": 5,
+    "full_boe_historical_universe_eligible": 0,
+    "pending_identity": 0
+  },
+  "rows": [
+    {
+      "candidate_id": "NEG-P2-2018-MNLO-ATOMIK",
+      "event_date": "2018-04-08",
+      "legal_issuer": "Menlo Therapeutics Inc.",
+      "historical_ticker": "MNLO",
+      "cik": "0001566044",
+      "exchange": "Nasdaq Global Select Market",
+      "security_identity": "Common Stock, $0.0001 par value",
+      "listing_start_evidence": "Menlo priced its IPO on January 24, 2018; common stock was approved for Nasdaq Global Select Market listing and expected to begin trading January 25, 2018 under MNLO. The IPO closed January 29, 2018.",
+      "ticker_change_or_reorganization_before_event": "NONE_IDENTIFIED_AFTER_IPO_AND_BEFORE_EVENT",
+      "identity_status": "IDENTITY_CONFIRMED",
+      "us_listing_status": "US_LISTING_CONFIRMED_BOE_UNIVERSE_PENDING",
+      "historical_universe_eligible": null,
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1566044/000162828018000648/exhibit991.htm",
+        "https://www.sec.gov/Archives/edgar/data/1566044/000162828018000648/exhibit992.htm",
+        "https://www.sec.gov/Archives/edgar/data/1566044/000162828018003726/mnlo12311710-k.htm"
+      ],
+      "evidence_dates": ["2018-01-24", "2018-01-29", "2018-03-28"],
+      "ambiguity": "NONE_MATERIAL_FOR_SECURITY_IDENTITY"
+    },
+    {
+      "candidate_id": "P2-2023-ETNB-ENLIVEN",
+      "event_date": "2023-03-22",
+      "legal_issuer": "89bio, Inc.",
+      "historical_ticker": "ETNB",
+      "cik": "0001785173",
+      "exchange": "Nasdaq Global Market",
+      "security_identity": "Common stock, par value $0.001 per share",
+      "listing_start_evidence": "The pre-event 2022 Form 10-K cover states ETNB common stock was registered on the Nasdaq Global Market and Item 5 states the common stock traded there under ETNB.",
+      "ticker_change_or_reorganization_before_event": "2019_INTERNAL_REORGANIZATION_89BIO_LTD_TO_89BIO_INC_COMPLETED_WELL_BEFORE_EVENT_NO_EVENT_DATE_TICKER_CHANGE_IDENTIFIED",
+      "identity_status": "IDENTITY_CONFIRMED",
+      "us_listing_status": "US_LISTING_CONFIRMED_BOE_UNIVERSE_PENDING",
+      "historical_universe_eligible": null,
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1785173/000095017023007929/etnb-20221231.htm"
+      ],
+      "evidence_dates": ["2023-03-14"],
+      "ambiguity": "NONE_MATERIAL_FOR_SECURITY_IDENTITY"
+    },
+    {
+      "candidate_id": "P2-2022-AKRO-HARMONY",
+      "event_date": "2022-09-13",
+      "legal_issuer": "Akero Therapeutics, Inc.",
+      "historical_ticker": "AKRO",
+      "cik": "0001744659",
+      "exchange": "Nasdaq Global Select Market",
+      "security_identity": "Common Stock, par value $0.0001 per share",
+      "listing_start_evidence": "The pre-event 2021 annual filing/amendment identifies AKRO common stock as registered on the Nasdaq Global Select Market.",
+      "ticker_change_or_reorganization_before_event": "NONE_IDENTIFIED_MATERIALLY_AFFECTING_EVENT_SECURITY",
+      "identity_status": "IDENTITY_CONFIRMED",
+      "us_listing_status": "US_LISTING_CONFIRMED_BOE_UNIVERSE_PENDING",
+      "historical_universe_eligible": null,
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1744659/000110465922028838/tm227978d1_10ka.htm"
+      ],
+      "evidence_dates": ["2022-04-29"],
+      "ambiguity": "NONE_MATERIAL_FOR_SECURITY_IDENTITY"
+    },
+    {
+      "candidate_id": "P2-2022-CINC-BRIGHTN",
+      "event_date": "2022-08-08",
+      "legal_issuer": "CinCor Pharma, Inc.",
+      "historical_ticker": "CINC",
+      "cik": "0001868734",
+      "exchange": "The Nasdaq Stock Market LLC",
+      "security_identity": "Common Stock, $0.00001 par value per share",
+      "listing_start_evidence": "The pre-event 2021 Form 10-K cover identifies CINC common stock as registered on The Nasdaq Stock Market LLC.",
+      "ticker_change_or_reorganization_before_event": "NONE_IDENTIFIED_MATERIALLY_AFFECTING_EVENT_SECURITY",
+      "identity_status": "IDENTITY_CONFIRMED",
+      "us_listing_status": "US_LISTING_CONFIRMED_BOE_UNIVERSE_PENDING",
+      "historical_universe_eligible": null,
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1868734/000095017022004307/cinc-20211231.htm"
+      ],
+      "evidence_dates": ["2022-03-29"],
+      "ambiguity": "NONE_MATERIAL_FOR_SECURITY_IDENTITY"
+    },
+    {
+      "candidate_id": "P2-2023-MLTX-MIRA",
+      "event_date": "2023-06-25",
+      "legal_issuer": "MoonLake Immunotherapeutics",
+      "historical_ticker": "MLTX",
+      "cik": "0001821586",
+      "exchange": "The Nasdaq Capital Market",
+      "security_identity": "Class A Ordinary Shares, par value $0.0001 per share",
+      "listing_start_evidence": "MoonLake's pre-event SEC filings state the Class A Ordinary Shares began trading on Nasdaq on April 6, 2022 under MLTX. The 2022 Form 10-K confirms the shares remained listed under MLTX.",
+      "ticker_change_or_reorganization_before_event": "2022_BUSINESS_COMBINATION_COMPLETED_BEFORE_EVENT; POST_COMBINATION_PUBLIC_SECURITY_MLTX_CONFIRMED_FROM_2022-04-06",
+      "identity_status": "IDENTITY_CONFIRMED",
+      "us_listing_status": "US_LISTING_CONFIRMED_BOE_UNIVERSE_PENDING",
+      "historical_universe_eligible": null,
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1821586/000162828023008604/mnlk-20221231.htm",
+        "https://www.sec.gov/Archives/edgar/data/1821586/000121390022033592/ea161716-8k_moonlake.htm"
+      ],
+      "evidence_dates": ["2023-03-20", "2022-06-15"],
+      "ambiguity": "BUSINESS_COMBINATION_HISTORY_DOCUMENTED_NO_EVENT_DATE_IDENTITY_AMBIGUITY"
+    }
+  ],
+  "promotion_boundary": "Identity confirmation does not set historical_universe_eligible=true. Frozen BOE universe/investability rules, event availability, point-in-time evidence and all other promotion requirements remain separate."
+}
