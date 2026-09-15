@@ -6,7 +6,10 @@
   "role": "PREFREEZE_FINANCING_EVIDENCE_PROMOTION_INTEGRATION",
   "market_outcomes_inspected": false,
   "cohort_frozen": false,
-  "source_financing_ledger": "validation/m7/promotion/financing-evidence-ledger-01.json",
+  "source_financing_ledgers": [
+    "validation/m7/promotion/financing-evidence-ledger-01.json",
+    "validation/m7/promotion/financing-evidence-ledger-02.json"
+  ],
   "quota_requirement": 20,
   "rows": [
     {"candidate_id":"EC-2020-SLS-GPS","ticker":"SLS","financing_status":"QUALIFIES","historical_universe_status":"PENDING"},
@@ -28,15 +31,17 @@
     {"candidate_id":"P2-2024-GPCR-GSBR1290","ticker":"GPCR","financing_status":"QUALIFIES","historical_universe_status":"PENDING"},
     {"candidate_id":"P2-2024-RXRX-SYCAMORE","ticker":"RXRX","financing_status":"QUALIFIES","historical_universe_status":"PENDING"},
     {"candidate_id":"P2-2023-FWBI-SPAN","ticker":"FWBI","financing_status":"QUALIFIES","historical_universe_status":"PENDING"},
-    {"candidate_id":"CO-2022-KROS-KER050ASH","ticker":"KROS","financing_status":"QUALIFIES","historical_universe_status":"PENDING"}
+    {"candidate_id":"CO-2022-KROS-KER050ASH","ticker":"KROS","financing_status":"QUALIFIES","historical_universe_status":"PENDING"},
+    {"candidate_id":"P3-2023-GERN-IMERGE","ticker":"GERN","financing_status":"QUALIFIES","historical_universe_status":"PASS","single_asset_status":"QUALIFIES","source_ledger":"validation/m7/promotion/financing-evidence-ledger-02.json"}
   ],
   "summary": {
-    "financing_qualified_candidates": 20,
-    "historical_universe_pass": 4,
+    "financing_qualified_candidates": 21,
+    "historical_universe_pass": 5,
     "historical_universe_fail": 1,
     "historical_universe_pending": 15,
-    "current_financing_survivor_reserve": 19,
+    "current_financing_survivor_reserve": 20,
+    "candidate_level_universe_stage_quota_buffer": 0,
     "final_frozen_financing_quota_met": false
   },
-  "next_action": "Prioritize the 15 financing-qualified universe-pending events for exact first-public, security identity and historical investability verification. A financing replacement reserve may be required if any additional financing cases fail final eligibility."
+  "next_action": "Screen the 15 financing-qualified universe-pending events first. Any further attrition must be repaired with independently verified actual financing evidence from an otherwise eligible candidate; do not count theoretical ATM capacity or non-dilutive financing."
 }
