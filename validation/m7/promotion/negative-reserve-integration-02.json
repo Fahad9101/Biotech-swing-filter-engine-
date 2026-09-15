@@ -1,0 +1,42 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-15",
+  "role": "PREFREEZE_NEGATIVE_EVENT_QUOTA_ATTRITION_INTEGRATION",
+  "market_outcomes_inspected": false,
+  "cohort_frozen": false,
+  "quota_requirement": 40,
+  "prior_state": {
+    "source": "validation/m7/promotion/negative-reserve-integration-01.json",
+    "maximum_known_not_yet_excluded_negative_reserve": 37,
+    "demonstrated_deficit": 3
+  },
+  "targeted_repair": {
+    "source_acquisition": "validation/m7/acquisition/targeted-negative-supplement-02.json",
+    "source_identity_evidence": "validation/m7/promotion/historical-security-identity-ledger-12.json",
+    "source_universe_evidence": "validation/m7/promotion/historical-universe-ledger-20.json",
+    "targeted_negative_candidates_added": 6,
+    "historical_universe_pass": 6,
+    "historical_universe_fail": 0,
+    "candidate_ids": [
+      "REG-2020-ICPT-OCA-CRL",
+      "REG-2020-BMRN-VALROX-CRL",
+      "P3-2020-CRBP-RESOLVE1",
+      "REG-2021-ATNX-ORALPAC-CRL",
+      "REG-2021-FGEN-ROXADUSTAT-CRL",
+      "REG-2022-CHRS-TORIPALIMAB-CRL"
+    ]
+  },
+  "post_repair_summary": {
+    "maximum_known_not_yet_excluded_negative_reserve": 43,
+    "quota_requirement": 40,
+    "universe_stage_buffer": 3,
+    "historical_universe_stage_deficit_repaired": true,
+    "final_negative_quota_satisfied": false,
+    "additional_targeted_negative_acquisition_required_now": false,
+    "broad_acquisition_reopened": false
+  },
+  "downstream_attrition_guard": "The three-event universe-stage buffer is provisional capacity, not final quota satisfaction. If financing, single-asset, trial-identity, point-in-time science/capital-structure, source-conflict, or other frozen promotion controls exclude more than three of the 43 not-yet-excluded negatives, another narrow negative-only repair may be required.",
+  "selection_boundary": "The repair uses only clinical/regulatory negative-event labels, pre-event security identity, frozen pre-event investability thresholds, and explicit corporate-action continuity. No stock return, MFE, MAE, swing-success, or post-event price behavior is used for selection."
+}
