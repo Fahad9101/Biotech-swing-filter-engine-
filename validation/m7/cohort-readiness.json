@@ -18,11 +18,11 @@
   "holdout_2025_locked_events": 0,
   "prefreeze_reserve_summary": {
     "broad_acquisition_rows_before_targeted_replacements": 165,
-    "targeted_replacement_rows_added_after_attrition": 7,
-    "current_candidate_rows_including_targeted_replacements": 172,
+    "targeted_replacement_rows_added_after_attrition": 8,
+    "current_candidate_rows_including_targeted_replacements": 173,
     "known_negative_candidate_rows_in_broad_reserve_before_final_deduplication": 43,
     "all_frozen_numerical_strata_have_broad_reserve_capacity": true,
-    "note": "The 165-row broad reserve remains closed. Seven distinct targeted replacement events were added only after single-asset investability attrition. These are candidate rows, not frozen cohort events."
+    "note": "The broad 165-row acquisition reserve remains closed. Eight targeted rows were added only to repair documented single-asset reserve attrition; none is frozen or selected using stock outcomes."
   },
   "source_acquisition_status": {
     "regulatory_primary_batch_01": {
@@ -31,7 +31,6 @@
       "exact_first_public_timestamps_resolved": 13,
       "date_only_candidates_pending_exact_timestamp": 20,
       "cik_resolved_count": 25,
-      "calendar_span": "2018-2025",
       "proposed_stratum": "REGULATORY",
       "status": "PRIMARY_SOURCE_CANDIDATE_BATCH_COMMITTED_NOT_FROZEN"
     },
@@ -86,9 +85,10 @@
       "paths": [
         "validation/m7/acquisition/targeted-single-asset-replacement-01.json",
         "validation/m7/acquisition/targeted-single-asset-replacement-02.json",
-        "validation/m7/promotion/targeted-single-asset-replacement-03.json"
+        "validation/m7/promotion/targeted-single-asset-replacement-03.json",
+        "validation/m7/acquisition/targeted-single-asset-replacement-04.json"
       ],
-      "rows_added": 7,
+      "rows_added": 8,
       "reason": "ONLY_TO_REPAIR_SINGLE_ASSET_RESERVE_ATTRITION",
       "market_outcomes_used_for_selection": false
     }
@@ -116,20 +116,22 @@
         "validation/m7/promotion/single-asset-evidence-ledger-03.json",
         "validation/m7/promotion/single-asset-evidence-ledger-04.json",
         "validation/m7/promotion/single-asset-evidence-ledger-05.json",
-        "validation/m7/promotion/single-asset-evidence-ledger-06.json"
+        "validation/m7/promotion/single-asset-evidence-ledger-06.json",
+        "validation/m7/promotion/single-asset-evidence-ledger-07.json",
+        "validation/m7/promotion/single-asset-evidence-ledger-08.json"
       ],
       "quota_requirement": 20,
       "original_quota_candidates": 20,
-      "original_candidates_with_known_universe_attrition": 7,
-      "targeted_replacement_universe_survivors": 7,
+      "original_candidate_attrition_total": 8,
+      "original_universe_attrition_count": 7,
+      "original_single_asset_definition_attrition_count": 1,
+      "original_single_asset_definition_exclusion_ids": ["CO-2021-IMRA-IMR687ASH"],
+      "targeted_replacement_universe_survivors": 8,
       "targeted_replacement_universe_failures": 2,
+      "historical_universe_pass_single_asset_reserve": 20,
+      "historical_universe_pending_single_asset_reserve": 0,
       "known_not_yet_excluded_single_asset_reserve": 20,
-      "historical_universe_pass_single_asset_reserve": 18,
-      "historical_universe_pending_single_asset_reserve": 2,
-      "pending_single_asset_candidate_ids": [
-        "CO-2021-IMRA-IMR687ASH",
-        "P3-2025-SAVA-REFOCUS"
-      ],
+      "candidate_level_universe_stage_quota_met": true,
       "known_original_universe_exclusion_ids": [
         "NEG-P2-2018-MNLO-ATOMIK",
         "NEG-P2-2020-MNLO-CPUO",
@@ -143,32 +145,34 @@
         "P3-2023-RAIN-MANTRA",
         "P2-2022-ETNB-ENTRIGUE"
       ],
-      "status": "RESERVE_RESTORED_TO_20_BUT_TWO_UNIVERSE_CHECKS_REMAIN_AND_FINAL_FROZEN_QUOTA_NOT_MET",
-      "note": "No single-asset quota is declared frozen. All 20 eventual survivors must still clear timestamp, point-in-time evidence, concentration, eligible-registry and deterministic cohort-freeze requirements."
+      "latest_replacement_survivor": "P3-2022-MDGL-MAESTRO-NASH",
+      "status": "UNIVERSE_STAGE_RESERVE_AT_20_FINAL_FROZEN_QUOTA_NOT_YET_MET",
+      "note": "The 20-event single-asset reserve now has explicit historical-universe PASS determinations, including SAVA REFOCUS and targeted Madrigal MAESTRO-NASH. Final quota remains provisional until timestamp, point-in-time evidence, concentration, eligible-registry and deterministic cohort-freeze requirements all pass."
     },
     "first_public_availability": {
-      "latest_path": "validation/m7/promotion/first-public-availability-ledger-05.json",
-      "replacement_batch_03_resolved": 5,
-      "replacement_batch_03_pending": 0,
+      "latest_path": "validation/m7/promotion/first-public-availability-ledger-06.json",
+      "latest_rows_resolved": 2,
+      "latest_rows_pending": 0,
+      "conference_normalization_flag": "CO-2021-IMRA-IMR687ASH requires earliest ASH abstract availability normalization if retained in the wider general cohort reserve; December 13 issuer presentation is not assumed to be earliest public availability.",
       "status": "ACTIVE_PREFREEZE_TIMESTAMP_RESOLUTION"
     },
     "historical_security_identity": {
       "original_summary_path": "validation/m7/promotion/historical-security-identity-summary-01.json",
-      "latest_batch_path": "validation/m7/promotion/historical-security-identity-ledger-10.json",
-      "replacement_batch_03_identity_confirmed": 5,
-      "status": "IDENTITY_CONFIRMED_FOR_CURRENT_SINGLE_ASSET_REPLACEMENT_BATCH; WIDER_172_ROW_POPULATION_NOT_COMPLETE"
+      "latest_batch_path": "validation/m7/promotion/historical-security-identity-ledger-11.json",
+      "status": "CURRENT_SINGLE_ASSET_RESERVE_IDENTITY_SUFFICIENT; WIDER_173_ROW_POPULATION_NOT_COMPLETE"
     },
     "historical_universe_investability": {
-      "source_ledger_range": "validation/m7/promotion/historical-universe-ledger-01.json through historical-universe-ledger-17.json",
-      "evaluated": 27,
-      "eligible": 18,
+      "source_ledger_range": "validation/m7/promotion/historical-universe-ledger-01.json through historical-universe-ledger-18.json",
+      "evaluated": 29,
+      "eligible": 20,
       "excluded": 9,
-      "pending_within_current_single_asset_reserve": 2,
+      "pending_within_current_single_asset_reserve": 0,
       "latest_batch": {
-        "path": "validation/m7/promotion/historical-universe-ledger-17.json",
-        "evaluated": 5,
-        "eligible": 4,
-        "excluded": 1
+        "path": "validation/m7/promotion/historical-universe-ledger-18.json",
+        "evaluated": 2,
+        "eligible": 2,
+        "excluded": 0,
+        "candidate_ids": ["P3-2025-SAVA-REFOCUS", "P3-2022-MDGL-MAESTRO-NASH"]
       },
       "status": "ACTIVE_PREFREEZE_PROMOTION_TESTING_NO_OUTCOMES"
     },
@@ -185,23 +189,23 @@
     "bar_mode": "RAW_AS_TRADED",
     "corporate_actions_separate": true,
     "prefreeze_promotion_progress": {
-      "historical_universe_events_evaluated": 27,
-      "historical_universe_events_passed": 18,
+      "historical_universe_events_evaluated": 29,
+      "historical_universe_events_passed": 20,
       "historical_universe_events_failed": 9
     },
-    "note": "No event-day or post-event bar has been used to select the historical cohort. Same-day regular-session bars are used only when first-public availability is after the regular close."
+    "note": "No stock outcome, MFE, MAE or post-event performance field has been used for candidate selection. Same-day regular-session bars are used only where first-public availability is after the close."
   },
   "blocking_findings": [
     "No authoritative eligible-registry.json or frozen 120-event cohort-manifest.json exists.",
-    "The single-asset reserve is restored to 20 not-yet-excluded events, but only 18 currently have explicit historical-universe PASS determinations; IMRA IMR-687 and SAVA REFOCUS remain to be tested.",
-    "The candidate-level financing ledger contains 20 confirmed financing cases, but final financing quota is not met until at least 20 survive all eligibility and cohort-freeze requirements.",
-    "The broad 165-row reserve and seven targeted replacement rows still require enough exact first-public, historical-universe, point-in-time science, SEC, capital-structure, catalyst, valuation and technical evidence to yield at least 120 eligible events.",
-    "The final frozen cohort must still contain at least 40 verified negative clinical/regulatory events; the broad reserve has 43 pre-freeze negative candidates before promotion attrition.",
-    "Conference/other rows still require earliest material abstract/poster/oral availability verification where applicable.",
+    "The single-asset candidate reserve has recovered to 20 historical-universe PASS events, but final frozen single-asset quota is not met until those events survive all remaining point-in-time evidence, concentration, registry and cohort-freeze checks.",
+    "The candidate-level financing ledger contains 20 confirmed financing cases, but final financing quota is not met until at least 20 survive all remaining eligibility and cohort-freeze requirements.",
+    "The 173-row candidate population still requires enough exact first-public, historical-universe, point-in-time science, SEC, capital-structure, catalyst, valuation and technical evidence to yield an eligible registry of at least 120 events.",
+    "The final frozen cohort must contain at least 40 verified negative clinical/regulatory events; the broad pre-freeze negative reserve is 43 before promotion attrition.",
+    "Conference/other rows still require earliest material abstract/poster/oral availability verification; IMRA specifically has a documented earlier-availability concern if retained outside the single-asset quota.",
     "No real BOE four-snapshot reconstruction, decision lock, historical outcome set or untouched 2025 holdout has been completed."
   ],
   "merge_ready": false,
   "milestone_complete": false,
   "milestone_8_allowed": false,
-  "required_action": "Finish historical-universe checks for CO-2021-IMRA-IMR687ASH and P3-2025-SAVA-REFOCUS. If either fails, acquire only the exact targeted single-asset replacement deficit. Then continue outcome-blind promotion across enough of the wider candidate reserve to construct an eligible >=120-event registry, verify negative/financing/single-asset/concentration/period quotas, run zero-leakage audit, and freeze the registry/cohort with seed 100100 before any outcome inspection. Do not alter BOE-1.0.0, merge PR #5, or begin Milestone 8."
+  "required_action": "With the universe-stage single-asset reserve restored to 20, stop targeted single-asset acquisition. Continue outcome-blind promotion across the wider candidate population: resolve exact first-public availability and historical-universe eligibility for likely survivors, integrate the 20 financing cases, verify at least 40 negative survivors, establish point-in-time evidence readiness, enforce issuer/stratum concentration and period quotas, then build and hash eligible-registry.json. Freeze the registry/cohort with seed 100100 only after zero-outcome-leakage audit. Do not alter BOE-1.0.0, merge PR #5, or begin Milestone 8."
 }
