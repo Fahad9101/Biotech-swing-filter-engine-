@@ -21,11 +21,11 @@ def test_committed_status_is_derived_and_pending_is_not_pass() -> None:
     assert (ROOT / module.OUTPUT).read_text() == module.render(status)
     assert (ROOT / module.ROWS_OUTPUT).read_text() == module.render(rows)
     assert status["candidate_counts"] == {
-        "total": 194,
-        "pass": 142,
+        "total": 196,
+        "pass": 144,
         "fail": 49,
         "pending": 3,
-        "not_yet_excluded": 145,
+        "not_yet_excluded": 147,
     }
     negative = status["negative_reserve"]
     assert negative["not_yet_excluded"] == 42
@@ -49,9 +49,9 @@ def test_committed_status_is_derived_and_pending_is_not_pass() -> None:
     assert strata["EARLY_CLINICAL"]["pass"] == 17
     assert strata["EARLY_CLINICAL"]["pending"] == 0
     assert strata["EARLY_CLINICAL"]["maximum_provisional_buffer"] == 2
-    assert strata["CONFERENCE_OTHER"]["pass"] == 15
+    assert strata["CONFERENCE_OTHER"]["pass"] == 17
     assert strata["CONFERENCE_OTHER"]["pending"] == 0
-    assert strata["CONFERENCE_OTHER"]["maximum_provisional_buffer"] == 0
+    assert strata["CONFERENCE_OTHER"]["maximum_provisional_buffer"] == 2
     for key, requirement in module.STRATUM_REQUIREMENTS.items():
         assert strata[key]["requirement"] == requirement
         assert strata[key]["maximum_provisional_buffer"] == (

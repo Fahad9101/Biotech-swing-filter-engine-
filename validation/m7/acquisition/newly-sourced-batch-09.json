@@ -1,0 +1,67 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "role": "NEWLY_SOURCED_CANDIDATES_POST_HANDOFF",
+  "generated_at": "2026-09-16",
+  "sourcing_note": "CONFERENCE_OTHER sits at exactly 15/15 raw pass count, but the frozen per-issuer stratum concentration cap (max(1, floor(15*0.10))=1) means AUTL (2 pass candidates) and KROS (2 pass candidates) each only contribute 1 usable slot to select_frozen_cohort's actual sampling algorithm - the true effective usable pool is 13, two short of the 15 minimum. This batch sources 2 more same-day ASH 2024 oral-session disclosures from issuers with zero prior CONFERENCE_OTHER presence (IRON, NRIX), bringing the pool to 17 raw / 15 effective-after-cap, which is exactly what select_frozen_cohort needs to succeed without a ValueError. Both use the same present/past-tense same-day-disclosure discipline as prior CONFERENCE_OTHER batches (explicit 'today...presented...in an oral session', not a forward-looking 'to present' teaser). Deduplicated against the full existing ticker/candidate_id set.",
+  "events": [
+    {
+      "asset": "DISC-0974",
+      "candidate_id": "CO-2024-IRON-DISC0974ASH",
+      "cik": "1816736",
+      "clinical_phase": "PHASE_1B",
+      "cohort_frozen": false,
+      "company": "Disc Medicine, Inc.",
+      "first_public_date": "2024-12-08",
+      "first_public_timestamp": "2024-12-08T20:00:00-05:00",
+      "indication": "myelofibrosis (MF) and anemia",
+      "negative_event_candidate": false,
+      "outcome_inspected_for_selection": false,
+      "promotion_blockers": [
+        "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+        "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+        "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+      ],
+      "proposed_catalyst_type": "CONF_DATA",
+      "proposed_primary_stratum": "CONFERENCE_OTHER",
+      "result_direction": "SUPPORTIVE_CONFERENCE_CLINICAL_DATA",
+      "source_role": "CONFERENCE_DATA_DISCLOSURE_CANDIDATE",
+      "source_type": "ISSUER_GLOBENEWSWIRE_RELEASE",
+      "source_url": "https://www.globenewswire.com/news-release/2024/12/09/2993429/0/en/disc-medicine-presents-positive-updated-results-from-phase-1b-trial-in-patients-with-myelofibrosis-mf-and-anemia-in-an-oral-presentation-at-the-66th-american-society-of-hematology-.html",
+      "source_displayed_time": "December 08, 2024 20:00 ET",
+      "ticker": "IRON",
+      "timestamp_precision": "EXACT_TO_MINUTE",
+      "notes": "Updated Phase 1b DISC-0974 data (myelofibrosis with anemia) presented in an oral session at the 66th ASH Annual Meeting (San Diego, Dec 7-10, 2024); issuer's own release, after market close. Dec 8, 2024 was a Sunday (no trading session), so the pre-event cutoff correctly falls back to the last complete regular session, Friday 2024-12-06."
+    },
+    {
+      "asset": "NX-5948",
+      "candidate_id": "CO-2024-NRIX-NX5948ASH",
+      "cik": "1549595",
+      "clinical_phase": "PHASE_1A_1B",
+      "cohort_frozen": false,
+      "company": "Nurix Therapeutics, Inc.",
+      "first_public_date": "2024-12-09",
+      "first_public_timestamp": "2024-12-09T18:00:00-05:00",
+      "indication": "relapsed or refractory chronic lymphocytic leukemia / small lymphocytic lymphoma (CLL/SLL)",
+      "negative_event_candidate": false,
+      "outcome_inspected_for_selection": false,
+      "promotion_blockers": [
+        "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+        "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+        "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+      ],
+      "proposed_catalyst_type": "CONF_DATA",
+      "proposed_primary_stratum": "CONFERENCE_OTHER",
+      "result_direction": "SUPPORTIVE_CONFERENCE_CLINICAL_DATA",
+      "source_role": "CONFERENCE_DATA_DISCLOSURE_CANDIDATE",
+      "source_type": "ISSUER_GLOBENEWSWIRE_RELEASE",
+      "source_url": "https://www.globenewswire.com/news-release/2024/12/09/2994129/0/en/nurix-therapeutics-presents-new-positive-data-from-phase-1a-1b-clinical-trial-of-nx-5948-in-chronic-lymphocytic-leukemia-at-the-66th-american-society-of-hematology-annual-meeting.html",
+      "source_displayed_time": "December 09, 2024 18:00 ET",
+      "ticker": "NRIX",
+      "timestamp_precision": "EXACT_TO_MINUTE",
+      "notes": "New Phase 1a/1b NX-5948 data (CLL/SLL) presented in an oral session at the 66th ASH Annual Meeting; issuer's own release, after market close (18:00 ET webcast at 11:15pm ET same evening)."
+    }
+  ]
+}

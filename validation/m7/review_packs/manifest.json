@@ -40,10 +40,10 @@
   "deferred_count": 9,
   "format_version": "1.0",
   "generated_at": "2026-09-16T00:00:00+00:00",
-  "manifest_sha256": "a9d62e36de2e48783da03e4f3eaeb2d01d19d99fa2a332d1ef93b36a3df93685",
+  "manifest_sha256": "63cff6d3b7e7ff43fb05b7c21b463d39a09eb84380f3761d511b10d39e9d9a37",
   "market_outcomes_inspected": false,
   "milestone": 7,
-  "pack_count": 133,
+  "pack_count": 135,
   "packs": [
     {
       "candidate_id": "CO-2018-ZIOP-ASCO",
@@ -123,11 +123,25 @@
       "ticker": "GMAB"
     },
     {
+      "candidate_id": "CO-2024-IRON-DISC0974ASH",
+      "pack_path": "validation/m7/review_packs/CO-2024-IRON-DISC0974ASH.json",
+      "pack_sha256": "ae399745586e5624fd9eb3fa7aab311b531ba3d1f513ce55ec04bd0d15e21351",
+      "stratum": "CONFERENCE_OTHER",
+      "ticker": "IRON"
+    },
+    {
       "candidate_id": "CO-2024-KROS-ELRITERCEPTASH",
       "pack_path": "validation/m7/review_packs/CO-2024-KROS-ELRITERCEPTASH.json",
       "pack_sha256": "ab4d7eaf665405d4a008051874c1af17a89e6794bf856be6b6366fed2ca32f0c",
       "stratum": "CONFERENCE_OTHER",
       "ticker": "KROS"
+    },
+    {
+      "candidate_id": "CO-2024-NRIX-NX5948ASH",
+      "pack_path": "validation/m7/review_packs/CO-2024-NRIX-NX5948ASH.json",
+      "pack_sha256": "3664cbeb35b7167ea73b502d8ff35f1d2f153a5cfebda4db6e0fa8e61c1d220c",
+      "stratum": "CONFERENCE_OTHER",
+      "ticker": "NRIX"
     },
     {
       "candidate_id": "CO-2025-AUTL-CARLYSLEASH",

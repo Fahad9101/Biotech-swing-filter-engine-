@@ -380,6 +380,24 @@
       "universe_status": "PASS"
     },
     {
+      "acquisition_path": "validation/m7/acquisition/newly-sourced-batch-09.json",
+      "candidate_id": "CO-2024-IRON-DISC0974ASH",
+      "eligible_registry_status": "NOT_PROMOTED",
+      "financing_evidence_path": null,
+      "financing_status": "PENDING",
+      "first_public_timestamp": "2024-12-08T20:00:00-05:00",
+      "negative_label_path": "validation/m7/acquisition/newly-sourced-batch-09.json",
+      "negative_label_recorded": false,
+      "normalization_path": null,
+      "single_asset_evidence_path": null,
+      "single_asset_status": "PENDING",
+      "stratum": "CONFERENCE_OTHER",
+      "ticker": "IRON",
+      "timestamp_evidence_path": null,
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-41.json",
+      "universe_status": "PASS"
+    },
+    {
       "acquisition_path": "validation/m7/acquisition/conference-other-primary-batch-01.json",
       "candidate_id": "CO-2024-KROS-ELRITERCEPTASH",
       "eligible_registry_status": "NOT_PROMOTED",
@@ -414,6 +432,24 @@
       "timestamp_evidence_path": null,
       "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-28.json",
       "universe_status": "FAIL"
+    },
+    {
+      "acquisition_path": "validation/m7/acquisition/newly-sourced-batch-09.json",
+      "candidate_id": "CO-2024-NRIX-NX5948ASH",
+      "eligible_registry_status": "NOT_PROMOTED",
+      "financing_evidence_path": null,
+      "financing_status": "PENDING",
+      "first_public_timestamp": "2024-12-09T18:00:00-05:00",
+      "negative_label_path": "validation/m7/acquisition/newly-sourced-batch-09.json",
+      "negative_label_recorded": false,
+      "normalization_path": null,
+      "single_asset_evidence_path": null,
+      "single_asset_status": "PENDING",
+      "stratum": "CONFERENCE_OTHER",
+      "ticker": "NRIX",
+      "timestamp_evidence_path": null,
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-41.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/conference-other-primary-batch-01.json",

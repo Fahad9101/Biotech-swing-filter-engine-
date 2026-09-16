@@ -2053,6 +2053,38 @@
       "ticker": "GMAB"
     },
     {
+      "candidate_id": "CO-2024-IRON-DISC0974ASH",
+      "catalyst_type": "CONF_DATA",
+      "company": "Disc Medicine, Inc.",
+      "event_date": "2024-12-08",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/CO-2024-IRON-DISC0974ASH.json",
+      "sequence": 129,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2024/12/09/2993429/0/en/disc-medicine-presents-positive-updated-results-from-phase-1b-trial-in-patients-with-myelofibrosis-mf-and-anemia-in-an-oral-presentation-at-the-66th-american-society-of-hematology-.html"
+      ],
+      "stratum": "CONFERENCE_OTHER",
+      "ticker": "IRON"
+    },
+    {
+      "candidate_id": "CO-2024-NRIX-NX5948ASH",
+      "catalyst_type": "CONF_DATA",
+      "company": "Nurix Therapeutics, Inc.",
+      "event_date": "2024-12-09",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/CO-2024-NRIX-NX5948ASH.json",
+      "sequence": 130,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2024/12/09/2994129/0/en/nurix-therapeutics-presents-new-positive-data-from-phase-1a-1b-clinical-trial-of-nx-5948-in-chronic-lymphocytic-leukemia-at-the-66th-american-society-of-hematology-annual-meeting.html"
+      ],
+      "stratum": "CONFERENCE_OTHER",
+      "ticker": "NRIX"
+    },
+    {
       "candidate_id": "CO-2024-AUTL-OBECELASH",
       "catalyst_type": "CONF_DATA",
       "company": "Autolus Therapeutics plc",
@@ -2061,7 +2093,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/CO-2024-AUTL-OBECELASH.json",
-      "sequence": 129,
+      "sequence": 131,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2024/12/10/2994144/0/en/autolus-therapeutics-presents-clinical-data-updates-at-the-american-society-of-hematology-ash-annual-meeting-2024.html"
       ],
@@ -2077,7 +2109,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/CO-2024-KROS-ELRITERCEPTASH.json",
-      "sequence": 130,
+      "sequence": 132,
       "source_citations": [
         "https://www.globenewswire.com/fr/news-release/2024/12/10/2994148/0/en/Keros-Therapeutics-Presents-Clinical-Data-from-its-Elritercept-Program-at-the-66th-American-Society-of-Hematology-Annual-Meeting-and-Exposition.html"
       ],
@@ -2093,7 +2125,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/CO-2025-GERN-RYTELOASH.json",
-      "sequence": 131,
+      "sequence": 133,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2025/12/08/3201506/35501/en/geron-corporation-presents-new-data-at-ash-2025-highlighting-the-relationship-between-treatment-emergent-cytopenias-and-clinical-benefit-of-rytelo-imetelstat-in-lower-risk-mds.html"
       ],
@@ -2109,7 +2141,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/CO-2025-CRVS-SOQUELITINIBASH.json",
-      "sequence": 132,
+      "sequence": 134,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2025/12/08/3201702/0/en/corvus-pharmaceuticals-presents-final-data-from-soquelitinib-phase-1-1b-t-cell-lymphoma-trial.html"
       ],
@@ -2125,7 +2157,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/CO-2025-AUTL-CARLYSLEASH.json",
-      "sequence": 133,
+      "sequence": 135,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2025/12/08/3201963/0/en/autolus-therapeutics-presents-updated-clinical-data-from-the-carlysle-trial-in-patients-with-severe-refractory-systemic-lupus-erythematosus-at-the-american-society-of-hematology-as.html"
       ],
@@ -2133,7 +2165,7 @@
       "ticker": "AUTL"
     }
   ],
-  "entry_count": 133,
+  "entry_count": 135,
   "format_version": "1.0",
   "generated_at": "2026-09-16T00:00:00+00:00",
   "market_outcomes_inspected": false,
