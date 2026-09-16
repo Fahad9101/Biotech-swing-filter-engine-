@@ -22,6 +22,16 @@ STRATUM_REQUIREMENTS = {
     "CONFERENCE_OTHER": 15,
 }
 
+# Frozen issuer-concentration caps from docs/VALIDATION-AND-MILESTONES.md
+# section 2.1: "no issuer contributes more than five events or 10% of a
+# stratum." This flags violations among current-PASS candidates as an early
+# warning; it does not decide which events to exclude. Which candidates
+# actually get dropped for concentration is a freeze-time decision (frozen
+# sequence step 7, before the registry is frozen in step 8) and must not be
+# made here by picking favorites among already-scored-as-PASS candidates.
+ISSUER_MAX_EVENTS = 5
+ISSUER_MAX_STRATUM_SHARE = 0.10
+
 
 def render(value: Any) -> str:
     return json.dumps(value, indent=2, sort_keys=True) + "\n"
@@ -168,6 +178,52 @@ def build(root: Path = ROOT) -> tuple[dict[str, Any], dict[str, Any]]:
             "not_yet_excluded": c["PASS"] + c["PENDING"],
         }
 
+    def issuer_concentration(selected: list[dict[str, Any]]) -> list[dict[str, Any]]:
+        """Flag issuers over the frozen 5-event or 10%-of-stratum cap among
+        currently-PASS candidates. Reports only; picking which of an
+        over-cap issuer's events to exclude is a freeze-time decision
+        (frozen sequence step 7), not made here.
+        """
+        passed = [r for r in selected if r["universe_status"] == "PASS"]
+        findings = []
+        overall = Counter(r["ticker"] for r in passed)
+        for ticker, n in sorted(overall.items()):
+            if n > ISSUER_MAX_EVENTS:
+                findings.append(
+                    {
+                        "ticker": ticker,
+                        "scope": "OVERALL",
+                        "pass_count": n,
+                        "cap": ISSUER_MAX_EVENTS,
+                        "candidate_ids": sorted(
+                            r["candidate_id"] for r in passed if r["ticker"] == ticker
+                        ),
+                    }
+                )
+        by_stratum: dict[str, list[dict[str, Any]]] = {}
+        for r in passed:
+            by_stratum.setdefault(r["stratum"], []).append(r)
+        for stratum, stratum_rows in sorted(by_stratum.items()):
+            total = len(stratum_rows)
+            cap = total * ISSUER_MAX_STRATUM_SHARE
+            counts_in_stratum = Counter(r["ticker"] for r in stratum_rows)
+            for ticker, n in sorted(counts_in_stratum.items()):
+                if n > cap:
+                    findings.append(
+                        {
+                            "ticker": ticker,
+                            "scope": stratum,
+                            "pass_count": n,
+                            "stratum_pass_total": total,
+                            "share": round(n / total, 4),
+                            "cap_share": ISSUER_MAX_STRATUM_SHARE,
+                            "candidate_ids": sorted(
+                                r["candidate_id"] for r in stratum_rows if r["ticker"] == ticker
+                            ),
+                        }
+                    )
+        return findings
+
     negative = counts([r for r in rows if r["negative_label_recorded"]])
     single = counts([r for r in rows if r["single_asset_status"] == "QUALIFIES"])
     funds = counts(
@@ -225,6 +281,7 @@ def build(root: Path = ROOT) -> tuple[dict[str, Any], dict[str, Any]]:
             }
             for k in sorted({r["stratum"] for r in rows})
         },
+        "issuer_concentration_findings": issuer_concentration(rows),
         "audit_findings": warnings,
         "blocking_findings": [
             "Universe PASS is not full eligibility; pending is not PASS.",

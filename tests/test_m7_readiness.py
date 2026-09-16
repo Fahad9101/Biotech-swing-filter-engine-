@@ -58,6 +58,23 @@ def test_committed_status_is_derived_and_pending_is_not_pass() -> None:
             strata[key]["not_yet_excluded"] - requirement
         )
     assert status["audit_findings"]
+    concentration = {f["ticker"]: f for f in status["issuer_concentration_findings"]}
+    overall_biib = next(
+        f
+        for f in status["issuer_concentration_findings"]
+        if f["ticker"] == "BIIB" and f["scope"] == "OVERALL"
+    )
+    assert overall_biib["pass_count"] == 6
+    assert overall_biib["cap"] == 5
+    stratum_biib = next(
+        f
+        for f in status["issuer_concentration_findings"]
+        if f["ticker"] == "BIIB" and f["scope"] == "PHASE_2_POC"
+    )
+    assert stratum_biib["pass_count"] == 4
+    kros = concentration["KROS"]
+    assert kros["scope"] == "CONFERENCE_OTHER"
+    assert kros["pass_count"] == 2
     by_id = {r["candidate_id"]: r for r in rows["rows"]}
     assert by_id["P3-2023-RAIN-MANTRA"]["universe_status"] == "FAIL"
     assert by_id["P2-2025-ACTU-ELRAGLUSIB-TOPLINE"]["universe_status"] == "FAIL"
@@ -118,6 +135,33 @@ def test_stratum_buffer_reacts_to_a_new_failure(copied: Path) -> None:
     )
     after, _ = module.build(copied)
     assert after["strata"][stratum]["maximum_provisional_buffer"] == before_buffer - 1
+
+
+def test_issuer_concentration_finding_clears_when_below_cap(copied: Path) -> None:
+    """BIIB is committed at 6 PASS candidates, one over the frozen 5-event cap.
+    Turning one of those PASS rows into a FAIL (simulating a corrected
+    determination) must drop BIIB below the cap and remove the OVERALL
+    finding - proving the check is live-derived from current PASS rows, not
+    a stale snapshot. Edits the row in place (rather than adding a new
+    ledger file) since this candidate already has a real determination, and
+    a second row for the same candidate_id in a different file would
+    correctly trip the conflicting-determination guard tested elsewhere.
+    """
+    before, rows = module.build(copied)
+    before_findings = {
+        (f["ticker"], f["scope"]): f for f in before["issuer_concentration_findings"]
+    }
+    assert ("BIIB", "OVERALL") in before_findings
+    assert before_findings[("BIIB", "OVERALL")]["pass_count"] == 6
+    one_biib_id = before_findings[("BIIB", "OVERALL")]["candidate_ids"][0]
+    path = copied / "validation/m7/promotion/historical-universe-ledger-26.json"
+    data = json.loads(path.read_text())
+    (row,) = (r for r in data["rows"] if r["candidate_id"] == one_biib_id)
+    row["historical_universe_eligible"] = False
+    path.write_text(json.dumps(data))
+    after, _ = module.build(copied)
+    after_findings = {(f["ticker"], f["scope"]): f for f in after["issuer_concentration_findings"]}
+    assert ("BIIB", "OVERALL") not in after_findings
 
 
 def test_conflicting_universe_determination_is_not_silently_overwritten(copied: Path) -> None:

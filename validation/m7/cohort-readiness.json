@@ -35,6 +35,48 @@
   },
   "generator": "python scripts/m7_reconcile_readiness.py",
   "holdout_2025_locked_events": 0,
+  "issuer_concentration_findings": [
+    {
+      "candidate_ids": [
+        "P2-2018-BIIB-BAN2401",
+        "P2-2019-BIIB-LILAC",
+        "P2-2021-BIIB-CONVEY",
+        "P2-2021-BIIB-TANGO",
+        "P3-2021-BIIB-STAR",
+        "P3-2021-BIIB-VALOR"
+      ],
+      "cap": 5,
+      "pass_count": 6,
+      "scope": "OVERALL",
+      "ticker": "BIIB"
+    },
+    {
+      "candidate_ids": [
+        "CO-2022-KROS-KER050ASH",
+        "CO-2024-KROS-ELRITERCEPTASH"
+      ],
+      "cap_share": 0.1,
+      "pass_count": 2,
+      "scope": "CONFERENCE_OTHER",
+      "share": 0.1667,
+      "stratum_pass_total": 12,
+      "ticker": "KROS"
+    },
+    {
+      "candidate_ids": [
+        "P2-2018-BIIB-BAN2401",
+        "P2-2019-BIIB-LILAC",
+        "P2-2021-BIIB-CONVEY",
+        "P2-2021-BIIB-TANGO"
+      ],
+      "cap_share": 0.1,
+      "pass_count": 4,
+      "scope": "PHASE_2_POC",
+      "share": 0.1053,
+      "stratum_pass_total": 38,
+      "ticker": "BIIB"
+    }
+  ],
   "m6_baseline_sha": "3060761a11f7bd85298f79efa8e262e5b8adedaf",
   "merge_ready": false,
   "milestone": 7,
