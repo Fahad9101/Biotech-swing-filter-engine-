@@ -27,11 +27,11 @@
   "eligible_authoritative_registry_count": 0,
   "financing_reserve": {
     "fail": 4,
-    "not_yet_excluded": 21,
-    "pass": 21,
+    "not_yet_excluded": 27,
+    "pass": 27,
     "pending": 0,
     "requirement": 20,
-    "total": 25
+    "total": 31
   },
   "generator": "python scripts/m7_reconcile_readiness.py",
   "holdout_2025_locked_events": 0,
@@ -106,17 +106,17 @@
   },
   "real_four_snapshot_reconstructions_complete": 0,
   "real_outcomes_complete": 0,
-  "reconciled_rows_sha256": "f50b71e4e7b1c81a4376bebf29aab6f2b793b47e05a97fb0cc9e13a0f7c9bef5",
+  "reconciled_rows_sha256": "34e7228f1428479cb80d714c52258aa0e3e0d1402a0b8759089112c05e22814f",
   "required_action": "Complete outcome-blind evidence promotion and review; do not freeze, inspect returns or merge based on reserve counts.",
   "required_minimum_events": 120,
   "rules_version": "BOE-1.0.0",
   "single_asset_reserve": {
     "fail": 9,
-    "not_yet_excluded": 21,
-    "pass": 20,
+    "not_yet_excluded": 22,
+    "pass": 21,
     "pending": 1,
     "requirement": 20,
-    "total": 30
+    "total": 31
   },
   "source_sha256": {
     "contracts/boe-scorecard.v1.0.0.json": "11cffb776ffd6bbd943b1d23dfcf6541ab02fcbfec753f13d00a7f4acee8b569",
@@ -144,6 +144,7 @@
     "validation/m7/promotion/financing-evidence-ledger-02.json": "9d5e37e21e9e3ea4d05cb803151f3d34d53c1a1a9fb2571ce6973d366c72cfd9",
     "validation/m7/promotion/financing-evidence-ledger-03.json": "cdb95a491f33f607f7c0fbec05f62e9fcd66501ec1c2318ae8a2edf31f348bed",
     "validation/m7/promotion/financing-evidence-ledger-04.json": "5d3478a7a122f184c6e2e194fc980a7dc92aaf7f0294bc0f62780e837b0918db",
+    "validation/m7/promotion/financing-evidence-ledger-05.json": "62c1cdcd4375f3413ebfb79fb0e39f2f83b9059ab0d80078449684fb7048f51f",
     "validation/m7/promotion/first-public-availability-ledger-01.json": "ba0702db89c080f923433995f83fc16e2f2f7606ea0b44a564fcdc07202f4a89",
     "validation/m7/promotion/first-public-availability-ledger-02.json": "2ec953f839b8f1852db9f9232f243c5daa3aa73f69e975d930b6bef6b5da60c2",
     "validation/m7/promotion/first-public-availability-ledger-03.json": "1c1f232ac587c8eff4e24fd32ecc5cf3c3e6641a3c8010fe3745a6fdaaf4ea46",
@@ -206,6 +207,7 @@
     "validation/m7/promotion/single-asset-evidence-ledger-06.json": "afe090631b7084fa155ca58f5e034121bffc63b809162127cb4df8d0f083ae92",
     "validation/m7/promotion/single-asset-evidence-ledger-07.json": "2444d201c38fb7d074b70e243022cc99861513a4c1eb0122eb895bd9adb4e77b",
     "validation/m7/promotion/single-asset-evidence-ledger-08.json": "b8e314ba17733bc368665a56b7bd902b57183dfa0d76708e5947c13208e29e17",
+    "validation/m7/promotion/single-asset-evidence-ledger-09.json": "7a71d88ef297916e82d2c39ed24621250919628da84caef9edffd9588b58e62d",
     "validation/m7/promotion/targeted-single-asset-replacement-03.json": "7037bf6d01938da4f42fd18b84cf66e680f93f84f44db7340da16226a7661956"
   },
   "strata": {
