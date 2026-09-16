@@ -1,0 +1,95 @@
+{
+  "acquisition_path": "validation/m7/acquisition/targeted-single-asset-replacement-01.json",
+  "candidate_id": "P3-2023-GERN-IMERGE",
+  "catalyst_observation": {
+    "asset": "imetelstat",
+    "catalyst_type": "CLIN_P3",
+    "clinical_phase": "PHASE_3",
+    "evidence_id": "0eb26d3c-6405-5aad-9e0e-2435a2950545",
+    "external_event_id": "P3-2023-GERN-IMERGE",
+    "indication": "transfusion-dependent lower-risk myelodysplastic syndromes",
+    "issuer_id": "0000886744",
+    "known_at": "2023-01-04T08:00:00-05:00",
+    "source_statement": "Geron Corporation - FIRST_PUBLIC_RESULT_DISCLOSURE_CANDIDATE dated 2023-01-04.",
+    "source_tier": 5,
+    "timing_confidence": "HIGH",
+    "title": "Geron Corporation - imetelstat (transfusion-dependent lower-risk myelodysplastic syndromes)",
+    "window_end": "2023-01-04",
+    "window_start": "2023-01-04"
+  },
+  "catalyst_version": {
+    "asset": "imetelstat",
+    "canonical_key": "0000886744|imetelstat|transfusion-dependent lower-risk myelodysplastic syndromes|CLIN_P3",
+    "catalyst_type": "CLIN_P3",
+    "clinical_phase": "PHASE_3",
+    "conflicts": [],
+    "id": "8e01b770-e792-5f52-a126-c22fb31a5d37",
+    "indication": "transfusion-dependent lower-risk myelodysplastic syndromes",
+    "issuer_id": "0000886744",
+    "known_at": "2023-01-04T08:00:00-05:00",
+    "primary_evidence_id": "0eb26d3c-6405-5aad-9e0e-2435a2950545",
+    "resolved_at_cutoff": "2023-01-04T08:00:00-05:00",
+    "supporting_evidence_ids": [
+      "0eb26d3c-6405-5aad-9e0e-2435a2950545"
+    ],
+    "timing_confidence": "HIGH",
+    "title": "Geron Corporation - imetelstat (transfusion-dependent lower-risk myelodysplastic syndromes)",
+    "version": 1,
+    "version_sha256": "a9c8075d98dd3c1a4e7cb037810e4e57bf49639bdfff635176f2634a4e18f8a6",
+    "window_end": "2023-01-04",
+    "window_start": "2023-01-04"
+  },
+  "company": "Geron Corporation",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": false,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "0605aad164c9fe73a9a3c180721fb278eb3a68ece757acf90ef61ca47796bd52",
+  "promotion_blockers": [
+    "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE",
+    "FINAL_CONCENTRATION_AND_REGISTRY_CHECK"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2023-01-04T08:00:00-05:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "imetelstat",
+    "blinded": null,
+    "catalyst_version_id": "8e01b770-e792-5f52-a126-c22fb31a5d37",
+    "clinical_phase": "PHASE_3",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2023-01-04T08:00:00-05:00",
+    "evidence_ids": [
+      "0eb26d3c-6405-5aad-9e0e-2435a2950545"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "1a1efbb0-c18e-5c00-a9c9-b0253b287438",
+    "indication": "transfusion-dependent lower-risk myelodysplastic syndromes",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://ir.geron.com/news-releases/news-release-details/geron-announces-positive-top-line-results-imerge-phase-3-trial"
+  ],
+  "stratum": "PHASE_3_PIVOTAL",
+  "ticker": "GERN",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-10.json"
+}

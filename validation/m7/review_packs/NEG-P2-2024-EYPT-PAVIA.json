@@ -1,0 +1,97 @@
+{
+  "acquisition_path": "validation/m7/acquisition/negative-phase2-supplement-01.json",
+  "candidate_id": "NEG-P2-2024-EYPT-PAVIA",
+  "catalyst_observation": {
+    "asset": "DURAVYU (EYP-1901)",
+    "catalyst_type": "CLIN_P2",
+    "clinical_phase": "PHASE_2",
+    "evidence_id": "6fa5360b-c801-5ecf-a8b8-2c6f696ac7e2",
+    "external_event_id": "NEG-P2-2024-EYPT-PAVIA",
+    "indication": "non-proliferative diabetic retinopathy",
+    "issuer_id": "0001314102",
+    "known_at": "2024-05-06T07:00:00-04:00",
+    "source_statement": "EyePoint Pharmaceuticals, Inc. - FIRST_PUBLIC_RESULT_DISCLOSURE_CANDIDATE dated 2024-05-06.",
+    "source_tier": 5,
+    "timing_confidence": "HIGH",
+    "title": "EyePoint Pharmaceuticals, Inc. - DURAVYU (EYP-1901) (non-proliferative diabetic retinopathy)",
+    "window_end": "2024-05-06",
+    "window_start": "2024-05-06"
+  },
+  "catalyst_version": {
+    "asset": "DURAVYU (EYP-1901)",
+    "canonical_key": "0001314102|duravyu (eyp-1901)|non-proliferative diabetic retinopathy|CLIN_P2",
+    "catalyst_type": "CLIN_P2",
+    "clinical_phase": "PHASE_2",
+    "conflicts": [],
+    "id": "55deada0-786b-5643-9f96-f08d6026632b",
+    "indication": "non-proliferative diabetic retinopathy",
+    "issuer_id": "0001314102",
+    "known_at": "2024-05-06T07:00:00-04:00",
+    "primary_evidence_id": "6fa5360b-c801-5ecf-a8b8-2c6f696ac7e2",
+    "resolved_at_cutoff": "2024-05-06T07:00:00-04:00",
+    "supporting_evidence_ids": [
+      "6fa5360b-c801-5ecf-a8b8-2c6f696ac7e2"
+    ],
+    "timing_confidence": "HIGH",
+    "title": "EyePoint Pharmaceuticals, Inc. - DURAVYU (EYP-1901) (non-proliferative diabetic retinopathy)",
+    "version": 1,
+    "version_sha256": "be419ee5847857e36dcf891d3492485b4ada58b50389c8faf94690e8562f2977",
+    "window_end": "2024-05-06",
+    "window_start": "2024-05-06"
+  },
+  "company": "EyePoint Pharmaceuticals, Inc.",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": true,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "bad71c9b11e796899d8d7802f5ae2d6b96b4a2c7e356aeb10619246edd1150aa",
+  "promotion_blockers": [
+    "RESOLVE_CIK_AND_HISTORICAL_SECURITY_IDENTITY",
+    "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+    "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2024-05-06T07:00:00-04:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "DURAVYU (EYP-1901)",
+    "blinded": null,
+    "catalyst_version_id": "55deada0-786b-5643-9f96-f08d6026632b",
+    "clinical_phase": "PHASE_2",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2024-05-06T07:00:00-04:00",
+    "evidence_ids": [
+      "6fa5360b-c801-5ecf-a8b8-2c6f696ac7e2"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "c198956d-caa6-5292-870a-09548bfba3e7",
+    "indication": "non-proliferative diabetic retinopathy",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://www.globenewswire.com/news-release/2024/05/06/2875682/0/en/EyePoint-Pharmaceuticals-Announces-Topline-Data-from-the-Phase-2-PAVIA-Trial-of-DURAVYU-in-Non-Proliferative-Diabetic-Retinopathy.html"
+  ],
+  "stratum": "PHASE_2_POC",
+  "ticker": "EYPT",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-26.json"
+}

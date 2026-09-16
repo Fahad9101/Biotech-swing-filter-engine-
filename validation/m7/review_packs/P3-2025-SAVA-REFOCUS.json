@@ -1,0 +1,97 @@
+{
+  "acquisition_path": "validation/m7/acquisition/phase3-primary-batch-01.json",
+  "candidate_id": "P3-2025-SAVA-REFOCUS",
+  "catalyst_observation": {
+    "asset": "simufilam",
+    "catalyst_type": "CLIN_P3",
+    "clinical_phase": "PHASE_3",
+    "evidence_id": "acfaae28-8834-560a-8847-c35153210ea9",
+    "external_event_id": "P3-2025-SAVA-REFOCUS",
+    "indication": "mild-to-moderate Alzheimer's disease",
+    "issuer_id": "TICKER:SAVA",
+    "known_at": "2025-03-25T08:05:00-04:00",
+    "source_statement": "Cassava Sciences, Inc. - FIRST_PUBLIC_RESULT_DISCLOSURE_CANDIDATE dated 2025-03-25.",
+    "source_tier": 5,
+    "timing_confidence": "HIGH",
+    "title": "Cassava Sciences, Inc. - simufilam (mild-to-moderate Alzheimer's disease)",
+    "window_end": "2025-03-25",
+    "window_start": "2025-03-25"
+  },
+  "catalyst_version": {
+    "asset": "simufilam",
+    "canonical_key": "ticker:sava|simufilam|mild-to-moderate alzheimer's disease|CLIN_P3",
+    "catalyst_type": "CLIN_P3",
+    "clinical_phase": "PHASE_3",
+    "conflicts": [],
+    "id": "18c66cf8-1fda-5b75-bfb4-e65c8ad774e7",
+    "indication": "mild-to-moderate Alzheimer's disease",
+    "issuer_id": "TICKER:SAVA",
+    "known_at": "2025-03-25T08:05:00-04:00",
+    "primary_evidence_id": "acfaae28-8834-560a-8847-c35153210ea9",
+    "resolved_at_cutoff": "2025-03-25T08:05:00-04:00",
+    "supporting_evidence_ids": [
+      "acfaae28-8834-560a-8847-c35153210ea9"
+    ],
+    "timing_confidence": "HIGH",
+    "title": "Cassava Sciences, Inc. - simufilam (mild-to-moderate Alzheimer's disease)",
+    "version": 1,
+    "version_sha256": "68a247fd8ee61f6d0467076681d26a5c9b88d823afa36c6544ba70d6b622ea1b",
+    "window_end": "2025-03-25",
+    "window_start": "2025-03-25"
+  },
+  "company": "Cassava Sciences, Inc.",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": true,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "443b11545867c00e989400c724ee700247930f1ab9a4736cdd41e14f8a0a35cf",
+  "promotion_blockers": [
+    "RESOLVE_CIK_AND_HISTORICAL_SECURITY_IDENTITY",
+    "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+    "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2025-03-25T08:05:00-04:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "simufilam",
+    "blinded": null,
+    "catalyst_version_id": "18c66cf8-1fda-5b75-bfb4-e65c8ad774e7",
+    "clinical_phase": "PHASE_3",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2025-03-25T08:05:00-04:00",
+    "evidence_ids": [
+      "acfaae28-8834-560a-8847-c35153210ea9"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "3f019f53-89ef-57ad-89c5-5dff3dd0a121",
+    "indication": "mild-to-moderate Alzheimer's disease",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://www.globenewswire.com/news-release/2025/03/25/3048697/8339/en/Cassava-Sciences-Reports-Topline-Phase-3-REFOCUS-ALZ-Data.html"
+  ],
+  "stratum": "PHASE_3_PIVOTAL",
+  "ticker": "SAVA",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-18.json"
+}

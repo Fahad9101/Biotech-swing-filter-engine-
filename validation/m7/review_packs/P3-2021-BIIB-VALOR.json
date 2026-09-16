@@ -1,0 +1,98 @@
+{
+  "acquisition_path": "validation/m7/acquisition/phase3-primary-batch-01.json",
+  "candidate_id": "P3-2021-BIIB-VALOR",
+  "catalyst_observation": {
+    "asset": "tofersen",
+    "catalyst_type": "CLIN_P3",
+    "clinical_phase": "PHASE_3",
+    "evidence_id": "eca3b2e5-61ef-5dd8-a309-e8c5aa4fcc98",
+    "external_event_id": "P3-2021-BIIB-VALOR",
+    "indication": "SOD1 amyotrophic lateral sclerosis",
+    "issuer_id": "0000875045",
+    "known_at": "2021-10-17T16:20:00-04:00",
+    "source_statement": "Biogen Inc. - FIRST_PUBLIC_RESULT_DISCLOSURE_CANDIDATE dated 2021-10-17.",
+    "source_tier": 5,
+    "timing_confidence": "MODERATE",
+    "title": "Biogen Inc. - tofersen (SOD1 amyotrophic lateral sclerosis)",
+    "window_end": "2021-10-17",
+    "window_start": "2021-10-17"
+  },
+  "catalyst_version": {
+    "asset": "tofersen",
+    "canonical_key": "0000875045|tofersen|sod1 amyotrophic lateral sclerosis|CLIN_P3",
+    "catalyst_type": "CLIN_P3",
+    "clinical_phase": "PHASE_3",
+    "conflicts": [],
+    "id": "60ddaa8c-fa5b-5c94-b7f2-42ce0c90f30e",
+    "indication": "SOD1 amyotrophic lateral sclerosis",
+    "issuer_id": "0000875045",
+    "known_at": "2021-10-17T16:20:00-04:00",
+    "primary_evidence_id": "eca3b2e5-61ef-5dd8-a309-e8c5aa4fcc98",
+    "resolved_at_cutoff": "2021-10-17T16:20:00-04:00",
+    "supporting_evidence_ids": [
+      "eca3b2e5-61ef-5dd8-a309-e8c5aa4fcc98"
+    ],
+    "timing_confidence": "MODERATE",
+    "title": "Biogen Inc. - tofersen (SOD1 amyotrophic lateral sclerosis)",
+    "version": 1,
+    "version_sha256": "ae9371db106874f9fa6a41da52222670c65cdff2845fb9f5c148dc6b126fe2c5",
+    "window_end": "2021-10-17",
+    "window_start": "2021-10-17"
+  },
+  "company": "Biogen Inc.",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": true,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "52c8542a23488fab56a43f106bb6385d756d2ad92b8d26a6117dfd87e218b99c",
+  "promotion_blockers": [
+    "RESOLVE_CIK_AND_HISTORICAL_SECURITY_IDENTITY",
+    "RESOLVE_EXACT_FIRST_PUBLIC_TIMESTAMP",
+    "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+    "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2021-10-17T16:20:00-04:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "tofersen",
+    "blinded": null,
+    "catalyst_version_id": "60ddaa8c-fa5b-5c94-b7f2-42ce0c90f30e",
+    "clinical_phase": "PHASE_3",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2021-10-17T16:20:00-04:00",
+    "evidence_ids": [
+      "eca3b2e5-61ef-5dd8-a309-e8c5aa4fcc98"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "131ccdef-20e5-5310-b5b0-0cc85115ef6c",
+    "indication": "SOD1 amyotrophic lateral sclerosis",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://investors.biogen.com/news-releases/news-release-details/biogen-announces-topline-results-tofersen-phase-3-study-and-its"
+  ],
+  "stratum": "PHASE_3_PIVOTAL",
+  "ticker": "BIIB",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-24.json"
+}

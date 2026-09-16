@@ -1,0 +1,95 @@
+{
+  "acquisition_path": "validation/m7/acquisition/newly-sourced-batch-04.json",
+  "candidate_id": "REG-2021-OMER-NARSOPLIMAB-CRL",
+  "catalyst_observation": {
+    "asset": "narsoplimab",
+    "catalyst_type": "REG_DECISION",
+    "clinical_phase": "REGULATORY_DECISION",
+    "evidence_id": "e01af2a2-b4f9-5276-ad69-06e390794981",
+    "external_event_id": "REG-2021-OMER-NARSOPLIMAB-CRL",
+    "indication": "HSCT-associated thrombotic microangiopathy (HSCT-TMA)",
+    "issuer_id": "0001285819",
+    "known_at": "2021-10-18T07:02:00-04:00",
+    "source_statement": "FDA stated it could not estimate narsoplimab's treatment effect in HSCT-TMA from the submitted data. The FDA transparency dataset's filename carries an 2021-08-18 date, about two months before Omeros' 2021-10-18 public disclosure; it is unclear whether that filename date is the original CRL issuance date or some other internal/administrative date (e.g. a later processing or database-entry date), so it is not relied on. The first_public_timestamp used for this candidate is exclusively Omeros' own confirmed public disclosure (2021-10-18), which is what the market could actually react to regardless of when the letter was received.",
+    "source_tier": 2,
+    "timing_confidence": "HIGH",
+    "title": "Omeros Corporation - narsoplimab (HSCT-associated thrombotic microangiopathy (HSCT-TMA))",
+    "window_end": "2021-10-18",
+    "window_start": "2021-10-18"
+  },
+  "catalyst_version": {
+    "asset": "narsoplimab",
+    "canonical_key": "0001285819|narsoplimab|hsct-associated thrombotic microangiopathy (hsct-tma)|REG_DECISION",
+    "catalyst_type": "REG_DECISION",
+    "clinical_phase": "REGULATORY_DECISION",
+    "conflicts": [],
+    "id": "618e1a88-ade3-524f-bb10-4b84c75ca075",
+    "indication": "HSCT-associated thrombotic microangiopathy (HSCT-TMA)",
+    "issuer_id": "0001285819",
+    "known_at": "2021-10-18T07:02:00-04:00",
+    "primary_evidence_id": "e01af2a2-b4f9-5276-ad69-06e390794981",
+    "resolved_at_cutoff": "2021-10-18T07:02:00-04:00",
+    "supporting_evidence_ids": [
+      "e01af2a2-b4f9-5276-ad69-06e390794981"
+    ],
+    "timing_confidence": "HIGH",
+    "title": "Omeros Corporation - narsoplimab (HSCT-associated thrombotic microangiopathy (HSCT-TMA))",
+    "version": 1,
+    "version_sha256": "b8cb0a21ede5f9639f18d2cab4f15c7077c08afe465ea72e36cad9aa42426524",
+    "window_end": "2021-10-18",
+    "window_start": "2021-10-18"
+  },
+  "company": "Omeros Corporation",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": true,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "1aef7427256c37301c6275c529f644be8d9588de7da65b22ed6d64039bd09fee",
+  "promotion_blockers": [
+    "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2021-10-18T07:02:00-04:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "narsoplimab",
+    "blinded": null,
+    "catalyst_version_id": "618e1a88-ade3-524f-bb10-4b84c75ca075",
+    "clinical_phase": "REGULATORY_DECISION",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2021-10-18T07:02:00-04:00",
+    "evidence_ids": [
+      "e01af2a2-b4f9-5276-ad69-06e390794981"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "88cffc9c-78aa-5784-aee9-da25d67bdc61",
+    "indication": "HSCT-associated thrombotic microangiopathy (HSCT-TMA)",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://www.sec.gov/Archives/edgar/data/1285819/000155837021013245/omer-20211014xex99d1.htm"
+  ],
+  "stratum": "REGULATORY",
+  "ticker": "OMER",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-32.json"
+}

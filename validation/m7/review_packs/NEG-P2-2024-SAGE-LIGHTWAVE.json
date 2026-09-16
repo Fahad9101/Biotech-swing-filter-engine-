@@ -1,0 +1,95 @@
+{
+  "acquisition_path": "validation/m7/acquisition/newly-sourced-batch-03.json",
+  "candidate_id": "NEG-P2-2024-SAGE-LIGHTWAVE",
+  "catalyst_observation": {
+    "asset": "dalzanemdor (SAGE-718)",
+    "catalyst_type": "CLIN_P2",
+    "clinical_phase": "PHASE_2",
+    "evidence_id": "bf6f22b5-66b3-5042-ace7-8f8ef71fcdc8",
+    "external_event_id": "NEG-P2-2024-SAGE-LIGHTWAVE",
+    "indication": "mild cognitive impairment and mild dementia in Alzheimer's disease",
+    "issuer_id": "0001597553",
+    "known_at": "2024-10-08T06:37:00-04:00",
+    "source_statement": "LIGHTWAVE study did not meet its primary endpoint (WAIS-IV Coding Test at Day 84). Company discontinued further dalzanemdor development in Alzheimer's disease - the third and final leg of the 2024 dalzanemdor failure trio alongside PRECEDENT (Parkinson's) and DIMENSION (Huntington's, already processed).",
+    "source_tier": 2,
+    "timing_confidence": "HIGH",
+    "title": "Sage Therapeutics, Inc. - dalzanemdor (SAGE-718) (mild cognitive impairment and mild dementia in Alzheimer's disease)",
+    "window_end": "2024-10-08",
+    "window_start": "2024-10-08"
+  },
+  "catalyst_version": {
+    "asset": "dalzanemdor (SAGE-718)",
+    "canonical_key": "0001597553|dalzanemdor (sage-718)|mild cognitive impairment and mild dementia in alzheimer's disease|CLIN_P2",
+    "catalyst_type": "CLIN_P2",
+    "clinical_phase": "PHASE_2",
+    "conflicts": [],
+    "id": "73826f0a-77ed-5338-ac00-3bb27b454666",
+    "indication": "mild cognitive impairment and mild dementia in Alzheimer's disease",
+    "issuer_id": "0001597553",
+    "known_at": "2024-10-08T06:37:00-04:00",
+    "primary_evidence_id": "bf6f22b5-66b3-5042-ace7-8f8ef71fcdc8",
+    "resolved_at_cutoff": "2024-10-08T06:37:00-04:00",
+    "supporting_evidence_ids": [
+      "bf6f22b5-66b3-5042-ace7-8f8ef71fcdc8"
+    ],
+    "timing_confidence": "HIGH",
+    "title": "Sage Therapeutics, Inc. - dalzanemdor (SAGE-718) (mild cognitive impairment and mild dementia in Alzheimer's disease)",
+    "version": 1,
+    "version_sha256": "18ab39d3e63c2a4ec04284b3b80a8e735a1b6f166113caa51c936440662dc4f6",
+    "window_end": "2024-10-08",
+    "window_start": "2024-10-08"
+  },
+  "company": "Sage Therapeutics, Inc.",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": true,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "153de614a578082ec02f4dae6b9f2500e1b73e5553291c01fffc1290601cde12",
+  "promotion_blockers": [
+    "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2024-10-08T06:37:00-04:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "dalzanemdor (SAGE-718)",
+    "blinded": null,
+    "catalyst_version_id": "73826f0a-77ed-5338-ac00-3bb27b454666",
+    "clinical_phase": "PHASE_2",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2024-10-08T06:37:00-04:00",
+    "evidence_ids": [
+      "bf6f22b5-66b3-5042-ace7-8f8ef71fcdc8"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "a1b7862e-0478-5b6b-bd3a-d92a5508749a",
+    "indication": "mild cognitive impairment and mild dementia in Alzheimer's disease",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://www.sec.gov/Archives/edgar/data/1597553/000119312524234111/d833930d8k.htm"
+  ],
+  "stratum": "PHASE_2_POC",
+  "ticker": "SAGE",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-31.json"
+}

@@ -1,0 +1,97 @@
+{
+  "acquisition_path": "validation/m7/acquisition/early-clinical-primary-batch-01.json",
+  "candidate_id": "EC-2021-SGTX-SIG001",
+  "catalyst_observation": {
+    "asset": "SIG-001",
+    "catalyst_type": "CLIN_P1_2",
+    "clinical_phase": "PHASE_1_2",
+    "evidence_id": "c77fd9f1-e203-598b-8544-8bb281321297",
+    "external_event_id": "EC-2021-SGTX-SIG001",
+    "indication": "hemophilia A",
+    "issuer_id": "0001821323",
+    "known_at": "2021-07-09T07:30:00-04:00",
+    "source_statement": "Sigilon Therapeutics, Inc. - FIRST_PUBLIC_RESULT_DISCLOSURE_CANDIDATE dated 2021-07-09.",
+    "source_tier": 5,
+    "timing_confidence": "HIGH",
+    "title": "Sigilon Therapeutics, Inc. - SIG-001 (hemophilia A)",
+    "window_end": "2021-07-09",
+    "window_start": "2021-07-09"
+  },
+  "catalyst_version": {
+    "asset": "SIG-001",
+    "canonical_key": "0001821323|sig-001|hemophilia a|CLIN_P1_2",
+    "catalyst_type": "CLIN_P1_2",
+    "clinical_phase": "PHASE_1_2",
+    "conflicts": [],
+    "id": "56278ee2-c1fc-5d3a-b495-59437633cbff",
+    "indication": "hemophilia A",
+    "issuer_id": "0001821323",
+    "known_at": "2021-07-09T07:30:00-04:00",
+    "primary_evidence_id": "c77fd9f1-e203-598b-8544-8bb281321297",
+    "resolved_at_cutoff": "2021-07-09T07:30:00-04:00",
+    "supporting_evidence_ids": [
+      "c77fd9f1-e203-598b-8544-8bb281321297"
+    ],
+    "timing_confidence": "HIGH",
+    "title": "Sigilon Therapeutics, Inc. - SIG-001 (hemophilia A)",
+    "version": 1,
+    "version_sha256": "8237f0061aea6c9e7c83de23d01ceb876720bb6032521e7ca895dce3b8bc8e4c",
+    "window_end": "2021-07-09",
+    "window_start": "2021-07-09"
+  },
+  "company": "Sigilon Therapeutics, Inc.",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": true,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "6272c6295cda8051f682494f111f9f2aa9a412558bae269a7012e1400ef5b190",
+  "promotion_blockers": [
+    "RESOLVE_CIK_AND_HISTORICAL_SECURITY_IDENTITY",
+    "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+    "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2021-07-09T07:30:00-04:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "SIG-001",
+    "blinded": null,
+    "catalyst_version_id": "56278ee2-c1fc-5d3a-b495-59437633cbff",
+    "clinical_phase": "PHASE_1_2",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2021-07-09T07:30:00-04:00",
+    "evidence_ids": [
+      "c77fd9f1-e203-598b-8544-8bb281321297"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "dcfc7e08-d2c5-50e4-967b-b9e898dd0380",
+    "indication": "hemophilia A",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://www.globenewswire.com/news-release/2021/07/09/2260503/0/en/Sigilon-Therapeutics-Announces-Clinical-Hold-on-SIG-001-Phase-1-2-Study-in-Hemophilia-A.html"
+  ],
+  "stratum": "EARLY_CLINICAL",
+  "ticker": "SGTX",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-27.json"
+}

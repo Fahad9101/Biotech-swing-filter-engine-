@@ -1,0 +1,97 @@
+{
+  "acquisition_path": "validation/m7/acquisition/early-clinical-primary-batch-01.json",
+  "candidate_id": "EC-2024-CHRS-CHS114",
+  "catalyst_observation": {
+    "asset": "CHS-114",
+    "catalyst_type": "CLIN_P1",
+    "clinical_phase": "PHASE_1",
+    "evidence_id": "18d59604-53a6-50d3-b1f9-ef76b88f2cad",
+    "external_event_id": "EC-2024-CHRS-CHS114",
+    "indication": "advanced solid tumors",
+    "issuer_id": "0001512762",
+    "known_at": "2024-05-23T17:51:00-04:00",
+    "source_statement": "Coherus BioSciences, Inc. - FIRST_PUBLIC_RESULT_DISCLOSURE_CANDIDATE dated 2024-05-23.",
+    "source_tier": 5,
+    "timing_confidence": "HIGH",
+    "title": "Coherus BioSciences, Inc. - CHS-114 (advanced solid tumors)",
+    "window_end": "2024-05-23",
+    "window_start": "2024-05-23"
+  },
+  "catalyst_version": {
+    "asset": "CHS-114",
+    "canonical_key": "0001512762|chs-114|advanced solid tumors|CLIN_P1",
+    "catalyst_type": "CLIN_P1",
+    "clinical_phase": "PHASE_1",
+    "conflicts": [],
+    "id": "a1a4db7d-875d-5e89-ac82-7585328136a6",
+    "indication": "advanced solid tumors",
+    "issuer_id": "0001512762",
+    "known_at": "2024-05-23T17:51:00-04:00",
+    "primary_evidence_id": "18d59604-53a6-50d3-b1f9-ef76b88f2cad",
+    "resolved_at_cutoff": "2024-05-23T17:51:00-04:00",
+    "supporting_evidence_ids": [
+      "18d59604-53a6-50d3-b1f9-ef76b88f2cad"
+    ],
+    "timing_confidence": "HIGH",
+    "title": "Coherus BioSciences, Inc. - CHS-114 (advanced solid tumors)",
+    "version": 1,
+    "version_sha256": "df7d50868d655feb0822c956a227a76157584ff94437af654b2d337faf9d5a2d",
+    "window_end": "2024-05-23",
+    "window_start": "2024-05-23"
+  },
+  "company": "Coherus BioSciences, Inc.",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": false,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "54f63898b64ba6157373c303bef7d199c45054e420756a19776aa4a1a2c15cc5",
+  "promotion_blockers": [
+    "RESOLVE_CIK_AND_HISTORICAL_SECURITY_IDENTITY",
+    "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+    "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2024-05-23T17:51:00-04:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "CHS-114",
+    "blinded": null,
+    "catalyst_version_id": "a1a4db7d-875d-5e89-ac82-7585328136a6",
+    "clinical_phase": "PHASE_1",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2024-05-23T17:51:00-04:00",
+    "evidence_ids": [
+      "18d59604-53a6-50d3-b1f9-ef76b88f2cad"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "ca7bd3ac-cba7-5c77-859a-bfffbce5ebf6",
+    "indication": "advanced solid tumors",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://www.globenewswire.com/news-release/2024/05/23/2887728/33333/en/coherus-presents-preliminary-results-from-phase-i-dose-escalation-study-of-its-anti-chemokine-receptor-8-ccr8-antibody-chs-114-at-the-2024-american-society-of-clinical-oncology-asc.html"
+  ],
+  "stratum": "EARLY_CLINICAL",
+  "ticker": "CHRS",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-27.json"
+}

@@ -1,0 +1,97 @@
+{
+  "acquisition_path": "validation/m7/acquisition/targeted-single-asset-replacement-04.json",
+  "candidate_id": "P3-2022-MDGL-MAESTRO-NASH",
+  "catalyst_observation": {
+    "asset": "resmetirom",
+    "catalyst_type": "CLIN_P3",
+    "clinical_phase": "PHASE_3",
+    "evidence_id": "381b8508-d6f9-52f0-a784-e63150269ca8",
+    "external_event_id": "P3-2022-MDGL-MAESTRO-NASH",
+    "indication": "nonalcoholic steatohepatitis with liver fibrosis",
+    "issuer_id": "0001157601",
+    "known_at": "2022-12-19T07:00:00-05:00",
+    "source_statement": "Madrigal Pharmaceuticals, Inc. - FIRST_PUBLIC_RESULT_DISCLOSURE_CANDIDATE dated 2022-12-19.",
+    "source_tier": 5,
+    "timing_confidence": "HIGH",
+    "title": "Madrigal Pharmaceuticals, Inc. - resmetirom (nonalcoholic steatohepatitis with liver fibrosis)",
+    "window_end": "2022-12-19",
+    "window_start": "2022-12-19"
+  },
+  "catalyst_version": {
+    "asset": "resmetirom",
+    "canonical_key": "0001157601|resmetirom|nonalcoholic steatohepatitis with liver fibrosis|CLIN_P3",
+    "catalyst_type": "CLIN_P3",
+    "clinical_phase": "PHASE_3",
+    "conflicts": [],
+    "id": "f8551d6d-fd7c-5661-a804-b7eb2b81652a",
+    "indication": "nonalcoholic steatohepatitis with liver fibrosis",
+    "issuer_id": "0001157601",
+    "known_at": "2022-12-19T07:00:00-05:00",
+    "primary_evidence_id": "381b8508-d6f9-52f0-a784-e63150269ca8",
+    "resolved_at_cutoff": "2022-12-19T07:00:00-05:00",
+    "supporting_evidence_ids": [
+      "381b8508-d6f9-52f0-a784-e63150269ca8"
+    ],
+    "timing_confidence": "HIGH",
+    "title": "Madrigal Pharmaceuticals, Inc. - resmetirom (nonalcoholic steatohepatitis with liver fibrosis)",
+    "version": 1,
+    "version_sha256": "f447ae9ab2feee9d64f6bdb2950f623169001474876112d72037c55582ca572e",
+    "window_end": "2022-12-19",
+    "window_start": "2022-12-19"
+  },
+  "company": "Madrigal Pharmaceuticals, Inc.",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": false,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "80f7ddb60af6cecbb0a83551b48c6371b1881bc81a6d5eda307ab84b4c6e6212",
+  "promotion_blockers": [
+    "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE",
+    "FINAL_CONCENTRATION_AND_REGISTRY_CHECK"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2022-12-19T07:00:00-05:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "resmetirom",
+    "blinded": null,
+    "catalyst_version_id": "f8551d6d-fd7c-5661-a804-b7eb2b81652a",
+    "clinical_phase": "PHASE_3",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2022-12-19T07:00:00-05:00",
+    "evidence_ids": [
+      "381b8508-d6f9-52f0-a784-e63150269ca8"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "52dd812d-4a75-5985-bc67-39d686654033",
+    "indication": "nonalcoholic steatohepatitis with liver fibrosis",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://www.globenewswire.com/news-release/2022/12/19/2576163/0/en/Madrigal-Announces-Positive-Topline-Results-from-the-Pivotal-Phase-3-MAESTRO-NASH-Clinical-Trial-of-Resmetirom-for-the-Treatment-of-NASH-and-Liver-Fibrosis.html",
+    "https://www.globenewswire.com/news-release/2022/12/18/2575865/0/en/Madrigal-Pharmaceuticals-To-Announce-Topline-Results-from-the-Phase-3-MAESTRO-NASH-Study-of-Resmetirom-on-Monday-December-19th.html",
+    "https://www.sec.gov/Archives/edgar/data/1157601/0001193125-22-307935-index.html"
+  ],
+  "stratum": "PHASE_3_PIVOTAL",
+  "ticker": "MDGL",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-18.json"
+}

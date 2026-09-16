@@ -1,0 +1,97 @@
+{
+  "acquisition_path": "validation/m7/acquisition/phase2-primary-batch-01.json",
+  "candidate_id": "P2-2024-SAGE-DIMENSION",
+  "catalyst_observation": {
+    "asset": "dalzanemdor (SAGE-718)",
+    "catalyst_type": "CLIN_P2",
+    "clinical_phase": "PHASE_2",
+    "evidence_id": "4a812456-ed0c-58df-9e5c-006412d8ba84",
+    "external_event_id": "P2-2024-SAGE-DIMENSION",
+    "indication": "cognitive impairment associated with Huntington's disease",
+    "issuer_id": "0001597553",
+    "known_at": "2024-11-20T06:40:00-05:00",
+    "source_statement": "Sage Therapeutics, Inc. - FIRST_PUBLIC_RESULT_DISCLOSURE_CANDIDATE dated 2024-11-20.",
+    "source_tier": 2,
+    "timing_confidence": "MODERATE",
+    "title": "Sage Therapeutics, Inc. - dalzanemdor (SAGE-718) (cognitive impairment associated with Huntington's disease)",
+    "window_end": "2024-11-20",
+    "window_start": "2024-11-20"
+  },
+  "catalyst_version": {
+    "asset": "dalzanemdor (SAGE-718)",
+    "canonical_key": "0001597553|dalzanemdor (sage-718)|cognitive impairment associated with huntington's disease|CLIN_P2",
+    "catalyst_type": "CLIN_P2",
+    "clinical_phase": "PHASE_2",
+    "conflicts": [],
+    "id": "b86c3201-b414-5d79-b0e6-24f8a03d9a9c",
+    "indication": "cognitive impairment associated with Huntington's disease",
+    "issuer_id": "0001597553",
+    "known_at": "2024-11-20T06:40:00-05:00",
+    "primary_evidence_id": "4a812456-ed0c-58df-9e5c-006412d8ba84",
+    "resolved_at_cutoff": "2024-11-20T06:40:00-05:00",
+    "supporting_evidence_ids": [
+      "4a812456-ed0c-58df-9e5c-006412d8ba84"
+    ],
+    "timing_confidence": "MODERATE",
+    "title": "Sage Therapeutics, Inc. - dalzanemdor (SAGE-718) (cognitive impairment associated with Huntington's disease)",
+    "version": 1,
+    "version_sha256": "44002b4cdf647e3df9ceb911a7f0cb933dc866edcdf5f3cfbd21eace00a3bb33",
+    "window_end": "2024-11-20",
+    "window_start": "2024-11-20"
+  },
+  "company": "Sage Therapeutics, Inc.",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": true,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "f2d7b10c938e3b590302df91fcf6369378852374b5ca3fc0577565ea21457005",
+  "promotion_blockers": [
+    "RESOLVE_EXACT_FIRST_PUBLIC_TIMESTAMP",
+    "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+    "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2024-11-20T06:40:00-05:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "dalzanemdor (SAGE-718)",
+    "blinded": null,
+    "catalyst_version_id": "b86c3201-b414-5d79-b0e6-24f8a03d9a9c",
+    "clinical_phase": "PHASE_2",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2024-11-20T06:40:00-05:00",
+    "evidence_ids": [
+      "4a812456-ed0c-58df-9e5c-006412d8ba84"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "9de4f477-3022-5e46-8320-5a6c43fced7d",
+    "indication": "cognitive impairment associated with Huntington's disease",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://www.sec.gov/Archives/edgar/data/1597553/000119312524262103/d873020dex991.htm"
+  ],
+  "stratum": "PHASE_2_POC",
+  "ticker": "SAGE",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-29.json"
+}

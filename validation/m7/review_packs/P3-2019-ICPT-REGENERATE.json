@@ -1,0 +1,97 @@
+{
+  "acquisition_path": "validation/m7/acquisition/phase3-primary-batch-01.json",
+  "candidate_id": "P3-2019-ICPT-REGENERATE",
+  "catalyst_observation": {
+    "asset": "obeticholic acid",
+    "catalyst_type": "CLIN_P3",
+    "clinical_phase": "PHASE_3",
+    "evidence_id": "1a30aa84-6848-5a50-9b4b-1c6444254520",
+    "external_event_id": "P3-2019-ICPT-REGENERATE",
+    "indication": "NASH with liver fibrosis",
+    "issuer_id": "0001270073",
+    "known_at": "2019-02-19T07:00:00-05:00",
+    "source_statement": "Intercept Pharmaceuticals, Inc. - FIRST_PUBLIC_RESULT_DISCLOSURE_CANDIDATE dated 2019-02-19.",
+    "source_tier": 5,
+    "timing_confidence": "HIGH",
+    "title": "Intercept Pharmaceuticals, Inc. - obeticholic acid (NASH with liver fibrosis)",
+    "window_end": "2019-02-19",
+    "window_start": "2019-02-19"
+  },
+  "catalyst_version": {
+    "asset": "obeticholic acid",
+    "canonical_key": "0001270073|obeticholic acid|nash with liver fibrosis|CLIN_P3",
+    "catalyst_type": "CLIN_P3",
+    "clinical_phase": "PHASE_3",
+    "conflicts": [],
+    "id": "176d8404-6da4-5874-a71d-788b60747aa6",
+    "indication": "NASH with liver fibrosis",
+    "issuer_id": "0001270073",
+    "known_at": "2019-02-19T07:00:00-05:00",
+    "primary_evidence_id": "1a30aa84-6848-5a50-9b4b-1c6444254520",
+    "resolved_at_cutoff": "2019-02-19T07:00:00-05:00",
+    "supporting_evidence_ids": [
+      "1a30aa84-6848-5a50-9b4b-1c6444254520"
+    ],
+    "timing_confidence": "HIGH",
+    "title": "Intercept Pharmaceuticals, Inc. - obeticholic acid (NASH with liver fibrosis)",
+    "version": 1,
+    "version_sha256": "aa5f36e5f44a3fb5018aecc95705808a4b531717b292349ac2589ebc0b9c362e",
+    "window_end": "2019-02-19",
+    "window_start": "2019-02-19"
+  },
+  "company": "Intercept Pharmaceuticals, Inc.",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": false,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "5ef71f6b5c1698acb1f181be7250b82a7dbe974c51c4aeee9e34cd58bc6ea5c5",
+  "promotion_blockers": [
+    "RESOLVE_CIK_AND_HISTORICAL_SECURITY_IDENTITY",
+    "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+    "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2019-02-19T07:00:00-05:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "obeticholic acid",
+    "blinded": null,
+    "catalyst_version_id": "176d8404-6da4-5874-a71d-788b60747aa6",
+    "clinical_phase": "PHASE_3",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2019-02-19T07:00:00-05:00",
+    "evidence_ids": [
+      "1a30aa84-6848-5a50-9b4b-1c6444254520"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "91df4a85-33a6-5698-b817-561cca426810",
+    "indication": "NASH with liver fibrosis",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://www.globenewswire.com/news-release/2019/2/19/1734111/0/en/intercept-announces-positive-topline-results-from-pivotal-phase-3-regenerate-study-of-obeticholic-acid-in-patients-with-liver-fibrosis-due-to-nash.html"
+  ],
+  "stratum": "PHASE_3_PIVOTAL",
+  "ticker": "ICPT",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-21.json"
+}

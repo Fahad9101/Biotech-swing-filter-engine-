@@ -1,0 +1,98 @@
+{
+  "acquisition_path": "validation/m7/acquisition/phase3-primary-batch-01.json",
+  "candidate_id": "P3-2023-GMAB-INNOVATV301",
+  "catalyst_observation": {
+    "asset": "Tivdak (tisotumab vedotin-tftv)",
+    "catalyst_type": "CLIN_P3",
+    "clinical_phase": "PHASE_3",
+    "evidence_id": "97c21f42-86af-503a-a10c-445d6256eca2",
+    "external_event_id": "P3-2023-GMAB-INNOVATV301",
+    "indication": "recurrent or metastatic cervical cancer",
+    "issuer_id": "0001434265",
+    "known_at": "2023-09-04T15:00:00-04:00",
+    "source_statement": "Genmab A/S - FIRST_PUBLIC_RESULT_DISCLOSURE_CANDIDATE dated 2023-09-04.",
+    "source_tier": 5,
+    "timing_confidence": "HIGH",
+    "title": "Genmab A/S - Tivdak (tisotumab vedotin-tftv) (recurrent or metastatic cervical cancer)",
+    "window_end": "2023-09-04",
+    "window_start": "2023-09-04"
+  },
+  "catalyst_version": {
+    "asset": "Tivdak (tisotumab vedotin-tftv)",
+    "canonical_key": "0001434265|tivdak (tisotumab vedotin-tftv)|recurrent or metastatic cervical cancer|CLIN_P3",
+    "catalyst_type": "CLIN_P3",
+    "clinical_phase": "PHASE_3",
+    "conflicts": [],
+    "id": "4a3c0ad8-2a06-560d-ba5f-1146d7c292cb",
+    "indication": "recurrent or metastatic cervical cancer",
+    "issuer_id": "0001434265",
+    "known_at": "2023-09-04T15:00:00-04:00",
+    "primary_evidence_id": "97c21f42-86af-503a-a10c-445d6256eca2",
+    "resolved_at_cutoff": "2023-09-04T15:00:00-04:00",
+    "supporting_evidence_ids": [
+      "97c21f42-86af-503a-a10c-445d6256eca2"
+    ],
+    "timing_confidence": "HIGH",
+    "title": "Genmab A/S - Tivdak (tisotumab vedotin-tftv) (recurrent or metastatic cervical cancer)",
+    "version": 1,
+    "version_sha256": "2f9c1ccbb2f27c989dc5f43da4ce0aa2d8000d21bda83525a9efd29f4b81aa58",
+    "window_end": "2023-09-04",
+    "window_start": "2023-09-04"
+  },
+  "company": "Genmab A/S",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": false,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "50d45fefe8ff37e85fb4ec1ba2322fda646dce69db883991eef0013a04cd1dd8",
+  "promotion_blockers": [
+    "RESOLVE_CIK_AND_HISTORICAL_SECURITY_IDENTITY",
+    "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+    "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE",
+    "RESOLVE_ECONOMIC_SECURITY_ATTRIBUTION"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2023-09-04T15:00:00-04:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "Tivdak (tisotumab vedotin-tftv)",
+    "blinded": null,
+    "catalyst_version_id": "4a3c0ad8-2a06-560d-ba5f-1146d7c292cb",
+    "clinical_phase": "PHASE_3",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2023-09-04T15:00:00-04:00",
+    "evidence_ids": [
+      "97c21f42-86af-503a-a10c-445d6256eca2"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "29f76fa7-51d3-51f2-98bb-4c9ee23b49ff",
+    "indication": "recurrent or metastatic cervical cancer",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://www.globenewswire.com/news-release/2023/09/04/2736906/0/en/Genmab-and-Seagen-Announce-That-TIVDAK-tisotumab-vedotin-tftv-Met-its-Primary-Endpoint-of-Improved-Overall-Survival-in-Patients-with-Recurrent-or-Metastatic-Cervical-Cancer-Compare.html"
+  ],
+  "stratum": "PHASE_3_PIVOTAL",
+  "ticker": "GMAB",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-23.json"
+}

@@ -1,0 +1,98 @@
+{
+  "acquisition_path": "validation/m7/acquisition/regulatory-primary-batch-01.json",
+  "candidate_id": "REG-2024-DAWN-OJEMDA",
+  "catalyst_observation": {
+    "asset": "OJEMDA (tovorafenib)",
+    "catalyst_type": "REG_DECISION",
+    "clinical_phase": "REGULATORY_DECISION",
+    "evidence_id": "46c64ab4-5042-506f-a1e9-907dc3447be9",
+    "external_event_id": "REG-2024-DAWN-OJEMDA",
+    "indication": "relapsed or refractory BRAF-altered pediatric low-grade glioma",
+    "issuer_id": "0001845337",
+    "known_at": "2024-04-23T15:56:00-04:00",
+    "source_statement": "FDA official approval page; issuer first-public timestamp still required before promotion.",
+    "source_tier": 1,
+    "timing_confidence": "MODERATE",
+    "title": "Day One Biopharmaceuticals, Inc. - OJEMDA (tovorafenib) (relapsed or refractory BRAF-altered pediatric low-grade glioma)",
+    "window_end": "2024-04-23",
+    "window_start": "2024-04-23"
+  },
+  "catalyst_version": {
+    "asset": "OJEMDA (tovorafenib)",
+    "canonical_key": "0001845337|ojemda (tovorafenib)|relapsed or refractory braf-altered pediatric low-grade glioma|REG_DECISION",
+    "catalyst_type": "REG_DECISION",
+    "clinical_phase": "REGULATORY_DECISION",
+    "conflicts": [],
+    "id": "6e8ff08f-d3f4-5998-9ea2-7f5c939c4929",
+    "indication": "relapsed or refractory BRAF-altered pediatric low-grade glioma",
+    "issuer_id": "0001845337",
+    "known_at": "2024-04-23T15:56:00-04:00",
+    "primary_evidence_id": "46c64ab4-5042-506f-a1e9-907dc3447be9",
+    "resolved_at_cutoff": "2024-04-23T15:56:00-04:00",
+    "supporting_evidence_ids": [
+      "46c64ab4-5042-506f-a1e9-907dc3447be9"
+    ],
+    "timing_confidence": "MODERATE",
+    "title": "Day One Biopharmaceuticals, Inc. - OJEMDA (tovorafenib) (relapsed or refractory BRAF-altered pediatric low-grade glioma)",
+    "version": 1,
+    "version_sha256": "10e40a78dac470f5d4526c1817017b59df1cff6737167794a277c5de4759619a",
+    "window_end": "2024-04-23",
+    "window_start": "2024-04-23"
+  },
+  "company": "Day One Biopharmaceuticals, Inc.",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": false,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "8b4fc5216ceff503ae673be77079aaa03d2729495604758b92f834886d101137",
+  "promotion_blockers": [
+    "VERIFY_FIRST_PUBLIC_ISSUER_DISCLOSURE",
+    "RESOLVE_EXACT_FIRST_PUBLIC_TIMESTAMP",
+    "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
+    "RESOLVE_NEGATIVE_EVENT_STATUS",
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2024-04-23T15:56:00-04:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "OJEMDA (tovorafenib)",
+    "blinded": null,
+    "catalyst_version_id": "6e8ff08f-d3f4-5998-9ea2-7f5c939c4929",
+    "clinical_phase": "REGULATORY_DECISION",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2024-04-23T15:56:00-04:00",
+    "evidence_ids": [
+      "46c64ab4-5042-506f-a1e9-907dc3447be9"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "ac15edc9-83fc-5ce9-a933-a55553ceb0f9",
+    "indication": "relapsed or refractory BRAF-altered pediatric low-grade glioma",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-accelerated-approval-tovorafenib-patients-relapsed-or-refractory-braf-altered-pediatric?blm_aid=0"
+  ],
+  "stratum": "REGULATORY",
+  "ticker": "DAWN",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-36.json"
+}

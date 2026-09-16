@@ -1,0 +1,96 @@
+{
+  "acquisition_path": "validation/m7/acquisition/regulatory-primary-batch-01.json",
+  "candidate_id": "REG-2021-INCY-OPZELURA",
+  "catalyst_observation": {
+    "asset": "OPZELURA (ruxolitinib) cream",
+    "catalyst_type": "REG_DECISION",
+    "clinical_phase": "REGULATORY_DECISION",
+    "evidence_id": "4bd6274b-249e-5c4f-95dc-002694b7416a",
+    "external_event_id": "REG-2021-INCY-OPZELURA",
+    "indication": "mild-to-moderate atopic dermatitis",
+    "issuer_id": "0000879169",
+    "known_at": "2021-09-21T08:00:00-04:00",
+    "source_statement": "Issuer IR announcement; exact page access should be rechecked before promotion.",
+    "source_tier": 5,
+    "timing_confidence": "HIGH",
+    "title": "Incyte Corporation - OPZELURA (ruxolitinib) cream (mild-to-moderate atopic dermatitis)",
+    "window_end": "2021-09-21",
+    "window_start": "2021-09-21"
+  },
+  "catalyst_version": {
+    "asset": "OPZELURA (ruxolitinib) cream",
+    "canonical_key": "0000879169|opzelura (ruxolitinib) cream|mild-to-moderate atopic dermatitis|REG_DECISION",
+    "catalyst_type": "REG_DECISION",
+    "clinical_phase": "REGULATORY_DECISION",
+    "conflicts": [],
+    "id": "8417192e-1f4f-50d9-9f9a-9343a7b4ca5b",
+    "indication": "mild-to-moderate atopic dermatitis",
+    "issuer_id": "0000879169",
+    "known_at": "2021-09-21T08:00:00-04:00",
+    "primary_evidence_id": "4bd6274b-249e-5c4f-95dc-002694b7416a",
+    "resolved_at_cutoff": "2021-09-21T08:00:00-04:00",
+    "supporting_evidence_ids": [
+      "4bd6274b-249e-5c4f-95dc-002694b7416a"
+    ],
+    "timing_confidence": "HIGH",
+    "title": "Incyte Corporation - OPZELURA (ruxolitinib) cream (mild-to-moderate atopic dermatitis)",
+    "version": 1,
+    "version_sha256": "cd1ed6c8e22d54436dfcc7df05194b8affff13b885092b63e71e14508f10f898",
+    "window_end": "2021-09-21",
+    "window_start": "2021-09-21"
+  },
+  "company": "Incyte Corporation",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": false,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "4054ada610786b2ebe5ec8980f112ce97cb1b514bddd282653fb99050e14b809",
+  "promotion_blockers": [
+    "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
+    "RESOLVE_NEGATIVE_EVENT_STATUS",
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2021-09-21T08:00:00-04:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "OPZELURA (ruxolitinib) cream",
+    "blinded": null,
+    "catalyst_version_id": "8417192e-1f4f-50d9-9f9a-9343a7b4ca5b",
+    "clinical_phase": "REGULATORY_DECISION",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2021-09-21T08:00:00-04:00",
+    "evidence_ids": [
+      "4bd6274b-249e-5c4f-95dc-002694b7416a"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "cb140ebc-3514-5275-93bf-15271e36cf60",
+    "indication": "mild-to-moderate atopic dermatitis",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://investor.incyte.com/news-releases/news-release-details/fda-approves-opzeluratm-ruxolitinib-cream-first-and-only-topical"
+  ],
+  "stratum": "REGULATORY",
+  "ticker": "INCY",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-25.json"
+}

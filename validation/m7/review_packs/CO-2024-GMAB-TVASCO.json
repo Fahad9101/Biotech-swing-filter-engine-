@@ -1,0 +1,98 @@
+{
+  "acquisition_path": "validation/m7/acquisition/conference-other-primary-batch-01.json",
+  "candidate_id": "CO-2024-GMAB-TVASCO",
+  "catalyst_observation": {
+    "asset": "tisotumab vedotin",
+    "catalyst_type": "CONF_DATA",
+    "clinical_phase": "PHASE_2",
+    "evidence_id": "4403492b-9f1e-5d85-a23b-31016f6bd7d5",
+    "external_event_id": "CO-2024-GMAB-TVASCO",
+    "indication": "recurrent/metastatic HNSCC",
+    "issuer_id": "0001434265",
+    "known_at": "2024-06-03T09:00:00-04:00",
+    "source_statement": "Genmab A/S - CONFERENCE_DATA_DISCLOSURE_CANDIDATE dated 2024-06-03.",
+    "source_tier": 5,
+    "timing_confidence": "HIGH",
+    "title": "Genmab A/S - tisotumab vedotin (recurrent/metastatic HNSCC)",
+    "window_end": "2024-06-03",
+    "window_start": "2024-06-03"
+  },
+  "catalyst_version": {
+    "asset": "tisotumab vedotin",
+    "canonical_key": "0001434265|tisotumab vedotin|recurrent/metastatic hnscc|CONF_DATA",
+    "catalyst_type": "CONF_DATA",
+    "clinical_phase": "PHASE_2",
+    "conflicts": [],
+    "id": "230d13bb-d0c6-567e-ba84-1655294e4473",
+    "indication": "recurrent/metastatic HNSCC",
+    "issuer_id": "0001434265",
+    "known_at": "2024-06-03T09:00:00-04:00",
+    "primary_evidence_id": "4403492b-9f1e-5d85-a23b-31016f6bd7d5",
+    "resolved_at_cutoff": "2024-06-03T09:00:00-04:00",
+    "supporting_evidence_ids": [
+      "4403492b-9f1e-5d85-a23b-31016f6bd7d5"
+    ],
+    "timing_confidence": "HIGH",
+    "title": "Genmab A/S - tisotumab vedotin (recurrent/metastatic HNSCC)",
+    "version": 1,
+    "version_sha256": "1c940bd530b5c9f905c3c402e7b7b779f38332da5de87cb6ab3179de30c137c1",
+    "window_end": "2024-06-03",
+    "window_start": "2024-06-03"
+  },
+  "company": "Genmab A/S",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": false,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "29cd9ea0780aa4c0b1d5f8c7e16f977751ec8f7674f323b455741299f6649056",
+  "promotion_blockers": [
+    "RESOLVE_CIK_AND_HISTORICAL_SECURITY_IDENTITY",
+    "VERIFY_CONFERENCE_FIRST_PUBLIC_AVAILABILITY",
+    "VERIFY_UNDERLYING_CLINICAL_PHASE_AND_EVENT_DEDUPLICATION",
+    "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2024-06-03T09:00:00-04:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "tisotumab vedotin",
+    "blinded": null,
+    "catalyst_version_id": "230d13bb-d0c6-567e-ba84-1655294e4473",
+    "clinical_phase": "PHASE_2",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2024-06-03T09:00:00-04:00",
+    "evidence_ids": [
+      "4403492b-9f1e-5d85-a23b-31016f6bd7d5"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "fe12da55-4b54-542a-810e-e73bd5f1ae30",
+    "indication": "recurrent/metastatic HNSCC",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://www.globenewswire.com/news-release/2024/06/03/2892268/0/en/investigational-tisotumab-vedotin-phase-2-data-demonstrates-encouraging-antitumor-activity-in-patients-with-recurrent-or-metastatic-head-and-neck-squamous-cell-carcinoma-hnscc.html"
+  ],
+  "stratum": "CONFERENCE_OTHER",
+  "ticker": "GMAB",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-28.json"
+}

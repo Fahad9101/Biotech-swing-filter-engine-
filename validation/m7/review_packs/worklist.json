@@ -1,0 +1,2096 @@
+{
+  "entries": [
+    {
+      "candidate_id": "P2-2018-ESPR-BA-PCSK9",
+      "catalyst_type": "CLIN_P2",
+      "company": "Esperion Therapeutics, Inc.",
+      "event_date": "2018-03-27",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/P2-2018-ESPR-BA-PCSK9.json",
+      "sequence": 1,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2018/03/27/1453515/0/en/Esperion-Announces-Positive-Top-Line-Results-from-Phase-2-Study-"
+      ],
+      "stratum": "PHASE_2_POC",
+      "ticker": "ESPR"
+    },
+    {
+      "candidate_id": "NEG-P2-2018-IDRA-IMO8400",
+      "catalyst_type": "CLIN_P2",
+      "company": "Idera Pharmaceuticals, Inc.",
+      "event_date": "2018-06-12",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": true,
+      "pack_path": "validation/m7/review_packs/NEG-P2-2018-IDRA-IMO8400.json",
+      "sequence": 2,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2018/06/12/1520172/0/en/Idera-Pharmaceuticals-Reports-Results-from-Phase-2-Trial-of-IMO-8400-in-Dermatomyositis.html"
+      ],
+      "stratum": "PHASE_2_POC",
+      "ticker": "IDRA"
+    },
+    {
+      "candidate_id": "P2-2018-BIIB-BAN2401",
+      "catalyst_type": "CLIN_P2",
+      "company": "Biogen Inc.",
+      "event_date": "2018-07-05",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/P2-2018-BIIB-BAN2401.json",
+      "sequence": 3,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2018/07/05/1533998/0/en/eisai-and-biogen-announce-positive-topline-results-of-the-final-analysis-for-ban2401-at-18-months.html"
+      ],
+      "stratum": "PHASE_2_POC",
+      "ticker": "BIIB"
+    },
+    {
+      "candidate_id": "NEG-P2-2019-APTX-NYX2925",
+      "catalyst_type": "CLIN_P2",
+      "company": "Aptinyx Inc.",
+      "event_date": "2019-01-16",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": true,
+      "pack_path": "validation/m7/review_packs/NEG-P2-2019-APTX-NYX2925.json",
+      "sequence": 4,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2019/01/16/1696629/0/en/Aptinyx-Reports-Top-line-Results-from-Phase-2-Clinical-Study-of-NYX-2925-in-Painful-Diabetic-Peripheral-Neuropathy.html"
+      ],
+      "stratum": "PHASE_2_POC",
+      "ticker": "APTX"
+    },
+    {
+      "candidate_id": "P2-2019-AXSM-AXS05-SMOKING",
+      "catalyst_type": "CLIN_P2",
+      "company": "Axsome Therapeutics, Inc.",
+      "event_date": "2019-04-15",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/P2-2019-AXSM-AXS05-SMOKING.json",
+      "sequence": 5,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2019/04/15/1803810/0/en/Axsome-Therapeutics-Announces-AXS-05-Achieves-Primary-Endpoint-in-Phase-2-Trial-in-Smoking-Cessation.html"
+      ],
+      "stratum": "PHASE_2_POC",
+      "ticker": "AXSM"
+    },
+    {
+      "candidate_id": "P2-2019-AGIO-DRIVEPK",
+      "catalyst_type": "CLIN_P2",
+      "company": "Agios Pharmaceuticals, Inc.",
+      "event_date": "2019-09-04",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/P2-2019-AGIO-DRIVEPK.json",
+      "sequence": 6,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2019/09/04/1911183/31990/en/Agios-Announces-Publication-of-Data-for-Mitapivat-from-Core-and-Extension-Phases-of-the-DRIVE-PK-Study-in-Patients-with-Pyruvate-Kinase-Deficiency-in-the-New-England-Journal-of-Med.html"
+      ],
+      "stratum": "PHASE_2_POC",
+      "ticker": "AGIO"
+    },
+    {
+      "candidate_id": "P2-2019-RETA-MOXIE",
+      "catalyst_type": "CLIN_P2",
+      "company": "Reata Pharmaceuticals, Inc.",
+      "event_date": "2019-10-14",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/P2-2019-RETA-MOXIE.json",
+      "sequence": 7,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2019/10/14/1929336/0/en/Reata-Announces-Positive-Topline-Results-from-the-MOXIe-Registrational-Trial-of-Omaveloxolone-in-Patients-with-Friedreich-s-Ataxia.html"
+      ],
+      "stratum": "PHASE_2_POC",
+      "ticker": "RETA"
+    },
+    {
+      "candidate_id": "P2-2019-MDGL-RESMETIROM",
+      "catalyst_type": "CLIN_P2",
+      "company": "Madrigal Pharmaceuticals, Inc.",
+      "event_date": "2019-11-11",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/P2-2019-MDGL-RESMETIROM.json",
+      "sequence": 8,
+      "source_citations": [
+        "https://ir.madrigalpharma.com/news-releases/news-release-details/madrigal-pharmaceuticals-announces-publication-lancet-positive"
+      ],
+      "stratum": "PHASE_2_POC",
+      "ticker": "MDGL"
+    },
+    {
+      "candidate_id": "P2-2019-BIIB-LILAC",
+      "catalyst_type": "CLIN_P2",
+      "company": "Biogen Inc.",
+      "event_date": "2019-12-03",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/P2-2019-BIIB-LILAC.json",
+      "sequence": 9,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2019/12/03/1955458/0/en/Biogen-Announces-Positive-Phase-2-Study-Results-for-Cutaneous-Lupus-Erythematosus-CLE-and-Systemic-Lupus-Erythematosus-SLE.html"
+      ],
+      "stratum": "PHASE_2_POC",
+      "ticker": "BIIB"
+    },
+    {
+      "candidate_id": "P2-2020-CRNX-ACROBAT",
+      "catalyst_type": "CLIN_P2",
+      "company": "Crinetics Pharmaceuticals, Inc.",
+      "event_date": "2020-11-06",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/P2-2020-CRNX-ACROBAT.json",
+      "sequence": 10,
+      "source_citations": [
+        "https://www.sec.gov/Archives/edgar/data/1658247/000156459020051684/crnx-ex991_6.htm"
+      ],
+      "stratum": "PHASE_2_POC",
+      "ticker": "CRNX"
+    },
+    {
+      "candidate_id": "NEG-P2-2021-ANAB-POPLAR",
+      "catalyst_type": "CLIN_P2",
+      "company": "AnaptysBio, Inc.",
+      "event_date": "2021-03-08",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": true,
+      "pack_path": "validation/m7/review_packs/NEG-P2-2021-ANAB-POPLAR.json",
+      "sequence": 11,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2021/03/08/2188650/0/en/AnaptysBio-Reports-Imsidolimab-POPLAR-Phase-2-Clinical-Trial-in-Moderate-to-Severe-Palmoplantar-Pustulosis-PPP-Did-Not-Meet-Primary-Endpoint.html"
+      ],
+      "stratum": "PHASE_2_POC",
+      "ticker": "ANAB"
+    },
+    {
+      "candidate_id": "P2-2021-BIIB-TANGO",
+      "catalyst_type": "CLIN_P2",
+      "company": "Biogen Inc.",
+      "event_date": "2021-06-16",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": true,
+      "pack_path": "validation/m7/review_packs/P2-2021-BIIB-TANGO.json",
+      "sequence": 12,
+      "source_citations": [
+        "https://investors.biogen.com/node/23611"
+      ],
+      "stratum": "PHASE_2_POC",
+      "ticker": "BIIB"
+    },
+    {
+      "candidate_id": "P2-2021-BIIB-CONVEY",
+      "catalyst_type": "CLIN_P2",
+      "company": "Biogen Inc.",
+      "event_date": "2021-09-16",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/P2-2021-BIIB-CONVEY.json",
+      "sequence": 13,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2021/09/16/2298324/0/en/biogen-announces-positive-topline-results-from-phase-2-convey-study-in-small-fiber-neuropathy.html"
+      ],
+      "stratum": "PHASE_2_POC",
+      "ticker": "BIIB"
+    },
+    {
+      "candidate_id": "P2-2021-GHRS-GH001",
+      "catalyst_type": "CLIN_P2",
+      "company": "GH Research PLC",
+      "event_date": "2021-12-06",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/P2-2021-GHRS-GH001.json",
+      "sequence": 14,
+      "source_citations": [
+        "https://investor.ghres.com/news-releases/news-release-details/gh-research-announces-successful-outcome-phase-2-part-its-phase/"
+      ],
+      "stratum": "PHASE_2_POC",
+      "ticker": "GHRS"
+    },
+    {
+      "candidate_id": "P2-2022-AKRO-HARMONY",
+      "catalyst_type": "CLIN_P2",
+      "company": "Akero Therapeutics, Inc.",
+      "event_date": "2022-09-13",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/P2-2022-AKRO-HARMONY.json",
+      "sequence": 15,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2022/9/13/2514749/0/en/In-Akero-Therapeutics-Phase-2b-HARMONY-Study-Both-the-50mg-and-28mg-EFX-Doses-Achieved-Statistical-Significance-on-Primary-and-Secondary-Histology-Endpoints-after-24-Weeks.html"
+      ],
+      "stratum": "PHASE_2_POC",
+      "ticker": "AKRO"
+    },
+    {
+      "candidate_id": "P2-2023-ATAI-PCN101",
+      "catalyst_type": "CLIN_P2",
+      "company": "atai Life Sciences N.V.",
+      "event_date": "2023-01-06",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": true,
+      "pack_path": "validation/m7/review_packs/P2-2023-ATAI-PCN101.json",
+      "sequence": 16,
+      "source_citations": [
+        "https://ir.atai.com/news-releases/news-release-details/atai-life-sciences-announces-results-phase-2a-trial-pcn-101-r/"
+      ],
+      "stratum": "PHASE_2_POC",
+      "ticker": "ATAI"
+    },
+    {
+      "candidate_id": "P2-2023-APLS-MERIDIAN",
+      "catalyst_type": "CLIN_P2",
+      "company": "Apellis Pharmaceuticals, Inc.",
+      "event_date": "2023-05-25",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": true,
+      "pack_path": "validation/m7/review_packs/P2-2023-APLS-MERIDIAN.json",
+      "sequence": 17,
+      "source_citations": [
+        "https://investors.apellis.com/news-releases/news-release-details/apellis-reports-top-line-results-phase-2-meridian-study-als"
+      ],
+      "stratum": "PHASE_2_POC",
+      "ticker": "APLS"
+    },
+    {
+      "candidate_id": "P2-2023-TERN-DUET",
+      "catalyst_type": "CLIN_P2",
+      "company": "Terns Pharmaceuticals, Inc.",
+      "event_date": "2023-08-08",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/P2-2023-TERN-DUET.json",
+      "sequence": 18,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2023/08/08/2721148/0/en/Terns-Achieves-Primary-Endpoint-and-All-Secondary-Endpoints-in-Phase-2a-DUET-Trial-of-THR-%CE%B2-Agonist-TERN-501-in-NASH.html"
+      ],
+      "stratum": "PHASE_2_POC",
+      "ticker": "TERN"
+    },
+    {
+      "candidate_id": "P2-2023-ALNY-KARDIA1",
+      "catalyst_type": "CLIN_P2",
+      "company": "Alnylam Pharmaceuticals, Inc.",
+      "event_date": "2023-09-07",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/P2-2023-ALNY-KARDIA1.json",
+      "sequence": 19,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2023/09/07/2739144/0/en/roche-and-alnylam-report-positive-topline-results-from-phase-2-study-kardia-1-of-zilebesiran-an-investigational-rnai-therapeutic-in-development-to-treat-hypertension-in-patients-at.html"
+      ],
+      "stratum": "PHASE_2_POC",
+      "ticker": "ALNY"
+    },
+    {
+      "candidate_id": "P2-2023-ALT-MOMENTUM",
+      "catalyst_type": "CLIN_P2",
+      "company": "Altimmune, Inc.",
+      "event_date": "2023-11-30",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/P2-2023-ALT-MOMENTUM.json",
+      "sequence": 20,
+      "source_citations": [
+        "https://www.sec.gov/Archives/edgar/data/1326190/000132619023000050/alt-20231130xex99d1.htm"
+      ],
+      "stratum": "PHASE_2_POC",
+      "ticker": "ALT"
+    },
+    {
+      "candidate_id": "NEG-P2-2024-SAGE-PRECEDENT",
+      "catalyst_type": "CLIN_P2",
+      "company": "Sage Therapeutics, Inc.",
+      "event_date": "2024-04-17",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": true,
+      "pack_path": "validation/m7/review_packs/NEG-P2-2024-SAGE-PRECEDENT.json",
+      "sequence": 21,
+      "source_citations": [
+        "https://www.sec.gov/Archives/edgar/data/1597553/000119312524098524/d787749dex991.htm"
+      ],
+      "stratum": "PHASE_2_POC",
+      "ticker": "SAGE"
+    },
+    {
+      "candidate_id": "NEG-P2-2024-EYPT-PAVIA",
+      "catalyst_type": "CLIN_P2",
+      "company": "EyePoint Pharmaceuticals, Inc.",
+      "event_date": "2024-05-06",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": true,
+      "pack_path": "validation/m7/review_packs/NEG-P2-2024-EYPT-PAVIA.json",
+      "sequence": 22,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2024/05/06/2875682/0/en/EyePoint-Pharmaceuticals-Announces-Topline-Data-from-the-Phase-2-PAVIA-Trial-of-DURAVYU-in-Non-Proliferative-Diabetic-Retinopathy.html"
+      ],
+      "stratum": "PHASE_2_POC",
+      "ticker": "EYPT"
+    },
+    {
+      "candidate_id": "P2-2024-GPCR-GSBR1290",
+      "catalyst_type": "CLIN_P2",
+      "company": "Structure Therapeutics Inc.",
+      "event_date": "2024-06-03",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/P2-2024-GPCR-GSBR1290.json",
+      "sequence": 23,
+      "source_citations": [
+        "https://www.sec.gov/Archives/edgar/data/1888886/000110465924067483/tm2414821d7_ex99-1.htm"
+      ],
+      "stratum": "PHASE_2_POC",
+      "ticker": "GPCR"
+    },
+    {
+      "candidate_id": "P2-2024-BNTX-BNT111",
+      "catalyst_type": "CLIN_P2",
+      "company": "BioNTech SE",
+      "event_date": "2024-07-30",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/P2-2024-BNTX-BNT111.json",
+      "sequence": 24,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2024/07/30/2920826/0/en/biontech-announces-positive-topline-phase-2-results-for-mrna-immunotherapy-candidate-bnt111-in-patients-with-advanced-melanoma.html"
+      ],
+      "stratum": "PHASE_2_POC",
+      "ticker": "BNTX"
+    },
+    {
+      "candidate_id": "P2-2024-RXRX-SYCAMORE",
+      "catalyst_type": "CLIN_P2",
+      "company": "Recursion Pharmaceuticals, Inc.",
+      "event_date": "2024-09-03",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/P2-2024-RXRX-SYCAMORE.json",
+      "sequence": 25,
+      "source_citations": [
+        "https://ir.recursion.com/news-releases/news-release-details/recursion-announces-phase-2-data-rec-994-first-disease"
+      ],
+      "stratum": "PHASE_2_POC",
+      "ticker": "RXRX"
+    },
+    {
+      "candidate_id": "NEG-P2-2024-SAGE-LIGHTWAVE",
+      "catalyst_type": "CLIN_P2",
+      "company": "Sage Therapeutics, Inc.",
+      "event_date": "2024-10-08",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": true,
+      "pack_path": "validation/m7/review_packs/NEG-P2-2024-SAGE-LIGHTWAVE.json",
+      "sequence": 26,
+      "source_citations": [
+        "https://www.sec.gov/Archives/edgar/data/1597553/000119312524234111/d833930d8k.htm"
+      ],
+      "stratum": "PHASE_2_POC",
+      "ticker": "SAGE"
+    },
+    {
+      "candidate_id": "P2-2024-SAGE-DIMENSION",
+      "catalyst_type": "CLIN_P2",
+      "company": "Sage Therapeutics, Inc.",
+      "event_date": "2024-11-20",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": true,
+      "pack_path": "validation/m7/review_packs/P2-2024-SAGE-DIMENSION.json",
+      "sequence": 27,
+      "source_citations": [
+        "https://www.sec.gov/Archives/edgar/data/1597553/000119312524262103/d873020dex991.htm"
+      ],
+      "stratum": "PHASE_2_POC",
+      "ticker": "SAGE"
+    },
+    {
+      "candidate_id": "P2-2024-ANAB-ANB032",
+      "catalyst_type": "CLIN_P2",
+      "company": "AnaptysBio, Inc.",
+      "event_date": "2024-12-11",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": true,
+      "pack_path": "validation/m7/review_packs/P2-2024-ANAB-ANB032.json",
+      "sequence": 28,
+      "source_citations": [
+        "https://ir.anaptysbio.com/news-releases/news-release-details/anaptys-announces-phase-2b-trial-anb032-btla-agonist-did-not"
+      ],
+      "stratum": "PHASE_2_POC",
+      "ticker": "ANAB"
+    },
+    {
+      "candidate_id": "P2-2025-VTYX-VTX958",
+      "catalyst_type": "CLIN_P2",
+      "company": "Ventyx Biosciences, Inc.",
+      "event_date": "2025-02-18",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": true,
+      "pack_path": "validation/m7/review_packs/P2-2025-VTYX-VTX958.json",
+      "sequence": 29,
+      "source_citations": [
+        "https://ir.ventyxbio.com/node/9276/pdf"
+      ],
+      "stratum": "PHASE_2_POC",
+      "ticker": "VTYX"
+    },
+    {
+      "candidate_id": "P2-2025-KALA-CHASE",
+      "catalyst_type": "CLIN_P2",
+      "company": "KALA BIO, Inc.",
+      "event_date": "2025-09-29",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": true,
+      "pack_path": "validation/m7/review_packs/P2-2025-KALA-CHASE.json",
+      "sequence": 30,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2025/09/29/3157682/0/en/KALA-BIO-Announces-Topline-Results-from-CHASE-Phase-2b-Clinical-Trial.html"
+      ],
+      "stratum": "PHASE_2_POC",
+      "ticker": "KALA"
+    },
+    {
+      "candidate_id": "P3-2018-RARE-UX007",
+      "catalyst_type": "CLIN_P3",
+      "company": "Ultragenyx Pharmaceutical Inc.",
+      "event_date": "2018-10-26",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": true,
+      "pack_path": "validation/m7/review_packs/P3-2018-RARE-UX007.json",
+      "sequence": 31,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2018/10/26/1627791/0/en/ultragenyx-announces-negative-topline-results-from-phase-3-study-of-ux007-in-patients-with-glut1-ds-with-disabling-movement-disorders.html"
+      ],
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "RARE"
+    },
+    {
+      "candidate_id": "P3-2019-ICPT-REGENERATE",
+      "catalyst_type": "CLIN_P3",
+      "company": "Intercept Pharmaceuticals, Inc.",
+      "event_date": "2019-02-19",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/P3-2019-ICPT-REGENERATE.json",
+      "sequence": 32,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2019/2/19/1734111/0/en/intercept-announces-positive-topline-results-from-pivotal-phase-3-regenerate-study-of-obeticholic-acid-in-patients-with-liver-fibrosis-due-to-nash.html"
+      ],
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "ICPT"
+    },
+    {
+      "candidate_id": "P3-2019-NVAX-PREPARE",
+      "catalyst_type": "CLIN_P3",
+      "company": "Novavax, Inc.",
+      "event_date": "2019-02-28",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": true,
+      "pack_path": "validation/m7/review_packs/P3-2019-NVAX-PREPARE.json",
+      "sequence": 33,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2019/02/28/1744163/0/en/Novavax-Announces-Topline-Results-from-Phase-3-PrepareTM-Trial-of-ResVax-for-Prevention-of-RSV-Disease-in-Infants-via-Maternal-Immunization.html"
+      ],
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "NVAX"
+    },
+    {
+      "candidate_id": "P3-2019-AXSM-GEMINI",
+      "catalyst_type": "CLIN_P3",
+      "company": "Axsome Therapeutics, Inc.",
+      "event_date": "2019-12-16",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/P3-2019-AXSM-GEMINI.json",
+      "sequence": 34,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2019/12/16/1960786/33090/en/axsome-therapeutics-announces-axs-05-achieves-primary-endpoint-in-gemini-phase-3-trial-in-major-depressive-disorder.html"
+      ],
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "AXSM"
+    },
+    {
+      "candidate_id": "P3-2020-REGN-LIBTAYO-NSCLC",
+      "catalyst_type": "CLIN_P3",
+      "company": "Regeneron Pharmaceuticals, Inc.",
+      "event_date": "2020-04-27",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/P3-2020-REGN-LIBTAYO-NSCLC.json",
+      "sequence": 35,
+      "source_citations": [
+        "https://investor.regeneron.com/news-releases/news-release-details/phase-3-trial-libtayor-cemiplimab-monotherapy-first-line"
+      ],
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "REGN"
+    },
+    {
+      "candidate_id": "P3-2020-OCUL-DEXTENZA-AC",
+      "catalyst_type": "CLIN_P3",
+      "company": "Ocular Therapeutix, Inc.",
+      "event_date": "2020-04-28",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/P3-2020-OCUL-DEXTENZA-AC.json",
+      "sequence": 36,
+      "source_citations": [
+        "https://www.businesswire.com/news/home/20200428005282/en/Ocular-Therapeutix-Announces-Topline-Results-of-Phase-3-Clinical-Trial-of-DEXTENZA-for-the-Treatment-of-Ocular-Itching-Associated-with-Allergic-Conjunctivitis"
+      ],
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "OCUL"
+    },
+    {
+      "candidate_id": "P3-2020-GMAB-ANDROMEDA",
+      "catalyst_type": "CLIN_P3",
+      "company": "Genmab A/S",
+      "event_date": "2020-05-28",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/P3-2020-GMAB-ANDROMEDA.json",
+      "sequence": 37,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2020/05/28/2040461/0/en/Genmab-Announces-Positive-Topline-Results-in-Phase-III-ANDROMEDA-Study-of-Daratumumab-in-Light-chain-AL-Amyloidosis.html"
+      ],
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "GMAB"
+    },
+    {
+      "candidate_id": "P3-2020-IMMU-ASCENT",
+      "catalyst_type": "CLIN_P3",
+      "company": "Immunomedics, Inc.",
+      "event_date": "2020-07-06",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/P3-2020-IMMU-ASCENT.json",
+      "sequence": 38,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2020/07/06/2057876/0/en/Immunomedics-Announces-Positive-Results-from-Phase-3-ASCENT-Study-of-TRODELVY-in-Previously-Treated-Patients-with-Metastatic-Triple-Negative-Breast-Cancer-mTNBC.html"
+      ],
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "IMMU"
+    },
+    {
+      "candidate_id": "P3-2020-ONTX-INSPIRE",
+      "catalyst_type": "CLIN_P3",
+      "company": "Onconova Therapeutics, Inc.",
+      "event_date": "2020-08-24",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": true,
+      "pack_path": "validation/m7/review_packs/P3-2020-ONTX-INSPIRE.json",
+      "sequence": 39,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2020/08/24/2082504/0/en/Onconova-Therapeutics-Announces-Topline-Results-from-the-Pivotal-Phase-3-INSPIRE-Trial.html"
+      ],
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "ONTX"
+    },
+    {
+      "candidate_id": "P3-2020-CRBP-RESOLVE1",
+      "catalyst_type": "CLIN_P3",
+      "company": "Corbus Pharmaceuticals Holdings, Inc.",
+      "event_date": "2020-09-08",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": true,
+      "pack_path": "validation/m7/review_packs/P3-2020-CRBP-RESOLVE1.json",
+      "sequence": 40,
+      "source_citations": [
+        "https://ir.corbuspharma.com/news-events/press-releases/detail/341/corbus-pharmaceuticals-announces-topline-results-from-resolve-1-phase-3-study-of-lenabasum-for-treatment-of-systemic-sclerosis"
+      ],
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "CRBP"
+    },
+    {
+      "candidate_id": "P3-2020-CYTK-GALACTIC-HF",
+      "catalyst_type": "CLIN_P3",
+      "company": "Cytokinetics, Incorporated",
+      "event_date": "2020-11-13",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/P3-2020-CYTK-GALACTIC-HF.json",
+      "sequence": 41,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2020/11/13/2126661/0/en/Cytokinetics-Announces-Results-From-GALACTIC-HF-Presented-at-Late-Breaking-Clinical-Trial-Session-at-the-American-Heart-Association-Scientific-Sessions-and-Published-in-the-New-Eng.html"
+      ],
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "CYTK"
+    },
+    {
+      "candidate_id": "P3-2020-AGIO-ACTIVATE",
+      "catalyst_type": "CLIN_P3",
+      "company": "Agios Pharmaceuticals, Inc.",
+      "event_date": "2020-12-01",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/P3-2020-AGIO-ACTIVATE.json",
+      "sequence": 42,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2020/12/01/2137295/0/en/Agios-Announces-the-Phase-3-ACTIVATE-Trial-of-Mitapivat-Achieved-Its-Primary-Endpoint-in-Adults-with-Pyruvate-Kinase-Deficiency-Who-Are-Not-Regularly-Transfused.html"
+      ],
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "AGIO"
+    },
+    {
+      "candidate_id": "P3-2020-APRE-P3MDS",
+      "catalyst_type": "CLIN_P3",
+      "company": "Aprea Therapeutics, Inc.",
+      "event_date": "2020-12-28",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": true,
+      "pack_path": "validation/m7/review_packs/P3-2020-APRE-P3MDS.json",
+      "sequence": 43,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2020/12/28/2150874/0/en/Aprea-Therapeutics-Announces-Results-of-Primary-Endpoint-from-Phase-3-Trial-of-Eprenetapopt-in-TP53-Mutant-Myelodysplastic-Syndromes-MDS.html"
+      ],
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "APRE"
+    },
+    {
+      "candidate_id": "P3-2021-BIIB-STAR",
+      "catalyst_type": "CLIN_P3",
+      "company": "Biogen Inc.",
+      "event_date": "2021-06-14",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": true,
+      "pack_path": "validation/m7/review_packs/P3-2021-BIIB-STAR.json",
+      "sequence": 44,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2021/06/14/2246815/0/en/Biogen-Announces-Topline-Results-from-Phase-3-Gene-Therapy-Study-in-Choroideremia.html"
+      ],
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "BIIB"
+    },
+    {
+      "candidate_id": "P3-2021-BIIB-VALOR",
+      "catalyst_type": "CLIN_P3",
+      "company": "Biogen Inc.",
+      "event_date": "2021-10-17",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": true,
+      "pack_path": "validation/m7/review_packs/P3-2021-BIIB-VALOR.json",
+      "sequence": 45,
+      "source_citations": [
+        "https://investors.biogen.com/news-releases/news-release-details/biogen-announces-topline-results-tofersen-phase-3-study-and-its"
+      ],
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "BIIB"
+    },
+    {
+      "candidate_id": "NEG-P3-2021-DCPH-INTRIGUE",
+      "catalyst_type": "CLIN_P3",
+      "company": "Deciphera Pharmaceuticals, Inc.",
+      "event_date": "2021-11-05",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": true,
+      "pack_path": "validation/m7/review_packs/NEG-P3-2021-DCPH-INTRIGUE.json",
+      "sequence": 46,
+      "source_citations": [
+        "https://www.sec.gov/Archives/edgar/data/1654151/000119312521320901/d252692dex991.htm"
+      ],
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "DCPH"
+    },
+    {
+      "candidate_id": "NEG-P3-2022-NKTR-PIVOTIO001",
+      "catalyst_type": "CLIN_P3",
+      "company": "Nektar Therapeutics",
+      "event_date": "2022-03-14",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": true,
+      "pack_path": "validation/m7/review_packs/NEG-P3-2022-NKTR-PIVOTIO001.json",
+      "sequence": 47,
+      "source_citations": [
+        "https://www.sec.gov/Archives/edgar/data/906709/000121390022011983/ea156805ex99-1_nektartherape.htm"
+      ],
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "NKTR"
+    },
+    {
+      "candidate_id": "P3-2022-BGNE-ALPINE",
+      "catalyst_type": "CLIN_P3",
+      "company": "BeiGene, Ltd.",
+      "event_date": "2022-10-12",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/P3-2022-BGNE-ALPINE.json",
+      "sequence": 48,
+      "source_citations": [
+        "https://www.businesswire.com/news/home/20221012005491/en/BeiGene-Announces-Positive-Topline-Results-from-Final-Progression-Free-Survival-Analysis-of-BRUKINSA-zanubrutinib-Compared-to-IMBRUVICA-ibrutinib-in-Phase-3-Chronic-Lymphocytic-Leukemia-CLL-Trial"
+      ],
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "BGNE"
+    },
+    {
+      "candidate_id": "P3-2022-MDGL-MAESTRO-NASH",
+      "catalyst_type": "CLIN_P3",
+      "company": "Madrigal Pharmaceuticals, Inc.",
+      "event_date": "2022-12-19",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/P3-2022-MDGL-MAESTRO-NASH.json",
+      "sequence": 49,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2022/12/19/2576163/0/en/Madrigal-Announces-Positive-Topline-Results-from-the-Pivotal-Phase-3-MAESTRO-NASH-Clinical-Trial-of-Resmetirom-for-the-Treatment-of-NASH-and-Liver-Fibrosis.html",
+        "https://www.globenewswire.com/news-release/2022/12/18/2575865/0/en/Madrigal-Pharmaceuticals-To-Announce-Topline-Results-from-the-Phase-3-MAESTRO-NASH-Study-of-Resmetirom-on-Monday-December-19th.html",
+        "https://www.sec.gov/Archives/edgar/data/1157601/0001193125-22-307935-index.html"
+      ],
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "MDGL"
+    },
+    {
+      "candidate_id": "P3-2023-GERN-IMERGE",
+      "catalyst_type": "CLIN_P3",
+      "company": "Geron Corporation",
+      "event_date": "2023-01-04",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/P3-2023-GERN-IMERGE.json",
+      "sequence": 50,
+      "source_citations": [
+        "https://ir.geron.com/news-releases/news-release-details/geron-announces-positive-top-line-results-imerge-phase-3-trial"
+      ],
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "GERN"
+    },
+    {
+      "candidate_id": "NEG-P3-2023-MRTX-SAPPHIRE",
+      "catalyst_type": "CLIN_P3",
+      "company": "Mirati Therapeutics, Inc.",
+      "event_date": "2023-05-24",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": true,
+      "pack_path": "validation/m7/review_packs/NEG-P3-2023-MRTX-SAPPHIRE.json",
+      "sequence": 51,
+      "source_citations": [
+        "https://www.sec.gov/Archives/edgar/data/1576263/000162828023019591/miratitherapeuticssitravat.htm"
+      ],
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "MRTX"
+    },
+    {
+      "candidate_id": "NEG-P3-2023-KOD-GLEAMGLIMMER",
+      "catalyst_type": "CLIN_P3",
+      "company": "Kodiak Sciences Inc.",
+      "event_date": "2023-07-24",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": true,
+      "pack_path": "validation/m7/review_packs/NEG-P3-2023-KOD-GLEAMGLIMMER.json",
+      "sequence": 52,
+      "source_citations": [
+        "https://www.sec.gov/Archives/edgar/data/1468748/000095017023033933/kod-20230724.htm"
+      ],
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "KOD"
+    },
+    {
+      "candidate_id": "P3-2023-GMAB-INNOVATV301",
+      "catalyst_type": "CLIN_P3",
+      "company": "Genmab A/S",
+      "event_date": "2023-09-04",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/P3-2023-GMAB-INNOVATV301.json",
+      "sequence": 53,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2023/09/04/2736906/0/en/Genmab-and-Seagen-Announce-That-TIVDAK-tisotumab-vedotin-tftv-Met-its-Primary-Endpoint-of-Improved-Overall-Survival-in-Patients-with-Recurrent-or-Metastatic-Cervical-Cancer-Compare.html"
+      ],
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "GMAB"
+    },
+    {
+      "candidate_id": "P3-2024-ANNX-ANX005",
+      "catalyst_type": "CLIN_P3",
+      "company": "Annexon, Inc.",
+      "event_date": "2024-06-04",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/P3-2024-ANNX-ANX005.json",
+      "sequence": 54,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2024/06/04/2892927/0/en/Annexon-Announces-Positive-Topline-Results-from-Pivotal-Phase-3-Trial-for-First-in-Class-C1q-Blocking-Antibody-ANX005-in-Guillain-Barr%C3%83%C2%A9-Syndrome.html"
+      ],
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "ANNX"
+    },
+    {
+      "candidate_id": "P3-2024-NAMS-BROOKLYN",
+      "catalyst_type": "CLIN_P3",
+      "company": "NewAmsterdam Pharma Company N.V.",
+      "event_date": "2024-07-29",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/P3-2024-NAMS-BROOKLYN.json",
+      "sequence": 55,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2024/07/29/2920256/0/en/newamsterdam-pharma-announces-positive-topline-data-from-pivotal-phase-3-brooklyn-clinical-trial-evaluating-obicetrapib-in-patients-with-heterozygous-familial-hypercholesterolemia.html"
+      ],
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "NAMS"
+    },
+    {
+      "candidate_id": "P3-2024-FULC-REACH",
+      "catalyst_type": "CLIN_P3",
+      "company": "Fulcrum Therapeutics, Inc.",
+      "event_date": "2024-09-12",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": true,
+      "pack_path": "validation/m7/review_packs/P3-2024-FULC-REACH.json",
+      "sequence": 56,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2024/09/12/2945039/0/en/fulcrum-therapeutics-announces-topline-results-from-phase-3-reach-clinical-trial-of-losmapimod-in-facioscapulohumeral-muscular-dystrophy-fshd.html"
+      ],
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "FULC"
+    },
+    {
+      "candidate_id": "P3-2024-SAVA-RETHINK",
+      "catalyst_type": "CLIN_P3",
+      "company": "Cassava Sciences, Inc.",
+      "event_date": "2024-11-25",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": true,
+      "pack_path": "validation/m7/review_packs/P3-2024-SAVA-RETHINK.json",
+      "sequence": 57,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2024/11/25/2986578/8339/en/Cassava-Sciences-Topline-Phase-3-Data-Did-Not-Meet-Co-Primary-Endpoints.html"
+      ],
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "SAVA"
+    },
+    {
+      "candidate_id": "P3-2024-NAMS-BROADWAY",
+      "catalyst_type": "CLIN_P3",
+      "company": "NewAmsterdam Pharma Company N.V.",
+      "event_date": "2024-12-10",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/P3-2024-NAMS-BROADWAY.json",
+      "sequence": 58,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2024/12/10/2994358/0/en/newamsterdam-pharma-announces-positive-topline-data-from-pivotal-phase-3-broadway-clinical-trial-evaluating-obicetrapib-in-patients-with-atherosclerotic-cardiovascular-disease-and-.html"
+      ],
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "NAMS"
+    },
+    {
+      "candidate_id": "P3-2025-SAVA-REFOCUS",
+      "catalyst_type": "CLIN_P3",
+      "company": "Cassava Sciences, Inc.",
+      "event_date": "2025-03-25",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": true,
+      "pack_path": "validation/m7/review_packs/P3-2025-SAVA-REFOCUS.json",
+      "sequence": 59,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2025/03/25/3048697/8339/en/Cassava-Sciences-Reports-Topline-Phase-3-REFOCUS-ALZ-Data.html"
+      ],
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "SAVA"
+    },
+    {
+      "candidate_id": "P3-2025-ALEC-INFRONT3",
+      "catalyst_type": "CLIN_P3",
+      "company": "Alector, Inc.",
+      "event_date": "2025-10-21",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": true,
+      "pack_path": "validation/m7/review_packs/P3-2025-ALEC-INFRONT3.json",
+      "sequence": 60,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2025/10/21/3170630/0/en/alector-announces-topline-results-from-latozinemab-phase-3-trial-in-individuals-with-frontotemporal-dementia-due-to-a-grn-mutation-and-provides-business-update.html"
+      ],
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "ALEC"
+    },
+    {
+      "candidate_id": "P3-2025-CAPR-HOPE3",
+      "catalyst_type": "CLIN_P3",
+      "company": "Capricor Therapeutics",
+      "event_date": "2025-12-03",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/P3-2025-CAPR-HOPE3.json",
+      "sequence": 61,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2025/12/03/3198753/0/en/Capricor-Therapeutics-Announces-Positive-Topline-Results-from-Pivotal-Phase-3-HOPE-3-Study-of-Deramiocel-in-Duchenne-Muscular-Dystrophy.html"
+      ],
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "CAPR"
+    },
+    {
+      "candidate_id": "REG-2018-ARRY-BRAFTOVI-MEKTOVI",
+      "catalyst_type": "REG_DECISION",
+      "company": "Array BioPharma Inc.",
+      "event_date": "2018-06-27",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/REG-2018-ARRY-BRAFTOVI-MEKTOVI.json",
+      "sequence": 62,
+      "source_citations": [
+        "https://www.multivu.com/players/English/8336151-array-biopharma-braftovi-mektovi-fda-approval/"
+      ],
+      "stratum": "REGULATORY",
+      "ticker": "ARRY"
+    },
+    {
+      "candidate_id": "REG-2018-AGIO-TIBSOVO",
+      "catalyst_type": "REG_DECISION",
+      "company": "Agios Pharmaceuticals, Inc.",
+      "event_date": "2018-07-20",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/REG-2018-AGIO-TIBSOVO.json",
+      "sequence": 63,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2018/07/20/1540182/0/en/fda-grants-approval-of-tibsovo-the-first-oral-targeted-therapy-for-adult-patients-with-relapsed-refractory-acute-myeloid-leukemia-and-an-idh1-mutation.html"
+      ],
+      "stratum": "REGULATORY",
+      "ticker": "AGIO"
+    },
+    {
+      "candidate_id": "REG-2018-ALNY-ONPATTRO",
+      "catalyst_type": "REG_DECISION",
+      "company": "Alnylam Pharmaceuticals, Inc.",
+      "event_date": "2018-08-10",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/REG-2018-ALNY-ONPATTRO.json",
+      "sequence": 64,
+      "source_citations": [
+        "https://investors.alnylam.com/press-release?id=22946"
+      ],
+      "stratum": "REGULATORY",
+      "ticker": "ALNY"
+    },
+    {
+      "candidate_id": "REG-2018-FOLD-GALAFOLD",
+      "catalyst_type": "REG_DECISION",
+      "company": "Amicus Therapeutics, Inc.",
+      "event_date": "2018-08-10",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/REG-2018-FOLD-GALAFOLD.json",
+      "sequence": 65,
+      "source_citations": [
+        "https://www.sec.gov/Archives/edgar/data/1178879/000117887918000011/exhibit991.htm"
+      ],
+      "stratum": "REGULATORY",
+      "ticker": "FOLD"
+    },
+    {
+      "candidate_id": "REG-2019-SAGE-ZULRESSO",
+      "catalyst_type": "REG_DECISION",
+      "company": "Sage Therapeutics, Inc.",
+      "event_date": "2019-03-19",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/REG-2019-SAGE-ZULRESSO.json",
+      "sequence": 66,
+      "source_citations": [
+        "https://www.sec.gov/Archives/edgar/data/1597553/000119312519079860/d721324d8k.htm"
+      ],
+      "stratum": "REGULATORY",
+      "ticker": "SAGE"
+    },
+    {
+      "candidate_id": "REG-2019-GBT-OXBRYTA",
+      "catalyst_type": "REG_DECISION",
+      "company": "Global Blood Therapeutics, Inc.",
+      "event_date": "2019-11-25",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/REG-2019-GBT-OXBRYTA.json",
+      "sequence": 67,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2019/11/25/1952236/0/en/fda-approves-oxbryta-voxelotor-the-first-medicine-specifically-targeting-the-root-cause-of-sickle-cell-disease.html"
+      ],
+      "stratum": "REGULATORY",
+      "ticker": "GBT"
+    },
+    {
+      "candidate_id": "REG-2020-IMMU-TRODELVY",
+      "catalyst_type": "REG_DECISION",
+      "company": "Immunomedics, Inc.",
+      "event_date": "2020-04-22",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/REG-2020-IMMU-TRODELVY.json",
+      "sequence": 68,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2020/04/22/2020193/0/en/FDA-Grants-Accelerated-Approval-for-Immunomedics-Trodelvy-in-Previously-Treated-Metastatic-Triple-Negative-Breast-Cancer.html"
+      ],
+      "stratum": "REGULATORY",
+      "ticker": "IMMU"
+    },
+    {
+      "candidate_id": "REG-2020-ICPT-OCA-CRL",
+      "catalyst_type": "REG_DECISION",
+      "company": "Intercept Pharmaceuticals, Inc.",
+      "event_date": "2020-06-29",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": true,
+      "pack_path": "validation/m7/review_packs/REG-2020-ICPT-OCA-CRL.json",
+      "sequence": 69,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2020/06/29/2054576/0/en/Intercept-Receives-Complete-Response-Letter-from-FDA-for-Obeticholic-Acid-for-the-Treatment-of-Fibrosis-Due-to-NASH.html"
+      ],
+      "stratum": "REGULATORY",
+      "ticker": "ICPT"
+    },
+    {
+      "candidate_id": "REG-2020-BMRN-VALROX-CRL",
+      "catalyst_type": "REG_DECISION",
+      "company": "BioMarin Pharmaceutical Inc.",
+      "event_date": "2020-08-19",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": true,
+      "pack_path": "validation/m7/review_packs/REG-2020-BMRN-VALROX-CRL.json",
+      "sequence": 70,
+      "source_citations": [
+        "https://www.prnewswire.com/news-releases/biomarin-receives-complete-response-letter-crl-from-fda-for-valoctocogene-roxaparvovec-gene-therapy-for-severe-hemophilia-a-301114587.html"
+      ],
+      "stratum": "REGULATORY",
+      "ticker": "BMRN"
+    },
+    {
+      "candidate_id": "REG-2020-RYTM-IMCIVREE",
+      "catalyst_type": "REG_DECISION",
+      "company": "Rhythm Pharmaceuticals, Inc.",
+      "event_date": "2020-11-27",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/REG-2020-RYTM-IMCIVREE.json",
+      "sequence": 71,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2020/11/27/2135269/0/en/rhythm-pharmaceuticals-announces-fda-approval-of-imcivree-setmelanotide-as-first-ever-therapy-for-chronic-weight-management-in-patients-with-obesity-due-to-pomc-pcsk1-or-lepr-defic.html"
+      ],
+      "stratum": "REGULATORY",
+      "ticker": "RYTM"
+    },
+    {
+      "candidate_id": "REG-2021-ATNX-ORALPAC-CRL",
+      "catalyst_type": "REG_DECISION",
+      "company": "Athenex, Inc.",
+      "event_date": "2021-03-01",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": true,
+      "pack_path": "validation/m7/review_packs/REG-2021-ATNX-ORALPAC-CRL.json",
+      "sequence": 72,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2021/03/01/2184118/0/en/athenex-receives-fda-complete-response-letter-for-oral-paclitaxel-plus-encequidar-for-the-treatment-of-metastatic-breast-cancer.html"
+      ],
+      "stratum": "REGULATORY",
+      "ticker": "ATNX"
+    },
+    {
+      "candidate_id": "REG-2021-APLS-EMPAVELI",
+      "catalyst_type": "REG_DECISION",
+      "company": "Apellis Pharmaceuticals, Inc.",
+      "event_date": "2021-05-14",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/REG-2021-APLS-EMPAVELI.json",
+      "sequence": 73,
+      "source_citations": [
+        "https://investors.apellis.com/news-releases/news-release-details/apellis-announces-fda-approval-empavelitm-pegcetacoplan"
+      ],
+      "stratum": "REGULATORY",
+      "ticker": "APLS"
+    },
+    {
+      "candidate_id": "REG-2021-FGEN-ROXADUSTAT-CRL",
+      "catalyst_type": "REG_DECISION",
+      "company": "FibroGen, Inc.",
+      "event_date": "2021-08-11",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": true,
+      "pack_path": "validation/m7/review_packs/REG-2021-FGEN-ROXADUSTAT-CRL.json",
+      "sequence": 74,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2021/08/11/2278626/33525/en/fibrogen-receives-complete-response-letter-from-the-fda-for-roxadustat-for-anemia-of-chronic-kidney-disease.html"
+      ],
+      "stratum": "REGULATORY",
+      "ticker": "FGEN"
+    },
+    {
+      "candidate_id": "REG-2021-ASND-SKYTROFA",
+      "catalyst_type": "REG_DECISION",
+      "company": "Ascendis Pharma A/S",
+      "event_date": "2021-08-25",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/REG-2021-ASND-SKYTROFA.json",
+      "sequence": 75,
+      "source_citations": [
+        "https://investors.ascendispharma.com/news-releases/news-release-details/ascendis-pharma-announces-us-food-and-drug-administration"
+      ],
+      "stratum": "REGULATORY",
+      "ticker": "ASND"
+    },
+    {
+      "candidate_id": "REG-2021-INCY-OPZELURA",
+      "catalyst_type": "REG_DECISION",
+      "company": "Incyte Corporation",
+      "event_date": "2021-09-21",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/REG-2021-INCY-OPZELURA.json",
+      "sequence": 76,
+      "source_citations": [
+        "https://investor.incyte.com/news-releases/news-release-details/fda-approves-opzeluratm-ruxolitinib-cream-first-and-only-topical"
+      ],
+      "stratum": "REGULATORY",
+      "ticker": "INCY"
+    },
+    {
+      "candidate_id": "REG-2021-OMER-NARSOPLIMAB-CRL",
+      "catalyst_type": "REG_DECISION",
+      "company": "Omeros Corporation",
+      "event_date": "2021-10-18",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": true,
+      "pack_path": "validation/m7/review_packs/REG-2021-OMER-NARSOPLIMAB-CRL.json",
+      "sequence": 77,
+      "source_citations": [
+        "https://www.sec.gov/Archives/edgar/data/1285819/000155837021013245/omer-20211014xex99d1.htm"
+      ],
+      "stratum": "REGULATORY",
+      "ticker": "OMER"
+    },
+    {
+      "candidate_id": "REG-2022-CHRS-TORIPALIMAB-CRL",
+      "catalyst_type": "REG_DECISION",
+      "company": "Coherus BioSciences, Inc.",
+      "event_date": "2022-05-02",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": true,
+      "pack_path": "validation/m7/review_packs/REG-2022-CHRS-TORIPALIMAB-CRL.json",
+      "sequence": 78,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2022/05/02/2433328/33333/en/Coherus-and-Junshi-Biosciences-Receive-Complete-Response-Letter-from-U-S-FDA-for-Toripalimab-BLA.html"
+      ],
+      "stratum": "REGULATORY",
+      "ticker": "CHRS"
+    },
+    {
+      "candidate_id": "REG-2022-IMGN-ELAHERE",
+      "catalyst_type": "REG_DECISION",
+      "company": "ImmunoGen, Inc.",
+      "event_date": "2022-11-14",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/REG-2022-IMGN-ELAHERE.json",
+      "sequence": 79,
+      "source_citations": [
+        "https://www.sec.gov/Archives/edgar/data/855654/000155837022017872/imgn-20221114xex99d1.htm"
+      ],
+      "stratum": "REGULATORY",
+      "ticker": "IMGN"
+    },
+    {
+      "candidate_id": "REG-2022-PRVB-TZIELD",
+      "catalyst_type": "REG_DECISION",
+      "company": "Provention Bio, Inc.",
+      "event_date": "2022-11-17",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/REG-2022-PRVB-TZIELD.json",
+      "sequence": 80,
+      "source_citations": [
+        "https://www.sec.gov/Archives/edgar/data/1695357/000149315222032806/ex99-1.htm"
+      ],
+      "stratum": "REGULATORY",
+      "ticker": "PRVB"
+    },
+    {
+      "candidate_id": "REG-2022-TGTX-BRIUMVI",
+      "catalyst_type": "REG_DECISION",
+      "company": "TG Therapeutics, Inc.",
+      "event_date": "2022-12-28",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/REG-2022-TGTX-BRIUMVI.json",
+      "sequence": 81,
+      "source_citations": [
+        "https://www.sec.gov/Archives/edgar/data/1001316/000155837022019019/tgtx-20221228x8k.htm"
+      ],
+      "stratum": "REGULATORY",
+      "ticker": "TGTX"
+    },
+    {
+      "candidate_id": "REG-2023-TVTX-FILSPARI",
+      "catalyst_type": "REG_DECISION",
+      "company": "Travere Therapeutics, Inc.",
+      "event_date": "2023-02-17",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/REG-2023-TVTX-FILSPARI.json",
+      "sequence": 82,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2023/02/17/2610963/0/en/Travere-Therapeutics-Announces-FDA-Accelerated-Approval-of-FILSPARI-sparsentan-the-First-and-Only-Non-immunosuppressive-Therapy-for-the-Reduction-of-Proteinuria-in-IgA-Nephropathy.html"
+      ],
+      "stratum": "REGULATORY",
+      "ticker": "TVTX"
+    },
+    {
+      "candidate_id": "REG-2023-APLS-SYFOVRE",
+      "catalyst_type": "REG_DECISION",
+      "company": "Apellis Pharmaceuticals, Inc.",
+      "event_date": "2023-02-17",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/REG-2023-APLS-SYFOVRE.json",
+      "sequence": 83,
+      "source_citations": [
+        "https://investors.apellis.com/node/12516"
+      ],
+      "stratum": "REGULATORY",
+      "ticker": "APLS"
+    },
+    {
+      "candidate_id": "REG-2023-RETA-SKYCLARYS",
+      "catalyst_type": "REG_DECISION",
+      "company": "Reata Pharmaceuticals, Inc.",
+      "event_date": "2023-02-28",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/REG-2023-RETA-SKYCLARYS.json",
+      "sequence": 84,
+      "source_citations": [
+        "https://www.sec.gov/Archives/edgar/data/1358762/000095017023005219/reta-ex99_2.htm"
+      ],
+      "stratum": "REGULATORY",
+      "ticker": "RETA"
+    },
+    {
+      "candidate_id": "REG-2023-IONS-QALSODY",
+      "catalyst_type": "REG_DECISION",
+      "company": "Ionis Pharmaceuticals, Inc.",
+      "event_date": "2023-04-25",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/REG-2023-IONS-QALSODY.json",
+      "sequence": 85,
+      "source_citations": [
+        "https://ir.ionis.com/news-releases/news-release-details/fda-approves-qalsodytm-tofersen-first-treatment-targeting"
+      ],
+      "stratum": "REGULATORY",
+      "ticker": "IONS"
+    },
+    {
+      "candidate_id": "REG-2023-SRPT-ELEVIDYS",
+      "catalyst_type": "REG_DECISION",
+      "company": "Sarepta Therapeutics, Inc.",
+      "event_date": "2023-06-22",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/REG-2023-SRPT-ELEVIDYS.json",
+      "sequence": 86,
+      "source_citations": [
+        "https://investorrelations.sarepta.com/news-releases/news-release-details/sarepta-therapeutics-announces-fda-approval-elevidys-first-gene"
+      ],
+      "stratum": "REGULATORY",
+      "ticker": "SRPT"
+    },
+    {
+      "candidate_id": "REG-2023-BMRN-ROCTAVIAN",
+      "catalyst_type": "REG_DECISION",
+      "company": "BioMarin Pharmaceutical Inc.",
+      "event_date": "2023-06-29",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/REG-2023-BMRN-ROCTAVIAN.json",
+      "sequence": 87,
+      "source_citations": [
+        "https://www.biomarin.com/news/press-releases/u-s-food-and-drug-administration-approves-biomarins-roctavian-valoctocogene-roxaparvovec-rvox-the-first-and-only-gene-therapy-for-adults-with-severe-hemophilia-a/"
+      ],
+      "stratum": "REGULATORY",
+      "ticker": "BMRN"
+    },
+    {
+      "candidate_id": "REG-2023-GERN-IMETELSTAT-NDA-ACCEPT",
+      "catalyst_type": "REG_SUBMIT",
+      "company": "Geron Corporation",
+      "event_date": "2023-08-21",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/REG-2023-GERN-IMETELSTAT-NDA-ACCEPT.json",
+      "sequence": 88,
+      "source_citations": [
+        "https://www.sec.gov/Archives/edgar/data/886744/000095017023043949/gern-20230821.htm",
+        "https://www.geron.com/about/history/",
+        "https://www.businesswire.com/news/home/20230821960985/en/"
+      ],
+      "stratum": "REGULATORY",
+      "ticker": "GERN"
+    },
+    {
+      "candidate_id": "REG-2023-BLUE-LYFGENIA",
+      "catalyst_type": "REG_DECISION",
+      "company": "bluebird bio, Inc.",
+      "event_date": "2023-12-08",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/REG-2023-BLUE-LYFGENIA.json",
+      "sequence": 89,
+      "source_citations": [
+        "https://www.nasdaq.com/press-release/bluebird-bio-announces-fda-approval-of-lyfgeniatm-lovotibeglogene-autotemcel-for"
+      ],
+      "stratum": "REGULATORY",
+      "ticker": "BLUE"
+    },
+    {
+      "candidate_id": "REG-2024-IOVA-AMTAGVI",
+      "catalyst_type": "REG_DECISION",
+      "company": "Iovance Biotherapeutics, Inc.",
+      "event_date": "2024-02-16",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/REG-2024-IOVA-AMTAGVI.json",
+      "sequence": 90,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2024/02/16/2830923/0/en/Iovance-s-AMTAGVI-lifileucel-Receives-U-S-FDA-Accelerated-Approval-for-Advanced-Melanoma.html"
+      ],
+      "stratum": "REGULATORY",
+      "ticker": "IOVA"
+    },
+    {
+      "candidate_id": "REG-2024-DAWN-OJEMDA",
+      "catalyst_type": "REG_DECISION",
+      "company": "Day One Biopharmaceuticals, Inc.",
+      "event_date": "2024-04-23",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/REG-2024-DAWN-OJEMDA.json",
+      "sequence": 91,
+      "source_citations": [
+        "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-accelerated-approval-tovorafenib-patients-relapsed-or-refractory-braf-altered-pediatric?blm_aid=0"
+      ],
+      "stratum": "REGULATORY",
+      "ticker": "DAWN"
+    },
+    {
+      "candidate_id": "REG-2024-GERN-RYTELO",
+      "catalyst_type": "REG_DECISION",
+      "company": "Geron Corporation",
+      "event_date": "2024-06-06",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/REG-2024-GERN-RYTELO.json",
+      "sequence": 92,
+      "source_citations": [
+        "https://ir.geron.com/news-releases/news-release-details/geron-announces-fda-approval-rytelotm-imetelstat-first-class"
+      ],
+      "stratum": "REGULATORY",
+      "ticker": "GERN"
+    },
+    {
+      "candidate_id": "REG-2024-VRNA-OHTUVAYRE",
+      "catalyst_type": "REG_DECISION",
+      "company": "Verona Pharma plc",
+      "event_date": "2024-06-26",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/REG-2024-VRNA-OHTUVAYRE.json",
+      "sequence": 93,
+      "source_citations": [
+        "https://www.veronapharma.com/news/verona-pharma-announces-us-fda-approval-of-ohtuvayre-ensifentrine/"
+      ],
+      "stratum": "REGULATORY",
+      "ticker": "VRNA"
+    },
+    {
+      "candidate_id": "REG-2024-REGN-LINVOSELTAMAB-CRL",
+      "catalyst_type": "REG_DECISION",
+      "company": "Regeneron Pharmaceuticals, Inc.",
+      "event_date": "2024-08-20",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": true,
+      "pack_path": "validation/m7/review_packs/REG-2024-REGN-LINVOSELTAMAB-CRL.json",
+      "sequence": 94,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2024/08/20/2933195/0/en/Regeneron-Provides-Update-on-Biologics-License-Application-for-Linvoseltamab.html"
+      ],
+      "stratum": "REGULATORY",
+      "ticker": "REGN"
+    },
+    {
+      "candidate_id": "REG-2024-SNDX-REVUFORJ",
+      "catalyst_type": "REG_DECISION",
+      "company": "Syndax Pharmaceuticals, Inc.",
+      "event_date": "2024-11-15",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/REG-2024-SNDX-REVUFORJ.json",
+      "sequence": 95,
+      "source_citations": [
+        "https://www.prnewswire.com/news-releases/syndax-announces-fda-approval-of-revuforj-revumenib-the-first-and-only-menin-inhibitor-to-treat-adult-and-pediatric-patients-with-relapsed-or-refractory-acute-leukemia-with-a-kmt2a-translocation-302307513.html"
+      ],
+      "stratum": "REGULATORY",
+      "ticker": "SNDX"
+    },
+    {
+      "candidate_id": "REG-2024-BBIO-ATTRUBY",
+      "catalyst_type": "REG_DECISION",
+      "company": "BridgeBio Pharma, Inc.",
+      "event_date": "2024-11-22",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/REG-2024-BBIO-ATTRUBY.json",
+      "sequence": 96,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2024/11/23/2986250/0/en/Attruby-acoramidis-a-Near-Complete-TTR-Stabilizer-90-approved-by-FDA-to-Reduce-Cardiovascular-Death-and-Cardiovascular-related-Hospitalization-in-ATTR-CM-Patients.html"
+      ],
+      "stratum": "REGULATORY",
+      "ticker": "BBIO"
+    },
+    {
+      "candidate_id": "REG-2024-IONS-TRYNGOLZA",
+      "catalyst_type": "REG_DECISION",
+      "company": "Ionis Pharmaceuticals, Inc.",
+      "event_date": "2024-12-19",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/REG-2024-IONS-TRYNGOLZA.json",
+      "sequence": 97,
+      "source_citations": [
+        "https://www.sec.gov/Archives/edgar/data/874015/000114036124050057/ef20040455_ex99-1.htm"
+      ],
+      "stratum": "REGULATORY",
+      "ticker": "IONS"
+    },
+    {
+      "candidate_id": "REG-2024-VRTX-ALYFTREK",
+      "catalyst_type": "REG_DECISION",
+      "company": "Vertex Pharmaceuticals Incorporated",
+      "event_date": "2024-12-20",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/REG-2024-VRTX-ALYFTREK.json",
+      "sequence": 98,
+      "source_citations": [
+        "https://investors.vrtx.com/news-releases/news-release-details/vertex-announces-us-fda-approval-alyftrektm-once-daily-next"
+      ],
+      "stratum": "REGULATORY",
+      "ticker": "VRTX"
+    },
+    {
+      "candidate_id": "EC-2019-WVE-SUVODIRSEN",
+      "catalyst_type": "CLIN_P1",
+      "company": "Wave Life Sciences Ltd.",
+      "event_date": "2019-12-16",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": true,
+      "pack_path": "validation/m7/review_packs/EC-2019-WVE-SUVODIRSEN.json",
+      "sequence": 99,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2019/12/16/1960830/0/en/Wave-Life-Sciences-Announces-Discontinuation-of-Suvodirsen-Development-for-Duchenne-Muscular-Dystrophy.html"
+      ],
+      "stratum": "EARLY_CLINICAL",
+      "ticker": "WVE"
+    },
+    {
+      "candidate_id": "EC-2020-CRSP-CTX001",
+      "catalyst_type": "CLIN_P1_2",
+      "company": "CRISPR Therapeutics AG",
+      "event_date": "2020-06-12",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/EC-2020-CRSP-CTX001.json",
+      "sequence": 100,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2020/06/12/2047260/0/en/CRISPR-Therapeutics-and-Vertex-Announce-New-Clinical-Data-for-Investigational-Gene-Editing-Therapy-CTX001-in-Severe-Hemoglobinopathies-at-the-25th-Annual-European-Hematology-Associ.html"
+      ],
+      "stratum": "EARLY_CLINICAL",
+      "ticker": "CRSP"
+    },
+    {
+      "candidate_id": "EC-2021-RUBY-RTX240",
+      "catalyst_type": "CLIN_P1_2",
+      "company": "Rubius Therapeutics, Inc.",
+      "event_date": "2021-03-15",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/EC-2021-RUBY-RTX240.json",
+      "sequence": 101,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2021/03/15/2192713/0/en/Rubius-Therapeutics-Reports-Initial-Clinical-Data-from-Ongoing-Phase-1-2-Trial-of-RTX-240-in-Patients-with-Advanced-Solid-Tumors-Demonstrating-Single-Agent-Activity.html"
+      ],
+      "stratum": "EARLY_CLINICAL",
+      "ticker": "RUBY"
+    },
+    {
+      "candidate_id": "EC-2021-TPTX-TPX0046",
+      "catalyst_type": "CLIN_P1_2",
+      "company": "Turning Point Therapeutics, Inc.",
+      "event_date": "2021-04-05",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/EC-2021-TPTX-TPX0046.json",
+      "sequence": 102,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2021/04/05/2204507/0/en/turning-point-therapeutics-announces-initial-clinical-data-from-phase-1-2-sword-1-study-of-ret-inhibitor-tpx-0046.html"
+      ],
+      "stratum": "EARLY_CLINICAL",
+      "ticker": "TPTX"
+    },
+    {
+      "candidate_id": "EC-2021-FATE-FT516FT538",
+      "catalyst_type": "CLIN_P1",
+      "company": "Fate Therapeutics, Inc.",
+      "event_date": "2021-05-13",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/EC-2021-FATE-FT516FT538.json",
+      "sequence": 103,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2021/05/13/2229432/24675/en/Fate-Therapeutics-Announces-Encouraging-Interim-Phase-1-Data-for-iPSC-derived-NK-Cell-Programs-in-Relapsed-Refractory-Acute-Myeloid-Leukemia.html"
+      ],
+      "stratum": "EARLY_CLINICAL",
+      "ticker": "FATE"
+    },
+    {
+      "candidate_id": "EC-2021-NTLA-NTLA2001",
+      "catalyst_type": "CLIN_P1",
+      "company": "Intellia Therapeutics, Inc.",
+      "event_date": "2021-06-26",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/EC-2021-NTLA-NTLA2001.json",
+      "sequence": 104,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2021/06/26/2253514/0/en/intellia-and-regeneron-announce-landmark-clinical-data-showing-deep-reduction-in-disease-causing-protein-after-single-infusion-of-ntla-2001-an-investigational-crispr-therapy-for-tr.html"
+      ],
+      "stratum": "EARLY_CLINICAL",
+      "ticker": "NTLA"
+    },
+    {
+      "candidate_id": "EC-2021-SGTX-SIG001",
+      "catalyst_type": "CLIN_P1_2",
+      "company": "Sigilon Therapeutics, Inc.",
+      "event_date": "2021-07-09",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": true,
+      "pack_path": "validation/m7/review_packs/EC-2021-SGTX-SIG001.json",
+      "sequence": 105,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2021/07/09/2260503/0/en/Sigilon-Therapeutics-Announces-Clinical-Hold-on-SIG-001-Phase-1-2-Study-in-Hemophilia-A.html"
+      ],
+      "stratum": "EARLY_CLINICAL",
+      "ticker": "SGTX"
+    },
+    {
+      "candidate_id": "EC-2021-EDIT-EDIT101",
+      "catalyst_type": "CLIN_P1_2",
+      "company": "Editas Medicine, Inc.",
+      "event_date": "2021-09-29",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/EC-2021-EDIT-EDIT101.json",
+      "sequence": 106,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2021/09/29/2305445/0/en/Editas-Medicine-Announces-Positive-Initial-Clinical-Data-from-Ongoing-Phase-1-2-BRILLIANCE-Clinical-Trial-of-EDIT-101-for-LCA10.html"
+      ],
+      "stratum": "EARLY_CLINICAL",
+      "ticker": "EDIT"
+    },
+    {
+      "candidate_id": "EC-2022-AVXL-ANAVEX371",
+      "catalyst_type": "CLIN_P1",
+      "company": "Anavex Life Sciences Corp.",
+      "event_date": "2022-01-10",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/EC-2022-AVXL-ANAVEX371.json",
+      "sequence": 107,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2022/1/10/2363824/29248/en/Anavex-Life-Sciences-Reports-Positive-Results-from-Phase-1-Clinical-Trial-of-ANAVEX-3-71.html"
+      ],
+      "stratum": "EARLY_CLINICAL",
+      "ticker": "AVXL"
+    },
+    {
+      "candidate_id": "EC-2022-VTYX-VTX958",
+      "catalyst_type": "CLIN_P1",
+      "company": "Ventyx Biosciences, Inc.",
+      "event_date": "2022-08-15",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/EC-2022-VTYX-VTX958.json",
+      "sequence": 108,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2022/08/15/2498512/0/en/Ventyx-Biosciences-Announces-Positive-Topline-Phase-1-Data-for-Its-Selective-Allosteric-TYK2-Inhibitor-VTX958.html"
+      ],
+      "stratum": "EARLY_CLINICAL",
+      "ticker": "VTYX"
+    },
+    {
+      "candidate_id": "EC-2022-ALEC-AL101",
+      "catalyst_type": "CLIN_P1",
+      "company": "Alector, Inc.",
+      "event_date": "2022-11-29",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/EC-2022-ALEC-AL101.json",
+      "sequence": 109,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2022/11/29/2564291/0/en/Alector-Presents-Results-from-First-in-Human-Phase-1-Study-of-AL101-for-the-Treatment-of-Neurodegenerative-Diseases.html"
+      ],
+      "stratum": "EARLY_CLINICAL",
+      "ticker": "ALEC"
+    },
+    {
+      "candidate_id": "EC-2023-IMTX-IMA203",
+      "catalyst_type": "CLIN_P1",
+      "company": "Immatics N.V.",
+      "event_date": "2023-11-08",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/EC-2023-IMTX-IMA203.json",
+      "sequence": 110,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2023/11/08/2776060/0/en/Immatics-Reports-Interim-Clinical-Data-from-ACTengine-IMA203-and-IMA203CD8-TCR-T-Monotherapies-Targeting-PRAME-in-an-Ongoing-Phase-1-Trial.html"
+      ],
+      "stratum": "EARLY_CLINICAL",
+      "ticker": "IMTX"
+    },
+    {
+      "candidate_id": "EC-2024-CHRS-CHS114",
+      "catalyst_type": "CLIN_P1",
+      "company": "Coherus BioSciences, Inc.",
+      "event_date": "2024-05-23",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/EC-2024-CHRS-CHS114.json",
+      "sequence": 111,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2024/05/23/2887728/33333/en/coherus-presents-preliminary-results-from-phase-i-dose-escalation-study-of-its-anti-chemokine-receptor-8-ccr8-antibody-chs-114-at-the-2024-american-society-of-clinical-oncology-asc.html"
+      ],
+      "stratum": "EARLY_CLINICAL",
+      "ticker": "CHRS"
+    },
+    {
+      "candidate_id": "EC-2024-CABA-CABA201",
+      "catalyst_type": "CLIN_P1_2",
+      "company": "Cabaletta Bio, Inc.",
+      "event_date": "2024-06-14",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/EC-2024-CABA-CABA201.json",
+      "sequence": 112,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2024/06/14/2898772/0/en/Cabaletta-Bio-Reports-Positive-Initial-Clinical-Data-from-Phase-1-2-RESET-Myositis-and-RESET-SLE-Trials-of-CABA-201.html"
+      ],
+      "stratum": "EARLY_CLINICAL",
+      "ticker": "CABA"
+    },
+    {
+      "candidate_id": "EC-2024-TSHA-TSHA102",
+      "catalyst_type": "CLIN_P1_2",
+      "company": "Taysha Gene Therapies, Inc.",
+      "event_date": "2024-06-18",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/EC-2024-TSHA-TSHA102.json",
+      "sequence": 113,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2024/06/18/2900309/0/en/taysha-gene-therapies-announces-positive-clinical-data-across-adult-and-pediatric-patients-from-low-dose-cohort-in-ongoing-reveal-phase-1-2-trials-evaluating-tsha-102-in-rett-syndr.html"
+      ],
+      "stratum": "EARLY_CLINICAL",
+      "ticker": "TSHA"
+    },
+    {
+      "candidate_id": "EC-2025-MRSN-XMT1660",
+      "catalyst_type": "CLIN_P1",
+      "company": "Mersana Therapeutics, Inc.",
+      "event_date": "2025-01-10",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/EC-2025-MRSN-XMT1660.json",
+      "sequence": 114,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2025/01/10/3007493/0/en/Mersana-Therapeutics-Announces-Positive-Initial-Clinical-Data-from-Phase-1-Clinical-Trial-of-Emiltatug-Ledadotin-XMT-1660-Initiation-of-Expansion-in-Triple-Negative-Breast-Cancer.html"
+      ],
+      "stratum": "EARLY_CLINICAL",
+      "ticker": "MRSN"
+    },
+    {
+      "candidate_id": "EC-2025-MTSR-MET233I",
+      "catalyst_type": "CLIN_P1",
+      "company": "Metsera, Inc.",
+      "event_date": "2025-06-09",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/EC-2025-MTSR-MET233I.json",
+      "sequence": 115,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2025/06/09/3095726/0/en/metsera-announces-positive-phase-1-data-of-first-in-class-once-monthly-amylin-candidate-met-233i.html"
+      ],
+      "stratum": "EARLY_CLINICAL",
+      "ticker": "MTSR"
+    },
+    {
+      "candidate_id": "CO-2018-ZIOP-ASCO",
+      "catalyst_type": "CONF_DATA",
+      "company": "ZIOPHARM Oncology, Inc.",
+      "event_date": "2018-06-04",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/CO-2018-ZIOP-ASCO.json",
+      "sequence": 116,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2018/06/04/1516110/18421/en/Ziopharm-Oncology-Presents-Clinical-Data-Demonstrating-Anti-tumor-Immune-Response-of-Controlled-IL-12-Platform-in-Breast-Cancer-and-Glioblastoma-at-American-Society-of-Clinical-Onc.html"
+      ],
+      "stratum": "CONFERENCE_OTHER",
+      "ticker": "ZIOP"
+    },
+    {
+      "candidate_id": "CO-2019-BGNE-ZANUASH",
+      "catalyst_type": "CONF_DATA",
+      "company": "BeiGene, Ltd.",
+      "event_date": "2019-12-08",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/CO-2019-BGNE-ZANUASH.json",
+      "sequence": 117,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2019/12/08/1957589/0/en/BeiGene-Announces-Clinical-Data-on-BRUKINSA-Zanubrutinib-at-the-61st-American-Society-of-Hematology-ASH-Annual-Meeting.html"
+      ],
+      "stratum": "CONFERENCE_OTHER",
+      "ticker": "BGNE"
+    },
+    {
+      "candidate_id": "CO-2019-CNST-MANIFEST",
+      "catalyst_type": "CONF_DATA",
+      "company": "Constellation Pharmaceuticals, Inc.",
+      "event_date": "2019-12-09",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/CO-2019-CNST-MANIFEST.json",
+      "sequence": 118,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2019/12/09/1958004/0/en/constellation-pharmaceuticals-provides-updated-preliminary-data-from-manifest-clinical-trial-with-cpi-0610-in-oral-and-poster-presentations-at-ash.html"
+      ],
+      "stratum": "CONFERENCE_OTHER",
+      "ticker": "CNST"
+    },
+    {
+      "candidate_id": "CO-2020-ONCT-CIRLLASH",
+      "catalyst_type": "CONF_DATA",
+      "company": "Oncternal Therapeutics, Inc.",
+      "event_date": "2020-12-07",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/CO-2020-ONCT-CIRLLASH.json",
+      "sequence": 119,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2020/12/07/2140511/0/en/Oncternal-Therapeutics-Announces-Presentation-of-Interim-Phase-1-2-Data-Update-for-Cirmtuzumab-in-Combination-with-Ibrutinib-at-ASH-2020-Virtual-Annual-Meeting.html"
+      ],
+      "stratum": "CONFERENCE_OTHER",
+      "ticker": "ONCT"
+    },
+    {
+      "candidate_id": "CO-2020-TRIL-TTI622ASH",
+      "catalyst_type": "CONF_DATA",
+      "company": "Trillium Therapeutics Inc.",
+      "event_date": "2020-12-07",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/CO-2020-TRIL-TTI622ASH.json",
+      "sequence": 120,
+      "source_citations": [
+        "https://www.globenewswire.com/de/news-release/2020/12/07/2140908/0/en/Trillium-Therapeutics-Presented-Clinical-Data-at-the-62nd-ASH-Annual-Meeting-and-Provides-Guidance-for-2021.html"
+      ],
+      "stratum": "CONFERENCE_OTHER",
+      "ticker": "TRIL"
+    },
+    {
+      "candidate_id": "CO-2021-HARP-HPN424ASCO",
+      "catalyst_type": "CONF_DATA",
+      "company": "Harpoon Therapeutics, Inc.",
+      "event_date": "2021-06-04",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/CO-2021-HARP-HPN424ASCO.json",
+      "sequence": 121,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2021/06/04/2242109/0/en/harpoon-therapeutics-presents-updated-interim-clinical-data-for-the-psma-targeting-tritac-hpn424-at-the-2021-asco-annual-meeting.html"
+      ],
+      "stratum": "CONFERENCE_OTHER",
+      "ticker": "HARP"
+    },
+    {
+      "candidate_id": "CO-2021-IOVA-LIFILEUCELASCO",
+      "catalyst_type": "CONF_DATA",
+      "company": "Iovance Biotherapeutics, Inc.",
+      "event_date": "2021-06-04",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/CO-2021-IOVA-LIFILEUCELASCO.json",
+      "sequence": 122,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2021/06/04/2242128/0/en/Iovance-Biotherapeutics-Announces-Clinical-Data-for-Lifileucel-in-Combination-with-Pembrolizumab-in-Advanced-Melanoma-at-ASCO-2021-Annual-Meeting.html"
+      ],
+      "stratum": "CONFERENCE_OTHER",
+      "ticker": "IOVA"
+    },
+    {
+      "candidate_id": "CO-2021-IGMS-IGM2323ASH",
+      "catalyst_type": "CONF_DATA",
+      "company": "IGM Biosciences, Inc.",
+      "event_date": "2021-12-11",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/CO-2021-IGMS-IGM2323ASH.json",
+      "sequence": 123,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2021/12/11/2350312/0/en/IGM-Biosciences-Presents-Clinical-Data-from-IGM-2323-in-Patients-with-Advanced-B-Cell-Malignancies-at-2021-American-Society-of-Hematology-Annual-Meeting.html"
+      ],
+      "stratum": "CONFERENCE_OTHER",
+      "ticker": "IGMS"
+    },
+    {
+      "candidate_id": "CO-2022-KROS-KER050ASH",
+      "catalyst_type": "CONF_DATA",
+      "company": "Keros Therapeutics, Inc.",
+      "event_date": "2022-12-12",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/CO-2022-KROS-KER050ASH.json",
+      "sequence": 124,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2022/12/12/2572031/0/en/Keros-Therapeutics-Presents-Clinical-Data-from-its-KER-050-and-KER-047-Programs-and-Preclinical-Data-from-its-KER-050-and-ALK2-Inhibitor-Programs-at-the-64th-American-Society-of-He.html"
+      ],
+      "stratum": "CONFERENCE_OTHER",
+      "ticker": "KROS"
+    },
+    {
+      "candidate_id": "CO-2024-GMAB-TVASCO",
+      "catalyst_type": "CONF_DATA",
+      "company": "Genmab A/S",
+      "event_date": "2024-06-03",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/CO-2024-GMAB-TVASCO.json",
+      "sequence": 125,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2024/06/03/2892268/0/en/investigational-tisotumab-vedotin-phase-2-data-demonstrates-encouraging-antitumor-activity-in-patients-with-recurrent-or-metastatic-head-and-neck-squamous-cell-carcinoma-hnscc.html"
+      ],
+      "stratum": "CONFERENCE_OTHER",
+      "ticker": "GMAB"
+    },
+    {
+      "candidate_id": "CO-2024-AUTL-OBECELASH",
+      "catalyst_type": "CONF_DATA",
+      "company": "Autolus Therapeutics plc",
+      "event_date": "2024-12-09",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/CO-2024-AUTL-OBECELASH.json",
+      "sequence": 126,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2024/12/10/2994144/0/en/autolus-therapeutics-presents-clinical-data-updates-at-the-american-society-of-hematology-ash-annual-meeting-2024.html"
+      ],
+      "stratum": "CONFERENCE_OTHER",
+      "ticker": "AUTL"
+    },
+    {
+      "candidate_id": "CO-2024-KROS-ELRITERCEPTASH",
+      "catalyst_type": "CONF_DATA",
+      "company": "Keros Therapeutics, Inc.",
+      "event_date": "2024-12-09",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/CO-2024-KROS-ELRITERCEPTASH.json",
+      "sequence": 127,
+      "source_citations": [
+        "https://www.globenewswire.com/fr/news-release/2024/12/10/2994148/0/en/Keros-Therapeutics-Presents-Clinical-Data-from-its-Elritercept-Program-at-the-66th-American-Society-of-Hematology-Annual-Meeting-and-Exposition.html"
+      ],
+      "stratum": "CONFERENCE_OTHER",
+      "ticker": "KROS"
+    },
+    {
+      "candidate_id": "CO-2025-GERN-RYTELOASH",
+      "catalyst_type": "CONF_DATA",
+      "company": "Geron Corporation",
+      "event_date": "2025-12-08",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/CO-2025-GERN-RYTELOASH.json",
+      "sequence": 128,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2025/12/08/3201506/35501/en/geron-corporation-presents-new-data-at-ash-2025-highlighting-the-relationship-between-treatment-emergent-cytopenias-and-clinical-benefit-of-rytelo-imetelstat-in-lower-risk-mds.html"
+      ],
+      "stratum": "CONFERENCE_OTHER",
+      "ticker": "GERN"
+    },
+    {
+      "candidate_id": "CO-2025-CRVS-SOQUELITINIBASH",
+      "catalyst_type": "CONF_DATA",
+      "company": "Corvus Pharmaceuticals, Inc.",
+      "event_date": "2025-12-08",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/CO-2025-CRVS-SOQUELITINIBASH.json",
+      "sequence": 129,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2025/12/08/3201702/0/en/corvus-pharmaceuticals-presents-final-data-from-soquelitinib-phase-1-1b-t-cell-lymphoma-trial.html"
+      ],
+      "stratum": "CONFERENCE_OTHER",
+      "ticker": "CRVS"
+    },
+    {
+      "candidate_id": "CO-2025-AUTL-CARLYSLEASH",
+      "catalyst_type": "CONF_DATA",
+      "company": "Autolus Therapeutics plc",
+      "event_date": "2025-12-08",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": false,
+      "pack_path": "validation/m7/review_packs/CO-2025-AUTL-CARLYSLEASH.json",
+      "sequence": 130,
+      "source_citations": [
+        "https://www.globenewswire.com/news-release/2025/12/08/3201963/0/en/autolus-therapeutics-presents-updated-clinical-data-from-the-carlysle-trial-in-patients-with-severe-refractory-systemic-lupus-erythematosus-at-the-american-society-of-hematology-as.html"
+      ],
+      "stratum": "CONFERENCE_OTHER",
+      "ticker": "AUTL"
+    }
+  ],
+  "entry_count": 130,
+  "format_version": "1.0",
+  "generated_at": "2026-09-16T00:00:00+00:00",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_WORKLIST",
+  "rules_version": "BOE-1.0.0",
+  "sequencing_rule": "Stratum round-robin order PHASE_2_POC, PHASE_3_PIVOTAL, REGULATORY, EARLY_CLINICAL, CONFERENCE_OTHER; within a stratum, ascending event date then candidate_id. Fixed and deterministic - reviewers work top to bottom, they do not self-select easy candidates."
+}

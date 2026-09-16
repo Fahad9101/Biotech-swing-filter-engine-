@@ -1,0 +1,96 @@
+{
+  "acquisition_path": "validation/m7/acquisition/regulatory-primary-batch-01.json",
+  "candidate_id": "REG-2021-ASND-SKYTROFA",
+  "catalyst_observation": {
+    "asset": "SKYTROFA (lonapegsomatropin-tcgd)",
+    "catalyst_type": "REG_DECISION",
+    "clinical_phase": "REGULATORY_DECISION",
+    "evidence_id": "69776546-1942-5478-8456-9692d8e22eb5",
+    "external_event_id": "REG-2021-ASND-SKYTROFA",
+    "indication": "pediatric growth hormone deficiency",
+    "issuer_id": "0001612042",
+    "known_at": "2021-08-25T15:24:00-04:00",
+    "source_statement": "Issuer IR announcement with explicit timestamp.",
+    "source_tier": 5,
+    "timing_confidence": "HIGH",
+    "title": "Ascendis Pharma A/S - SKYTROFA (lonapegsomatropin-tcgd) (pediatric growth hormone deficiency)",
+    "window_end": "2021-08-25",
+    "window_start": "2021-08-25"
+  },
+  "catalyst_version": {
+    "asset": "SKYTROFA (lonapegsomatropin-tcgd)",
+    "canonical_key": "0001612042|skytrofa (lonapegsomatropin-tcgd)|pediatric growth hormone deficiency|REG_DECISION",
+    "catalyst_type": "REG_DECISION",
+    "clinical_phase": "REGULATORY_DECISION",
+    "conflicts": [],
+    "id": "e559cf06-eba6-592e-9338-01dc3c2ee36e",
+    "indication": "pediatric growth hormone deficiency",
+    "issuer_id": "0001612042",
+    "known_at": "2021-08-25T15:24:00-04:00",
+    "primary_evidence_id": "69776546-1942-5478-8456-9692d8e22eb5",
+    "resolved_at_cutoff": "2021-08-25T15:24:00-04:00",
+    "supporting_evidence_ids": [
+      "69776546-1942-5478-8456-9692d8e22eb5"
+    ],
+    "timing_confidence": "HIGH",
+    "title": "Ascendis Pharma A/S - SKYTROFA (lonapegsomatropin-tcgd) (pediatric growth hormone deficiency)",
+    "version": 1,
+    "version_sha256": "78c8c17cd0b138cd65d74d4c27cb0ed18224a283c7df6be4dcb75f91f8ef0836",
+    "window_end": "2021-08-25",
+    "window_start": "2021-08-25"
+  },
+  "company": "Ascendis Pharma A/S",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": false,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "bb98bee8fd16b25b80fb24e55dc725bfa171b606f00592ac6e9d6419f1f13810",
+  "promotion_blockers": [
+    "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
+    "RESOLVE_NEGATIVE_EVENT_STATUS",
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2021-08-25T15:24:00-04:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "SKYTROFA (lonapegsomatropin-tcgd)",
+    "blinded": null,
+    "catalyst_version_id": "e559cf06-eba6-592e-9338-01dc3c2ee36e",
+    "clinical_phase": "REGULATORY_DECISION",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2021-08-25T15:24:00-04:00",
+    "evidence_ids": [
+      "69776546-1942-5478-8456-9692d8e22eb5"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "942531aa-0005-5cb1-95d7-7dfbfd4d7f54",
+    "indication": "pediatric growth hormone deficiency",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://investors.ascendispharma.com/news-releases/news-release-details/ascendis-pharma-announces-us-food-and-drug-administration"
+  ],
+  "stratum": "REGULATORY",
+  "ticker": "ASND",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-19.json"
+}

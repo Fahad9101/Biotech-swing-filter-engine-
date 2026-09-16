@@ -1,0 +1,96 @@
+{
+  "acquisition_path": "validation/m7/acquisition/regulatory-primary-batch-01.json",
+  "candidate_id": "REG-2018-AGIO-TIBSOVO",
+  "catalyst_observation": {
+    "asset": "TIBSOVO (ivosidenib)",
+    "catalyst_type": "REG_DECISION",
+    "clinical_phase": "REGULATORY_DECISION",
+    "evidence_id": "5d478d6f-97aa-51e7-9d48-541d328195a5",
+    "external_event_id": "REG-2018-AGIO-TIBSOVO",
+    "indication": "relapsed or refractory acute myeloid leukemia with susceptible IDH1 mutation",
+    "issuer_id": "0001439222",
+    "known_at": "2018-07-20T10:45:00-04:00",
+    "source_statement": "Issuer announcement distributed by GlobeNewswire with explicit publication time.",
+    "source_tier": 5,
+    "timing_confidence": "HIGH",
+    "title": "Agios Pharmaceuticals, Inc. - TIBSOVO (ivosidenib) (relapsed or refractory acute myeloid leukemia with susceptible IDH1 mutation)",
+    "window_end": "2018-07-20",
+    "window_start": "2018-07-20"
+  },
+  "catalyst_version": {
+    "asset": "TIBSOVO (ivosidenib)",
+    "canonical_key": "0001439222|tibsovo (ivosidenib)|relapsed or refractory acute myeloid leukemia with susceptible idh1 mutation|REG_DECISION",
+    "catalyst_type": "REG_DECISION",
+    "clinical_phase": "REGULATORY_DECISION",
+    "conflicts": [],
+    "id": "6d60aa7f-115f-5ab5-916b-d48bf8e7e7f8",
+    "indication": "relapsed or refractory acute myeloid leukemia with susceptible IDH1 mutation",
+    "issuer_id": "0001439222",
+    "known_at": "2018-07-20T10:45:00-04:00",
+    "primary_evidence_id": "5d478d6f-97aa-51e7-9d48-541d328195a5",
+    "resolved_at_cutoff": "2018-07-20T10:45:00-04:00",
+    "supporting_evidence_ids": [
+      "5d478d6f-97aa-51e7-9d48-541d328195a5"
+    ],
+    "timing_confidence": "HIGH",
+    "title": "Agios Pharmaceuticals, Inc. - TIBSOVO (ivosidenib) (relapsed or refractory acute myeloid leukemia with susceptible IDH1 mutation)",
+    "version": 1,
+    "version_sha256": "4ac0a4bbd6097b8cc83af279f582c91114f20dc4a39a3ae0e6423e744f81bad8",
+    "window_end": "2018-07-20",
+    "window_start": "2018-07-20"
+  },
+  "company": "Agios Pharmaceuticals, Inc.",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": false,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "c529a7748f0f817dd813615e790eea8f212f2f80429f29d42094fa8ddb196b87",
+  "promotion_blockers": [
+    "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
+    "RESOLVE_NEGATIVE_EVENT_STATUS",
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2018-07-20T10:45:00-04:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "TIBSOVO (ivosidenib)",
+    "blinded": null,
+    "catalyst_version_id": "6d60aa7f-115f-5ab5-916b-d48bf8e7e7f8",
+    "clinical_phase": "REGULATORY_DECISION",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2018-07-20T10:45:00-04:00",
+    "evidence_ids": [
+      "5d478d6f-97aa-51e7-9d48-541d328195a5"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "74df3020-5e9b-5a37-9736-524147a69500",
+    "indication": "relapsed or refractory acute myeloid leukemia with susceptible IDH1 mutation",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://www.globenewswire.com/news-release/2018/07/20/1540182/0/en/fda-grants-approval-of-tibsovo-the-first-oral-targeted-therapy-for-adult-patients-with-relapsed-refractory-acute-myeloid-leukemia-and-an-idh1-mutation.html"
+  ],
+  "stratum": "REGULATORY",
+  "ticker": "AGIO",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-25.json"
+}

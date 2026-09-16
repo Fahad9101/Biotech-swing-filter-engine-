@@ -1,0 +1,97 @@
+{
+  "acquisition_path": "validation/m7/acquisition/regulatory-primary-batch-01.json",
+  "candidate_id": "REG-2023-BLUE-LYFGENIA",
+  "catalyst_observation": {
+    "asset": "LYFGENIA (lovotibeglogene autotemcel)",
+    "catalyst_type": "REG_DECISION",
+    "clinical_phase": "REGULATORY_DECISION",
+    "evidence_id": "d0536653-26f8-5301-b264-7a5cb916d715",
+    "external_event_id": "REG-2023-BLUE-LYFGENIA",
+    "indication": "sickle cell disease with history of vaso-occlusive events",
+    "issuer_id": "0001293971",
+    "known_at": "2023-12-08T12:35:00-05:00",
+    "source_statement": "Issuer announcement distributed through Nasdaq press-release feed; CIK unresolved.",
+    "source_tier": 5,
+    "timing_confidence": "HIGH",
+    "title": "bluebird bio, Inc. - LYFGENIA (lovotibeglogene autotemcel) (sickle cell disease with history of vaso-occlusive events)",
+    "window_end": "2023-12-08",
+    "window_start": "2023-12-08"
+  },
+  "catalyst_version": {
+    "asset": "LYFGENIA (lovotibeglogene autotemcel)",
+    "canonical_key": "0001293971|lyfgenia (lovotibeglogene autotemcel)|sickle cell disease with history of vaso-occlusive events|REG_DECISION",
+    "catalyst_type": "REG_DECISION",
+    "clinical_phase": "REGULATORY_DECISION",
+    "conflicts": [],
+    "id": "0ed7753d-27a4-59e5-aa27-4785ec13cba3",
+    "indication": "sickle cell disease with history of vaso-occlusive events",
+    "issuer_id": "0001293971",
+    "known_at": "2023-12-08T12:35:00-05:00",
+    "primary_evidence_id": "d0536653-26f8-5301-b264-7a5cb916d715",
+    "resolved_at_cutoff": "2023-12-08T12:35:00-05:00",
+    "supporting_evidence_ids": [
+      "d0536653-26f8-5301-b264-7a5cb916d715"
+    ],
+    "timing_confidence": "HIGH",
+    "title": "bluebird bio, Inc. - LYFGENIA (lovotibeglogene autotemcel) (sickle cell disease with history of vaso-occlusive events)",
+    "version": 1,
+    "version_sha256": "0b55a2f2d720f9119a25e85d63f4ddc007474fc684dd7e132d1ee210468cb8af",
+    "window_end": "2023-12-08",
+    "window_start": "2023-12-08"
+  },
+  "company": "bluebird bio, Inc.",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": false,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "288798d0a1cb4903ec5f824c7a800431bf67ad19c38dfc269a169cf812d66208",
+  "promotion_blockers": [
+    "RESOLVE_CIK_AND_HISTORICAL_SECURITY_IDENTITY",
+    "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
+    "RESOLVE_NEGATIVE_EVENT_STATUS",
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2023-12-08T12:35:00-05:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "LYFGENIA (lovotibeglogene autotemcel)",
+    "blinded": null,
+    "catalyst_version_id": "0ed7753d-27a4-59e5-aa27-4785ec13cba3",
+    "clinical_phase": "REGULATORY_DECISION",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2023-12-08T12:35:00-05:00",
+    "evidence_ids": [
+      "d0536653-26f8-5301-b264-7a5cb916d715"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "dc7fbd5f-96c9-573c-b516-50765655f094",
+    "indication": "sickle cell disease with history of vaso-occlusive events",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://www.nasdaq.com/press-release/bluebird-bio-announces-fda-approval-of-lyfgeniatm-lovotibeglogene-autotemcel-for"
+  ],
+  "stratum": "REGULATORY",
+  "ticker": "BLUE",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-25.json"
+}

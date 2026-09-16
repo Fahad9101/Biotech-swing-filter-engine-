@@ -1,0 +1,95 @@
+{
+  "acquisition_path": "validation/m7/acquisition/newly-sourced-batch-02.json",
+  "candidate_id": "NEG-P3-2022-NKTR-PIVOTIO001",
+  "catalyst_observation": {
+    "asset": "bempegaldesleukin (BEMPEG, NKTR-214)",
+    "catalyst_type": "CLIN_P3",
+    "clinical_phase": "PHASE_3",
+    "evidence_id": "1cb3cf15-013e-592b-8ec1-e22eea4771b6",
+    "external_event_id": "NEG-P3-2022-NKTR-PIVOTIO001",
+    "indication": "previously untreated unresectable or metastatic melanoma",
+    "issuer_id": "0000906709",
+    "known_at": "2022-03-14T06:59:00-04:00",
+    "source_statement": "Failed all three primary endpoints (ORR, PFS, OS) of the 783-patient PIVOT IO-001 trial. Triggered Bristol Myers Squibb to walk away from a collaboration worth up to $3.6B in milestones (on top of a $1.85B 2018 upfront), followed by sweeping Nektar layoffs. One of the most consequential biotech Phase 3 failures of 2022 per FierceBiotech's retrospective.",
+    "source_tier": 2,
+    "timing_confidence": "HIGH",
+    "title": "Nektar Therapeutics - bempegaldesleukin (BEMPEG, NKTR-214) (previously untreated unresectable or metastatic melanoma)",
+    "window_end": "2022-03-14",
+    "window_start": "2022-03-14"
+  },
+  "catalyst_version": {
+    "asset": "bempegaldesleukin (BEMPEG, NKTR-214)",
+    "canonical_key": "0000906709|bempegaldesleukin (bempeg, nktr-214)|previously untreated unresectable or metastatic melanoma|CLIN_P3",
+    "catalyst_type": "CLIN_P3",
+    "clinical_phase": "PHASE_3",
+    "conflicts": [],
+    "id": "0d5267e2-c3f6-56ec-9dad-bfa25df3ae5a",
+    "indication": "previously untreated unresectable or metastatic melanoma",
+    "issuer_id": "0000906709",
+    "known_at": "2022-03-14T06:59:00-04:00",
+    "primary_evidence_id": "1cb3cf15-013e-592b-8ec1-e22eea4771b6",
+    "resolved_at_cutoff": "2022-03-14T06:59:00-04:00",
+    "supporting_evidence_ids": [
+      "1cb3cf15-013e-592b-8ec1-e22eea4771b6"
+    ],
+    "timing_confidence": "HIGH",
+    "title": "Nektar Therapeutics - bempegaldesleukin (BEMPEG, NKTR-214) (previously untreated unresectable or metastatic melanoma)",
+    "version": 1,
+    "version_sha256": "2011f87906b0147c08606038c425f30044be6633095f0a126d83e4b167feef82",
+    "window_end": "2022-03-14",
+    "window_start": "2022-03-14"
+  },
+  "company": "Nektar Therapeutics",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": true,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "1929d1b277b75bc0d3ad2813460cc28b4cf4f0c8757d8278051d9973c1ada899",
+  "promotion_blockers": [
+    "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2022-03-14T06:59:00-04:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "bempegaldesleukin (BEMPEG, NKTR-214)",
+    "blinded": null,
+    "catalyst_version_id": "0d5267e2-c3f6-56ec-9dad-bfa25df3ae5a",
+    "clinical_phase": "PHASE_3",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2022-03-14T06:59:00-04:00",
+    "evidence_ids": [
+      "1cb3cf15-013e-592b-8ec1-e22eea4771b6"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "b762b4ab-f4de-55bb-90e2-686529c977c4",
+    "indication": "previously untreated unresectable or metastatic melanoma",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://www.sec.gov/Archives/edgar/data/906709/000121390022011983/ea156805ex99-1_nektartherape.htm"
+  ],
+  "stratum": "PHASE_3_PIVOTAL",
+  "ticker": "NKTR",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-30.json"
+}

@@ -1,0 +1,95 @@
+{
+  "acquisition_path": "validation/m7/acquisition/newly-sourced-batch-07.json",
+  "candidate_id": "CO-2025-CRVS-SOQUELITINIBASH",
+  "catalyst_observation": {
+    "asset": "soquelitinib",
+    "catalyst_type": "CONF_DATA",
+    "clinical_phase": "PHASE_1",
+    "evidence_id": "52c1cef1-0952-5600-b3c9-f9c4df1fb699",
+    "external_event_id": "CO-2025-CRVS-SOQUELITINIBASH",
+    "indication": "relapsed/refractory peripheral T cell lymphoma and other T cell lymphomas",
+    "issuer_id": "0001626971",
+    "known_at": "2025-12-08T10:30:00-05:00",
+    "source_statement": "Final Phase 1/1b data (200 mg BID cohort: median PFS 6.2 months, median OS 28.1 months) presented today in an oral session at the 67th ASH Annual Meeting & Exposition (Orlando, FL, Dec 6-9, 2025); release states explicitly 'today in an oral session'. Released 10:30 ET, during market hours, so the pre-event cutoff is the prior complete session (2025-12-05) per the DURING_MARKET_HOURS session rule.",
+    "source_tier": 5,
+    "timing_confidence": "HIGH",
+    "title": "Corvus Pharmaceuticals, Inc. - soquelitinib (relapsed/refractory peripheral T cell lymphoma and other T cell lymphomas)",
+    "window_end": "2025-12-08",
+    "window_start": "2025-12-08"
+  },
+  "catalyst_version": {
+    "asset": "soquelitinib",
+    "canonical_key": "0001626971|soquelitinib|relapsed/refractory peripheral t cell lymphoma and other t cell lymphomas|CONF_DATA",
+    "catalyst_type": "CONF_DATA",
+    "clinical_phase": "PHASE_1",
+    "conflicts": [],
+    "id": "45109d5c-376a-526a-9527-4d5e003ebab7",
+    "indication": "relapsed/refractory peripheral T cell lymphoma and other T cell lymphomas",
+    "issuer_id": "0001626971",
+    "known_at": "2025-12-08T10:30:00-05:00",
+    "primary_evidence_id": "52c1cef1-0952-5600-b3c9-f9c4df1fb699",
+    "resolved_at_cutoff": "2025-12-08T10:30:00-05:00",
+    "supporting_evidence_ids": [
+      "52c1cef1-0952-5600-b3c9-f9c4df1fb699"
+    ],
+    "timing_confidence": "HIGH",
+    "title": "Corvus Pharmaceuticals, Inc. - soquelitinib (relapsed/refractory peripheral T cell lymphoma and other T cell lymphomas)",
+    "version": 1,
+    "version_sha256": "14cbaa09e87cab4a4da8277ec63de51ca8b47682844aff3572837dc9d1bd68ea",
+    "window_end": "2025-12-08",
+    "window_start": "2025-12-08"
+  },
+  "company": "Corvus Pharmaceuticals, Inc.",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": false,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "bddab301106f8ee33b7f8193ca6330ead3b0d19c13e0e66abdb31bbddacf6be2",
+  "promotion_blockers": [
+    "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2025-12-08T10:30:00-05:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "soquelitinib",
+    "blinded": null,
+    "catalyst_version_id": "45109d5c-376a-526a-9527-4d5e003ebab7",
+    "clinical_phase": "PHASE_1",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2025-12-08T10:30:00-05:00",
+    "evidence_ids": [
+      "52c1cef1-0952-5600-b3c9-f9c4df1fb699"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "0da8c4af-acfb-5a22-953c-aa4997ff169d",
+    "indication": "relapsed/refractory peripheral T cell lymphoma and other T cell lymphomas",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://www.globenewswire.com/news-release/2025/12/08/3201702/0/en/corvus-pharmaceuticals-presents-final-data-from-soquelitinib-phase-1-1b-t-cell-lymphoma-trial.html"
+  ],
+  "stratum": "CONFERENCE_OTHER",
+  "ticker": "CRVS",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-38.json"
+}
