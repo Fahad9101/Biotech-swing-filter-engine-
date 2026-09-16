@@ -1226,6 +1226,24 @@
       "universe_status": "FAIL"
     },
     {
+      "acquisition_path": "validation/m7/acquisition/newly-sourced-batch-05.json",
+      "candidate_id": "NEG-P3-2021-DCPH-INTRIGUE",
+      "eligible_registry_status": "NOT_PROMOTED",
+      "financing_evidence_path": null,
+      "financing_status": "PENDING",
+      "first_public_timestamp": "2021-11-05T07:10:00-04:00",
+      "negative_label_path": "validation/m7/acquisition/newly-sourced-batch-05.json",
+      "negative_label_recorded": true,
+      "normalization_path": null,
+      "single_asset_evidence_path": null,
+      "single_asset_status": "PENDING",
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "DCPH",
+      "timestamp_evidence_path": null,
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-33.json",
+      "universe_status": "PASS"
+    },
+    {
       "acquisition_path": "validation/m7/acquisition/newly-sourced-batch-02.json",
       "candidate_id": "NEG-P3-2022-NKTR-PIVOTIO001",
       "eligible_registry_status": "NOT_PROMOTED",
