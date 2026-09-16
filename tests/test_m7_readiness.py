@@ -22,15 +22,15 @@ def test_committed_status_is_derived_and_pending_is_not_pass() -> None:
     assert (ROOT / module.ROWS_OUTPUT).read_text() == module.render(rows)
     assert status["candidate_counts"] == {
         "total": 188,
-        "pass": 124,
+        "pass": 131,
         "fail": 47,
-        "pending": 17,
+        "pending": 10,
         "not_yet_excluded": 141,
     }
     negative = status["negative_reserve"]
     assert negative["not_yet_excluded"] == 40
-    assert negative["pass"] == 34
-    assert negative["pending"] == 6
+    assert negative["pass"] == 38
+    assert negative["pending"] == 2
     assert negative["maximum_provisional_buffer"] == 0
     assert negative["final_negative_quota_satisfied"] is False
     assert status["financing_reserve"]["pass"] == 20
@@ -43,8 +43,8 @@ def test_committed_status_is_derived_and_pending_is_not_pass() -> None:
     assert strata["REGULATORY"]["pass"] == 34
     assert strata["REGULATORY"]["pending"] == 6
     assert strata["REGULATORY"]["maximum_provisional_buffer"] == 10
-    assert strata["PHASE_2_POC"]["pass"] == 31
-    assert strata["PHASE_2_POC"]["pending"] == 9
+    assert strata["PHASE_2_POC"]["pass"] == 38
+    assert strata["PHASE_2_POC"]["pending"] == 2
     assert strata["PHASE_2_POC"]["maximum_provisional_buffer"] == 10
     assert strata["EARLY_CLINICAL"]["pass"] == 16
     assert strata["EARLY_CLINICAL"]["pending"] == 2
