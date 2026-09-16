@@ -22,9 +22,9 @@ def test_committed_status_is_derived_and_pending_is_not_pass() -> None:
     assert (ROOT / module.ROWS_OUTPUT).read_text() == module.render(rows)
     assert status["candidate_counts"] == {
         "total": 188,
-        "pass": 115,
+        "pass": 124,
         "fail": 47,
-        "pending": 26,
+        "pending": 17,
         "not_yet_excluded": 141,
     }
     negative = status["negative_reserve"]
@@ -40,8 +40,8 @@ def test_committed_status_is_derived_and_pending_is_not_pass() -> None:
     assert strata["PHASE_3_PIVOTAL"]["pending"] == 0
     assert strata["PHASE_3_PIVOTAL"]["pass"] == 31
     assert strata["PHASE_3_PIVOTAL"]["maximum_provisional_buffer"] == 1
-    assert strata["REGULATORY"]["pass"] == 25
-    assert strata["REGULATORY"]["pending"] == 15
+    assert strata["REGULATORY"]["pass"] == 34
+    assert strata["REGULATORY"]["pending"] == 6
     assert strata["REGULATORY"]["maximum_provisional_buffer"] == 10
     assert strata["PHASE_2_POC"]["pass"] == 31
     assert strata["PHASE_2_POC"]["pending"] == 9

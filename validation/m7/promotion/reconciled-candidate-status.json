@@ -2671,7 +2671,7 @@
       "eligible_registry_status": "NOT_PROMOTED",
       "financing_evidence_path": null,
       "financing_status": "PENDING",
-      "first_public_timestamp": null,
+      "first_public_timestamp": "2018-08-10T15:45:00-04:00",
       "negative_label_path": "validation/m7/acquisition/regulatory-primary-batch-01.json",
       "negative_label_recorded": false,
       "normalization_path": null,
@@ -2679,9 +2679,9 @@
       "single_asset_status": "PENDING",
       "stratum": "REGULATORY",
       "ticker": "ALNY",
-      "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "timestamp_evidence_path": "validation/m7/promotion/first-public-availability-ledger-10.json",
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-34.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/regulatory-primary-batch-01.json",
@@ -2707,7 +2707,7 @@
       "eligible_registry_status": "NOT_PROMOTED",
       "financing_evidence_path": null,
       "financing_status": "PENDING",
-      "first_public_timestamp": null,
+      "first_public_timestamp": "2018-08-10T16:33:00-04:00",
       "negative_label_path": "validation/m7/acquisition/regulatory-primary-batch-01.json",
       "negative_label_recorded": false,
       "normalization_path": null,
@@ -2715,9 +2715,9 @@
       "single_asset_status": "PENDING",
       "stratum": "REGULATORY",
       "ticker": "FOLD",
-      "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "timestamp_evidence_path": "validation/m7/promotion/first-public-availability-ledger-10.json",
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-34.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/regulatory-primary-batch-01.json",
@@ -2995,7 +2995,7 @@
       "eligible_registry_status": "NOT_PROMOTED",
       "financing_evidence_path": null,
       "financing_status": "PENDING",
-      "first_public_timestamp": null,
+      "first_public_timestamp": "2022-11-14T17:23:00-05:00",
       "negative_label_path": "validation/m7/acquisition/regulatory-primary-batch-01.json",
       "negative_label_recorded": false,
       "normalization_path": null,
@@ -3003,9 +3003,9 @@
       "single_asset_status": "PENDING",
       "stratum": "REGULATORY",
       "ticker": "IMGN",
-      "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "timestamp_evidence_path": "validation/m7/promotion/first-public-availability-ledger-10.json",
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-34.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/regulatory-primary-batch-01.json",
@@ -3031,7 +3031,7 @@
       "eligible_registry_status": "NOT_PROMOTED",
       "financing_evidence_path": null,
       "financing_status": "PENDING",
-      "first_public_timestamp": null,
+      "first_public_timestamp": "2022-11-17T21:56:00-05:00",
       "negative_label_path": "validation/m7/acquisition/regulatory-primary-batch-01.json",
       "negative_label_recorded": false,
       "normalization_path": null,
@@ -3039,9 +3039,9 @@
       "single_asset_status": "PENDING",
       "stratum": "REGULATORY",
       "ticker": "PRVB",
-      "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "timestamp_evidence_path": "validation/m7/promotion/first-public-availability-ledger-10.json",
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-34.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/regulatory-primary-batch-01.json",
@@ -3049,7 +3049,7 @@
       "eligible_registry_status": "NOT_PROMOTED",
       "financing_evidence_path": null,
       "financing_status": "PENDING",
-      "first_public_timestamp": null,
+      "first_public_timestamp": "2022-12-28T16:30:00-05:00",
       "negative_label_path": "validation/m7/acquisition/regulatory-primary-batch-01.json",
       "negative_label_recorded": false,
       "normalization_path": null,
@@ -3057,9 +3057,9 @@
       "single_asset_status": "PENDING",
       "stratum": "REGULATORY",
       "ticker": "TGTX",
-      "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "timestamp_evidence_path": "validation/m7/promotion/first-public-availability-ledger-10.json",
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-34.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/regulatory-primary-batch-01.json",
@@ -3139,7 +3139,7 @@
       "eligible_registry_status": "NOT_PROMOTED",
       "financing_evidence_path": null,
       "financing_status": "PENDING",
-      "first_public_timestamp": null,
+      "first_public_timestamp": "2023-04-25T20:40:00-04:00",
       "negative_label_path": "validation/m7/acquisition/regulatory-primary-batch-01.json",
       "negative_label_recorded": false,
       "normalization_path": null,
@@ -3147,9 +3147,9 @@
       "single_asset_status": "PENDING",
       "stratum": "REGULATORY",
       "ticker": "IONS",
-      "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "timestamp_evidence_path": "validation/m7/promotion/first-public-availability-ledger-10.json",
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-34.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/regulatory-primary-batch-01.json",
@@ -3157,7 +3157,7 @@
       "eligible_registry_status": "NOT_PROMOTED",
       "financing_evidence_path": null,
       "financing_status": "PENDING",
-      "first_public_timestamp": null,
+      "first_public_timestamp": "2023-02-28T17:28:00-05:00",
       "negative_label_path": "validation/m7/acquisition/regulatory-primary-batch-01.json",
       "negative_label_recorded": false,
       "normalization_path": null,
@@ -3165,9 +3165,9 @@
       "single_asset_status": "PENDING",
       "stratum": "REGULATORY",
       "ticker": "RETA",
-      "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "timestamp_evidence_path": "validation/m7/promotion/first-public-availability-ledger-10.json",
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-34.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/regulatory-primary-batch-01.json",
@@ -3265,7 +3265,7 @@
       "eligible_registry_status": "NOT_PROMOTED",
       "financing_evidence_path": null,
       "financing_status": "PENDING",
-      "first_public_timestamp": null,
+      "first_public_timestamp": "2024-12-19T18:28:00-05:00",
       "negative_label_path": "validation/m7/acquisition/regulatory-primary-batch-01.json",
       "negative_label_recorded": false,
       "normalization_path": null,
@@ -3273,9 +3273,9 @@
       "single_asset_status": "PENDING",
       "stratum": "REGULATORY",
       "ticker": "IONS",
-      "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "timestamp_evidence_path": "validation/m7/promotion/first-public-availability-ledger-10.json",
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-34.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/regulatory-primary-batch-01.json",
@@ -3355,7 +3355,7 @@
       "eligible_registry_status": "NOT_PROMOTED",
       "financing_evidence_path": null,
       "financing_status": "PENDING",
-      "first_public_timestamp": null,
+      "first_public_timestamp": "2024-12-20T15:51:00-05:00",
       "negative_label_path": "validation/m7/acquisition/regulatory-primary-batch-01.json",
       "negative_label_recorded": false,
       "normalization_path": null,
@@ -3363,9 +3363,9 @@
       "single_asset_status": "PENDING",
       "stratum": "REGULATORY",
       "ticker": "VRTX",
-      "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "timestamp_evidence_path": "validation/m7/promotion/first-public-availability-ledger-10.json",
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-34.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/regulatory-primary-batch-01.json",
