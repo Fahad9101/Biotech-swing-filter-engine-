@@ -40,10 +40,10 @@
   "deferred_count": 9,
   "format_version": "1.0",
   "generated_at": "2026-09-16T00:00:00+00:00",
-  "manifest_sha256": "63cff6d3b7e7ff43fb05b7c21b463d39a09eb84380f3761d511b10d39e9d9a37",
+  "manifest_sha256": "ee9c41d2b969d14e016f4a86e4f104928b94688b3c4ed7baa341c9b7dedb1890",
   "market_outcomes_inspected": false,
   "milestone": 7,
-  "pack_count": 135,
+  "pack_count": 141,
   "packs": [
     {
       "candidate_id": "CO-2018-ZIOP-ASCO",
@@ -191,6 +191,13 @@
       "pack_sha256": "d9378e32ce1dac69a0dd3ebed305d1a30ff29dcd8d4ef756dc60643e996b52c1",
       "stratum": "EARLY_CLINICAL",
       "ticker": "FATE"
+    },
+    {
+      "candidate_id": "EC-2021-KURA-KO539-HOLD",
+      "pack_path": "validation/m7/review_packs/EC-2021-KURA-KO539-HOLD.json",
+      "pack_sha256": "ae760bade09edb1460522f87279a19c689e61fb8a8dcd038dbe1daefc673a7a9",
+      "stratum": "EARLY_CLINICAL",
+      "ticker": "KURA"
     },
     {
       "candidate_id": "EC-2021-NTLA-NTLA2001",
@@ -753,6 +760,13 @@
       "ticker": "FOLD"
     },
     {
+      "candidate_id": "REG-2018-REPH-MELOXICAM-CRL",
+      "pack_path": "validation/m7/review_packs/REG-2018-REPH-MELOXICAM-CRL.json",
+      "pack_sha256": "e0e1fb734d4a2a561ccf05c918ab43dfce1cb4aedb23ae24312333a94a00d72c",
+      "stratum": "REGULATORY",
+      "ticker": "REPH"
+    },
+    {
       "candidate_id": "REG-2019-GBT-OXBRYTA",
       "pack_path": "validation/m7/review_packs/REG-2019-GBT-OXBRYTA.json",
       "pack_sha256": "c359015138b244758944bc59734e98464f87e7a5e4797be711c654ea3bab20fd",
@@ -765,6 +779,13 @@
       "pack_sha256": "c35be3c508e0520b88b68c86f030da1d8bd7f4d62db4add6572bc4739ccc5042",
       "stratum": "REGULATORY",
       "ticker": "SAGE"
+    },
+    {
+      "candidate_id": "REG-2019-SRPT-GOLODIRSEN-CRL",
+      "pack_path": "validation/m7/review_packs/REG-2019-SRPT-GOLODIRSEN-CRL.json",
+      "pack_sha256": "381ddc6164ff1ce7d5233383243a2a1ad7f488fac51295a97ceabc2eb605ace9",
+      "stratum": "REGULATORY",
+      "ticker": "SRPT"
     },
     {
       "candidate_id": "REG-2020-BMRN-VALROX-CRL",
@@ -788,6 +809,13 @@
       "ticker": "IMMU"
     },
     {
+      "candidate_id": "REG-2020-LQDA-LIQ861-CRL",
+      "pack_path": "validation/m7/review_packs/REG-2020-LQDA-LIQ861-CRL.json",
+      "pack_sha256": "942713855e1168e7307295062ca3339f7414e19bfd7d5567db04cfebd34889b0",
+      "stratum": "REGULATORY",
+      "ticker": "LQDA"
+    },
+    {
       "candidate_id": "REG-2020-RYTM-IMCIVREE",
       "pack_path": "validation/m7/review_packs/REG-2020-RYTM-IMCIVREE.json",
       "pack_sha256": "229cf281d5c5121ffa6ec8a2a2c65d467faa18b938e429da370c14806bb5d0fe",
@@ -800,6 +828,13 @@
       "pack_sha256": "ecb9383fb45d943de2cc797b54cefdd5aa0010033b59d8a0a92a32242a1f1b8a",
       "stratum": "REGULATORY",
       "ticker": "APLS"
+    },
+    {
+      "candidate_id": "REG-2021-ARDX-TENAPANOR-CRL",
+      "pack_path": "validation/m7/review_packs/REG-2021-ARDX-TENAPANOR-CRL.json",
+      "pack_sha256": "d6a476ee2d366e50d4ef0dbe36b651a619f63e5258ddf2bbb654a3a35af7f589",
+      "stratum": "REGULATORY",
+      "ticker": "ARDX"
     },
     {
       "candidate_id": "REG-2021-ASND-SKYTROFA",
@@ -961,6 +996,13 @@
       "pack_sha256": "5be122d5652a84978ff8a35ec020ec244c7264a43d2abdcd56d296e6212df23a",
       "stratum": "REGULATORY",
       "ticker": "IOVA"
+    },
+    {
+      "candidate_id": "REG-2024-RCKT-KRESLADI-CRL",
+      "pack_path": "validation/m7/review_packs/REG-2024-RCKT-KRESLADI-CRL.json",
+      "pack_sha256": "4701e930a962de9e2a2e103aad6c1401b99dfd86da51d5de9f98aa7b29cf521a",
+      "stratum": "REGULATORY",
+      "ticker": "RCKT"
     },
     {
       "candidate_id": "REG-2024-REGN-LINVOSELTAMAB-CRL",
