@@ -1,0 +1,71 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "role": "NEWLY_SOURCED_CANDIDATES_POST_HANDOFF",
+  "generated_at": "2026-09-16",
+  "sourcing_note": "Sourced from the FDA's official Complete Response Letter transparency dataset (download.open.fda.gov/approved_CRLs.zip, published under the FDA's CRL transparency initiative), a different systematic source than the FierceBiotech trial-failure retrospectives used in prior newly-sourced batches - CRLs are inherently negative regulatory events and this dataset gave application numbers with exact CRL dates, cross-referenced to sponsors via openFDA's drugsfda API and web search, then verified via SEC EDGAR / issuer press releases as with every other candidate in this cohort. Of 7 CRLs in the dataset dated within the 2018-2025 sampling frame, sponsors were identified for 3 (Omeros, Incyte, Regeneron); Incyte's retifanlimab CRL (Jul 23, 2021) was investigated but dropped - no 8-K was filed and no source gives an exact release time, so rather than force an imprecise timestamp it is left unresolved for now. Deduplicated against the full existing ticker/candidate_id set.",
+  "events": [
+    {
+      "asset": "narsoplimab",
+      "candidate_id": "REG-2021-OMER-NARSOPLIMAB-CRL",
+      "cik": "1285819",
+      "clinical_phase": "REGULATORY_DECISION",
+      "cohort_frozen": false,
+      "company": "Omeros Corporation",
+      "first_public_date": "2021-10-18",
+      "first_public_timestamp": "2021-10-18T07:02:00-04:00",
+      "indication": "HSCT-associated thrombotic microangiopathy (HSCT-TMA)",
+      "negative_event_candidate": true,
+      "outcome_inspected_for_selection": false,
+      "promotion_blockers": [
+        "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+        "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+        "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+      ],
+      "proposed_catalyst_type": "REG_DECISION",
+      "proposed_primary_stratum": "REGULATORY",
+      "result_direction": "NEGATIVE_PRIMARY",
+      "source_role": "CONTEMPORANEOUS_ISSUER_DISCLOSURE",
+      "source_type": "ISSUER_SEC_8K_EXHIBIT_991",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1285819/000155837021013245/omer-20211014xex99d1.htm",
+      "cross_check_url": "https://www.biospace.com/omeros-receives-complete-response-letter-from-fda-for-biologics-license-application-for-narsoplimab-in-the-treatment-of-hsct-tma",
+      "corroborating_sec_accepted": "2021-10-18 07:02:18 ET (Form 8-K, CIK 0001285819, accession 0001558370-21-013245)",
+      "ticker": "OMER",
+      "timestamp_precision": "EXACT_TO_MINUTE_SEC_ACCEPTANCE_PROXY",
+      "fda_source_identity": "FDA Complete Response Letter dataset, application BLA125734, filename-dated 2021-08-18",
+      "notes": "FDA stated it could not estimate narsoplimab's treatment effect in HSCT-TMA from the submitted data. The FDA transparency dataset's filename carries an 2021-08-18 date, about two months before Omeros' 2021-10-18 public disclosure; it is unclear whether that filename date is the original CRL issuance date or some other internal/administrative date (e.g. a later processing or database-entry date), so it is not relied on. The first_public_timestamp used for this candidate is exclusively Omeros' own confirmed public disclosure (2021-10-18), which is what the market could actually react to regardless of when the letter was received."
+    },
+    {
+      "asset": "linvoseltamab (LYNOZYFIC)",
+      "candidate_id": "REG-2024-REGN-LINVOSELTAMAB-CRL",
+      "cik": "872589",
+      "clinical_phase": "REGULATORY_DECISION",
+      "cohort_frozen": false,
+      "company": "Regeneron Pharmaceuticals, Inc.",
+      "first_public_date": "2024-08-20",
+      "first_public_timestamp": "2024-08-20T18:45:00-04:00",
+      "indication": "relapsed/refractory multiple myeloma",
+      "negative_event_candidate": true,
+      "outcome_inspected_for_selection": false,
+      "promotion_blockers": [
+        "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+        "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+        "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+      ],
+      "proposed_catalyst_type": "REG_DECISION",
+      "proposed_primary_stratum": "REGULATORY",
+      "result_direction": "NEGATIVE_PRIMARY",
+      "source_role": "CONTEMPORANEOUS_ISSUER_DISCLOSURE",
+      "source_type": "ISSUER_GLOBENEWSWIRE_RELEASE",
+      "source_url": "https://www.globenewswire.com/news-release/2024/08/20/2933195/0/en/Regeneron-Provides-Update-on-Biologics-License-Application-for-Linvoseltamab.html",
+      "source_displayed_time": "August 20, 2024 18:45 ET",
+      "ticker": "REGN",
+      "timestamp_precision": "EXACT_TO_MINUTE",
+      "session_classification": "OUTSIDE_MARKET_HOURS_AFTER_CLOSE",
+      "fda_source_identity": "FDA Complete Response Letter dataset, application BLA761400, letter dated 2024-08-20",
+      "notes": "Sole approvability issue was a third-party fill/finish manufacturer inspection finding unrelated to linvoseltamab's own efficacy/safety data; the FDA did not cite concerns with Regeneron's own data. No SEC 8-K was filed for this CRL (not deemed independently material against Regeneron's very large diversified pipeline/market cap), so the GlobeNewswire release itself, which explicitly displays 18:45 ET, is used directly as the primary source."
+    }
+  ]
+}

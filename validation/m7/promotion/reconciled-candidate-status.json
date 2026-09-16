@@ -2918,6 +2918,24 @@
       "universe_status": "PASS"
     },
     {
+      "acquisition_path": "validation/m7/acquisition/newly-sourced-batch-04.json",
+      "candidate_id": "REG-2021-OMER-NARSOPLIMAB-CRL",
+      "eligible_registry_status": "NOT_PROMOTED",
+      "financing_evidence_path": null,
+      "financing_status": "PENDING",
+      "first_public_timestamp": "2021-10-18T07:02:00-04:00",
+      "negative_label_path": "validation/m7/acquisition/newly-sourced-batch-04.json",
+      "negative_label_recorded": true,
+      "normalization_path": null,
+      "single_asset_evidence_path": null,
+      "single_asset_status": "PENDING",
+      "stratum": "REGULATORY",
+      "ticker": "OMER",
+      "timestamp_evidence_path": null,
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-32.json",
+      "universe_status": "PASS"
+    },
+    {
       "acquisition_path": "validation/m7/acquisition/regulatory-primary-batch-01.json",
       "candidate_id": "REG-2022-AMLX-RELYVRIO",
       "eligible_registry_status": "NOT_PROMOTED",
@@ -3257,6 +3275,24 @@
       "ticker": "IOVA",
       "timestamp_evidence_path": null,
       "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-19.json",
+      "universe_status": "PASS"
+    },
+    {
+      "acquisition_path": "validation/m7/acquisition/newly-sourced-batch-04.json",
+      "candidate_id": "REG-2024-REGN-LINVOSELTAMAB-CRL",
+      "eligible_registry_status": "NOT_PROMOTED",
+      "financing_evidence_path": null,
+      "financing_status": "PENDING",
+      "first_public_timestamp": "2024-08-20T18:45:00-04:00",
+      "negative_label_path": "validation/m7/acquisition/newly-sourced-batch-04.json",
+      "negative_label_recorded": true,
+      "normalization_path": null,
+      "single_asset_evidence_path": null,
+      "single_asset_status": "PENDING",
+      "stratum": "REGULATORY",
+      "ticker": "REGN",
+      "timestamp_evidence_path": null,
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-32.json",
       "universe_status": "PASS"
     },
     {
