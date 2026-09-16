@@ -1370,6 +1370,24 @@
       "universe_status": "PASS"
     },
     {
+      "acquisition_path": "validation/m7/acquisition/newly-sourced-batch-08.json",
+      "candidate_id": "NEG-P3-2024-AMLX-PHOENIX",
+      "eligible_registry_status": "NOT_PROMOTED",
+      "financing_evidence_path": null,
+      "financing_status": "PENDING",
+      "first_public_timestamp": "2024-03-08T07:10:02-05:00",
+      "negative_label_path": "validation/m7/acquisition/newly-sourced-batch-08.json",
+      "negative_label_recorded": true,
+      "normalization_path": null,
+      "single_asset_evidence_path": null,
+      "single_asset_status": "PENDING",
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "AMLX",
+      "timestamp_evidence_path": null,
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-40.json",
+      "universe_status": "PASS"
+    },
+    {
       "acquisition_path": "validation/m7/acquisition/phase2-primary-batch-01.json",
       "candidate_id": "P2-2018-BIIB-BAN2401",
       "eligible_registry_status": "NOT_PROMOTED",
@@ -3275,6 +3293,24 @@
       "ticker": "TVTX",
       "timestamp_evidence_path": null,
       "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-19.json",
+      "universe_status": "PASS"
+    },
+    {
+      "acquisition_path": "validation/m7/acquisition/newly-sourced-batch-08.json",
+      "candidate_id": "REG-2024-APLT-GOVORESTAT-CRL",
+      "eligible_registry_status": "NOT_PROMOTED",
+      "financing_evidence_path": null,
+      "financing_status": "PENDING",
+      "first_public_timestamp": "2024-11-27T16:21:25-05:00",
+      "negative_label_path": "validation/m7/acquisition/newly-sourced-batch-08.json",
+      "negative_label_recorded": true,
+      "normalization_path": null,
+      "single_asset_evidence_path": null,
+      "single_asset_status": "PENDING",
+      "stratum": "REGULATORY",
+      "ticker": "APLT",
+      "timestamp_evidence_path": null,
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-40.json",
       "universe_status": "PASS"
     },
     {

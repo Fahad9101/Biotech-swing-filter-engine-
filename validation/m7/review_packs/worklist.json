@@ -867,6 +867,22 @@
       "ticker": "GMAB"
     },
     {
+      "candidate_id": "NEG-P3-2024-AMLX-PHOENIX",
+      "catalyst_type": "CLIN_P3",
+      "company": "Amylyx Pharmaceuticals, Inc.",
+      "event_date": "2024-03-08",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": true,
+      "pack_path": "validation/m7/review_packs/NEG-P3-2024-AMLX-PHOENIX.json",
+      "sequence": 55,
+      "source_citations": [
+        "https://www.sec.gov/Archives/edgar/data/1658551/000119312524062878/d787565dex991.htm"
+      ],
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "AMLX"
+    },
+    {
       "candidate_id": "P3-2024-ANNX-ANX005",
       "catalyst_type": "CLIN_P3",
       "company": "Annexon, Inc.",
@@ -875,7 +891,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/P3-2024-ANNX-ANX005.json",
-      "sequence": 55,
+      "sequence": 56,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2024/06/04/2892927/0/en/Annexon-Announces-Positive-Topline-Results-from-Pivotal-Phase-3-Trial-for-First-in-Class-C1q-Blocking-Antibody-ANX005-in-Guillain-Barr%C3%83%C2%A9-Syndrome.html"
       ],
@@ -891,7 +907,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/P3-2024-NAMS-BROOKLYN.json",
-      "sequence": 56,
+      "sequence": 57,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2024/07/29/2920256/0/en/newamsterdam-pharma-announces-positive-topline-data-from-pivotal-phase-3-brooklyn-clinical-trial-evaluating-obicetrapib-in-patients-with-heterozygous-familial-hypercholesterolemia.html"
       ],
@@ -907,7 +923,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": true,
       "pack_path": "validation/m7/review_packs/P3-2024-FULC-REACH.json",
-      "sequence": 57,
+      "sequence": 58,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2024/09/12/2945039/0/en/fulcrum-therapeutics-announces-topline-results-from-phase-3-reach-clinical-trial-of-losmapimod-in-facioscapulohumeral-muscular-dystrophy-fshd.html"
       ],
@@ -923,7 +939,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": true,
       "pack_path": "validation/m7/review_packs/P3-2024-SAVA-RETHINK.json",
-      "sequence": 58,
+      "sequence": 59,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2024/11/25/2986578/8339/en/Cassava-Sciences-Topline-Phase-3-Data-Did-Not-Meet-Co-Primary-Endpoints.html"
       ],
@@ -939,7 +955,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/P3-2024-NAMS-BROADWAY.json",
-      "sequence": 59,
+      "sequence": 60,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2024/12/10/2994358/0/en/newamsterdam-pharma-announces-positive-topline-data-from-pivotal-phase-3-broadway-clinical-trial-evaluating-obicetrapib-in-patients-with-atherosclerotic-cardiovascular-disease-and-.html"
       ],
@@ -955,7 +971,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": true,
       "pack_path": "validation/m7/review_packs/P3-2025-SAVA-REFOCUS.json",
-      "sequence": 60,
+      "sequence": 61,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2025/03/25/3048697/8339/en/Cassava-Sciences-Reports-Topline-Phase-3-REFOCUS-ALZ-Data.html"
       ],
@@ -971,7 +987,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": true,
       "pack_path": "validation/m7/review_packs/P3-2025-ALEC-INFRONT3.json",
-      "sequence": 61,
+      "sequence": 62,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2025/10/21/3170630/0/en/alector-announces-topline-results-from-latozinemab-phase-3-trial-in-individuals-with-frontotemporal-dementia-due-to-a-grn-mutation-and-provides-business-update.html"
       ],
@@ -987,7 +1003,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/P3-2025-CAPR-HOPE3.json",
-      "sequence": 62,
+      "sequence": 63,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2025/12/03/3198753/0/en/Capricor-Therapeutics-Announces-Positive-Topline-Results-from-Pivotal-Phase-3-HOPE-3-Study-of-Deramiocel-in-Duchenne-Muscular-Dystrophy.html"
       ],
@@ -1003,7 +1019,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/REG-2018-ARRY-BRAFTOVI-MEKTOVI.json",
-      "sequence": 63,
+      "sequence": 64,
       "source_citations": [
         "https://www.multivu.com/players/English/8336151-array-biopharma-braftovi-mektovi-fda-approval/"
       ],
@@ -1019,7 +1035,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/REG-2018-AGIO-TIBSOVO.json",
-      "sequence": 64,
+      "sequence": 65,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2018/07/20/1540182/0/en/fda-grants-approval-of-tibsovo-the-first-oral-targeted-therapy-for-adult-patients-with-relapsed-refractory-acute-myeloid-leukemia-and-an-idh1-mutation.html"
       ],
@@ -1035,7 +1051,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/REG-2018-ALNY-ONPATTRO.json",
-      "sequence": 65,
+      "sequence": 66,
       "source_citations": [
         "https://investors.alnylam.com/press-release?id=22946"
       ],
@@ -1051,7 +1067,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/REG-2018-FOLD-GALAFOLD.json",
-      "sequence": 66,
+      "sequence": 67,
       "source_citations": [
         "https://www.sec.gov/Archives/edgar/data/1178879/000117887918000011/exhibit991.htm"
       ],
@@ -1067,7 +1083,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/REG-2019-SAGE-ZULRESSO.json",
-      "sequence": 67,
+      "sequence": 68,
       "source_citations": [
         "https://www.sec.gov/Archives/edgar/data/1597553/000119312519079860/d721324d8k.htm"
       ],
@@ -1083,7 +1099,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/REG-2019-GBT-OXBRYTA.json",
-      "sequence": 68,
+      "sequence": 69,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2019/11/25/1952236/0/en/fda-approves-oxbryta-voxelotor-the-first-medicine-specifically-targeting-the-root-cause-of-sickle-cell-disease.html"
       ],
@@ -1099,7 +1115,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/REG-2020-IMMU-TRODELVY.json",
-      "sequence": 69,
+      "sequence": 70,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2020/04/22/2020193/0/en/FDA-Grants-Accelerated-Approval-for-Immunomedics-Trodelvy-in-Previously-Treated-Metastatic-Triple-Negative-Breast-Cancer.html"
       ],
@@ -1115,7 +1131,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": true,
       "pack_path": "validation/m7/review_packs/REG-2020-ICPT-OCA-CRL.json",
-      "sequence": 70,
+      "sequence": 71,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2020/06/29/2054576/0/en/Intercept-Receives-Complete-Response-Letter-from-FDA-for-Obeticholic-Acid-for-the-Treatment-of-Fibrosis-Due-to-NASH.html"
       ],
@@ -1131,7 +1147,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": true,
       "pack_path": "validation/m7/review_packs/REG-2020-BMRN-VALROX-CRL.json",
-      "sequence": 71,
+      "sequence": 72,
       "source_citations": [
         "https://www.prnewswire.com/news-releases/biomarin-receives-complete-response-letter-crl-from-fda-for-valoctocogene-roxaparvovec-gene-therapy-for-severe-hemophilia-a-301114587.html"
       ],
@@ -1147,7 +1163,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/REG-2020-RYTM-IMCIVREE.json",
-      "sequence": 72,
+      "sequence": 73,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2020/11/27/2135269/0/en/rhythm-pharmaceuticals-announces-fda-approval-of-imcivree-setmelanotide-as-first-ever-therapy-for-chronic-weight-management-in-patients-with-obesity-due-to-pomc-pcsk1-or-lepr-defic.html"
       ],
@@ -1163,7 +1179,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": true,
       "pack_path": "validation/m7/review_packs/REG-2021-ATNX-ORALPAC-CRL.json",
-      "sequence": 73,
+      "sequence": 74,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2021/03/01/2184118/0/en/athenex-receives-fda-complete-response-letter-for-oral-paclitaxel-plus-encequidar-for-the-treatment-of-metastatic-breast-cancer.html"
       ],
@@ -1179,7 +1195,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/REG-2021-APLS-EMPAVELI.json",
-      "sequence": 74,
+      "sequence": 75,
       "source_citations": [
         "https://investors.apellis.com/news-releases/news-release-details/apellis-announces-fda-approval-empavelitm-pegcetacoplan"
       ],
@@ -1195,7 +1211,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": true,
       "pack_path": "validation/m7/review_packs/REG-2021-FGEN-ROXADUSTAT-CRL.json",
-      "sequence": 75,
+      "sequence": 76,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2021/08/11/2278626/33525/en/fibrogen-receives-complete-response-letter-from-the-fda-for-roxadustat-for-anemia-of-chronic-kidney-disease.html"
       ],
@@ -1211,7 +1227,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/REG-2021-ASND-SKYTROFA.json",
-      "sequence": 76,
+      "sequence": 77,
       "source_citations": [
         "https://investors.ascendispharma.com/news-releases/news-release-details/ascendis-pharma-announces-us-food-and-drug-administration"
       ],
@@ -1227,7 +1243,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/REG-2021-INCY-OPZELURA.json",
-      "sequence": 77,
+      "sequence": 78,
       "source_citations": [
         "https://investor.incyte.com/news-releases/news-release-details/fda-approves-opzeluratm-ruxolitinib-cream-first-and-only-topical"
       ],
@@ -1243,7 +1259,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": true,
       "pack_path": "validation/m7/review_packs/REG-2021-OMER-NARSOPLIMAB-CRL.json",
-      "sequence": 78,
+      "sequence": 79,
       "source_citations": [
         "https://www.sec.gov/Archives/edgar/data/1285819/000155837021013245/omer-20211014xex99d1.htm"
       ],
@@ -1259,7 +1275,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": true,
       "pack_path": "validation/m7/review_packs/REG-2022-CHRS-TORIPALIMAB-CRL.json",
-      "sequence": 79,
+      "sequence": 80,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2022/05/02/2433328/33333/en/Coherus-and-Junshi-Biosciences-Receive-Complete-Response-Letter-from-U-S-FDA-for-Toripalimab-BLA.html"
       ],
@@ -1275,7 +1291,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/REG-2022-IMGN-ELAHERE.json",
-      "sequence": 80,
+      "sequence": 81,
       "source_citations": [
         "https://www.sec.gov/Archives/edgar/data/855654/000155837022017872/imgn-20221114xex99d1.htm"
       ],
@@ -1291,7 +1307,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/REG-2022-PRVB-TZIELD.json",
-      "sequence": 81,
+      "sequence": 82,
       "source_citations": [
         "https://www.sec.gov/Archives/edgar/data/1695357/000149315222032806/ex99-1.htm"
       ],
@@ -1307,7 +1323,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/REG-2022-TGTX-BRIUMVI.json",
-      "sequence": 82,
+      "sequence": 83,
       "source_citations": [
         "https://www.sec.gov/Archives/edgar/data/1001316/000155837022019019/tgtx-20221228x8k.htm"
       ],
@@ -1323,7 +1339,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/REG-2023-TVTX-FILSPARI.json",
-      "sequence": 83,
+      "sequence": 84,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2023/02/17/2610963/0/en/Travere-Therapeutics-Announces-FDA-Accelerated-Approval-of-FILSPARI-sparsentan-the-First-and-Only-Non-immunosuppressive-Therapy-for-the-Reduction-of-Proteinuria-in-IgA-Nephropathy.html"
       ],
@@ -1339,7 +1355,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/REG-2023-APLS-SYFOVRE.json",
-      "sequence": 84,
+      "sequence": 85,
       "source_citations": [
         "https://investors.apellis.com/node/12516"
       ],
@@ -1355,7 +1371,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/REG-2023-RETA-SKYCLARYS.json",
-      "sequence": 85,
+      "sequence": 86,
       "source_citations": [
         "https://www.sec.gov/Archives/edgar/data/1358762/000095017023005219/reta-ex99_2.htm"
       ],
@@ -1371,7 +1387,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/REG-2023-IONS-QALSODY.json",
-      "sequence": 86,
+      "sequence": 87,
       "source_citations": [
         "https://ir.ionis.com/news-releases/news-release-details/fda-approves-qalsodytm-tofersen-first-treatment-targeting"
       ],
@@ -1387,7 +1403,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/REG-2023-SRPT-ELEVIDYS.json",
-      "sequence": 87,
+      "sequence": 88,
       "source_citations": [
         "https://investorrelations.sarepta.com/news-releases/news-release-details/sarepta-therapeutics-announces-fda-approval-elevidys-first-gene"
       ],
@@ -1403,7 +1419,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/REG-2023-BMRN-ROCTAVIAN.json",
-      "sequence": 88,
+      "sequence": 89,
       "source_citations": [
         "https://www.biomarin.com/news/press-releases/u-s-food-and-drug-administration-approves-biomarins-roctavian-valoctocogene-roxaparvovec-rvox-the-first-and-only-gene-therapy-for-adults-with-severe-hemophilia-a/"
       ],
@@ -1419,7 +1435,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/REG-2023-GERN-IMETELSTAT-NDA-ACCEPT.json",
-      "sequence": 89,
+      "sequence": 90,
       "source_citations": [
         "https://www.sec.gov/Archives/edgar/data/886744/000095017023043949/gern-20230821.htm",
         "https://www.geron.com/about/history/",
@@ -1437,7 +1453,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/REG-2023-BLUE-LYFGENIA.json",
-      "sequence": 90,
+      "sequence": 91,
       "source_citations": [
         "https://www.nasdaq.com/press-release/bluebird-bio-announces-fda-approval-of-lyfgeniatm-lovotibeglogene-autotemcel-for"
       ],
@@ -1453,7 +1469,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/REG-2024-IOVA-AMTAGVI.json",
-      "sequence": 91,
+      "sequence": 92,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2024/02/16/2830923/0/en/Iovance-s-AMTAGVI-lifileucel-Receives-U-S-FDA-Accelerated-Approval-for-Advanced-Melanoma.html"
       ],
@@ -1469,7 +1485,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/REG-2024-DAWN-OJEMDA.json",
-      "sequence": 92,
+      "sequence": 93,
       "source_citations": [
         "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-accelerated-approval-tovorafenib-patients-relapsed-or-refractory-braf-altered-pediatric?blm_aid=0"
       ],
@@ -1485,7 +1501,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/REG-2024-GERN-RYTELO.json",
-      "sequence": 93,
+      "sequence": 94,
       "source_citations": [
         "https://ir.geron.com/news-releases/news-release-details/geron-announces-fda-approval-rytelotm-imetelstat-first-class"
       ],
@@ -1501,7 +1517,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/REG-2024-VRNA-OHTUVAYRE.json",
-      "sequence": 94,
+      "sequence": 95,
       "source_citations": [
         "https://www.veronapharma.com/news/verona-pharma-announces-us-fda-approval-of-ohtuvayre-ensifentrine/"
       ],
@@ -1517,7 +1533,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": true,
       "pack_path": "validation/m7/review_packs/REG-2024-REGN-LINVOSELTAMAB-CRL.json",
-      "sequence": 95,
+      "sequence": 96,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2024/08/20/2933195/0/en/Regeneron-Provides-Update-on-Biologics-License-Application-for-Linvoseltamab.html"
       ],
@@ -1533,7 +1549,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/REG-2024-SNDX-REVUFORJ.json",
-      "sequence": 96,
+      "sequence": 97,
       "source_citations": [
         "https://www.prnewswire.com/news-releases/syndax-announces-fda-approval-of-revuforj-revumenib-the-first-and-only-menin-inhibitor-to-treat-adult-and-pediatric-patients-with-relapsed-or-refractory-acute-leukemia-with-a-kmt2a-translocation-302307513.html"
       ],
@@ -1549,12 +1565,28 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/REG-2024-BBIO-ATTRUBY.json",
-      "sequence": 97,
+      "sequence": 98,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2024/11/23/2986250/0/en/Attruby-acoramidis-a-Near-Complete-TTR-Stabilizer-90-approved-by-FDA-to-Reduce-Cardiovascular-Death-and-Cardiovascular-related-Hospitalization-in-ATTR-CM-Patients.html"
       ],
       "stratum": "REGULATORY",
       "ticker": "BBIO"
+    },
+    {
+      "candidate_id": "REG-2024-APLT-GOVORESTAT-CRL",
+      "catalyst_type": "REG_DECISION",
+      "company": "Applied Therapeutics, Inc.",
+      "event_date": "2024-11-27",
+      "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+      "manual_science_review_status": "NOT_YET_REVIEWED",
+      "negative_event_candidate": true,
+      "pack_path": "validation/m7/review_packs/REG-2024-APLT-GOVORESTAT-CRL.json",
+      "sequence": 99,
+      "source_citations": [
+        "https://www.sec.gov/Archives/edgar/data/1697532/000095017024131507/aplt-20241127.htm"
+      ],
+      "stratum": "REGULATORY",
+      "ticker": "APLT"
     },
     {
       "candidate_id": "REG-2024-IONS-TRYNGOLZA",
@@ -1565,7 +1597,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/REG-2024-IONS-TRYNGOLZA.json",
-      "sequence": 98,
+      "sequence": 100,
       "source_citations": [
         "https://www.sec.gov/Archives/edgar/data/874015/000114036124050057/ef20040455_ex99-1.htm"
       ],
@@ -1581,7 +1613,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/REG-2024-VRTX-ALYFTREK.json",
-      "sequence": 99,
+      "sequence": 101,
       "source_citations": [
         "https://investors.vrtx.com/news-releases/news-release-details/vertex-announces-us-fda-approval-alyftrektm-once-daily-next"
       ],
@@ -1597,7 +1629,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": true,
       "pack_path": "validation/m7/review_packs/EC-2019-WVE-SUVODIRSEN.json",
-      "sequence": 100,
+      "sequence": 102,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2019/12/16/1960830/0/en/Wave-Life-Sciences-Announces-Discontinuation-of-Suvodirsen-Development-for-Duchenne-Muscular-Dystrophy.html"
       ],
@@ -1613,7 +1645,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/EC-2020-CRSP-CTX001.json",
-      "sequence": 101,
+      "sequence": 103,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2020/06/12/2047260/0/en/CRISPR-Therapeutics-and-Vertex-Announce-New-Clinical-Data-for-Investigational-Gene-Editing-Therapy-CTX001-in-Severe-Hemoglobinopathies-at-the-25th-Annual-European-Hematology-Associ.html"
       ],
@@ -1629,7 +1661,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/EC-2021-RUBY-RTX240.json",
-      "sequence": 102,
+      "sequence": 104,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2021/03/15/2192713/0/en/Rubius-Therapeutics-Reports-Initial-Clinical-Data-from-Ongoing-Phase-1-2-Trial-of-RTX-240-in-Patients-with-Advanced-Solid-Tumors-Demonstrating-Single-Agent-Activity.html"
       ],
@@ -1645,7 +1677,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/EC-2021-TPTX-TPX0046.json",
-      "sequence": 103,
+      "sequence": 105,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2021/04/05/2204507/0/en/turning-point-therapeutics-announces-initial-clinical-data-from-phase-1-2-sword-1-study-of-ret-inhibitor-tpx-0046.html"
       ],
@@ -1661,7 +1693,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/EC-2021-FATE-FT516FT538.json",
-      "sequence": 104,
+      "sequence": 106,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2021/05/13/2229432/24675/en/Fate-Therapeutics-Announces-Encouraging-Interim-Phase-1-Data-for-iPSC-derived-NK-Cell-Programs-in-Relapsed-Refractory-Acute-Myeloid-Leukemia.html"
       ],
@@ -1677,7 +1709,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/EC-2021-NTLA-NTLA2001.json",
-      "sequence": 105,
+      "sequence": 107,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2021/06/26/2253514/0/en/intellia-and-regeneron-announce-landmark-clinical-data-showing-deep-reduction-in-disease-causing-protein-after-single-infusion-of-ntla-2001-an-investigational-crispr-therapy-for-tr.html"
       ],
@@ -1693,7 +1725,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": true,
       "pack_path": "validation/m7/review_packs/EC-2021-SGTX-SIG001.json",
-      "sequence": 106,
+      "sequence": 108,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2021/07/09/2260503/0/en/Sigilon-Therapeutics-Announces-Clinical-Hold-on-SIG-001-Phase-1-2-Study-in-Hemophilia-A.html"
       ],
@@ -1709,7 +1741,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/EC-2021-EDIT-EDIT101.json",
-      "sequence": 107,
+      "sequence": 109,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2021/09/29/2305445/0/en/Editas-Medicine-Announces-Positive-Initial-Clinical-Data-from-Ongoing-Phase-1-2-BRILLIANCE-Clinical-Trial-of-EDIT-101-for-LCA10.html"
       ],
@@ -1725,7 +1757,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/EC-2022-AVXL-ANAVEX371.json",
-      "sequence": 108,
+      "sequence": 110,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2022/1/10/2363824/29248/en/Anavex-Life-Sciences-Reports-Positive-Results-from-Phase-1-Clinical-Trial-of-ANAVEX-3-71.html"
       ],
@@ -1741,7 +1773,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/EC-2022-VTYX-VTX958.json",
-      "sequence": 109,
+      "sequence": 111,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2022/08/15/2498512/0/en/Ventyx-Biosciences-Announces-Positive-Topline-Phase-1-Data-for-Its-Selective-Allosteric-TYK2-Inhibitor-VTX958.html"
       ],
@@ -1757,7 +1789,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/EC-2022-ALEC-AL101.json",
-      "sequence": 110,
+      "sequence": 112,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2022/11/29/2564291/0/en/Alector-Presents-Results-from-First-in-Human-Phase-1-Study-of-AL101-for-the-Treatment-of-Neurodegenerative-Diseases.html"
       ],
@@ -1773,7 +1805,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/EC-2023-IMTX-IMA203.json",
-      "sequence": 111,
+      "sequence": 113,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2023/11/08/2776060/0/en/Immatics-Reports-Interim-Clinical-Data-from-ACTengine-IMA203-and-IMA203CD8-TCR-T-Monotherapies-Targeting-PRAME-in-an-Ongoing-Phase-1-Trial.html"
       ],
@@ -1789,7 +1821,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/EC-2024-CHRS-CHS114.json",
-      "sequence": 112,
+      "sequence": 114,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2024/05/23/2887728/33333/en/coherus-presents-preliminary-results-from-phase-i-dose-escalation-study-of-its-anti-chemokine-receptor-8-ccr8-antibody-chs-114-at-the-2024-american-society-of-clinical-oncology-asc.html"
       ],
@@ -1805,7 +1837,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/EC-2024-CABA-CABA201.json",
-      "sequence": 113,
+      "sequence": 115,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2024/06/14/2898772/0/en/Cabaletta-Bio-Reports-Positive-Initial-Clinical-Data-from-Phase-1-2-RESET-Myositis-and-RESET-SLE-Trials-of-CABA-201.html"
       ],
@@ -1821,7 +1853,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/EC-2024-TSHA-TSHA102.json",
-      "sequence": 114,
+      "sequence": 116,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2024/06/18/2900309/0/en/taysha-gene-therapies-announces-positive-clinical-data-across-adult-and-pediatric-patients-from-low-dose-cohort-in-ongoing-reveal-phase-1-2-trials-evaluating-tsha-102-in-rett-syndr.html"
       ],
@@ -1837,7 +1869,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/EC-2025-MRSN-XMT1660.json",
-      "sequence": 115,
+      "sequence": 117,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2025/01/10/3007493/0/en/Mersana-Therapeutics-Announces-Positive-Initial-Clinical-Data-from-Phase-1-Clinical-Trial-of-Emiltatug-Ledadotin-XMT-1660-Initiation-of-Expansion-in-Triple-Negative-Breast-Cancer.html"
       ],
@@ -1853,7 +1885,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/EC-2025-MTSR-MET233I.json",
-      "sequence": 116,
+      "sequence": 118,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2025/06/09/3095726/0/en/metsera-announces-positive-phase-1-data-of-first-in-class-once-monthly-amylin-candidate-met-233i.html"
       ],
@@ -1869,7 +1901,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/CO-2018-ZIOP-ASCO.json",
-      "sequence": 117,
+      "sequence": 119,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2018/06/04/1516110/18421/en/Ziopharm-Oncology-Presents-Clinical-Data-Demonstrating-Anti-tumor-Immune-Response-of-Controlled-IL-12-Platform-in-Breast-Cancer-and-Glioblastoma-at-American-Society-of-Clinical-Onc.html"
       ],
@@ -1885,7 +1917,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/CO-2019-BGNE-ZANUASH.json",
-      "sequence": 118,
+      "sequence": 120,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2019/12/08/1957589/0/en/BeiGene-Announces-Clinical-Data-on-BRUKINSA-Zanubrutinib-at-the-61st-American-Society-of-Hematology-ASH-Annual-Meeting.html"
       ],
@@ -1901,7 +1933,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/CO-2019-CNST-MANIFEST.json",
-      "sequence": 119,
+      "sequence": 121,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2019/12/09/1958004/0/en/constellation-pharmaceuticals-provides-updated-preliminary-data-from-manifest-clinical-trial-with-cpi-0610-in-oral-and-poster-presentations-at-ash.html"
       ],
@@ -1917,7 +1949,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/CO-2020-ONCT-CIRLLASH.json",
-      "sequence": 120,
+      "sequence": 122,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2020/12/07/2140511/0/en/Oncternal-Therapeutics-Announces-Presentation-of-Interim-Phase-1-2-Data-Update-for-Cirmtuzumab-in-Combination-with-Ibrutinib-at-ASH-2020-Virtual-Annual-Meeting.html"
       ],
@@ -1933,7 +1965,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/CO-2020-TRIL-TTI622ASH.json",
-      "sequence": 121,
+      "sequence": 123,
       "source_citations": [
         "https://www.globenewswire.com/de/news-release/2020/12/07/2140908/0/en/Trillium-Therapeutics-Presented-Clinical-Data-at-the-62nd-ASH-Annual-Meeting-and-Provides-Guidance-for-2021.html"
       ],
@@ -1949,7 +1981,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/CO-2021-HARP-HPN424ASCO.json",
-      "sequence": 122,
+      "sequence": 124,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2021/06/04/2242109/0/en/harpoon-therapeutics-presents-updated-interim-clinical-data-for-the-psma-targeting-tritac-hpn424-at-the-2021-asco-annual-meeting.html"
       ],
@@ -1965,7 +1997,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/CO-2021-IOVA-LIFILEUCELASCO.json",
-      "sequence": 123,
+      "sequence": 125,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2021/06/04/2242128/0/en/Iovance-Biotherapeutics-Announces-Clinical-Data-for-Lifileucel-in-Combination-with-Pembrolizumab-in-Advanced-Melanoma-at-ASCO-2021-Annual-Meeting.html"
       ],
@@ -1981,7 +2013,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/CO-2021-IGMS-IGM2323ASH.json",
-      "sequence": 124,
+      "sequence": 126,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2021/12/11/2350312/0/en/IGM-Biosciences-Presents-Clinical-Data-from-IGM-2323-in-Patients-with-Advanced-B-Cell-Malignancies-at-2021-American-Society-of-Hematology-Annual-Meeting.html"
       ],
@@ -1997,7 +2029,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/CO-2022-KROS-KER050ASH.json",
-      "sequence": 125,
+      "sequence": 127,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2022/12/12/2572031/0/en/Keros-Therapeutics-Presents-Clinical-Data-from-its-KER-050-and-KER-047-Programs-and-Preclinical-Data-from-its-KER-050-and-ALK2-Inhibitor-Programs-at-the-64th-American-Society-of-He.html"
       ],
@@ -2013,7 +2045,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/CO-2024-GMAB-TVASCO.json",
-      "sequence": 126,
+      "sequence": 128,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2024/06/03/2892268/0/en/investigational-tisotumab-vedotin-phase-2-data-demonstrates-encouraging-antitumor-activity-in-patients-with-recurrent-or-metastatic-head-and-neck-squamous-cell-carcinoma-hnscc.html"
       ],
@@ -2029,7 +2061,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/CO-2024-AUTL-OBECELASH.json",
-      "sequence": 127,
+      "sequence": 129,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2024/12/10/2994144/0/en/autolus-therapeutics-presents-clinical-data-updates-at-the-american-society-of-hematology-ash-annual-meeting-2024.html"
       ],
@@ -2045,7 +2077,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/CO-2024-KROS-ELRITERCEPTASH.json",
-      "sequence": 128,
+      "sequence": 130,
       "source_citations": [
         "https://www.globenewswire.com/fr/news-release/2024/12/10/2994148/0/en/Keros-Therapeutics-Presents-Clinical-Data-from-its-Elritercept-Program-at-the-66th-American-Society-of-Hematology-Annual-Meeting-and-Exposition.html"
       ],
@@ -2061,7 +2093,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/CO-2025-GERN-RYTELOASH.json",
-      "sequence": 129,
+      "sequence": 131,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2025/12/08/3201506/35501/en/geron-corporation-presents-new-data-at-ash-2025-highlighting-the-relationship-between-treatment-emergent-cytopenias-and-clinical-benefit-of-rytelo-imetelstat-in-lower-risk-mds.html"
       ],
@@ -2077,7 +2109,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/CO-2025-CRVS-SOQUELITINIBASH.json",
-      "sequence": 130,
+      "sequence": 132,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2025/12/08/3201702/0/en/corvus-pharmaceuticals-presents-final-data-from-soquelitinib-phase-1-1b-t-cell-lymphoma-trial.html"
       ],
@@ -2093,7 +2125,7 @@
       "manual_science_review_status": "NOT_YET_REVIEWED",
       "negative_event_candidate": false,
       "pack_path": "validation/m7/review_packs/CO-2025-AUTL-CARLYSLEASH.json",
-      "sequence": 131,
+      "sequence": 133,
       "source_citations": [
         "https://www.globenewswire.com/news-release/2025/12/08/3201963/0/en/autolus-therapeutics-presents-updated-clinical-data-from-the-carlysle-trial-in-patients-with-severe-refractory-systemic-lupus-erythematosus-at-the-american-society-of-hematology-as.html"
       ],
@@ -2101,7 +2133,7 @@
       "ticker": "AUTL"
     }
   ],
-  "entry_count": 131,
+  "entry_count": 133,
   "format_version": "1.0",
   "generated_at": "2026-09-16T00:00:00+00:00",
   "market_outcomes_inspected": false,

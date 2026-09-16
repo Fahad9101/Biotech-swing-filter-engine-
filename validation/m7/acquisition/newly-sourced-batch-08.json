@@ -1,0 +1,67 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "role": "NEWLY_SOURCED_CANDIDATES_POST_HANDOFF",
+  "generated_at": "2026-09-16",
+  "sourcing_note": "Targeted sourcing at the negative-event reserve, which stood at exactly 40/40 with only one PENDING candidate left in the pipeline (ORPH, blocked by a reconfirmed Alpaca market-data provider gap, not resolvable by sourcing). The existing PASS-but-negative-label-pending pool was already exhausted by resolving GWPH in the prior batch, so this batch sources two brand-new, large-cap, unambiguous negative catalysts not previously in the pool: a major Phase 3 trial failure and an FDA Complete Response Letter, both dated within the frozen 2018-2025 window and both clearing the historical-universe floors with wide margin.",
+  "events": [
+    {
+      "asset": "AMX0035 (RELYVRIO/ALBRIOZA)",
+      "candidate_id": "NEG-P3-2024-AMLX-PHOENIX",
+      "cik": "1658551",
+      "clinical_phase": "PHASE_3",
+      "cohort_frozen": false,
+      "company": "Amylyx Pharmaceuticals, Inc.",
+      "first_public_date": "2024-03-08",
+      "first_public_timestamp": "2024-03-08T07:10:02-05:00",
+      "indication": "amyotrophic lateral sclerosis (ALS)",
+      "negative_event_candidate": true,
+      "outcome_inspected_for_selection": false,
+      "promotion_blockers": [
+        "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+        "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+        "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+      ],
+      "proposed_catalyst_type": "CLIN_P3",
+      "proposed_primary_stratum": "PHASE_3_PIVOTAL",
+      "result_direction": "NEGATIVE_PRIMARY",
+      "source_role": "FIRST_PUBLIC_RESULT_DISCLOSURE_CANDIDATE",
+      "source_type": "ISSUER_SEC_8K_EXHIBIT_991",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1658551/000119312524062878/d787565dex991.htm",
+      "source_displayed_time": "SEC 8-K accepted 2024-03-08 07:10:02 ET (Item 7.01/8.01/9.01, EX-99.1 press release attached; investor call held same day at 8:00 a.m. ET)",
+      "ticker": "AMLX",
+      "timestamp_precision": "EXACT_TO_MINUTE_SEC_ACCEPTANCE_PROXY",
+      "notes": "Global Phase 3 PHOENIX trial (664 ALS patients) of AMX0035 did not meet its prespecified primary endpoint (ALSFRS-R change from baseline, p=0.667) or any secondary endpoint. Amylyx subsequently withdrew RELYVRIO/ALBRIOZA from the market in April 2024. Release did not carry its own HH:MM dateline; the SEC 8-K acceptance timestamp (07:10:02 ET, pre-market) is used as the primary-source clock, matching the EXACT_TO_MINUTE_SEC_ACCEPTANCE_PROXY convention already used elsewhere in this pool (e.g. NEG-P3-2018-VTVT-STEADFAST)."
+    },
+    {
+      "asset": "govorestat (AT-007)",
+      "candidate_id": "REG-2024-APLT-GOVORESTAT-CRL",
+      "cik": "1697532",
+      "clinical_phase": "REGULATORY_DECISION",
+      "cohort_frozen": false,
+      "company": "Applied Therapeutics, Inc.",
+      "first_public_date": "2024-11-27",
+      "first_public_timestamp": "2024-11-27T16:21:25-05:00",
+      "indication": "Classic Galactosemia",
+      "negative_event_candidate": true,
+      "outcome_inspected_for_selection": false,
+      "promotion_blockers": [
+        "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+        "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+        "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+      ],
+      "proposed_catalyst_type": "REG_DECISION",
+      "proposed_primary_stratum": "REGULATORY",
+      "result_direction": "NEGATIVE_CRL",
+      "source_role": "FIRST_PUBLIC_REGULATORY_DISCLOSURE_CANDIDATE",
+      "source_type": "ISSUER_SEC_8K",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1697532/000095017024131507/aplt-20241127.htm",
+      "source_displayed_time": "SEC 8-K accepted 2024-11-27 16:21:25 ET (Item 8.01)",
+      "ticker": "APLT",
+      "timestamp_precision": "EXACT_TO_MINUTE_SEC_ACCEPTANCE_PROXY",
+      "notes": "FDA issued a Complete Response Letter for the govorestat NDA for Classic Galactosemia, disclosed in an Item 8.01 8-K filed after market close (16:21:25 ET, so the same-day 2024-11-27 session is used as the pre-event cutoff per the after-close rule). This is a separate, later, distinct negative catalyst from an earlier April 2023 topline readout for the same asset in a related indication (not sourced here); the CRL is the cleaner, unambiguous negative regulatory event."
+    }
+  ]
+}

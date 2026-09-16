@@ -40,10 +40,10 @@
   "deferred_count": 9,
   "format_version": "1.0",
   "generated_at": "2026-09-16T00:00:00+00:00",
-  "manifest_sha256": "bffa96b187ec536fa791db5b5c37f2626cd01d136157478bbd2cf6597e139bb9",
+  "manifest_sha256": "a9d62e36de2e48783da03e4f3eaeb2d01d19d99fa2a332d1ef93b36a3df93685",
   "market_outcomes_inspected": false,
   "milestone": 7,
-  "pack_count": 131,
+  "pack_count": 133,
   "packs": [
     {
       "candidate_id": "CO-2018-ZIOP-ASCO",
@@ -338,6 +338,13 @@
       "pack_sha256": "51fa1cfc49a2be7765f512a557292c06bc415481f53468e6e9087fa3ad1666cb",
       "stratum": "PHASE_3_PIVOTAL",
       "ticker": "MRTX"
+    },
+    {
+      "candidate_id": "NEG-P3-2024-AMLX-PHOENIX",
+      "pack_path": "validation/m7/review_packs/NEG-P3-2024-AMLX-PHOENIX.json",
+      "pack_sha256": "32335c5e7fc90e51cd1009808ae045f3b14aa1d6f89ad330035b4c20ddbf567c",
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "AMLX"
     },
     {
       "candidate_id": "P2-2018-BIIB-BAN2401",
@@ -898,6 +905,13 @@
       "pack_sha256": "89d00397dbf0f22f7fd55c5bb9503b7513cc77910c904022d2ef3d4e4524b26f",
       "stratum": "REGULATORY",
       "ticker": "TVTX"
+    },
+    {
+      "candidate_id": "REG-2024-APLT-GOVORESTAT-CRL",
+      "pack_path": "validation/m7/review_packs/REG-2024-APLT-GOVORESTAT-CRL.json",
+      "pack_sha256": "bfb7e704919f6b670473459bf15a49700e38e85bc9a132c8842a8896f75dfe22",
+      "stratum": "REGULATORY",
+      "ticker": "APLT"
     },
     {
       "candidate_id": "REG-2024-BBIO-ATTRUBY",
