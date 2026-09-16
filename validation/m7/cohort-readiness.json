@@ -17,10 +17,10 @@
     "Existing source-side unblinding findings require audit before any leakage PASS."
   ],
   "candidate_counts": {
-    "fail": 47,
-    "not_yet_excluded": 141,
-    "pass": 131,
-    "pending": 10,
+    "fail": 48,
+    "not_yet_excluded": 140,
+    "pass": 136,
+    "pending": 4,
     "total": 188
   },
   "decision_locks_complete": 0,
@@ -52,7 +52,7 @@
   },
   "real_four_snapshot_reconstructions_complete": 0,
   "real_outcomes_complete": 0,
-  "reconciled_rows_sha256": "7ba5011d8e94a35806751809c7f591be57ab5782643f3db370252db35f8af6e6",
+  "reconciled_rows_sha256": "4dd84e44d9c91ac18df34799cb117374984c6cd58f9c27a3f1b1dbb110f86f23",
   "required_action": "Complete outcome-blind evidence promotion and review; do not freeze, inspect returns or merge based on reserve counts.",
   "required_minimum_events": 120,
   "rules_version": "BOE-1.0.0",
@@ -96,6 +96,7 @@
     "validation/m7/promotion/first-public-availability-ledger-09.json": "377a107a8134744c267475ef899cb955bbe3d313771afe97b6d10af8f22e3f00",
     "validation/m7/promotion/first-public-availability-ledger-10.json": "5759848e3bf234a1694534b0a84a0a8a8af91df395d8946386378ee78b8bf400",
     "validation/m7/promotion/first-public-availability-ledger-11.json": "7242a5bb2c7e3913f153f83975afa9637340c7ee157ffead1757aebc21ab196f",
+    "validation/m7/promotion/first-public-availability-ledger-12.json": "0149748178f7d4f6a1798367c4eb9a87a752d7592df49a56f854206f8683a9e1",
     "validation/m7/promotion/historical-universe-ledger-01.json": "104946c8a3439ae08d5be2da4540b473bf87b622055b27293098c727435438b8",
     "validation/m7/promotion/historical-universe-ledger-02.json": "a1205aab631730fcf0427369bf1c2d63175b3c9706c32326cd8f01d3a9b30c0e",
     "validation/m7/promotion/historical-universe-ledger-03.json": "fe4df8d08e4de147edfaba1a526295d5e75d84babf3f066265b0664cbcbe0a62",
@@ -131,6 +132,7 @@
     "validation/m7/promotion/historical-universe-ledger-33.json": "6f62afa9813429d0dc93c4881cc225ebb001194ff84232f7556d8fa4fafee01d",
     "validation/m7/promotion/historical-universe-ledger-34.json": "14598bd40f05505e19373e1a952f604407817a6da26c707b03d3333aa21c6e7e",
     "validation/m7/promotion/historical-universe-ledger-35.json": "03dd1e4c71afadcef05311927c03e5bcd83645a662474f818d6455afb148df21",
+    "validation/m7/promotion/historical-universe-ledger-36.json": "6a02abae65fe70d1559bd2a064ec70485b217286241d120a6351f771156ddab8",
     "validation/m7/promotion/negative-reserve-integration-01.json": "6c363ca516f872d8721b6fc9d2bb95197956f4db63e4c926f79860285f6e8604",
     "validation/m7/promotion/single-asset-evidence-ledger-01.json": "abae416444a4d37f97861036d4a78a010c234fef283278d83a351da2f36d3fbd",
     "validation/m7/promotion/single-asset-evidence-ledger-02.json": "40802ef22876d8be63d1dcb2fe30799961b8163f6000d1ea0e4cab862fb2917e",
@@ -153,11 +155,11 @@
       "total": 26
     },
     "EARLY_CLINICAL": {
-      "fail": 13,
-      "maximum_provisional_buffer": 3,
-      "not_yet_excluded": 18,
-      "pass": 16,
-      "pending": 2,
+      "fail": 14,
+      "maximum_provisional_buffer": 2,
+      "not_yet_excluded": 17,
+      "pass": 17,
+      "pending": 0,
       "requirement": 15,
       "total": 31
     },
@@ -183,8 +185,8 @@
       "fail": 1,
       "maximum_provisional_buffer": 10,
       "not_yet_excluded": 40,
-      "pass": 34,
-      "pending": 6,
+      "pass": 38,
+      "pending": 2,
       "requirement": 30,
       "total": 41
     }

@@ -22,10 +22,10 @@ def test_committed_status_is_derived_and_pending_is_not_pass() -> None:
     assert (ROOT / module.ROWS_OUTPUT).read_text() == module.render(rows)
     assert status["candidate_counts"] == {
         "total": 188,
-        "pass": 131,
-        "fail": 47,
-        "pending": 10,
-        "not_yet_excluded": 141,
+        "pass": 136,
+        "fail": 48,
+        "pending": 4,
+        "not_yet_excluded": 140,
     }
     negative = status["negative_reserve"]
     assert negative["not_yet_excluded"] == 40
@@ -40,15 +40,15 @@ def test_committed_status_is_derived_and_pending_is_not_pass() -> None:
     assert strata["PHASE_3_PIVOTAL"]["pending"] == 0
     assert strata["PHASE_3_PIVOTAL"]["pass"] == 31
     assert strata["PHASE_3_PIVOTAL"]["maximum_provisional_buffer"] == 1
-    assert strata["REGULATORY"]["pass"] == 34
-    assert strata["REGULATORY"]["pending"] == 6
+    assert strata["REGULATORY"]["pass"] == 38
+    assert strata["REGULATORY"]["pending"] == 2
     assert strata["REGULATORY"]["maximum_provisional_buffer"] == 10
     assert strata["PHASE_2_POC"]["pass"] == 38
     assert strata["PHASE_2_POC"]["pending"] == 2
     assert strata["PHASE_2_POC"]["maximum_provisional_buffer"] == 10
-    assert strata["EARLY_CLINICAL"]["pass"] == 16
-    assert strata["EARLY_CLINICAL"]["pending"] == 2
-    assert strata["EARLY_CLINICAL"]["maximum_provisional_buffer"] == 3
+    assert strata["EARLY_CLINICAL"]["pass"] == 17
+    assert strata["EARLY_CLINICAL"]["pending"] == 0
+    assert strata["EARLY_CLINICAL"]["maximum_provisional_buffer"] == 2
     assert strata["CONFERENCE_OTHER"]["pass"] == 12
     assert strata["CONFERENCE_OTHER"]["pending"] == 0
     assert strata["CONFERENCE_OTHER"]["maximum_provisional_buffer"] == -3
