@@ -1420,8 +1420,8 @@
       "stratum": "PHASE_2_POC",
       "ticker": "GWPH",
       "timestamp_evidence_path": null,
-      "universe_evidence_path": null,
-      "universe_status": "PENDING"
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-39.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/phase2-primary-batch-01.json",

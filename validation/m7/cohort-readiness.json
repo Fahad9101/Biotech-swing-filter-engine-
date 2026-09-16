@@ -19,8 +19,8 @@
   "candidate_counts": {
     "fail": 49,
     "not_yet_excluded": 143,
-    "pass": 139,
-    "pending": 4,
+    "pass": 140,
+    "pending": 3,
     "total": 192
   },
   "decision_locks_complete": 0,
@@ -84,8 +84,8 @@
       "cap_share": 0.1,
       "pass_count": 4,
       "scope": "PHASE_2_POC",
-      "share": 0.1053,
-      "stratum_pass_total": 38,
+      "share": 0.1026,
+      "stratum_pass_total": 39,
       "ticker": "BIIB"
     }
   ],
@@ -99,14 +99,14 @@
     "final_negative_quota_satisfied": false,
     "maximum_provisional_buffer": 0,
     "not_yet_excluded": 40,
-    "pass": 38,
-    "pending": 2,
+    "pass": 39,
+    "pending": 1,
     "requirement": 40,
     "total": 59
   },
   "real_four_snapshot_reconstructions_complete": 0,
   "real_outcomes_complete": 0,
-  "reconciled_rows_sha256": "519ab9306fb980a9a7ca234398ccf8f2c88c88ab87dbb769d02f9b37aa231415",
+  "reconciled_rows_sha256": "918c860f66239d0bb4a9bba13ec6f76011dce6b8559bdbfd1fb25f4d909d5ceb",
   "required_action": "Complete outcome-blind evidence promotion and review; do not freeze, inspect returns or merge based on reserve counts.",
   "required_minimum_events": 120,
   "rules_version": "BOE-1.0.0",
@@ -192,6 +192,7 @@
     "validation/m7/promotion/historical-universe-ledger-36.json": "6a02abae65fe70d1559bd2a064ec70485b217286241d120a6351f771156ddab8",
     "validation/m7/promotion/historical-universe-ledger-37.json": "373e33ecb14e10476050f23f1447fed7087ecbf5ccc48acea30c18a54f34ac33",
     "validation/m7/promotion/historical-universe-ledger-38.json": "810a3768168ce7ded542ffb95a03af23b7c5e19b2bcbf9a2a15f07dda25ff67e",
+    "validation/m7/promotion/historical-universe-ledger-39.json": "d9f715a3eb5929183a51f2f12a225869a5c00a61cbbf37e9684fee12dc17aaad",
     "validation/m7/promotion/negative-reserve-integration-01.json": "6c363ca516f872d8721b6fc9d2bb95197956f4db63e4c926f79860285f6e8604",
     "validation/m7/promotion/single-asset-evidence-ledger-01.json": "abae416444a4d37f97861036d4a78a010c234fef283278d83a351da2f36d3fbd",
     "validation/m7/promotion/single-asset-evidence-ledger-02.json": "40802ef22876d8be63d1dcb2fe30799961b8163f6000d1ea0e4cab862fb2917e",
@@ -226,8 +227,8 @@
       "fail": 11,
       "maximum_provisional_buffer": 10,
       "not_yet_excluded": 40,
-      "pass": 38,
-      "pending": 2,
+      "pass": 39,
+      "pending": 1,
       "requirement": 30,
       "total": 51
     },

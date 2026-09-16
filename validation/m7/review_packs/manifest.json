@@ -40,10 +40,10 @@
   "deferred_count": 9,
   "format_version": "1.0",
   "generated_at": "2026-09-16T00:00:00+00:00",
-  "manifest_sha256": "d79499c413c69da415f532d332d4362643ecaae3e43ad012a68c93d5691a2047",
+  "manifest_sha256": "bffa96b187ec536fa791db5b5c37f2626cd01d136157478bbd2cf6597e139bb9",
   "market_outcomes_inspected": false,
   "milestone": 7,
-  "pack_count": 130,
+  "pack_count": 131,
   "packs": [
     {
       "candidate_id": "CO-2018-ZIOP-ASCO",
@@ -352,6 +352,13 @@
       "pack_sha256": "8fea93c504551dd1271e407e23ab708c28f0f40039d2ba4231f764b49455a3d0",
       "stratum": "PHASE_2_POC",
       "ticker": "ESPR"
+    },
+    {
+      "candidate_id": "P2-2018-GWPH-GWP42006",
+      "pack_path": "validation/m7/review_packs/P2-2018-GWPH-GWP42006.json",
+      "pack_sha256": "6083eda0854d5cfd4313368ba7daaa4339e24915a7671e58f0087ada2a81bc61",
+      "stratum": "PHASE_2_POC",
+      "ticker": "GWPH"
     },
     {
       "candidate_id": "P2-2019-AGIO-DRIVEPK",

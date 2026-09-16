@@ -22,15 +22,15 @@ def test_committed_status_is_derived_and_pending_is_not_pass() -> None:
     assert (ROOT / module.ROWS_OUTPUT).read_text() == module.render(rows)
     assert status["candidate_counts"] == {
         "total": 192,
-        "pass": 139,
+        "pass": 140,
         "fail": 49,
-        "pending": 4,
+        "pending": 3,
         "not_yet_excluded": 143,
     }
     negative = status["negative_reserve"]
     assert negative["not_yet_excluded"] == 40
-    assert negative["pass"] == 38
-    assert negative["pending"] == 2
+    assert negative["pass"] == 39
+    assert negative["pending"] == 1
     assert negative["maximum_provisional_buffer"] == 0
     assert negative["final_negative_quota_satisfied"] is False
     assert status["financing_reserve"]["pass"] == 21
@@ -43,8 +43,8 @@ def test_committed_status_is_derived_and_pending_is_not_pass() -> None:
     assert strata["REGULATORY"]["pass"] == 38
     assert strata["REGULATORY"]["pending"] == 2
     assert strata["REGULATORY"]["maximum_provisional_buffer"] == 10
-    assert strata["PHASE_2_POC"]["pass"] == 38
-    assert strata["PHASE_2_POC"]["pending"] == 2
+    assert strata["PHASE_2_POC"]["pass"] == 39
+    assert strata["PHASE_2_POC"]["pending"] == 1
     assert strata["PHASE_2_POC"]["maximum_provisional_buffer"] == 10
     assert strata["EARLY_CLINICAL"]["pass"] == 17
     assert strata["EARLY_CLINICAL"]["pending"] == 0
@@ -90,11 +90,26 @@ def copied(tmp_path: Path) -> Path:
 
 def test_new_evidence_changes_status_without_manual_counts(copied: Path) -> None:
     before, rows = module.build(copied)
-    candidate = next(
-        r["candidate_id"]
+    # Pick a PENDING candidate with no existing universe determination on file
+    # (so the injected override below cannot collide with a committed
+    # real determination - see test_conflicting_universe_determination_...
+    # elsewhere in this file for why that guard exists and must not be
+    # tripped by accident here) and mark it negative in its own copied
+    # acquisition file, simulating a newly recorded negative label arriving
+    # alongside new universe evidence in the same batch.
+    row = next(
+        r
         for r in rows["rows"]
-        if r["negative_label_recorded"] and r["universe_status"] == "PENDING"
+        if r["universe_status"] == "PENDING" and r["universe_evidence_path"] is None
     )
+    candidate = row["candidate_id"]
+    acquisition_path = copied / row["acquisition_path"]
+    data = json.loads(acquisition_path.read_text())
+    (event,) = (e for e in data["events"] if e["candidate_id"] == candidate)
+    event["negative_event_candidate"] = True
+    acquisition_path.write_text(json.dumps(data))
+
+    before, rows = module.build(copied)
     before_reserve = before["negative_reserve"]
     # A reserved, never-sequentially-issued filename: real batches use
     # historical-universe-ledger-01, -02, ... in order, so this cannot
@@ -117,7 +132,13 @@ def test_stratum_buffer_reacts_to_a_new_failure(copied: Path) -> None:
     by accident (as happened for PHASE_3_PIVOTAL before this check existed).
     """
     before, rows = module.build(copied)
-    candidate = next(r for r in rows["rows"] if r["universe_status"] == "PENDING" and r["stratum"])
+    candidate = next(
+        r
+        for r in rows["rows"]
+        if r["universe_status"] == "PENDING"
+        and r["stratum"]
+        and r["universe_evidence_path"] is None
+    )
     stratum = candidate["stratum"]
     before_buffer = before["strata"][stratum]["maximum_provisional_buffer"]
     path = copied / "validation/m7/promotion/historical-universe-ledger-999-test-only.json"
