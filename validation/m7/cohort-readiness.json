@@ -17,11 +17,11 @@
     "Existing source-side unblinding findings require audit before any leakage PASS."
   ],
   "candidate_counts": {
-    "fail": 48,
-    "not_yet_excluded": 140,
-    "pass": 136,
+    "fail": 49,
+    "not_yet_excluded": 141,
+    "pass": 137,
     "pending": 4,
-    "total": 188
+    "total": 190
   },
   "decision_locks_complete": 0,
   "eligible_authoritative_registry_count": 0,
@@ -52,14 +52,26 @@
     },
     {
       "candidate_ids": [
+        "CO-2024-AUTL-OBECELASH",
+        "CO-2025-AUTL-CARLYSLEASH"
+      ],
+      "cap_share": 0.1,
+      "pass_count": 2,
+      "scope": "CONFERENCE_OTHER",
+      "share": 0.1538,
+      "stratum_pass_total": 13,
+      "ticker": "AUTL"
+    },
+    {
+      "candidate_ids": [
         "CO-2022-KROS-KER050ASH",
         "CO-2024-KROS-ELRITERCEPTASH"
       ],
       "cap_share": 0.1,
       "pass_count": 2,
       "scope": "CONFERENCE_OTHER",
-      "share": 0.1667,
-      "stratum_pass_total": 12,
+      "share": 0.1538,
+      "stratum_pass_total": 13,
       "ticker": "KROS"
     },
     {
@@ -94,7 +106,7 @@
   },
   "real_four_snapshot_reconstructions_complete": 0,
   "real_outcomes_complete": 0,
-  "reconciled_rows_sha256": "4dd84e44d9c91ac18df34799cb117374984c6cd58f9c27a3f1b1dbb110f86f23",
+  "reconciled_rows_sha256": "bb5c13e52be39c12fb75a4aab4b37cf3e7ce9e7b0848635486cf373c16699690",
   "required_action": "Complete outcome-blind evidence promotion and review; do not freeze, inspect returns or merge based on reserve counts.",
   "required_minimum_events": 120,
   "rules_version": "BOE-1.0.0",
@@ -116,6 +128,7 @@
     "validation/m7/acquisition/newly-sourced-batch-03.json": "0db8199ac1573756f12ce8cc06b70831ae8b844db895c39ba3b1c856edef5b19",
     "validation/m7/acquisition/newly-sourced-batch-04.json": "0b1752a430a76a81cb1b8eb420d56dea0093a408f4ea1d42175ae0bd67113c94",
     "validation/m7/acquisition/newly-sourced-batch-05.json": "95ad32f4f98d696b95d42dda16b7ff75ee49c9cec48b314ddaddffc32d4f37b7",
+    "validation/m7/acquisition/newly-sourced-batch-06.json": "6e0e63cc53c8af71b80e47a01c0ab49d4be1579112e7dd8e77c1d78dd84f3379",
     "validation/m7/acquisition/phase2-primary-batch-01.json": "3c9c97b0be51f54a94d0d8a44502fbe0ca365231b0acd463127e32ecfe6176e6",
     "validation/m7/acquisition/phase3-primary-batch-01.json": "cb6fc69d6159a7b48662a9115723bc7dc20de2d207246ac75a5ab890bc65f384",
     "validation/m7/acquisition/regulatory-primary-batch-01.json": "d315b56db9f1816280adde691ecc4265c8c39174c3a88ef312f12abf0d08ff45",
@@ -175,6 +188,7 @@
     "validation/m7/promotion/historical-universe-ledger-34.json": "14598bd40f05505e19373e1a952f604407817a6da26c707b03d3333aa21c6e7e",
     "validation/m7/promotion/historical-universe-ledger-35.json": "03dd1e4c71afadcef05311927c03e5bcd83645a662474f818d6455afb148df21",
     "validation/m7/promotion/historical-universe-ledger-36.json": "6a02abae65fe70d1559bd2a064ec70485b217286241d120a6351f771156ddab8",
+    "validation/m7/promotion/historical-universe-ledger-37.json": "373e33ecb14e10476050f23f1447fed7087ecbf5ccc48acea30c18a54f34ac33",
     "validation/m7/promotion/negative-reserve-integration-01.json": "6c363ca516f872d8721b6fc9d2bb95197956f4db63e4c926f79860285f6e8604",
     "validation/m7/promotion/single-asset-evidence-ledger-01.json": "abae416444a4d37f97861036d4a78a010c234fef283278d83a351da2f36d3fbd",
     "validation/m7/promotion/single-asset-evidence-ledger-02.json": "40802ef22876d8be63d1dcb2fe30799961b8163f6000d1ea0e4cab862fb2917e",
@@ -188,13 +202,13 @@
   },
   "strata": {
     "CONFERENCE_OTHER": {
-      "fail": 14,
-      "maximum_provisional_buffer": -3,
-      "not_yet_excluded": 12,
-      "pass": 12,
+      "fail": 15,
+      "maximum_provisional_buffer": -2,
+      "not_yet_excluded": 13,
+      "pass": 13,
       "pending": 0,
       "requirement": 15,
-      "total": 26
+      "total": 28
     },
     "EARLY_CLINICAL": {
       "fail": 14,
