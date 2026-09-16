@@ -1,0 +1,199 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-16",
+  "role": "PREFREEZE_TARGETED_SINGLE_ASSET_REPLACEMENT_EVIDENCE",
+  "market_outcome_fields_permitted": false,
+  "cohort_frozen": false,
+  "trigger": "Continuation of single-asset-evidence-ledger-09.json's effort to close the selected-cohort single-asset gap (18->19 after ledger-09, still one short of 20). Checked 7 more selected-but-unverified candidates chosen for a plausible single-asset reputation (long-time lead-asset focus, or very young recently-IPO'd companies unlikely to have funded a second program yet). All 7 were found to have a genuine second active or clinical-stage compound on closer reading and are recorded DOES_NOT_QUALIFY; none stretched to fit. Selected-cohort single-asset count remains 19/20 after this batch - the gap is not yet closed despite 14 total candidates checked across ledger-09 and this ledger, which is itself useful evidence that genuinely single-asset issuers are a minority of this pool and the remaining gap may need a different approach (e.g., targeted new-candidate sourcing of small, narrowly-focused issuers, mirroring the financing/negative-event sourcing pattern) rather than further verification sweeps of the existing pool.",
+  "rows": [
+    {
+      "candidate_id": "REG-2020-RYTM-IMCIVREE",
+      "event_date": "2020-11-27",
+      "ticker": "RYTM",
+      "issuer": "Rhythm Pharmaceuticals, Inc.",
+      "asset": "setmelanotide",
+      "historical_pipeline_snapshot_date": "2019-12-31",
+      "meaningful_active_therapeutic_assets": [
+        "setmelanotide",
+        "RM-853"
+      ],
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2019 10-K states 'In addition to our development of setmelanotide, we also are developing a second investigational asset, RM-853' (a GOAT inhibitor for Prader-Willi syndrome, in-licensed from Takeda). RM-853 was still preclinical (IND not yet filed) but the filing's own language explicitly calls it 'a second investigational asset,' a clearer self-declaration than the MDGL 'potential backup compound' precedent that qualifies.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1649904/000155837020001896/rytm-20191231x10k.htm"
+      ],
+      "source_dates": [
+        "2020-03-02"
+      ],
+      "post_event_source_role": "NONE",
+      "ambiguity": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2022-PRVB-TZIELD",
+      "event_date": "2022-11-17",
+      "ticker": "PRVB",
+      "issuer": "Provention Bio, Inc.",
+      "asset": "teplizumab",
+      "historical_pipeline_snapshot_date": "2021-12-31",
+      "meaningful_active_therapeutic_assets": [
+        "teplizumab",
+        "PRV-3279",
+        "PRV-101",
+        "PRV-015",
+        "PRV-6527",
+        "PRV-300"
+      ],
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2021 10-K names five additional distinct compound codes beyond teplizumab (PRV-3279, PRV-101, PRV-015, PRV-6527, PRV-300) across autoimmune and infectious-disease indications - a materially more diversified pipeline than teplizumab's public profile as the company's flagship asset would suggest.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1695357/000149315222005304/form10k.htm"
+      ],
+      "source_dates": [
+        "2022-02-24"
+      ],
+      "post_event_source_role": "NONE",
+      "ambiguity": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "NEG-P3-2023-KOD-GLEAMGLIMMER",
+      "event_date": "2023-07-24",
+      "ticker": "KOD",
+      "issuer": "Kodiak Sciences Inc.",
+      "asset": "tarcocimab tedromer",
+      "historical_pipeline_snapshot_date": "2022-12-31",
+      "meaningful_active_therapeutic_assets": [
+        "tarcocimab tedromer",
+        "KSI-501"
+      ],
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2022 10-K states Kodiak 'is investing in its pipeline,' progressing its ABC Platform 'with its bispecific conjugate KSI-501' for suboptimal anti-VEGF responders - a second, distinct compound on the same platform, actively described as a pipeline investment, not a backup.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1468748/000095017023010314/kod-20221231.htm"
+      ],
+      "source_dates": [
+        "2023-03-28"
+      ],
+      "post_event_source_role": "NONE",
+      "ambiguity": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "CO-2020-ONCT-CIRLLASH",
+      "event_date": "2020-12-07",
+      "ticker": "ONCT",
+      "issuer": "Oncternal Therapeutics, Inc.",
+      "asset": "cirmtuzumab",
+      "historical_pipeline_snapshot_date": "2019-12-31",
+      "meaningful_active_therapeutic_assets": [
+        "cirmtuzumab",
+        "TK216"
+      ],
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2019 10-K describes TK216, an ETS-family oncoprotein inhibitor, already in an active Phase 1 clinical trial for relapsed/refractory Ewing sarcoma as a single agent and in combination with vincristine - a second, distinct, already-clinical-stage compound, not merely preclinical.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1260990/000156459020011213/onct-10k_20191231.htm"
+      ],
+      "source_dates": [
+        "2020-03-16"
+      ],
+      "post_event_source_role": "NONE",
+      "ambiguity": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2019-GBT-OXBRYTA",
+      "event_date": "2019-11-25",
+      "ticker": "GBT",
+      "issuer": "Global Blood Therapeutics, Inc.",
+      "asset": "voxelotor",
+      "historical_pipeline_snapshot_date": "2018-12-31",
+      "meaningful_active_therapeutic_assets": [
+        "voxelotor",
+        "inclacumab"
+      ],
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2018 10-K references ongoing/planned clinical development of inclacumab (an in-licensed P-selectin inhibitor for SCD vaso-occlusive crisis) alongside voxelotor, including leveraging 'safety data from prior clinical studies of inclacumab... in our development of inclacumab' - a second compound with its own clinical history and active development plan, not a preclinical backup.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1629137/000119312519054260/d675140d10k.htm"
+      ],
+      "source_dates": [
+        "2019-02-27"
+      ],
+      "post_event_source_role": "NONE",
+      "ambiguity": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "EC-2024-CABA-CABA201",
+      "event_date": "2024-06-14",
+      "ticker": "CABA",
+      "issuer": "Cabaletta Bio, Inc.",
+      "asset": "CABA-201",
+      "historical_pipeline_snapshot_date": "2023-12-31",
+      "meaningful_active_therapeutic_assets": [
+        "CABA-201",
+        "DSG3-CAART",
+        "MuSK-CAART"
+      ],
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2023 10-K describes a platform ('CABA(TM)') encompassing two strategies (CARTA and legacy CAART) 'with potential applicability across dozens of autoimmune diseases,' and names three distinct clinical-stage product candidates: CABA-201, DSG3-CAART and MuSK-CAART. A multi-program platform company, not single-asset.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1759138/000095017024034422/caba-20231231.htm"
+      ],
+      "source_dates": [
+        "2024-03-21"
+      ],
+      "post_event_source_role": "NONE",
+      "ambiguity": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "EC-2025-MTSR-MET233I",
+      "event_date": "2025-06-09",
+      "ticker": "MTSR",
+      "issuer": "Metsera, Inc.",
+      "asset": "MET-233i",
+      "historical_pipeline_snapshot_date": "2024-12-31",
+      "meaningful_active_therapeutic_assets": [
+        "MET-233i",
+        "MET-097i (and other MINT-library NuSH analog candidates)"
+      ],
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2024 10-K (the company's only 10-K, filed shortly after its January 2025 IPO) explicitly describes advancing 'a broad, scalable and combinable portfolio of injectable and oral NuSH analog peptides' - self-described as a portfolio/platform company from its very first annual report, not a single-asset company, despite being very newly public.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/2040807/000095017025044778/mtsr-20241231.htm"
+      ],
+      "source_dates": [
+        "2025-03-26"
+      ],
+      "post_event_source_role": "NONE",
+      "ambiguity": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    }
+  ],
+  "summary": {
+    "reviewed": 7,
+    "qualifies": 0,
+    "does_not_qualify": 7,
+    "pending": 0
+  },
+  "promotion_boundary": "Single-asset status alone does not establish final M7 eligibility. Historical universe, timestamp, financing, point-in-time evidence, concentration, eligible-registry and deterministic cohort-freeze checks remain mandatory. Combined with ledger-09.json, 15 selected-but-unverified candidates have now been reviewed (1 QUALIFIES, 14 DOES_NOT_QUALIFY). The selected-cohort single-asset count remains 19/20, one short of the requirement - this gap is not yet closed and the low qualification rate across a genuinely diverse sample suggests further blind verification sweeps of the existing pool have a low expected yield; closing it may require sourcing 1-2 new, genuinely narrow single-asset candidates instead."
+}

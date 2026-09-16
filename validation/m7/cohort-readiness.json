@@ -106,7 +106,7 @@
   },
   "real_four_snapshot_reconstructions_complete": 0,
   "real_outcomes_complete": 0,
-  "reconciled_rows_sha256": "34e7228f1428479cb80d714c52258aa0e3e0d1402a0b8759089112c05e22814f",
+  "reconciled_rows_sha256": "dbddf61dc9b1f165798dde6daf184b6c3b09525e95edb902af9fe9d6fec60686",
   "required_action": "Complete outcome-blind evidence promotion and review; do not freeze, inspect returns or merge based on reserve counts.",
   "required_minimum_events": 120,
   "rules_version": "BOE-1.0.0",
@@ -208,6 +208,7 @@
     "validation/m7/promotion/single-asset-evidence-ledger-07.json": "2444d201c38fb7d074b70e243022cc99861513a4c1eb0122eb895bd9adb4e77b",
     "validation/m7/promotion/single-asset-evidence-ledger-08.json": "b8e314ba17733bc368665a56b7bd902b57183dfa0d76708e5947c13208e29e17",
     "validation/m7/promotion/single-asset-evidence-ledger-09.json": "7a71d88ef297916e82d2c39ed24621250919628da84caef9edffd9588b58e62d",
+    "validation/m7/promotion/single-asset-evidence-ledger-10.json": "e4fce9cd8b8a32810ac2736bf8e04fead2b835305c743cb38dca4912230ead9e",
     "validation/m7/promotion/targeted-single-asset-replacement-03.json": "7037bf6d01938da4f42fd18b84cf66e680f93f84f44db7340da16226a7661956"
   },
   "strata": {
