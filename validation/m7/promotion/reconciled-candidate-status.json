@@ -470,6 +470,24 @@
       "universe_status": "FAIL"
     },
     {
+      "acquisition_path": "validation/m7/acquisition/newly-sourced-batch-07.json",
+      "candidate_id": "CO-2025-CRVS-SOQUELITINIBASH",
+      "eligible_registry_status": "NOT_PROMOTED",
+      "financing_evidence_path": null,
+      "financing_status": "PENDING",
+      "first_public_timestamp": "2025-12-08T10:30:00-05:00",
+      "negative_label_path": "validation/m7/acquisition/newly-sourced-batch-07.json",
+      "negative_label_recorded": false,
+      "normalization_path": null,
+      "single_asset_evidence_path": null,
+      "single_asset_status": "PENDING",
+      "stratum": "CONFERENCE_OTHER",
+      "ticker": "CRVS",
+      "timestamp_evidence_path": null,
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-38.json",
+      "universe_status": "PASS"
+    },
+    {
       "acquisition_path": "validation/m7/acquisition/newly-sourced-batch-06.json",
       "candidate_id": "CO-2025-FATE-FT819ASH",
       "eligible_registry_status": "NOT_PROMOTED",
@@ -486,6 +504,24 @@
       "timestamp_evidence_path": null,
       "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-37.json",
       "universe_status": "FAIL"
+    },
+    {
+      "acquisition_path": "validation/m7/acquisition/newly-sourced-batch-07.json",
+      "candidate_id": "CO-2025-GERN-RYTELOASH",
+      "eligible_registry_status": "NOT_PROMOTED",
+      "financing_evidence_path": null,
+      "financing_status": "PENDING",
+      "first_public_timestamp": "2025-12-08T08:02:00-05:00",
+      "negative_label_path": "validation/m7/acquisition/newly-sourced-batch-07.json",
+      "negative_label_recorded": false,
+      "normalization_path": null,
+      "single_asset_evidence_path": null,
+      "single_asset_status": "PENDING",
+      "stratum": "CONFERENCE_OTHER",
+      "ticker": "GERN",
+      "timestamp_evidence_path": null,
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-38.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/conference-other-primary-batch-01.json",

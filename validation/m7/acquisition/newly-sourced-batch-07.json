@@ -1,0 +1,68 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "role": "NEWLY_SOURCED_CANDIDATES_POST_HANDOFF",
+  "generated_at": "2026-09-16",
+  "sourcing_note": "Second targeted pass at CONFERENCE_OTHER (buffer -2 after newly-sourced-batch-06). Searched specifically for issuer press releases using present/past-tense 'presents'/'presented ... today' language tied to an ASH 2025 oral or poster session, as opposed to the 'to present' forward-looking teasers issued weeks ahead of the conference that were repeatedly discarded in batch-06. Both candidates below are fresh issuers (not previously used anywhere in the CONFERENCE_OTHER pool, and distinct from AUTL, which is at its frozen 5-event issuer cap): Corvus Pharmaceuticals (CRVS) and Geron Corporation (GERN). Deduplicated against the full existing ticker/candidate_id set.",
+  "events": [
+    {
+      "asset": "soquelitinib",
+      "candidate_id": "CO-2025-CRVS-SOQUELITINIBASH",
+      "cik": "1626971",
+      "clinical_phase": "PHASE_1",
+      "cohort_frozen": false,
+      "company": "Corvus Pharmaceuticals, Inc.",
+      "first_public_date": "2025-12-08",
+      "first_public_timestamp": "2025-12-08T10:30:00-05:00",
+      "indication": "relapsed/refractory peripheral T cell lymphoma and other T cell lymphomas",
+      "negative_event_candidate": false,
+      "outcome_inspected_for_selection": false,
+      "promotion_blockers": [
+        "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+        "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+        "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+      ],
+      "proposed_catalyst_type": "CONF_DATA",
+      "proposed_primary_stratum": "CONFERENCE_OTHER",
+      "result_direction": "SUPPORTIVE_CONFERENCE_CLINICAL_DATA",
+      "source_role": "CONFERENCE_DATA_DISCLOSURE_CANDIDATE",
+      "source_type": "ISSUER_GLOBENEWSWIRE_RELEASE",
+      "source_url": "https://www.globenewswire.com/news-release/2025/12/08/3201702/0/en/corvus-pharmaceuticals-presents-final-data-from-soquelitinib-phase-1-1b-t-cell-lymphoma-trial.html",
+      "source_displayed_time": "December 08, 2025 10:30 ET",
+      "ticker": "CRVS",
+      "timestamp_precision": "EXACT_TO_MINUTE",
+      "notes": "Final Phase 1/1b data (200 mg BID cohort: median PFS 6.2 months, median OS 28.1 months) presented today in an oral session at the 67th ASH Annual Meeting & Exposition (Orlando, FL, Dec 6-9, 2025); release states explicitly 'today in an oral session'. Released 10:30 ET, during market hours, so the pre-event cutoff is the prior complete session (2025-12-05) per the DURING_MARKET_HOURS session rule."
+    },
+    {
+      "asset": "imetelstat (RYTELO)",
+      "candidate_id": "CO-2025-GERN-RYTELOASH",
+      "cik": "886744",
+      "clinical_phase": "APPROVED_LIFECYCLE_DATA",
+      "cohort_frozen": false,
+      "company": "Geron Corporation",
+      "first_public_date": "2025-12-08",
+      "first_public_timestamp": "2025-12-08T08:02:00-05:00",
+      "indication": "lower-risk myelodysplastic syndromes (LR-MDS) and myelofibrosis",
+      "negative_event_candidate": false,
+      "outcome_inspected_for_selection": false,
+      "promotion_blockers": [
+        "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+        "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+        "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE",
+        "VERIFY_CLINICAL_PHASE_CLASSIFICATION_FOR_POST_APPROVAL_LIFECYCLE_DATA"
+      ],
+      "proposed_catalyst_type": "CONF_DATA",
+      "proposed_primary_stratum": "CONFERENCE_OTHER",
+      "result_direction": "SUPPORTIVE_CONFERENCE_CLINICAL_DATA",
+      "source_role": "CONFERENCE_DATA_DISCLOSURE_CANDIDATE",
+      "source_type": "ISSUER_GLOBENEWSWIRE_RELEASE",
+      "source_url": "https://www.globenewswire.com/news-release/2025/12/08/3201506/35501/en/geron-corporation-presents-new-data-at-ash-2025-highlighting-the-relationship-between-treatment-emergent-cytopenias-and-clinical-benefit-of-rytelo-imetelstat-in-lower-risk-mds.html",
+      "source_displayed_time": "December 08, 2025 08:02 ET",
+      "ticker": "GERN",
+      "timestamp_precision": "EXACT_TO_MINUTE",
+      "notes": "New pooled IMerge analyses (oral presentation) and long-term follow-up data for RYTELO (imetelstat) presented same-day at ASH 2025 (Orlando, FL, Dec 6-9, 2025); release explicitly describes data 'presented at' the 2025 ASH Annual Meeting, dated the same calendar day as the conference session. Released 08:02 ET, pre-market, so the pre-event cutoff is the prior complete session (2025-12-05) per the PRE_MARKET session rule. RYTELO is Geron's approved commercial product; this is post-approval lifecycle/expanded-indication clinical data, not a pivotal or regulatory catalyst, so PHASE classification is flagged for promotion-time verification rather than assumed."
+    }
+  ]
+}
