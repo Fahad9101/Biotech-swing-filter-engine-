@@ -21,25 +21,25 @@ def test_committed_status_is_derived_and_pending_is_not_pass() -> None:
     assert (ROOT / module.OUTPUT).read_text() == module.render(status)
     assert (ROOT / module.ROWS_OUTPUT).read_text() == module.render(rows)
     assert status["candidate_counts"] == {
-        "total": 180,
-        "pass": 107,
+        "total": 183,
+        "pass": 110,
         "fail": 47,
         "pending": 26,
-        "not_yet_excluded": 133,
+        "not_yet_excluded": 136,
     }
     negative = status["negative_reserve"]
-    assert negative["not_yet_excluded"] == 32
-    assert negative["pass"] == 26
+    assert negative["not_yet_excluded"] == 35
+    assert negative["pass"] == 29
     assert negative["pending"] == 6
-    assert negative["maximum_provisional_buffer"] == -8
+    assert negative["maximum_provisional_buffer"] == -5
     assert negative["final_negative_quota_satisfied"] is False
     assert status["financing_reserve"]["pass"] == 20
     assert status["single_asset_reserve"]["pass"] == 20
     strata = status["strata"]
     assert strata["PHASE_3_PIVOTAL"]["requirement"] == 30
     assert strata["PHASE_3_PIVOTAL"]["pending"] == 0
-    assert strata["PHASE_3_PIVOTAL"]["pass"] == 27
-    assert strata["PHASE_3_PIVOTAL"]["maximum_provisional_buffer"] == -3
+    assert strata["PHASE_3_PIVOTAL"]["pass"] == 30
+    assert strata["PHASE_3_PIVOTAL"]["maximum_provisional_buffer"] == 0
     assert strata["REGULATORY"]["pass"] == 23
     assert strata["REGULATORY"]["pending"] == 15
     assert strata["REGULATORY"]["maximum_provisional_buffer"] == 8
