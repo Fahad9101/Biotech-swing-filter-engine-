@@ -33,7 +33,7 @@ def test_committed_status_is_derived_and_pending_is_not_pass() -> None:
     assert negative["pending"] == 2
     assert negative["maximum_provisional_buffer"] == 0
     assert negative["final_negative_quota_satisfied"] is False
-    assert status["financing_reserve"]["pass"] == 20
+    assert status["financing_reserve"]["pass"] == 21
     assert status["single_asset_reserve"]["pass"] == 20
     strata = status["strata"]
     assert strata["PHASE_3_PIVOTAL"]["requirement"] == 30

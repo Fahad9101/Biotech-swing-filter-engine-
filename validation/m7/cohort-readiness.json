@@ -27,11 +27,11 @@
   "eligible_authoritative_registry_count": 0,
   "financing_reserve": {
     "fail": 4,
-    "not_yet_excluded": 20,
-    "pass": 20,
+    "not_yet_excluded": 21,
+    "pass": 21,
     "pending": 0,
     "requirement": 20,
-    "total": 24
+    "total": 25
   },
   "generator": "python scripts/m7_reconcile_readiness.py",
   "holdout_2025_locked_events": 0,
@@ -106,7 +106,7 @@
   },
   "real_four_snapshot_reconstructions_complete": 0,
   "real_outcomes_complete": 0,
-  "reconciled_rows_sha256": "d45d8d1114cb72217260470cd280ecfbe010b0efbbd532a7ccd4deb2f2a75981",
+  "reconciled_rows_sha256": "519ab9306fb980a9a7ca234398ccf8f2c88c88ab87dbb769d02f9b37aa231415",
   "required_action": "Complete outcome-blind evidence promotion and review; do not freeze, inspect returns or merge based on reserve counts.",
   "required_minimum_events": 120,
   "rules_version": "BOE-1.0.0",
@@ -141,6 +141,7 @@
     "validation/m7/promotion/financing-evidence-ledger-01.json": "a8829c184803afbced970b1d290641800081bb13aaa35effbe146d0185c6b69c",
     "validation/m7/promotion/financing-evidence-ledger-02.json": "9d5e37e21e9e3ea4d05cb803151f3d34d53c1a1a9fb2571ce6973d366c72cfd9",
     "validation/m7/promotion/financing-evidence-ledger-03.json": "cdb95a491f33f607f7c0fbec05f62e9fcd66501ec1c2318ae8a2edf31f348bed",
+    "validation/m7/promotion/financing-evidence-ledger-04.json": "5d3478a7a122f184c6e2e194fc980a7dc92aaf7f0294bc0f62780e837b0918db",
     "validation/m7/promotion/first-public-availability-ledger-01.json": "ba0702db89c080f923433995f83fc16e2f2f7606ea0b44a564fcdc07202f4a89",
     "validation/m7/promotion/first-public-availability-ledger-02.json": "2ec953f839b8f1852db9f9232f243c5daa3aa73f69e975d930b6bef6b5da60c2",
     "validation/m7/promotion/first-public-availability-ledger-03.json": "1c1f232ac587c8eff4e24fd32ecc5cf3c3e6641a3c8010fe3745a6fdaaf4ea46",
