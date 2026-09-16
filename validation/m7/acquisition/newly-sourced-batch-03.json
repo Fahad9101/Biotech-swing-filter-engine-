@@ -1,0 +1,67 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "role": "NEWLY_SOURCED_CANDIDATES_POST_HANDOFF",
+  "generated_at": "2026-09-16",
+  "sourcing_note": "Sourced from FierceBiotech's 2024 clinical trial flops retrospective, which flagged Sage Therapeutics' dalzanemdor program as a 'trio of phase 2 failures across a stock-crushing seven-month run.' The Huntington's readout (DIMENSION, Nov 2024) was already added in an earlier batch; these two are the other members of the trio (Parkinson's PRECEDENT, April 2024; Alzheimer's LIGHTWAVE, October 2024). Chosen specifically because SAGE was already confirmed to clear the investability floor in two prior determinations, making these near-certain passes rather than speculative new-company bets - deliberately higher-confidence sourcing than betting on an unverified company. Deduplicated against the full existing ticker/candidate_id set (confirmed the FierceBiotech 'Losmapimod' 2024 entry is the same event as the already-processed P3-2024-FULC-REACH, not a new one).",
+  "events": [
+    {
+      "asset": "dalzanemdor (SAGE-718)",
+      "candidate_id": "NEG-P2-2024-SAGE-PRECEDENT",
+      "cik": "1597553",
+      "clinical_phase": "PHASE_2",
+      "cohort_frozen": false,
+      "company": "Sage Therapeutics, Inc.",
+      "first_public_date": "2024-04-17",
+      "first_public_timestamp": "2024-04-17T06:35:00-04:00",
+      "indication": "mild cognitive impairment associated with Parkinson's disease",
+      "negative_event_candidate": true,
+      "outcome_inspected_for_selection": false,
+      "promotion_blockers": [
+        "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+        "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+        "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+      ],
+      "proposed_catalyst_type": "CLIN_P2",
+      "proposed_primary_stratum": "PHASE_2_POC",
+      "result_direction": "NEGATIVE_PRIMARY",
+      "source_role": "FIRST_PUBLIC_RESULT_DISCLOSURE_CANDIDATE",
+      "source_type": "ISSUER_SEC_8K_EXHIBIT_991",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1597553/000119312524098524/d787749dex991.htm",
+      "corroborating_sec_accepted": "2024-04-17 06:35:32 ET (Form 8-K, CIK 0001597553, accession 0001193125-24-098524)",
+      "ticker": "SAGE",
+      "timestamp_precision": "EXACT_TO_MINUTE_SEC_ACCEPTANCE_PROXY",
+      "notes": "PRECEDENT study did not meet its primary endpoint (WAIS-IV Coding Test at Day 42). Company discontinued dalzanemdor in Parkinson's; the Huntington's and Alzheimer's readouts followed later in 2024 with the same negative outcome (see NEG-P2-2024-SAGE-LIGHTWAVE and the already-processed P2-2024-SAGE-DIMENSION)."
+    },
+    {
+      "asset": "dalzanemdor (SAGE-718)",
+      "candidate_id": "NEG-P2-2024-SAGE-LIGHTWAVE",
+      "cik": "1597553",
+      "clinical_phase": "PHASE_2",
+      "cohort_frozen": false,
+      "company": "Sage Therapeutics, Inc.",
+      "first_public_date": "2024-10-08",
+      "first_public_timestamp": "2024-10-08T06:37:00-04:00",
+      "indication": "mild cognitive impairment and mild dementia in Alzheimer's disease",
+      "negative_event_candidate": true,
+      "outcome_inspected_for_selection": false,
+      "promotion_blockers": [
+        "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+        "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+        "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+      ],
+      "proposed_catalyst_type": "CLIN_P2",
+      "proposed_primary_stratum": "PHASE_2_POC",
+      "result_direction": "NEGATIVE_PRIMARY",
+      "source_role": "FIRST_PUBLIC_RESULT_DISCLOSURE_CANDIDATE",
+      "source_type": "ISSUER_SEC_8K",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1597553/000119312524234111/d833930d8k.htm",
+      "corroborating_sec_accepted": "2024-10-08 06:37:30 ET (Form 8-K, CIK 0001597553, accession 0001193125-24-234111)",
+      "ticker": "SAGE",
+      "timestamp_precision": "EXACT_TO_MINUTE_SEC_ACCEPTANCE_PROXY",
+      "notes": "LIGHTWAVE study did not meet its primary endpoint (WAIS-IV Coding Test at Day 84). Company discontinued further dalzanemdor development in Alzheimer's disease - the third and final leg of the 2024 dalzanemdor failure trio alongside PRECEDENT (Parkinson's) and DIMENSION (Huntington's, already processed)."
+    }
+  ]
+}
