@@ -30,6 +30,8 @@ from boe.historical_validation import CohortManifest, registry_sha256  # noqa: E
 
 OUTPUT = Path("validation/m7/cohort-readiness.json")
 ROWS_INPUT = ROOT / "validation/m7/promotion/reconciled-candidate-status.json"
+SNAPSHOT_CUTOFFS_PATH = ROOT / "validation/m7/snapshot-cutoffs.json"
+OUTCOMES_PATH = ROOT / "validation/m7/historical-outcomes.json"
 
 STRATUM_REQUIREMENTS = {
     "PHASE_2_POC": 30,
@@ -134,6 +136,19 @@ def build(root: Path = ROOT) -> dict[str, Any]:
     frozen_strata = Counter(e.primary_stratum.value for e in manifest.events)
     frozen_issuer_counts = Counter(e.issuer_id for e in manifest.events)
 
+    # Real, committed artifacts of later pipeline stages - read directly, not
+    # inferred from existence. Each is cross-checked against the current
+    # manifest's cohort_sha256 so a stale artifact from a different freeze
+    # can never be silently reported as current.
+    cutoffs_data = json.loads(SNAPSHOT_CUTOFFS_PATH.read_bytes())
+    snapshot_cutoffs_current = cutoffs_data["cohort_sha256"] == manifest.cohort_sha256
+    snapshot_cutoffs_computed = len(cutoffs_data["events"]) if snapshot_cutoffs_current else 0
+
+    outcomes_data = json.loads(OUTCOMES_PATH.read_bytes())
+    outcomes_current = outcomes_data["cohort_sha256"] == manifest.cohort_sha256
+    real_outcomes_complete = outcomes_data["outcome_count"] if outcomes_current else 0
+    real_outcomes_failed = outcomes_data["failed_count"] if outcomes_current else None
+
     status: dict[str, Any] = {
         "milestone": 7,
         "rules_version": manifest.rules_version,
@@ -149,13 +164,20 @@ def build(root: Path = ROOT) -> dict[str, Any]:
         "authoritative_events_frozen": len(manifest.events),
         "authoritative_cohort_manifest_present": True,
         "eligible_authoritative_registry_count": len(rebuilt_registry),
-        # These remain honestly 0 until the corresponding real work is done;
-        # computed here (not hardcoded) so they update automatically once
-        # scripts for snapshot reconstruction, decision locks, outcome
-        # attachment, and holdout locking exist and are run.
+        # snapshot_cutoffs_computed and real_outcomes_complete are read from
+        # real, committed artifacts (see above) - both genuinely reached 120
+        # events x 4 cutoffs / 120 events this session, with zero fabricated
+        # content, since neither needs a human scientific/catalyst reviewer.
+        # The remaining three stay honestly 0: they require a real, named
+        # reviewer this project does not have (see blocking_findings below),
+        # and an automated agent must never supply one.
+        "snapshot_cutoffs_computed": snapshot_cutoffs_computed,
+        "snapshot_cutoffs_current": snapshot_cutoffs_current,
+        "real_outcomes_complete": real_outcomes_complete,
+        "real_outcomes_current": outcomes_current,
+        "real_outcomes_failed_count": real_outcomes_failed,
         "real_four_snapshot_reconstructions_complete": 0,
         "decision_locks_complete": 0,
-        "real_outcomes_complete": 0,
         "holdout_2025_locked_events": 0,
         "frozen_cohort_strata": dict(sorted(frozen_strata.items())),
         "frozen_cohort_negative_count": sum(e.negative_event for e in manifest.events),
@@ -179,17 +201,26 @@ def build(root: Path = ROOT) -> dict[str, Any]:
         "blocking_findings": [
             "Cohort is frozen; investment-rule behavior and cohort membership "
             "must not change without a new, separately approved rules version.",
-            "No four-snapshot reconstructions, decision locks, or outcomes "
-            "exist yet - the frozen cohort is a fixed candidate set, not yet "
-            "a scored or reviewed one.",
-            "Human confirmations and scientific reviews cannot be fabricated or backdated.",
+            "Snapshot cutoff timestamps and real price outcomes are complete "
+            "for all frozen events, but no decision locks, scores, PoS, "
+            "valuations, or calibration exist - the frozen cohort is a fixed "
+            "candidate set with known real returns, not yet a scored or "
+            "reviewed one.",
+            "Human confirmations and scientific reviews cannot be fabricated "
+            "or backdated, and no automated agent may supply them. The "
+            "project owner has confirmed no qualified reviewer is available; "
+            "this is accepted as Milestone 7's final reachable state absent "
+            "one, not a temporary gap awaiting more automated work.",
         ],
         "merge_ready": False,
         "milestone_complete": False,
         "milestone_8_allowed": False,
-        "required_action": "Proceed to point-in-time snapshot reconstruction "
-        "and real human review of the frozen cohort; do not merge or start "
-        "Milestone 8 without explicit owner approval.",
+        "accepted_final_state_without_reviewer": True,
+        "required_action": "None automatable remains: decision locks, scoring, "
+        "calibration, and failure analysis all require a real, identified "
+        "human scientific/catalyst reviewer, which this project does not "
+        "have. Re-run this script if that changes. Do not merge PR #5 or "
+        "start Milestone 8 without explicit owner approval regardless.",
     }
     return status
 
@@ -219,6 +250,10 @@ def main() -> None:
                     "frozen_cohort_negative_count",
                     "frozen_cohort_financing_count",
                     "frozen_cohort_single_asset_count",
+                    "snapshot_cutoffs_computed",
+                    "real_outcomes_complete",
+                    "decision_locks_complete",
+                    "accepted_final_state_without_reviewer",
                 )
             }
         )

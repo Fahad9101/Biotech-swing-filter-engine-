@@ -1,10 +1,11 @@
 {
+  "accepted_final_state_without_reviewer": true,
   "authoritative_cohort_manifest_present": true,
   "authoritative_events_frozen": 120,
   "blocking_findings": [
     "Cohort is frozen; investment-rule behavior and cohort membership must not change without a new, separately approved rules version.",
-    "No four-snapshot reconstructions, decision locks, or outcomes exist yet - the frozen cohort is a fixed candidate set, not yet a scored or reviewed one.",
-    "Human confirmations and scientific reviews cannot be fabricated or backdated."
+    "Snapshot cutoff timestamps and real price outcomes are complete for all frozen events, but no decision locks, scores, PoS, valuations, or calibration exist - the frozen cohort is a fixed candidate set with known real returns, not yet a scored or reviewed one.",
+    "Human confirmations and scientific reviews cannot be fabricated or backdated, and no automated agent may supply them. The project owner has confirmed no qualified reviewer is available; this is accepted as Milestone 7's final reachable state absent one, not a temporary gap awaiting more automated work."
   ],
   "candidate_counts": {
     "fail": 49,
@@ -94,10 +95,12 @@
     "total": 72
   },
   "real_four_snapshot_reconstructions_complete": 0,
-  "real_outcomes_complete": 0,
+  "real_outcomes_complete": 120,
+  "real_outcomes_current": true,
+  "real_outcomes_failed_count": 0,
   "rebuilt_registry_sha256": "a75c778daf2fcbb4ace2f405889f0c5bf184e9e00ccdbd7586e1354d6226026b",
   "registry_unchanged_since_freeze": true,
-  "required_action": "Proceed to point-in-time snapshot reconstruction and real human review of the frozen cohort; do not merge or start Milestone 8 without explicit owner approval.",
+  "required_action": "None automatable remains: decision locks, scoring, calibration, and failure analysis all require a real, identified human scientific/catalyst reviewer, which this project does not have. Re-run this script if that changes. Do not merge PR #5 or start Milestone 8 without explicit owner approval regardless.",
   "required_minimum_events": 120,
   "rules_version": "BOE-1.0.0",
   "single_asset_reserve": {
@@ -108,6 +111,8 @@
     "requirement": 20,
     "total": 39
   },
+  "snapshot_cutoffs_computed": 120,
+  "snapshot_cutoffs_current": true,
   "strata": {
     "CONFERENCE_OTHER": {
       "fail": 15,

@@ -33,12 +33,20 @@ def test_committed_authoritative_status_is_derived_and_self_consistent() -> None
     assert status["frozen_cohort_max_issuer_count"] <= 5
     for stratum, requirement in module.STRATUM_REQUIREMENTS.items():
         assert status["frozen_cohort_strata"][stratum] >= requirement
-    # Milestone 7 is not complete just because the cohort is frozen - no
-    # snapshots, decision locks, outcomes, or holdout events exist yet.
+    # Snapshot cutoffs and real price outcomes are genuine, real, completed
+    # work - neither needs a human scientific/catalyst reviewer.
+    assert status["snapshot_cutoffs_computed"] == 120
+    assert status["snapshot_cutoffs_current"] is True
+    assert status["real_outcomes_complete"] == 120
+    assert status["real_outcomes_current"] is True
+    assert status["real_outcomes_failed_count"] == 0
+    # Milestone 7 is still not complete: decision locks, scores, PoS,
+    # calibration, and holdout locking all require a real human reviewer this
+    # project does not have, and no automated agent may supply one.
     assert status["real_four_snapshot_reconstructions_complete"] == 0
     assert status["decision_locks_complete"] == 0
-    assert status["real_outcomes_complete"] == 0
     assert status["holdout_2025_locked_events"] == 0
+    assert status["accepted_final_state_without_reviewer"] is True
     assert status["merge_ready"] is False
     assert status["milestone_complete"] is False
     assert status["milestone_8_allowed"] is False
