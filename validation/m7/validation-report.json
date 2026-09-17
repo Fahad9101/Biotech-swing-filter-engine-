@@ -33,13 +33,34 @@
         "n": 30
       }
     },
+    "brier_score_by_validation_period": {
+      "DIAGNOSTIC_2018_2022": {
+        "brier_beats_naive_prior": false,
+        "brier_score": 0.26820000000000005,
+        "n": 75,
+        "naive_prior_pct": 64.0
+      },
+      "HOLDOUT_2025": {
+        "brier_beats_naive_prior": true,
+        "brier_score": 0.18305555555555558,
+        "n": 9,
+        "naive_prior_pct": 55.56
+      },
+      "TEMPORAL_2023_2024": {
+        "brier_beats_naive_prior": false,
+        "brier_score": 0.22812500000000002,
+        "n": 36,
+        "naive_prior_pct": 66.67
+      }
+    },
     "cohort_sha256": "37f2e70dcc0626b40e97637e34056c9279ae9a5e6daf69d1c2f730e77c114e95",
     "event_count": 120,
     "generator": "python scripts/m7_build_objective_calibration.py",
     "limitations": [
       "Ground truth for calibration is the scientific/regulatory readout result (negative_event, inverted), not a market outcome - it measures whether the PoS number tracks catalyst success, not whether following it would have been profitable.",
       "This methodology has no adjustment layer, gates, valuation, or classification - it cannot be compared to BOE-1.0.0's own acceptance criteria (VALIDATION-AND-MILESTONES.md 5.2-5.3), which assume a full scored decision this project does not have.",
-      "The author of this methodology had already seen this cohort's aggregate outcome rates (27 severe losses, 31 swing successes of 120) before designing it. The prior table is BOE-1.0.0's own frozen, pre-existing values, not fitted to this cohort, but perfect blinding cannot be claimed."
+      "The author of this methodology had already seen this cohort's aggregate outcome rates (27 severe losses, 31 swing successes of 120) before designing it. The prior table is BOE-1.0.0's own frozen, pre-existing values, not fitted to this cohort, but perfect blinding cannot be claimed.",
+      "brier_score_by_validation_period reports the 2025 holdout period's numbers for completeness only, per VALIDATION-AND-MILESTONES.md section 6's own discipline - they are not used to justify any change to the methodology here, and none is proposed."
     ],
     "methodology": "src/boe/objective_pos_methodology.py",
     "naive_prior_pct": 64.17,
@@ -1430,7 +1451,7 @@
       "xbi_relative_t20_pct": 7.339871443224101
     }
   ],
-  "code_sha": "2768c7c591ff5f36c8fd7eb97259e8b6b24adaeb",
+  "code_sha": "9802d5d89ff24008eef3f5c77ba64851c1b00fee",
   "cohort_flow": {
     "event_count": 120,
     "financing_count": 38,
@@ -1455,6 +1476,7 @@
     "Ground truth for calibration is the scientific/regulatory readout result (negative_event, inverted), not a market outcome - it measures whether the PoS number tracks catalyst success, not whether following it would have been profitable.",
     "This methodology has no adjustment layer, gates, valuation, or classification - it cannot be compared to BOE-1.0.0's own acceptance criteria (VALIDATION-AND-MILESTONES.md 5.2-5.3), which assume a full scored decision this project does not have.",
     "The author of this methodology had already seen this cohort's aggregate outcome rates (27 severe losses, 31 swing successes of 120) before designing it. The prior table is BOE-1.0.0's own frozen, pre-existing values, not fitted to this cohort, but perfect blinding cannot be claimed.",
+    "brier_score_by_validation_period reports the 2025 holdout period's numbers for completeness only, per VALIDATION-AND-MILESTONES.md section 6's own discipline - they are not used to justify any change to the methodology here, and none is proposed.",
     "No point-in-time financial (cash/runway/dilution), technical (price/volume/relative-strength), or valuation (rNPV) reconstruction was performed for any event; BOE-1.0.0's CASH_DILUTION, VALUATION, TECHNICAL, OWNERSHIP, and SENTIMENT factors were never computed.",
     "No decision was locked before outcomes were known, because no decision (in the BOE-1.0.0 sense of a scored, classified, gated HistoricalDecisionLock) was ever produced - PoS estimates were computed from catalyst_type alone, which involves no outcome-dependent judgment, but this report's author did already know this cohort's real outcomes throughout.",
     "This report validates a substitute methodology built explicitly because no qualified human reviewer was available (docs/M7-HUMAN-REVIEW-BLOCKER.md) - it is not evidence that BOE-1.0.0 itself, as originally specified, does or does not work."
@@ -1463,6 +1485,7 @@
     "definition": "False positive: top PoS quintile with T+20 return <= -20.0%. False negative: bottom PoS quintile with MFE >= 40.0%. Adapted from VALIDATION-AND-MILESTONES.md section 7 by ranking on objective PoS quintile in place of a BOE-1.0.0 classification this project does not have.",
     "false_negatives": [
       {
+        "catalyst_type": "CONF_DATA",
         "categories_not_assessed": [
           "source/data failure",
           "catalyst timing failure",
@@ -1482,6 +1505,7 @@
         "pos_mid_pct": 40.0
       },
       {
+        "catalyst_type": "CLIN_P2",
         "categories_not_assessed": [
           "source/data failure",
           "catalyst timing failure",
@@ -1501,6 +1525,7 @@
         "pos_mid_pct": 40.0
       },
       {
+        "catalyst_type": "CLIN_P2",
         "categories_not_assessed": [
           "source/data failure",
           "catalyst timing failure",
@@ -1520,6 +1545,7 @@
         "pos_mid_pct": 40.0
       },
       {
+        "catalyst_type": "CLIN_P2",
         "categories_not_assessed": [
           "source/data failure",
           "catalyst timing failure",
@@ -1539,6 +1565,7 @@
         "pos_mid_pct": 40.0
       },
       {
+        "catalyst_type": "CLIN_P2",
         "categories_not_assessed": [
           "source/data failure",
           "catalyst timing failure",
@@ -1558,6 +1585,7 @@
         "pos_mid_pct": 40.0
       },
       {
+        "catalyst_type": "CLIN_P2",
         "categories_not_assessed": [
           "source/data failure",
           "catalyst timing failure",
@@ -1579,6 +1607,7 @@
     ],
     "false_positives": [
       {
+        "catalyst_type": "REG_DECISION",
         "categories_not_assessed": [
           "source/data failure",
           "catalyst timing failure",
@@ -1598,6 +1627,7 @@
         "return_t20_pct": -30.454658798104894
       },
       {
+        "catalyst_type": "REG_DECISION",
         "categories_not_assessed": [
           "source/data failure",
           "catalyst timing failure",
@@ -1617,6 +1647,7 @@
         "return_t20_pct": -33.895731398683985
       },
       {
+        "catalyst_type": "REG_DECISION",
         "categories_not_assessed": [
           "source/data failure",
           "catalyst timing failure",
@@ -1636,6 +1667,7 @@
         "return_t20_pct": -40.76655052264808
       },
       {
+        "catalyst_type": "REG_DECISION",
         "categories_not_assessed": [
           "source/data failure",
           "catalyst timing failure",
@@ -1655,6 +1687,7 @@
         "return_t20_pct": -22.734138972809667
       },
       {
+        "catalyst_type": "REG_DECISION",
         "categories_not_assessed": [
           "source/data failure",
           "catalyst timing failure",
@@ -1674,6 +1707,7 @@
         "return_t20_pct": -66.11570247933884
       },
       {
+        "catalyst_type": "REG_DECISION",
         "categories_not_assessed": [
           "source/data failure",
           "catalyst timing failure",
@@ -1693,6 +1727,7 @@
         "return_t20_pct": -27.979539641943735
       },
       {
+        "catalyst_type": "REG_DECISION",
         "categories_not_assessed": [
           "source/data failure",
           "catalyst timing failure",
@@ -1712,7 +1747,8 @@
         "return_t20_pct": -71.51767151767152
       }
     ],
-    "note": "Per-event categories beyond PoS calibration are NOT assessed: assigning them (source failure, timing failure, unmodeled event, etc.) for a specific real event without new per-event research would be fabrication, not analysis. Investigating this register further is real, doable follow-up work - deliberately not attempted here rather than guessed at."
+    "note": "Beyond the structural pattern above, per-event categories are NOT assessed: assigning them (source failure, timing failure, unmodeled event, etc.) for a specific real event without new per-event research would be fabrication, not analysis. Investigating any single event further is real, doable follow-up work - deliberately not attempted here rather than guessed at.",
+    "structural_pattern": "All 7 false positives are ['REG_DECISION'] events, and all 6 false negatives are ['CLIN_P2', 'CONF_DATA'] events. This is not a coincidence needing per-event research to explain: this methodology assigns every event of a given catalyst_type the same prior (e.g. every REG_DECISION gets 75%, every CLIN_P2 gets 40%), so it cannot distinguish an FDA approval from a CRL within REG_DECISION, or a strong Phase 2 readout from a weak one within CLIN_P2 - both land in the same PoS band regardless of which it turns out to be. This single structural limitation - a per-catalyst-type constant, not a per-event judgment - accounts for the entire false-positive and false-negative register and is the direct, evidenced cause of the calibration failure in objective-calibration-report.json. It is the one root cause this script CAN support without new per-event research, because it is visible directly in already-computed data, not inferred about any single company."
   },
   "generator": "python scripts/m7_build_validation_report.py",
   "manifest_frozen_at": "2026-09-17T12:09:29.781712+03:00",

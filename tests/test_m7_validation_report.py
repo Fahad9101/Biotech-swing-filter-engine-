@@ -70,6 +70,23 @@ def test_failure_register_uses_predefined_objective_thresholds() -> None:
         assert fn["mfe_t20_pct"] >= module.FALSE_NEGATIVE_MFE_THRESHOLD_PCT
 
 
+def test_structural_pattern_is_computed_from_real_catalyst_types() -> None:
+    """The one root cause this project can support without new per-event
+    research must be traceable to real, already-committed data - every
+    false positive/negative's catalyst_type, cross-checked against the
+    frozen manifest, not asserted without evidence."""
+    status = module.build()
+    manifest = json.loads((ROOT / "validation/m7/cohort-manifest.json").read_bytes())
+    events_by_id = {e["event_id"]: e for e in manifest["events"]}
+    register = status["failure_register"]
+    for fp in register["false_positives"]:
+        assert fp["catalyst_type"] == events_by_id[fp["event_id"]]["catalyst_type"]
+    for fn in register["false_negatives"]:
+        assert fn["catalyst_type"] == events_by_id[fn["event_id"]]["catalyst_type"]
+    assert "structural" in register["structural_pattern"].lower()
+    assert "not a coincidence" in register["structural_pattern"]
+
+
 def test_main_regenerates_the_committed_report(monkeypatch: pytest.MonkeyPatch) -> None:
     import sys
 

@@ -31,13 +31,14 @@ import argparse
 import json
 import statistics
 import sys
+from datetime import date
 from pathlib import Path
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
-from boe.historical_validation import brier_score, wilson_rate  # noqa: E402
+from boe.historical_validation import brier_score, validation_period, wilson_rate  # noqa: E402
 
 MANIFEST_PATH = ROOT / "validation/m7/cohort-manifest.json"
 POS_PATH = ROOT / "validation/m7/objective-pos-assessments.json"
@@ -115,10 +116,12 @@ def build() -> dict[str, Any]:
         event = events_by_id[event_id]
         pos = pos_by_id[event_id]
         outcome = outcomes_by_id[event_id]
+        event_date = date.fromisoformat(event["event_at"][:10])
         rows.append(
             {
                 "event_id": event_id,
                 "primary_stratum": event["primary_stratum"],
+                "validation_period": validation_period(event_date).value,
                 "pos_mid_pct": float(pos["mid_pct"]),
                 # Ground truth for PoS calibration: the real, already-curated
                 # negative_event label, inverted. Not derived here.
@@ -149,6 +152,25 @@ def build() -> dict[str, Any]:
             ),
         }
 
+    # VALIDATION-AND-MILESTONES.md section 6 train/calibration/holdout
+    # discipline: 2018-2022 is diagnostic-only, 2023-2024 is temporal
+    # validation, and 2025 is the untouched final holdout. Reported factually
+    # here for completeness; per section 6 the holdout period's numbers are
+    # not used to justify any change to the methodology (none is proposed).
+    periods: dict[str, Any] = {}
+    for period in sorted({r["validation_period"] for r in rows}):
+        period_rows = [r for r in rows if r["validation_period"] == period]
+        period_observed = tuple(r["observed_success"] for r in period_rows)
+        period_predicted = tuple(r["pos_mid_pct"] for r in period_rows)
+        period_naive = statistics.mean(period_observed) * 100.0 if period_rows else 0.0
+        periods[period] = {
+            "n": len(period_rows),
+            "brier_score": brier_score(period_predicted, period_observed),
+            "naive_prior_pct": round(period_naive, 2),
+            "brier_beats_naive_prior": brier_score(period_predicted, period_observed)
+            <= brier_score(tuple(period_naive for _ in period_rows), period_observed),
+        }
+
     ordered_by_pos = sorted(rows, key=lambda r: (r["pos_mid_pct"], r["event_id"]))
     quintile = max(1, len(ordered_by_pos) // 5)
     bottom = ordered_by_pos[:quintile]
@@ -168,6 +190,7 @@ def build() -> dict[str, Any]:
         "base_prior_brier_score": base_brier,
         "brier_beats_naive_prior": brier <= base_brier,
         "brier_score_by_stratum": strata,
+        "brier_score_by_validation_period": periods,
         "pos_band_calibration": _band_calibration(rows),
         "top_quintile_pos_swing_success": top_swing.model_dump(mode="json"),
         "bottom_quintile_pos_swing_success": bottom_swing.model_dump(mode="json"),
@@ -187,6 +210,11 @@ def build() -> dict[str, Any]:
             "120) before designing it. The prior table is BOE-1.0.0's own "
             "frozen, pre-existing values, not fitted to this cohort, but "
             "perfect blinding cannot be claimed.",
+            "brier_score_by_validation_period reports the 2025 holdout "
+            "period's numbers for completeness only, per "
+            "VALIDATION-AND-MILESTONES.md section 6's own discipline - they "
+            "are not used to justify any change to the methodology here, and "
+            "none is proposed.",
         ],
     }
 

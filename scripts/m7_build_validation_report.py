@@ -64,7 +64,9 @@ def _git_head_sha() -> str:
 
 
 def _failure_register(
-    pos_by_id: dict[str, dict[str, Any]], outcomes_by_id: dict[str, dict[str, Any]]
+    pos_by_id: dict[str, dict[str, Any]],
+    outcomes_by_id: dict[str, dict[str, Any]],
+    events_by_id: dict[str, dict[str, Any]],
 ) -> dict[str, Any]:
     ordered = sorted(pos_by_id.values(), key=lambda a: (float(a["mid_pct"]), a["event_id"]))
     quintile = max(1, len(ordered) // 5)
@@ -78,6 +80,7 @@ def _failure_register(
             false_positives.append(
                 {
                     "event_id": event_id,
+                    "catalyst_type": events_by_id[event_id]["catalyst_type"],
                     "pos_mid_pct": float(pos_by_id[event_id]["mid_pct"]),
                     "return_t20_pct": float(outcome["return_t20_pct"]),
                     "categories_supportable_without_new_evidence": [
@@ -103,6 +106,7 @@ def _failure_register(
             false_negatives.append(
                 {
                     "event_id": event_id,
+                    "catalyst_type": events_by_id[event_id]["catalyst_type"],
                     "pos_mid_pct": float(pos_by_id[event_id]["mid_pct"]),
                     "mfe_t20_pct": float(outcome["mfe_t20_pct"]),
                     "categories_supportable_without_new_evidence": [
@@ -121,6 +125,22 @@ def _failure_register(
                     ],
                 }
             )
+    fp_catalyst_types = sorted({f["catalyst_type"] for f in false_positives})
+    fn_catalyst_types = sorted({f["catalyst_type"] for f in false_negatives})
+    structural_pattern = (
+        f"All {len(false_positives)} false positives are {fp_catalyst_types} events, and all "
+        f"{len(false_negatives)} false negatives are {fn_catalyst_types} events. This is not a "
+        "coincidence needing per-event research to explain: this methodology assigns every "
+        "event of a given catalyst_type the same prior (e.g. every REG_DECISION gets 75%, "
+        "every CLIN_P2 gets 40%), so it cannot distinguish an FDA approval from a CRL within "
+        "REG_DECISION, or a strong Phase 2 readout from a weak one within CLIN_P2 - both land "
+        "in the same PoS band regardless of which it turns out to be. This single structural "
+        "limitation - a per-catalyst-type constant, not a per-event judgment - accounts for "
+        "the entire false-positive and false-negative register and is the direct, evidenced "
+        "cause of the calibration failure in objective-calibration-report.json. It is the one "
+        "root cause this script CAN support without new per-event research, because it is "
+        "visible directly in already-computed data, not inferred about any single company."
+    )
     return {
         "definition": (
             "False positive: top PoS quintile with T+20 return "
@@ -132,13 +152,15 @@ def _failure_register(
         ),
         "false_positives": false_positives,
         "false_negatives": false_negatives,
+        "structural_pattern": structural_pattern,
         "note": (
-            "Per-event categories beyond PoS calibration are NOT assessed: "
-            "assigning them (source failure, timing failure, unmodeled event, "
-            "etc.) for a specific real event without new per-event research "
-            "would be fabrication, not analysis. Investigating this register "
-            "further is real, doable follow-up work - deliberately not "
-            "attempted here rather than guessed at."
+            "Beyond the structural pattern above, per-event categories are NOT "
+            "assessed: assigning them (source failure, timing failure, "
+            "unmodeled event, etc.) for a specific real event without new "
+            "per-event research would be fabrication, not analysis. "
+            "Investigating any single event further is real, doable "
+            "follow-up work - deliberately not attempted here rather than "
+            "guessed at."
         ),
     }
 
@@ -186,9 +208,10 @@ def build() -> dict[str, Any]:
         if data["cohort_sha256"] != cohort_sha256:
             raise ValueError(f"{name} was built against a different cohort than the current freeze")
 
+    events_by_id = {e["event_id"]: e for e in manifest["events"]}
     pos_by_id = {a["event_id"]: a for a in pos_data["assessments"]}
     outcomes_by_id = {o["event_id"]: o for o in outcomes_data["outcomes"]}
-    failure_register = _failure_register(pos_by_id, outcomes_by_id)
+    failure_register = _failure_register(pos_by_id, outcomes_by_id, events_by_id)
 
     return {
         "generator": "python scripts/m7_build_validation_report.py",

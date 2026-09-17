@@ -31,13 +31,34 @@
       "n": 30
     }
   },
+  "brier_score_by_validation_period": {
+    "DIAGNOSTIC_2018_2022": {
+      "brier_beats_naive_prior": false,
+      "brier_score": 0.26820000000000005,
+      "n": 75,
+      "naive_prior_pct": 64.0
+    },
+    "HOLDOUT_2025": {
+      "brier_beats_naive_prior": true,
+      "brier_score": 0.18305555555555558,
+      "n": 9,
+      "naive_prior_pct": 55.56
+    },
+    "TEMPORAL_2023_2024": {
+      "brier_beats_naive_prior": false,
+      "brier_score": 0.22812500000000002,
+      "n": 36,
+      "naive_prior_pct": 66.67
+    }
+  },
   "cohort_sha256": "37f2e70dcc0626b40e97637e34056c9279ae9a5e6daf69d1c2f730e77c114e95",
   "event_count": 120,
   "generator": "python scripts/m7_build_objective_calibration.py",
   "limitations": [
     "Ground truth for calibration is the scientific/regulatory readout result (negative_event, inverted), not a market outcome - it measures whether the PoS number tracks catalyst success, not whether following it would have been profitable.",
     "This methodology has no adjustment layer, gates, valuation, or classification - it cannot be compared to BOE-1.0.0's own acceptance criteria (VALIDATION-AND-MILESTONES.md 5.2-5.3), which assume a full scored decision this project does not have.",
-    "The author of this methodology had already seen this cohort's aggregate outcome rates (27 severe losses, 31 swing successes of 120) before designing it. The prior table is BOE-1.0.0's own frozen, pre-existing values, not fitted to this cohort, but perfect blinding cannot be claimed."
+    "The author of this methodology had already seen this cohort's aggregate outcome rates (27 severe losses, 31 swing successes of 120) before designing it. The prior table is BOE-1.0.0's own frozen, pre-existing values, not fitted to this cohort, but perfect blinding cannot be claimed.",
+    "brier_score_by_validation_period reports the 2025 holdout period's numbers for completeness only, per VALIDATION-AND-MILESTONES.md section 6's own discipline - they are not used to justify any change to the methodology here, and none is proposed."
   ],
   "methodology": "src/boe/objective_pos_methodology.py",
   "naive_prior_pct": 64.17,

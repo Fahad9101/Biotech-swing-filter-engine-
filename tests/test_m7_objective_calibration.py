@@ -53,6 +53,24 @@ def test_band_calibration_covers_every_event_once() -> None:
     assert total == status["event_count"]
 
 
+def test_validation_periods_partition_the_full_cohort() -> None:
+    """VALIDATION-AND-MILESTONES.md section 6: 2018-2022 diagnostic,
+    2023-2024 temporal validation, 2025 holdout - every event must fall in
+    exactly one period, and the three must sum to the full cohort."""
+    status = module.build()
+    periods = status["brier_score_by_validation_period"]
+    assert set(periods) <= {"DIAGNOSTIC_2018_2022", "TEMPORAL_2023_2024", "HOLDOUT_2025"}
+    assert sum(p["n"] for p in periods.values()) == status["event_count"]
+    for period in periods.values():
+        assert period["n"] > 0
+
+
+def test_holdout_period_brier_is_computed_but_not_prescriptive() -> None:
+    status = module.build()
+    joined = " ".join(status["limitations"])
+    assert "not used to justify any change" in joined
+
+
 def test_limitations_disclose_outcome_awareness_and_scope() -> None:
     status = module.build()
     joined = " ".join(status["limitations"])
