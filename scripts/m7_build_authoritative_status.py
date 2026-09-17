@@ -32,6 +32,9 @@ OUTPUT = Path("validation/m7/cohort-readiness.json")
 ROWS_INPUT = ROOT / "validation/m7/promotion/reconciled-candidate-status.json"
 SNAPSHOT_CUTOFFS_PATH = ROOT / "validation/m7/snapshot-cutoffs.json"
 OUTCOMES_PATH = ROOT / "validation/m7/historical-outcomes.json"
+OBJECTIVE_POS_PATH = ROOT / "validation/m7/objective-pos-assessments.json"
+CALIBRATION_PATH = ROOT / "validation/m7/objective-calibration-report.json"
+VALIDATION_REPORT_PATH = ROOT / "validation/m7/validation-report.json"
 
 STRATUM_REQUIREMENTS = {
     "PHASE_2_POC": 30,
@@ -149,6 +152,23 @@ def build(root: Path = ROOT) -> dict[str, Any]:
     real_outcomes_complete = outcomes_data["outcome_count"] if outcomes_current else 0
     real_outcomes_failed = outcomes_data["failed_count"] if outcomes_current else None
 
+    # The review-free objective PoS substitute methodology (src/boe/
+    # objective_pos_methodology.py) and its calibration/report against real
+    # outcomes - built after the project owner explicitly declined to be, or
+    # arrange, a real human scientific/catalyst reviewer and chose this path
+    # instead of leaving M7 at cohort+outcomes only (see
+    # docs/M7-OBJECTIVE-METHODOLOGY.md). None of this is a BOE-1.0.0
+    # HistoricalDecisionLock or a claim that BOE-1.0.0 itself was scored.
+    objective_pos_data = json.loads(OBJECTIVE_POS_PATH.read_bytes())
+    objective_pos_current = objective_pos_data["cohort_sha256"] == manifest.cohort_sha256
+    objective_pos_complete = objective_pos_data["assessment_count"] if objective_pos_current else 0
+
+    calibration_data = json.loads(CALIBRATION_PATH.read_bytes())
+    calibration_current = calibration_data["cohort_sha256"] == manifest.cohort_sha256
+
+    validation_report_data = json.loads(VALIDATION_REPORT_PATH.read_bytes())
+    validation_report_current = validation_report_data["cohort_sha256"] == manifest.cohort_sha256
+
     status: dict[str, Any] = {
         "milestone": 7,
         "rules_version": manifest.rules_version,
@@ -176,6 +196,20 @@ def build(root: Path = ROOT) -> dict[str, Any]:
         "real_outcomes_complete": real_outcomes_complete,
         "real_outcomes_current": outcomes_current,
         "real_outcomes_failed_count": real_outcomes_failed,
+        "objective_pos_methodology_version": objective_pos_data.get("methodology"),
+        "objective_pos_assessments_complete": objective_pos_complete,
+        "objective_pos_current": objective_pos_current,
+        "objective_calibration_current": calibration_current,
+        "objective_calibration_brier_beats_naive_prior": calibration_data.get(
+            "brier_beats_naive_prior"
+        ),
+        "objective_validation_report_current": validation_report_current,
+        "objective_validation_report_recommendation": validation_report_data.get("recommendation"),
+        # These stay honestly 0/absent: BOE-1.0.0 itself (score, classification,
+        # gates, valuation, a real HistoricalDecisionLock) was never run for
+        # any event, because that requires a real human scientific/catalyst
+        # reviewer this project does not have. The objective PoS fields above
+        # are a real but explicitly different, reduced substitute - not this.
         "real_four_snapshot_reconstructions_complete": 0,
         "decision_locks_complete": 0,
         "holdout_2025_locked_events": 0,
@@ -201,26 +235,31 @@ def build(root: Path = ROOT) -> dict[str, Any]:
         "blocking_findings": [
             "Cohort is frozen; investment-rule behavior and cohort membership "
             "must not change without a new, separately approved rules version.",
-            "Snapshot cutoff timestamps and real price outcomes are complete "
-            "for all frozen events, but no decision locks, scores, PoS, "
-            "valuations, or calibration exist - the frozen cohort is a fixed "
-            "candidate set with known real returns, not yet a scored or "
-            "reviewed one.",
-            "Human confirmations and scientific reviews cannot be fabricated "
-            "or backdated, and no automated agent may supply them. The "
-            "project owner has confirmed no qualified reviewer is available; "
-            "this is accepted as Milestone 7's final reachable state absent "
-            "one, not a temporary gap awaiting more automated work.",
+            "BOE-1.0.0 itself was never scored end-to-end for any event: its "
+            "SCIENCE factor and PoS calculation require a ManualScienceReview "
+            "only a real human scientific/catalyst reviewer can honestly "
+            "produce, and no automated agent may supply or impersonate one "
+            "(docs/M7-HUMAN-REVIEW-BLOCKER.md). No HistoricalDecisionLock "
+            "exists or ever will for this cohort under BOE-1.0.0 as specified, "
+            "absent a real reviewer.",
+            "The project owner explicitly chose to cancel that requirement "
+            "and accept a genuinely different, review-free objective PoS "
+            "substitute methodology instead of leaving M7 at cohort+outcomes "
+            "only (docs/M7-OBJECTIVE-METHODOLOGY.md). That substitute is "
+            "real, calibrated against real outcomes, and honestly reported - "
+            "including that it does not beat a naive baseline and should not "
+            "inform live decisions in its current form "
+            "(validation/m7/validation-report.json).",
         ],
         "merge_ready": False,
         "milestone_complete": False,
         "milestone_8_allowed": False,
         "accepted_final_state_without_reviewer": True,
-        "required_action": "None automatable remains: decision locks, scoring, "
-        "calibration, and failure analysis all require a real, identified "
-        "human scientific/catalyst reviewer, which this project does not "
-        "have. Re-run this script if that changes. Do not merge PR #5 or "
-        "start Milestone 8 without explicit owner approval regardless.",
+        "required_action": "BOE-1.0.0 proper remains permanently blocked on a real "
+        "human scientific/catalyst reviewer this project does not have; re-run "
+        "this script if that changes. The objective substitute methodology's own "
+        "recommendation is to recalibrate, not to use it live. Do not merge PR #5 "
+        "or start Milestone 8 without explicit owner approval regardless.",
     }
     return status
 
@@ -252,6 +291,8 @@ def main() -> None:
                     "frozen_cohort_single_asset_count",
                     "snapshot_cutoffs_computed",
                     "real_outcomes_complete",
+                    "objective_pos_assessments_complete",
+                    "objective_calibration_brier_beats_naive_prior",
                     "decision_locks_complete",
                     "accepted_final_state_without_reviewer",
                 )

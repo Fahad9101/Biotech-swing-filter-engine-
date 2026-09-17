@@ -4,8 +4,8 @@
   "authoritative_events_frozen": 120,
   "blocking_findings": [
     "Cohort is frozen; investment-rule behavior and cohort membership must not change without a new, separately approved rules version.",
-    "Snapshot cutoff timestamps and real price outcomes are complete for all frozen events, but no decision locks, scores, PoS, valuations, or calibration exist - the frozen cohort is a fixed candidate set with known real returns, not yet a scored or reviewed one.",
-    "Human confirmations and scientific reviews cannot be fabricated or backdated, and no automated agent may supply them. The project owner has confirmed no qualified reviewer is available; this is accepted as Milestone 7's final reachable state absent one, not a temporary gap awaiting more automated work."
+    "BOE-1.0.0 itself was never scored end-to-end for any event: its SCIENCE factor and PoS calculation require a ManualScienceReview only a real human scientific/catalyst reviewer can honestly produce, and no automated agent may supply or impersonate one (docs/M7-HUMAN-REVIEW-BLOCKER.md). No HistoricalDecisionLock exists or ever will for this cohort under BOE-1.0.0 as specified, absent a real reviewer.",
+    "The project owner explicitly chose to cancel that requirement and accept a genuinely different, review-free objective PoS substitute methodology instead of leaving M7 at cohort+outcomes only (docs/M7-OBJECTIVE-METHODOLOGY.md). That substitute is real, calibrated against real outcomes, and honestly reported - including that it does not beat a naive baseline and should not inform live decisions in its current form (validation/m7/validation-report.json)."
   ],
   "candidate_counts": {
     "fail": 49,
@@ -94,13 +94,20 @@
     "requirement": 40,
     "total": 72
   },
+  "objective_calibration_brier_beats_naive_prior": false,
+  "objective_calibration_current": true,
+  "objective_pos_assessments_complete": 120,
+  "objective_pos_current": true,
+  "objective_pos_methodology_version": "src/boe/objective_pos_methodology.py",
+  "objective_validation_report_current": true,
+  "objective_validation_report_recommendation": "PROPOSE RECALIBRATION IN A NEW BOE VERSION - the review-free PoS methodology as built does not beat a naive constant-rate baseline (Brier 0.2498 vs 0.2299) and does not rank correctly (top-quintile swing success 0.292 vs bottom-quintile 0.375); it is not a substitute for a genuine human scientific review and should not inform live decisions in its current form.",
   "real_four_snapshot_reconstructions_complete": 0,
   "real_outcomes_complete": 120,
   "real_outcomes_current": true,
   "real_outcomes_failed_count": 0,
   "rebuilt_registry_sha256": "a75c778daf2fcbb4ace2f405889f0c5bf184e9e00ccdbd7586e1354d6226026b",
   "registry_unchanged_since_freeze": true,
-  "required_action": "None automatable remains: decision locks, scoring, calibration, and failure analysis all require a real, identified human scientific/catalyst reviewer, which this project does not have. Re-run this script if that changes. Do not merge PR #5 or start Milestone 8 without explicit owner approval regardless.",
+  "required_action": "BOE-1.0.0 proper remains permanently blocked on a real human scientific/catalyst reviewer this project does not have; re-run this script if that changes. The objective substitute methodology's own recommendation is to recalibrate, not to use it live. Do not merge PR #5 or start Milestone 8 without explicit owner approval regardless.",
   "required_minimum_events": 120,
   "rules_version": "BOE-1.0.0",
   "single_asset_reserve": {

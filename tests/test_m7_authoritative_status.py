@@ -40,9 +40,19 @@ def test_committed_authoritative_status_is_derived_and_self_consistent() -> None
     assert status["real_outcomes_complete"] == 120
     assert status["real_outcomes_current"] is True
     assert status["real_outcomes_failed_count"] == 0
-    # Milestone 7 is still not complete: decision locks, scores, PoS,
-    # calibration, and holdout locking all require a real human reviewer this
-    # project does not have, and no automated agent may supply one.
+    # The review-free objective PoS substitute methodology is real and
+    # complete for all 120 events, but it is explicitly not BOE-1.0.0 and
+    # its own calibration report says it should not inform live decisions.
+    assert status["objective_pos_assessments_complete"] == 120
+    assert status["objective_pos_current"] is True
+    assert status["objective_calibration_current"] is True
+    assert status["objective_calibration_brier_beats_naive_prior"] is False
+    assert status["objective_validation_report_current"] is True
+    assert "RECALIBRATION" in status["objective_validation_report_recommendation"]
+    # Milestone 7 is still not complete: BOE-1.0.0 itself (score,
+    # classification, gates, a real HistoricalDecisionLock) was never run for
+    # any event, because that requires a real human reviewer this project
+    # does not have, and no automated agent may supply one.
     assert status["real_four_snapshot_reconstructions_complete"] == 0
     assert status["decision_locks_complete"] == 0
     assert status["holdout_2025_locked_events"] == 0
