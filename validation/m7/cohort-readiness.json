@@ -27,11 +27,11 @@
   "eligible_authoritative_registry_count": 0,
   "financing_reserve": {
     "fail": 4,
-    "not_yet_excluded": 27,
-    "pass": 27,
+    "not_yet_excluded": 50,
+    "pass": 50,
     "pending": 0,
     "requirement": 20,
-    "total": 31
+    "total": 54
   },
   "generator": "python scripts/m7_reconcile_readiness.py",
   "holdout_2025_locked_events": 0,
@@ -106,7 +106,7 @@
   },
   "real_four_snapshot_reconstructions_complete": 0,
   "real_outcomes_complete": 0,
-  "reconciled_rows_sha256": "f446b25fcb42ce85b18fac6fefd887bc5da6806ada668343d5af0f6707aa8c51",
+  "reconciled_rows_sha256": "96b836a2b42a3ea20f90f006e19043c3336ff479ef8b3f05ccc1104479e346d9",
   "required_action": "Complete outcome-blind evidence promotion and review; do not freeze, inspect returns or merge based on reserve counts.",
   "required_minimum_events": 120,
   "rules_version": "BOE-1.0.0",
@@ -150,6 +150,9 @@
     "validation/m7/promotion/financing-evidence-ledger-03.json": "cdb95a491f33f607f7c0fbec05f62e9fcd66501ec1c2318ae8a2edf31f348bed",
     "validation/m7/promotion/financing-evidence-ledger-04.json": "5d3478a7a122f184c6e2e194fc980a7dc92aaf7f0294bc0f62780e837b0918db",
     "validation/m7/promotion/financing-evidence-ledger-05.json": "62c1cdcd4375f3413ebfb79fb0e39f2f83b9059ab0d80078449684fb7048f51f",
+    "validation/m7/promotion/financing-evidence-ledger-06.json": "f71069dcd568b4709fa311eba8b962c1654d0b85a68e2f5e755a20d9f41acb37",
+    "validation/m7/promotion/financing-evidence-ledger-07.json": "6229bbbbabee77ab9bbe4c688640df858e554ef4f322d9332c40b4aa63318364",
+    "validation/m7/promotion/financing-evidence-ledger-08.json": "8f01d2685ee92182183d2db3d6613c0ad4acbae3a5e34e390f4395f598e9531e",
     "validation/m7/promotion/first-public-availability-ledger-01.json": "ba0702db89c080f923433995f83fc16e2f2f7606ea0b44a564fcdc07202f4a89",
     "validation/m7/promotion/first-public-availability-ledger-02.json": "2ec953f839b8f1852db9f9232f243c5daa3aa73f69e975d930b6bef6b5da60c2",
     "validation/m7/promotion/first-public-availability-ledger-03.json": "1c1f232ac587c8eff4e24fd32ecc5cf3c3e6641a3c8010fe3745a6fdaaf4ea46",
