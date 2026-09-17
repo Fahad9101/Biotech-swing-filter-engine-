@@ -1451,7 +1451,7 @@
       "xbi_relative_t20_pct": 7.339871443224101
     }
   ],
-  "code_sha": "9802d5d89ff24008eef3f5c77ba64851c1b00fee",
+  "code_sha": "575a6bee506e81c52fb5d28415962c1b57211feb",
   "cohort_flow": {
     "event_count": 120,
     "financing_count": 38,
@@ -1477,8 +1477,12 @@
     "This methodology has no adjustment layer, gates, valuation, or classification - it cannot be compared to BOE-1.0.0's own acceptance criteria (VALIDATION-AND-MILESTONES.md 5.2-5.3), which assume a full scored decision this project does not have.",
     "The author of this methodology had already seen this cohort's aggregate outcome rates (27 severe losses, 31 swing successes of 120) before designing it. The prior table is BOE-1.0.0's own frozen, pre-existing values, not fitted to this cohort, but perfect blinding cannot be claimed.",
     "brier_score_by_validation_period reports the 2025 holdout period's numbers for completeness only, per VALIDATION-AND-MILESTONES.md section 6's own discipline - they are not used to justify any change to the methodology here, and none is proposed.",
-    "No point-in-time financial (cash/runway/dilution), technical (price/volume/relative-strength), or valuation (rNPV) reconstruction was performed for any event; BOE-1.0.0's CASH_DILUTION, VALUATION, TECHNICAL, OWNERSHIP, and SENTIMENT factors were never computed.",
-    "No decision was locked before outcomes were known, because no decision (in the BOE-1.0.0 sense of a scored, classified, gated HistoricalDecisionLock) was ever produced - PoS estimates were computed from catalyst_type alone, which involves no outcome-dependent judgment, but this report's author did already know this cohort's real outcomes throughout.",
+    "This is a raw sum of real factor points, not a BOE-1.0.0 score: no weighting, gates, or classification is applied - those all require factors this project does not have.",
+    "The two ranking metrics (swing-success rate vs. median return) can disagree. This disagrees for CATALYST + CASH_DILUTION + TECHNICAL (n=88): its top quintile has a higher swing-success RATE than its bottom quintile, but a WORSE median return - consistent with more variance (bigger wins and bigger losses) rather than a clean, one-directional predictive signal. Both Pearson correlations (-0.0029, -0.0128) are indistinguishable from zero. The honest read of this data is that combining these three real factors alone does not show a clear, reliable predictive signal - consistent with, not contradicting, objective-calibration-report.json's PoS-only finding.",
+    "The ground truth here is the real price outcome (xbi_relative_t20_pct/swing_success/severe_loss), unlike objective-calibration-report.json's PoS calibration, which uses the scientific/regulatory readout result (negative_event). Both are real; they answer different questions.",
+    "The author had already seen this cohort's aggregate outcome rates before any of CATALYST/CASH_DILUTION/TECHNICAL were built, the same disclosed limitation as objective-calibration-report.json - no per-event outcome was consulted while writing the scoring logic in scripts/m7_build_catalyst_scores.py, scripts/m7_build_cash_dilution_scores.py, or scripts/m7_build_technical_snapshots.py, but perfect blinding cannot be claimed.",
+    "Real point-in-time CATALYST, CASH_DILUTION, and TECHNICAL factor scores exist (see partial-scorecard-calibration.json), but VALUATION (rNPV) was never reconstructed for any event, and OWNERSHIP and SENTIMENT were never attempted. Without VALUATION, gates.py's GateInput cannot be built either (it needs base_ev_pct/ conservative_ev_pct/reward_risk, all rNPV-derived) - so no gate evaluation and no real classification exist for any event.",
+    "No decision was locked before outcomes were known, because no decision (in the BOE-1.0.0 sense of a scored, classified, gated HistoricalDecisionLock) was ever produced - the real PoS, CATALYST, CASH_DILUTION, and TECHNICAL scores that do exist were each computed from structural or objectively-sourced facts involving no outcome-dependent judgment, but this report's author did already know this cohort's real outcomes throughout, as disclosed in each component report.",
     "This report validates a substitute methodology built explicitly because no qualified human reviewer was available (docs/M7-HUMAN-REVIEW-BLOCKER.md) - it is not evidence that BOE-1.0.0 itself, as originally specified, does or does not work."
   ],
   "failure_register": {
@@ -1754,14 +1758,113 @@
   "manifest_frozen_at": "2026-09-17T12:09:29.781712+03:00",
   "milestone": 7,
   "missingness_and_source_conflicts": {
+    "cash_dilution_score_missing": 32,
+    "catalyst_score_missing": 0,
     "objective_pos_missing": 0,
     "outcomes_failed": 0,
     "outcomes_missing": 0,
-    "snapshot_cutoffs_missing": 0
+    "snapshot_cutoffs_missing": 0,
+    "technical_score_missing": 0
   },
   "objective_methodology_version": "src/boe/objective_pos_methodology.py",
+  "partial_scorecard_calibration": {
+    "catalyst_cash_dilution_technical": {
+      "bottom_quintile_median_xbi_relative_t20_pct": -18.76,
+      "bottom_quintile_severe_loss": {
+        "ci_high": 0.5313353332621391,
+        "ci_low": 0.132797938655564,
+        "n": 17,
+        "value": 0.29411764705882354
+      },
+      "bottom_quintile_swing_success": {
+        "ci_high": 0.269825452035628,
+        "ci_low": 0.01046013064516424,
+        "n": 17,
+        "value": 0.058823529411764705
+      },
+      "label": "CATALYST + CASH_DILUTION + TECHNICAL (n=88)",
+      "mean_points_pct": 46.21,
+      "median_return_ranks_correctly": false,
+      "n": 88,
+      "pearson_r_points_vs_xbi_relative_t20_return": -0.012761732892005094,
+      "swing_success_rate_ranks_correctly": true,
+      "top_quintile_median_xbi_relative_t20_pct": -29.74,
+      "top_quintile_severe_loss": {
+        "ci_high": 0.5870003327878818,
+        "ci_low": 0.17309486143904904,
+        "n": 17,
+        "value": 0.35294117647058826
+      },
+      "top_quintile_swing_success": {
+        "ci_high": 0.41029929017375777,
+        "ci_low": 0.0619101371254899,
+        "n": 17,
+        "value": 0.17647058823529413
+      }
+    },
+    "catalyst_technical": {
+      "bottom_quintile_median_xbi_relative_t20_pct": -15.11,
+      "bottom_quintile_severe_loss": {
+        "ci_high": 0.40470844485235474,
+        "ci_low": 0.0924468910478809,
+        "n": 24,
+        "value": 0.20833333333333334
+      },
+      "bottom_quintile_swing_success": {
+        "ci_high": 0.3585347038786943,
+        "ci_low": 0.06678568000728924,
+        "n": 24,
+        "value": 0.16666666666666666
+      },
+      "label": "CATALYST + TECHNICAL (n=120)",
+      "mean_points_pct": 47.52,
+      "median_return_ranks_correctly": true,
+      "n": 120,
+      "pearson_r_points_vs_xbi_relative_t20_return": -0.0028545783968177275,
+      "swing_success_rate_ranks_correctly": true,
+      "top_quintile_median_xbi_relative_t20_pct": -8.16,
+      "top_quintile_severe_loss": {
+        "ci_high": 0.4489982531210644,
+        "ci_low": 0.1199920347934233,
+        "n": 24,
+        "value": 0.25
+      },
+      "top_quintile_swing_success": {
+        "ci_high": 0.4489982531210644,
+        "ci_low": 0.1199920347934233,
+        "n": 24,
+        "value": 0.25
+      }
+    },
+    "cohort_sha256": "37f2e70dcc0626b40e97637e34056c9279ae9a5e6daf69d1c2f730e77c114e95",
+    "factors_included": {
+      "catalyst_cash_dilution_technical": [
+        "CATALYST",
+        "CASH_DILUTION",
+        "TECHNICAL"
+      ],
+      "catalyst_technical": [
+        "CATALYST",
+        "TECHNICAL"
+      ]
+    },
+    "factors_not_included": [
+      "SCIENCE (20 pts) - requires a real human scientific reviewer this project does not have.",
+      "MARKET_IMPACT (15 pts) - subfactors need expectation-gap/competitive-position judgment or analyst data not available.",
+      "VALUATION (10 pts) - requires rNPV peak-sales/TAM assumptions per indication this project cannot objectively source at scale.",
+      "OWNERSHIP (5 pts) - requires Form 13F/Form 4 data this project has not sourced.",
+      "SENTIMENT (5 pts) - mostly requires analyst revision data not available; the two subfactors that would be computable (ATTENTION_VOLUME, SECTOR_REGIME) were not built here."
+    ],
+    "generator": "python scripts/m7_build_partial_scorecard_calibration.py",
+    "limitations": [
+      "This is a raw sum of real factor points, not a BOE-1.0.0 score: no weighting, gates, or classification is applied - those all require factors this project does not have.",
+      "The two ranking metrics (swing-success rate vs. median return) can disagree. This disagrees for CATALYST + CASH_DILUTION + TECHNICAL (n=88): its top quintile has a higher swing-success RATE than its bottom quintile, but a WORSE median return - consistent with more variance (bigger wins and bigger losses) rather than a clean, one-directional predictive signal. Both Pearson correlations (-0.0029, -0.0128) are indistinguishable from zero. The honest read of this data is that combining these three real factors alone does not show a clear, reliable predictive signal - consistent with, not contradicting, objective-calibration-report.json's PoS-only finding.",
+      "The ground truth here is the real price outcome (xbi_relative_t20_pct/swing_success/severe_loss), unlike objective-calibration-report.json's PoS calibration, which uses the scientific/regulatory readout result (negative_event). Both are real; they answer different questions.",
+      "The author had already seen this cohort's aggregate outcome rates before any of CATALYST/CASH_DILUTION/TECHNICAL were built, the same disclosed limitation as objective-calibration-report.json - no per-event outcome was consulted while writing the scoring logic in scripts/m7_build_catalyst_scores.py, scripts/m7_build_cash_dilution_scores.py, or scripts/m7_build_technical_snapshots.py, but perfect blinding cannot be claimed."
+    ]
+  },
   "recommendation": "PROPOSE RECALIBRATION IN A NEW BOE VERSION - the review-free PoS methodology as built does not beat a naive constant-rate baseline (Brier 0.2498 vs 0.2299) and does not rank correctly (top-quintile swing success 0.292 vs bottom-quintile 0.375); it is not a substitute for a genuine human scientific review and should not inform live decisions in its current form.",
   "registry_sha256": "a75c778daf2fcbb4ace2f405889f0c5bf184e9e00ccdbd7586e1354d6226026b",
-  "report_subject": "The review-free objective PoS substitute methodology (src/boe/objective_pos_methodology.py), NOT the full BOE-1.0.0 engine, which was never exercised end-to-end because it requires a real human scientific/catalyst reviewer this project does not have (docs/M7-HUMAN-REVIEW-BLOCKER.md).",
-  "score_and_gate_distributions": "NOT PRESENT - no BOE-1.0.0 score, gate, or classification exists for any event in this cohort; only a PoS estimate."
+  "report_subject": "Real, objectively-computed substitutes for the parts of BOE-1.0.0 that do not require a human scientific/catalyst reviewer or rNPV commercial assumptions: an objective PoS methodology (src/boe/objective_pos_methodology.py), and real CATALYST, CASH_DILUTION, and TECHNICAL factor scores. NOT the full BOE-1.0.0 engine, which was never exercised end-to-end - SCIENCE needs a real human reviewer this project does not have (docs/M7-HUMAN-REVIEW-BLOCKER.md), and VALUATION needs real peak-sales/TAM assumptions this project cannot objectively source at scale, which also blocks gates and real classification since they depend on VALUATION's output.",
+  "score_and_gate_distributions": "NO FULL BOE-1.0.0 SCORE, GATE, OR CLASSIFICATION EXISTS for any event - those need SCIENCE, MARKET_IMPACT, VALUATION, OWNERSHIP, and SENTIMENT, which this project does not have (see partial-scorecard-calibration.json's factors_not_included for why each one). What DOES exist, real and not fabricated: an objective PoS estimate for all 120 events; a real CATALYST factor score for all 120 events; a real TECHNICAL factor score for all 120 events; a real CASH_DILUTION factor score for 88 events (SEC XBRL coverage is narrower than price data coverage). See partial-scorecard-calibration.json for their combined calibration against real outcomes."
 }

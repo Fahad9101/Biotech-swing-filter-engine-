@@ -35,6 +35,10 @@ CUTOFFS_PATH = ROOT / "validation/m7/snapshot-cutoffs.json"
 POS_PATH = ROOT / "validation/m7/objective-pos-assessments.json"
 OUTCOMES_PATH = ROOT / "validation/m7/historical-outcomes.json"
 CALIBRATION_PATH = ROOT / "validation/m7/objective-calibration-report.json"
+CATALYST_PATH = ROOT / "validation/m7/catalyst-scores.json"
+CASH_DILUTION_PATH = ROOT / "validation/m7/cash-dilution-scores.json"
+TECHNICAL_PATH = ROOT / "validation/m7/technical-snapshots.json"
+PARTIAL_SCORECARD_PATH = ROOT / "validation/m7/partial-scorecard-calibration.json"
 OUTPUT_PATH = ROOT / "validation/m7/validation-report.json"
 
 # Objective, pre-registered thresholds for the failure register below -
@@ -197,6 +201,12 @@ def build() -> dict[str, Any]:
     pos_data = _load(POS_PATH, "scripts/m7_build_objective_pos.py")
     outcomes_data = _load(OUTCOMES_PATH, "scripts/m7_build_outcomes.py")
     calibration = _load(CALIBRATION_PATH, "scripts/m7_build_objective_calibration.py")
+    catalyst_data = _load(CATALYST_PATH, "scripts/m7_build_catalyst_scores.py")
+    cash_dilution_data = _load(CASH_DILUTION_PATH, "scripts/m7_build_cash_dilution_scores.py")
+    technical_data = _load(TECHNICAL_PATH, "scripts/m7_build_technical_snapshots.py")
+    partial_scorecard = _load(
+        PARTIAL_SCORECARD_PATH, "scripts/m7_build_partial_scorecard_calibration.py"
+    )
 
     cohort_sha256 = manifest["cohort_sha256"]
     for name, data in (
@@ -204,6 +214,10 @@ def build() -> dict[str, Any]:
         ("objective-pos-assessments.json", pos_data),
         ("historical-outcomes.json", outcomes_data),
         ("objective-calibration-report.json", calibration),
+        ("catalyst-scores.json", catalyst_data),
+        ("cash-dilution-scores.json", cash_dilution_data),
+        ("technical-snapshots.json", technical_data),
+        ("partial-scorecard-calibration.json", partial_scorecard),
     ):
         if data["cohort_sha256"] != cohort_sha256:
             raise ValueError(f"{name} was built against a different cohort than the current freeze")
@@ -217,11 +231,17 @@ def build() -> dict[str, Any]:
         "generator": "python scripts/m7_build_validation_report.py",
         "milestone": 7,
         "report_subject": (
-            "The review-free objective PoS substitute methodology "
-            "(src/boe/objective_pos_methodology.py), NOT the full BOE-1.0.0 "
-            "engine, which was never exercised end-to-end because it requires "
-            "a real human scientific/catalyst reviewer this project does not "
-            "have (docs/M7-HUMAN-REVIEW-BLOCKER.md)."
+            "Real, objectively-computed substitutes for the parts of "
+            "BOE-1.0.0 that do not require a human scientific/catalyst "
+            "reviewer or rNPV commercial assumptions: an objective PoS "
+            "methodology (src/boe/objective_pos_methodology.py), and real "
+            "CATALYST, CASH_DILUTION, and TECHNICAL factor scores. NOT the "
+            "full BOE-1.0.0 engine, which was never exercised end-to-end - "
+            "SCIENCE needs a real human reviewer this project does not have "
+            "(docs/M7-HUMAN-REVIEW-BLOCKER.md), and VALUATION needs real "
+            "peak-sales/TAM assumptions this project cannot objectively "
+            "source at scale, which also blocks gates and real "
+            "classification since they depend on VALUATION's output."
         ),
         "code_sha": _git_head_sha(),
         "boe_rules_version": "BOE-1.0.0",
@@ -252,10 +272,29 @@ def build() -> dict[str, Any]:
             "outcomes_missing": outcomes_data["event_count"] - outcomes_data["outcome_count"],
             "outcomes_failed": outcomes_data["failed_count"],
             "objective_pos_missing": pos_data["event_count"] - pos_data["assessment_count"],
+            "catalyst_score_missing": catalyst_data["event_count"] - catalyst_data["score_count"],
+            "technical_score_missing": (
+                technical_data["event_count"] - technical_data["snapshot_count"]
+            ),
+            "cash_dilution_score_missing": (
+                cash_dilution_data["event_count"] - cash_dilution_data["score_count"]
+            ),
         },
-        "score_and_gate_distributions": "NOT PRESENT - no BOE-1.0.0 score, gate, or "
-        "classification exists for any event in this cohort; only a PoS estimate.",
+        "score_and_gate_distributions": (
+            "NO FULL BOE-1.0.0 SCORE, GATE, OR CLASSIFICATION EXISTS for any event - "
+            "those need SCIENCE, MARKET_IMPACT, VALUATION, OWNERSHIP, and SENTIMENT, "
+            "which this project does not have (see partial-scorecard-calibration.json's "
+            "factors_not_included for why each one). What DOES exist, real and not "
+            f"fabricated: an objective PoS estimate for all {pos_data['assessment_count']} "
+            f"events; a real CATALYST factor score for all {catalyst_data['score_count']} "
+            f"events; a real TECHNICAL factor score for all {technical_data['snapshot_count']} "
+            f"events; a real CASH_DILUTION factor score for {cash_dilution_data['score_count']} "
+            "events (SEC XBRL coverage is narrower than price data coverage). See "
+            "partial-scorecard-calibration.json for their combined calibration against real "
+            "outcomes."
+        ),
         "calibration_and_return_metrics": calibration,
+        "partial_scorecard_calibration": partial_scorecard,
         "case_level_predictions_and_outcomes": [
             {
                 "event_id": event_id,
@@ -275,17 +314,22 @@ def build() -> dict[str, Any]:
         "failure_register": failure_register,
         "deviations_and_known_limitations": [
             *calibration["limitations"],
-            "No point-in-time financial (cash/runway/dilution), technical "
-            "(price/volume/relative-strength), or valuation (rNPV) "
-            "reconstruction was performed for any event; BOE-1.0.0's "
-            "CASH_DILUTION, VALUATION, TECHNICAL, OWNERSHIP, and SENTIMENT "
-            "factors were never computed.",
+            *partial_scorecard["limitations"],
+            "Real point-in-time CATALYST, CASH_DILUTION, and TECHNICAL factor "
+            "scores exist (see partial-scorecard-calibration.json), but "
+            "VALUATION (rNPV) was never reconstructed for any event, and "
+            "OWNERSHIP and SENTIMENT were never attempted. Without VALUATION, "
+            "gates.py's GateInput cannot be built either (it needs base_ev_pct/ "
+            "conservative_ev_pct/reward_risk, all rNPV-derived) - so no gate "
+            "evaluation and no real classification exist for any event.",
             "No decision was locked before outcomes were known, because no "
             "decision (in the BOE-1.0.0 sense of a scored, classified, "
-            "gated HistoricalDecisionLock) was ever produced - PoS estimates "
-            "were computed from catalyst_type alone, which involves no "
-            "outcome-dependent judgment, but this report's author did "
-            "already know this cohort's real outcomes throughout.",
+            "gated HistoricalDecisionLock) was ever produced - the real "
+            "PoS, CATALYST, CASH_DILUTION, and TECHNICAL scores that do "
+            "exist were each computed from structural or objectively-sourced "
+            "facts involving no outcome-dependent judgment, but this "
+            "report's author did already know this cohort's real outcomes "
+            "throughout, as disclosed in each component report.",
             "This report validates a substitute methodology built explicitly "
             "because no qualified human reviewer was available "
             "(docs/M7-HUMAN-REVIEW-BLOCKER.md) - it is not evidence that "

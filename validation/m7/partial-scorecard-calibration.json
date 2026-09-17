@@ -1,0 +1,96 @@
+{
+  "catalyst_cash_dilution_technical": {
+    "bottom_quintile_median_xbi_relative_t20_pct": -18.76,
+    "bottom_quintile_severe_loss": {
+      "ci_high": 0.5313353332621391,
+      "ci_low": 0.132797938655564,
+      "n": 17,
+      "value": 0.29411764705882354
+    },
+    "bottom_quintile_swing_success": {
+      "ci_high": 0.269825452035628,
+      "ci_low": 0.01046013064516424,
+      "n": 17,
+      "value": 0.058823529411764705
+    },
+    "label": "CATALYST + CASH_DILUTION + TECHNICAL (n=88)",
+    "mean_points_pct": 46.21,
+    "median_return_ranks_correctly": false,
+    "n": 88,
+    "pearson_r_points_vs_xbi_relative_t20_return": -0.012761732892005094,
+    "swing_success_rate_ranks_correctly": true,
+    "top_quintile_median_xbi_relative_t20_pct": -29.74,
+    "top_quintile_severe_loss": {
+      "ci_high": 0.5870003327878818,
+      "ci_low": 0.17309486143904904,
+      "n": 17,
+      "value": 0.35294117647058826
+    },
+    "top_quintile_swing_success": {
+      "ci_high": 0.41029929017375777,
+      "ci_low": 0.0619101371254899,
+      "n": 17,
+      "value": 0.17647058823529413
+    }
+  },
+  "catalyst_technical": {
+    "bottom_quintile_median_xbi_relative_t20_pct": -15.11,
+    "bottom_quintile_severe_loss": {
+      "ci_high": 0.40470844485235474,
+      "ci_low": 0.0924468910478809,
+      "n": 24,
+      "value": 0.20833333333333334
+    },
+    "bottom_quintile_swing_success": {
+      "ci_high": 0.3585347038786943,
+      "ci_low": 0.06678568000728924,
+      "n": 24,
+      "value": 0.16666666666666666
+    },
+    "label": "CATALYST + TECHNICAL (n=120)",
+    "mean_points_pct": 47.52,
+    "median_return_ranks_correctly": true,
+    "n": 120,
+    "pearson_r_points_vs_xbi_relative_t20_return": -0.0028545783968177275,
+    "swing_success_rate_ranks_correctly": true,
+    "top_quintile_median_xbi_relative_t20_pct": -8.16,
+    "top_quintile_severe_loss": {
+      "ci_high": 0.4489982531210644,
+      "ci_low": 0.1199920347934233,
+      "n": 24,
+      "value": 0.25
+    },
+    "top_quintile_swing_success": {
+      "ci_high": 0.4489982531210644,
+      "ci_low": 0.1199920347934233,
+      "n": 24,
+      "value": 0.25
+    }
+  },
+  "cohort_sha256": "37f2e70dcc0626b40e97637e34056c9279ae9a5e6daf69d1c2f730e77c114e95",
+  "factors_included": {
+    "catalyst_cash_dilution_technical": [
+      "CATALYST",
+      "CASH_DILUTION",
+      "TECHNICAL"
+    ],
+    "catalyst_technical": [
+      "CATALYST",
+      "TECHNICAL"
+    ]
+  },
+  "factors_not_included": [
+    "SCIENCE (20 pts) - requires a real human scientific reviewer this project does not have.",
+    "MARKET_IMPACT (15 pts) - subfactors need expectation-gap/competitive-position judgment or analyst data not available.",
+    "VALUATION (10 pts) - requires rNPV peak-sales/TAM assumptions per indication this project cannot objectively source at scale.",
+    "OWNERSHIP (5 pts) - requires Form 13F/Form 4 data this project has not sourced.",
+    "SENTIMENT (5 pts) - mostly requires analyst revision data not available; the two subfactors that would be computable (ATTENTION_VOLUME, SECTOR_REGIME) were not built here."
+  ],
+  "generator": "python scripts/m7_build_partial_scorecard_calibration.py",
+  "limitations": [
+    "This is a raw sum of real factor points, not a BOE-1.0.0 score: no weighting, gates, or classification is applied - those all require factors this project does not have.",
+    "The two ranking metrics (swing-success rate vs. median return) can disagree. This disagrees for CATALYST + CASH_DILUTION + TECHNICAL (n=88): its top quintile has a higher swing-success RATE than its bottom quintile, but a WORSE median return - consistent with more variance (bigger wins and bigger losses) rather than a clean, one-directional predictive signal. Both Pearson correlations (-0.0029, -0.0128) are indistinguishable from zero. The honest read of this data is that combining these three real factors alone does not show a clear, reliable predictive signal - consistent with, not contradicting, objective-calibration-report.json's PoS-only finding.",
+    "The ground truth here is the real price outcome (xbi_relative_t20_pct/swing_success/severe_loss), unlike objective-calibration-report.json's PoS calibration, which uses the scientific/regulatory readout result (negative_event). Both are real; they answer different questions.",
+    "The author had already seen this cohort's aggregate outcome rates before any of CATALYST/CASH_DILUTION/TECHNICAL were built, the same disclosed limitation as objective-calibration-report.json - no per-event outcome was consulted while writing the scoring logic in scripts/m7_build_catalyst_scores.py, scripts/m7_build_cash_dilution_scores.py, or scripts/m7_build_technical_snapshots.py, but perfect blinding cannot be claimed."
+  ]
+}

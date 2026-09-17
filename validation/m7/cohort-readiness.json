@@ -5,7 +5,8 @@
   "blocking_findings": [
     "Cohort is frozen; investment-rule behavior and cohort membership must not change without a new, separately approved rules version.",
     "BOE-1.0.0 itself was never scored end-to-end for any event: its SCIENCE factor and PoS calculation require a ManualScienceReview only a real human scientific/catalyst reviewer can honestly produce, and no automated agent may supply or impersonate one (docs/M7-HUMAN-REVIEW-BLOCKER.md). No HistoricalDecisionLock exists or ever will for this cohort under BOE-1.0.0 as specified, absent a real reviewer.",
-    "The project owner explicitly chose to cancel that requirement and accept a genuinely different, review-free objective PoS substitute methodology instead of leaving M7 at cohort+outcomes only (docs/M7-OBJECTIVE-METHODOLOGY.md). That substitute is real, calibrated against real outcomes, and honestly reported - including that it does not beat a naive baseline and should not inform live decisions in its current form (validation/m7/validation-report.json)."
+    "The project owner explicitly chose to cancel that requirement and accept genuinely different, review-free real substitutes instead of leaving M7 at cohort+outcomes only (docs/M7-OBJECTIVE-METHODOLOGY.md): an objective PoS methodology, plus real CATALYST, CASH_DILUTION, and TECHNICAL factor scores (validation/m7/partial-scorecard-calibration.json). All are real, calibrated against real outcomes, and honestly reported, including that neither the PoS-only nor the combined-factor signal shows a clear, reliable predictive edge - see validation/m7/validation-report.json for the full picture.",
+    "VALUATION (rNPV) was never reconstructed for any event: it needs real peak-sales/TAM assumptions per indication this project cannot objectively source at scale, the same category of problem as SCIENCE. Without it, gates.py's GateInput cannot be built (it needs base_ev_pct/conservative_ev_pct/reward_risk, all rNPV-derived), so no gate evaluation and no real classification exist for any event either - not just unattempted, blocked."
   ],
   "candidate_counts": {
     "fail": 49,
@@ -14,6 +15,10 @@
     "pending": 3,
     "total": 207
   },
+  "cash_dilution_scores_complete": 88,
+  "cash_dilution_scores_current": true,
+  "catalyst_scores_complete": 120,
+  "catalyst_scores_current": true,
   "decision_locks_complete": 0,
   "eligible_authoritative_registry_count": 153,
   "financing_reserve": {
@@ -101,6 +106,7 @@
   "objective_pos_methodology_version": "src/boe/objective_pos_methodology.py",
   "objective_validation_report_current": true,
   "objective_validation_report_recommendation": "PROPOSE RECALIBRATION IN A NEW BOE VERSION - the review-free PoS methodology as built does not beat a naive constant-rate baseline (Brier 0.2498 vs 0.2299) and does not rank correctly (top-quintile swing success 0.292 vs bottom-quintile 0.375); it is not a substitute for a genuine human scientific review and should not inform live decisions in its current form.",
+  "partial_scorecard_calibration_current": true,
   "real_four_snapshot_reconstructions_complete": 0,
   "real_outcomes_complete": 120,
   "real_outcomes_current": true,
@@ -161,5 +167,7 @@
       "requirement": 30,
       "total": 49
     }
-  }
+  },
+  "technical_scores_complete": 120,
+  "technical_scores_current": true
 }

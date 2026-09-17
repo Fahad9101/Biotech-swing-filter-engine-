@@ -57,8 +57,15 @@ def test_recommendation_is_not_proceed() -> None:
 
 def test_report_explicitly_lists_what_is_not_present() -> None:
     status = module.build()
-    assert "NOT PRESENT" in status["score_and_gate_distributions"]
+    assert "NO FULL BOE-1.0.0 SCORE" in status["score_and_gate_distributions"]
+    assert "real CATALYST factor score" in status["score_and_gate_distributions"]
     assert "NOT the full BOE-1.0.0 engine" in status["report_subject"]
+
+
+def test_partial_scorecard_calibration_is_embedded() -> None:
+    status = module.build()
+    assert "partial_scorecard_calibration" in status
+    assert status["partial_scorecard_calibration"]["cohort_sha256"] == status["cohort_sha256"]
 
 
 def test_failure_register_uses_predefined_objective_thresholds() -> None:

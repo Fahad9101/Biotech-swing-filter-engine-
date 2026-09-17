@@ -35,6 +35,10 @@ OUTCOMES_PATH = ROOT / "validation/m7/historical-outcomes.json"
 OBJECTIVE_POS_PATH = ROOT / "validation/m7/objective-pos-assessments.json"
 CALIBRATION_PATH = ROOT / "validation/m7/objective-calibration-report.json"
 VALIDATION_REPORT_PATH = ROOT / "validation/m7/validation-report.json"
+CATALYST_PATH = ROOT / "validation/m7/catalyst-scores.json"
+CASH_DILUTION_PATH = ROOT / "validation/m7/cash-dilution-scores.json"
+TECHNICAL_PATH = ROOT / "validation/m7/technical-snapshots.json"
+PARTIAL_SCORECARD_PATH = ROOT / "validation/m7/partial-scorecard-calibration.json"
 
 STRATUM_REQUIREMENTS = {
     "PHASE_2_POC": 30,
@@ -169,6 +173,24 @@ def build(root: Path = ROOT) -> dict[str, Any]:
     validation_report_data = json.loads(VALIDATION_REPORT_PATH.read_bytes())
     validation_report_current = validation_report_data["cohort_sha256"] == manifest.cohort_sha256
 
+    # Real, objectively-computed BOE-1.0.0 factor scores (not the full
+    # scorecard - see docs/M7-OBJECTIVE-METHODOLOGY.md and each script's own
+    # docstring for exactly what each one can and cannot cover honestly).
+    catalyst_data = json.loads(CATALYST_PATH.read_bytes())
+    catalyst_current = catalyst_data["cohort_sha256"] == manifest.cohort_sha256
+    catalyst_complete = catalyst_data["score_count"] if catalyst_current else 0
+
+    cash_dilution_data = json.loads(CASH_DILUTION_PATH.read_bytes())
+    cash_dilution_current = cash_dilution_data["cohort_sha256"] == manifest.cohort_sha256
+    cash_dilution_complete = cash_dilution_data["score_count"] if cash_dilution_current else 0
+
+    technical_data = json.loads(TECHNICAL_PATH.read_bytes())
+    technical_current = technical_data["cohort_sha256"] == manifest.cohort_sha256
+    technical_complete = technical_data["snapshot_count"] if technical_current else 0
+
+    partial_scorecard_data = json.loads(PARTIAL_SCORECARD_PATH.read_bytes())
+    partial_scorecard_current = partial_scorecard_data["cohort_sha256"] == manifest.cohort_sha256
+
     status: dict[str, Any] = {
         "milestone": 7,
         "rules_version": manifest.rules_version,
@@ -205,6 +227,13 @@ def build(root: Path = ROOT) -> dict[str, Any]:
         ),
         "objective_validation_report_current": validation_report_current,
         "objective_validation_report_recommendation": validation_report_data.get("recommendation"),
+        "catalyst_scores_complete": catalyst_complete,
+        "catalyst_scores_current": catalyst_current,
+        "cash_dilution_scores_complete": cash_dilution_complete,
+        "cash_dilution_scores_current": cash_dilution_current,
+        "technical_scores_complete": technical_complete,
+        "technical_scores_current": technical_current,
+        "partial_scorecard_calibration_current": partial_scorecard_current,
         # These stay honestly 0/absent: BOE-1.0.0 itself (score, classification,
         # gates, valuation, a real HistoricalDecisionLock) was never run for
         # any event, because that requires a real human scientific/catalyst
@@ -243,13 +272,22 @@ def build(root: Path = ROOT) -> dict[str, Any]:
             "exists or ever will for this cohort under BOE-1.0.0 as specified, "
             "absent a real reviewer.",
             "The project owner explicitly chose to cancel that requirement "
-            "and accept a genuinely different, review-free objective PoS "
-            "substitute methodology instead of leaving M7 at cohort+outcomes "
-            "only (docs/M7-OBJECTIVE-METHODOLOGY.md). That substitute is "
-            "real, calibrated against real outcomes, and honestly reported - "
-            "including that it does not beat a naive baseline and should not "
-            "inform live decisions in its current form "
-            "(validation/m7/validation-report.json).",
+            "and accept genuinely different, review-free real substitutes "
+            "instead of leaving M7 at cohort+outcomes only "
+            "(docs/M7-OBJECTIVE-METHODOLOGY.md): an objective PoS methodology, "
+            "plus real CATALYST, CASH_DILUTION, and TECHNICAL factor scores "
+            "(validation/m7/partial-scorecard-calibration.json). All are real, "
+            "calibrated against real outcomes, and honestly reported, "
+            "including that neither the PoS-only nor the combined-factor "
+            "signal shows a clear, reliable predictive edge - see "
+            "validation/m7/validation-report.json for the full picture.",
+            "VALUATION (rNPV) was never reconstructed for any event: it needs "
+            "real peak-sales/TAM assumptions per indication this project "
+            "cannot objectively source at scale, the same category of problem "
+            "as SCIENCE. Without it, gates.py's GateInput cannot be built "
+            "(it needs base_ev_pct/conservative_ev_pct/reward_risk, all "
+            "rNPV-derived), so no gate evaluation and no real classification "
+            "exist for any event either - not just unattempted, blocked.",
         ],
         "merge_ready": False,
         "milestone_complete": False,
@@ -293,6 +331,9 @@ def main() -> None:
                     "real_outcomes_complete",
                     "objective_pos_assessments_complete",
                     "objective_calibration_brier_beats_naive_prior",
+                    "catalyst_scores_complete",
+                    "cash_dilution_scores_complete",
+                    "technical_scores_complete",
                     "decision_locks_complete",
                     "accepted_final_state_without_reviewer",
                 )

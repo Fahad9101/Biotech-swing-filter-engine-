@@ -49,6 +49,16 @@ def test_committed_authoritative_status_is_derived_and_self_consistent() -> None
     assert status["objective_calibration_brier_beats_naive_prior"] is False
     assert status["objective_validation_report_current"] is True
     assert "RECALIBRATION" in status["objective_validation_report_recommendation"]
+    # Real, objectively-computed CATALYST/CASH_DILUTION/TECHNICAL factor
+    # scores - also real, also not BOE-1.0.0 itself. CASH_DILUTION's real
+    # SEC coverage (88/120) is genuinely narrower than the others (120/120).
+    assert status["catalyst_scores_complete"] == 120
+    assert status["catalyst_scores_current"] is True
+    assert status["cash_dilution_scores_complete"] == 88
+    assert status["cash_dilution_scores_current"] is True
+    assert status["technical_scores_complete"] == 120
+    assert status["technical_scores_current"] is True
+    assert status["partial_scorecard_calibration_current"] is True
     # Milestone 7 is still not complete: BOE-1.0.0 itself (score,
     # classification, gates, a real HistoricalDecisionLock) was never run for
     # any event, because that requires a real human reviewer this project
