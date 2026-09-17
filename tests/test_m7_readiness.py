@@ -21,34 +21,34 @@ def test_committed_status_is_derived_and_pending_is_not_pass() -> None:
     assert (ROOT / module.OUTPUT).read_text() == module.render(status)
     assert (ROOT / module.ROWS_OUTPUT).read_text() == module.render(rows)
     assert status["candidate_counts"] == {
-        "total": 202,
-        "pass": 150,
+        "total": 204,
+        "pass": 152,
         "fail": 49,
         "pending": 3,
-        "not_yet_excluded": 153,
+        "not_yet_excluded": 155,
     }
     negative = status["negative_reserve"]
-    assert negative["not_yet_excluded"] == 48
-    assert negative["pass"] == 47
+    assert negative["not_yet_excluded"] == 50
+    assert negative["pass"] == 49
     assert negative["pending"] == 1
-    assert negative["maximum_provisional_buffer"] == 8
+    assert negative["maximum_provisional_buffer"] == 10
     assert negative["final_negative_quota_satisfied"] is False
     assert status["financing_reserve"]["pass"] == 27
-    assert status["single_asset_reserve"]["pass"] == 21
+    assert status["single_asset_reserve"]["pass"] == 23
     strata = status["strata"]
     assert strata["PHASE_3_PIVOTAL"]["requirement"] == 30
     assert strata["PHASE_3_PIVOTAL"]["pending"] == 0
     assert strata["PHASE_3_PIVOTAL"]["pass"] == 32
     assert strata["PHASE_3_PIVOTAL"]["maximum_provisional_buffer"] == 2
-    assert strata["REGULATORY"]["pass"] == 44
+    assert strata["REGULATORY"]["pass"] == 45
     assert strata["REGULATORY"]["pending"] == 2
-    assert strata["REGULATORY"]["maximum_provisional_buffer"] == 16
+    assert strata["REGULATORY"]["maximum_provisional_buffer"] == 17
     assert strata["PHASE_2_POC"]["pass"] == 39
     assert strata["PHASE_2_POC"]["pending"] == 1
     assert strata["PHASE_2_POC"]["maximum_provisional_buffer"] == 10
-    assert strata["EARLY_CLINICAL"]["pass"] == 18
+    assert strata["EARLY_CLINICAL"]["pass"] == 19
     assert strata["EARLY_CLINICAL"]["pending"] == 0
-    assert strata["EARLY_CLINICAL"]["maximum_provisional_buffer"] == 3
+    assert strata["EARLY_CLINICAL"]["maximum_provisional_buffer"] == 4
     assert strata["CONFERENCE_OTHER"]["pass"] == 17
     assert strata["CONFERENCE_OTHER"]["pending"] == 0
     assert strata["CONFERENCE_OTHER"]["maximum_provisional_buffer"] == 2

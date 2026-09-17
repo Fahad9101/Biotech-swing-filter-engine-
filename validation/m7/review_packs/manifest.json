@@ -40,10 +40,10 @@
   "deferred_count": 9,
   "format_version": "1.0",
   "generated_at": "2026-09-16T00:00:00+00:00",
-  "manifest_sha256": "ee9c41d2b969d14e016f4a86e4f104928b94688b3c4ed7baa341c9b7dedb1890",
+  "manifest_sha256": "6822ed182c10651a093a5c49977ef20181cbb9df1074418968f7c418014716e4",
   "market_outcomes_inspected": false,
   "milestone": 7,
-  "pack_count": 141,
+  "pack_count": 143,
   "packs": [
     {
       "candidate_id": "CO-2018-ZIOP-ASCO",
@@ -254,6 +254,13 @@
       "pack_sha256": "57267445eb9c693bf70cde5823824fea12c46f7a7328adbfe9975507342e0cb3",
       "stratum": "EARLY_CLINICAL",
       "ticker": "IMTX"
+    },
+    {
+      "candidate_id": "EC-2024-AVTE-IMPAHCT-MISS",
+      "pack_path": "validation/m7/review_packs/EC-2024-AVTE-IMPAHCT-MISS.json",
+      "pack_sha256": "4e5f8e3b4c1d400b3412be1cbea81d9be1310d72d049262a6c61a839bed3f3af",
+      "stratum": "EARLY_CLINICAL",
+      "ticker": "AVTE"
     },
     {
       "candidate_id": "EC-2024-CABA-CABA201",
@@ -821,6 +828,13 @@
       "pack_sha256": "229cf281d5c5121ffa6ec8a2a2c65d467faa18b938e429da370c14806bb5d0fe",
       "stratum": "REGULATORY",
       "ticker": "RYTM"
+    },
+    {
+      "candidate_id": "REG-2020-TCDA-VEVERIMER-CRL",
+      "pack_path": "validation/m7/review_packs/REG-2020-TCDA-VEVERIMER-CRL.json",
+      "pack_sha256": "d3a3a287c2a719f6f5263ff7f6afd58bb932ffd07df38f254bf8eea0360b8158",
+      "stratum": "REGULATORY",
+      "ticker": "TCDA"
     },
     {
       "candidate_id": "REG-2021-APLS-EMPAVELI",

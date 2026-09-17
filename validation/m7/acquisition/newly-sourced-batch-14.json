@@ -1,0 +1,65 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "role": "NEWLY_SOURCED_CANDIDATES_POST_HANDOFF",
+  "generated_at": "2026-09-17",
+  "sourcing_note": "Targeted sourcing for the single-asset reserve gap (pool-wide QUALIFIES-and-universe-PASS count was 21 against a requirement of 20, and the simulated selected-cohort subset was estimated short by 1 - though per newly-sourced-batch-13.json's finding, that exact simulated count is not a stable pre-registry target). Prior sourcing (single-asset-evidence-ledger-09/-10.json) checked 15 already-in-pool negative candidates chosen for other reasons (their negative catalyst) and found only 1 (SGTX) genuinely single-asset; this batch instead checked 10 more already-in-pool PENDING negative candidates (ONTX, IDRA, APTX, ANAB x2, OMER, ICPT, REPH, APLT - all DOES_NOT_QUALIFY, each with a specifically named second active compound, recorded for completeness in single-asset-evidence-ledger-11.json) and found the same low yield. Pivoted to a more targeted method: EDGAR full-text search for the literal phrase 'our only product candidate' in 10-Ks, which directly surfaces companies that self-declare single-asset status rather than requiring one-by-one inference from silence. Cross-referencing the resulting company list against real negative catalysts not already in the pool found two clean matches, both independently verified via SEC 8-K filings and passing all historical-universe floors with comfortable margin: Tricida's August 2020 FDA Complete Response Letter for veverimer (an efficacy-magnitude rejection with explicitly no safety/CMC issues) and Aerovate Therapeutics' June 2024 Phase 2b IMPAHCT trial miss for AV-101 in pulmonary arterial hypertension (missed primary and secondary endpoints). Two other full-text-search hits were evaluated and rejected: Reneo Pharmaceuticals' December 2023 STRIDE trial failure (mavodelpar) is a clean, single-issue disclosure and the company explicitly self-declares single-asset status, but RPHM fails the liquidity floor ($1,624,780 median daily dollar volume vs. the $2,000,000 minimum); Spruce Biosciences' August 2022 8-K, initially suspected to contain a tildacerfont trial miss, turned out on inspection to be an all-positive Q2 earnings update (enrollment progress, new hire, patent expansion) with no negative disclosure at all, so SPRB was not used.",
+  "events": [
+    {
+      "asset": "veverimer (TRC101)",
+      "candidate_id": "REG-2020-TCDA-VEVERIMER-CRL",
+      "cik": "1595585",
+      "clinical_phase": "REGULATORY_DECISION",
+      "cohort_frozen": false,
+      "company": "Tricida, Inc.",
+      "first_public_date": "2020-08-24",
+      "first_public_timestamp": "2020-08-24T08:41:58-04:00",
+      "indication": "metabolic acidosis in patients with chronic kidney disease (CKD)",
+      "negative_event_candidate": true,
+      "outcome_inspected_for_selection": false,
+      "promotion_blockers": [
+        "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+        "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+      ],
+      "proposed_catalyst_type": "REG_DECISION",
+      "proposed_primary_stratum": "REGULATORY",
+      "result_direction": "NEGATIVE_CRL",
+      "source_role": "FIRST_PUBLIC_REGULATORY_DISCLOSURE_CANDIDATE",
+      "source_type": "ISSUER_SEC_8K_EXHIBIT_991",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1595585/000159558520000118/fdapdufapressrelease.htm",
+      "source_displayed_time": "SEC 8-K accepted 2020-08-24 08:41:58 ET (Item 8.01/9.01, pre-market)",
+      "ticker": "TCDA",
+      "timestamp_precision": "EXACT_TO_MINUTE_SEC_ACCEPTANCE_PROXY",
+      "notes": "FDA CRL for veverimer, received 2020-08-21, announced 2020-08-24. The FDA sought additional data on the magnitude and durability of the treatment effect on serum bicarbonate and its applicability to the U.S. population, and questioned whether the demonstrated effect size would be reasonably likely to predict clinical benefit - an efficacy-magnitude rejection. The press release states explicitly: 'There were no safety, clinical pharmacology biopharmaceutics, CMC or non-clinical issues identified in the CRL.' Tricida's FY2019 10-K (filed 2020-03-02, the most recent pre-event annual filing) explicitly and repeatedly describes 'the prospects of veverimer (also known as TRC101), our only product candidate' - a stronger, more explicit single-asset declaration than the inference-from-silence pattern used for SGTX/MDGL. Pre-promotion single-asset evidence already recorded as QUALIFIES; see single-asset-evidence-ledger-11.json."
+    },
+    {
+      "asset": "AV-101 (inhaled imatinib)",
+      "candidate_id": "EC-2024-AVTE-IMPAHCT-MISS",
+      "cik": "1798749",
+      "clinical_phase": "PHASE_2",
+      "cohort_frozen": false,
+      "company": "Aerovate Therapeutics, Inc.",
+      "first_public_date": "2024-06-17",
+      "first_public_timestamp": "2024-06-17T08:35:53-04:00",
+      "indication": "pulmonary arterial hypertension (PAH)",
+      "negative_event_candidate": true,
+      "outcome_inspected_for_selection": false,
+      "promotion_blockers": [
+        "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+        "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+      ],
+      "proposed_catalyst_type": "CLIN_P2",
+      "proposed_primary_stratum": "EARLY_CLINICAL",
+      "result_direction": "NEGATIVE_TRIAL_MISS",
+      "source_role": "FIRST_PUBLIC_REGULATORY_DISCLOSURE_CANDIDATE",
+      "source_type": "ISSUER_SEC_8K_EXHIBIT_991",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1798749/000110465924072058/tm2417394d1_8k.htm",
+      "source_displayed_time": "SEC 8-K accepted 2024-06-17 08:35:53 ET (Item 7.01/8.01, pre-market)",
+      "ticker": "AVTE",
+      "timestamp_precision": "EXACT_TO_MINUTE_SEC_ACCEPTANCE_PROXY",
+      "notes": "Topline 24-week results from the Phase 2b portion of the IMPAHCT study: AV-101 did not meet its primary endpoint (change in pulmonary vascular resistance vs. placebo) at any studied dose, and did not show meaningful improvement on the secondary six-minute-walk-distance endpoint, despite being well tolerated - a standalone, single-issue efficacy-miss disclosure with no bundled positive framing (contrast the rejected Spruce Biosciences filing evaluated for this same batch). Aerovate's FY2023 10-K (filed 2024-03-25, the most recent pre-event annual filing) states: 'Our business is entirely dependent on the successful development, regulatory approval and commercialization of AV-101, our only product candidate under development.' Pre-promotion single-asset evidence already recorded as QUALIFIES; see single-asset-evidence-ledger-11.json."
+    }
+  ]
+}
