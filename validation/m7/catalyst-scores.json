@@ -1,0 +1,1095 @@
+{
+  "cohort_sha256": "37f2e70dcc0626b40e97637e34056c9279ae9a5e6daf69d1c2f730e77c114e95",
+  "event_count": 120,
+  "generator": "python scripts/m7_build_catalyst_scores.py",
+  "methodology_notes": [
+    "PROXIMITY is a constant 4/4 for every event: this project evaluates one fixed T-30 snapshot per event rather than a live rolling assessment, so days-to-catalyst is always exactly 30.",
+    "MATURITY is fully derived from catalyst_type/clinical_phase via the frozen _derived_maturity_bucket() - the same function BOE-1.0.0 live ranking uses, not new logic.",
+    "TIMING_CONFIDENCE is mapped by catalyst_type category (HIGH for regulatory/conference/publication dates set externally and publicly; MODERATE for company-guided clinical readouts), not assessed per event.",
+    "MATERIALITY and NOVEL_INFORMATION are always MISSING: both require judging the substance of a specific catalyst, not just its structural facts - the same category of problem SCIENCE has. Real coverage here is 14 of 25 max CATALYST points (TIMING_CONFIDENCE 5 + PROXIMITY 4 + MATURITY 5)."
+  ],
+  "score_count": 120,
+  "scores": [
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 11,
+      "catalyst_type": "CONF_DATA",
+      "event_id": "CO-2018-ZIOP-ASCO",
+      "maturity_bucket": "PHASE_1",
+      "t_minus_30": "2018-05-05",
+      "timing_confidence": "HIGH"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 12,
+      "catalyst_type": "CONF_DATA",
+      "event_id": "CO-2019-BGNE-ZANUASH",
+      "maturity_bucket": "PHASE_1_2_OR_FILING_ACCEPTANCE",
+      "t_minus_30": "2019-11-08",
+      "timing_confidence": "HIGH"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 13,
+      "catalyst_type": "CONF_DATA",
+      "event_id": "CO-2019-CNST-MANIFEST",
+      "maturity_bucket": "PHASE_2_OR_MATERIAL_REGULATORY",
+      "t_minus_30": "2019-11-09",
+      "timing_confidence": "HIGH"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 12,
+      "catalyst_type": "CONF_DATA",
+      "event_id": "CO-2020-ONCT-CIRLLASH",
+      "maturity_bucket": "PHASE_1_2_OR_FILING_ACCEPTANCE",
+      "t_minus_30": "2020-11-07",
+      "timing_confidence": "HIGH"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 11,
+      "catalyst_type": "CONF_DATA",
+      "event_id": "CO-2020-TRIL-TTI622ASH",
+      "maturity_bucket": "PHASE_1",
+      "t_minus_30": "2020-11-07",
+      "timing_confidence": "HIGH"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 12,
+      "catalyst_type": "CONF_DATA",
+      "event_id": "CO-2021-HARP-HPN424ASCO",
+      "maturity_bucket": "PHASE_1_2_OR_FILING_ACCEPTANCE",
+      "t_minus_30": "2021-05-05",
+      "timing_confidence": "HIGH"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 11,
+      "catalyst_type": "CONF_DATA",
+      "event_id": "CO-2021-IGMS-IGM2323ASH",
+      "maturity_bucket": "PHASE_1",
+      "t_minus_30": "2021-11-11",
+      "timing_confidence": "HIGH"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 13,
+      "catalyst_type": "CONF_DATA",
+      "event_id": "CO-2021-IOVA-LIFILEUCELASCO",
+      "maturity_bucket": "PHASE_2_OR_MATERIAL_REGULATORY",
+      "t_minus_30": "2021-05-05",
+      "timing_confidence": "HIGH"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 13,
+      "catalyst_type": "CONF_DATA",
+      "event_id": "CO-2022-KROS-KER050ASH",
+      "maturity_bucket": "PHASE_2_OR_MATERIAL_REGULATORY",
+      "t_minus_30": "2022-11-12",
+      "timing_confidence": "HIGH"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 12,
+      "catalyst_type": "CONF_DATA",
+      "event_id": "CO-2024-AUTL-OBECELASH",
+      "maturity_bucket": "PHASE_1_2_OR_FILING_ACCEPTANCE",
+      "t_minus_30": "2024-11-09",
+      "timing_confidence": "HIGH"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 13,
+      "catalyst_type": "CONF_DATA",
+      "event_id": "CO-2024-GMAB-TVASCO",
+      "maturity_bucket": "PHASE_2_OR_MATERIAL_REGULATORY",
+      "t_minus_30": "2024-05-04",
+      "timing_confidence": "HIGH"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 11,
+      "catalyst_type": "CONF_DATA",
+      "event_id": "CO-2024-IRON-DISC0974ASH",
+      "maturity_bucket": "PHASE_1",
+      "t_minus_30": "2024-11-08",
+      "timing_confidence": "HIGH"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 11,
+      "catalyst_type": "CONF_DATA",
+      "event_id": "CO-2024-NRIX-NX5948ASH",
+      "maturity_bucket": "PHASE_1",
+      "t_minus_30": "2024-11-09",
+      "timing_confidence": "HIGH"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 11,
+      "catalyst_type": "CONF_DATA",
+      "event_id": "CO-2025-CRVS-SOQUELITINIBASH",
+      "maturity_bucket": "PHASE_1",
+      "t_minus_30": "2025-11-08",
+      "timing_confidence": "HIGH"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 13,
+      "catalyst_type": "CONF_DATA",
+      "event_id": "CO-2025-GERN-RYTELOASH",
+      "maturity_bucket": "PHASE_2_OR_MATERIAL_REGULATORY",
+      "t_minus_30": "2025-11-08",
+      "timing_confidence": "HIGH"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 10,
+      "catalyst_type": "CLIN_P1",
+      "event_id": "EC-2019-WVE-SUVODIRSEN",
+      "maturity_bucket": "PHASE_1",
+      "t_minus_30": "2019-11-16",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 11,
+      "catalyst_type": "CLIN_P1_2",
+      "event_id": "EC-2020-CRSP-CTX001",
+      "maturity_bucket": "PHASE_1_2_OR_FILING_ACCEPTANCE",
+      "t_minus_30": "2020-05-13",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 11,
+      "catalyst_type": "CLIN_P1_2",
+      "event_id": "EC-2021-EDIT-EDIT101",
+      "maturity_bucket": "PHASE_1_2_OR_FILING_ACCEPTANCE",
+      "t_minus_30": "2021-08-30",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 10,
+      "catalyst_type": "CLIN_P1",
+      "event_id": "EC-2021-KURA-KO539-HOLD",
+      "maturity_bucket": "PHASE_1",
+      "t_minus_30": "2021-10-25",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 11,
+      "catalyst_type": "CLIN_P1_2",
+      "event_id": "EC-2021-SGTX-SIG001",
+      "maturity_bucket": "PHASE_1_2_OR_FILING_ACCEPTANCE",
+      "t_minus_30": "2021-06-09",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 11,
+      "catalyst_type": "CLIN_P1_2",
+      "event_id": "EC-2021-TPTX-TPX0046",
+      "maturity_bucket": "PHASE_1_2_OR_FILING_ACCEPTANCE",
+      "t_minus_30": "2021-03-06",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 10,
+      "catalyst_type": "CLIN_P1",
+      "event_id": "EC-2022-ALEC-AL101",
+      "maturity_bucket": "PHASE_1",
+      "t_minus_30": "2022-10-30",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 10,
+      "catalyst_type": "CLIN_P1",
+      "event_id": "EC-2022-AVXL-ANAVEX371",
+      "maturity_bucket": "PHASE_1",
+      "t_minus_30": "2021-12-11",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 10,
+      "catalyst_type": "CLIN_P1",
+      "event_id": "EC-2022-VTYX-VTX958",
+      "maturity_bucket": "PHASE_1",
+      "t_minus_30": "2022-07-16",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 10,
+      "catalyst_type": "CLIN_P1",
+      "event_id": "EC-2023-IMTX-IMA203",
+      "maturity_bucket": "PHASE_1",
+      "t_minus_30": "2023-10-09",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 11,
+      "catalyst_type": "CLIN_P1_2",
+      "event_id": "EC-2024-CABA-CABA201",
+      "maturity_bucket": "PHASE_1_2_OR_FILING_ACCEPTANCE",
+      "t_minus_30": "2024-05-15",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 10,
+      "catalyst_type": "CLIN_P1",
+      "event_id": "EC-2024-CHRS-CHS114",
+      "maturity_bucket": "PHASE_1",
+      "t_minus_30": "2024-04-23",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 11,
+      "catalyst_type": "CLIN_P1_2",
+      "event_id": "EC-2024-TSHA-TSHA102",
+      "maturity_bucket": "PHASE_1_2_OR_FILING_ACCEPTANCE",
+      "t_minus_30": "2024-05-19",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 10,
+      "catalyst_type": "CLIN_P1",
+      "event_id": "EC-2025-MRSN-XMT1660",
+      "maturity_bucket": "PHASE_1",
+      "t_minus_30": "2024-12-11",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 10,
+      "catalyst_type": "CLIN_P1",
+      "event_id": "EC-2025-MTSR-MET233I",
+      "maturity_bucket": "PHASE_1",
+      "t_minus_30": "2025-05-10",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 12,
+      "catalyst_type": "CLIN_P2",
+      "event_id": "NEG-P2-2018-IDRA-IMO8400",
+      "maturity_bucket": "PHASE_2_OR_MATERIAL_REGULATORY",
+      "t_minus_30": "2018-05-13",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 12,
+      "catalyst_type": "CLIN_P2",
+      "event_id": "NEG-P2-2021-ANAB-POPLAR",
+      "maturity_bucket": "PHASE_2_OR_MATERIAL_REGULATORY",
+      "t_minus_30": "2021-02-06",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 12,
+      "catalyst_type": "CLIN_P2",
+      "event_id": "NEG-P2-2022-NGM-CATALINA",
+      "maturity_bucket": "PHASE_2_OR_MATERIAL_REGULATORY",
+      "t_minus_30": "2022-09-17",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 12,
+      "catalyst_type": "CLIN_P2",
+      "event_id": "NEG-P2-2024-SAGE-LIGHTWAVE",
+      "maturity_bucket": "PHASE_2_OR_MATERIAL_REGULATORY",
+      "t_minus_30": "2024-09-08",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 12,
+      "catalyst_type": "CLIN_P2",
+      "event_id": "NEG-P2-2024-SAGE-PRECEDENT",
+      "maturity_bucket": "PHASE_2_OR_MATERIAL_REGULATORY",
+      "t_minus_30": "2024-03-18",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 13,
+      "catalyst_type": "CLIN_P3",
+      "event_id": "NEG-P3-2021-DCPH-INTRIGUE",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2021-10-06",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 13,
+      "catalyst_type": "CLIN_P3",
+      "event_id": "NEG-P3-2022-NKTR-PIVOTIO001",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2022-02-12",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 13,
+      "catalyst_type": "CLIN_P3",
+      "event_id": "NEG-P3-2023-KOD-GLEAMGLIMMER",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2023-06-24",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 13,
+      "catalyst_type": "CLIN_P3",
+      "event_id": "NEG-P3-2023-MRTX-SAPPHIRE",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2023-04-24",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 13,
+      "catalyst_type": "CLIN_P3",
+      "event_id": "NEG-P3-2024-AMLX-PHOENIX",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2024-02-07",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 12,
+      "catalyst_type": "CLIN_P2",
+      "event_id": "P2-2018-BIIB-BAN2401",
+      "maturity_bucket": "PHASE_2_OR_MATERIAL_REGULATORY",
+      "t_minus_30": "2018-06-05",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 12,
+      "catalyst_type": "CLIN_P2",
+      "event_id": "P2-2018-ESPR-BA-PCSK9",
+      "maturity_bucket": "PHASE_2_OR_MATERIAL_REGULATORY",
+      "t_minus_30": "2018-02-25",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 12,
+      "catalyst_type": "CLIN_P2",
+      "event_id": "P2-2018-GWPH-GWP42006",
+      "maturity_bucket": "PHASE_2_OR_MATERIAL_REGULATORY",
+      "t_minus_30": "2018-01-22",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 12,
+      "catalyst_type": "CLIN_P2",
+      "event_id": "P2-2019-AGIO-DRIVEPK",
+      "maturity_bucket": "PHASE_2_OR_MATERIAL_REGULATORY",
+      "t_minus_30": "2019-08-05",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 12,
+      "catalyst_type": "CLIN_P2",
+      "event_id": "P2-2019-AXSM-AXS05-SMOKING",
+      "maturity_bucket": "PHASE_2_OR_MATERIAL_REGULATORY",
+      "t_minus_30": "2019-03-16",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 12,
+      "catalyst_type": "CLIN_P2",
+      "event_id": "P2-2019-MDGL-RESMETIROM",
+      "maturity_bucket": "PHASE_2_OR_MATERIAL_REGULATORY",
+      "t_minus_30": "2019-10-12",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 12,
+      "catalyst_type": "CLIN_P2",
+      "event_id": "P2-2019-RETA-MOXIE",
+      "maturity_bucket": "PHASE_2_OR_MATERIAL_REGULATORY",
+      "t_minus_30": "2019-09-14",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 12,
+      "catalyst_type": "CLIN_P2",
+      "event_id": "P2-2019-TGTX-UNITYNHL",
+      "maturity_bucket": "PHASE_2_OR_MATERIAL_REGULATORY",
+      "t_minus_30": "2019-01-29",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 12,
+      "catalyst_type": "CLIN_P2",
+      "event_id": "P2-2020-CRNX-ACROBAT",
+      "maturity_bucket": "PHASE_2_OR_MATERIAL_REGULATORY",
+      "t_minus_30": "2020-10-07",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 12,
+      "catalyst_type": "CLIN_P2",
+      "event_id": "P2-2021-BIIB-CONVEY",
+      "maturity_bucket": "PHASE_2_OR_MATERIAL_REGULATORY",
+      "t_minus_30": "2021-08-17",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 12,
+      "catalyst_type": "CLIN_P2",
+      "event_id": "P2-2021-BIIB-TANGO",
+      "maturity_bucket": "PHASE_2_OR_MATERIAL_REGULATORY",
+      "t_minus_30": "2021-05-17",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 12,
+      "catalyst_type": "CLIN_P2",
+      "event_id": "P2-2021-GHRS-GH001",
+      "maturity_bucket": "PHASE_2_OR_MATERIAL_REGULATORY",
+      "t_minus_30": "2021-11-06",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 12,
+      "catalyst_type": "CLIN_P2",
+      "event_id": "P2-2022-AKRO-HARMONY",
+      "maturity_bucket": "PHASE_2_OR_MATERIAL_REGULATORY",
+      "t_minus_30": "2022-08-14",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 12,
+      "catalyst_type": "CLIN_P2",
+      "event_id": "P2-2022-CINC-BRIGHTN",
+      "maturity_bucket": "PHASE_2_OR_MATERIAL_REGULATORY",
+      "t_minus_30": "2022-07-09",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 12,
+      "catalyst_type": "CLIN_P2",
+      "event_id": "P2-2022-CINC-HALO",
+      "maturity_bucket": "PHASE_2_OR_MATERIAL_REGULATORY",
+      "t_minus_30": "2022-10-29",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 12,
+      "catalyst_type": "CLIN_P2",
+      "event_id": "P2-2023-AKRO-SYMMETRY-COHORT-D",
+      "maturity_bucket": "PHASE_2_OR_MATERIAL_REGULATORY",
+      "t_minus_30": "2023-05-06",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 12,
+      "catalyst_type": "CLIN_P2",
+      "event_id": "P2-2023-AKRO-SYMMETRY-MAIN",
+      "maturity_bucket": "PHASE_2_OR_MATERIAL_REGULATORY",
+      "t_minus_30": "2023-09-10",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 12,
+      "catalyst_type": "CLIN_P2",
+      "event_id": "P2-2023-APLS-MERIDIAN",
+      "maturity_bucket": "PHASE_2_OR_MATERIAL_REGULATORY",
+      "t_minus_30": "2023-04-25",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 12,
+      "catalyst_type": "CLIN_P2",
+      "event_id": "P2-2023-ATAI-PCN101",
+      "maturity_bucket": "PHASE_2_OR_MATERIAL_REGULATORY",
+      "t_minus_30": "2022-12-07",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 12,
+      "catalyst_type": "CLIN_P2",
+      "event_id": "P2-2023-TERN-DUET",
+      "maturity_bucket": "PHASE_2_OR_MATERIAL_REGULATORY",
+      "t_minus_30": "2023-07-09",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 12,
+      "catalyst_type": "CLIN_P2",
+      "event_id": "P2-2024-BNTX-BNT111",
+      "maturity_bucket": "PHASE_2_OR_MATERIAL_REGULATORY",
+      "t_minus_30": "2024-06-30",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 12,
+      "catalyst_type": "CLIN_P2",
+      "event_id": "P2-2024-RXRX-SYCAMORE",
+      "maturity_bucket": "PHASE_2_OR_MATERIAL_REGULATORY",
+      "t_minus_30": "2024-08-04",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 12,
+      "catalyst_type": "CLIN_P2",
+      "event_id": "P2-2024-SAGE-DIMENSION",
+      "maturity_bucket": "PHASE_2_OR_MATERIAL_REGULATORY",
+      "t_minus_30": "2024-10-21",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 12,
+      "catalyst_type": "CLIN_P2",
+      "event_id": "P2-2025-KALA-CHASE",
+      "maturity_bucket": "PHASE_2_OR_MATERIAL_REGULATORY",
+      "t_minus_30": "2025-08-30",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 12,
+      "catalyst_type": "CLIN_P2",
+      "event_id": "P2-2025-VTYX-VTX958",
+      "maturity_bucket": "PHASE_2_OR_MATERIAL_REGULATORY",
+      "t_minus_30": "2025-01-19",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 13,
+      "catalyst_type": "CLIN_P3",
+      "event_id": "P3-2018-RARE-UX007",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2018-09-26",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 13,
+      "catalyst_type": "CLIN_P3",
+      "event_id": "P3-2019-AXSM-GEMINI",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2019-11-16",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 13,
+      "catalyst_type": "CLIN_P3",
+      "event_id": "P3-2019-ICPT-REGENERATE",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2019-01-20",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 13,
+      "catalyst_type": "CLIN_P3",
+      "event_id": "P3-2019-NVAX-PREPARE",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2019-01-29",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 13,
+      "catalyst_type": "CLIN_P3",
+      "event_id": "P3-2020-AGIO-ACTIVATE",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2020-11-01",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 13,
+      "catalyst_type": "CLIN_P3",
+      "event_id": "P3-2020-APRE-P3MDS",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2020-11-28",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 13,
+      "catalyst_type": "CLIN_P3",
+      "event_id": "P3-2020-CRBP-RESOLVE1",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2020-08-09",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 13,
+      "catalyst_type": "CLIN_P3",
+      "event_id": "P3-2020-GMAB-ANDROMEDA",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2020-04-28",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 13,
+      "catalyst_type": "CLIN_P3",
+      "event_id": "P3-2020-IMMU-ASCENT",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2020-06-06",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 13,
+      "catalyst_type": "CLIN_P3",
+      "event_id": "P3-2020-ONTX-INSPIRE",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2020-07-25",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 13,
+      "catalyst_type": "CLIN_P3",
+      "event_id": "P3-2020-REGN-LIBTAYO-NSCLC",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2020-03-28",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 13,
+      "catalyst_type": "CLIN_P3",
+      "event_id": "P3-2021-BIIB-STAR",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2021-05-15",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 13,
+      "catalyst_type": "CLIN_P3",
+      "event_id": "P3-2021-BIIB-VALOR",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2021-09-17",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 13,
+      "catalyst_type": "CLIN_P3",
+      "event_id": "P3-2022-BGNE-ALPINE",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2022-09-12",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 13,
+      "catalyst_type": "CLIN_P3",
+      "event_id": "P3-2022-MDGL-MAESTRO-NASH",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2022-11-19",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 13,
+      "catalyst_type": "CLIN_P3",
+      "event_id": "P3-2023-GERN-IMERGE",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2022-12-05",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 13,
+      "catalyst_type": "CLIN_P3",
+      "event_id": "P3-2023-GMAB-INNOVATV301",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2023-08-05",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 13,
+      "catalyst_type": "CLIN_P3",
+      "event_id": "P3-2024-ANNX-ANX005",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2024-05-05",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 13,
+      "catalyst_type": "CLIN_P3",
+      "event_id": "P3-2024-FULC-REACH",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2024-08-13",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 13,
+      "catalyst_type": "CLIN_P3",
+      "event_id": "P3-2024-NAMS-BROADWAY",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2024-11-10",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 13,
+      "catalyst_type": "CLIN_P3",
+      "event_id": "P3-2024-NAMS-BROOKLYN",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2024-06-29",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 13,
+      "catalyst_type": "CLIN_P3",
+      "event_id": "P3-2024-SAVA-RETHINK",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2024-10-26",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 13,
+      "catalyst_type": "CLIN_P3",
+      "event_id": "P3-2025-ALEC-INFRONT3",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2025-09-21",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 13,
+      "catalyst_type": "CLIN_P3",
+      "event_id": "P3-2025-CAPR-HOPE3",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2025-11-03",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 13,
+      "catalyst_type": "CLIN_P3",
+      "event_id": "P3-2025-SAVA-REFOCUS",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2025-02-23",
+      "timing_confidence": "MODERATE"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 14,
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2018-AGIO-TIBSOVO",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2018-06-20",
+      "timing_confidence": "HIGH"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 14,
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2018-ALNY-ONPATTRO",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2018-07-11",
+      "timing_confidence": "HIGH"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 14,
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2018-ARRY-BRAFTOVI-MEKTOVI",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2018-05-28",
+      "timing_confidence": "HIGH"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 14,
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2018-FOLD-GALAFOLD",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2018-07-11",
+      "timing_confidence": "HIGH"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 14,
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2018-REPH-MELOXICAM-CRL",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2018-04-24",
+      "timing_confidence": "HIGH"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 14,
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2019-GBT-OXBRYTA",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2019-10-26",
+      "timing_confidence": "HIGH"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 14,
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2019-SAGE-ZULRESSO",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2019-02-17",
+      "timing_confidence": "HIGH"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 14,
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2019-SRPT-GOLODIRSEN-CRL",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2019-07-20",
+      "timing_confidence": "HIGH"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 14,
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2020-BMRN-VALROX-CRL",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2020-07-20",
+      "timing_confidence": "HIGH"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 14,
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2020-ICPT-OCA-CRL",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2020-05-30",
+      "timing_confidence": "HIGH"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 14,
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2020-IMMU-TRODELVY",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2020-03-23",
+      "timing_confidence": "HIGH"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 14,
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2020-RYTM-IMCIVREE",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2020-10-28",
+      "timing_confidence": "HIGH"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 14,
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2020-TCDA-VEVERIMER-CRL",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2020-07-25",
+      "timing_confidence": "HIGH"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 14,
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2021-ASND-SKYTROFA",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2021-07-26",
+      "timing_confidence": "HIGH"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 14,
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2021-ATNX-ORALPAC-CRL",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2021-01-30",
+      "timing_confidence": "HIGH"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 14,
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2021-FGEN-ROXADUSTAT-CRL",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2021-07-12",
+      "timing_confidence": "HIGH"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 14,
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2021-INCY-OPZELURA",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2021-08-22",
+      "timing_confidence": "HIGH"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 14,
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2021-OMER-NARSOPLIMAB-CRL",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2021-09-18",
+      "timing_confidence": "HIGH"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 14,
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2022-AXSM-AXS07-CRL",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2022-03-26",
+      "timing_confidence": "HIGH"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 14,
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2022-IMGN-ELAHERE",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2022-10-15",
+      "timing_confidence": "HIGH"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 14,
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2022-PRVB-TZIELD",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2022-10-18",
+      "timing_confidence": "HIGH"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 14,
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2022-TGTX-BRIUMVI",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2022-11-28",
+      "timing_confidence": "HIGH"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 14,
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2023-BLUE-LYFGENIA",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2023-11-08",
+      "timing_confidence": "HIGH"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 12,
+      "catalyst_type": "REG_SUBMIT",
+      "event_id": "REG-2023-GERN-IMETELSTAT-NDA-ACCEPT",
+      "maturity_bucket": "PHASE_1_2_OR_FILING_ACCEPTANCE",
+      "t_minus_30": "2023-07-22",
+      "timing_confidence": "HIGH"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 14,
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2023-RETA-SKYCLARYS",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2023-01-29",
+      "timing_confidence": "HIGH"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 14,
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2023-SRPT-ELEVIDYS",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2023-05-23",
+      "timing_confidence": "HIGH"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 14,
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2024-IOVA-AMTAGVI",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2024-01-17",
+      "timing_confidence": "HIGH"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 14,
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2024-RCKT-KRESLADI-CRL",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2024-05-29",
+      "timing_confidence": "HIGH"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 14,
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2024-REGN-LINVOSELTAMAB-CRL",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2024-07-21",
+      "timing_confidence": "HIGH"
+    },
+    {
+      "catalyst_factor_max_points": 25,
+      "catalyst_factor_points": 14,
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2024-VRTX-ALYFTREK",
+      "maturity_bucket": "PHASE_2_3_PHASE_3_ADCOM_DECISION",
+      "t_minus_30": "2024-11-20",
+      "timing_confidence": "HIGH"
+    }
+  ],
+  "snapshot_label": "T_MINUS_30"
+}
