@@ -1,0 +1,1692 @@
+{
+  "cohort_sha256": "37f2e70dcc0626b40e97637e34056c9279ae9a5e6daf69d1c2f730e77c114e95",
+  "event_count": 120,
+  "events": [
+    {
+      "event_at": "2018-06-04T07:56:00-04:00",
+      "event_id": "CO-2018-ZIOP-ASCO",
+      "last_complete_session": "2018-06-01",
+      "primary_stratum": "CONFERENCE_OTHER",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2018-06-01T23:59:59.999999-04:00",
+        "T_MINUS_10": "2018-05-25T07:56:00-04:00",
+        "T_MINUS_30": "2018-05-05T07:56:00-04:00",
+        "T_MINUS_60": "2018-04-05T07:56:00-04:00"
+      },
+      "t0_session": "2018-06-04",
+      "ticker": "ZIOP"
+    },
+    {
+      "event_at": "2019-12-08T16:45:00-05:00",
+      "event_id": "CO-2019-BGNE-ZANUASH",
+      "last_complete_session": "2019-12-06",
+      "primary_stratum": "CONFERENCE_OTHER",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2019-12-06T23:59:59.999999-05:00",
+        "T_MINUS_10": "2019-11-28T16:45:00-05:00",
+        "T_MINUS_30": "2019-11-08T16:45:00-05:00",
+        "T_MINUS_60": "2019-10-09T16:45:00-05:00"
+      },
+      "t0_session": "2019-12-09",
+      "ticker": "BGNE"
+    },
+    {
+      "event_at": "2019-12-09T10:00:00-05:00",
+      "event_id": "CO-2019-CNST-MANIFEST",
+      "last_complete_session": "2019-12-06",
+      "primary_stratum": "CONFERENCE_OTHER",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2019-12-06T23:59:59.999999-05:00",
+        "T_MINUS_10": "2019-11-29T10:00:00-05:00",
+        "T_MINUS_30": "2019-11-09T10:00:00-05:00",
+        "T_MINUS_60": "2019-10-10T10:00:00-05:00"
+      },
+      "t0_session": "2019-12-09",
+      "ticker": "CNST"
+    },
+    {
+      "event_at": "2020-12-07T08:00:00-05:00",
+      "event_id": "CO-2020-ONCT-CIRLLASH",
+      "last_complete_session": "2020-12-04",
+      "primary_stratum": "CONFERENCE_OTHER",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2020-12-04T23:59:59.999999-05:00",
+        "T_MINUS_10": "2020-11-27T08:00:00-05:00",
+        "T_MINUS_30": "2020-11-07T08:00:00-05:00",
+        "T_MINUS_60": "2020-10-08T08:00:00-05:00"
+      },
+      "t0_session": "2020-12-07",
+      "ticker": "ONCT"
+    },
+    {
+      "event_at": "2020-12-07T16:05:00-05:00",
+      "event_id": "CO-2020-TRIL-TTI622ASH",
+      "last_complete_session": "2020-12-04",
+      "primary_stratum": "CONFERENCE_OTHER",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2020-12-04T23:59:59.999999-05:00",
+        "T_MINUS_10": "2020-11-27T16:05:00-05:00",
+        "T_MINUS_30": "2020-11-07T16:05:00-05:00",
+        "T_MINUS_60": "2020-10-08T16:05:00-05:00"
+      },
+      "t0_session": "2020-12-08",
+      "ticker": "TRIL"
+    },
+    {
+      "event_at": "2021-06-04T09:00:00-04:00",
+      "event_id": "CO-2021-HARP-HPN424ASCO",
+      "last_complete_session": "2021-06-03",
+      "primary_stratum": "CONFERENCE_OTHER",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2021-06-03T23:59:59.999999-04:00",
+        "T_MINUS_10": "2021-05-25T09:00:00-04:00",
+        "T_MINUS_30": "2021-05-05T09:00:00-04:00",
+        "T_MINUS_60": "2021-04-05T09:00:00-04:00"
+      },
+      "t0_session": "2021-06-04",
+      "ticker": "HARP"
+    },
+    {
+      "event_at": "2021-12-11T13:31:00-05:00",
+      "event_id": "CO-2021-IGMS-IGM2323ASH",
+      "last_complete_session": "2021-12-10",
+      "primary_stratum": "CONFERENCE_OTHER",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2021-12-10T23:59:59.999999-05:00",
+        "T_MINUS_10": "2021-12-01T13:31:00-05:00",
+        "T_MINUS_30": "2021-11-11T13:31:00-05:00",
+        "T_MINUS_60": "2021-10-12T13:31:00-05:00"
+      },
+      "t0_session": "2021-12-13",
+      "ticker": "IGMS"
+    },
+    {
+      "event_at": "2021-06-04T09:08:00-04:00",
+      "event_id": "CO-2021-IOVA-LIFILEUCELASCO",
+      "last_complete_session": "2021-06-03",
+      "primary_stratum": "CONFERENCE_OTHER",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2021-06-03T23:59:59.999999-04:00",
+        "T_MINUS_10": "2021-05-25T09:08:00-04:00",
+        "T_MINUS_30": "2021-05-05T09:08:00-04:00",
+        "T_MINUS_60": "2021-04-05T09:08:00-04:00"
+      },
+      "t0_session": "2021-06-04",
+      "ticker": "IOVA"
+    },
+    {
+      "event_at": "2022-12-12T10:00:00-05:00",
+      "event_id": "CO-2022-KROS-KER050ASH",
+      "last_complete_session": "2022-12-09",
+      "primary_stratum": "CONFERENCE_OTHER",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2022-12-09T23:59:59.999999-05:00",
+        "T_MINUS_10": "2022-12-02T10:00:00-05:00",
+        "T_MINUS_30": "2022-11-12T10:00:00-05:00",
+        "T_MINUS_60": "2022-10-13T10:00:00-05:00"
+      },
+      "t0_session": "2022-12-12",
+      "ticker": "KROS"
+    },
+    {
+      "event_at": "2024-12-09T19:30:00-05:00",
+      "event_id": "CO-2024-AUTL-OBECELASH",
+      "last_complete_session": "2024-12-06",
+      "primary_stratum": "CONFERENCE_OTHER",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2024-12-06T23:59:59.999999-05:00",
+        "T_MINUS_10": "2024-11-29T19:30:00-05:00",
+        "T_MINUS_30": "2024-11-09T19:30:00-05:00",
+        "T_MINUS_60": "2024-10-10T19:30:00-05:00"
+      },
+      "t0_session": "2024-12-10",
+      "ticker": "AUTL"
+    },
+    {
+      "event_at": "2024-06-03T09:00:00-04:00",
+      "event_id": "CO-2024-GMAB-TVASCO",
+      "last_complete_session": "2024-05-31",
+      "primary_stratum": "CONFERENCE_OTHER",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2024-05-31T23:59:59.999999-04:00",
+        "T_MINUS_10": "2024-05-24T09:00:00-04:00",
+        "T_MINUS_30": "2024-05-04T09:00:00-04:00",
+        "T_MINUS_60": "2024-04-04T09:00:00-04:00"
+      },
+      "t0_session": "2024-06-03",
+      "ticker": "GMAB"
+    },
+    {
+      "event_at": "2024-12-08T20:00:00-05:00",
+      "event_id": "CO-2024-IRON-DISC0974ASH",
+      "last_complete_session": "2024-12-06",
+      "primary_stratum": "CONFERENCE_OTHER",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2024-12-06T23:59:59.999999-05:00",
+        "T_MINUS_10": "2024-11-28T20:00:00-05:00",
+        "T_MINUS_30": "2024-11-08T20:00:00-05:00",
+        "T_MINUS_60": "2024-10-09T20:00:00-05:00"
+      },
+      "t0_session": "2024-12-09",
+      "ticker": "IRON"
+    },
+    {
+      "event_at": "2024-12-09T18:00:00-05:00",
+      "event_id": "CO-2024-NRIX-NX5948ASH",
+      "last_complete_session": "2024-12-06",
+      "primary_stratum": "CONFERENCE_OTHER",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2024-12-06T23:59:59.999999-05:00",
+        "T_MINUS_10": "2024-11-29T18:00:00-05:00",
+        "T_MINUS_30": "2024-11-09T18:00:00-05:00",
+        "T_MINUS_60": "2024-10-10T18:00:00-05:00"
+      },
+      "t0_session": "2024-12-10",
+      "ticker": "NRIX"
+    },
+    {
+      "event_at": "2025-12-08T10:30:00-05:00",
+      "event_id": "CO-2025-CRVS-SOQUELITINIBASH",
+      "last_complete_session": "2025-12-05",
+      "primary_stratum": "CONFERENCE_OTHER",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2025-12-05T23:59:59.999999-05:00",
+        "T_MINUS_10": "2025-11-28T10:30:00-05:00",
+        "T_MINUS_30": "2025-11-08T10:30:00-05:00",
+        "T_MINUS_60": "2025-10-09T10:30:00-05:00"
+      },
+      "t0_session": "2025-12-08",
+      "ticker": "CRVS"
+    },
+    {
+      "event_at": "2025-12-08T08:02:00-05:00",
+      "event_id": "CO-2025-GERN-RYTELOASH",
+      "last_complete_session": "2025-12-05",
+      "primary_stratum": "CONFERENCE_OTHER",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2025-12-05T23:59:59.999999-05:00",
+        "T_MINUS_10": "2025-11-28T08:02:00-05:00",
+        "T_MINUS_30": "2025-11-08T08:02:00-05:00",
+        "T_MINUS_60": "2025-10-09T08:02:00-05:00"
+      },
+      "t0_session": "2025-12-08",
+      "ticker": "GERN"
+    },
+    {
+      "event_at": "2019-12-16T07:00:00-05:00",
+      "event_id": "EC-2019-WVE-SUVODIRSEN",
+      "last_complete_session": "2019-12-13",
+      "primary_stratum": "EARLY_CLINICAL",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2019-12-13T23:59:59.999999-05:00",
+        "T_MINUS_10": "2019-12-06T07:00:00-05:00",
+        "T_MINUS_30": "2019-11-16T07:00:00-05:00",
+        "T_MINUS_60": "2019-10-17T07:00:00-05:00"
+      },
+      "t0_session": "2019-12-16",
+      "ticker": "WVE"
+    },
+    {
+      "event_at": "2020-06-12T02:30:00-04:00",
+      "event_id": "EC-2020-CRSP-CTX001",
+      "last_complete_session": "2020-06-11",
+      "primary_stratum": "EARLY_CLINICAL",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2020-06-11T23:59:59.999999-04:00",
+        "T_MINUS_10": "2020-06-02T02:30:00-04:00",
+        "T_MINUS_30": "2020-05-13T02:30:00-04:00",
+        "T_MINUS_60": "2020-04-13T02:30:00-04:00"
+      },
+      "t0_session": "2020-06-12",
+      "ticker": "CRSP"
+    },
+    {
+      "event_at": "2021-09-29T09:00:00-04:00",
+      "event_id": "EC-2021-EDIT-EDIT101",
+      "last_complete_session": "2021-09-28",
+      "primary_stratum": "EARLY_CLINICAL",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2021-09-28T23:59:59.999999-04:00",
+        "T_MINUS_10": "2021-09-19T09:00:00-04:00",
+        "T_MINUS_30": "2021-08-30T09:00:00-04:00",
+        "T_MINUS_60": "2021-07-31T09:00:00-04:00"
+      },
+      "t0_session": "2021-09-29",
+      "ticker": "EDIT"
+    },
+    {
+      "event_at": "2021-11-24T06:50:58-05:00",
+      "event_id": "EC-2021-KURA-KO539-HOLD",
+      "last_complete_session": "2021-11-23",
+      "primary_stratum": "EARLY_CLINICAL",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2021-11-23T23:59:59.999999-05:00",
+        "T_MINUS_10": "2021-11-14T06:50:58-05:00",
+        "T_MINUS_30": "2021-10-25T06:50:58-05:00",
+        "T_MINUS_60": "2021-09-25T06:50:58-05:00"
+      },
+      "t0_session": "2021-11-24",
+      "ticker": "KURA"
+    },
+    {
+      "event_at": "2021-07-09T07:30:00-04:00",
+      "event_id": "EC-2021-SGTX-SIG001",
+      "last_complete_session": "2021-07-08",
+      "primary_stratum": "EARLY_CLINICAL",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2021-07-08T23:59:59.999999-04:00",
+        "T_MINUS_10": "2021-06-29T07:30:00-04:00",
+        "T_MINUS_30": "2021-06-09T07:30:00-04:00",
+        "T_MINUS_60": "2021-05-10T07:30:00-04:00"
+      },
+      "t0_session": "2021-07-09",
+      "ticker": "SGTX"
+    },
+    {
+      "event_at": "2021-04-05T16:01:00-04:00",
+      "event_id": "EC-2021-TPTX-TPX0046",
+      "last_complete_session": "2021-04-01",
+      "primary_stratum": "EARLY_CLINICAL",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2021-04-01T23:59:59.999999-04:00",
+        "T_MINUS_10": "2021-03-26T16:01:00-04:00",
+        "T_MINUS_30": "2021-03-06T16:01:00-04:00",
+        "T_MINUS_60": "2021-02-04T16:01:00-04:00"
+      },
+      "t0_session": "2021-04-06",
+      "ticker": "TPTX"
+    },
+    {
+      "event_at": "2022-11-29T11:05:00-05:00",
+      "event_id": "EC-2022-ALEC-AL101",
+      "last_complete_session": "2022-11-28",
+      "primary_stratum": "EARLY_CLINICAL",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2022-11-28T23:59:59.999999-05:00",
+        "T_MINUS_10": "2022-11-19T11:05:00-05:00",
+        "T_MINUS_30": "2022-10-30T11:05:00-05:00",
+        "T_MINUS_60": "2022-09-30T11:05:00-05:00"
+      },
+      "t0_session": "2022-11-29",
+      "ticker": "ALEC"
+    },
+    {
+      "event_at": "2022-01-10T07:00:00-05:00",
+      "event_id": "EC-2022-AVXL-ANAVEX371",
+      "last_complete_session": "2022-01-07",
+      "primary_stratum": "EARLY_CLINICAL",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2022-01-07T23:59:59.999999-05:00",
+        "T_MINUS_10": "2021-12-31T07:00:00-05:00",
+        "T_MINUS_30": "2021-12-11T07:00:00-05:00",
+        "T_MINUS_60": "2021-11-11T07:00:00-05:00"
+      },
+      "t0_session": "2022-01-10",
+      "ticker": "AVXL"
+    },
+    {
+      "event_at": "2022-08-15T16:01:00-04:00",
+      "event_id": "EC-2022-VTYX-VTX958",
+      "last_complete_session": "2022-08-12",
+      "primary_stratum": "EARLY_CLINICAL",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2022-08-12T23:59:59.999999-04:00",
+        "T_MINUS_10": "2022-08-05T16:01:00-04:00",
+        "T_MINUS_30": "2022-07-16T16:01:00-04:00",
+        "T_MINUS_60": "2022-06-16T16:01:00-04:00"
+      },
+      "t0_session": "2022-08-16",
+      "ticker": "VTYX"
+    },
+    {
+      "event_at": "2023-11-08T07:00:00-05:00",
+      "event_id": "EC-2023-IMTX-IMA203",
+      "last_complete_session": "2023-11-07",
+      "primary_stratum": "EARLY_CLINICAL",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2023-11-07T23:59:59.999999-05:00",
+        "T_MINUS_10": "2023-10-29T07:00:00-05:00",
+        "T_MINUS_30": "2023-10-09T07:00:00-05:00",
+        "T_MINUS_60": "2023-09-09T07:00:00-05:00"
+      },
+      "t0_session": "2023-11-08",
+      "ticker": "IMTX"
+    },
+    {
+      "event_at": "2024-06-14T02:00:00-04:00",
+      "event_id": "EC-2024-CABA-CABA201",
+      "last_complete_session": "2024-06-13",
+      "primary_stratum": "EARLY_CLINICAL",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2024-06-13T23:59:59.999999-04:00",
+        "T_MINUS_10": "2024-06-04T02:00:00-04:00",
+        "T_MINUS_30": "2024-05-15T02:00:00-04:00",
+        "T_MINUS_60": "2024-04-15T02:00:00-04:00"
+      },
+      "t0_session": "2024-06-14",
+      "ticker": "CABA"
+    },
+    {
+      "event_at": "2024-05-23T17:51:00-04:00",
+      "event_id": "EC-2024-CHRS-CHS114",
+      "last_complete_session": "2024-05-22",
+      "primary_stratum": "EARLY_CLINICAL",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2024-05-22T23:59:59.999999-04:00",
+        "T_MINUS_10": "2024-05-13T17:51:00-04:00",
+        "T_MINUS_30": "2024-04-23T17:51:00-04:00",
+        "T_MINUS_60": "2024-03-24T17:51:00-04:00"
+      },
+      "t0_session": "2024-05-24",
+      "ticker": "CHRS"
+    },
+    {
+      "event_at": "2024-06-18T07:30:00-04:00",
+      "event_id": "EC-2024-TSHA-TSHA102",
+      "last_complete_session": "2024-06-17",
+      "primary_stratum": "EARLY_CLINICAL",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2024-06-17T23:59:59.999999-04:00",
+        "T_MINUS_10": "2024-06-08T07:30:00-04:00",
+        "T_MINUS_30": "2024-05-19T07:30:00-04:00",
+        "T_MINUS_60": "2024-04-19T07:30:00-04:00"
+      },
+      "t0_session": "2024-06-18",
+      "ticker": "TSHA"
+    },
+    {
+      "event_at": "2025-01-10T06:00:00-05:00",
+      "event_id": "EC-2025-MRSN-XMT1660",
+      "last_complete_session": "2025-01-09",
+      "primary_stratum": "EARLY_CLINICAL",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2025-01-09T23:59:59.999999-05:00",
+        "T_MINUS_10": "2024-12-31T06:00:00-05:00",
+        "T_MINUS_30": "2024-12-11T06:00:00-05:00",
+        "T_MINUS_60": "2024-11-11T06:00:00-05:00"
+      },
+      "t0_session": "2025-01-10",
+      "ticker": "MRSN"
+    },
+    {
+      "event_at": "2025-06-09T07:00:00-04:00",
+      "event_id": "EC-2025-MTSR-MET233I",
+      "last_complete_session": "2025-06-06",
+      "primary_stratum": "EARLY_CLINICAL",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2025-06-06T23:59:59.999999-04:00",
+        "T_MINUS_10": "2025-05-30T07:00:00-04:00",
+        "T_MINUS_30": "2025-05-10T07:00:00-04:00",
+        "T_MINUS_60": "2025-04-10T07:00:00-04:00"
+      },
+      "t0_session": "2025-06-09",
+      "ticker": "MTSR"
+    },
+    {
+      "event_at": "2018-06-12T07:30:00-04:00",
+      "event_id": "NEG-P2-2018-IDRA-IMO8400",
+      "last_complete_session": "2018-06-11",
+      "primary_stratum": "PHASE_2_POC",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2018-06-11T23:59:59.999999-04:00",
+        "T_MINUS_10": "2018-06-02T07:30:00-04:00",
+        "T_MINUS_30": "2018-05-13T07:30:00-04:00",
+        "T_MINUS_60": "2018-04-13T07:30:00-04:00"
+      },
+      "t0_session": "2018-06-12",
+      "ticker": "IDRA"
+    },
+    {
+      "event_at": "2021-03-08T08:00:00-05:00",
+      "event_id": "NEG-P2-2021-ANAB-POPLAR",
+      "last_complete_session": "2021-03-05",
+      "primary_stratum": "PHASE_2_POC",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2021-03-05T23:59:59.999999-05:00",
+        "T_MINUS_10": "2021-02-26T08:00:00-05:00",
+        "T_MINUS_30": "2021-02-06T08:00:00-05:00",
+        "T_MINUS_60": "2021-01-07T08:00:00-05:00"
+      },
+      "t0_session": "2021-03-08",
+      "ticker": "ANAB"
+    },
+    {
+      "event_at": "2022-10-17T07:40:32-04:00",
+      "event_id": "NEG-P2-2022-NGM-CATALINA",
+      "last_complete_session": "2022-10-14",
+      "primary_stratum": "PHASE_2_POC",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2022-10-14T23:59:59.999999-04:00",
+        "T_MINUS_10": "2022-10-07T07:40:32-04:00",
+        "T_MINUS_30": "2022-09-17T07:40:32-04:00",
+        "T_MINUS_60": "2022-08-18T07:40:32-04:00"
+      },
+      "t0_session": "2022-10-17",
+      "ticker": "NGM"
+    },
+    {
+      "event_at": "2024-10-08T06:37:00-04:00",
+      "event_id": "NEG-P2-2024-SAGE-LIGHTWAVE",
+      "last_complete_session": "2024-10-07",
+      "primary_stratum": "PHASE_2_POC",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2024-10-07T23:59:59.999999-04:00",
+        "T_MINUS_10": "2024-09-28T06:37:00-04:00",
+        "T_MINUS_30": "2024-09-08T06:37:00-04:00",
+        "T_MINUS_60": "2024-08-09T06:37:00-04:00"
+      },
+      "t0_session": "2024-10-08",
+      "ticker": "SAGE"
+    },
+    {
+      "event_at": "2024-04-17T06:35:00-04:00",
+      "event_id": "NEG-P2-2024-SAGE-PRECEDENT",
+      "last_complete_session": "2024-04-16",
+      "primary_stratum": "PHASE_2_POC",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2024-04-16T23:59:59.999999-04:00",
+        "T_MINUS_10": "2024-04-07T06:35:00-04:00",
+        "T_MINUS_30": "2024-03-18T06:35:00-04:00",
+        "T_MINUS_60": "2024-02-17T06:35:00-04:00"
+      },
+      "t0_session": "2024-04-17",
+      "ticker": "SAGE"
+    },
+    {
+      "event_at": "2021-11-05T07:10:00-04:00",
+      "event_id": "NEG-P3-2021-DCPH-INTRIGUE",
+      "last_complete_session": "2021-11-04",
+      "primary_stratum": "PHASE_3_PIVOTAL",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2021-11-04T23:59:59.999999-04:00",
+        "T_MINUS_10": "2021-10-26T07:10:00-04:00",
+        "T_MINUS_30": "2021-10-06T07:10:00-04:00",
+        "T_MINUS_60": "2021-09-06T07:10:00-04:00"
+      },
+      "t0_session": "2021-11-05",
+      "ticker": "DCPH"
+    },
+    {
+      "event_at": "2022-03-14T06:59:00-04:00",
+      "event_id": "NEG-P3-2022-NKTR-PIVOTIO001",
+      "last_complete_session": "2022-03-11",
+      "primary_stratum": "PHASE_3_PIVOTAL",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2022-03-11T23:59:59.999999-04:00",
+        "T_MINUS_10": "2022-03-04T06:59:00-04:00",
+        "T_MINUS_30": "2022-02-12T06:59:00-04:00",
+        "T_MINUS_60": "2022-01-13T06:59:00-04:00"
+      },
+      "t0_session": "2022-03-14",
+      "ticker": "NKTR"
+    },
+    {
+      "event_at": "2023-07-24T06:45:00-04:00",
+      "event_id": "NEG-P3-2023-KOD-GLEAMGLIMMER",
+      "last_complete_session": "2023-07-21",
+      "primary_stratum": "PHASE_3_PIVOTAL",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2023-07-21T23:59:59.999999-04:00",
+        "T_MINUS_10": "2023-07-14T06:45:00-04:00",
+        "T_MINUS_30": "2023-06-24T06:45:00-04:00",
+        "T_MINUS_60": "2023-05-25T06:45:00-04:00"
+      },
+      "t0_session": "2023-07-24",
+      "ticker": "KOD"
+    },
+    {
+      "event_at": "2023-05-24T16:10:00-04:00",
+      "event_id": "NEG-P3-2023-MRTX-SAPPHIRE",
+      "last_complete_session": "2023-05-23",
+      "primary_stratum": "PHASE_3_PIVOTAL",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2023-05-23T23:59:59.999999-04:00",
+        "T_MINUS_10": "2023-05-14T16:10:00-04:00",
+        "T_MINUS_30": "2023-04-24T16:10:00-04:00",
+        "T_MINUS_60": "2023-03-25T16:10:00-04:00"
+      },
+      "t0_session": "2023-05-25",
+      "ticker": "MRTX"
+    },
+    {
+      "event_at": "2024-03-08T07:10:02-05:00",
+      "event_id": "NEG-P3-2024-AMLX-PHOENIX",
+      "last_complete_session": "2024-03-07",
+      "primary_stratum": "PHASE_3_PIVOTAL",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2024-03-07T23:59:59.999999-05:00",
+        "T_MINUS_10": "2024-02-27T07:10:02-05:00",
+        "T_MINUS_30": "2024-02-07T07:10:02-05:00",
+        "T_MINUS_60": "2024-01-08T07:10:02-05:00"
+      },
+      "t0_session": "2024-03-08",
+      "ticker": "AMLX"
+    },
+    {
+      "event_at": "2018-07-05T19:30:00-04:00",
+      "event_id": "P2-2018-BIIB-BAN2401",
+      "last_complete_session": "2018-07-03",
+      "primary_stratum": "PHASE_2_POC",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2018-07-03T23:59:59.999999-04:00",
+        "T_MINUS_10": "2018-06-25T19:30:00-04:00",
+        "T_MINUS_30": "2018-06-05T19:30:00-04:00",
+        "T_MINUS_60": "2018-05-06T19:30:00-04:00"
+      },
+      "t0_session": "2018-07-06",
+      "ticker": "BIIB"
+    },
+    {
+      "event_at": "2018-03-27T07:30:00-04:00",
+      "event_id": "P2-2018-ESPR-BA-PCSK9",
+      "last_complete_session": "2018-03-26",
+      "primary_stratum": "PHASE_2_POC",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2018-03-26T23:59:59.999999-04:00",
+        "T_MINUS_10": "2018-03-17T07:30:00-04:00",
+        "T_MINUS_30": "2018-02-25T07:30:00-04:00",
+        "T_MINUS_60": "2018-01-26T07:30:00-04:00"
+      },
+      "t0_session": "2018-03-27",
+      "ticker": "ESPR"
+    },
+    {
+      "event_at": "2018-02-21T16:01:00-05:00",
+      "event_id": "P2-2018-GWPH-GWP42006",
+      "last_complete_session": "2018-02-20",
+      "primary_stratum": "PHASE_2_POC",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2018-02-20T23:59:59.999999-05:00",
+        "T_MINUS_10": "2018-02-11T16:01:00-05:00",
+        "T_MINUS_30": "2018-01-22T16:01:00-05:00",
+        "T_MINUS_60": "2017-12-23T16:01:00-05:00"
+      },
+      "t0_session": "2018-02-22",
+      "ticker": "GWPH"
+    },
+    {
+      "event_at": "2019-09-04T17:00:00-04:00",
+      "event_id": "P2-2019-AGIO-DRIVEPK",
+      "last_complete_session": "2019-09-03",
+      "primary_stratum": "PHASE_2_POC",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2019-09-03T23:59:59.999999-04:00",
+        "T_MINUS_10": "2019-08-25T17:00:00-04:00",
+        "T_MINUS_30": "2019-08-05T17:00:00-04:00",
+        "T_MINUS_60": "2019-07-06T17:00:00-04:00"
+      },
+      "t0_session": "2019-09-05",
+      "ticker": "AGIO"
+    },
+    {
+      "event_at": "2019-04-15T06:00:00-04:00",
+      "event_id": "P2-2019-AXSM-AXS05-SMOKING",
+      "last_complete_session": "2019-04-12",
+      "primary_stratum": "PHASE_2_POC",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2019-04-12T23:59:59.999999-04:00",
+        "T_MINUS_10": "2019-04-05T06:00:00-04:00",
+        "T_MINUS_30": "2019-03-16T06:00:00-04:00",
+        "T_MINUS_60": "2019-02-14T06:00:00-04:00"
+      },
+      "t0_session": "2019-04-15",
+      "ticker": "AXSM"
+    },
+    {
+      "event_at": "2019-11-11T17:30:00-05:00",
+      "event_id": "P2-2019-MDGL-RESMETIROM",
+      "last_complete_session": "2019-11-08",
+      "primary_stratum": "PHASE_2_POC",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2019-11-08T23:59:59.999999-05:00",
+        "T_MINUS_10": "2019-11-01T17:30:00-05:00",
+        "T_MINUS_30": "2019-10-12T17:30:00-05:00",
+        "T_MINUS_60": "2019-09-12T17:30:00-05:00"
+      },
+      "t0_session": "2019-11-12",
+      "ticker": "MDGL"
+    },
+    {
+      "event_at": "2019-10-14T16:01:00-04:00",
+      "event_id": "P2-2019-RETA-MOXIE",
+      "last_complete_session": "2019-10-11",
+      "primary_stratum": "PHASE_2_POC",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2019-10-11T23:59:59.999999-04:00",
+        "T_MINUS_10": "2019-10-04T16:01:00-04:00",
+        "T_MINUS_30": "2019-09-14T16:01:00-04:00",
+        "T_MINUS_60": "2019-08-15T16:01:00-04:00"
+      },
+      "t0_session": "2019-10-15",
+      "ticker": "RETA"
+    },
+    {
+      "event_at": "2019-02-28T07:33:41-05:00",
+      "event_id": "P2-2019-TGTX-UNITYNHL",
+      "last_complete_session": "2019-02-27",
+      "primary_stratum": "PHASE_2_POC",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2019-02-27T23:59:59.999999-05:00",
+        "T_MINUS_10": "2019-02-18T07:33:41-05:00",
+        "T_MINUS_30": "2019-01-29T07:33:41-05:00",
+        "T_MINUS_60": "2018-12-30T07:33:41-05:00"
+      },
+      "t0_session": "2019-02-28",
+      "ticker": "TGTX"
+    },
+    {
+      "event_at": "2020-11-06T08:30:00-05:00",
+      "event_id": "P2-2020-CRNX-ACROBAT",
+      "last_complete_session": "2020-11-05",
+      "primary_stratum": "PHASE_2_POC",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2020-11-05T23:59:59.999999-05:00",
+        "T_MINUS_10": "2020-10-27T08:30:00-05:00",
+        "T_MINUS_30": "2020-10-07T08:30:00-05:00",
+        "T_MINUS_60": "2020-09-07T08:30:00-05:00"
+      },
+      "t0_session": "2020-11-06",
+      "ticker": "CRNX"
+    },
+    {
+      "event_at": "2021-09-16T07:30:00-04:00",
+      "event_id": "P2-2021-BIIB-CONVEY",
+      "last_complete_session": "2021-09-15",
+      "primary_stratum": "PHASE_2_POC",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2021-09-15T23:59:59.999999-04:00",
+        "T_MINUS_10": "2021-09-06T07:30:00-04:00",
+        "T_MINUS_30": "2021-08-17T07:30:00-04:00",
+        "T_MINUS_60": "2021-07-18T07:30:00-04:00"
+      },
+      "t0_session": "2021-09-16",
+      "ticker": "BIIB"
+    },
+    {
+      "event_at": "2021-06-16T16:30:00-04:00",
+      "event_id": "P2-2021-BIIB-TANGO",
+      "last_complete_session": "2021-06-15",
+      "primary_stratum": "PHASE_2_POC",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2021-06-15T23:59:59.999999-04:00",
+        "T_MINUS_10": "2021-06-06T16:30:00-04:00",
+        "T_MINUS_30": "2021-05-17T16:30:00-04:00",
+        "T_MINUS_60": "2021-04-17T16:30:00-04:00"
+      },
+      "t0_session": "2021-06-17",
+      "ticker": "BIIB"
+    },
+    {
+      "event_at": "2021-12-06T07:00:00-05:00",
+      "event_id": "P2-2021-GHRS-GH001",
+      "last_complete_session": "2021-12-03",
+      "primary_stratum": "PHASE_2_POC",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2021-12-03T23:59:59.999999-05:00",
+        "T_MINUS_10": "2021-11-26T07:00:00-05:00",
+        "T_MINUS_30": "2021-11-06T07:00:00-05:00",
+        "T_MINUS_60": "2021-10-07T07:00:00-05:00"
+      },
+      "t0_session": "2021-12-06",
+      "ticker": "GHRS"
+    },
+    {
+      "event_at": "2022-09-13T06:00:00-04:00",
+      "event_id": "P2-2022-AKRO-HARMONY",
+      "last_complete_session": "2022-09-12",
+      "primary_stratum": "PHASE_2_POC",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2022-09-12T23:59:59.999999-04:00",
+        "T_MINUS_10": "2022-09-03T06:00:00-04:00",
+        "T_MINUS_30": "2022-08-14T06:00:00-04:00",
+        "T_MINUS_60": "2022-07-15T06:00:00-04:00"
+      },
+      "t0_session": "2022-09-13",
+      "ticker": "AKRO"
+    },
+    {
+      "event_at": "2022-08-08T07:12:17-04:00",
+      "event_id": "P2-2022-CINC-BRIGHTN",
+      "last_complete_session": "2022-08-05",
+      "primary_stratum": "PHASE_2_POC",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2022-08-05T23:59:59.999999-04:00",
+        "T_MINUS_10": "2022-07-29T07:12:17-04:00",
+        "T_MINUS_30": "2022-07-09T07:12:17-04:00",
+        "T_MINUS_60": "2022-06-09T07:12:17-04:00"
+      },
+      "t0_session": "2022-08-08",
+      "ticker": "CINC"
+    },
+    {
+      "event_at": "2022-11-28T07:30:00-05:00",
+      "event_id": "P2-2022-CINC-HALO",
+      "last_complete_session": "2022-11-25",
+      "primary_stratum": "PHASE_2_POC",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2022-11-25T23:59:59.999999-05:00",
+        "T_MINUS_10": "2022-11-18T07:30:00-05:00",
+        "T_MINUS_30": "2022-10-29T07:30:00-05:00",
+        "T_MINUS_60": "2022-09-29T07:30:00-05:00"
+      },
+      "t0_session": "2022-11-28",
+      "ticker": "CINC"
+    },
+    {
+      "event_at": "2023-06-05T07:00:00-04:00",
+      "event_id": "P2-2023-AKRO-SYMMETRY-COHORT-D",
+      "last_complete_session": "2023-06-02",
+      "primary_stratum": "PHASE_2_POC",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2023-06-02T23:59:59.999999-04:00",
+        "T_MINUS_10": "2023-05-26T07:00:00-04:00",
+        "T_MINUS_30": "2023-05-06T07:00:00-04:00",
+        "T_MINUS_60": "2023-04-06T07:00:00-04:00"
+      },
+      "t0_session": "2023-06-05",
+      "ticker": "AKRO"
+    },
+    {
+      "event_at": "2023-10-10T07:00:00-04:00",
+      "event_id": "P2-2023-AKRO-SYMMETRY-MAIN",
+      "last_complete_session": "2023-10-09",
+      "primary_stratum": "PHASE_2_POC",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2023-10-09T23:59:59.999999-04:00",
+        "T_MINUS_10": "2023-09-30T07:00:00-04:00",
+        "T_MINUS_30": "2023-09-10T07:00:00-04:00",
+        "T_MINUS_60": "2023-08-11T07:00:00-04:00"
+      },
+      "t0_session": "2023-10-10",
+      "ticker": "AKRO"
+    },
+    {
+      "event_at": "2023-05-25T07:00:00-04:00",
+      "event_id": "P2-2023-APLS-MERIDIAN",
+      "last_complete_session": "2023-05-24",
+      "primary_stratum": "PHASE_2_POC",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2023-05-24T23:59:59.999999-04:00",
+        "T_MINUS_10": "2023-05-15T07:00:00-04:00",
+        "T_MINUS_30": "2023-04-25T07:00:00-04:00",
+        "T_MINUS_60": "2023-03-26T07:00:00-04:00"
+      },
+      "t0_session": "2023-05-25",
+      "ticker": "APLS"
+    },
+    {
+      "event_at": "2023-01-06T07:00:00-05:00",
+      "event_id": "P2-2023-ATAI-PCN101",
+      "last_complete_session": "2023-01-05",
+      "primary_stratum": "PHASE_2_POC",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2023-01-05T23:59:59.999999-05:00",
+        "T_MINUS_10": "2022-12-27T07:00:00-05:00",
+        "T_MINUS_30": "2022-12-07T07:00:00-05:00",
+        "T_MINUS_60": "2022-11-07T07:00:00-05:00"
+      },
+      "t0_session": "2023-01-06",
+      "ticker": "ATAI"
+    },
+    {
+      "event_at": "2023-08-08T16:05:00-04:00",
+      "event_id": "P2-2023-TERN-DUET",
+      "last_complete_session": "2023-08-07",
+      "primary_stratum": "PHASE_2_POC",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2023-08-07T23:59:59.999999-04:00",
+        "T_MINUS_10": "2023-07-29T16:05:00-04:00",
+        "T_MINUS_30": "2023-07-09T16:05:00-04:00",
+        "T_MINUS_60": "2023-06-09T16:05:00-04:00"
+      },
+      "t0_session": "2023-08-09",
+      "ticker": "TERN"
+    },
+    {
+      "event_at": "2024-07-30T06:45:00-04:00",
+      "event_id": "P2-2024-BNTX-BNT111",
+      "last_complete_session": "2024-07-29",
+      "primary_stratum": "PHASE_2_POC",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2024-07-29T23:59:59.999999-04:00",
+        "T_MINUS_10": "2024-07-20T06:45:00-04:00",
+        "T_MINUS_30": "2024-06-30T06:45:00-04:00",
+        "T_MINUS_60": "2024-05-31T06:45:00-04:00"
+      },
+      "t0_session": "2024-07-30",
+      "ticker": "BNTX"
+    },
+    {
+      "event_at": "2024-09-03T08:00:00-04:00",
+      "event_id": "P2-2024-RXRX-SYCAMORE",
+      "last_complete_session": "2024-08-30",
+      "primary_stratum": "PHASE_2_POC",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2024-08-30T23:59:59.999999-04:00",
+        "T_MINUS_10": "2024-08-24T08:00:00-04:00",
+        "T_MINUS_30": "2024-08-04T08:00:00-04:00",
+        "T_MINUS_60": "2024-07-05T08:00:00-04:00"
+      },
+      "t0_session": "2024-09-03",
+      "ticker": "RXRX"
+    },
+    {
+      "event_at": "2024-11-20T06:40:00-05:00",
+      "event_id": "P2-2024-SAGE-DIMENSION",
+      "last_complete_session": "2024-11-19",
+      "primary_stratum": "PHASE_2_POC",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2024-11-19T23:59:59.999999-05:00",
+        "T_MINUS_10": "2024-11-10T06:40:00-05:00",
+        "T_MINUS_30": "2024-10-21T06:40:00-05:00",
+        "T_MINUS_60": "2024-09-21T06:40:00-05:00"
+      },
+      "t0_session": "2024-11-20",
+      "ticker": "SAGE"
+    },
+    {
+      "event_at": "2025-09-29T08:00:00-04:00",
+      "event_id": "P2-2025-KALA-CHASE",
+      "last_complete_session": "2025-09-26",
+      "primary_stratum": "PHASE_2_POC",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2025-09-26T23:59:59.999999-04:00",
+        "T_MINUS_10": "2025-09-19T08:00:00-04:00",
+        "T_MINUS_30": "2025-08-30T08:00:00-04:00",
+        "T_MINUS_60": "2025-07-31T08:00:00-04:00"
+      },
+      "t0_session": "2025-09-29",
+      "ticker": "KALA"
+    },
+    {
+      "event_at": "2025-02-18T08:00:00-05:00",
+      "event_id": "P2-2025-VTYX-VTX958",
+      "last_complete_session": "2025-02-14",
+      "primary_stratum": "PHASE_2_POC",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2025-02-14T23:59:59.999999-05:00",
+        "T_MINUS_10": "2025-02-08T08:00:00-05:00",
+        "T_MINUS_30": "2025-01-19T08:00:00-05:00",
+        "T_MINUS_60": "2024-12-20T08:00:00-05:00"
+      },
+      "t0_session": "2025-02-18",
+      "ticker": "VTYX"
+    },
+    {
+      "event_at": "2018-10-26T08:00:00-04:00",
+      "event_id": "P3-2018-RARE-UX007",
+      "last_complete_session": "2018-10-25",
+      "primary_stratum": "PHASE_3_PIVOTAL",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2018-10-25T23:59:59.999999-04:00",
+        "T_MINUS_10": "2018-10-16T08:00:00-04:00",
+        "T_MINUS_30": "2018-09-26T08:00:00-04:00",
+        "T_MINUS_60": "2018-08-27T08:00:00-04:00"
+      },
+      "t0_session": "2018-10-26",
+      "ticker": "RARE"
+    },
+    {
+      "event_at": "2019-12-16T06:00:00-05:00",
+      "event_id": "P3-2019-AXSM-GEMINI",
+      "last_complete_session": "2019-12-13",
+      "primary_stratum": "PHASE_3_PIVOTAL",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2019-12-13T23:59:59.999999-05:00",
+        "T_MINUS_10": "2019-12-06T06:00:00-05:00",
+        "T_MINUS_30": "2019-11-16T06:00:00-05:00",
+        "T_MINUS_60": "2019-10-17T06:00:00-05:00"
+      },
+      "t0_session": "2019-12-16",
+      "ticker": "AXSM"
+    },
+    {
+      "event_at": "2019-02-19T07:00:00-05:00",
+      "event_id": "P3-2019-ICPT-REGENERATE",
+      "last_complete_session": "2019-02-15",
+      "primary_stratum": "PHASE_3_PIVOTAL",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2019-02-15T23:59:59.999999-05:00",
+        "T_MINUS_10": "2019-02-09T07:00:00-05:00",
+        "T_MINUS_30": "2019-01-20T07:00:00-05:00",
+        "T_MINUS_60": "2018-12-21T07:00:00-05:00"
+      },
+      "t0_session": "2019-02-19",
+      "ticker": "ICPT"
+    },
+    {
+      "event_at": "2019-02-28T07:00:00-05:00",
+      "event_id": "P3-2019-NVAX-PREPARE",
+      "last_complete_session": "2019-02-27",
+      "primary_stratum": "PHASE_3_PIVOTAL",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2019-02-27T23:59:59.999999-05:00",
+        "T_MINUS_10": "2019-02-18T07:00:00-05:00",
+        "T_MINUS_30": "2019-01-29T07:00:00-05:00",
+        "T_MINUS_60": "2018-12-30T07:00:00-05:00"
+      },
+      "t0_session": "2019-02-28",
+      "ticker": "NVAX"
+    },
+    {
+      "event_at": "2020-12-01T07:00:00-05:00",
+      "event_id": "P3-2020-AGIO-ACTIVATE",
+      "last_complete_session": "2020-11-30",
+      "primary_stratum": "PHASE_3_PIVOTAL",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2020-11-30T23:59:59.999999-05:00",
+        "T_MINUS_10": "2020-11-21T07:00:00-05:00",
+        "T_MINUS_30": "2020-11-01T07:00:00-05:00",
+        "T_MINUS_60": "2020-10-02T07:00:00-05:00"
+      },
+      "t0_session": "2020-12-01",
+      "ticker": "AGIO"
+    },
+    {
+      "event_at": "2020-12-28T08:00:00-05:00",
+      "event_id": "P3-2020-APRE-P3MDS",
+      "last_complete_session": "2020-12-24",
+      "primary_stratum": "PHASE_3_PIVOTAL",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2020-12-24T23:59:59.999999-05:00",
+        "T_MINUS_10": "2020-12-18T08:00:00-05:00",
+        "T_MINUS_30": "2020-11-28T08:00:00-05:00",
+        "T_MINUS_60": "2020-10-29T08:00:00-05:00"
+      },
+      "t0_session": "2020-12-28",
+      "ticker": "APRE"
+    },
+    {
+      "event_at": "2020-09-08T07:05:00-04:00",
+      "event_id": "P3-2020-CRBP-RESOLVE1",
+      "last_complete_session": "2020-09-04",
+      "primary_stratum": "PHASE_3_PIVOTAL",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2020-09-04T23:59:59.999999-04:00",
+        "T_MINUS_10": "2020-08-29T07:05:00-04:00",
+        "T_MINUS_30": "2020-08-09T07:05:00-04:00",
+        "T_MINUS_60": "2020-07-10T07:05:00-04:00"
+      },
+      "t0_session": "2020-09-08",
+      "ticker": "CRBP"
+    },
+    {
+      "event_at": "2020-05-28T12:14:00-04:00",
+      "event_id": "P3-2020-GMAB-ANDROMEDA",
+      "last_complete_session": "2020-05-27",
+      "primary_stratum": "PHASE_3_PIVOTAL",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2020-05-27T23:59:59.999999-04:00",
+        "T_MINUS_10": "2020-05-18T12:14:00-04:00",
+        "T_MINUS_30": "2020-04-28T12:14:00-04:00",
+        "T_MINUS_60": "2020-03-29T12:14:00-04:00"
+      },
+      "t0_session": "2020-05-28",
+      "ticker": "GMAB"
+    },
+    {
+      "event_at": "2020-07-06T07:55:00-04:00",
+      "event_id": "P3-2020-IMMU-ASCENT",
+      "last_complete_session": "2020-07-02",
+      "primary_stratum": "PHASE_3_PIVOTAL",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2020-07-02T23:59:59.999999-04:00",
+        "T_MINUS_10": "2020-06-26T07:55:00-04:00",
+        "T_MINUS_30": "2020-06-06T07:55:00-04:00",
+        "T_MINUS_60": "2020-05-07T07:55:00-04:00"
+      },
+      "t0_session": "2020-07-06",
+      "ticker": "IMMU"
+    },
+    {
+      "event_at": "2020-08-24T07:30:00-04:00",
+      "event_id": "P3-2020-ONTX-INSPIRE",
+      "last_complete_session": "2020-08-21",
+      "primary_stratum": "PHASE_3_PIVOTAL",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2020-08-21T23:59:59.999999-04:00",
+        "T_MINUS_10": "2020-08-14T07:30:00-04:00",
+        "T_MINUS_30": "2020-07-25T07:30:00-04:00",
+        "T_MINUS_60": "2020-06-25T07:30:00-04:00"
+      },
+      "t0_session": "2020-08-24",
+      "ticker": "ONTX"
+    },
+    {
+      "event_at": "2020-04-27T06:59:00-04:00",
+      "event_id": "P3-2020-REGN-LIBTAYO-NSCLC",
+      "last_complete_session": "2020-04-24",
+      "primary_stratum": "PHASE_3_PIVOTAL",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2020-04-24T23:59:59.999999-04:00",
+        "T_MINUS_10": "2020-04-17T06:59:00-04:00",
+        "T_MINUS_30": "2020-03-28T06:59:00-04:00",
+        "T_MINUS_60": "2020-02-27T06:59:00-04:00"
+      },
+      "t0_session": "2020-04-27",
+      "ticker": "REGN"
+    },
+    {
+      "event_at": "2021-06-14T16:06:00-04:00",
+      "event_id": "P3-2021-BIIB-STAR",
+      "last_complete_session": "2021-06-11",
+      "primary_stratum": "PHASE_3_PIVOTAL",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2021-06-11T23:59:59.999999-04:00",
+        "T_MINUS_10": "2021-06-04T16:06:00-04:00",
+        "T_MINUS_30": "2021-05-15T16:06:00-04:00",
+        "T_MINUS_60": "2021-04-15T16:06:00-04:00"
+      },
+      "t0_session": "2021-06-15",
+      "ticker": "BIIB"
+    },
+    {
+      "event_at": "2021-10-17T16:20:00-04:00",
+      "event_id": "P3-2021-BIIB-VALOR",
+      "last_complete_session": "2021-10-15",
+      "primary_stratum": "PHASE_3_PIVOTAL",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2021-10-15T23:59:59.999999-04:00",
+        "T_MINUS_10": "2021-10-07T16:20:00-04:00",
+        "T_MINUS_30": "2021-09-17T16:20:00-04:00",
+        "T_MINUS_60": "2021-08-18T16:20:00-04:00"
+      },
+      "t0_session": "2021-10-18",
+      "ticker": "BIIB"
+    },
+    {
+      "event_at": "2022-10-12T07:00:00-04:00",
+      "event_id": "P3-2022-BGNE-ALPINE",
+      "last_complete_session": "2022-10-11",
+      "primary_stratum": "PHASE_3_PIVOTAL",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2022-10-11T23:59:59.999999-04:00",
+        "T_MINUS_10": "2022-10-02T07:00:00-04:00",
+        "T_MINUS_30": "2022-09-12T07:00:00-04:00",
+        "T_MINUS_60": "2022-08-13T07:00:00-04:00"
+      },
+      "t0_session": "2022-10-12",
+      "ticker": "BGNE"
+    },
+    {
+      "event_at": "2022-12-19T07:00:00-05:00",
+      "event_id": "P3-2022-MDGL-MAESTRO-NASH",
+      "last_complete_session": "2022-12-16",
+      "primary_stratum": "PHASE_3_PIVOTAL",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2022-12-16T23:59:59.999999-05:00",
+        "T_MINUS_10": "2022-12-09T07:00:00-05:00",
+        "T_MINUS_30": "2022-11-19T07:00:00-05:00",
+        "T_MINUS_60": "2022-10-20T07:00:00-05:00"
+      },
+      "t0_session": "2022-12-19",
+      "ticker": "MDGL"
+    },
+    {
+      "event_at": "2023-01-04T08:00:00-05:00",
+      "event_id": "P3-2023-GERN-IMERGE",
+      "last_complete_session": "2023-01-03",
+      "primary_stratum": "PHASE_3_PIVOTAL",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2023-01-03T23:59:59.999999-05:00",
+        "T_MINUS_10": "2022-12-25T08:00:00-05:00",
+        "T_MINUS_30": "2022-12-05T08:00:00-05:00",
+        "T_MINUS_60": "2022-11-05T08:00:00-05:00"
+      },
+      "t0_session": "2023-01-04",
+      "ticker": "GERN"
+    },
+    {
+      "event_at": "2023-09-04T15:00:00-04:00",
+      "event_id": "P3-2023-GMAB-INNOVATV301",
+      "last_complete_session": "2023-09-01",
+      "primary_stratum": "PHASE_3_PIVOTAL",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2023-09-01T23:59:59.999999-04:00",
+        "T_MINUS_10": "2023-08-25T15:00:00-04:00",
+        "T_MINUS_30": "2023-08-05T15:00:00-04:00",
+        "T_MINUS_60": "2023-07-06T15:00:00-04:00"
+      },
+      "t0_session": "2023-09-05",
+      "ticker": "GMAB"
+    },
+    {
+      "event_at": "2024-06-04T07:00:00-04:00",
+      "event_id": "P3-2024-ANNX-ANX005",
+      "last_complete_session": "2024-06-03",
+      "primary_stratum": "PHASE_3_PIVOTAL",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2024-06-03T23:59:59.999999-04:00",
+        "T_MINUS_10": "2024-05-25T07:00:00-04:00",
+        "T_MINUS_30": "2024-05-05T07:00:00-04:00",
+        "T_MINUS_60": "2024-04-05T07:00:00-04:00"
+      },
+      "t0_session": "2024-06-04",
+      "ticker": "ANNX"
+    },
+    {
+      "event_at": "2024-09-12T06:55:00-04:00",
+      "event_id": "P3-2024-FULC-REACH",
+      "last_complete_session": "2024-09-11",
+      "primary_stratum": "PHASE_3_PIVOTAL",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2024-09-11T23:59:59.999999-04:00",
+        "T_MINUS_10": "2024-09-02T06:55:00-04:00",
+        "T_MINUS_30": "2024-08-13T06:55:00-04:00",
+        "T_MINUS_60": "2024-07-14T06:55:00-04:00"
+      },
+      "t0_session": "2024-09-12",
+      "ticker": "FULC"
+    },
+    {
+      "event_at": "2024-12-10T07:00:00-05:00",
+      "event_id": "P3-2024-NAMS-BROADWAY",
+      "last_complete_session": "2024-12-09",
+      "primary_stratum": "PHASE_3_PIVOTAL",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2024-12-09T23:59:59.999999-05:00",
+        "T_MINUS_10": "2024-11-30T07:00:00-05:00",
+        "T_MINUS_30": "2024-11-10T07:00:00-05:00",
+        "T_MINUS_60": "2024-10-11T07:00:00-05:00"
+      },
+      "t0_session": "2024-12-10",
+      "ticker": "NAMS"
+    },
+    {
+      "event_at": "2024-07-29T08:00:00-04:00",
+      "event_id": "P3-2024-NAMS-BROOKLYN",
+      "last_complete_session": "2024-07-26",
+      "primary_stratum": "PHASE_3_PIVOTAL",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2024-07-26T23:59:59.999999-04:00",
+        "T_MINUS_10": "2024-07-19T08:00:00-04:00",
+        "T_MINUS_30": "2024-06-29T08:00:00-04:00",
+        "T_MINUS_60": "2024-05-30T08:00:00-04:00"
+      },
+      "t0_session": "2024-07-29",
+      "ticker": "NAMS"
+    },
+    {
+      "event_at": "2024-11-25T07:30:00-05:00",
+      "event_id": "P3-2024-SAVA-RETHINK",
+      "last_complete_session": "2024-11-22",
+      "primary_stratum": "PHASE_3_PIVOTAL",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2024-11-22T23:59:59.999999-05:00",
+        "T_MINUS_10": "2024-11-15T07:30:00-05:00",
+        "T_MINUS_30": "2024-10-26T07:30:00-05:00",
+        "T_MINUS_60": "2024-09-26T07:30:00-05:00"
+      },
+      "t0_session": "2024-11-25",
+      "ticker": "SAVA"
+    },
+    {
+      "event_at": "2025-10-21T16:05:00-04:00",
+      "event_id": "P3-2025-ALEC-INFRONT3",
+      "last_complete_session": "2025-10-20",
+      "primary_stratum": "PHASE_3_PIVOTAL",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2025-10-20T23:59:59.999999-04:00",
+        "T_MINUS_10": "2025-10-11T16:05:00-04:00",
+        "T_MINUS_30": "2025-09-21T16:05:00-04:00",
+        "T_MINUS_60": "2025-08-22T16:05:00-04:00"
+      },
+      "t0_session": "2025-10-22",
+      "ticker": "ALEC"
+    },
+    {
+      "event_at": "2025-12-03T07:20:00-05:00",
+      "event_id": "P3-2025-CAPR-HOPE3",
+      "last_complete_session": "2025-12-02",
+      "primary_stratum": "PHASE_3_PIVOTAL",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2025-12-02T23:59:59.999999-05:00",
+        "T_MINUS_10": "2025-11-23T07:20:00-05:00",
+        "T_MINUS_30": "2025-11-03T07:20:00-05:00",
+        "T_MINUS_60": "2025-10-04T07:20:00-05:00"
+      },
+      "t0_session": "2025-12-03",
+      "ticker": "CAPR"
+    },
+    {
+      "event_at": "2025-03-25T08:05:00-04:00",
+      "event_id": "P3-2025-SAVA-REFOCUS",
+      "last_complete_session": "2025-03-24",
+      "primary_stratum": "PHASE_3_PIVOTAL",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2025-03-24T23:59:59.999999-04:00",
+        "T_MINUS_10": "2025-03-15T08:05:00-04:00",
+        "T_MINUS_30": "2025-02-23T08:05:00-04:00",
+        "T_MINUS_60": "2025-01-24T08:05:00-04:00"
+      },
+      "t0_session": "2025-03-25",
+      "ticker": "SAVA"
+    },
+    {
+      "event_at": "2018-07-20T10:45:00-04:00",
+      "event_id": "REG-2018-AGIO-TIBSOVO",
+      "last_complete_session": "2018-07-19",
+      "primary_stratum": "REGULATORY",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2018-07-19T23:59:59.999999-04:00",
+        "T_MINUS_10": "2018-07-10T10:45:00-04:00",
+        "T_MINUS_30": "2018-06-20T10:45:00-04:00",
+        "T_MINUS_60": "2018-05-21T10:45:00-04:00"
+      },
+      "t0_session": "2018-07-20",
+      "ticker": "AGIO"
+    },
+    {
+      "event_at": "2018-08-10T15:45:00-04:00",
+      "event_id": "REG-2018-ALNY-ONPATTRO",
+      "last_complete_session": "2018-08-09",
+      "primary_stratum": "REGULATORY",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2018-08-09T23:59:59.999999-04:00",
+        "T_MINUS_10": "2018-07-31T15:45:00-04:00",
+        "T_MINUS_30": "2018-07-11T15:45:00-04:00",
+        "T_MINUS_60": "2018-06-11T15:45:00-04:00"
+      },
+      "t0_session": "2018-08-10",
+      "ticker": "ALNY"
+    },
+    {
+      "event_at": "2018-06-27T14:17:00-04:00",
+      "event_id": "REG-2018-ARRY-BRAFTOVI-MEKTOVI",
+      "last_complete_session": "2018-06-26",
+      "primary_stratum": "REGULATORY",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2018-06-26T23:59:59.999999-04:00",
+        "T_MINUS_10": "2018-06-17T14:17:00-04:00",
+        "T_MINUS_30": "2018-05-28T14:17:00-04:00",
+        "T_MINUS_60": "2018-04-28T14:17:00-04:00"
+      },
+      "t0_session": "2018-06-27",
+      "ticker": "ARRY"
+    },
+    {
+      "event_at": "2018-08-10T16:33:00-04:00",
+      "event_id": "REG-2018-FOLD-GALAFOLD",
+      "last_complete_session": "2018-08-09",
+      "primary_stratum": "REGULATORY",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2018-08-09T23:59:59.999999-04:00",
+        "T_MINUS_10": "2018-07-31T16:33:00-04:00",
+        "T_MINUS_30": "2018-07-11T16:33:00-04:00",
+        "T_MINUS_60": "2018-06-11T16:33:00-04:00"
+      },
+      "t0_session": "2018-08-13",
+      "ticker": "FOLD"
+    },
+    {
+      "event_at": "2018-05-24T07:05:56-04:00",
+      "event_id": "REG-2018-REPH-MELOXICAM-CRL",
+      "last_complete_session": "2018-05-23",
+      "primary_stratum": "REGULATORY",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2018-05-23T23:59:59.999999-04:00",
+        "T_MINUS_10": "2018-05-14T07:05:56-04:00",
+        "T_MINUS_30": "2018-04-24T07:05:56-04:00",
+        "T_MINUS_60": "2018-03-25T07:05:56-04:00"
+      },
+      "t0_session": "2018-05-24",
+      "ticker": "REPH"
+    },
+    {
+      "event_at": "2019-11-25T16:03:00-05:00",
+      "event_id": "REG-2019-GBT-OXBRYTA",
+      "last_complete_session": "2019-11-22",
+      "primary_stratum": "REGULATORY",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2019-11-22T23:59:59.999999-05:00",
+        "T_MINUS_10": "2019-11-15T16:03:00-05:00",
+        "T_MINUS_30": "2019-10-26T16:03:00-05:00",
+        "T_MINUS_60": "2019-09-26T16:03:00-05:00"
+      },
+      "t0_session": "2019-11-26",
+      "ticker": "GBT"
+    },
+    {
+      "event_at": "2019-03-19T21:08:00-04:00",
+      "event_id": "REG-2019-SAGE-ZULRESSO",
+      "last_complete_session": "2019-03-18",
+      "primary_stratum": "REGULATORY",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2019-03-18T23:59:59.999999-04:00",
+        "T_MINUS_10": "2019-03-09T21:08:00-04:00",
+        "T_MINUS_30": "2019-02-17T21:08:00-04:00",
+        "T_MINUS_60": "2019-01-18T21:08:00-04:00"
+      },
+      "t0_session": "2019-03-20",
+      "ticker": "SAGE"
+    },
+    {
+      "event_at": "2019-08-19T18:29:46-04:00",
+      "event_id": "REG-2019-SRPT-GOLODIRSEN-CRL",
+      "last_complete_session": "2019-08-16",
+      "primary_stratum": "REGULATORY",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2019-08-16T23:59:59.999999-04:00",
+        "T_MINUS_10": "2019-08-09T18:29:46-04:00",
+        "T_MINUS_30": "2019-07-20T18:29:46-04:00",
+        "T_MINUS_60": "2019-06-20T18:29:46-04:00"
+      },
+      "t0_session": "2019-08-20",
+      "ticker": "SRPT"
+    },
+    {
+      "event_at": "2020-08-19T08:00:00-04:00",
+      "event_id": "REG-2020-BMRN-VALROX-CRL",
+      "last_complete_session": "2020-08-18",
+      "primary_stratum": "REGULATORY",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2020-08-18T23:59:59.999999-04:00",
+        "T_MINUS_10": "2020-08-09T08:00:00-04:00",
+        "T_MINUS_30": "2020-07-20T08:00:00-04:00",
+        "T_MINUS_60": "2020-06-20T08:00:00-04:00"
+      },
+      "t0_session": "2020-08-19",
+      "ticker": "BMRN"
+    },
+    {
+      "event_at": "2020-06-29T07:00:00-04:00",
+      "event_id": "REG-2020-ICPT-OCA-CRL",
+      "last_complete_session": "2020-06-26",
+      "primary_stratum": "REGULATORY",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2020-06-26T23:59:59.999999-04:00",
+        "T_MINUS_10": "2020-06-19T07:00:00-04:00",
+        "T_MINUS_30": "2020-05-30T07:00:00-04:00",
+        "T_MINUS_60": "2020-04-30T07:00:00-04:00"
+      },
+      "t0_session": "2020-06-29",
+      "ticker": "ICPT"
+    },
+    {
+      "event_at": "2020-04-22T11:47:00-04:00",
+      "event_id": "REG-2020-IMMU-TRODELVY",
+      "last_complete_session": "2020-04-21",
+      "primary_stratum": "REGULATORY",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2020-04-21T23:59:59.999999-04:00",
+        "T_MINUS_10": "2020-04-12T11:47:00-04:00",
+        "T_MINUS_30": "2020-03-23T11:47:00-04:00",
+        "T_MINUS_60": "2020-02-22T11:47:00-04:00"
+      },
+      "t0_session": "2020-04-22",
+      "ticker": "IMMU"
+    },
+    {
+      "event_at": "2020-11-27T07:30:00-05:00",
+      "event_id": "REG-2020-RYTM-IMCIVREE",
+      "last_complete_session": "2020-11-25",
+      "primary_stratum": "REGULATORY",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2020-11-25T23:59:59.999999-05:00",
+        "T_MINUS_10": "2020-11-17T07:30:00-05:00",
+        "T_MINUS_30": "2020-10-28T07:30:00-05:00",
+        "T_MINUS_60": "2020-09-28T07:30:00-05:00"
+      },
+      "t0_session": "2020-11-27",
+      "ticker": "RYTM"
+    },
+    {
+      "event_at": "2020-08-24T08:41:58-04:00",
+      "event_id": "REG-2020-TCDA-VEVERIMER-CRL",
+      "last_complete_session": "2020-08-21",
+      "primary_stratum": "REGULATORY",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2020-08-21T23:59:59.999999-04:00",
+        "T_MINUS_10": "2020-08-14T08:41:58-04:00",
+        "T_MINUS_30": "2020-07-25T08:41:58-04:00",
+        "T_MINUS_60": "2020-06-25T08:41:58-04:00"
+      },
+      "t0_session": "2020-08-24",
+      "ticker": "TCDA"
+    },
+    {
+      "event_at": "2021-08-25T15:24:00-04:00",
+      "event_id": "REG-2021-ASND-SKYTROFA",
+      "last_complete_session": "2021-08-24",
+      "primary_stratum": "REGULATORY",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2021-08-24T23:59:59.999999-04:00",
+        "T_MINUS_10": "2021-08-15T15:24:00-04:00",
+        "T_MINUS_30": "2021-07-26T15:24:00-04:00",
+        "T_MINUS_60": "2021-06-26T15:24:00-04:00"
+      },
+      "t0_session": "2021-08-25",
+      "ticker": "ASND"
+    },
+    {
+      "event_at": "2021-03-01T07:00:00-05:00",
+      "event_id": "REG-2021-ATNX-ORALPAC-CRL",
+      "last_complete_session": "2021-02-26",
+      "primary_stratum": "REGULATORY",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2021-02-26T23:59:59.999999-05:00",
+        "T_MINUS_10": "2021-02-19T07:00:00-05:00",
+        "T_MINUS_30": "2021-01-30T07:00:00-05:00",
+        "T_MINUS_60": "2020-12-31T07:00:00-05:00"
+      },
+      "t0_session": "2021-03-01",
+      "ticker": "ATNX"
+    },
+    {
+      "event_at": "2021-08-11T07:00:00-04:00",
+      "event_id": "REG-2021-FGEN-ROXADUSTAT-CRL",
+      "last_complete_session": "2021-08-10",
+      "primary_stratum": "REGULATORY",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2021-08-10T23:59:59.999999-04:00",
+        "T_MINUS_10": "2021-08-01T07:00:00-04:00",
+        "T_MINUS_30": "2021-07-12T07:00:00-04:00",
+        "T_MINUS_60": "2021-06-12T07:00:00-04:00"
+      },
+      "t0_session": "2021-08-11",
+      "ticker": "FGEN"
+    },
+    {
+      "event_at": "2021-09-21T08:00:00-04:00",
+      "event_id": "REG-2021-INCY-OPZELURA",
+      "last_complete_session": "2021-09-20",
+      "primary_stratum": "REGULATORY",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2021-09-20T23:59:59.999999-04:00",
+        "T_MINUS_10": "2021-09-11T08:00:00-04:00",
+        "T_MINUS_30": "2021-08-22T08:00:00-04:00",
+        "T_MINUS_60": "2021-07-23T08:00:00-04:00"
+      },
+      "t0_session": "2021-09-21",
+      "ticker": "INCY"
+    },
+    {
+      "event_at": "2021-10-18T07:02:00-04:00",
+      "event_id": "REG-2021-OMER-NARSOPLIMAB-CRL",
+      "last_complete_session": "2021-10-15",
+      "primary_stratum": "REGULATORY",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2021-10-15T23:59:59.999999-04:00",
+        "T_MINUS_10": "2021-10-08T07:02:00-04:00",
+        "T_MINUS_30": "2021-09-18T07:02:00-04:00",
+        "T_MINUS_60": "2021-08-19T07:02:00-04:00"
+      },
+      "t0_session": "2021-10-18",
+      "ticker": "OMER"
+    },
+    {
+      "event_at": "2022-04-25T07:02:01-04:00",
+      "event_id": "REG-2022-AXSM-AXS07-CRL",
+      "last_complete_session": "2022-04-22",
+      "primary_stratum": "REGULATORY",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2022-04-22T23:59:59.999999-04:00",
+        "T_MINUS_10": "2022-04-15T07:02:01-04:00",
+        "T_MINUS_30": "2022-03-26T07:02:01-04:00",
+        "T_MINUS_60": "2022-02-24T07:02:01-04:00"
+      },
+      "t0_session": "2022-04-25",
+      "ticker": "AXSM"
+    },
+    {
+      "event_at": "2022-11-14T17:23:00-05:00",
+      "event_id": "REG-2022-IMGN-ELAHERE",
+      "last_complete_session": "2022-11-11",
+      "primary_stratum": "REGULATORY",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2022-11-11T23:59:59.999999-05:00",
+        "T_MINUS_10": "2022-11-04T17:23:00-05:00",
+        "T_MINUS_30": "2022-10-15T17:23:00-05:00",
+        "T_MINUS_60": "2022-09-15T17:23:00-05:00"
+      },
+      "t0_session": "2022-11-15",
+      "ticker": "IMGN"
+    },
+    {
+      "event_at": "2022-11-17T21:56:00-05:00",
+      "event_id": "REG-2022-PRVB-TZIELD",
+      "last_complete_session": "2022-11-16",
+      "primary_stratum": "REGULATORY",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2022-11-16T23:59:59.999999-05:00",
+        "T_MINUS_10": "2022-11-07T21:56:00-05:00",
+        "T_MINUS_30": "2022-10-18T21:56:00-05:00",
+        "T_MINUS_60": "2022-09-18T21:56:00-05:00"
+      },
+      "t0_session": "2022-11-18",
+      "ticker": "PRVB"
+    },
+    {
+      "event_at": "2022-12-28T16:30:00-05:00",
+      "event_id": "REG-2022-TGTX-BRIUMVI",
+      "last_complete_session": "2022-12-27",
+      "primary_stratum": "REGULATORY",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2022-12-27T23:59:59.999999-05:00",
+        "T_MINUS_10": "2022-12-18T16:30:00-05:00",
+        "T_MINUS_30": "2022-11-28T16:30:00-05:00",
+        "T_MINUS_60": "2022-10-29T16:30:00-05:00"
+      },
+      "t0_session": "2022-12-29",
+      "ticker": "TGTX"
+    },
+    {
+      "event_at": "2023-12-08T12:35:00-05:00",
+      "event_id": "REG-2023-BLUE-LYFGENIA",
+      "last_complete_session": "2023-12-07",
+      "primary_stratum": "REGULATORY",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2023-12-07T23:59:59.999999-05:00",
+        "T_MINUS_10": "2023-11-28T12:35:00-05:00",
+        "T_MINUS_30": "2023-11-08T12:35:00-05:00",
+        "T_MINUS_60": "2023-10-09T12:35:00-05:00"
+      },
+      "t0_session": "2023-12-08",
+      "ticker": "BLUE"
+    },
+    {
+      "event_at": "2023-08-21T08:00:00-04:00",
+      "event_id": "REG-2023-GERN-IMETELSTAT-NDA-ACCEPT",
+      "last_complete_session": "2023-08-18",
+      "primary_stratum": "REGULATORY",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2023-08-18T23:59:59.999999-04:00",
+        "T_MINUS_10": "2023-08-11T08:00:00-04:00",
+        "T_MINUS_30": "2023-07-22T08:00:00-04:00",
+        "T_MINUS_60": "2023-06-22T08:00:00-04:00"
+      },
+      "t0_session": "2023-08-21",
+      "ticker": "GERN"
+    },
+    {
+      "event_at": "2023-02-28T17:28:00-05:00",
+      "event_id": "REG-2023-RETA-SKYCLARYS",
+      "last_complete_session": "2023-02-27",
+      "primary_stratum": "REGULATORY",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2023-02-27T23:59:59.999999-05:00",
+        "T_MINUS_10": "2023-02-18T17:28:00-05:00",
+        "T_MINUS_30": "2023-01-29T17:28:00-05:00",
+        "T_MINUS_60": "2022-12-30T17:28:00-05:00"
+      },
+      "t0_session": "2023-03-01",
+      "ticker": "RETA"
+    },
+    {
+      "event_at": "2023-06-22T14:02:00-04:00",
+      "event_id": "REG-2023-SRPT-ELEVIDYS",
+      "last_complete_session": "2023-06-21",
+      "primary_stratum": "REGULATORY",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2023-06-21T23:59:59.999999-04:00",
+        "T_MINUS_10": "2023-06-12T14:02:00-04:00",
+        "T_MINUS_30": "2023-05-23T14:02:00-04:00",
+        "T_MINUS_60": "2023-04-23T14:02:00-04:00"
+      },
+      "t0_session": "2023-06-22",
+      "ticker": "SRPT"
+    },
+    {
+      "event_at": "2024-02-16T15:19:00-05:00",
+      "event_id": "REG-2024-IOVA-AMTAGVI",
+      "last_complete_session": "2024-02-15",
+      "primary_stratum": "REGULATORY",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2024-02-15T23:59:59.999999-05:00",
+        "T_MINUS_10": "2024-02-06T15:19:00-05:00",
+        "T_MINUS_30": "2024-01-17T15:19:00-05:00",
+        "T_MINUS_60": "2023-12-18T15:19:00-05:00"
+      },
+      "t0_session": "2024-02-16",
+      "ticker": "IOVA"
+    },
+    {
+      "event_at": "2024-06-28T16:05:20-04:00",
+      "event_id": "REG-2024-RCKT-KRESLADI-CRL",
+      "last_complete_session": "2024-06-27",
+      "primary_stratum": "REGULATORY",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2024-06-27T23:59:59.999999-04:00",
+        "T_MINUS_10": "2024-06-18T16:05:20-04:00",
+        "T_MINUS_30": "2024-05-29T16:05:20-04:00",
+        "T_MINUS_60": "2024-04-29T16:05:20-04:00"
+      },
+      "t0_session": "2024-07-01",
+      "ticker": "RCKT"
+    },
+    {
+      "event_at": "2024-08-20T18:45:00-04:00",
+      "event_id": "REG-2024-REGN-LINVOSELTAMAB-CRL",
+      "last_complete_session": "2024-08-19",
+      "primary_stratum": "REGULATORY",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2024-08-19T23:59:59.999999-04:00",
+        "T_MINUS_10": "2024-08-10T18:45:00-04:00",
+        "T_MINUS_30": "2024-07-21T18:45:00-04:00",
+        "T_MINUS_60": "2024-06-21T18:45:00-04:00"
+      },
+      "t0_session": "2024-08-21",
+      "ticker": "REGN"
+    },
+    {
+      "event_at": "2024-12-20T15:51:00-05:00",
+      "event_id": "REG-2024-VRTX-ALYFTREK",
+      "last_complete_session": "2024-12-19",
+      "primary_stratum": "REGULATORY",
+      "snapshot_cutoffs": {
+        "LAST_COMPLETE_SESSION": "2024-12-19T23:59:59.999999-05:00",
+        "T_MINUS_10": "2024-12-10T15:51:00-05:00",
+        "T_MINUS_30": "2024-11-20T15:51:00-05:00",
+        "T_MINUS_60": "2024-10-21T15:51:00-05:00"
+      },
+      "t0_session": "2024-12-20",
+      "ticker": "VRTX"
+    }
+  ],
+  "generator": "python scripts/m7_build_snapshot_cutoffs.py",
+  "not_yet_complete": [
+    "Point-in-time evidence packs bound to these cutoffs (market, financial, catalyst, and scientific evidence available as of each cutoff) have not been assembled.",
+    "No real price-data source has been selected; outcome/return reconstruction (VALIDATION-AND-MILESTONES.md section 4) is not possible without one.",
+    "No ManualScienceReview or HumanCatalystConfirmation records exist; no HistoricalDecisionLock may be constructed without a real, identified human reviewer."
+  ]
+}
