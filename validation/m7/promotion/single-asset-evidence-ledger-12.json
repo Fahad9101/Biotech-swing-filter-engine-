@@ -1,0 +1,1821 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-17",
+  "role": "PREFREEZE_FULL_POOL_SINGLE_ASSET_SWEEP",
+  "market_outcome_fields_permitted": false,
+  "cohort_frozen": false,
+  "trigger": "Full-pool single-asset sweep undertaken ahead of building the real HistoricalEvent registry and running the actual select_frozen_cohort(seed=100100) freeze. Discovered that only 11 of the 152 universe-PASS candidates had both financing and single-asset status fully resolved - all prior single-asset work targeted specific seed-selected or negative-event candidates, never swept the full pool. Since HistoricalEvent.single_asset_issuer is a required boolean with no PENDING state, every candidate considered for registry inclusion needs a genuine, evidenced determination. This batch resolves all 106 remaining universe-PASS candidates.",
+  "qualification_rule": "Count only a company whose pre-event filings (most recent 10-K/10-K405/20-F filed before the event; 10-K/A Part-III-only compensation amendments are excluded in favor of the underlying annual report) show one meaningful active clinical-stage or marketed therapeutic asset, where any other named compound is explicitly framed as a preclinical/backup/discontinued program rather than a separate active development effort. For each determination, the pre-event business-overview text was read directly, and for most candidates a broad compound-code scan (regex over drug-code patterns appearing 3+ times in the business section) was additionally run to catch a second active compound that might not appear in the immediate overview paragraph - this caught at least one case (Ardelyx/RDX013) that would otherwise have been missed.",
+  "summary": {
+    "reviewed": 106,
+    "qualifies": 6,
+    "does_not_qualify": 100
+  },
+  "rows": [
+    {
+      "candidate_id": "CO-2018-ZIOP-ASCO",
+      "event_date": "2018-06-04",
+      "ticker": "ZIOP",
+      "issuer": "ZIOPHARM Oncology, Inc.",
+      "asset": "Ad-RTS-hIL-12 + veledimex",
+      "historical_pipeline_snapshot_date": "2017-12-31",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2017 10-K: two named immuno-oncology platforms, 'Controlled IL-12' and 'Sleeping Beauty', described as two distinct active programs.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1107421/000119312518067077/d531986d10k.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "CO-2019-BGNE-ZANUASH",
+      "event_date": "2019-12-08",
+      "ticker": "BGNE",
+      "issuer": "BeiGene, Ltd.",
+      "asset": "tislelizumab (BGB-A317)",
+      "historical_pipeline_snapshot_date": "2019-02-28",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2018 10-K: '21 registration or registration-enabling trials in 14 discrete cancer indications' and 'three in-licensed cancer drugs' already generating revenue in China.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1651308/000165130819000018/bgne-20181231_10k.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "CO-2019-CNST-MANIFEST",
+      "event_date": "2019-12-09",
+      "ticker": "CNST",
+      "issuer": "Constellation Pharmaceuticals, Inc.",
+      "asset": "CPI-0610",
+      "historical_pipeline_snapshot_date": "2019-03-14",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2018 10-K: three named wholly-owned product candidates, CPI-0610, CPI-1205 and CPI-0209.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1434418/000156459019007860/cnst-10k_20181231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "CO-2020-TRIL-TTI622ASH",
+      "event_date": "2020-12-07",
+      "ticker": "TRIL",
+      "issuer": "Trillium Therapeutics Inc.",
+      "asset": "TTI-622",
+      "historical_pipeline_snapshot_date": "2019-03-11",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2019 10-K: 'We are also developing a second SIRP Fc fusion protein, TTI-622' alongside the lead candidate TTI-621.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1616212/000106299319001231/form20f.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "CO-2021-HARP-HPN424ASCO",
+      "event_date": "2021-06-04",
+      "ticker": "HARP",
+      "issuer": "Harpoon Therapeutics, Inc.",
+      "asset": "HPN424",
+      "historical_pipeline_snapshot_date": "2021-03-10",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2020 10-K: 'we have created four TriTAC product candidates.'",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1708493/000156459021012063/harp-10k_20201231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "CO-2021-IGMS-IGM2323ASH",
+      "event_date": "2021-12-11",
+      "ticker": "IGMS",
+      "issuer": "IGM Biosciences, Inc.",
+      "asset": "IGM-2323",
+      "historical_pipeline_snapshot_date": "2021-03-30",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2020 10-K: 'Our second product candidate, IGM-8444' explicitly named alongside lead candidate IGM-2323.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1496323/000156459021016675/igms-10k_20201231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "CO-2021-IOVA-LIFILEUCELASCO",
+      "event_date": "2021-06-04",
+      "ticker": "IOVA",
+      "issuer": "Iovance Biotherapeutics, Inc.",
+      "asset": "lifileucel",
+      "historical_pipeline_snapshot_date": "2021-02-25",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2020 10-K describes lifileucel plus active investigation of a separate peripheral blood lymphocyte (PBL) therapy program for CLL/SLL; confirmed multi-program by the company's later (REG-2024-IOVA-AMTAGVI) 10-K, which names additional distinct candidates IOV-4001, IOV-3001 and LN-145.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1425205/000155837021001858/iova-20201231x10k.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "CO-2022-KROS-KER050ASH",
+      "event_date": "2022-12-12",
+      "ticker": "KROS",
+      "issuer": "Keros Therapeutics, Inc.",
+      "asset": "KER-050",
+      "historical_pipeline_snapshot_date": "2022-03-09",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2021 10-K: 'Our lead small molecule product candidate, KER-047...Our third product candidate, KER-012' - three named candidates.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1664710/000166471022000011/kros-20211231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "CO-2024-AUTL-OBECELASH",
+      "event_date": "2024-12-09",
+      "ticker": "AUTL",
+      "issuer": "Autolus Therapeutics plc",
+      "asset": "obe-cel (AUTO1)",
+      "historical_pipeline_snapshot_date": "2024-03-21",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2023 10-K: 'Our current clinical-stage pipeline comprises five programs being developed in eight hematological and solid tumor indications and one autoimmune indication.'",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1730463/000173046324000048/autl-20231231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "CO-2024-GMAB-TVASCO",
+      "event_date": "2024-06-03",
+      "ticker": "GMAB",
+      "issuer": "Genmab A/S",
+      "asset": "tisotumab vedotin (Tivdak)",
+      "historical_pipeline_snapshot_date": "2023-12-31",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2023 20-F business/financial sections discuss multiple marketed and pipeline products including Tivdak, epcoritamab, DARZALEX royalties and acasunlimab.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1434265/000155837024001137/gmab-20231231x20f.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "CO-2024-IRON-DISC0974ASH",
+      "event_date": "2024-12-08",
+      "ticker": "IRON",
+      "issuer": "Disc Medicine, Inc.",
+      "asset": "DISC-0974",
+      "historical_pipeline_snapshot_date": "2024-03-21",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2023 10-K: pipeline includes bitopertin, DISC-0974 and DISC-3405 (formerly MWTX-003) as three named active programs.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1816736/000095017024034432/iron-20231231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "CO-2024-KROS-ELRITERCEPTASH",
+      "event_date": "2024-12-09",
+      "ticker": "KROS",
+      "issuer": "Keros Therapeutics, Inc.",
+      "asset": "KER-050 (elritercept)",
+      "historical_pipeline_snapshot_date": "2024-02-28",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2023 10-K: 'Our second product candidate, KER-012...Our third product candidate, KER-065' - three named candidates.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1664710/000166471024000017/kros-20231231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "CO-2024-NRIX-NX5948ASH",
+      "event_date": "2024-12-09",
+      "ticker": "NRIX",
+      "issuer": "Nurix Therapeutics, Inc.",
+      "asset": "NX-5948",
+      "historical_pipeline_snapshot_date": "2024-02-15",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2023 10-K: 'our portfolio of targeted protein degraders of BTK...comprises NX-5948...and NX-2127' - two named clinical-stage BTK degraders, plus a CBL-B program.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1549595/000154959524000025/nrix-20231130.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "CO-2025-AUTL-CARLYSLEASH",
+      "event_date": "2025-12-08",
+      "ticker": "AUTL",
+      "issuer": "Autolus Therapeutics plc",
+      "asset": "obe-cel (AUCATZYL)",
+      "historical_pipeline_snapshot_date": "2025-03-20",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2024 10-K: 'we are also developing five programs in seven hematological and solid tumor indications and one autoimmune indication' beyond the approved AUCATZYL/obe-cel.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1730463/000173046325000019/autl-20241231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "CO-2025-CRVS-SOQUELITINIBASH",
+      "event_date": "2025-12-08",
+      "ticker": "CRVS",
+      "issuer": "Corvus Pharmaceuticals, Inc.",
+      "asset": "soquelitinib (CPI-818)",
+      "historical_pipeline_snapshot_date": "2025-03-25",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2024 10-K: 'We have two additional product candidates which are in clinical development for the treatment of various solid tumors.'",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1626971/000155837025003621/crvs-20241231x10k.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "CO-2025-GERN-RYTELOASH",
+      "event_date": "2025-12-08",
+      "ticker": "GERN",
+      "issuer": "Geron Corporation",
+      "asset": "imetelstat (RYTELO)",
+      "historical_pipeline_snapshot_date": "2025-02-27",
+      "determination": "QUALIFIES",
+      "status": "QUALIFIES",
+      "evidence_summary": "FY2024 10-K overview discusses only RYTELO/imetelstat; consistent with the already-established QUALIFIES determination for REG-2024-GERN-RYTELO (same company, same asset).",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/886744/000095017025027982/gern-20241231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": true,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "EC-2019-WVE-SUVODIRSEN",
+      "event_date": "2019-12-16",
+      "ticker": "WVE",
+      "issuer": "Wave Life Sciences Ltd.",
+      "asset": "suvodirsen (WVE-210201)",
+      "historical_pipeline_snapshot_date": "2018-12-31",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2018 10-K has a section titled 'Our Current Programs' (plural) describing multiple named clinical-stage oligonucleotide programs beyond suvodirsen.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1631574/000156459019005671/wve-10k_20181231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "EC-2020-CRSP-CTX001",
+      "event_date": "2020-06-12",
+      "ticker": "CRSP",
+      "issuer": "CRISPR Therapeutics AG",
+      "asset": "CTX001",
+      "historical_pipeline_snapshot_date": "2020-02-12",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2019 10-K: 'we are progressing several gene-edited allogeneic cell therapy programs, beginning with three allogeneic chimeric antigen receptor T cell (CAR-T) candidates' beyond the lead hemoglobinopathy program.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1674416/000156459020004355/crsp-10k_20191231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "EC-2021-EDIT-EDIT101",
+      "event_date": "2021-09-29",
+      "ticker": "EDIT",
+      "issuer": "Editas Medicine, Inc.",
+      "asset": "EDIT-101",
+      "historical_pipeline_snapshot_date": "2021-02-26",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2020 10-K describes multiple mature program areas (in vivo ocular medicines and ex vivo hemoglobinopathy/cancer cell medicines) beyond EDIT-101, plus a separate T-cell therapy collaboration with Juno/Bristol-Myers Squibb.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1650664/000155837021001915/edit-20201231x10k.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "EC-2021-FATE-FT516FT538",
+      "event_date": "2021-05-13",
+      "ticker": "FATE",
+      "issuer": "Fate Therapeutics, Inc.",
+      "asset": "FT-516 / FT-538",
+      "historical_pipeline_snapshot_date": "2021-02-24",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "The candidate's own event name reflects two distinct named product candidates (FT-516 and FT-538); FY2020 10-K describes a table of multiple programmed cellular immunotherapy product candidates under development.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1434316/000156459021008086/fate-10k_20201231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "EC-2021-KURA-KO539-HOLD",
+      "event_date": "2021-11-24",
+      "ticker": "KURA",
+      "issuer": "Kura Oncology, Inc.",
+      "asset": "KO-539",
+      "historical_pipeline_snapshot_date": "2021-02-24",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2020 10-K: 'We presently have two clinical-stage product candidates for which we own global commercial rights, tipifarnib and KO-539.'",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1422143/000156459021007822/kura-10k_20201231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "EC-2021-NTLA-NTLA2001",
+      "event_date": "2021-06-26",
+      "ticker": "NTLA",
+      "issuer": "Intellia Therapeutics, Inc.",
+      "asset": "NTLA-2001",
+      "historical_pipeline_snapshot_date": "2021-02-26",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2020 10-K: 'a wholly owned T cell receptor (TCR)-T cell candidate, NTLA-5001 for the treatment of acute myeloid leukemia' explicitly named alongside lead candidate NTLA-2001.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1652130/000156459021009011/ntla-10k_20201231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "EC-2021-TPTX-TPX0046",
+      "event_date": "2021-04-05",
+      "ticker": "TPTX",
+      "issuer": "Turning Point Therapeutics, Inc.",
+      "asset": "TPX-0046",
+      "historical_pipeline_snapshot_date": "2021-03-01",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2020 10-K names repotrectinib as the lead drug candidate (active Phase 1/2 TRIDENT-1 trial) and a separate MET/SRC/CSF1R inhibitor, TPX-0022, in an active Phase 1 SHIELD-1 trial - both distinct from TPX-0046, the event's own compound.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1595893/000156459021009849/tptx-10k_20201231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "EC-2022-ALEC-AL101",
+      "event_date": "2022-11-29",
+      "ticker": "ALEC",
+      "issuer": "Alector, Inc.",
+      "asset": "AL101",
+      "historical_pipeline_snapshot_date": "2022-02-24",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2021 10-K: 'We have advanced four product candidates, AL001, AL002, AL003, and AL101, into clinical development.'",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1653087/000095017022001979/alec-20211231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "EC-2022-VTYX-VTX958",
+      "event_date": "2022-08-15",
+      "ticker": "VTYX",
+      "issuer": "Ventyx Biosciences, Inc.",
+      "asset": "VTX958",
+      "historical_pipeline_snapshot_date": "2022-03-24",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "The company's own later (P2-2025-VTYX-VTX958) 10-K names VTX002, a S1P1R modulator in an active Phase 2 trial, as a second clinical-stage candidate; consistent multi-program company across both snapshots.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1851194/000095017022004442/vtyx-20211231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "EC-2023-IMTX-IMA203",
+      "event_date": "2023-11-08",
+      "ticker": "IMTX",
+      "issuer": "Immatics N.V.",
+      "asset": "IMA203",
+      "historical_pipeline_snapshot_date": "2022-12-31",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2022 20-F: 'We are conducting clinical trials for IMA201, IMA203 and IMA401' - three named active clinical-stage candidates.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1809196/000119312523076227/d400206d20f.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "EC-2024-CHRS-CHS114",
+      "event_date": "2024-05-23",
+      "ticker": "CHRS",
+      "issuer": "Coherus BioSciences, Inc.",
+      "asset": "CHS-114",
+      "historical_pipeline_snapshot_date": "2024-03-15",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2023 10-K: commercial portfolio includes 'two FDA-approved biosimilar products' (including UDENYCA) plus LOQTORZI (toripalimab), a diversified FDA-approved product portfolio.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1512762/000155837024003436/chrs-20231231x10k.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "EC-2025-MRSN-XMT1660",
+      "event_date": "2025-01-10",
+      "ticker": "MRSN",
+      "issuer": "Mersana Therapeutics, Inc.",
+      "asset": "XMT-1660",
+      "historical_pipeline_snapshot_date": "2024-02-28",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2024 10-K: 'Our two clinical-stage product candidates are XMT-1660 and XMT-2056.'",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1442836/000162828024007407/mrsn-20231231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "NEG-P2-2024-EYPT-PAVIA",
+      "event_date": "2024-05-06",
+      "ticker": "EYPT",
+      "issuer": "EyePoint Pharmaceuticals, Inc.",
+      "asset": "EYP-1901",
+      "historical_pipeline_snapshot_date": "2024-03-08",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2023 10-K: 'Additional pipeline programs include EYP-2301, a promising TIE-2 agonist...razuprotafib' explicitly named alongside lead candidate EYP-1901.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1314102/000095017024028523/eypt-20231231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "NEG-P2-2024-SAGE-LIGHTWAVE",
+      "event_date": "2024-10-08",
+      "ticker": "SAGE",
+      "issuer": "Sage Therapeutics, Inc.",
+      "asset": "dalzogladine (SAGE-718)",
+      "historical_pipeline_snapshot_date": "2024-02-14",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2023 10-K: company markets ZURZUVAE (zuranolone) commercially and separately targets both GABA and NMDA receptor systems across its clinical pipeline - a diversified, multi-program company.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1597553/000095017024014934/sage-20231231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "NEG-P2-2024-SAGE-PRECEDENT",
+      "event_date": "2024-04-17",
+      "ticker": "SAGE",
+      "issuer": "Sage Therapeutics, Inc.",
+      "asset": "dalzogladine (SAGE-718)",
+      "historical_pipeline_snapshot_date": "2024-02-14",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Same FY2023 10-K snapshot and reasoning as NEG-P2-2024-SAGE-LIGHTWAVE.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1597553/000095017024014934/sage-20231231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "NEG-P3-2021-DCPH-INTRIGUE",
+      "event_date": "2021-11-05",
+      "ticker": "DCPH",
+      "issuer": "Deciphera Pharmaceuticals, Inc.",
+      "asset": "ripretinib (QINLOCK)",
+      "historical_pipeline_snapshot_date": "2021-02-09",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2020 10-K: 'We have one approved drug, QINLOCK...Beyond QINLOCK, we are developing three clinical-stage drug candidates.'",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1654151/000165415121000003/dcph-20201231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "NEG-P3-2022-NKTR-PIVOTIO001",
+      "event_date": "2022-03-14",
+      "ticker": "NKTR",
+      "issuer": "Nektar Therapeutics",
+      "asset": "bempegaldesleukin (NKTR-214)",
+      "historical_pipeline_snapshot_date": "2022-03-01",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2021 10-K explicitly names 'bempegaldesleukin and NKTR-358, our lead drug candidates' - two named lead candidates.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/906709/000090670922000005/nktr-20211231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "NEG-P3-2023-MRTX-SAPPHIRE",
+      "event_date": "2023-05-24",
+      "ticker": "MRTX",
+      "issuer": "Mirati Therapeutics, Inc.",
+      "asset": "adagrasib (KRAZATI)",
+      "historical_pipeline_snapshot_date": "2023-02-28",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2022 10-K: 'We have multiple KRAS inhibitor programs' including approved KRAZATI plus MRTX1133 (in active IND-cleared development) and sitravatinib.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1576263/000162828023005576/mrtx-20221231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2018-BIIB-BAN2401",
+      "event_date": "2018-07-05",
+      "ticker": "BIIB",
+      "issuer": "Biogen Inc.",
+      "asset": "BAN2401 (lecanemab)",
+      "historical_pipeline_snapshot_date": "2018-02-01",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2017 10-K describes Biogen as a large diversified biopharmaceutical company with marketed products across MS/neuroimmunology and multiple growth areas.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/875045/000087504518000005/biib-20171231x10k.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2018-ESPR-BA-PCSK9",
+      "event_date": "2018-03-27",
+      "ticker": "ESPR",
+      "issuer": "Esperion Therapeutics, Inc.",
+      "asset": "bempedoic acid / ezetimibe combination",
+      "historical_pipeline_snapshot_date": "2018-02-20",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2017 10-K describes two parallel, separately-tracked Phase 3 regulatory programs: standalone bempedoic acid (a 4-study, ~3,600-patient program) and the bempedoic acid/ezetimibe fixed-dose combination pill (its own dedicated pivotal study) - two distinct NDA-track products, not one asset in one formulation.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1434868/000104746918000899/a2234199z10-k.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2018-GWPH-GWP42006",
+      "event_date": "2018-02-21",
+      "ticker": "GWPH",
+      "issuer": "GW Pharmaceuticals plc",
+      "asset": "cannabidivarin (GWP42006)",
+      "historical_pipeline_snapshot_date": "2017-12-04",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2017 10-K: lead product Epidiolex, a separately marketed product Sativex (nabiximols), and 'a deep pipeline of additional cannabinoid product candidates' including cannabidivarin (the event's own compound), a CBD:THC product, and IV CBD - a multi-compound cannabinoid pipeline.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1351288/000114420417062057/tv480101-20f.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2019-AGIO-DRIVEPK",
+      "event_date": "2019-09-04",
+      "ticker": "AGIO",
+      "issuer": "Agios Pharmaceuticals, Inc.",
+      "asset": "mitapivat (AG-348)",
+      "historical_pipeline_snapshot_date": "2019-02-14",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2018 10-K names two marketed products (TIBSOVO, IDHIFA) and multiple pre-commercial clinical candidates (vorasidenib/AG-881, AG-270, AG-636) alongside mitapivat.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1439222/000143922219000004/agio-20181231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2019-AXSM-AXS05-SMOKING",
+      "event_date": "2019-04-15",
+      "ticker": "AXSM",
+      "issuer": "Axsome Therapeutics, Inc.",
+      "asset": "AXS-05",
+      "historical_pipeline_snapshot_date": "2019-03-15",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2018 10-K: 'Our core CNS portfolio includes four CNS product candidates, AXS-05, AXS-07, AXS-09, and AXS-12.'",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1579428/000155837019002068/axsm-20181231x10k.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2019-BIIB-LILAC",
+      "event_date": "2019-12-03",
+      "ticker": "BIIB",
+      "issuer": "Biogen Inc.",
+      "asset": "opicinumab",
+      "historical_pipeline_snapshot_date": "2019-02-06",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2018 10-K, Biogen - same diversified multi-product reasoning as P2-2018-BIIB-BAN2401.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/875045/000087504519000006/biib-20181231x10k.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2019-MDGL-RESMETIROM",
+      "event_date": "2019-11-11",
+      "ticker": "MDGL",
+      "issuer": "Madrigal Pharmaceuticals, Inc.",
+      "asset": "MGL-3196 (resmetirom)",
+      "historical_pipeline_snapshot_date": "2018-12-31",
+      "determination": "QUALIFIES",
+      "status": "QUALIFIES",
+      "evidence_summary": "FY2018 10-K 'Item 1. Business' overview: 'Our lead product candidate, MGL-3196...' A broad compound-code scan found only one other code, MGL-3745, explicitly described as 'a preclinical compound which has similar thyroid receptor selectivity to MGL-3196 and is thus a potential backup compound for MGL-3196' - the same backup-not-active-program pattern already established as non-disqualifying for MDGL in single-asset-evidence-ledger-08.json.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1157601/000104746919000725/a2237824z10-k.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": true,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2019-RETA-MOXIE",
+      "event_date": "2019-10-14",
+      "ticker": "RETA",
+      "issuer": "Reata Pharmaceuticals, Inc.",
+      "asset": "omaveloxolone (Omav)",
+      "historical_pipeline_snapshot_date": "2019-02-28",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2018 10-K: 'Our lead product candidates, bardoxolone methyl (Bard) and omaveloxolone (Omav)' - two named lead candidates.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1358762/000156459019005161/reta-10k_20181231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2019-TGTX-UNITYNHL",
+      "event_date": "2019-02-28",
+      "ticker": "TGTX",
+      "issuer": "TG Therapeutics, Inc.",
+      "asset": "TG-1101 (ublituximab)",
+      "historical_pipeline_snapshot_date": "2018-03-15",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2018 10-K: 'we are developing two therapies targeting hematologic malignancies. TG-1101 (ublituximab)...We are also developing TGR-1202 (umbralisib).'",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1001316/000165495418002638/v031418_10K.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2020-CRNX-ACROBAT",
+      "event_date": "2020-11-06",
+      "ticker": "CRNX",
+      "issuer": "Crinetics Pharmaceuticals, Inc.",
+      "asset": "paltusotine (CRN00808)",
+      "historical_pipeline_snapshot_date": "2020-03-09",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2019 10-K: 'Our lead product candidate, paltusotine...and we are advancing additional product candidates through clinical and preclinical studies in parallel.'",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1658247/000156459020009365/crnx-10k_20191231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2021-BIIB-CONVEY",
+      "event_date": "2021-09-16",
+      "ticker": "BIIB",
+      "issuer": "Biogen Inc.",
+      "asset": "BIIB080",
+      "historical_pipeline_snapshot_date": "2021-02-03",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2020 10-K, Biogen - same diversified multi-product reasoning.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/875045/000087504521000010/biib-20201231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2021-BIIB-TANGO",
+      "event_date": "2021-06-16",
+      "ticker": "BIIB",
+      "issuer": "Biogen Inc.",
+      "asset": "BIIB059",
+      "historical_pipeline_snapshot_date": "2021-02-03",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2020 10-K, Biogen - same diversified multi-product reasoning.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/875045/000087504521000010/biib-20201231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2023-ALNY-KARDIA1",
+      "event_date": "2023-09-07",
+      "ticker": "ALNY",
+      "issuer": "Alnylam Pharmaceuticals, Inc.",
+      "asset": "zilebesiran",
+      "historical_pipeline_snapshot_date": "2023-02-23",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2022 10-K: 'the approval of five first-in-class RNAi-based medicines, ONPATTRO...AMVUTTRA...GIVLAARI...OXLUMO and Leqvio' - a diversified, multi-marketed-product company.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1178670/000117867023000005/alny-20221231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2023-ALT-MOMENTUM",
+      "event_date": "2023-11-30",
+      "ticker": "ALT",
+      "issuer": "Altimmune, Inc.",
+      "asset": "pemvidutide",
+      "historical_pipeline_snapshot_date": "2023-02-28",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2022 10-K: 'In addition, we are developing HepTcell, an immunotherapeutic agent' explicitly named alongside lead candidate pemvidutide.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1326190/000132619023000008/alt-20221231x10k.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2023-APLS-MERIDIAN",
+      "event_date": "2023-05-25",
+      "ticker": "APLS",
+      "issuer": "Apellis Pharmaceuticals, Inc.",
+      "asset": "pegcetacoplan (SYFOVRE)",
+      "historical_pipeline_snapshot_date": "2023-02-21",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2020 10-K (same era as REG-2021-APLS-EMPAVELI): 'We are developing pegcetacoplan and other product candidates, including APL-9, targeting C3' - APL-9 is a second named, actively-evaluated compound.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1492422/000095017023003438/apls-20221231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2023-ATAI-PCN101",
+      "event_date": "2023-01-06",
+      "ticker": "ATAI",
+      "issuer": "atai Life Sciences N.V.",
+      "asset": "PCN-101",
+      "historical_pipeline_snapshot_date": "2022-03-30",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2021 10-K describes a venture-builder structure with multiple majority-owned platform companies (EntheogeniX Biosciences, PsyProtix, TryptageniX, Invyxis) each developing distinct compounds beyond PCN-101.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1840904/000095017022005013/atai-20211231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2023-TERN-DUET",
+      "event_date": "2023-08-08",
+      "ticker": "TERN",
+      "issuer": "Terns Pharmaceuticals, Inc.",
+      "asset": "TERN-501",
+      "historical_pipeline_snapshot_date": "2023-03-27",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2022 10-K: 'The most advanced product candidates in our pipeline - TERN-701, TERN-501 and TERN-601 - were internally discovered' - three named candidates.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1831363/000095017023010016/tern-20221231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2024-BNTX-BNT111",
+      "event_date": "2024-07-30",
+      "ticker": "BNTX",
+      "issuer": "BioNTech SE",
+      "asset": "BNT111",
+      "historical_pipeline_snapshot_date": "2024-03-20",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2023 20-F describes a marketed COVID-19 vaccine (Comirnaty), a broad oncology pipeline, and a separate infectious disease pipeline, aiming for 'ten indication approvals by 2030.'",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1776985/000177698524000027/bntx-20231231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2024-GPCR-GSBR1290",
+      "event_date": "2024-06-03",
+      "ticker": "GPCR",
+      "issuer": "Structure Therapeutics Inc.",
+      "asset": "GSBR-1290",
+      "historical_pipeline_snapshot_date": "2024-03-08",
+      "determination": "QUALIFIES",
+      "status": "QUALIFIES",
+      "evidence_summary": "FY2023 10-K overview and a broad compound-code scan of the business section found no second named active clinical-stage compound beyond GSBR-1290.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1888886/000155837024002791/gpcr-20231231x10k.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": true,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2024-RXRX-SYCAMORE",
+      "event_date": "2024-09-03",
+      "ticker": "RXRX",
+      "issuer": "Recursion Pharmaceuticals, Inc.",
+      "asset": "REC-4881",
+      "historical_pipeline_snapshot_date": "2024-02-29",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2023 10-K describes Recursion as a platform 'TechBio' company with 'an expansive pipeline of internally discovered' candidates, not a single-asset issuer.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1601830/000160183024000019/rxrx-20231231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2024-SAGE-DIMENSION",
+      "event_date": "2024-11-20",
+      "ticker": "SAGE",
+      "issuer": "Sage Therapeutics, Inc.",
+      "asset": "dalzogladine (SAGE-718)",
+      "historical_pipeline_snapshot_date": "2024-02-14",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Same SAGE multi-program reasoning as the other 2024 SAGE candidates.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1597553/000095017024014934/sage-20231231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2025-KALA-CHASE",
+      "event_date": "2025-09-29",
+      "ticker": "KALA",
+      "issuer": "KALA BIO, Inc.",
+      "asset": "KPI-012",
+      "historical_pipeline_snapshot_date": "2025-03-31",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2024 10-K: 'we have initiated preclinical studies under our KPI-014 program' - a second named compound beyond KPI-012.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1479419/000155837025004081/kala-20241231x10k.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2025-VTYX-VTX958",
+      "event_date": "2025-02-18",
+      "ticker": "VTYX",
+      "issuer": "Ventyx Biosciences, Inc.",
+      "asset": "VTX958",
+      "historical_pipeline_snapshot_date": "2024-02-27",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2023 10-K: 'VTX002 is a sphingosine 1 phosphate receptor (S1P1R) modulator' in an active Phase 2 trial, named alongside lead candidate VTX958.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1851194/000095017024021160/vtyx-20231231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P3-2018-RARE-UX007",
+      "event_date": "2018-10-26",
+      "ticker": "RARE",
+      "issuer": "Ultragenyx Pharmaceutical Inc.",
+      "asset": "triheptanoin (UX007)",
+      "historical_pipeline_snapshot_date": "2018-02-21",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2017 10-K: 'we have in-licensed potential treatments for multiple rare genetic disorders...our strategy...allows us to pursue multiple programs in parallel.'",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1515673/000156459018002535/rare-10k_20171231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P3-2019-AXSM-GEMINI",
+      "event_date": "2019-12-16",
+      "ticker": "AXSM",
+      "issuer": "Axsome Therapeutics, Inc.",
+      "asset": "AXS-05",
+      "historical_pipeline_snapshot_date": "2019-03-15",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Same FY2018 10-K and four-CNS-candidate reasoning as P2-2019-AXSM-AXS05-SMOKING.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1579428/000155837019002068/axsm-20181231x10k.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P3-2019-ICPT-REGENERATE",
+      "event_date": "2019-02-19",
+      "ticker": "ICPT",
+      "issuer": "Intercept Pharmaceuticals, Inc.",
+      "asset": "obeticholic acid (OCA)",
+      "historical_pipeline_snapshot_date": "2018-02-28",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2018 10-K describes 'our one marketed product, OCA, and portfolio of clinical product candidates' (plural); consistent with the already-established finding for the company's later (REG-2020-ICPT-OCA-CRL) snapshot, where INT-787 is disclosed as an actively-evaluated second compound.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1270073/000114420418011793/v485049_10k.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P3-2019-NVAX-PREPARE",
+      "event_date": "2019-02-28",
+      "ticker": "NVAX",
+      "issuer": "Novavax, Inc.",
+      "asset": "RSV F Vaccine",
+      "historical_pipeline_snapshot_date": "2018-03-14",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2018 10-K 'Product Pipeline' table lists multiple clinical vaccine candidates: RSV F Vaccine, NanoFlu, a combination Influenza/RSV candidate, and an Ebola virus vaccine candidate.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1000694/000114420418014686/tv486897_10k.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P3-2020-AGIO-ACTIVATE",
+      "event_date": "2020-12-01",
+      "ticker": "AGIO",
+      "issuer": "Agios Pharmaceuticals, Inc.",
+      "asset": "mitapivat",
+      "historical_pipeline_snapshot_date": "2020-02-19",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2019 10-K - same multi-candidate AGIO reasoning as P2-2019-AGIO-DRIVEPK (TIBSOVO, IDHIFA, vorasidenib, AG-270, AG-636 all named alongside mitapivat).",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1439222/000143922220000014/agio-20191231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P3-2020-CYTK-GALACTIC-HF",
+      "event_date": "2020-11-13",
+      "ticker": "CYTK",
+      "issuer": "Cytokinetics, Incorporated",
+      "asset": "omecamtiv mecarbil",
+      "historical_pipeline_snapshot_date": "2019-12-31",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2019 10-K: 'Our clinical-stage drug candidates are: omecamtiv mecarbil...AMG 594...reldesemtiv...and CK-3773274 (CK-274)' - four named clinical-stage candidates.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1061983/000156459020008694/cytk-10k_20191231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P3-2020-GMAB-ANDROMEDA",
+      "event_date": "2020-05-28",
+      "ticker": "GMAB",
+      "issuer": "Genmab A/S",
+      "asset": "daratumumab subcutaneous",
+      "historical_pipeline_snapshot_date": "2020-03-30",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2019 20-F: 'our portfolio includes three approved partnered products; daratumumab, marketed by Janssen Biotech...as DARZALEX' plus a broad pipeline of differentiated antibody candidates.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1434265/000155837020003378/gmab-20191231x20f.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P3-2020-IMMU-ASCENT",
+      "event_date": "2020-07-06",
+      "ticker": "IMMU",
+      "issuer": "Immunomedics, Inc.",
+      "asset": "sacituzumab govitecan",
+      "historical_pipeline_snapshot_date": "2020-02-27",
+      "determination": "QUALIFIES",
+      "status": "QUALIFIES",
+      "evidence_summary": "No second named active clinical-stage compound found anywhere in the FY2019 10-K; entire business overview, regulatory history and financing sections discuss only sacituzumab govitecan (IMMU-132).",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/722830/000072283020000003/immu201910-k.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": true,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P3-2020-OCUL-DEXTENZA-AC",
+      "event_date": "2020-04-28",
+      "ticker": "OCUL",
+      "issuer": "Ocular Therapeutix, Inc.",
+      "asset": "DEXTENZA",
+      "historical_pipeline_snapshot_date": "2020-03-12",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2019 10-K names multiple other product candidates: OTX-TP (Phase 3 completed), and earlier-stage OTX-TIC and OTX-TKI, both in active clinical trials.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1393434/000155837020002537/ocul-20191231x10k.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P3-2020-REGN-LIBTAYO-NSCLC",
+      "event_date": "2020-04-27",
+      "ticker": "REGN",
+      "issuer": "Regeneron Pharmaceuticals, Inc.",
+      "asset": "cemiplimab (Libtayo)",
+      "historical_pipeline_snapshot_date": "2020-02-07",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2019 10-K trademark list includes ARCALYST, EYLEA, Libtayo and ZALTRAP - multiple distinct marketed products.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/872589/000153217620000008/regn-123119x10k.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P3-2021-BIIB-STAR",
+      "event_date": "2021-06-14",
+      "ticker": "BIIB",
+      "issuer": "Biogen Inc.",
+      "asset": "aducanumab",
+      "historical_pipeline_snapshot_date": "2021-02-03",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2020 10-K, Biogen - same diversified multi-product reasoning.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/875045/000087504521000010/biib-20201231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P3-2021-BIIB-VALOR",
+      "event_date": "2021-10-17",
+      "ticker": "BIIB",
+      "issuer": "Biogen Inc.",
+      "asset": "aducanumab",
+      "historical_pipeline_snapshot_date": "2021-02-03",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2020 10-K, Biogen - same diversified multi-product reasoning.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/875045/000087504521000010/biib-20201231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P3-2022-BGNE-ALPINE",
+      "event_date": "2022-10-12",
+      "ticker": "BGNE",
+      "issuer": "BeiGene, Ltd.",
+      "asset": "zanubrutinib (BRUKINSA)",
+      "historical_pipeline_snapshot_date": "2022-02-28",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2021 10-K: 'We currently have three approved medicines that were discovered and developed in our own labs, including BRUKINSA...tislelizumab...and pamiparib.'",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1651308/000165130822000032/bgne-20211231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P3-2023-GMAB-INNOVATV301",
+      "event_date": "2023-09-04",
+      "ticker": "GMAB",
+      "issuer": "Genmab A/S",
+      "asset": "tisotumab vedotin",
+      "historical_pipeline_snapshot_date": "2022-12-31",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2022 20-F - same diversified GMAB multi-product reasoning as CO-2024-GMAB-TVASCO.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1434265/000155837023001716/gmab-20221231x20f.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P3-2024-ANNX-ANX005",
+      "event_date": "2024-06-04",
+      "ticker": "ANNX",
+      "issuer": "Annexon, Inc.",
+      "asset": "ANX005",
+      "historical_pipeline_snapshot_date": "2024-03-26",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2023 10-K: 'We are advancing ANX007, an antigen-binding fragment (Fab)...for the potential treatment of patients with GA' - a second named, structurally distinct compound alongside lead candidate ANX005.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1528115/000095017024036408/annx-20231231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P3-2025-ALEC-INFRONT3",
+      "event_date": "2025-10-21",
+      "ticker": "ALEC",
+      "issuer": "Alector, Inc.",
+      "asset": "AL101",
+      "historical_pipeline_snapshot_date": "2025-02-26",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2024 10-K: 'we are advancing a portfolio of programs that address genetically validated targets' - consistent with the already-established four-candidate (AL001/002/003/101) multi-program finding for EC-2022-ALEC-AL101.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1653087/000095017025027758/alec-20241231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2018-AGIO-TIBSOVO",
+      "event_date": "2018-07-20",
+      "ticker": "AGIO",
+      "issuer": "Agios Pharmaceuticals, Inc.",
+      "asset": "ivosidenib (TIBSOVO)",
+      "historical_pipeline_snapshot_date": "2018-02-14",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2017 10-K - same multi-candidate AGIO reasoning; names IDHIFA (marketed), AG-881, AG-270, a DHODH inhibitor and AG-348/mitapivat all as active programs alongside ivosidenib.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1439222/000143922218000004/agio-123117x10k.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2018-ALNY-ONPATTRO",
+      "event_date": "2018-08-10",
+      "ticker": "ALNY",
+      "issuer": "Alnylam Pharmaceuticals, Inc.",
+      "asset": "patisiran (ONPATTRO)",
+      "historical_pipeline_snapshot_date": "2018-02-15",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2017 10-K 'Key 2017 Highlights' section names both Patisiran and Givosiran (Phase 3, ENVISION trial readout expected) as active investigational clinical pipeline programs.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1178670/000156459018002152/alny-10k_20171231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2018-ARRY-BRAFTOVI-MEKTOVI",
+      "event_date": "2018-06-27",
+      "ticker": "ARRY",
+      "issuer": "Array BioPharma Inc.",
+      "asset": "encorafenib + binimetinib",
+      "historical_pipeline_snapshot_date": "2017-09-08",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "The event itself names two distinct, separately-approved chemical entities (encorafenib/BRAFTOVI and binimetinib/MEKTOVI) combined as a regimen - not one asset in one formulation.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1100412/000110465917056197/a17-21498_110ka.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2018-FOLD-GALAFOLD",
+      "event_date": "2018-08-10",
+      "ticker": "FOLD",
+      "issuer": "Amicus Therapeutics, Inc.",
+      "asset": "migalastat (GALAFOLD)",
+      "historical_pipeline_snapshot_date": "2018-03-01",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2017 10-K names a separate enzyme replacement therapy co-formulated with migalastat for non-amenable Fabry patients, plus ATB200/AT2221 for Pompe disease, as distinct active programs.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1178879/000104746918001199/a2232459z10-k.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2019-SAGE-ZULRESSO",
+      "event_date": "2019-03-19",
+      "ticker": "SAGE",
+      "issuer": "Sage Therapeutics, Inc.",
+      "asset": "brexanolone (ZULRESSO)",
+      "historical_pipeline_snapshot_date": "2019-02-19",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2018 10-K: 'We have a portfolio of product candidates with a current focus on modulating two critical CNS receptor systems, GABA and NMDA' - a multi-program pipeline even at this earliest SAGE snapshot.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1597553/000156459019003191/sage-10k_20181231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2019-SRPT-GOLODIRSEN-CRL",
+      "event_date": "2019-08-19",
+      "ticker": "SRPT",
+      "issuer": "Sarepta Therapeutics, Inc.",
+      "asset": "golodirsen",
+      "historical_pipeline_snapshot_date": "2019-02-28",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2018 10-K: marketed product EXONDYS 51 plus active development across 'Duchenne muscular dystrophy, Limb-girdle muscular dystrophies, Mucopolysaccharidosis type IIIA and Pompe' - a broad multi-disease pipeline.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/873303/000156459019005170/srpt-10k_20181231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2020-BMRN-VALROX-CRL",
+      "event_date": "2020-08-19",
+      "ticker": "BMRN",
+      "issuer": "BioMarin Pharmaceutical Inc.",
+      "asset": "valoctocogene roxaparvovec",
+      "historical_pipeline_snapshot_date": "2020-02-27",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2019 10-K: 'Our portfolio consists of several commercial products and multiple clinical and preclinical product candidates.'",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1048477/000104847720000009/bmrn-20191231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2020-IMMU-TRODELVY",
+      "event_date": "2020-04-22",
+      "ticker": "IMMU",
+      "issuer": "Immunomedics, Inc.",
+      "asset": "sacituzumab govitecan",
+      "historical_pipeline_snapshot_date": "2020-02-27",
+      "determination": "QUALIFIES",
+      "status": "QUALIFIES",
+      "evidence_summary": "Same FY2019 10-K snapshot as P3-2020-IMMU-ASCENT; no second named active clinical-stage compound found.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/722830/000072283020000003/immu201910-k.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": true,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2020-LQDA-LIQ861-CRL",
+      "event_date": "2020-11-25",
+      "ticker": "LQDA",
+      "issuer": "Liquidia Technologies, Inc. (subsidiary of Liquidia Corporation)",
+      "asset": "LIQ861",
+      "historical_pipeline_snapshot_date": "2019-12-31",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Predecessor-entity FY2019 10-K (CIK 1330436): 'We are currently focused on the development of two product candidates...LIQ861...and LIQ865' - two named candidates.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1330436/000143774920005249/lqda20191231b_10k.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2021-APLS-EMPAVELI",
+      "event_date": "2021-05-14",
+      "ticker": "APLS",
+      "issuer": "Apellis Pharmaceuticals, Inc.",
+      "asset": "pegcetacoplan (EMPAVELI)",
+      "historical_pipeline_snapshot_date": "2021-02-25",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2020 10-K: 'We are developing pegcetacoplan and other product candidates, including APL-9, targeting C3 through various routes of administration' - APL-9 explicitly named as a second active compound.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1492422/000156459021008800/apls-10k_20201231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2021-ARDX-TENAPANOR-CRL",
+      "event_date": "2021-07-29",
+      "ticker": "ARDX",
+      "issuer": "Ardelyx, Inc.",
+      "asset": "tenapanor",
+      "historical_pipeline_snapshot_date": "2021-03-08",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2020 10-K: 'RDX013 Program: Small Molecule for Treating Hyperkalemia...we have initiated a Phase 2 study to evaluate the safety and pharmacodynamics of RDX013' - a second, actively-dosed clinical-stage compound distinct from tenapanor.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1437402/000155837021002500/ardx-20201231x10k.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2021-ASND-SKYTROFA",
+      "event_date": "2021-08-25",
+      "ticker": "ASND",
+      "issuer": "Ascendis Pharma A/S",
+      "asset": "TransCon Growth Hormone (SKYTROFA)",
+      "historical_pipeline_snapshot_date": "2021-03-10",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2020 20-F: 'We currently have three product candidates in clinical development in rare endocrine diseases and two product candidates identified in oncology.'",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1612042/000119312521076349/d123790d20f.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2021-ATNX-ORALPAC-CRL",
+      "event_date": "2021-03-01",
+      "ticker": "ATNX",
+      "issuer": "Athenex, Inc.",
+      "asset": "oral paclitaxel (Oraxol)",
+      "historical_pipeline_snapshot_date": "2020-03-02",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2020 10-K: 'Our current clinical pipeline...is derived from four different proprietary technologies: (1) Orascovery...(2) Src Kinase inhibition, (3) TCR-T, and (4) arginine deprivation therapy.'",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1300699/000156459020008138/atnx-10k_20191231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2021-FGEN-ROXADUSTAT-CRL",
+      "event_date": "2021-08-11",
+      "ticker": "FGEN",
+      "issuer": "FibroGen, Inc.",
+      "asset": "roxadustat",
+      "historical_pipeline_snapshot_date": "2021-03-01",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2020 10-K: 'Pamrevlumab is our first-in-class antibody developed to inhibit the activity of CTGF' - a second named active compound distinct from roxadustat.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/921299/000156459021009871/fgen-10k_20201231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2021-INCY-OPZELURA",
+      "event_date": "2021-09-21",
+      "ticker": "INCY",
+      "issuer": "Incyte Corporation",
+      "asset": "ruxolitinib cream (OPZELURA)",
+      "historical_pipeline_snapshot_date": "2021-02-09",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2020 10-K: 'our hematology and oncology franchise is comprised of four approved products, which are JAKAFI, MONJUVI, PEMAZYRE and ICLUSIG.'",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/879169/000155837021000825/incy-20201231x10k.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2022-CHRS-TORIPALIMAB-CRL",
+      "event_date": "2022-05-02",
+      "ticker": "CHRS",
+      "issuer": "Coherus BioSciences, Inc.",
+      "asset": "toripalimab",
+      "historical_pipeline_snapshot_date": "2022-02-23",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2021 10-K: 'a diversified portfolio of FDA-approved therapeutics' - same multi-product Coherus reasoning as EC-2024-CHRS-CHS114.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1512762/000155837022001764/chrs-20211231x10k.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2022-IMGN-ELAHERE",
+      "event_date": "2022-11-14",
+      "ticker": "IMGN",
+      "issuer": "ImmunoGen, Inc.",
+      "asset": "mirvetuximab soravtansine (ELAHERE)",
+      "historical_pipeline_snapshot_date": "2022-02-28",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2021 10-K: 'a portfolio of differentiated product candidates' - a multi-ADC pipeline company.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/855654/000155837022002358/imgn-20211231x10k.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2022-TGTX-BRIUMVI",
+      "event_date": "2022-12-28",
+      "ticker": "TGTX",
+      "issuer": "TG Therapeutics, Inc.",
+      "asset": "ublituximab (BRIUMVI)",
+      "historical_pipeline_snapshot_date": "2022-03-01",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2021 10-K: 'an active research pipeline including five investigational medicines' plus already-approved UKONIQ (umbralisib) - a diversified multi-product company.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1001316/000155837022002617/tgtx-20211231x10k.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2023-APLS-SYFOVRE",
+      "event_date": "2023-02-17",
+      "ticker": "APLS",
+      "issuer": "Apellis Pharmaceuticals, Inc.",
+      "asset": "pegcetacoplan (SYFOVRE)",
+      "historical_pipeline_snapshot_date": "2022-02-28",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Same APL-9 second-compound reasoning as REG-2021-APLS-EMPAVELI and P2-2023-APLS-MERIDIAN (same underlying company pipeline).",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1492422/000156459022007606/apls-10k_20211231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2023-BLUE-LYFGENIA",
+      "event_date": "2023-12-08",
+      "ticker": "BLUE",
+      "issuer": "bluebird bio, Inc.",
+      "asset": "lovotibeglogene autotemcel (LYFGENIA)",
+      "historical_pipeline_snapshot_date": "2023-03-29",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2022 10-K: 'we received approval from the US Food and Drug Administration for two gene therapies: ZYNTEGLO...and SKYSONA' - two already-approved distinct products before LYFGENIA.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1293971/000129397123000007/blue-20221231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2023-BMRN-ROCTAVIAN",
+      "event_date": "2023-06-29",
+      "ticker": "BMRN",
+      "issuer": "BioMarin Pharmaceutical Inc.",
+      "asset": "valoctocogene roxaparvovec (ROCTAVIAN)",
+      "historical_pipeline_snapshot_date": "2023-02-27",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2022 10-K - same multi-product BioMarin reasoning as REG-2020-BMRN-VALROX-CRL.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1048477/000104847723000009/bmrn-20221231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2023-IONS-QALSODY",
+      "event_date": "2023-04-25",
+      "ticker": "IONS",
+      "issuer": "Ionis Pharmaceuticals, Inc.",
+      "asset": "tofersen (QALSODY)",
+      "historical_pipeline_snapshot_date": "2023-02-22",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2022 10-K: 'We currently have three marketed medicines: SPINRAZA, TEGSEDI and WAYLIVRA' plus eplontersen and tofersen advancing toward approval.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/874015/000087401523000105/form10k.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2023-RETA-SKYCLARYS",
+      "event_date": "2023-02-28",
+      "ticker": "RETA",
+      "issuer": "Reata Pharmaceuticals, Inc.",
+      "asset": "omaveloxolone (SKYCLARYS)",
+      "historical_pipeline_snapshot_date": "2023-02-24",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2022 10-K: 'Our lead programs are omaveloxolone...and bardoxolone' - two named lead candidates, consistent with P2-2019-RETA-MOXIE.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1358762/000095017023004236/reta-20221231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2023-SRPT-ELEVIDYS",
+      "event_date": "2023-06-22",
+      "ticker": "SRPT",
+      "issuer": "Sarepta Therapeutics, Inc.",
+      "asset": "delandistrogene moxeparvovec (ELEVIDYS)",
+      "historical_pipeline_snapshot_date": "2023-02-28",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2022 10-K: 'we have developed multiple approved products for the treatment of Duchenne' plus a broad pipeline across LGMDs and CNS disorders.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/873303/000095017023005062/srpt-20221231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2023-TVTX-FILSPARI",
+      "event_date": "2023-02-17",
+      "ticker": "TVTX",
+      "issuer": "Travere Therapeutics, Inc.",
+      "asset": "sparsentan (FILSPARI)",
+      "historical_pipeline_snapshot_date": "2022-02-24",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2022 10-K: 'We are also developing pegtibatinase (TVT-058)' - a second named active compound alongside lead candidate sparsentan.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1438533/000143853322000008/rtrx-20211231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2024-BBIO-ATTRUBY",
+      "event_date": "2024-11-22",
+      "ticker": "BBIO",
+      "issuer": "BridgeBio Pharma, Inc.",
+      "asset": "acoramidis (ATTRUBY)",
+      "historical_pipeline_snapshot_date": "2024-02-22",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2023 10-K: 'Since inception, BridgeBio has created 17 Investigational New Drug applications...and had two products approved by the U.S. Food and Drug Administration. We work across over 20 disease states.'",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1743881/000095017024018811/bbio-20231231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2024-DAWN-OJEMDA",
+      "event_date": "2024-04-23",
+      "ticker": "DAWN",
+      "issuer": "Day One Biopharmaceuticals, Inc.",
+      "asset": "tovorafenib",
+      "historical_pipeline_snapshot_date": "2024-02-26",
+      "determination": "QUALIFIES",
+      "status": "QUALIFIES",
+      "evidence_summary": "FY2023 10-K 'Item 1. Business' overview and a broad compound-code scan of the business section found no second named active clinical-stage compound beyond tovorafenib.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1845337/000095017024020212/dawn-20231231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": true,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2024-IONS-TRYNGOLZA",
+      "event_date": "2024-12-19",
+      "ticker": "IONS",
+      "issuer": "Ionis Pharmaceuticals, Inc.",
+      "asset": "olezarsen (TRYNGOLZA)",
+      "historical_pipeline_snapshot_date": "2024-02-21",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2023 10-K: 'We currently have five marketed medicines...We currently have nine medicines in Phase 3 development.'",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/874015/000087401524000116/form10k.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2024-IOVA-AMTAGVI",
+      "event_date": "2024-02-16",
+      "ticker": "IOVA",
+      "issuer": "Iovance Biotherapeutics, Inc.",
+      "asset": "lifileucel (AMTAGVI)",
+      "historical_pipeline_snapshot_date": "2023-02-28",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2023 10-K names additional distinct candidates IOV-4001 (genetically modified TIL therapy), IOV-3001 (IL-2 analog) and LN-145, all in active clinical development alongside lifileucel.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1425205/000155837023002419/iova-20221231x10k.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2024-RCKT-KRESLADI-CRL",
+      "event_date": "2024-06-28",
+      "ticker": "RCKT",
+      "issuer": "Rocket Pharmaceuticals, Inc.",
+      "asset": "marnetegragene autotemcel (KRESLADI)",
+      "historical_pipeline_snapshot_date": "2024-02-27",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2023 10-K: 'We have three clinical-stage ex vivo lentiviral vector (LV) programs' for Fanconi Anemia, LAD-I and Pyruvate Kinase Deficiency.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1281895/000095017024021096/rckt-20231231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2024-REGN-LINVOSELTAMAB-CRL",
+      "event_date": "2024-08-20",
+      "ticker": "REGN",
+      "issuer": "Regeneron Pharmaceuticals, Inc.",
+      "asset": "linvoseltamab",
+      "historical_pipeline_snapshot_date": "2024-02-05",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2023 10-K trademark list and marketed-product competitive-landscape tables confirm multiple distinct approved products (EYLEA, Dupixent, Libtayo, etc.).",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/872589/000180422024000009/regn-20231231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2024-SNDX-REVUFORJ",
+      "event_date": "2024-11-15",
+      "ticker": "SNDX",
+      "issuer": "Syndax Pharmaceuticals, Inc.",
+      "asset": "revumenib (REVUFORJ)",
+      "historical_pipeline_snapshot_date": "2024-02-27",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2023 10-K: 'Our two lead product candidates are revumenib, and axatilimab.'",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1395937/000095017024021253/sndx-20231231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2024-VRTX-ALYFTREK",
+      "event_date": "2024-12-20",
+      "ticker": "VRTX",
+      "issuer": "Vertex Pharmaceuticals Incorporated",
+      "asset": "vanzacaftor/tezacaftor/deutivacaftor (ALYFTREK)",
+      "historical_pipeline_snapshot_date": "2024-02-15",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2023 10-K: 'We have four approved medicines that treat...CF...and one approved therapy that treats severe sickle cell disease...Our pipeline includes clinical-stage programs in CF, sickle cell disease, beta thalassemia, acute and neuropathic pain, APOL1-mediated kidney disease, type 1 diabetes, myotonic dystrophy type 1 and alpha-1 antitrypsin deficiency.'",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/875320/000087532024000062/vrtx-20231231.htm"
+      ],
+      "post_event_source_role": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    }
+  ],
+  "promotion_boundary": "Single-asset status alone does not establish final M7 eligibility. This batch, combined with single-asset-evidence-ledger-09/-10/-11.json, completes single-asset determination for the entire universe-PASS pool (152 of 152 candidates now resolved, zero PENDING). Financing determination was separately completed in financing-evidence-ledger-06/-07/-08.json. Per newly-sourced-batch-13.json's RNG order-sensitivity finding, no simulated selected-cohort subset count from this data should be treated as a stable pre-registry prediction; pool-wide aggregate sufficiency is the only reliable readiness signal until the real HistoricalEvent registry exists."
+}
