@@ -1,0 +1,1156 @@
+{
+  "cohort_sha256": "37f2e70dcc0626b40e97637e34056c9279ae9a5e6daf69d1c2f730e77c114e95",
+  "data_gap_count": 19,
+  "data_gaps": [
+    {
+      "event_id": "CO-2018-ZIOP-ASCO",
+      "reason": "debt cannot be bounded from filings",
+      "ticker": "ZIOP"
+    },
+    {
+      "event_id": "EC-2020-CRSP-CTX001",
+      "reason": "debt cannot be bounded from filings",
+      "ticker": "CRSP"
+    },
+    {
+      "event_id": "EC-2021-EDIT-EDIT101",
+      "reason": "debt cannot be bounded from filings",
+      "ticker": "EDIT"
+    },
+    {
+      "event_id": "EC-2022-ALEC-AL101",
+      "reason": "debt cannot be bounded from filings",
+      "ticker": "ALEC"
+    },
+    {
+      "event_id": "NEG-P2-2018-IDRA-IMO8400",
+      "reason": "debt cannot be bounded from filings",
+      "ticker": "IDRA"
+    },
+    {
+      "event_id": "P2-2019-AXSM-AXS05-SMOKING",
+      "reason": "unrestricted cash fact is missing",
+      "ticker": "AXSM"
+    },
+    {
+      "event_id": "P2-2019-MDGL-RESMETIROM",
+      "reason": "debt cannot be bounded from filings",
+      "ticker": "MDGL"
+    },
+    {
+      "event_id": "P2-2019-TGTX-UNITYNHL",
+      "reason": "debt cannot be bounded from filings",
+      "ticker": "TGTX"
+    },
+    {
+      "event_id": "P3-2019-AXSM-GEMINI",
+      "reason": "unrestricted cash fact is missing",
+      "ticker": "AXSM"
+    },
+    {
+      "event_id": "P3-2020-CRBP-RESOLVE1",
+      "reason": "debt cannot be bounded from filings",
+      "ticker": "CRBP"
+    },
+    {
+      "event_id": "P3-2020-REGN-LIBTAYO-NSCLC",
+      "reason": "debt cannot be bounded from filings",
+      "ticker": "REGN"
+    },
+    {
+      "event_id": "REG-2018-ALNY-ONPATTRO",
+      "reason": "debt cannot be bounded from filings",
+      "ticker": "ALNY"
+    },
+    {
+      "event_id": "REG-2018-FOLD-GALAFOLD",
+      "reason": "debt cannot be bounded from filings",
+      "ticker": "FOLD"
+    },
+    {
+      "event_id": "REG-2019-GBT-OXBRYTA",
+      "reason": "debt cannot be bounded from filings",
+      "ticker": "GBT"
+    },
+    {
+      "event_id": "REG-2020-BMRN-VALROX-CRL",
+      "reason": "debt cannot be bounded from filings",
+      "ticker": "BMRN"
+    },
+    {
+      "event_id": "REG-2020-RYTM-IMCIVREE",
+      "reason": "debt cannot be bounded from filings",
+      "ticker": "RYTM"
+    },
+    {
+      "event_id": "REG-2021-FGEN-ROXADUSTAT-CRL",
+      "reason": "debt cannot be bounded from filings",
+      "ticker": "FGEN"
+    },
+    {
+      "event_id": "REG-2022-PRVB-TZIELD",
+      "reason": "debt cannot be bounded from filings",
+      "ticker": "PRVB"
+    },
+    {
+      "event_id": "REG-2023-BLUE-LYFGENIA",
+      "reason": "debt cannot be bounded from filings",
+      "ticker": "BLUE"
+    }
+  ],
+  "event_count": 120,
+  "excluded_foreign_issuer": [
+    {
+      "event_id": "CO-2020-TRIL-TTI622ASH",
+      "reason": "confirmed 20-F/40-F filer (foreign private issuer); XBRL coverage/taxonomy not handled by this pipeline",
+      "ticker": "TRIL"
+    },
+    {
+      "event_id": "CO-2024-AUTL-OBECELASH",
+      "reason": "confirmed 20-F/40-F filer (foreign private issuer); XBRL coverage/taxonomy not handled by this pipeline",
+      "ticker": "AUTL"
+    },
+    {
+      "event_id": "CO-2024-GMAB-TVASCO",
+      "reason": "confirmed 20-F/40-F filer (foreign private issuer); XBRL coverage/taxonomy not handled by this pipeline",
+      "ticker": "GMAB"
+    },
+    {
+      "event_id": "EC-2023-IMTX-IMA203",
+      "reason": "confirmed 20-F/40-F filer (foreign private issuer); XBRL coverage/taxonomy not handled by this pipeline",
+      "ticker": "IMTX"
+    },
+    {
+      "event_id": "P2-2018-GWPH-GWP42006",
+      "reason": "confirmed 20-F/40-F filer (foreign private issuer); XBRL coverage/taxonomy not handled by this pipeline",
+      "ticker": "GWPH"
+    },
+    {
+      "event_id": "P2-2021-GHRS-GH001",
+      "reason": "confirmed 20-F/40-F filer (foreign private issuer); XBRL coverage/taxonomy not handled by this pipeline",
+      "ticker": "GHRS"
+    },
+    {
+      "event_id": "P2-2024-BNTX-BNT111",
+      "reason": "confirmed 20-F/40-F filer (foreign private issuer); XBRL coverage/taxonomy not handled by this pipeline",
+      "ticker": "BNTX"
+    },
+    {
+      "event_id": "P3-2020-GMAB-ANDROMEDA",
+      "reason": "confirmed 20-F/40-F filer (foreign private issuer); XBRL coverage/taxonomy not handled by this pipeline",
+      "ticker": "GMAB"
+    },
+    {
+      "event_id": "P3-2023-GMAB-INNOVATV301",
+      "reason": "confirmed 20-F/40-F filer (foreign private issuer); XBRL coverage/taxonomy not handled by this pipeline",
+      "ticker": "GMAB"
+    },
+    {
+      "event_id": "P3-2024-NAMS-BROADWAY",
+      "reason": "confirmed 20-F/40-F filer (foreign private issuer); XBRL coverage/taxonomy not handled by this pipeline",
+      "ticker": "NAMS"
+    },
+    {
+      "event_id": "P3-2024-NAMS-BROOKLYN",
+      "reason": "confirmed 20-F/40-F filer (foreign private issuer); XBRL coverage/taxonomy not handled by this pipeline",
+      "ticker": "NAMS"
+    },
+    {
+      "event_id": "REG-2021-ASND-SKYTROFA",
+      "reason": "confirmed 20-F/40-F filer (foreign private issuer); XBRL coverage/taxonomy not handled by this pipeline",
+      "ticker": "ASND"
+    }
+  ],
+  "excluded_foreign_issuer_count": 12,
+  "fetch_failure_count": 0,
+  "fetch_failures": [],
+  "generator": "python scripts/m7_build_financial_snapshots.py",
+  "methodology_notes": [
+    "Foreign-private-issuer exclusion is confirmed by a real 20-F/40-F annual-report filing in SEC submissions history for that issuer, not inferred from name, ticker, or guesswork.",
+    "Zero-debt confirmation requires NO debt-related XBRL concept (LongTermDebt*, NotesPayable*, ShortTermBorrowings, etc.) to appear anywhere in the issuer's full SEC filing history, not just before the cutoff - checked once per issuer, applied identically to every event for that issuer.",
+    "Remaining data_gaps are genuine: real domestic XBRL filers whose cash facts are still missing or ambiguous as of T-30 for reasons other than the two rules above - not excluded, not guessed at, left as an open gap."
+  ],
+  "snapshot_count": 89,
+  "snapshot_label": "T_MINUS_30",
+  "snapshots": [
+    {
+      "balance_sheet_date": "2019-06-30",
+      "cash": "918948000",
+      "debt": "93229000",
+      "debt_confirmed_zero_by_absence": false,
+      "event_id": "CO-2019-BGNE-ZANUASH",
+      "liquidity": "1537751000",
+      "marketable_securities": "618803000",
+      "t_minus_30": "2019-11-08",
+      "ticker": "BGNE"
+    },
+    {
+      "balance_sheet_date": "2019-09-30",
+      "cash": "78977000",
+      "debt": "30208000",
+      "debt_confirmed_zero_by_absence": false,
+      "event_id": "CO-2019-CNST-MANIFEST",
+      "liquidity": "89066000",
+      "marketable_securities": "10089000",
+      "t_minus_30": "2019-11-09",
+      "ticker": "CNST"
+    },
+    {
+      "balance_sheet_date": "2020-09-30",
+      "cash": "21259000",
+      "debt": "0",
+      "debt_confirmed_zero_by_absence": true,
+      "event_id": "CO-2020-ONCT-CIRLLASH",
+      "liquidity": "21434000",
+      "marketable_securities": "175000",
+      "t_minus_30": "2020-11-07",
+      "ticker": "ONCT"
+    },
+    {
+      "balance_sheet_date": "2020-12-31",
+      "cash": "21170000",
+      "debt": "0",
+      "debt_confirmed_zero_by_absence": true,
+      "event_id": "CO-2021-HARP-HPN424ASCO",
+      "liquidity": "126030000",
+      "marketable_securities": "104860000",
+      "t_minus_30": "2021-05-05",
+      "ticker": "HARP"
+    },
+    {
+      "balance_sheet_date": "2021-09-30",
+      "cash": "165604000",
+      "debt": "0",
+      "debt_confirmed_zero_by_absence": true,
+      "event_id": "CO-2021-IGMS-IGM2323ASH",
+      "liquidity": "165604000",
+      "marketable_securities": "0",
+      "t_minus_30": "2021-11-11",
+      "ticker": "IGMS"
+    },
+    {
+      "balance_sheet_date": "2020-12-31",
+      "cash": "67329000",
+      "debt": "0",
+      "debt_confirmed_zero_by_absence": true,
+      "event_id": "CO-2021-IOVA-LIFILEUCELASCO",
+      "liquidity": "629437000",
+      "marketable_securities": "562108000",
+      "t_minus_30": "2021-05-05",
+      "ticker": "IOVA"
+    },
+    {
+      "balance_sheet_date": "2022-09-30",
+      "cash": "239426000",
+      "debt": "0",
+      "debt_confirmed_zero_by_absence": true,
+      "event_id": "CO-2022-KROS-KER050ASH",
+      "liquidity": "239426000",
+      "marketable_securities": "0",
+      "t_minus_30": "2022-11-12",
+      "ticker": "KROS"
+    },
+    {
+      "balance_sheet_date": "2024-06-30",
+      "cash": "280663000",
+      "debt": "25689000",
+      "debt_confirmed_zero_by_absence": false,
+      "event_id": "CO-2024-IRON-DISC0974ASH",
+      "liquidity": "500945000",
+      "marketable_securities": "220282000",
+      "t_minus_30": "2024-11-08",
+      "ticker": "IRON"
+    },
+    {
+      "balance_sheet_date": "2024-08-31",
+      "cash": "99044000",
+      "debt": "0",
+      "debt_confirmed_zero_by_absence": true,
+      "event_id": "CO-2024-NRIX-NX5948ASH",
+      "liquidity": "315592000",
+      "marketable_securities": "216548000",
+      "t_minus_30": "2024-11-09",
+      "ticker": "NRIX"
+    },
+    {
+      "balance_sheet_date": "2025-09-30",
+      "cash": "2867000",
+      "debt": "0",
+      "debt_confirmed_zero_by_absence": true,
+      "event_id": "CO-2025-CRVS-SOQUELITINIBASH",
+      "liquidity": "2867000",
+      "marketable_securities": "0",
+      "t_minus_30": "2025-11-08",
+      "ticker": "CRVS"
+    },
+    {
+      "balance_sheet_date": "2025-09-30",
+      "cash": "78117000",
+      "debt": "190826000",
+      "debt_confirmed_zero_by_absence": false,
+      "event_id": "CO-2025-GERN-RYTELOASH",
+      "liquidity": "78117000",
+      "marketable_securities": "0",
+      "t_minus_30": "2025-11-08",
+      "ticker": "GERN"
+    },
+    {
+      "balance_sheet_date": "2019-09-30",
+      "cash": "209009000",
+      "debt": "0",
+      "debt_confirmed_zero_by_absence": true,
+      "event_id": "EC-2019-WVE-SUVODIRSEN",
+      "liquidity": "209009000",
+      "marketable_securities": "0",
+      "t_minus_30": "2019-11-16",
+      "ticker": "WVE"
+    },
+    {
+      "balance_sheet_date": "2021-06-30",
+      "cash": "38974000",
+      "debt": "6500000",
+      "debt_confirmed_zero_by_absence": false,
+      "event_id": "EC-2021-KURA-KO539-HOLD",
+      "liquidity": "38974000",
+      "marketable_securities": "0",
+      "t_minus_30": "2021-10-25",
+      "ticker": "KURA"
+    },
+    {
+      "balance_sheet_date": "2021-03-31",
+      "cash": "178789000",
+      "debt": "20000000",
+      "debt_confirmed_zero_by_absence": false,
+      "event_id": "EC-2021-SGTX-SIG001",
+      "liquidity": "178789000",
+      "marketable_securities": "0",
+      "t_minus_30": "2021-06-09",
+      "ticker": "SGTX"
+    },
+    {
+      "balance_sheet_date": "2020-12-31",
+      "cash": "554101000",
+      "debt": "0",
+      "debt_confirmed_zero_by_absence": true,
+      "event_id": "EC-2021-TPTX-TPX0046",
+      "liquidity": "1122508000",
+      "marketable_securities": "568407000",
+      "t_minus_30": "2021-03-06",
+      "ticker": "TPTX"
+    },
+    {
+      "balance_sheet_date": "2021-09-30",
+      "cash": "152107745",
+      "debt": "345",
+      "debt_confirmed_zero_by_absence": false,
+      "event_id": "EC-2022-AVXL-ANAVEX371",
+      "liquidity": "152107745",
+      "marketable_securities": "0",
+      "t_minus_30": "2021-12-11",
+      "ticker": "AVXL"
+    },
+    {
+      "balance_sheet_date": "2022-03-31",
+      "cash": "41690000",
+      "debt": "0",
+      "debt_confirmed_zero_by_absence": true,
+      "event_id": "EC-2022-VTYX-VTX958",
+      "liquidity": "254346000",
+      "marketable_securities": "212656000",
+      "t_minus_30": "2022-07-16",
+      "ticker": "VTYX"
+    },
+    {
+      "balance_sheet_date": "2023-12-31",
+      "cash": "193238000",
+      "debt": "0",
+      "debt_confirmed_zero_by_absence": true,
+      "event_id": "EC-2024-CABA-CABA201",
+      "liquidity": "241249000",
+      "marketable_securities": "48011000",
+      "t_minus_30": "2024-05-15",
+      "ticker": "CABA"
+    },
+    {
+      "balance_sheet_date": "2023-12-31",
+      "cash": "102891000",
+      "debt": "73663000",
+      "debt_confirmed_zero_by_absence": false,
+      "event_id": "EC-2024-CHRS-CHS114",
+      "liquidity": "117748000",
+      "marketable_securities": "14857000",
+      "t_minus_30": "2024-04-23",
+      "ticker": "CHRS"
+    },
+    {
+      "balance_sheet_date": "2024-03-31",
+      "cash": "123980000",
+      "debt": "40512000",
+      "debt_confirmed_zero_by_absence": false,
+      "event_id": "EC-2024-TSHA-TSHA102",
+      "liquidity": "123980000",
+      "marketable_securities": "0",
+      "t_minus_30": "2024-05-19",
+      "ticker": "TSHA"
+    },
+    {
+      "balance_sheet_date": "2024-09-30",
+      "cash": "78868000",
+      "debt": "25457000",
+      "debt_confirmed_zero_by_absence": false,
+      "event_id": "EC-2025-MRSN-XMT1660",
+      "liquidity": "78868000",
+      "marketable_securities": "0",
+      "t_minus_30": "2024-12-11",
+      "ticker": "MRSN"
+    },
+    {
+      "balance_sheet_date": "2024-12-31",
+      "cash": "352400000",
+      "debt": "0",
+      "debt_confirmed_zero_by_absence": true,
+      "event_id": "EC-2025-MTSR-MET233I",
+      "liquidity": "352400000",
+      "marketable_securities": "0",
+      "t_minus_30": "2025-05-10",
+      "ticker": "MTSR"
+    },
+    {
+      "balance_sheet_date": "2020-09-30",
+      "cash": "209154000",
+      "debt": "0",
+      "debt_confirmed_zero_by_absence": true,
+      "event_id": "NEG-P2-2021-ANAB-POPLAR",
+      "liquidity": "209154000",
+      "marketable_securities": "0",
+      "t_minus_30": "2021-02-06",
+      "ticker": "ANAB"
+    },
+    {
+      "balance_sheet_date": "2022-06-30",
+      "cash": "63379000",
+      "debt": "0",
+      "debt_confirmed_zero_by_absence": true,
+      "event_id": "NEG-P2-2022-NGM-CATALINA",
+      "liquidity": "297808000",
+      "marketable_securities": "234429000",
+      "t_minus_30": "2022-09-17",
+      "ticker": "NGM"
+    },
+    {
+      "balance_sheet_date": "2024-06-30",
+      "cash": "99901000",
+      "debt": "0",
+      "debt_confirmed_zero_by_absence": true,
+      "event_id": "NEG-P2-2024-SAGE-LIGHTWAVE",
+      "liquidity": "646793000",
+      "marketable_securities": "546892000",
+      "t_minus_30": "2024-09-08",
+      "ticker": "SAGE"
+    },
+    {
+      "balance_sheet_date": "2023-12-31",
+      "cash": "70992000",
+      "debt": "0",
+      "debt_confirmed_zero_by_absence": true,
+      "event_id": "NEG-P2-2024-SAGE-PRECEDENT",
+      "liquidity": "753184000",
+      "marketable_securities": "682192000",
+      "t_minus_30": "2024-03-18",
+      "ticker": "SAGE"
+    },
+    {
+      "balance_sheet_date": "2021-06-30",
+      "cash": "90947000",
+      "debt": "0",
+      "debt_confirmed_zero_by_absence": true,
+      "event_id": "NEG-P3-2021-DCPH-INTRIGUE",
+      "liquidity": "395352000",
+      "marketable_securities": "304405000",
+      "t_minus_30": "2021-10-06",
+      "ticker": "DCPH"
+    },
+    {
+      "balance_sheet_date": "2021-09-30",
+      "cash": "54017000",
+      "debt": "133500000",
+      "debt_confirmed_zero_by_absence": false,
+      "event_id": "NEG-P3-2022-NKTR-PIVOTIO001",
+      "liquidity": "54017000",
+      "marketable_securities": "0",
+      "t_minus_30": "2022-02-12",
+      "ticker": "NKTR"
+    },
+    {
+      "balance_sheet_date": "2023-03-31",
+      "cash": "316615000",
+      "debt": "0",
+      "debt_confirmed_zero_by_absence": true,
+      "event_id": "NEG-P3-2023-KOD-GLEAMGLIMMER",
+      "liquidity": "421191000",
+      "marketable_securities": "104576000",
+      "t_minus_30": "2023-06-24",
+      "ticker": "KOD"
+    },
+    {
+      "balance_sheet_date": "2022-12-31",
+      "cash": "235260000",
+      "debt": "0",
+      "debt_confirmed_zero_by_absence": true,
+      "event_id": "NEG-P3-2023-MRTX-SAPPHIRE",
+      "liquidity": "1083837000",
+      "marketable_securities": "848577000",
+      "t_minus_30": "2023-04-24",
+      "ticker": "MRTX"
+    },
+    {
+      "balance_sheet_date": "2023-09-30",
+      "cash": "135258000",
+      "debt": "0",
+      "debt_confirmed_zero_by_absence": true,
+      "event_id": "NEG-P3-2024-AMLX-PHOENIX",
+      "liquidity": "355045000",
+      "marketable_securities": "219787000",
+      "t_minus_30": "2024-02-07",
+      "ticker": "AMLX"
+    },
+    {
+      "balance_sheet_date": "2018-03-31",
+      "cash": "4108000000",
+      "debt": "5929400000",
+      "debt_confirmed_zero_by_absence": false,
+      "event_id": "P2-2018-BIIB-BAN2401",
+      "liquidity": "4108000000",
+      "marketable_securities": "0",
+      "t_minus_30": "2018-06-05",
+      "ticker": "BIIB"
+    },
+    {
+      "balance_sheet_date": "2017-12-31",
+      "cash": "34468000",
+      "debt": "1185000",
+      "debt_confirmed_zero_by_absence": false,
+      "event_id": "P2-2018-ESPR-BA-PCSK9",
+      "liquidity": "197429000",
+      "marketable_securities": "162961000",
+      "t_minus_30": "2018-02-25",
+      "ticker": "ESPR"
+    },
+    {
+      "balance_sheet_date": "2019-06-30",
+      "cash": "83580000",
+      "debt": "0",
+      "debt_confirmed_zero_by_absence": true,
+      "event_id": "P2-2019-AGIO-DRIVEPK",
+      "liquidity": "83580000",
+      "marketable_securities": "0",
+      "t_minus_30": "2019-08-05",
+      "ticker": "AGIO"
+    },
+    {
+      "balance_sheet_date": "2019-06-30",
+      "cash": "280449000",
+      "debt": "82590000",
+      "debt_confirmed_zero_by_absence": false,
+      "event_id": "P2-2019-RETA-MOXIE",
+      "liquidity": "280449000",
+      "marketable_securities": "0",
+      "t_minus_30": "2019-09-14",
+      "ticker": "RETA"
+    },
+    {
+      "balance_sheet_date": "2020-06-30",
+      "cash": "160814000",
+      "debt": "0",
+      "debt_confirmed_zero_by_absence": true,
+      "event_id": "P2-2020-CRNX-ACROBAT",
+      "liquidity": "205165000",
+      "marketable_securities": "44351000",
+      "t_minus_30": "2020-10-07",
+      "ticker": "CRNX"
+    },
+    {
+      "balance_sheet_date": "2021-06-30",
+      "cash": "1742000000",
+      "debt": "7269200000",
+      "debt_confirmed_zero_by_absence": false,
+      "event_id": "P2-2021-BIIB-CONVEY",
+      "liquidity": "1742000000",
+      "marketable_securities": "0",
+      "t_minus_30": "2021-08-17",
+      "ticker": "BIIB"
+    },
+    {
+      "balance_sheet_date": "2021-03-31",
+      "cash": "1217500000",
+      "debt": "7267200000",
+      "debt_confirmed_zero_by_absence": false,
+      "event_id": "P2-2021-BIIB-TANGO",
+      "liquidity": "1217500000",
+      "marketable_securities": "0",
+      "t_minus_30": "2021-05-17",
+      "ticker": "BIIB"
+    },
+    {
+      "balance_sheet_date": "2022-06-30",
+      "cash": "177727000",
+      "debt": "0",
+      "debt_confirmed_zero_by_absence": true,
+      "event_id": "P2-2022-AKRO-HARMONY",
+      "liquidity": "180725000",
+      "marketable_securities": "2998000",
+      "t_minus_30": "2022-08-14",
+      "ticker": "AKRO"
+    },
+    {
+      "balance_sheet_date": "2022-03-31",
+      "cash": "164601746",
+      "debt": "0",
+      "debt_confirmed_zero_by_absence": true,
+      "event_id": "P2-2022-CINC-BRIGHTN",
+      "liquidity": "314160087",
+      "marketable_securities": "149558341",
+      "t_minus_30": "2022-07-09",
+      "ticker": "CINC"
+    },
+    {
+      "balance_sheet_date": "2022-06-30",
+      "cash": "127619608",
+      "debt": "0",
+      "debt_confirmed_zero_by_absence": true,
+      "event_id": "P2-2022-CINC-HALO",
+      "liquidity": "294311903",
+      "marketable_securities": "166692295",
+      "t_minus_30": "2022-10-29",
+      "ticker": "CINC"
+    },
+    {
+      "balance_sheet_date": "2022-12-31",
+      "cash": "249773000",
+      "debt": "0",
+      "debt_confirmed_zero_by_absence": true,
+      "event_id": "P2-2023-AKRO-SYMMETRY-COHORT-D",
+      "liquidity": "351449000",
+      "marketable_securities": "101676000",
+      "t_minus_30": "2023-05-06",
+      "ticker": "AKRO"
+    },
+    {
+      "balance_sheet_date": "2023-06-30",
+      "cash": "444156000",
+      "debt": "0",
+      "debt_confirmed_zero_by_absence": true,
+      "event_id": "P2-2023-AKRO-SYMMETRY-MAIN",
+      "liquidity": "639444000",
+      "marketable_securities": "195288000",
+      "t_minus_30": "2023-09-10",
+      "ticker": "AKRO"
+    },
+    {
+      "balance_sheet_date": "2022-12-31",
+      "cash": "551801000",
+      "debt": "94402667",
+      "debt_confirmed_zero_by_absence": false,
+      "event_id": "P2-2023-APLS-MERIDIAN",
+      "liquidity": "676165000",
+      "marketable_securities": "124364000",
+      "t_minus_30": "2023-04-25",
+      "ticker": "APLS"
+    },
+    {
+      "balance_sheet_date": "2022-09-30",
+      "cash": "142539000",
+      "debt": "14621000",
+      "debt_confirmed_zero_by_absence": false,
+      "event_id": "P2-2023-ATAI-PCN101",
+      "liquidity": "142539000",
+      "marketable_securities": "0",
+      "t_minus_30": "2022-12-07",
+      "ticker": "ATAI"
+    },
+    {
+      "balance_sheet_date": "2023-03-31",
+      "cash": "184354000",
+      "debt": "386000",
+      "debt_confirmed_zero_by_absence": false,
+      "event_id": "P2-2023-TERN-DUET",
+      "liquidity": "297526000",
+      "marketable_securities": "113172000",
+      "t_minus_30": "2023-07-09",
+      "ticker": "TERN"
+    },
+    {
+      "balance_sheet_date": "2024-03-31",
+      "cash": "296326000",
+      "debt": "723000",
+      "debt_confirmed_zero_by_absence": false,
+      "event_id": "P2-2024-RXRX-SYCAMORE",
+      "liquidity": "296326000",
+      "marketable_securities": "0",
+      "t_minus_30": "2024-08-04",
+      "ticker": "RXRX"
+    },
+    {
+      "balance_sheet_date": "2024-06-30",
+      "cash": "99901000",
+      "debt": "0",
+      "debt_confirmed_zero_by_absence": true,
+      "event_id": "P2-2024-SAGE-DIMENSION",
+      "liquidity": "646793000",
+      "marketable_securities": "546892000",
+      "t_minus_30": "2024-10-21",
+      "ticker": "SAGE"
+    },
+    {
+      "balance_sheet_date": "2025-06-30",
+      "cash": "31942000",
+      "debt": "28297000",
+      "debt_confirmed_zero_by_absence": false,
+      "event_id": "P2-2025-KALA-CHASE",
+      "liquidity": "41864000",
+      "marketable_securities": "9922000",
+      "t_minus_30": "2025-08-30",
+      "ticker": "KALA"
+    },
+    {
+      "balance_sheet_date": "2024-09-30",
+      "cash": "61765000",
+      "debt": "0",
+      "debt_confirmed_zero_by_absence": true,
+      "event_id": "P2-2025-VTYX-VTX958",
+      "liquidity": "274825000",
+      "marketable_securities": "213060000",
+      "t_minus_30": "2025-01-19",
+      "ticker": "VTYX"
+    },
+    {
+      "balance_sheet_date": "2018-06-30",
+      "cash": "110854000",
+      "debt": "0",
+      "debt_confirmed_zero_by_absence": true,
+      "event_id": "P3-2018-RARE-UX007",
+      "liquidity": "547132000",
+      "marketable_securities": "436278000",
+      "t_minus_30": "2018-09-26",
+      "ticker": "RARE"
+    },
+    {
+      "balance_sheet_date": "2018-09-30",
+      "cash": "59382000",
+      "debt": "367233000",
+      "debt_confirmed_zero_by_absence": false,
+      "event_id": "P3-2019-ICPT-REGENERATE",
+      "liquidity": "59382000",
+      "marketable_securities": "0",
+      "t_minus_30": "2019-01-20",
+      "ticker": "ICPT"
+    },
+    {
+      "balance_sheet_date": "2018-09-30",
+      "cash": "56496000",
+      "debt": "395000",
+      "debt_confirmed_zero_by_absence": false,
+      "event_id": "P3-2019-NVAX-PREPARE",
+      "liquidity": "127108000",
+      "marketable_securities": "70612000",
+      "t_minus_30": "2019-01-29",
+      "ticker": "NVAX"
+    },
+    {
+      "balance_sheet_date": "2020-06-30",
+      "cash": "295858000",
+      "debt": "0",
+      "debt_confirmed_zero_by_absence": true,
+      "event_id": "P3-2020-AGIO-ACTIVATE",
+      "liquidity": "295858000",
+      "marketable_securities": "0",
+      "t_minus_30": "2020-11-01",
+      "ticker": "AGIO"
+    },
+    {
+      "balance_sheet_date": "2020-09-30",
+      "cash": "101146633",
+      "debt": "0",
+      "debt_confirmed_zero_by_absence": true,
+      "event_id": "P3-2020-APRE-P3MDS",
+      "liquidity": "101146633",
+      "marketable_securities": "0",
+      "t_minus_30": "2020-11-28",
+      "ticker": "APRE"
+    },
+    {
+      "balance_sheet_date": "2020-03-31",
+      "cash": "536295000",
+      "debt": "0",
+      "debt_confirmed_zero_by_absence": true,
+      "event_id": "P3-2020-IMMU-ASCENT",
+      "liquidity": "626424300",
+      "marketable_securities": "90129300",
+      "t_minus_30": "2020-06-06",
+      "ticker": "IMMU"
+    },
+    {
+      "balance_sheet_date": "2020-03-31",
+      "cash": "31036000",
+      "debt": "0",
+      "debt_confirmed_zero_by_absence": true,
+      "event_id": "P3-2020-ONTX-INSPIRE",
+      "liquidity": "31036000",
+      "marketable_securities": "0",
+      "t_minus_30": "2020-07-25",
+      "ticker": "ONTX"
+    },
+    {
+      "balance_sheet_date": "2021-03-31",
+      "cash": "1217500000",
+      "debt": "7267200000",
+      "debt_confirmed_zero_by_absence": false,
+      "event_id": "P3-2021-BIIB-STAR",
+      "liquidity": "1217500000",
+      "marketable_securities": "0",
+      "t_minus_30": "2021-05-15",
+      "ticker": "BIIB"
+    },
+    {
+      "balance_sheet_date": "2021-06-30",
+      "cash": "1742000000",
+      "debt": "7269200000",
+      "debt_confirmed_zero_by_absence": false,
+      "event_id": "P3-2021-BIIB-VALOR",
+      "liquidity": "1742000000",
+      "marketable_securities": "0",
+      "t_minus_30": "2021-09-17",
+      "ticker": "BIIB"
+    },
+    {
+      "balance_sheet_date": "2022-06-30",
+      "cash": "4531137000",
+      "debt": "565936000",
+      "debt_confirmed_zero_by_absence": false,
+      "event_id": "P3-2022-BGNE-ALPINE",
+      "liquidity": "6773099000",
+      "marketable_securities": "2241962000",
+      "t_minus_30": "2022-09-12",
+      "ticker": "BGNE"
+    },
+    {
+      "balance_sheet_date": "2022-09-30",
+      "cash": "59340000",
+      "debt": "48983000",
+      "debt_confirmed_zero_by_absence": false,
+      "event_id": "P3-2022-MDGL-MAESTRO-NASH",
+      "liquidity": "59340000",
+      "marketable_securities": "0",
+      "t_minus_30": "2022-11-19",
+      "ticker": "MDGL"
+    },
+    {
+      "balance_sheet_date": "2022-09-30",
+      "cash": "61103000",
+      "debt": "50758000",
+      "debt_confirmed_zero_by_absence": false,
+      "event_id": "P3-2023-GERN-IMERGE",
+      "liquidity": "61103000",
+      "marketable_securities": "0",
+      "t_minus_30": "2022-12-05",
+      "ticker": "GERN"
+    },
+    {
+      "balance_sheet_date": "2023-12-31",
+      "cash": "225110000",
+      "debt": "0",
+      "debt_confirmed_zero_by_absence": true,
+      "event_id": "P3-2024-ANNX-ANX005",
+      "liquidity": "225110000",
+      "marketable_securities": "0",
+      "t_minus_30": "2024-05-05",
+      "ticker": "ANNX"
+    },
+    {
+      "balance_sheet_date": "2024-06-30",
+      "cash": "86702000",
+      "debt": "0",
+      "debt_confirmed_zero_by_absence": true,
+      "event_id": "P3-2024-FULC-REACH",
+      "liquidity": "273778000",
+      "marketable_securities": "187076000",
+      "t_minus_30": "2024-08-13",
+      "ticker": "FULC"
+    },
+    {
+      "balance_sheet_date": "2024-06-30",
+      "cash": "207291000",
+      "debt": "0",
+      "debt_confirmed_zero_by_absence": true,
+      "event_id": "P3-2024-SAVA-RETHINK",
+      "liquidity": "209390000",
+      "marketable_securities": "2099000",
+      "t_minus_30": "2024-10-26",
+      "ticker": "SAVA"
+    },
+    {
+      "balance_sheet_date": "2025-06-30",
+      "cash": "44771000",
+      "debt": "9536000",
+      "debt_confirmed_zero_by_absence": false,
+      "event_id": "P3-2025-ALEC-INFRONT3",
+      "liquidity": "307280000",
+      "marketable_securities": "262509000",
+      "t_minus_30": "2025-09-21",
+      "ticker": "ALEC"
+    },
+    {
+      "balance_sheet_date": "2025-06-30",
+      "cash": "23241199",
+      "debt": "0",
+      "debt_confirmed_zero_by_absence": true,
+      "event_id": "P3-2025-CAPR-HOPE3",
+      "liquidity": "122800681",
+      "marketable_securities": "99559482",
+      "t_minus_30": "2025-11-03",
+      "ticker": "CAPR"
+    },
+    {
+      "balance_sheet_date": "2024-09-30",
+      "cash": "148978000",
+      "debt": "0",
+      "debt_confirmed_zero_by_absence": true,
+      "event_id": "P3-2025-SAVA-REFOCUS",
+      "liquidity": "151077000",
+      "marketable_securities": "2099000",
+      "t_minus_30": "2025-02-23",
+      "ticker": "SAVA"
+    },
+    {
+      "balance_sheet_date": "2018-03-31",
+      "cash": "364469000",
+      "debt": "0",
+      "debt_confirmed_zero_by_absence": true,
+      "event_id": "REG-2018-AGIO-TIBSOVO",
+      "liquidity": "364469000",
+      "marketable_securities": "0",
+      "t_minus_30": "2018-06-20",
+      "ticker": "AGIO"
+    },
+    {
+      "balance_sheet_date": "2018-03-31",
+      "cash": "73855000",
+      "debt": "107355000",
+      "debt_confirmed_zero_by_absence": false,
+      "event_id": "REG-2018-ARRY-BRAFTOVI-MEKTOVI",
+      "liquidity": "110266000",
+      "marketable_securities": "36411000",
+      "t_minus_30": "2018-05-28",
+      "ticker": "ARRY"
+    },
+    {
+      "balance_sheet_date": "2017-12-31",
+      "cash": "60984000",
+      "debt": "53598000",
+      "debt_confirmed_zero_by_absence": false,
+      "event_id": "REG-2018-REPH-MELOXICAM-CRL",
+      "liquidity": "64482000",
+      "marketable_securities": "3498000",
+      "t_minus_30": "2018-04-24",
+      "ticker": "REPH"
+    },
+    {
+      "balance_sheet_date": "2018-09-30",
+      "cash": "253123000",
+      "debt": "0",
+      "debt_confirmed_zero_by_absence": true,
+      "event_id": "REG-2019-SAGE-ZULRESSO",
+      "liquidity": "1021401000",
+      "marketable_securities": "768278000",
+      "t_minus_30": "2019-02-17",
+      "ticker": "SAGE"
+    },
+    {
+      "balance_sheet_date": "2019-03-31",
+      "cash": "732190000",
+      "debt": "420653000",
+      "debt_confirmed_zero_by_absence": false,
+      "event_id": "REG-2019-SRPT-GOLODIRSEN-CRL",
+      "liquidity": "1344208000",
+      "marketable_securities": "612018000",
+      "t_minus_30": "2019-07-20",
+      "ticker": "SRPT"
+    },
+    {
+      "balance_sheet_date": "2020-03-31",
+      "cash": "41408000",
+      "debt": "538968000",
+      "debt_confirmed_zero_by_absence": false,
+      "event_id": "REG-2020-ICPT-OCA-CRL",
+      "liquidity": "41408000",
+      "marketable_securities": "0",
+      "t_minus_30": "2020-05-30",
+      "ticker": "ICPT"
+    },
+    {
+      "balance_sheet_date": "2019-12-31",
+      "cash": "608628000",
+      "debt": "0",
+      "debt_confirmed_zero_by_absence": true,
+      "event_id": "REG-2020-IMMU-TRODELVY",
+      "liquidity": "698757300",
+      "marketable_securities": "90129300",
+      "t_minus_30": "2020-03-23",
+      "ticker": "IMMU"
+    },
+    {
+      "balance_sheet_date": "2020-03-31",
+      "cash": "10555000",
+      "debt": "59125000",
+      "debt_confirmed_zero_by_absence": false,
+      "event_id": "REG-2020-TCDA-VEVERIMER-CRL",
+      "liquidity": "10555000",
+      "marketable_securities": "0",
+      "t_minus_30": "2020-07-25",
+      "ticker": "TCDA"
+    },
+    {
+      "balance_sheet_date": "2020-09-30",
+      "cash": "143559000",
+      "debt": "46083000",
+      "debt_confirmed_zero_by_absence": false,
+      "event_id": "REG-2021-ATNX-ORALPAC-CRL",
+      "liquidity": "228310000",
+      "marketable_securities": "84751000",
+      "t_minus_30": "2021-01-30",
+      "ticker": "ATNX"
+    },
+    {
+      "balance_sheet_date": "2021-06-30",
+      "cash": "1797582000",
+      "debt": "19783118000",
+      "debt_confirmed_zero_by_absence": false,
+      "event_id": "REG-2021-INCY-OPZELURA",
+      "liquidity": "2082452000",
+      "marketable_securities": "284870000",
+      "t_minus_30": "2021-08-22",
+      "ticker": "INCY"
+    },
+    {
+      "balance_sheet_date": "2021-06-30",
+      "cash": "12702000",
+      "debt": "315146000",
+      "debt_confirmed_zero_by_absence": false,
+      "event_id": "REG-2021-OMER-NARSOPLIMAB-CRL",
+      "liquidity": "73658000",
+      "marketable_securities": "60956000",
+      "t_minus_30": "2021-09-18",
+      "ticker": "OMER"
+    },
+    {
+      "balance_sheet_date": "2021-12-31",
+      "cash": "86472854",
+      "debt": "55636783",
+      "debt_confirmed_zero_by_absence": false,
+      "event_id": "REG-2022-AXSM-AXS07-CRL",
+      "liquidity": "86472854",
+      "marketable_securities": "0",
+      "t_minus_30": "2022-03-26",
+      "ticker": "AXSM"
+    },
+    {
+      "balance_sheet_date": "2022-06-30",
+      "cash": "373874000",
+      "debt": "0",
+      "debt_confirmed_zero_by_absence": true,
+      "event_id": "REG-2022-IMGN-ELAHERE",
+      "liquidity": "373874000",
+      "marketable_securities": "0",
+      "t_minus_30": "2022-10-15",
+      "ticker": "IMGN"
+    },
+    {
+      "balance_sheet_date": "2022-09-30",
+      "cash": "109860000",
+      "debt": "71013000",
+      "debt_confirmed_zero_by_absence": false,
+      "event_id": "REG-2022-TGTX-BRIUMVI",
+      "liquidity": "175942000",
+      "marketable_securities": "66082000",
+      "t_minus_30": "2022-11-28",
+      "ticker": "TGTX"
+    },
+    {
+      "balance_sheet_date": "2023-03-31",
+      "cash": "112777000",
+      "debt": "51399000",
+      "debt_confirmed_zero_by_absence": false,
+      "event_id": "REG-2023-GERN-IMETELSTAT-NDA-ACCEPT",
+      "liquidity": "112777000",
+      "marketable_securities": "0",
+      "t_minus_30": "2023-07-22",
+      "ticker": "GERN"
+    },
+    {
+      "balance_sheet_date": "2022-09-30",
+      "cash": "31918000",
+      "debt": "5313000",
+      "debt_confirmed_zero_by_absence": false,
+      "event_id": "REG-2023-RETA-SKYCLARYS",
+      "liquidity": "435875000",
+      "marketable_securities": "403957000",
+      "t_minus_30": "2023-01-29",
+      "ticker": "RETA"
+    },
+    {
+      "balance_sheet_date": "2023-03-31",
+      "cash": "871668000",
+      "debt": "1234383000",
+      "debt_confirmed_zero_by_absence": false,
+      "event_id": "REG-2023-SRPT-ELEVIDYS",
+      "liquidity": "1882097000",
+      "marketable_securities": "1010429000",
+      "t_minus_30": "2023-05-23",
+      "ticker": "SRPT"
+    },
+    {
+      "balance_sheet_date": "2023-09-30",
+      "cash": "267720000",
+      "debt": "0",
+      "debt_confirmed_zero_by_absence": true,
+      "event_id": "REG-2024-IOVA-AMTAGVI",
+      "liquidity": "361374000",
+      "marketable_securities": "93654000",
+      "t_minus_30": "2024-01-17",
+      "ticker": "IOVA"
+    },
+    {
+      "balance_sheet_date": "2024-03-31",
+      "cash": "35276000",
+      "debt": "0",
+      "debt_confirmed_zero_by_absence": true,
+      "event_id": "REG-2024-RCKT-KRESLADI-CRL",
+      "liquidity": "330313000",
+      "marketable_securities": "295037000",
+      "t_minus_30": "2024-05-29",
+      "ticker": "RCKT"
+    },
+    {
+      "balance_sheet_date": "2024-03-31",
+      "cash": "2602000000",
+      "debt": "3483300000",
+      "debt_confirmed_zero_by_absence": false,
+      "event_id": "REG-2024-REGN-LINVOSELTAMAB-CRL",
+      "liquidity": "10519500000",
+      "marketable_securities": "7917500000",
+      "t_minus_30": "2024-07-21",
+      "ticker": "REGN"
+    },
+    {
+      "balance_sheet_date": "2024-09-30",
+      "cash": "5239200000",
+      "debt": "105000000",
+      "debt_confirmed_zero_by_absence": false,
+      "event_id": "REG-2024-VRTX-ALYFTREK",
+      "liquidity": "6524500000",
+      "marketable_securities": "1285300000",
+      "t_minus_30": "2024-11-20",
+      "ticker": "VRTX"
+    }
+  ]
+}
