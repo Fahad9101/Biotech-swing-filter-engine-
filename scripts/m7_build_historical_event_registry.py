@@ -3,13 +3,20 @@ the frozen select_frozen_cohort(seed=100100) selection against it.
 
 This script is read-only with respect to src/boe/historical_validation.py - it
 imports and calls the frozen functions but never modifies investment behavior.
-It does not write cohort-manifest.json or persist anything; it only reports
-whether the real registry, built entirely from committed evidence, produces a
-valid 120-event frozen cohort.
+
+By default it is a dry run: it reports whether the real registry, built
+entirely from committed evidence, produces a valid 120-event frozen cohort,
+without writing or persisting anything.
+
+With --freeze, it performs the actual freeze: writes the validated
+CohortManifest to validation/m7/cohort-manifest.json. This is a deliberate,
+consequential, one-way action - run scripts/m7_build_authoritative_status.py
+afterward to derive the real post-freeze status.
 """
 
 from __future__ import annotations
 
+import argparse
 import json
 import re
 import sys
@@ -144,7 +151,25 @@ def build_eligible_events() -> list[HistoricalEvent]:
     return events
 
 
+MANIFEST_PATH = ROOT / "validation/m7/cohort-manifest.json"
+
+
 def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--freeze",
+        action="store_true",
+        help="Write the validated CohortManifest to validation/m7/cohort-manifest.json. "
+        "A deliberate, one-way action; omit for a dry run.",
+    )
+    args = parser.parse_args()
+
+    if MANIFEST_PATH.exists() and not args.freeze:
+        raise SystemExit(
+            f"{MANIFEST_PATH} already exists - the cohort is already frozen. "
+            "Use scripts/m7_build_authoritative_status.py to report on it."
+        )
+
     events = build_eligible_events()
     print(f"eligible registry size: {len(events)}")
     registry = tuple(events)
@@ -164,14 +189,24 @@ def main() -> None:
     coh_sha = cohort_sha256(cohort)
     print("registry_sha256:", reg_sha)
     print("cohort_sha256:", coh_sha)
-    CohortManifest(
+    manifest = CohortManifest(
         frozen_at=datetime.now().astimezone(),
         events=cohort,
         registry_sha256=reg_sha,
         cohort_sha256=coh_sha,
     )
     print("CohortManifest constructed and self-validated successfully.")
-    print("(dry run only - nothing was written or persisted)")
+
+    if not args.freeze:
+        print("(dry run only - nothing was written or persisted)")
+        return
+
+    if MANIFEST_PATH.exists():
+        raise SystemExit(f"{MANIFEST_PATH} already exists - refusing to overwrite a frozen cohort.")
+    MANIFEST_PATH.write_text(
+        json.dumps(manifest.model_dump(mode="json"), indent=2, sort_keys=True) + "\n"
+    )
+    print(f"FROZEN: wrote {MANIFEST_PATH.relative_to(ROOT)}")
 
 
 if __name__ == "__main__":

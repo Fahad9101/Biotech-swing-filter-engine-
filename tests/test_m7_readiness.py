@@ -16,76 +16,29 @@ module = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(module)
 
 
-def test_committed_status_is_derived_and_pending_is_not_pass() -> None:
-    status, rows = module.build()
-    assert (ROOT / module.OUTPUT).read_text() == module.render(status)
-    assert (ROOT / module.ROWS_OUTPUT).read_text() == module.render(rows)
-    assert status["candidate_counts"] == {
-        "total": 207,
-        "pass": 155,
-        "fail": 49,
-        "pending": 3,
-        "not_yet_excluded": 158,
-    }
-    negative = status["negative_reserve"]
-    assert negative["not_yet_excluded"] == 53
-    assert negative["pass"] == 52
-    assert negative["pending"] == 1
-    assert negative["maximum_provisional_buffer"] == 13
-    assert negative["final_negative_quota_satisfied"] is False
-    assert status["financing_reserve"]["pass"] == 51
-    assert status["single_asset_reserve"]["pass"] == 29
-    strata = status["strata"]
-    assert strata["PHASE_3_PIVOTAL"]["requirement"] == 30
-    assert strata["PHASE_3_PIVOTAL"]["pending"] == 0
-    assert strata["PHASE_3_PIVOTAL"]["pass"] == 33
-    assert strata["PHASE_3_PIVOTAL"]["maximum_provisional_buffer"] == 3
-    assert strata["REGULATORY"]["pass"] == 46
-    assert strata["REGULATORY"]["pending"] == 2
-    assert strata["REGULATORY"]["maximum_provisional_buffer"] == 18
-    assert strata["PHASE_2_POC"]["pass"] == 40
-    assert strata["PHASE_2_POC"]["pending"] == 1
-    assert strata["PHASE_2_POC"]["maximum_provisional_buffer"] == 11
-    assert strata["EARLY_CLINICAL"]["pass"] == 19
-    assert strata["EARLY_CLINICAL"]["pending"] == 0
-    assert strata["EARLY_CLINICAL"]["maximum_provisional_buffer"] == 4
-    assert strata["CONFERENCE_OTHER"]["pass"] == 17
-    assert strata["CONFERENCE_OTHER"]["pending"] == 0
-    assert strata["CONFERENCE_OTHER"]["maximum_provisional_buffer"] == 2
-    for key, requirement in module.STRATUM_REQUIREMENTS.items():
-        assert strata[key]["requirement"] == requirement
-        assert strata[key]["maximum_provisional_buffer"] == (
-            strata[key]["not_yet_excluded"] - requirement
-        )
-    assert status["audit_findings"]
-    concentration = {f["ticker"]: f for f in status["issuer_concentration_findings"]}
-    overall_biib = next(
-        f
-        for f in status["issuer_concentration_findings"]
-        if f["ticker"] == "BIIB" and f["scope"] == "OVERALL"
-    )
-    assert overall_biib["pass_count"] == 6
-    assert overall_biib["cap"] == 5
-    # BIIB's PHASE_2_POC share (4 of 40 pass candidates) sits exactly at the 10%
-    # cap_share threshold now, which the live check treats as not-over-cap - a
-    # strict-inequality boundary case worth asserting explicitly.
-    assert not any(
-        f["ticker"] == "BIIB" and f["scope"] == "PHASE_2_POC"
-        for f in status["issuer_concentration_findings"]
-    )
-    kros = concentration["KROS"]
-    assert kros["scope"] == "CONFERENCE_OTHER"
-    assert kros["pass_count"] == 2
-    by_id = {r["candidate_id"]: r for r in rows["rows"]}
-    assert by_id["P3-2023-RAIN-MANTRA"]["universe_status"] == "FAIL"
-    assert by_id["P2-2025-ACTU-ELRAGLUSIB-TOPLINE"]["universe_status"] == "FAIL"
-    assert "P2-2025-ACTU-ELRAGLUSIB" not in by_id
+def test_real_root_now_refuses_because_the_cohort_is_frozen() -> None:
+    """The cohort was frozen this session (validation/m7/cohort-manifest.json
+    now exists for real). build() against the real, unmodified repo root must
+    therefore refuse rather than silently re-derive a pre-freeze status - see
+    scripts/m7_build_authoritative_status.py for the post-freeze counterpart,
+    and tests/test_m7_authoritative_status.py for its own coverage.
+    """
+    with pytest.raises(ValueError, match="authoritative frozen validation"):
+        module.build()
 
 
 @pytest.fixture
 def copied(tmp_path: Path) -> Path:
     shutil.copytree(ROOT / "validation/m7", tmp_path / "validation/m7")
     shutil.copytree(ROOT / "contracts", tmp_path / "contracts")
+    # The real repo now has a frozen cohort-manifest.json (validation/m7 was
+    # just copied wholesale above), but every test in this file below is
+    # specifically exercising build()'s pre-freeze derivation logic in
+    # isolation - a still-correct, still-tested code path even though the
+    # live repo has moved past needing it. Strip the copy's manifest so these
+    # tests keep testing that logic rather than immediately hitting the
+    # freeze guard themselves.
+    (tmp_path / "validation/m7/cohort-manifest.json").unlink(missing_ok=True)
     return tmp_path
 
 

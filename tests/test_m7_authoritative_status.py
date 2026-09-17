@@ -1,0 +1,94 @@
+"""Post-freeze authoritative status regressions."""
+
+import importlib.util
+import json
+from pathlib import Path
+
+import pytest
+
+ROOT = Path(__file__).resolve().parents[1]
+spec = importlib.util.spec_from_file_location(
+    "authoritative_status", ROOT / "scripts/m7_build_authoritative_status.py"
+)
+assert spec and spec.loader
+module = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(module)
+
+
+def test_no_manifest_refuses_pre_freeze_status(tmp_path: Path) -> None:
+    with pytest.raises(ValueError, match="not frozen yet"):
+        module.build(tmp_path)
+
+
+def test_committed_authoritative_status_is_derived_and_self_consistent() -> None:
+    status = module.build()
+    assert (ROOT / module.OUTPUT).read_text() == module.render(status)
+    assert status["authoritative_cohort_manifest_present"] is True
+    assert status["authoritative_events_frozen"] == 120
+    assert status["registry_unchanged_since_freeze"] is True
+    assert status["manifest_registry_sha256"] == status["rebuilt_registry_sha256"]
+    assert status["frozen_cohort_negative_count"] >= 40
+    assert status["frozen_cohort_financing_count"] >= 20
+    assert status["frozen_cohort_single_asset_count"] >= 20
+    assert status["frozen_cohort_max_issuer_count"] <= 5
+    for stratum, requirement in module.STRATUM_REQUIREMENTS.items():
+        assert status["frozen_cohort_strata"][stratum] >= requirement
+    # Milestone 7 is not complete just because the cohort is frozen - no
+    # snapshots, decision locks, outcomes, or holdout events exist yet.
+    assert status["real_four_snapshot_reconstructions_complete"] == 0
+    assert status["decision_locks_complete"] == 0
+    assert status["real_outcomes_complete"] == 0
+    assert status["holdout_2025_locked_events"] == 0
+    assert status["merge_ready"] is False
+    assert status["milestone_complete"] is False
+    assert status["milestone_8_allowed"] is False
+
+
+def test_manifest_is_reparsed_and_revalidated_not_trusted_blindly(tmp_path: Path) -> None:
+    """build() must re-run every CohortManifest validator against the
+    committed file, not just check that it parses as JSON. A manifest edited
+    to violate a frozen investment rule (here: dropping below the 40-event
+    negative floor by relabeling every event as non-negative) must be
+    rejected, proving the check is live re-validation, not a cached flag.
+    """
+    validation_dir = tmp_path / "validation/m7"
+    (validation_dir / "promotion").mkdir(parents=True)
+    manifest_path = validation_dir / "cohort-manifest.json"
+    real_manifest = json.loads((ROOT / "validation/m7/cohort-manifest.json").read_bytes())
+    tampered = json.loads(json.dumps(real_manifest))
+    for event in tampered["events"]:
+        event["negative_event"] = False
+    manifest_path.write_text(json.dumps(tampered))
+    with pytest.raises(Exception, match="negative"):
+        module.build(tmp_path)
+
+
+def test_authoritative_status_blocks_milestone_8_and_merge() -> None:
+    status = module.build()
+    assert any("Milestone 8" in finding for finding in status["required_action"].split(";"))
+    assert status["milestone_8_allowed"] is False
+    assert status["merge_ready"] is False
+
+
+def test_check_flag_passes_when_committed_output_is_current(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    import sys
+
+    monkeypatch.setattr(sys, "argv", ["m7_build_authoritative_status.py", "--check"])
+    module.main()  # must not raise: the committed cohort-readiness.json is current
+
+
+def test_check_flag_fails_when_committed_output_is_stale(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    import sys
+
+    original = (ROOT / module.OUTPUT).read_bytes()
+    try:
+        (ROOT / module.OUTPUT).write_text("{}\n")
+        monkeypatch.setattr(sys, "argv", ["m7_build_authoritative_status.py", "--check"])
+        with pytest.raises(SystemExit, match="Stale generated artifact"):
+            module.main()
+    finally:
+        (ROOT / module.OUTPUT).write_bytes(original)
