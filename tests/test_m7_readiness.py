@@ -21,31 +21,31 @@ def test_committed_status_is_derived_and_pending_is_not_pass() -> None:
     assert (ROOT / module.OUTPUT).read_text() == module.render(status)
     assert (ROOT / module.ROWS_OUTPUT).read_text() == module.render(rows)
     assert status["candidate_counts"] == {
-        "total": 204,
-        "pass": 152,
+        "total": 207,
+        "pass": 155,
         "fail": 49,
         "pending": 3,
-        "not_yet_excluded": 155,
+        "not_yet_excluded": 158,
     }
     negative = status["negative_reserve"]
-    assert negative["not_yet_excluded"] == 50
-    assert negative["pass"] == 49
+    assert negative["not_yet_excluded"] == 53
+    assert negative["pass"] == 52
     assert negative["pending"] == 1
-    assert negative["maximum_provisional_buffer"] == 10
+    assert negative["maximum_provisional_buffer"] == 13
     assert negative["final_negative_quota_satisfied"] is False
-    assert status["financing_reserve"]["pass"] == 50
+    assert status["financing_reserve"]["pass"] == 51
     assert status["single_asset_reserve"]["pass"] == 29
     strata = status["strata"]
     assert strata["PHASE_3_PIVOTAL"]["requirement"] == 30
     assert strata["PHASE_3_PIVOTAL"]["pending"] == 0
-    assert strata["PHASE_3_PIVOTAL"]["pass"] == 32
-    assert strata["PHASE_3_PIVOTAL"]["maximum_provisional_buffer"] == 2
-    assert strata["REGULATORY"]["pass"] == 45
+    assert strata["PHASE_3_PIVOTAL"]["pass"] == 33
+    assert strata["PHASE_3_PIVOTAL"]["maximum_provisional_buffer"] == 3
+    assert strata["REGULATORY"]["pass"] == 46
     assert strata["REGULATORY"]["pending"] == 2
-    assert strata["REGULATORY"]["maximum_provisional_buffer"] == 17
-    assert strata["PHASE_2_POC"]["pass"] == 39
+    assert strata["REGULATORY"]["maximum_provisional_buffer"] == 18
+    assert strata["PHASE_2_POC"]["pass"] == 40
     assert strata["PHASE_2_POC"]["pending"] == 1
-    assert strata["PHASE_2_POC"]["maximum_provisional_buffer"] == 10
+    assert strata["PHASE_2_POC"]["maximum_provisional_buffer"] == 11
     assert strata["EARLY_CLINICAL"]["pass"] == 19
     assert strata["EARLY_CLINICAL"]["pending"] == 0
     assert strata["EARLY_CLINICAL"]["maximum_provisional_buffer"] == 4
@@ -66,12 +66,13 @@ def test_committed_status_is_derived_and_pending_is_not_pass() -> None:
     )
     assert overall_biib["pass_count"] == 6
     assert overall_biib["cap"] == 5
-    stratum_biib = next(
-        f
+    # BIIB's PHASE_2_POC share (4 of 40 pass candidates) sits exactly at the 10%
+    # cap_share threshold now, which the live check treats as not-over-cap - a
+    # strict-inequality boundary case worth asserting explicitly.
+    assert not any(
+        f["ticker"] == "BIIB" and f["scope"] == "PHASE_2_POC"
         for f in status["issuer_concentration_findings"]
-        if f["ticker"] == "BIIB" and f["scope"] == "PHASE_2_POC"
     )
-    assert stratum_biib["pass_count"] == 4
     kros = concentration["KROS"]
     assert kros["scope"] == "CONFERENCE_OTHER"
     assert kros["pass_count"] == 2

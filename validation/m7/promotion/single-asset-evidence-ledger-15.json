@@ -1,0 +1,29 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-17",
+  "role": "PREFREEZE_TARGETED_SINGLE_ASSET_EVIDENCE",
+  "market_outcome_fields_permitted": false,
+  "cohort_frozen": false,
+  "summary": {"reviewed": 1, "qualifies": 0, "does_not_qualify": 1},
+  "rows": [
+    {
+      "candidate_id": "NEG-P2-2022-NGM-CATALINA",
+      "event_date": "2022-10-17",
+      "ticker": "NGM",
+      "issuer": "NGM Biopharmaceuticals, Inc.",
+      "asset": "NGM621",
+      "historical_pipeline_snapshot_date": "2021-12-31",
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2021 10-K 'Overview of Our Business': 'Currently, we have seven disclosed programs, including four in Phase 2 or 2b studies, across three therapeutic areas: cancer, retinal diseases and liver and metabolic diseases.' A diversified, multi-program pipeline company.",
+      "evidence_urls": ["https://www.sec.gov/Archives/edgar/data/1426332/000162828022004526/ngm-20211231.htm"],
+      "source_dates": ["2022-03-01"],
+      "post_event_source_role": "NONE",
+      "ambiguity": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    }
+  ]
+}

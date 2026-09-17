@@ -28,10 +28,10 @@
   "deferred_count": 6,
   "format_version": "1.0",
   "generated_at": "2026-09-16T00:00:00+00:00",
-  "manifest_sha256": "2462f5ce26950f2a96d37c58c38c406c5ebbfafef10e4113c026934f52cc836f",
+  "manifest_sha256": "c415896a7f2d594668ac83525bb2735b1ff2f573f98509aabd76bd3fdd535649",
   "market_outcomes_inspected": false,
   "milestone": 7,
-  "pack_count": 146,
+  "pack_count": 149,
   "packs": [
     {
       "candidate_id": "CO-2018-ZIOP-ASCO",
@@ -307,6 +307,13 @@
       "ticker": "ANAB"
     },
     {
+      "candidate_id": "NEG-P2-2022-NGM-CATALINA",
+      "pack_path": "validation/m7/review_packs/NEG-P2-2022-NGM-CATALINA.json",
+      "pack_sha256": "e5e602213a906ef9f75e948d0ca0d884a2e2d9931ee9b78a2c4f62b03a8e07c5",
+      "stratum": "PHASE_2_POC",
+      "ticker": "NGM"
+    },
+    {
       "candidate_id": "NEG-P2-2024-EYPT-PAVIA",
       "pack_path": "validation/m7/review_packs/NEG-P2-2024-EYPT-PAVIA.json",
       "pack_sha256": "bad71c9b11e796899d8d7802f5ae2d6b96b4a2c7e356aeb10619246edd1150aa",
@@ -326,6 +333,13 @@
       "pack_sha256": "6114fbcdf7fccea2071eff1688518974d38be9f3391a89acd6709ffe9f7ef025",
       "stratum": "PHASE_2_POC",
       "ticker": "SAGE"
+    },
+    {
+      "candidate_id": "NEG-P3-2020-BPMC-VOYAGER",
+      "pack_path": "validation/m7/review_packs/NEG-P3-2020-BPMC-VOYAGER.json",
+      "pack_sha256": "4147abcf1f76c32926cc98eb556b8a3e7e37133642bb81019955384559e0d462",
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "BPMC"
     },
     {
       "candidate_id": "NEG-P3-2021-DCPH-INTRIGUE",
@@ -893,6 +907,13 @@
       "pack_sha256": "1aef7427256c37301c6275c529f644be8d9588de7da65b22ed6d64039bd09fee",
       "stratum": "REGULATORY",
       "ticker": "OMER"
+    },
+    {
+      "candidate_id": "REG-2022-AXSM-AXS07-CRL",
+      "pack_path": "validation/m7/review_packs/REG-2022-AXSM-AXS07-CRL.json",
+      "pack_sha256": "e4dc91323ccd7604a0ab8edc4afd278d85f17e8eab8549a9adad44f0943108ed",
+      "stratum": "REGULATORY",
+      "ticker": "AXSM"
     },
     {
       "candidate_id": "REG-2022-CHRS-TORIPALIMAB-CRL",

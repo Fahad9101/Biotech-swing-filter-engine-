@@ -1,0 +1,36 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "role": "NEWLY_SOURCED_CANDIDATES_POST_HANDOFF",
+  "generated_at": "2026-09-17",
+  "sourcing_note": "Continuation of newly-sourced-batch-15.json: after adding AXSM's REG-2022-AXSM-AXS07-CRL, re-running the real (non-simulated) select_frozen_cohort against the real registry showed negative-in-selection unchanged at 40/40 - the RNG cascade this addition triggered in REGULATORY/2022 rippled forward into EARLY_CLINICAL and CONFERENCE_OTHER too (select_frozen_cohort processes all five strata with ONE shared RNG instance in EventStratum enum order, so a change in one stratum's shuffle consumption shifts the starting RNG state for every later stratum - a broader form of the cascading effect than previously documented, which had focused on within-stratum year cascading), and displaced two other previously-selected negative candidates (CHRS-TORIPALIMAB-CRL, KURA-KO539-HOLD) while adding two new ones (SGTX-SIG001, the AXSM candidate itself) - net zero. Re-ran the real full-selection-delta search fresh against this new real baseline and found PHASE_3_PIVOTAL/2020 among several slots showing delta=+1. Sourced Blueprint Medicines' April 2020 Phase 3 VOYAGER trial failure for avapritinib in GIST - independently verified via SEC filings, passing all universe floors with very large margin ($3.8B market cap). Two other April/2020-era candidates were evaluated and rejected before this one: Genfit's May 2020 RESOLVE-IT Phase 3 NASH trial failure (clean single-issue disclosure, but GNFT fails the liquidity floor: $659,291 median daily dollar volume vs. the $2,000,000 minimum) and Savara's December 2020 AVAIL Phase 3 trial failure (also clean, but SVRA fails the liquidity floor: $296,813 vs. $2,000,000). After adding the Blueprint candidate and re-running the real select_frozen_cohort function again, the selected-cohort negative count moved from 40 to 41, confirmed directly.",
+  "events": [
+    {
+      "asset": "avapritinib",
+      "candidate_id": "NEG-P3-2020-BPMC-VOYAGER",
+      "cik": "1597264",
+      "clinical_phase": "PHASE_3",
+      "cohort_frozen": false,
+      "company": "Blueprint Medicines Corporation",
+      "first_public_date": "2020-04-28",
+      "first_public_timestamp": "2020-04-28T07:11:24-04:00",
+      "indication": "third- or fourth-line advanced gastrointestinal stromal tumor (GIST)",
+      "negative_event_candidate": true,
+      "outcome_inspected_for_selection": false,
+      "promotion_blockers": [
+        "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+      ],
+      "proposed_catalyst_type": "CLIN_P3",
+      "proposed_primary_stratum": "PHASE_3_PIVOTAL",
+      "result_direction": "NEGATIVE_MISSED_PRIMARY_ENDPOINT",
+      "source_role": "FIRST_PUBLIC_RESULT_DISCLOSURE_CANDIDATE",
+      "source_type": "ISSUER_SEC_8K_EXHIBIT_991",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1597264/000155837020004422/bpmc-20200428xex99d1.htm",
+      "source_displayed_time": "SEC 8-K accepted 2020-04-28 07:11:24 ET (Item 2.02/9.01, pre-market)",
+      "ticker": "BPMC",
+      "timestamp_precision": "EXACT_TO_MINUTE_SEC_ACCEPTANCE_PROXY",
+      "notes": "Topline results from the Phase 3 VOYAGER trial of avapritinib vs. regorafenib in third-/fourth-line advanced GIST: 'VOYAGER did not meet the primary endpoint of an improvement in progression-free survival.' A clean, standalone negative trial-failure headline - the release's other content (continued prioritization of the company's systemic-mastocytosis and RET-altered-cancer programs, cash runway) is standard forward-looking context about unrelated programs, not a reframing of this result. Avapritinib was separately approved the same year for a narrower PDGFRA-exon-18-mutant GIST population (a different, already-positive regulatory track not referenced here); this event concerns only the VOYAGER trial's own negative broader-GIST result."
+    }
+  ]
+}

@@ -1280,6 +1280,24 @@
       "universe_status": "PASS"
     },
     {
+      "acquisition_path": "validation/m7/acquisition/newly-sourced-batch-17.json",
+      "candidate_id": "NEG-P2-2022-NGM-CATALINA",
+      "eligible_registry_status": "NOT_PROMOTED",
+      "financing_evidence_path": "validation/m7/promotion/financing-evidence-ledger-11.json",
+      "financing_status": "DOES_NOT_QUALIFY",
+      "first_public_timestamp": "2022-10-17T07:40:32-04:00",
+      "negative_label_path": "validation/m7/acquisition/newly-sourced-batch-17.json",
+      "negative_label_recorded": true,
+      "normalization_path": null,
+      "single_asset_evidence_path": "validation/m7/promotion/single-asset-evidence-ledger-15.json",
+      "single_asset_status": "DOES_NOT_QUALIFY",
+      "stratum": "PHASE_2_POC",
+      "ticker": "NGM",
+      "timestamp_evidence_path": null,
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-49.json",
+      "universe_status": "PASS"
+    },
+    {
       "acquisition_path": "validation/m7/acquisition/negative-phase2-supplement-01.json",
       "candidate_id": "NEG-P2-2024-EYPT-PAVIA",
       "eligible_registry_status": "NOT_PROMOTED",
@@ -1368,6 +1386,24 @@
       "timestamp_evidence_path": null,
       "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-29.json",
       "universe_status": "FAIL"
+    },
+    {
+      "acquisition_path": "validation/m7/acquisition/newly-sourced-batch-16.json",
+      "candidate_id": "NEG-P3-2020-BPMC-VOYAGER",
+      "eligible_registry_status": "NOT_PROMOTED",
+      "financing_evidence_path": "validation/m7/promotion/financing-evidence-ledger-10.json",
+      "financing_status": "DOES_NOT_QUALIFY",
+      "first_public_timestamp": "2020-04-28T07:11:24-04:00",
+      "negative_label_path": "validation/m7/acquisition/newly-sourced-batch-16.json",
+      "negative_label_recorded": true,
+      "normalization_path": null,
+      "single_asset_evidence_path": "validation/m7/promotion/single-asset-evidence-ledger-14.json",
+      "single_asset_status": "DOES_NOT_QUALIFY",
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "BPMC",
+      "timestamp_evidence_path": null,
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-48.json",
+      "universe_status": "PASS"
     },
     {
       "acquisition_path": "validation/m7/acquisition/newly-sourced-batch-05.json",
@@ -3221,6 +3257,24 @@
       "ticker": "AMLX",
       "timestamp_evidence_path": null,
       "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-15.json",
+      "universe_status": "PASS"
+    },
+    {
+      "acquisition_path": "validation/m7/acquisition/newly-sourced-batch-15.json",
+      "candidate_id": "REG-2022-AXSM-AXS07-CRL",
+      "eligible_registry_status": "NOT_PROMOTED",
+      "financing_evidence_path": "validation/m7/promotion/financing-evidence-ledger-09.json",
+      "financing_status": "QUALIFIES",
+      "first_public_timestamp": "2022-04-25T07:02:01-04:00",
+      "negative_label_path": "validation/m7/acquisition/newly-sourced-batch-15.json",
+      "negative_label_recorded": true,
+      "normalization_path": null,
+      "single_asset_evidence_path": "validation/m7/promotion/single-asset-evidence-ledger-13.json",
+      "single_asset_status": "DOES_NOT_QUALIFY",
+      "stratum": "REGULATORY",
+      "ticker": "AXSM",
+      "timestamp_evidence_path": null,
+      "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-47.json",
       "universe_status": "PASS"
     },
     {

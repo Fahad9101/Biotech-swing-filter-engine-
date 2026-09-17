@@ -1,0 +1,93 @@
+{
+  "acquisition_path": "validation/m7/acquisition/newly-sourced-batch-15.json",
+  "candidate_id": "REG-2022-AXSM-AXS07-CRL",
+  "catalyst_observation": {
+    "asset": "AXS-07 (MoSEIC meloxicam/rizatriptan)",
+    "catalyst_type": "REG_DECISION",
+    "clinical_phase": "REGULATORY_DECISION",
+    "evidence_id": "3fb4897d-9f5e-59ae-9b29-e2cdc15f2e1a",
+    "external_event_id": "REG-2022-AXSM-AXS07-CRL",
+    "indication": "acute treatment of migraine",
+    "issuer_id": "0001579428",
+    "known_at": "2022-04-25T07:02:01-04:00",
+    "source_statement": "8-K (2022-04-25): 'chemistry, manufacturing, and controls (CMC) issues identified during the FDA's review of the Company's New Drug Application for its AXS-07 product candidate for the acute treatment of migraine are unresolved...the Company expects to receive a Complete Response Letter with respect to this NDA on or about the Prescription Drug User Fee Act target action date of April 30, 2022.' Used as the first-public event date/time rather than the later formal-confirmation 8-K (filed 2022-05-02, bundled with Q1 earnings), since the market already had the substantive negative CMC information as of April 25. A follow-up 8-K (2022-05-02) confirms the formal CRL was received April 29, 2022, and explicitly states 'The CRL did not identify or raise any concerns about the clinical efficacy or safety data in the NDA' - a CMC-only rejection, comparable in kind to the already-pooled RCKT-KRESLADI-CRL. AXS-07 is a distinct compound from AXS-05 (already in the pool via P2-2019-AXSM-AXS05-SMOKING and P3-2019-AXSM-GEMINI); Axsome now has 3 pool events, well under the 5-event issuer cap, and 0 prior REGULATORY-stratum events for this issuer.",
+    "source_tier": 2,
+    "timing_confidence": "HIGH",
+    "title": "Axsome Therapeutics, Inc. - AXS-07 (MoSEIC meloxicam/rizatriptan) (acute treatment of migraine)",
+    "window_end": "2022-04-25",
+    "window_start": "2022-04-25"
+  },
+  "catalyst_version": {
+    "asset": "AXS-07 (MoSEIC meloxicam/rizatriptan)",
+    "canonical_key": "0001579428|axs-07 (moseic meloxicam/rizatriptan)|acute treatment of migraine|REG_DECISION",
+    "catalyst_type": "REG_DECISION",
+    "clinical_phase": "REGULATORY_DECISION",
+    "conflicts": [],
+    "id": "2c6e6280-5931-535e-8d12-496ec433cad8",
+    "indication": "acute treatment of migraine",
+    "issuer_id": "0001579428",
+    "known_at": "2022-04-25T07:02:01-04:00",
+    "primary_evidence_id": "3fb4897d-9f5e-59ae-9b29-e2cdc15f2e1a",
+    "resolved_at_cutoff": "2022-04-25T07:02:01-04:00",
+    "supporting_evidence_ids": [
+      "3fb4897d-9f5e-59ae-9b29-e2cdc15f2e1a"
+    ],
+    "timing_confidence": "HIGH",
+    "title": "Axsome Therapeutics, Inc. - AXS-07 (MoSEIC meloxicam/rizatriptan) (acute treatment of migraine)",
+    "version": 1,
+    "version_sha256": "f253435906cb0405311e14247680c777df46828275b2fd2d75ebd6cff45df00f",
+    "window_end": "2022-04-25",
+    "window_start": "2022-04-25"
+  },
+  "company": "Axsome Therapeutics, Inc.",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": true,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "e4dc91323ccd7604a0ab8edc4afd278d85f17e8eab8549a9adad44f0943108ed",
+  "promotion_blockers": [
+    "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2022-04-25T07:02:01-04:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "AXS-07 (MoSEIC meloxicam/rizatriptan)",
+    "blinded": null,
+    "catalyst_version_id": "2c6e6280-5931-535e-8d12-496ec433cad8",
+    "clinical_phase": "REGULATORY_DECISION",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2022-04-25T07:02:01-04:00",
+    "evidence_ids": [
+      "3fb4897d-9f5e-59ae-9b29-e2cdc15f2e1a"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "2421a3db-e92d-5ebc-ad66-c941420d2a84",
+    "indication": "acute treatment of migraine",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://www.sec.gov/Archives/edgar/data/1579428/000095017022006038/axsm-20220422.htm"
+  ],
+  "stratum": "REGULATORY",
+  "ticker": "AXSM",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-47.json"
+}
