@@ -1,14 +1,6 @@
 {
   "deferred": [
     {
-      "candidate_id": "P2-2019-TGTX-UNITYNHL",
-      "reason": "universe eligibility used a conservative cutoff assumption but the exact first-public-disclosure timestamp is not yet resolved (RESOLVE_EXACT_FIRST_PUBLIC_TIMESTAMP still open) - packing a review pack on an unresolved point-in-time anchor would risk fabricating precision that does not exist yet"
-    },
-    {
-      "candidate_id": "P2-2022-CINC-BRIGHTN",
-      "reason": "universe eligibility used a conservative cutoff assumption but the exact first-public-disclosure timestamp is not yet resolved (RESOLVE_EXACT_FIRST_PUBLIC_TIMESTAMP still open) - packing a review pack on an unresolved point-in-time anchor would risk fabricating precision that does not exist yet"
-    },
-    {
       "candidate_id": "P2-2022-CINC-HALO",
       "reason": "P2-2022-CINC-HALO is missing required field(s) ['indication', 'proposed_catalyst_type'] in validation/m7/promotion/targeted-single-asset-replacement-03.json; cannot build a review pack without fabricating evidence the source does not assert"
     },
@@ -19,10 +11,6 @@
     {
       "candidate_id": "P2-2023-AKRO-SYMMETRY-MAIN",
       "reason": "P2-2023-AKRO-SYMMETRY-MAIN is missing required field(s) ['indication', 'proposed_catalyst_type'] in validation/m7/promotion/targeted-single-asset-replacement-03.json; cannot build a review pack without fabricating evidence the source does not assert"
-    },
-    {
-      "candidate_id": "P2-2023-ETNB-ENLIVEN",
-      "reason": "universe eligibility used a conservative cutoff assumption but the exact first-public-disclosure timestamp is not yet resolved (RESOLVE_EXACT_FIRST_PUBLIC_TIMESTAMP still open) - packing a review pack on an unresolved point-in-time anchor would risk fabricating precision that does not exist yet"
     },
     {
       "candidate_id": "P2-2023-MLTX-ARGO",
@@ -37,13 +25,13 @@
       "reason": "universe eligibility used a conservative cutoff assumption but the exact first-public-disclosure timestamp is not yet resolved (RESOLVE_EXACT_FIRST_PUBLIC_TIMESTAMP still open) - packing a review pack on an unresolved point-in-time anchor would risk fabricating precision that does not exist yet"
     }
   ],
-  "deferred_count": 9,
+  "deferred_count": 6,
   "format_version": "1.0",
   "generated_at": "2026-09-16T00:00:00+00:00",
-  "manifest_sha256": "6822ed182c10651a093a5c49977ef20181cbb9df1074418968f7c418014716e4",
+  "manifest_sha256": "2462f5ce26950f2a96d37c58c38c406c5ebbfafef10e4113c026934f52cc836f",
   "market_outcomes_inspected": false,
   "milestone": 7,
-  "pack_count": 143,
+  "pack_count": 146,
   "packs": [
     {
       "candidate_id": "CO-2018-ZIOP-ASCO",
@@ -431,6 +419,13 @@
       "ticker": "RETA"
     },
     {
+      "candidate_id": "P2-2019-TGTX-UNITYNHL",
+      "pack_path": "validation/m7/review_packs/P2-2019-TGTX-UNITYNHL.json",
+      "pack_sha256": "b919c94309eed3688b0f97fbd8717f4538193752bab4d643e8222258dffb02ee",
+      "stratum": "PHASE_2_POC",
+      "ticker": "TGTX"
+    },
+    {
       "candidate_id": "P2-2020-CRNX-ACROBAT",
       "pack_path": "validation/m7/review_packs/P2-2020-CRNX-ACROBAT.json",
       "pack_sha256": "57b1603e4a24a4c1fbe23f72f649373eb8ab7739fd1d8e1db7480b67194938bc",
@@ -466,6 +461,13 @@
       "ticker": "AKRO"
     },
     {
+      "candidate_id": "P2-2022-CINC-BRIGHTN",
+      "pack_path": "validation/m7/review_packs/P2-2022-CINC-BRIGHTN.json",
+      "pack_sha256": "c9964346381fce1718efc434222c121079945a2a44dbe907ccaffeead6f24f57",
+      "stratum": "PHASE_2_POC",
+      "ticker": "CINC"
+    },
+    {
       "candidate_id": "P2-2023-ALNY-KARDIA1",
       "pack_path": "validation/m7/review_packs/P2-2023-ALNY-KARDIA1.json",
       "pack_sha256": "bc7fd161bde4684073e9ab1eee9a28c794ea5e32ac0d0305ac376207c848c75b",
@@ -492,6 +494,13 @@
       "pack_sha256": "02af303f072ed6ed61f19e5c14f5b69327a17ebb1aa612b45b84cc9153dbd5e2",
       "stratum": "PHASE_2_POC",
       "ticker": "ATAI"
+    },
+    {
+      "candidate_id": "P2-2023-ETNB-ENLIVEN",
+      "pack_path": "validation/m7/review_packs/P2-2023-ETNB-ENLIVEN.json",
+      "pack_sha256": "aa3520b164f939fcf2b5fe3e7f1f0fdc4e3b62a1a116b8f7c8706e79a1c7fd1a",
+      "stratum": "PHASE_2_POC",
+      "ticker": "ETNB"
     },
     {
       "candidate_id": "P2-2023-TERN-DUET",
