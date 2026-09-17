@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from datetime import UTC, date, datetime
+from decimal import Decimal
 
 import httpx
 import pytest
@@ -10,6 +11,8 @@ from boe.ingestion.alpaca import (
     alpaca_validation_license,
     credentials_from_env,
     fetch_daily_bars,
+    fetch_point_in_time_bars,
+    fetch_split_adjusted_closes,
 )
 
 AUTH_HEADERS = {"APCA-API-KEY-ID": "key-123", "APCA-API-SECRET-KEY": "secret-456"}
@@ -139,6 +142,75 @@ def test_fetch_daily_bars_propagates_http_errors():
                 api_secret_key="secret-456",
                 client=client,
             )
+
+
+def test_fetch_point_in_time_bars_requests_raw_adjustment_and_is_not_provider_adjusted():
+    def handler(request: httpx.Request) -> httpx.Response:
+        assert "adjustment=raw" in str(request.url)
+        return httpx.Response(
+            200,
+            json={"bars": [_bar("2024-01-02", 100.0), _bar("2024-01-03", 101.5)]},
+            request=request,
+        )
+
+    with httpx.Client(transport=httpx.MockTransport(handler)) as client:
+        series = fetch_point_in_time_bars(
+            "AAPL",
+            start=date(2024, 1, 1),
+            end=date(2024, 1, 5),
+            as_of=datetime(2024, 1, 3, tzinfo=UTC),
+            api_key_id="key-123",
+            api_secret_key="secret-456",
+            client=client,
+        )
+
+    assert series.provider_adjusted is False
+    assert [bar.session_date for bar in series.bars] == [date(2024, 1, 2), date(2024, 1, 3)]
+
+
+def test_fetch_point_in_time_bars_is_safe_for_a_historical_cutoff():
+    """The whole point of this function: unlike fetch_daily_bars(), its
+    output must pass point_in_time_series() for a cutoff far in the past."""
+    from boe.market import point_in_time_series
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        return httpx.Response(200, json={"bars": [_bar("2018-01-02", 50.0)]}, request=request)
+
+    with httpx.Client(transport=httpx.MockTransport(handler)) as client:
+        series = fetch_point_in_time_bars(
+            "AAPL",
+            start=date(2018, 1, 1),
+            end=date(2018, 1, 5),
+            as_of=datetime(2018, 1, 3, tzinfo=UTC),
+            api_key_id="key-123",
+            api_secret_key="secret-456",
+            client=client,
+            retrieved_at=datetime(2026, 1, 1, tzinfo=UTC),  # "today", far after as_of
+        )
+
+    point_in_time_series(series, date(2018, 1, 3))  # must not raise
+
+
+def test_fetch_split_adjusted_closes_requests_split_adjustment():
+    def handler(request: httpx.Request) -> httpx.Response:
+        assert "adjustment=split" in str(request.url)
+        return httpx.Response(
+            200,
+            json={"bars": [_bar("2024-01-02", 100.0), _bar("2024-01-03", 101.5)]},
+            request=request,
+        )
+
+    with httpx.Client(transport=httpx.MockTransport(handler)) as client:
+        closes = fetch_split_adjusted_closes(
+            "AAPL",
+            start=date(2024, 1, 1),
+            end=date(2024, 1, 5),
+            api_key_id="key-123",
+            api_secret_key="secret-456",
+            client=client,
+        )
+
+    assert closes == {date(2024, 1, 2): Decimal("100.0"), date(2024, 1, 3): Decimal("101.5")}
 
 
 def test_alpaca_validation_license_is_self_consistent():

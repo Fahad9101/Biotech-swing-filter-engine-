@@ -29,6 +29,7 @@ from boe.market import (
     MarketDataLicenseAudit,
     MarketSeries,
     RawMarketBar,
+    adjust_raw_bars_for_splits,
     normalize_provider_adjusted_bars,
 )
 
@@ -135,6 +136,118 @@ def fetch_daily_bars(
     )
 
 
+def fetch_point_in_time_bars(
+    symbol: str,
+    *,
+    start: date,
+    end: date,
+    as_of: datetime,
+    api_key_id: str,
+    api_secret_key: str,
+    data_url: str = DEFAULT_DATA_URL,
+    retrieved_at: datetime | None = None,
+    client: httpx.Client | None = None,
+) -> MarketSeries:
+    """Fetch real, unadjusted daily bars - safe for point-in-time technical
+    reconstruction as of a historical cutoff, unlike fetch_daily_bars().
+
+    fetch_daily_bars()'s adjustment=all reflects every split/dividend known
+    TODAY, including ones after any historical as_of - correct for computing
+    real total returns after the fact (scripts/m7_build_outcomes.py), wrong
+    for reconstructing what technical indicators would have looked like at
+    the time (boe.market.point_in_time_series() enforces exactly this and
+    would reject an "all"-adjusted series for a past cutoff). This function
+    requests Alpaca's adjustment=raw bars instead and passes them through
+    adjust_raw_bars_for_splits() with an empty split list (no real
+    split-event source exists for this project) - genuinely unadjusted,
+    provider_adjusted=False, honestly not incorporating any post-cutoff
+    knowledge. A real stock split within the lookback window would still
+    distort raw price levels; callers should treat extreme single-session
+    moves as a signal to investigate, not trust blindly.
+    """
+    if end < start:
+        raise ValueError("end must not precede start")
+    parsed_host = urlparse(data_url)
+    if parsed_host.scheme != "https" or parsed_host.hostname != DATA_HOST:
+        raise ValueError(f"data_url must be an https://{DATA_HOST} URL")
+
+    stamp = retrieved_at or datetime.now(UTC)
+    headers = {"APCA-API-KEY-ID": api_key_id, "APCA-API-SECRET-KEY": api_secret_key}
+    owns_client = client is None
+    http_client = client or httpx.Client(timeout=httpx.Timeout(30.0))
+    try:
+        pages = _fetch_pages(
+            http_client,
+            symbol,
+            start=start,
+            end=end,
+            headers=headers,
+            data_url=data_url,
+            adjustment="raw",
+        )
+    finally:
+        if owns_client:
+            http_client.close()
+
+    raw_bytes = json.dumps(pages, sort_keys=True).encode()
+    raw_bars = _parse_pages(pages, symbol=symbol)
+    return adjust_raw_bars_for_splits(
+        symbol=symbol.upper(),
+        provider=PROVIDER,
+        bars=raw_bars,
+        splits=(),
+        cutoff=as_of,
+        retrieved_at=stamp,
+        available_at=stamp,
+        raw_blob_sha256=hashlib.sha256(raw_bytes).hexdigest(),
+        license_audit_provider=PROVIDER,
+        adjustment_version="ALPACA-RAW-UNADJUSTED-1",
+    )
+
+
+def fetch_split_adjusted_closes(
+    symbol: str,
+    *,
+    start: date,
+    end: date,
+    api_key_id: str,
+    api_secret_key: str,
+    data_url: str = DEFAULT_DATA_URL,
+    client: httpx.Client | None = None,
+) -> dict[date, Decimal]:
+    """Real, split-only-adjusted closes (adjustment=split), keyed by session
+    date - not wrapped in a MarketSeries, and not itself safe for point-in-
+    time scoring (like fetch_daily_bars(), it reflects every split known
+    today). Intended only for comparison against fetch_point_in_time_bars()'s
+    genuinely unadjusted closes, to find real split effective dates by where
+    the two series diverge - see scripts/m7_build_technical_snapshots.py.
+    """
+    if end < start:
+        raise ValueError("end must not precede start")
+    parsed_host = urlparse(data_url)
+    if parsed_host.scheme != "https" or parsed_host.hostname != DATA_HOST:
+        raise ValueError(f"data_url must be an https://{DATA_HOST} URL")
+
+    headers = {"APCA-API-KEY-ID": api_key_id, "APCA-API-SECRET-KEY": api_secret_key}
+    owns_client = client is None
+    http_client = client or httpx.Client(timeout=httpx.Timeout(30.0))
+    try:
+        pages = _fetch_pages(
+            http_client,
+            symbol,
+            start=start,
+            end=end,
+            headers=headers,
+            data_url=data_url,
+            adjustment="split",
+        )
+    finally:
+        if owns_client:
+            http_client.close()
+    bars = _parse_pages(pages, symbol=symbol)
+    return {bar.session_date: bar.close for bar in bars}
+
+
 def _fetch_pages(
     http_client: httpx.Client,
     symbol: str,
@@ -143,6 +256,7 @@ def _fetch_pages(
     end: date,
     headers: dict[str, str],
     data_url: str,
+    adjustment: str = _ADJUSTMENT,
 ) -> list[dict[str, Any]]:
     pages: list[dict[str, Any]] = []
     page_token: str | None = None
@@ -150,7 +264,7 @@ def _fetch_pages(
         params: dict[str, str | int] = {
             "feed": _FEED,
             "timeframe": "1Day",
-            "adjustment": _ADJUSTMENT,
+            "adjustment": adjustment,
             "start": start.isoformat(),
             "end": end.isoformat(),
             "limit": _PAGE_LIMIT,
