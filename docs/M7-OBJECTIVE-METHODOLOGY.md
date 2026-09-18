@@ -80,18 +80,64 @@ entire scoring dimension rather than fabricating it - not a defect quietly
 tuned away, and not evidence that BOE-1.0.0 itself (never actually scored)
 does or doesn't work.
 
-## Failure register, not failure analysis
+## Failure register and real failure analysis
 
 `validation/m7/validation-report.json`'s `failure_register` objectively
 identifies false positives (top PoS quintile, T+20 return <= -20%) and
 false negatives (bottom PoS quintile, MFE >= 40%) using only fields already
-present in committed artifacts. It does **not** attempt VALIDATION-AND-
-MILESTONES.md section 7's full per-event categorization (source failure,
-timing failure, unmodeled external event, etc.) for any specific event:
-doing that honestly requires new per-event research, and guessing at a
-specific real event's failure cause without evidence would be fabrication,
-not analysis. Each entry lists this explicitly rather than filling the gap
-with a plausible-sounding guess.
+present in committed artifacts. Per-event categorization (source failure,
+timing failure, unmodeled external event, etc., per VALIDATION-AND-
+MILESTONES.md section 7) was initially left unassessed for the same reason
+as above: guessing at a specific real event's failure cause without
+evidence would be fabrication, not analysis.
+
+That research was later done for real, not guessed at:
+`validation/m7/failure-analysis.json` has a row per flagged event (all 13 -
+7 false positives, 6 false negatives) built from live web search of real
+FDA Complete Response Letter text, company press releases, and SEC 8-K
+exhibits, each with source URLs. `scripts/m7_build_validation_report.py`
+cross-validates this file against the live-computed register on every
+build (cohort hash and the exact event-id set, both directions) and
+refuses to assemble a report if the two drift apart. Findings were not
+assumed going in: most false positives trace to real, pre-existing
+weaknesses visible in trial design or known drug-safety history (the exact
+kind of gap SCIENCE would exist to catch - see "SCIENCE-redesign
+feasibility pilot" below for why this project still can't build that), but
+some were genuine regulatory-process surprises (an FDA durability
+requirement introduced only in the CRL itself; a pure CMC/manufacturing
+rejection with zero clinical concerns raised) that no science review could
+plausibly have caught, and one (bluebird's Lyfgenia) was not a PoS miss at
+all - the drug was approved, and the loss was a VALUATION-shaped
+label/expectation gap. This is retrospective research on already-fixed,
+already-known outcomes; it is never fed back into
+`src/boe/objective_pos_methodology.py` or any BOE-1.0.0 rule, which would
+be fitting a methodology to the answers it was supposed to predict.
+
+## SCIENCE-redesign feasibility pilot: DO_NOT_PROCEED
+
+After the above was built, a genuine attempt was made to reduce SCIENCE's
+MISSING status by sourcing real, structured clinical-trial-design facts
+instead of a human reviewer's judgment. ClinicalTrials.gov's own API
+returns a confirmed, persistent 403 to programmatic access from this
+environment (matches the pre-existing 962/962 fetch-failure result already
+committed in `validation/m7/discovery/clinicaltrials-official-candidates.json`),
+so a free bulk research dataset was tried instead
+(`huggingface.co/datasets/chufangao/CTO`), requiring the event's real,
+already-known drug/asset name to appear in the candidate trial's title
+(naive date-only matching produced real, confirmed false positives first -
+see `validation/m7/discovery/science-redesign-pilot.json`'s docstring).
+
+Run against the full 120-event frozen cohort: only 27 events (22%) resolve
+to a genuine, drug-name-verified candidate trial, and even those are
+missing the allocation/masking/intervention-model fields TRIAL_DESIGN
+actually needs - this dataset only has weaker proxies. That does not clear
+the bar relative to CATALYST/CASH_DILUTION/TECHNICAL's 73-100% real
+coverage, so no SCIENCE-scoring pipeline was built on top of it; SCIENCE
+remains MISSING for every event, same as the human-review path
+(`docs/M7-HUMAN-REVIEW-BLOCKER.md`) concluded. VALUATION was not
+separately piloted - epidemiological incidence/prevalence data is expected
+to be similarly or less available in bulk, so a second pilot to re-confirm
+the same conclusion was not judged worth running.
 
 ## One disclosed limitation that cannot be undone
 
