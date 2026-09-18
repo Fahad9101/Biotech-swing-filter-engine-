@@ -39,14 +39,14 @@ from boe.filter.extraction import DiscoveredCatalyst  # noqa: E402
 from boe.filter.live_catalyst import live_catalyst_score  # noqa: E402
 from boe.filter.live_financials import ForeignPrivateIssuer, live_cash_dilution_score  # noqa: E402
 from boe.filter.live_technical import fetch_live_series, live_technical_score  # noqa: E402
+from boe.filter.report import render_html  # noqa: E402
 from boe.financials import FinancialDataError  # noqa: E402
 from boe.ingestion.alpaca import credentials_from_env  # noqa: E402
 from boe.ingestion.http import PublicDataClient  # noqa: E402
 from boe.objective_pos_methodology import estimate_objective_pos  # noqa: E402
 
 SCORECARD_PATH = ROOT / "contracts/boe-scorecard.v1.0.0.json"
-OUTPUT_PATH = ROOT / "screening/watchlist.json"
-SUMMARY_PATH = ROOT / "screening/watchlist-summary.json"
+DEFAULT_OUTPUT_DIR = "screening"
 
 # SEC's efts.sec.gov (unlike www.sec.gov/data.sec.gov) real-time rejects any
 # User-Agent containing "github.com" with a 403 "Undeclared Automated Tool"
@@ -287,14 +287,17 @@ def main() -> None:
     parser.add_argument("--start-date", type=date.fromisoformat, default=None)
     parser.add_argument("--end-date", type=date.fromisoformat, default=None)
     parser.add_argument("--lookback-days", type=int, default=DEFAULT_LOOKBACK_DAYS)
+    parser.add_argument("--output-dir", type=str, default=DEFAULT_OUTPUT_DIR)
     args = parser.parse_args()
 
     end_date = args.end_date or datetime.now(UTC).date()
     start_date = args.start_date or (end_date - timedelta(days=args.lookback_days))
+    output_dir = ROOT / args.output_dir
+    output_dir.mkdir(parents=True, exist_ok=True)
 
     status = build(start_date=start_date, end_date=end_date)
-    OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT_PATH.write_text(render(status))
+    (output_dir / "watchlist.json").write_text(render(status))
+    (output_dir / "watchlist.html").write_text(render_html(status))
     summary = {
         "as_of": status["as_of"],
         "search_window": status["search_window"],
@@ -305,7 +308,7 @@ def main() -> None:
         "technical_data_gap_count": len(status["technical_data_gaps"]),
         "already_past_count": len(status["already_past"]),
     }
-    SUMMARY_PATH.write_text(render(summary))
+    (output_dir / "watchlist-summary.json").write_text(render(summary))
     print(json.dumps(summary))
 
 
