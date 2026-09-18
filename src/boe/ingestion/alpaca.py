@@ -80,15 +80,24 @@ def alpaca_validation_license(reviewed_at: datetime) -> MarketDataLicenseAudit:
 def credentials_from_env() -> tuple[str, str, str]:
     """Read (api_key_id, api_secret_key, data_url) from the environment.
 
+    Values are stripped of leading/trailing whitespace: a trailing newline
+    is a real, common way for a credential to end up wrong (e.g. pasted
+    into a GitHub Actions secret from a source that included a line break)
+    and is never semantically part of a real API key - confirmed live,
+    not hypothetical: a GitHub Actions run failed with
+    httpcore.LocalProtocolError: Illegal header value, because an
+    untrimmed secret value containing a trailing newline is not valid
+    inside an HTTP header.
+
     Callers must not print, log, or persist the returned secret key.
     """
-    key_id = os.environ.get("ALPACA_API_KEY_ID")
-    secret_key = os.environ.get("ALPACA_API_SECRET_KEY")
+    key_id = (os.environ.get("ALPACA_API_KEY_ID") or "").strip()
+    secret_key = (os.environ.get("ALPACA_API_SECRET_KEY") or "").strip()
     if not key_id or not secret_key:
         raise ValueError(
             "ALPACA_API_KEY_ID and ALPACA_API_SECRET_KEY must be set in the environment"
         )
-    data_url = os.environ.get("ALPACA_DATA_URL", DEFAULT_DATA_URL)
+    data_url = os.environ.get("ALPACA_DATA_URL", DEFAULT_DATA_URL).strip()
     return key_id, secret_key, data_url
 
 
