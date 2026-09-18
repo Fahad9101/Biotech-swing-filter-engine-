@@ -235,4 +235,24 @@ def test_credentials_from_env_reads_real_values(monkeypatch: pytest.MonkeyPatch)
     key_id, secret_key, data_url = credentials_from_env()
     assert key_id == "key-123"
     assert secret_key == "secret-456"
+
+
+def test_credentials_from_env_strips_trailing_whitespace(monkeypatch: pytest.MonkeyPatch):
+    # Real failure reproduced live: a GitHub Actions secret pasted with a
+    # trailing newline is not valid inside an HTTP header
+    # (httpcore.LocalProtocolError: Illegal header value) - stripping here
+    # means a credential with incidental whitespace can never reach httpx.
+    monkeypatch.setenv("ALPACA_API_KEY_ID", "key-123\n")
+    monkeypatch.setenv("ALPACA_API_SECRET_KEY", "  secret-456\n")
+    monkeypatch.setenv("ALPACA_DATA_URL", " https://data.alpaca.markets \n")
+    key_id, secret_key, data_url = credentials_from_env()
+    assert key_id == "key-123"
+    assert secret_key == "secret-456"
     assert data_url == "https://data.alpaca.markets"
+
+
+def test_credentials_from_env_rejects_whitespace_only_keys(monkeypatch: pytest.MonkeyPatch):
+    monkeypatch.setenv("ALPACA_API_KEY_ID", "   \n")
+    monkeypatch.setenv("ALPACA_API_SECRET_KEY", "secret-456")
+    with pytest.raises(ValueError, match="ALPACA_API_KEY_ID"):
+        credentials_from_env()
