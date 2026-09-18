@@ -256,3 +256,33 @@ def test_credentials_from_env_rejects_whitespace_only_keys(monkeypatch: pytest.M
     monkeypatch.setenv("ALPACA_API_SECRET_KEY", "secret-456")
     with pytest.raises(ValueError, match="ALPACA_API_KEY_ID"):
         credentials_from_env()
+
+
+def test_credentials_from_env_rejects_embedded_illegal_characters(
+    monkeypatch: pytest.MonkeyPatch,
+):
+    # Real failure reproduced live even after stripping leading/trailing
+    # whitespace: httpcore.LocalProtocolError: Illegal header value
+    # persisted, so the bad character must be embedded, not at the edges -
+    # e.g. a smart quote a rich-text source silently substituted for a
+    # plain apostrophe when the secret was copied.
+    monkeypatch.setenv("ALPACA_API_KEY_ID", "key-123")
+    monkeypatch.setenv("ALPACA_API_SECRET_KEY", "secret“456")  # embedded smart quote
+    with pytest.raises(ValueError, match="ALPACA_API_SECRET_KEY") as exc_info:
+        credentials_from_env()
+    message = str(exc_info.value)
+    assert "U+201C" in message
+    assert "position 6" in message
+    # the actual credential value must never appear in the error
+    assert "secret“456" not in message
+    assert "456" not in message
+
+
+def test_credentials_from_env_rejects_embedded_control_character(
+    monkeypatch: pytest.MonkeyPatch,
+):
+    monkeypatch.setenv("ALPACA_API_KEY_ID", "key\r123")  # embedded CR, not at an edge
+    monkeypatch.setenv("ALPACA_API_SECRET_KEY", "secret-456")
+    with pytest.raises(ValueError, match="ALPACA_API_KEY_ID") as exc_info:
+        credentials_from_env()
+    assert "U+000D" in str(exc_info.value)
