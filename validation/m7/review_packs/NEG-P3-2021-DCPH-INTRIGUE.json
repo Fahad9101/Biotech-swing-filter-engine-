@@ -1,0 +1,95 @@
+{
+  "acquisition_path": "validation/m7/acquisition/newly-sourced-batch-05.json",
+  "candidate_id": "NEG-P3-2021-DCPH-INTRIGUE",
+  "catalyst_observation": {
+    "asset": "ripretinib (QINLOCK)",
+    "catalyst_type": "CLIN_P3",
+    "clinical_phase": "PHASE_3",
+    "evidence_id": "86f0d781-2e82-56bb-a010-ff68e6145a11",
+    "external_event_id": "NEG-P3-2021-DCPH-INTRIGUE",
+    "indication": "second-line gastrointestinal stromal tumor (GIST)",
+    "issuer_id": "0001654151",
+    "known_at": "2021-11-05T07:10:00-04:00",
+    "source_statement": "453-patient INTRIGUE trial (ripretinib vs. sunitinib, second-line GIST) missed its primary endpoint of progression-free survival in the intention-to-treat population (8.0 vs. 8.3 months, HR 1.05, nominal p=0.72). QINLOCK's existing third-line-plus approval was unaffected; this was specifically a second-line expansion failure.",
+    "source_tier": 2,
+    "timing_confidence": "HIGH",
+    "title": "Deciphera Pharmaceuticals, Inc. - ripretinib (QINLOCK) (second-line gastrointestinal stromal tumor (GIST))",
+    "window_end": "2021-11-05",
+    "window_start": "2021-11-05"
+  },
+  "catalyst_version": {
+    "asset": "ripretinib (QINLOCK)",
+    "canonical_key": "0001654151|ripretinib (qinlock)|second-line gastrointestinal stromal tumor (gist)|CLIN_P3",
+    "catalyst_type": "CLIN_P3",
+    "clinical_phase": "PHASE_3",
+    "conflicts": [],
+    "id": "cdc9881d-1622-5791-b409-c91337d60789",
+    "indication": "second-line gastrointestinal stromal tumor (GIST)",
+    "issuer_id": "0001654151",
+    "known_at": "2021-11-05T07:10:00-04:00",
+    "primary_evidence_id": "86f0d781-2e82-56bb-a010-ff68e6145a11",
+    "resolved_at_cutoff": "2021-11-05T07:10:00-04:00",
+    "supporting_evidence_ids": [
+      "86f0d781-2e82-56bb-a010-ff68e6145a11"
+    ],
+    "timing_confidence": "HIGH",
+    "title": "Deciphera Pharmaceuticals, Inc. - ripretinib (QINLOCK) (second-line gastrointestinal stromal tumor (GIST))",
+    "version": 1,
+    "version_sha256": "4fb90bc9b79c7ec8258068ea90a273dcf85a9a6cc161c610db6d908cddbaa090",
+    "window_end": "2021-11-05",
+    "window_start": "2021-11-05"
+  },
+  "company": "Deciphera Pharmaceuticals, Inc.",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": true,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "7f3c8130b645506281cba4b636ef124432defd3c5a4cce12cf4f1428ab581b47",
+  "promotion_blockers": [
+    "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2021-11-05T07:10:00-04:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "ripretinib (QINLOCK)",
+    "blinded": null,
+    "catalyst_version_id": "cdc9881d-1622-5791-b409-c91337d60789",
+    "clinical_phase": "PHASE_3",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2021-11-05T07:10:00-04:00",
+    "evidence_ids": [
+      "86f0d781-2e82-56bb-a010-ff68e6145a11"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "5917a5f0-7243-55c8-bbf2-057a56f03d84",
+    "indication": "second-line gastrointestinal stromal tumor (GIST)",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://www.sec.gov/Archives/edgar/data/1654151/000119312521320901/d252692dex991.htm"
+  ],
+  "stratum": "PHASE_3_PIVOTAL",
+  "ticker": "DCPH",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-33.json"
+}

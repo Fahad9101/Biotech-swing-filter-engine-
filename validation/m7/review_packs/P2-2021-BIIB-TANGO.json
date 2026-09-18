@@ -1,0 +1,96 @@
+{
+  "acquisition_path": "validation/m7/acquisition/phase2-primary-batch-01.json",
+  "candidate_id": "P2-2021-BIIB-TANGO",
+  "catalyst_observation": {
+    "asset": "gosuranemab (BIIB092)",
+    "catalyst_type": "CLIN_P2",
+    "clinical_phase": "PHASE_2",
+    "evidence_id": "b6b0e724-addb-5fa0-999c-105f9967b283",
+    "external_event_id": "P2-2021-BIIB-TANGO",
+    "indication": "Alzheimer's disease",
+    "issuer_id": "0000875045",
+    "known_at": "2021-06-16T16:30:00-04:00",
+    "source_statement": "Biogen Inc. - FIRST_PUBLIC_RESULT_DISCLOSURE_CANDIDATE dated 2021-06-16.",
+    "source_tier": 2,
+    "timing_confidence": "HIGH",
+    "title": "Biogen Inc. - gosuranemab (BIIB092) (Alzheimer's disease)",
+    "window_end": "2021-06-16",
+    "window_start": "2021-06-16"
+  },
+  "catalyst_version": {
+    "asset": "gosuranemab (BIIB092)",
+    "canonical_key": "0000875045|gosuranemab (biib092)|alzheimer's disease|CLIN_P2",
+    "catalyst_type": "CLIN_P2",
+    "clinical_phase": "PHASE_2",
+    "conflicts": [],
+    "id": "27f4b65f-fe61-5f85-918f-dc2343535330",
+    "indication": "Alzheimer's disease",
+    "issuer_id": "0000875045",
+    "known_at": "2021-06-16T16:30:00-04:00",
+    "primary_evidence_id": "b6b0e724-addb-5fa0-999c-105f9967b283",
+    "resolved_at_cutoff": "2021-06-16T16:30:00-04:00",
+    "supporting_evidence_ids": [
+      "b6b0e724-addb-5fa0-999c-105f9967b283"
+    ],
+    "timing_confidence": "HIGH",
+    "title": "Biogen Inc. - gosuranemab (BIIB092) (Alzheimer's disease)",
+    "version": 1,
+    "version_sha256": "ff2b75611946264d20ce1a06fdb129bb66452d88bc6237e86bf861fe39c10e7c",
+    "window_end": "2021-06-16",
+    "window_start": "2021-06-16"
+  },
+  "company": "Biogen Inc.",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": true,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "bf45b28104cfd6bcdb97c64f9416ff27a9ab5321bca6c72da28c414b1b438943",
+  "promotion_blockers": [
+    "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+    "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2021-06-16T16:30:00-04:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "gosuranemab (BIIB092)",
+    "blinded": null,
+    "catalyst_version_id": "27f4b65f-fe61-5f85-918f-dc2343535330",
+    "clinical_phase": "PHASE_2",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2021-06-16T16:30:00-04:00",
+    "evidence_ids": [
+      "b6b0e724-addb-5fa0-999c-105f9967b283"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "c08407be-b1c1-52a7-8b84-b6e75813c409",
+    "indication": "Alzheimer's disease",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://investors.biogen.com/node/23611"
+  ],
+  "stratum": "PHASE_2_POC",
+  "ticker": "BIIB",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-26.json"
+}

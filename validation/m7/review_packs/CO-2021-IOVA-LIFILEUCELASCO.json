@@ -1,0 +1,98 @@
+{
+  "acquisition_path": "validation/m7/acquisition/conference-other-primary-batch-01.json",
+  "candidate_id": "CO-2021-IOVA-LIFILEUCELASCO",
+  "catalyst_observation": {
+    "asset": "lifileucel + pembrolizumab",
+    "catalyst_type": "CONF_DATA",
+    "clinical_phase": "PHASE_2",
+    "evidence_id": "d2116ec5-782b-5e1d-bbbd-5e394c02a1ee",
+    "external_event_id": "CO-2021-IOVA-LIFILEUCELASCO",
+    "indication": "advanced melanoma",
+    "issuer_id": "0001425205",
+    "known_at": "2021-06-04T09:08:00-04:00",
+    "source_statement": "Iovance Biotherapeutics, Inc. - CONFERENCE_DATA_DISCLOSURE_CANDIDATE dated 2021-06-04.",
+    "source_tier": 5,
+    "timing_confidence": "HIGH",
+    "title": "Iovance Biotherapeutics, Inc. - lifileucel + pembrolizumab (advanced melanoma)",
+    "window_end": "2021-06-04",
+    "window_start": "2021-06-04"
+  },
+  "catalyst_version": {
+    "asset": "lifileucel + pembrolizumab",
+    "canonical_key": "0001425205|lifileucel + pembrolizumab|advanced melanoma|CONF_DATA",
+    "catalyst_type": "CONF_DATA",
+    "clinical_phase": "PHASE_2",
+    "conflicts": [],
+    "id": "9521f8f7-1b8d-54e9-a66a-42ed7a6d5c42",
+    "indication": "advanced melanoma",
+    "issuer_id": "0001425205",
+    "known_at": "2021-06-04T09:08:00-04:00",
+    "primary_evidence_id": "d2116ec5-782b-5e1d-bbbd-5e394c02a1ee",
+    "resolved_at_cutoff": "2021-06-04T09:08:00-04:00",
+    "supporting_evidence_ids": [
+      "d2116ec5-782b-5e1d-bbbd-5e394c02a1ee"
+    ],
+    "timing_confidence": "HIGH",
+    "title": "Iovance Biotherapeutics, Inc. - lifileucel + pembrolizumab (advanced melanoma)",
+    "version": 1,
+    "version_sha256": "44a04537d93b14685f635048d1a1b410a92106ef35c2d219d82c98895b00ea9a",
+    "window_end": "2021-06-04",
+    "window_start": "2021-06-04"
+  },
+  "company": "Iovance Biotherapeutics, Inc.",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": false,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "c92bf22d03ece4eaf669912750d04e50fca0ad182ea385bf61ae83209ce6cac9",
+  "promotion_blockers": [
+    "RESOLVE_CIK_AND_HISTORICAL_SECURITY_IDENTITY",
+    "VERIFY_CONFERENCE_FIRST_PUBLIC_AVAILABILITY",
+    "VERIFY_UNDERLYING_CLINICAL_PHASE_AND_EVENT_DEDUPLICATION",
+    "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2021-06-04T09:08:00-04:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "lifileucel + pembrolizumab",
+    "blinded": null,
+    "catalyst_version_id": "9521f8f7-1b8d-54e9-a66a-42ed7a6d5c42",
+    "clinical_phase": "PHASE_2",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2021-06-04T09:08:00-04:00",
+    "evidence_ids": [
+      "d2116ec5-782b-5e1d-bbbd-5e394c02a1ee"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "921c31c2-a237-50e1-a0c5-d1cf7361a0d7",
+    "indication": "advanced melanoma",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://www.globenewswire.com/news-release/2021/06/04/2242128/0/en/Iovance-Biotherapeutics-Announces-Clinical-Data-for-Lifileucel-in-Combination-with-Pembrolizumab-in-Advanced-Melanoma-at-ASCO-2021-Annual-Meeting.html"
+  ],
+  "stratum": "CONFERENCE_OTHER",
+  "ticker": "IOVA",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-28.json"
+}

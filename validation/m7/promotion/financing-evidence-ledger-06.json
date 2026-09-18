@@ -1,0 +1,1491 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-17",
+  "role": "PREFREEZE_FULL_POOL_FINANCING_SWEEP",
+  "market_outcomes_inspected": false,
+  "cohort_frozen": false,
+  "trigger": "Full-pool financing sweep undertaken ahead of building the real HistoricalEvent registry and running the actual select_frozen_cohort(seed=100100) freeze. Discovered that only 11 of the 152 universe-PASS candidates had both financing and single-asset status fully resolved - all prior financing work targeted specific candidates (seed-selected or negative-event candidates) rather than sweeping the full pool. Since HistoricalEvent.financing_t_minus_90_to_t_plus_30 is a required boolean with no PENDING state, every candidate considered for registry inclusion needs a genuine, evidenced determination.",
+  "qualification_rule": "Count only actual issuer equity or equity-linked dilution occurring from T-90 through T+30. Theoretical shelf or ATM registration capacity without actual issuance is not sufficient.",
+  "method": "Bulk SEC EDGAR submissions API sweep (data.sec.gov/submissions/CIK{10digit}.json, with the older paginated archive file fetched whenever the recent-filings array did not reach back far enough to cover a candidate's T-90 window) for 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, and S-3/A filings, plus 8-K filings whose reported Item list includes 3.02 (Unregistered Sales of Equity Securities, the standard PIPE-disclosure item), filtered to each candidate's own T-90-to-T+30 window. Coverage was independently verified: for every candidate in this batch, the earliest filing date returned by the sweep (recent array, or the paginated older-filings archive where needed) precedes that candidate's window_start, so no filing in the window could have been missed.",
+  "summary": {
+    "reviewed": 92,
+    "qualifies": 0,
+    "does_not_qualify": 92
+  },
+  "rows": [
+    {
+      "candidate_id": "CO-2018-ZIOP-ASCO",
+      "event_date": "2018-06-04",
+      "ticker": "ZIOP",
+      "issuer": "ZIOPHARM Oncology, Inc.",
+      "cik": "1107421",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2018-03-06",
+      "financing_window_end": "2018-07-04",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001107421.json) for CIK 1107421 (ZIOPHARM Oncology, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2018-03-06 and 2018-07-04 (T-90 through T+30 relative to the 2018-06-04 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001107421.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "CO-2021-HARP-HPN424ASCO",
+      "event_date": "2021-06-04",
+      "ticker": "HARP",
+      "issuer": "Harpoon Therapeutics, Inc.",
+      "cik": "1708493",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2021-03-06",
+      "financing_window_end": "2021-07-04",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001708493.json) for CIK 1708493 (Harpoon Therapeutics, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2021-03-06 and 2021-07-04 (T-90 through T+30 relative to the 2021-06-04 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001708493.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "CO-2021-IGMS-IGM2323ASH",
+      "event_date": "2021-12-11",
+      "ticker": "IGMS",
+      "issuer": "IGM Biosciences, Inc.",
+      "cik": "1496323",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2021-09-12",
+      "financing_window_end": "2022-01-10",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001496323.json) for CIK 1496323 (IGM Biosciences, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2021-09-12 and 2022-01-10 (T-90 through T+30 relative to the 2021-12-11 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001496323.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "CO-2021-IOVA-LIFILEUCELASCO",
+      "event_date": "2021-06-04",
+      "ticker": "IOVA",
+      "issuer": "Iovance Biotherapeutics, Inc.",
+      "cik": "1425205",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2021-03-06",
+      "financing_window_end": "2021-07-04",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001425205.json) for CIK 1425205 (Iovance Biotherapeutics, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2021-03-06 and 2021-07-04 (T-90 through T+30 relative to the 2021-06-04 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001425205.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "CO-2024-AUTL-OBECELASH",
+      "event_date": "2024-12-09",
+      "ticker": "AUTL",
+      "issuer": "Autolus Therapeutics plc",
+      "cik": "1730463",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2024-09-10",
+      "financing_window_end": "2025-01-08",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001730463.json) for CIK 1730463 (Autolus Therapeutics plc) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2024-09-10 and 2025-01-08 (T-90 through T+30 relative to the 2024-12-09 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001730463.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "CO-2024-GMAB-TVASCO",
+      "event_date": "2024-06-03",
+      "ticker": "GMAB",
+      "issuer": "Genmab A/S",
+      "cik": "1434265",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2024-03-05",
+      "financing_window_end": "2024-07-03",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001434265.json) for CIK 1434265 (Genmab A/S) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2024-03-05 and 2024-07-03 (T-90 through T+30 relative to the 2024-06-03 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001434265.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "CO-2024-KROS-ELRITERCEPTASH",
+      "event_date": "2024-12-09",
+      "ticker": "KROS",
+      "issuer": "Keros Therapeutics, Inc.",
+      "cik": "1664710",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2024-09-10",
+      "financing_window_end": "2025-01-08",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001664710.json) for CIK 1664710 (Keros Therapeutics, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2024-09-10 and 2025-01-08 (T-90 through T+30 relative to the 2024-12-09 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001664710.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "CO-2025-CRVS-SOQUELITINIBASH",
+      "event_date": "2025-12-08",
+      "ticker": "CRVS",
+      "issuer": "Corvus Pharmaceuticals, Inc.",
+      "cik": "1626971",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2025-09-09",
+      "financing_window_end": "2026-01-07",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001626971.json) for CIK 1626971 (Corvus Pharmaceuticals, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2025-09-09 and 2026-01-07 (T-90 through T+30 relative to the 2025-12-08 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001626971.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "CO-2025-GERN-RYTELOASH",
+      "event_date": "2025-12-08",
+      "ticker": "GERN",
+      "issuer": "Geron Corporation",
+      "cik": "886744",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2025-09-09",
+      "financing_window_end": "2026-01-07",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0000886744.json) for CIK 886744 (Geron Corporation) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2025-09-09 and 2026-01-07 (T-90 through T+30 relative to the 2025-12-08 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0000886744.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "EC-2019-WVE-SUVODIRSEN",
+      "event_date": "2019-12-16",
+      "ticker": "WVE",
+      "issuer": "Wave Life Sciences Ltd.",
+      "cik": "1631574",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2019-09-17",
+      "financing_window_end": "2020-01-15",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001631574.json) for CIK 1631574 (Wave Life Sciences Ltd.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2019-09-17 and 2020-01-15 (T-90 through T+30 relative to the 2019-12-16 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001631574.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "EC-2021-EDIT-EDIT101",
+      "event_date": "2021-09-29",
+      "ticker": "EDIT",
+      "issuer": "Editas Medicine, Inc.",
+      "cik": "1650664",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2021-07-01",
+      "financing_window_end": "2021-10-29",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001650664.json) for CIK 1650664 (Editas Medicine, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2021-07-01 and 2021-10-29 (T-90 through T+30 relative to the 2021-09-29 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001650664.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "EC-2021-FATE-FT516FT538",
+      "event_date": "2021-05-13",
+      "ticker": "FATE",
+      "issuer": "Fate Therapeutics, Inc.",
+      "cik": "1434316",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2021-02-12",
+      "financing_window_end": "2021-06-12",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001434316.json) for CIK 1434316 (Fate Therapeutics, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2021-02-12 and 2021-06-12 (T-90 through T+30 relative to the 2021-05-13 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001434316.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "EC-2021-KURA-KO539-HOLD",
+      "event_date": "2021-11-24",
+      "ticker": "KURA",
+      "issuer": "Kura Oncology, Inc.",
+      "cik": "1422143",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2021-08-26",
+      "financing_window_end": "2021-12-24",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001422143.json) for CIK 1422143 (Kura Oncology, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2021-08-26 and 2021-12-24 (T-90 through T+30 relative to the 2021-11-24 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001422143.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "EC-2021-SGTX-SIG001",
+      "event_date": "2021-07-09",
+      "ticker": "SGTX",
+      "issuer": "Sigilon Therapeutics, Inc.",
+      "cik": "1821323",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2021-04-10",
+      "financing_window_end": "2021-08-08",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001821323.json) for CIK 1821323 (Sigilon Therapeutics, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2021-04-10 and 2021-08-08 (T-90 through T+30 relative to the 2021-07-09 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001821323.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "EC-2021-TPTX-TPX0046",
+      "event_date": "2021-04-05",
+      "ticker": "TPTX",
+      "issuer": "Turning Point Therapeutics, Inc.",
+      "cik": "1595893",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2021-01-05",
+      "financing_window_end": "2021-05-05",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001595893.json) for CIK 1595893 (Turning Point Therapeutics, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2021-01-05 and 2021-05-05 (T-90 through T+30 relative to the 2021-04-05 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001595893.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "EC-2022-ALEC-AL101",
+      "event_date": "2022-11-29",
+      "ticker": "ALEC",
+      "issuer": "Alector, Inc.",
+      "cik": "1653087",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2022-08-31",
+      "financing_window_end": "2022-12-29",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001653087.json) for CIK 1653087 (Alector, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2022-08-31 and 2022-12-29 (T-90 through T+30 relative to the 2022-11-29 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001653087.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "EC-2022-AVXL-ANAVEX371",
+      "event_date": "2022-01-10",
+      "ticker": "AVXL",
+      "issuer": "Anavex Life Sciences Corp.",
+      "cik": "1314052",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2021-10-12",
+      "financing_window_end": "2022-02-09",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001314052.json) for CIK 1314052 (Anavex Life Sciences Corp.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2021-10-12 and 2022-02-09 (T-90 through T+30 relative to the 2022-01-10 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001314052.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "EC-2022-VTYX-VTX958",
+      "event_date": "2022-08-15",
+      "ticker": "VTYX",
+      "issuer": "Ventyx Biosciences, Inc.",
+      "cik": "1851194",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2022-05-17",
+      "financing_window_end": "2022-09-14",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001851194.json) for CIK 1851194 (Ventyx Biosciences, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2022-05-17 and 2022-09-14 (T-90 through T+30 relative to the 2022-08-15 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001851194.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "EC-2024-CABA-CABA201",
+      "event_date": "2024-06-14",
+      "ticker": "CABA",
+      "issuer": "Cabaletta Bio, Inc.",
+      "cik": "1759138",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2024-03-16",
+      "financing_window_end": "2024-07-14",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001759138.json) for CIK 1759138 (Cabaletta Bio, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2024-03-16 and 2024-07-14 (T-90 through T+30 relative to the 2024-06-14 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001759138.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "EC-2024-CHRS-CHS114",
+      "event_date": "2024-05-23",
+      "ticker": "CHRS",
+      "issuer": "Coherus BioSciences, Inc.",
+      "cik": "1512762",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2024-02-23",
+      "financing_window_end": "2024-06-22",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001512762.json) for CIK 1512762 (Coherus BioSciences, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2024-02-23 and 2024-06-22 (T-90 through T+30 relative to the 2024-05-23 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001512762.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "EC-2025-MTSR-MET233I",
+      "event_date": "2025-06-09",
+      "ticker": "MTSR",
+      "issuer": "Metsera, Inc.",
+      "cik": "2040807",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2025-03-11",
+      "financing_window_end": "2025-07-09",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0002040807.json) for CIK 2040807 (Metsera, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2025-03-11 and 2025-07-09 (T-90 through T+30 relative to the 2025-06-09 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0002040807.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "NEG-P2-2018-IDRA-IMO8400",
+      "event_date": "2018-06-12",
+      "ticker": "IDRA",
+      "issuer": "Idera Pharmaceuticals, Inc.",
+      "cik": "861838",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2018-03-14",
+      "financing_window_end": "2018-07-12",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0000861838.json) for CIK 861838 (Idera Pharmaceuticals, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2018-03-14 and 2018-07-12 (T-90 through T+30 relative to the 2018-06-12 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0000861838.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "NEG-P2-2019-APTX-NYX2925",
+      "event_date": "2019-01-16",
+      "ticker": "APTX",
+      "issuer": "Aptinyx Inc.",
+      "cik": "1674365",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2018-10-18",
+      "financing_window_end": "2019-02-15",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001674365.json) for CIK 1674365 (Aptinyx Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2018-10-18 and 2019-02-15 (T-90 through T+30 relative to the 2019-01-16 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001674365.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "NEG-P2-2021-ANAB-POPLAR",
+      "event_date": "2021-03-08",
+      "ticker": "ANAB",
+      "issuer": "AnaptysBio, Inc.",
+      "cik": "1370053",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2020-12-08",
+      "financing_window_end": "2021-04-07",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001370053.json) for CIK 1370053 (AnaptysBio, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2020-12-08 and 2021-04-07 (T-90 through T+30 relative to the 2021-03-08 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001370053.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "NEG-P2-2024-EYPT-PAVIA",
+      "event_date": "2024-05-06",
+      "ticker": "EYPT",
+      "issuer": "EyePoint Pharmaceuticals, Inc.",
+      "cik": "1314102",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2024-02-06",
+      "financing_window_end": "2024-06-05",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001314102.json) for CIK 1314102 (EyePoint Pharmaceuticals, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2024-02-06 and 2024-06-05 (T-90 through T+30 relative to the 2024-05-06 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001314102.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "NEG-P2-2024-SAGE-LIGHTWAVE",
+      "event_date": "2024-10-08",
+      "ticker": "SAGE",
+      "issuer": "Sage Therapeutics, Inc.",
+      "cik": "1597553",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2024-07-10",
+      "financing_window_end": "2024-11-07",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001597553.json) for CIK 1597553 (Sage Therapeutics, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2024-07-10 and 2024-11-07 (T-90 through T+30 relative to the 2024-10-08 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001597553.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "NEG-P2-2024-SAGE-PRECEDENT",
+      "event_date": "2024-04-17",
+      "ticker": "SAGE",
+      "issuer": "Sage Therapeutics, Inc.",
+      "cik": "1597553",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2024-01-18",
+      "financing_window_end": "2024-05-17",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001597553.json) for CIK 1597553 (Sage Therapeutics, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2024-01-18 and 2024-05-17 (T-90 through T+30 relative to the 2024-04-17 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001597553.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "NEG-P3-2021-DCPH-INTRIGUE",
+      "event_date": "2021-11-05",
+      "ticker": "DCPH",
+      "issuer": "Deciphera Pharmaceuticals, Inc.",
+      "cik": "1654151",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2021-08-07",
+      "financing_window_end": "2021-12-05",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001654151.json) for CIK 1654151 (Deciphera Pharmaceuticals, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2021-08-07 and 2021-12-05 (T-90 through T+30 relative to the 2021-11-05 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001654151.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "NEG-P3-2022-NKTR-PIVOTIO001",
+      "event_date": "2022-03-14",
+      "ticker": "NKTR",
+      "issuer": "Nektar Therapeutics",
+      "cik": "906709",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2021-12-14",
+      "financing_window_end": "2022-04-13",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0000906709.json) for CIK 906709 (Nektar Therapeutics) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2021-12-14 and 2022-04-13 (T-90 through T+30 relative to the 2022-03-14 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0000906709.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "NEG-P3-2023-MRTX-SAPPHIRE",
+      "event_date": "2023-05-24",
+      "ticker": "MRTX",
+      "issuer": "Mirati Therapeutics, Inc.",
+      "cik": "1576263",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2023-02-23",
+      "financing_window_end": "2023-06-23",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001576263.json) for CIK 1576263 (Mirati Therapeutics, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2023-02-23 and 2023-06-23 (T-90 through T+30 relative to the 2023-05-24 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001576263.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "NEG-P3-2024-AMLX-PHOENIX",
+      "event_date": "2024-03-08",
+      "ticker": "AMLX",
+      "issuer": "Amylyx Pharmaceuticals, Inc.",
+      "cik": "1658551",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2023-12-09",
+      "financing_window_end": "2024-04-07",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001658551.json) for CIK 1658551 (Amylyx Pharmaceuticals, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2023-12-09 and 2024-04-07 (T-90 through T+30 relative to the 2024-03-08 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001658551.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2018-BIIB-BAN2401",
+      "event_date": "2018-07-05",
+      "ticker": "BIIB",
+      "issuer": "Biogen Inc.",
+      "cik": "0000875045",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2018-04-06",
+      "financing_window_end": "2018-08-04",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0000875045.json) for CIK 0000875045 (Biogen Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2018-04-06 and 2018-08-04 (T-90 through T+30 relative to the 2018-07-05 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0000875045.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2018-ESPR-BA-PCSK9",
+      "event_date": "2018-03-27",
+      "ticker": "ESPR",
+      "issuer": "Esperion Therapeutics, Inc.",
+      "cik": "1434868",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2017-12-27",
+      "financing_window_end": "2018-04-26",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001434868.json) for CIK 1434868 (Esperion Therapeutics, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2017-12-27 and 2018-04-26 (T-90 through T+30 relative to the 2018-03-27 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001434868.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2019-AGIO-DRIVEPK",
+      "event_date": "2019-09-04",
+      "ticker": "AGIO",
+      "issuer": "Agios Pharmaceuticals, Inc.",
+      "cik": "1439222",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2019-06-06",
+      "financing_window_end": "2019-10-04",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001439222.json) for CIK 1439222 (Agios Pharmaceuticals, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2019-06-06 and 2019-10-04 (T-90 through T+30 relative to the 2019-09-04 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001439222.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2019-BIIB-LILAC",
+      "event_date": "2019-12-03",
+      "ticker": "BIIB",
+      "issuer": "Biogen Inc.",
+      "cik": "0000875045",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2019-09-04",
+      "financing_window_end": "2020-01-02",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0000875045.json) for CIK 0000875045 (Biogen Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2019-09-04 and 2020-01-02 (T-90 through T+30 relative to the 2019-12-03 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0000875045.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2019-MDGL-RESMETIROM",
+      "event_date": "2019-11-11",
+      "ticker": "MDGL",
+      "issuer": "Madrigal Pharmaceuticals, Inc.",
+      "cik": "1157601",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2019-08-13",
+      "financing_window_end": "2019-12-11",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001157601.json) for CIK 1157601 (Madrigal Pharmaceuticals, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2019-08-13 and 2019-12-11 (T-90 through T+30 relative to the 2019-11-11 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001157601.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2020-CRNX-ACROBAT",
+      "event_date": "2020-11-06",
+      "ticker": "CRNX",
+      "issuer": "Crinetics Pharmaceuticals, Inc.",
+      "cik": "0001658247",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2020-08-08",
+      "financing_window_end": "2020-12-06",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001658247.json) for CIK 0001658247 (Crinetics Pharmaceuticals, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2020-08-08 and 2020-12-06 (T-90 through T+30 relative to the 2020-11-06 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001658247.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2021-BIIB-CONVEY",
+      "event_date": "2021-09-16",
+      "ticker": "BIIB",
+      "issuer": "Biogen Inc.",
+      "cik": "0000875045",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2021-06-18",
+      "financing_window_end": "2021-10-16",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0000875045.json) for CIK 0000875045 (Biogen Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2021-06-18 and 2021-10-16 (T-90 through T+30 relative to the 2021-09-16 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0000875045.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2021-BIIB-TANGO",
+      "event_date": "2021-06-16",
+      "ticker": "BIIB",
+      "issuer": "Biogen Inc.",
+      "cik": "0000875045",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2021-03-18",
+      "financing_window_end": "2021-07-16",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0000875045.json) for CIK 0000875045 (Biogen Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2021-03-18 and 2021-07-16 (T-90 through T+30 relative to the 2021-06-16 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0000875045.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2021-GHRS-GH001",
+      "event_date": "2021-12-06",
+      "ticker": "GHRS",
+      "issuer": "GH Research PLC",
+      "cik": "1855129",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2021-09-07",
+      "financing_window_end": "2022-01-05",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001855129.json) for CIK 1855129 (GH Research PLC) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2021-09-07 and 2022-01-05 (T-90 through T+30 relative to the 2021-12-06 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001855129.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2022-CINC-HALO",
+      "event_date": "2022-11-28",
+      "ticker": "CINC",
+      "issuer": "CinCor Pharma, Inc.",
+      "cik": "1868734",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2022-08-30",
+      "financing_window_end": "2022-12-28",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001868734.json) for CIK 1868734 (CinCor Pharma, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2022-08-30 and 2022-12-28 (T-90 through T+30 relative to the 2022-11-28 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001868734.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2023-AKRO-SYMMETRY-MAIN",
+      "event_date": "2023-10-10",
+      "ticker": "AKRO",
+      "issuer": "Akero Therapeutics, Inc.",
+      "cik": "1744659",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2023-07-12",
+      "financing_window_end": "2023-11-09",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001744659.json) for CIK 1744659 (Akero Therapeutics, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2023-07-12 and 2023-11-09 (T-90 through T+30 relative to the 2023-10-10 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001744659.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2023-ALNY-KARDIA1",
+      "event_date": "2023-09-07",
+      "ticker": "ALNY",
+      "issuer": "Alnylam Pharmaceuticals, Inc.",
+      "cik": "1178670",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2023-06-09",
+      "financing_window_end": "2023-10-07",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001178670.json) for CIK 1178670 (Alnylam Pharmaceuticals, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2023-06-09 and 2023-10-07 (T-90 through T+30 relative to the 2023-09-07 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001178670.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2023-ALT-MOMENTUM",
+      "event_date": "2023-11-30",
+      "ticker": "ALT",
+      "issuer": "Altimmune, Inc.",
+      "cik": "0001326190",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2023-09-01",
+      "financing_window_end": "2023-12-30",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001326190.json) for CIK 0001326190 (Altimmune, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2023-09-01 and 2023-12-30 (T-90 through T+30 relative to the 2023-11-30 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001326190.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2024-BNTX-BNT111",
+      "event_date": "2024-07-30",
+      "ticker": "BNTX",
+      "issuer": "BioNTech SE",
+      "cik": "1776985",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2024-05-01",
+      "financing_window_end": "2024-08-29",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001776985.json) for CIK 1776985 (BioNTech SE) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2024-05-01 and 2024-08-29 (T-90 through T+30 relative to the 2024-07-30 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001776985.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2024-SAGE-DIMENSION",
+      "event_date": "2024-11-20",
+      "ticker": "SAGE",
+      "issuer": "Sage Therapeutics, Inc.",
+      "cik": "0001597553",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2024-08-22",
+      "financing_window_end": "2024-12-20",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001597553.json) for CIK 0001597553 (Sage Therapeutics, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2024-08-22 and 2024-12-20 (T-90 through T+30 relative to the 2024-11-20 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001597553.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2025-KALA-CHASE",
+      "event_date": "2025-09-29",
+      "ticker": "KALA",
+      "issuer": "KALA BIO, Inc.",
+      "cik": "1479419",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2025-07-01",
+      "financing_window_end": "2025-10-29",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001479419.json) for CIK 1479419 (KALA BIO, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2025-07-01 and 2025-10-29 (T-90 through T+30 relative to the 2025-09-29 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001479419.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2025-VTYX-VTX958",
+      "event_date": "2025-02-18",
+      "ticker": "VTYX",
+      "issuer": "Ventyx Biosciences, Inc.",
+      "cik": "1851194",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2024-11-20",
+      "financing_window_end": "2025-03-20",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001851194.json) for CIK 1851194 (Ventyx Biosciences, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2024-11-20 and 2025-03-20 (T-90 through T+30 relative to the 2025-02-18 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001851194.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P3-2018-RARE-UX007",
+      "event_date": "2018-10-26",
+      "ticker": "RARE",
+      "issuer": "Ultragenyx Pharmaceutical Inc.",
+      "cik": "1515673",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2018-07-28",
+      "financing_window_end": "2018-11-25",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001515673.json) for CIK 1515673 (Ultragenyx Pharmaceutical Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2018-07-28 and 2018-11-25 (T-90 through T+30 relative to the 2018-10-26 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001515673.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P3-2019-ICPT-REGENERATE",
+      "event_date": "2019-02-19",
+      "ticker": "ICPT",
+      "issuer": "Intercept Pharmaceuticals, Inc.",
+      "cik": "1270073",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2018-11-21",
+      "financing_window_end": "2019-03-21",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001270073.json) for CIK 1270073 (Intercept Pharmaceuticals, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2018-11-21 and 2019-03-21 (T-90 through T+30 relative to the 2019-02-19 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001270073.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P3-2020-AGIO-ACTIVATE",
+      "event_date": "2020-12-01",
+      "ticker": "AGIO",
+      "issuer": "Agios Pharmaceuticals, Inc.",
+      "cik": "0001439222",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2020-09-02",
+      "financing_window_end": "2020-12-31",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001439222.json) for CIK 0001439222 (Agios Pharmaceuticals, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2020-09-02 and 2020-12-31 (T-90 through T+30 relative to the 2020-12-01 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001439222.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P3-2020-CYTK-GALACTIC-HF",
+      "event_date": "2020-11-13",
+      "ticker": "CYTK",
+      "issuer": "Cytokinetics, Incorporated",
+      "cik": "1061983",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2020-08-15",
+      "financing_window_end": "2020-12-13",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001061983.json) for CIK 1061983 (Cytokinetics, Incorporated) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2020-08-15 and 2020-12-13 (T-90 through T+30 relative to the 2020-11-13 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001061983.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P3-2020-GMAB-ANDROMEDA",
+      "event_date": "2020-05-28",
+      "ticker": "GMAB",
+      "issuer": "Genmab A/S",
+      "cik": "1434265",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2020-02-28",
+      "financing_window_end": "2020-06-27",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001434265.json) for CIK 1434265 (Genmab A/S) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2020-02-28 and 2020-06-27 (T-90 through T+30 relative to the 2020-05-28 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001434265.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P3-2020-ONTX-INSPIRE",
+      "event_date": "2020-08-24",
+      "ticker": "ONTX",
+      "issuer": "Onconova Therapeutics, Inc.",
+      "cik": "1130598",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2020-05-26",
+      "financing_window_end": "2020-09-23",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001130598.json) for CIK 1130598 (Onconova Therapeutics, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2020-05-26 and 2020-09-23 (T-90 through T+30 relative to the 2020-08-24 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001130598.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P3-2021-BIIB-STAR",
+      "event_date": "2021-06-14",
+      "ticker": "BIIB",
+      "issuer": "Biogen Inc.",
+      "cik": "875045",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2021-03-16",
+      "financing_window_end": "2021-07-14",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0000875045.json) for CIK 875045 (Biogen Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2021-03-16 and 2021-07-14 (T-90 through T+30 relative to the 2021-06-14 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0000875045.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P3-2021-BIIB-VALOR",
+      "event_date": "2021-10-17",
+      "ticker": "BIIB",
+      "issuer": "Biogen Inc.",
+      "cik": "875045",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2021-07-19",
+      "financing_window_end": "2021-11-16",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0000875045.json) for CIK 875045 (Biogen Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2021-07-19 and 2021-11-16 (T-90 through T+30 relative to the 2021-10-17 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0000875045.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P3-2022-BGNE-ALPINE",
+      "event_date": "2022-10-12",
+      "ticker": "BGNE",
+      "issuer": "BeiGene, Ltd.",
+      "cik": "1651308",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2022-07-14",
+      "financing_window_end": "2022-11-11",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001651308.json) for CIK 1651308 (BeiGene, Ltd.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2022-07-14 and 2022-11-11 (T-90 through T+30 relative to the 2022-10-12 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001651308.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P3-2023-GMAB-INNOVATV301",
+      "event_date": "2023-09-04",
+      "ticker": "GMAB",
+      "issuer": "Genmab A/S",
+      "cik": "1434265",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2023-06-06",
+      "financing_window_end": "2023-10-04",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001434265.json) for CIK 1434265 (Genmab A/S) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2023-06-06 and 2023-10-04 (T-90 through T+30 relative to the 2023-09-04 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001434265.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P3-2024-SAVA-RETHINK",
+      "event_date": "2024-11-25",
+      "ticker": "SAVA",
+      "issuer": "Cassava Sciences, Inc.",
+      "cik": "1069530",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2024-08-27",
+      "financing_window_end": "2024-12-25",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001069530.json) for CIK 1069530 (Cassava Sciences, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2024-08-27 and 2024-12-25 (T-90 through T+30 relative to the 2024-11-25 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001069530.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P3-2025-ALEC-INFRONT3",
+      "event_date": "2025-10-21",
+      "ticker": "ALEC",
+      "issuer": "Alector, Inc.",
+      "cik": "1653087",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2025-07-23",
+      "financing_window_end": "2025-11-20",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001653087.json) for CIK 1653087 (Alector, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2025-07-23 and 2025-11-20 (T-90 through T+30 relative to the 2025-10-21 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001653087.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P3-2025-SAVA-REFOCUS",
+      "event_date": "2025-03-25",
+      "ticker": "SAVA",
+      "issuer": "Cassava Sciences, Inc.",
+      "cik": "1069530",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2024-12-25",
+      "financing_window_end": "2025-04-24",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001069530.json) for CIK 1069530 (Cassava Sciences, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2024-12-25 and 2025-04-24 (T-90 through T+30 relative to the 2025-03-25 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001069530.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2018-AGIO-TIBSOVO",
+      "event_date": "2018-07-20",
+      "ticker": "AGIO",
+      "issuer": "Agios Pharmaceuticals, Inc.",
+      "cik": "0001439222",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2018-04-21",
+      "financing_window_end": "2018-08-19",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001439222.json) for CIK 0001439222 (Agios Pharmaceuticals, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2018-04-21 and 2018-08-19 (T-90 through T+30 relative to the 2018-07-20 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001439222.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2018-ALNY-ONPATTRO",
+      "event_date": "2018-08-10",
+      "ticker": "ALNY",
+      "issuer": "Alnylam Pharmaceuticals, Inc.",
+      "cik": "0001178670",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2018-05-12",
+      "financing_window_end": "2018-09-09",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001178670.json) for CIK 0001178670 (Alnylam Pharmaceuticals, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2018-05-12 and 2018-09-09 (T-90 through T+30 relative to the 2018-08-10 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001178670.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2018-FOLD-GALAFOLD",
+      "event_date": "2018-08-10",
+      "ticker": "FOLD",
+      "issuer": "Amicus Therapeutics, Inc.",
+      "cik": "0001178879",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2018-05-12",
+      "financing_window_end": "2018-09-09",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001178879.json) for CIK 0001178879 (Amicus Therapeutics, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2018-05-12 and 2018-09-09 (T-90 through T+30 relative to the 2018-08-10 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001178879.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2019-GBT-OXBRYTA",
+      "event_date": "2019-11-25",
+      "ticker": "GBT",
+      "issuer": "Global Blood Therapeutics, Inc.",
+      "cik": "0001629137",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2019-08-27",
+      "financing_window_end": "2019-12-25",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001629137.json) for CIK 0001629137 (Global Blood Therapeutics, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2019-08-27 and 2019-12-25 (T-90 through T+30 relative to the 2019-11-25 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001629137.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2019-SRPT-GOLODIRSEN-CRL",
+      "event_date": "2019-08-19",
+      "ticker": "SRPT",
+      "issuer": "Sarepta Therapeutics, Inc.",
+      "cik": "873303",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2019-05-21",
+      "financing_window_end": "2019-09-18",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0000873303.json) for CIK 873303 (Sarepta Therapeutics, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2019-05-21 and 2019-09-18 (T-90 through T+30 relative to the 2019-08-19 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0000873303.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2020-BMRN-VALROX-CRL",
+      "event_date": "2020-08-19",
+      "ticker": "BMRN",
+      "issuer": "BioMarin Pharmaceutical Inc.",
+      "cik": "0001048477",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2020-05-21",
+      "financing_window_end": "2020-09-18",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001048477.json) for CIK 0001048477 (BioMarin Pharmaceutical Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2020-05-21 and 2020-09-18 (T-90 through T+30 relative to the 2020-08-19 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001048477.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2020-ICPT-OCA-CRL",
+      "event_date": "2020-06-29",
+      "ticker": "ICPT",
+      "issuer": "Intercept Pharmaceuticals, Inc.",
+      "cik": "0001270073",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2020-03-31",
+      "financing_window_end": "2020-07-29",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001270073.json) for CIK 0001270073 (Intercept Pharmaceuticals, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2020-03-31 and 2020-07-29 (T-90 through T+30 relative to the 2020-06-29 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001270073.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2020-RYTM-IMCIVREE",
+      "event_date": "2020-11-27",
+      "ticker": "RYTM",
+      "issuer": "Rhythm Pharmaceuticals, Inc.",
+      "cik": "0001649904",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2020-08-29",
+      "financing_window_end": "2020-12-27",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001649904.json) for CIK 0001649904 (Rhythm Pharmaceuticals, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2020-08-29 and 2020-12-27 (T-90 through T+30 relative to the 2020-11-27 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001649904.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2020-TCDA-VEVERIMER-CRL",
+      "event_date": "2020-08-24",
+      "ticker": "TCDA",
+      "issuer": "Tricida, Inc.",
+      "cik": "1595585",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2020-05-26",
+      "financing_window_end": "2020-09-23",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001595585.json) for CIK 1595585 (Tricida, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2020-05-26 and 2020-09-23 (T-90 through T+30 relative to the 2020-08-24 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001595585.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2021-APLS-EMPAVELI",
+      "event_date": "2021-05-14",
+      "ticker": "APLS",
+      "issuer": "Apellis Pharmaceuticals, Inc.",
+      "cik": "0001492422",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2021-02-13",
+      "financing_window_end": "2021-06-13",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001492422.json) for CIK 0001492422 (Apellis Pharmaceuticals, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2021-02-13 and 2021-06-13 (T-90 through T+30 relative to the 2021-05-14 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001492422.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2021-ATNX-ORALPAC-CRL",
+      "event_date": "2021-03-01",
+      "ticker": "ATNX",
+      "issuer": "Athenex, Inc.",
+      "cik": "0001300699",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2020-12-01",
+      "financing_window_end": "2021-03-31",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001300699.json) for CIK 0001300699 (Athenex, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2020-12-01 and 2021-03-31 (T-90 through T+30 relative to the 2021-03-01 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001300699.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2021-FGEN-ROXADUSTAT-CRL",
+      "event_date": "2021-08-11",
+      "ticker": "FGEN",
+      "issuer": "FibroGen, Inc.",
+      "cik": "0000921299",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2021-05-13",
+      "financing_window_end": "2021-09-10",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0000921299.json) for CIK 0000921299 (FibroGen, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2021-05-13 and 2021-09-10 (T-90 through T+30 relative to the 2021-08-11 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0000921299.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2021-INCY-OPZELURA",
+      "event_date": "2021-09-21",
+      "ticker": "INCY",
+      "issuer": "Incyte Corporation",
+      "cik": "0000879169",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2021-06-23",
+      "financing_window_end": "2021-10-21",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0000879169.json) for CIK 0000879169 (Incyte Corporation) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2021-06-23 and 2021-10-21 (T-90 through T+30 relative to the 2021-09-21 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0000879169.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2021-OMER-NARSOPLIMAB-CRL",
+      "event_date": "2021-10-18",
+      "ticker": "OMER",
+      "issuer": "Omeros Corporation",
+      "cik": "1285819",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2021-07-20",
+      "financing_window_end": "2021-11-17",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001285819.json) for CIK 1285819 (Omeros Corporation) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2021-07-20 and 2021-11-17 (T-90 through T+30 relative to the 2021-10-18 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001285819.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2022-CHRS-TORIPALIMAB-CRL",
+      "event_date": "2022-05-02",
+      "ticker": "CHRS",
+      "issuer": "Coherus BioSciences, Inc.",
+      "cik": "0001512762",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2022-02-01",
+      "financing_window_end": "2022-06-01",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001512762.json) for CIK 0001512762 (Coherus BioSciences, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2022-02-01 and 2022-06-01 (T-90 through T+30 relative to the 2022-05-02 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001512762.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2022-IMGN-ELAHERE",
+      "event_date": "2022-11-14",
+      "ticker": "IMGN",
+      "issuer": "ImmunoGen, Inc.",
+      "cik": "0000855654",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2022-08-16",
+      "financing_window_end": "2022-12-14",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0000855654.json) for CIK 0000855654 (ImmunoGen, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2022-08-16 and 2022-12-14 (T-90 through T+30 relative to the 2022-11-14 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0000855654.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2022-TGTX-BRIUMVI",
+      "event_date": "2022-12-28",
+      "ticker": "TGTX",
+      "issuer": "TG Therapeutics, Inc.",
+      "cik": "0001001316",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2022-09-29",
+      "financing_window_end": "2023-01-27",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001001316.json) for CIK 0001001316 (TG Therapeutics, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2022-09-29 and 2023-01-27 (T-90 through T+30 relative to the 2022-12-28 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001001316.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2023-BMRN-ROCTAVIAN",
+      "event_date": "2023-06-29",
+      "ticker": "BMRN",
+      "issuer": "BioMarin Pharmaceutical Inc.",
+      "cik": "1048477",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2023-03-31",
+      "financing_window_end": "2023-07-29",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001048477.json) for CIK 1048477 (BioMarin Pharmaceutical Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2023-03-31 and 2023-07-29 (T-90 through T+30 relative to the 2023-06-29 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001048477.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2023-GERN-IMETELSTAT-NDA-ACCEPT",
+      "event_date": "2023-08-21",
+      "ticker": "GERN",
+      "issuer": "Geron Corporation",
+      "cik": "0000886744",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2023-05-23",
+      "financing_window_end": "2023-09-20",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0000886744.json) for CIK 0000886744 (Geron Corporation) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2023-05-23 and 2023-09-20 (T-90 through T+30 relative to the 2023-08-21 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0000886744.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2023-IONS-QALSODY",
+      "event_date": "2023-04-25",
+      "ticker": "IONS",
+      "issuer": "Ionis Pharmaceuticals, Inc.",
+      "cik": "0000874015",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2023-01-25",
+      "financing_window_end": "2023-05-25",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0000874015.json) for CIK 0000874015 (Ionis Pharmaceuticals, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2023-01-25 and 2023-05-25 (T-90 through T+30 relative to the 2023-04-25 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0000874015.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2023-RETA-SKYCLARYS",
+      "event_date": "2023-02-28",
+      "ticker": "RETA",
+      "issuer": "Reata Pharmaceuticals, Inc.",
+      "cik": "0001358762",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2022-11-30",
+      "financing_window_end": "2023-03-30",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001358762.json) for CIK 0001358762 (Reata Pharmaceuticals, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2022-11-30 and 2023-03-30 (T-90 through T+30 relative to the 2023-02-28 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001358762.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2023-SRPT-ELEVIDYS",
+      "event_date": "2023-06-22",
+      "ticker": "SRPT",
+      "issuer": "Sarepta Therapeutics, Inc.",
+      "cik": "873303",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2023-03-24",
+      "financing_window_end": "2023-07-22",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0000873303.json) for CIK 873303 (Sarepta Therapeutics, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2023-03-24 and 2023-07-22 (T-90 through T+30 relative to the 2023-06-22 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0000873303.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2024-APLT-GOVORESTAT-CRL",
+      "event_date": "2024-11-27",
+      "ticker": "APLT",
+      "issuer": "Applied Therapeutics, Inc.",
+      "cik": "1697532",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2024-08-29",
+      "financing_window_end": "2024-12-27",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001697532.json) for CIK 1697532 (Applied Therapeutics, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2024-08-29 and 2024-12-27 (T-90 through T+30 relative to the 2024-11-27 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001697532.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2024-BBIO-ATTRUBY",
+      "event_date": "2024-11-22",
+      "ticker": "BBIO",
+      "issuer": "BridgeBio Pharma, Inc.",
+      "cik": "0001743881",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2024-08-24",
+      "financing_window_end": "2024-12-22",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001743881.json) for CIK 0001743881 (BridgeBio Pharma, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2024-08-24 and 2024-12-22 (T-90 through T+30 relative to the 2024-11-22 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001743881.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2024-DAWN-OJEMDA",
+      "event_date": "2024-04-23",
+      "ticker": "DAWN",
+      "issuer": "Day One Biopharmaceuticals, Inc.",
+      "cik": "0001845337",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2024-01-24",
+      "financing_window_end": "2024-05-23",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001845337.json) for CIK 0001845337 (Day One Biopharmaceuticals, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2024-01-24 and 2024-05-23 (T-90 through T+30 relative to the 2024-04-23 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001845337.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2024-IONS-TRYNGOLZA",
+      "event_date": "2024-12-19",
+      "ticker": "IONS",
+      "issuer": "Ionis Pharmaceuticals, Inc.",
+      "cik": "0000874015",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2024-09-20",
+      "financing_window_end": "2025-01-18",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0000874015.json) for CIK 0000874015 (Ionis Pharmaceuticals, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2024-09-20 and 2025-01-18 (T-90 through T+30 relative to the 2024-12-19 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0000874015.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2024-RCKT-KRESLADI-CRL",
+      "event_date": "2024-06-28",
+      "ticker": "RCKT",
+      "issuer": "Rocket Pharmaceuticals, Inc.",
+      "cik": "1281895",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2024-03-30",
+      "financing_window_end": "2024-07-28",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001281895.json) for CIK 1281895 (Rocket Pharmaceuticals, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2024-03-30 and 2024-07-28 (T-90 through T+30 relative to the 2024-06-28 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001281895.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2024-REGN-LINVOSELTAMAB-CRL",
+      "event_date": "2024-08-20",
+      "ticker": "REGN",
+      "issuer": "Regeneron Pharmaceuticals, Inc.",
+      "cik": "872589",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2024-05-22",
+      "financing_window_end": "2024-09-19",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0000872589.json) for CIK 872589 (Regeneron Pharmaceuticals, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2024-05-22 and 2024-09-19 (T-90 through T+30 relative to the 2024-08-20 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0000872589.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2024-SNDX-REVUFORJ",
+      "event_date": "2024-11-15",
+      "ticker": "SNDX",
+      "issuer": "Syndax Pharmaceuticals, Inc.",
+      "cik": "0001395937",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2024-08-17",
+      "financing_window_end": "2024-12-15",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001395937.json) for CIK 0001395937 (Syndax Pharmaceuticals, Inc.) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2024-08-17 and 2024-12-15 (T-90 through T+30 relative to the 2024-11-15 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001395937.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2024-VRNA-OHTUVAYRE",
+      "event_date": "2024-06-26",
+      "ticker": "VRNA",
+      "issuer": "Verona Pharma plc",
+      "cik": "1657312",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2024-03-28",
+      "financing_window_end": "2024-07-26",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0001657312.json) for CIK 1657312 (Verona Pharma plc) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2024-03-28 and 2024-07-26 (T-90 through T+30 relative to the 2024-06-26 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0001657312.json"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2024-VRTX-ALYFTREK",
+      "event_date": "2024-12-20",
+      "ticker": "VRTX",
+      "issuer": "Vertex Pharmaceuticals Incorporated",
+      "cik": "875320",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2024-09-21",
+      "financing_window_end": "2025-01-19",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "Bulk SEC EDGAR submissions sweep (data.sec.gov/submissions/CIK0000875320.json) for CIK 875320 (Vertex Pharmaceuticals Incorporated) found zero 424B1/424B2/424B3/424B4/424B5, S-1, S-1/A, S-3, or S-3/A filings, and zero 8-K filings with Item 3.02 (Unregistered Sales of Equity Securities), dated between 2024-09-21 and 2025-01-19 (T-90 through T+30 relative to the 2024-12-20 event). No registered or PIPE equity issuance is evidenced in the financing window.",
+      "source_urls": [
+        "https://data.sec.gov/submissions/CIK0000875320.json"
+      ],
+      "outcome_inspected_for_selection": false
+    }
+  ]
+}

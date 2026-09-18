@@ -1,0 +1,95 @@
+{
+  "acquisition_path": "validation/m7/acquisition/newly-sourced-batch-10.json",
+  "candidate_id": "REG-2019-SRPT-GOLODIRSEN-CRL",
+  "catalyst_observation": {
+    "asset": "golodirsen (VYONDYS 53)",
+    "catalyst_type": "REG_DECISION",
+    "clinical_phase": "REGULATORY_DECISION",
+    "evidence_id": "03c5bbef-72e9-58bf-a93f-535a9b961fab",
+    "external_event_id": "REG-2019-SRPT-GOLODIRSEN-CRL",
+    "indication": "Duchenne muscular dystrophy (exon 53 skip-amenable)",
+    "issuer_id": "0000873303",
+    "known_at": "2019-08-19T18:29:46-04:00",
+    "source_statement": "FDA CRL for golodirsen (accelerated approval NDA) cited infection risk from IV infusion ports and pre-clinical renal toxicity concerns; issuer's own release quotes leadership as 'very surprised' - unambiguous negative surprise. This is a distinct, earlier, separate catalyst from REG-2023-SRPT-ELEVIDYS (already in the pool, a 2023 approval for a different asset); Sarepta now has 2 pool events, well under the 5-event issuer cap.",
+    "source_tier": 2,
+    "timing_confidence": "HIGH",
+    "title": "Sarepta Therapeutics, Inc. - golodirsen (VYONDYS 53) (Duchenne muscular dystrophy (exon 53 skip-amenable))",
+    "window_end": "2019-08-19",
+    "window_start": "2019-08-19"
+  },
+  "catalyst_version": {
+    "asset": "golodirsen (VYONDYS 53)",
+    "canonical_key": "0000873303|golodirsen (vyondys 53)|duchenne muscular dystrophy (exon 53 skip-amenable)|REG_DECISION",
+    "catalyst_type": "REG_DECISION",
+    "clinical_phase": "REGULATORY_DECISION",
+    "conflicts": [],
+    "id": "cd0de907-f140-560c-a30c-0b7664d25da3",
+    "indication": "Duchenne muscular dystrophy (exon 53 skip-amenable)",
+    "issuer_id": "0000873303",
+    "known_at": "2019-08-19T18:29:46-04:00",
+    "primary_evidence_id": "03c5bbef-72e9-58bf-a93f-535a9b961fab",
+    "resolved_at_cutoff": "2019-08-19T18:29:46-04:00",
+    "supporting_evidence_ids": [
+      "03c5bbef-72e9-58bf-a93f-535a9b961fab"
+    ],
+    "timing_confidence": "HIGH",
+    "title": "Sarepta Therapeutics, Inc. - golodirsen (VYONDYS 53) (Duchenne muscular dystrophy (exon 53 skip-amenable))",
+    "version": 1,
+    "version_sha256": "a753c3469b49a059fc2b9aed20ecf1060eb91cfde8f5fd40c2b9d8cfc46fc815",
+    "window_end": "2019-08-19",
+    "window_start": "2019-08-19"
+  },
+  "company": "Sarepta Therapeutics, Inc.",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": true,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "381ddc6164ff1ce7d5233383243a2a1ad7f488fac51295a97ceabc2eb605ace9",
+  "promotion_blockers": [
+    "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2019-08-19T18:29:46-04:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "golodirsen (VYONDYS 53)",
+    "blinded": null,
+    "catalyst_version_id": "cd0de907-f140-560c-a30c-0b7664d25da3",
+    "clinical_phase": "REGULATORY_DECISION",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2019-08-19T18:29:46-04:00",
+    "evidence_ids": [
+      "03c5bbef-72e9-58bf-a93f-535a9b961fab"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "1117d172-05b7-5f71-99de-a97277a56629",
+    "indication": "Duchenne muscular dystrophy (exon 53 skip-amenable)",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://www.sec.gov/Archives/edgar/data/873303/000156459019032588/srpt-ex991_6.htm"
+  ],
+  "stratum": "REGULATORY",
+  "ticker": "SRPT",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-42.json"
+}

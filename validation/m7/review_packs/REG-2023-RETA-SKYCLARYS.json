@@ -1,0 +1,97 @@
+{
+  "acquisition_path": "validation/m7/acquisition/regulatory-primary-batch-01.json",
+  "candidate_id": "REG-2023-RETA-SKYCLARYS",
+  "catalyst_observation": {
+    "asset": "SKYCLARYS (omaveloxolone)",
+    "catalyst_type": "REG_DECISION",
+    "clinical_phase": "REGULATORY_DECISION",
+    "evidence_id": "3aba8ce8-09a4-5421-a095-fb2c09442c69",
+    "external_event_id": "REG-2023-RETA-SKYCLARYS",
+    "indication": "Friedreich's ataxia",
+    "issuer_id": "0001358762",
+    "known_at": "2023-02-28T17:28:00-05:00",
+    "source_statement": "Contemporaneous SEC exhibit; exact first-public clock unresolved.",
+    "source_tier": 2,
+    "timing_confidence": "MODERATE",
+    "title": "Reata Pharmaceuticals, Inc. - SKYCLARYS (omaveloxolone) (Friedreich's ataxia)",
+    "window_end": "2023-02-28",
+    "window_start": "2023-02-28"
+  },
+  "catalyst_version": {
+    "asset": "SKYCLARYS (omaveloxolone)",
+    "canonical_key": "0001358762|skyclarys (omaveloxolone)|friedreich's ataxia|REG_DECISION",
+    "catalyst_type": "REG_DECISION",
+    "clinical_phase": "REGULATORY_DECISION",
+    "conflicts": [],
+    "id": "101d0677-6ab3-5a16-8be9-0b8893114014",
+    "indication": "Friedreich's ataxia",
+    "issuer_id": "0001358762",
+    "known_at": "2023-02-28T17:28:00-05:00",
+    "primary_evidence_id": "3aba8ce8-09a4-5421-a095-fb2c09442c69",
+    "resolved_at_cutoff": "2023-02-28T17:28:00-05:00",
+    "supporting_evidence_ids": [
+      "3aba8ce8-09a4-5421-a095-fb2c09442c69"
+    ],
+    "timing_confidence": "MODERATE",
+    "title": "Reata Pharmaceuticals, Inc. - SKYCLARYS (omaveloxolone) (Friedreich's ataxia)",
+    "version": 1,
+    "version_sha256": "1b836d67edeb6d2e7541f5404726d986b420775a570d99afca1b019c896c6620",
+    "window_end": "2023-02-28",
+    "window_start": "2023-02-28"
+  },
+  "company": "Reata Pharmaceuticals, Inc.",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": false,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "7b393ae0174e1f24e995471e3074e88e70741d17214e75b473d7671d6ca25cfa",
+  "promotion_blockers": [
+    "RESOLVE_EXACT_FIRST_PUBLIC_TIMESTAMP",
+    "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
+    "RESOLVE_NEGATIVE_EVENT_STATUS",
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2023-02-28T17:28:00-05:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "SKYCLARYS (omaveloxolone)",
+    "blinded": null,
+    "catalyst_version_id": "101d0677-6ab3-5a16-8be9-0b8893114014",
+    "clinical_phase": "REGULATORY_DECISION",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2023-02-28T17:28:00-05:00",
+    "evidence_ids": [
+      "3aba8ce8-09a4-5421-a095-fb2c09442c69"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "a0ec23af-0944-5463-99bb-f361bf25fd32",
+    "indication": "Friedreich's ataxia",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://www.sec.gov/Archives/edgar/data/1358762/000095017023005219/reta-ex99_2.htm"
+  ],
+  "stratum": "REGULATORY",
+  "ticker": "RETA",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-34.json"
+}

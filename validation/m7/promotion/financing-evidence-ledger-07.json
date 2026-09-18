@@ -1,0 +1,432 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-17",
+  "role": "PREFREEZE_FULL_POOL_FINANCING_SWEEP",
+  "market_outcomes_inspected": false,
+  "cohort_frozen": false,
+  "trigger": "Full-pool financing sweep (see financing-evidence-ledger-06.json for the zero-hit majority and full methodology). These 23 candidates had at least one 424B/S-1/S-3/8-K-Item-3.02 filing land inside their T-90-to-T+30 window; each was individually fetched and read to confirm it represents an actual primary issuance or debt draw with real proceeds to the issuer (not a resale-only registration, a bare shelf registration with no accompanying takedown, or a same-shareholder share-for-warrant exchange with no new capital).",
+  "qualification_rule": "Count only actual issuer equity, equity-linked, or debt capital raised from T-90 through T+30. Theoretical shelf or ATM registration capacity without actual issuance is not sufficient, and a registration statement covering the resale of already-outstanding shares by existing holders is not company financing.",
+  "summary": {
+    "reviewed": 23,
+    "qualifies": 23,
+    "does_not_qualify": 0
+  },
+  "rows": [
+    {
+      "candidate_id": "CO-2019-BGNE-ZANUASH",
+      "event_date": "2019-12-08",
+      "ticker": "BGNE",
+      "issuer": "BeiGene, Ltd.",
+      "historical_universe_status": "PASS",
+      "financing_date": "2019-10-31",
+      "relative_day": -38,
+      "financing_type": "STRATEGIC_EQUITY_INVESTMENT",
+      "gross_proceeds_usd": 2700000000,
+      "securities": "Amgen acquired a 20.5% post-closing equity stake in BeiGene ADSs at a 36% premium to the 30-day VWAP, alongside a China oncology collaboration agreement",
+      "evidence_summary": "8-K Item 1.01 (2019-10-31): 'Amgen will acquire a 20.5% post-closing equity stake in the Company at a 36% premium to the 30-day volume weighted average price of the Company's American Depositary Shares (ADSs) on NASDAQ as of October 30, 2019, for a total of approximately US$2.7 billion.' Follow-up 8-Ks (2019-12-06, 2020-01-02) report deal-closing progress on the same transaction.",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1651308/000165130819000098/a8-kx103119.htm"
+      ],
+      "status": "QUALIFIES",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "CO-2020-TRIL-TTI622ASH",
+      "event_date": "2020-12-07",
+      "ticker": "TRIL",
+      "issuer": "Trillium Therapeutics Inc.",
+      "historical_universe_status": "PASS",
+      "financing_date": "2020-09-09",
+      "relative_day": -89,
+      "financing_type": "UNDERWRITTEN_PUBLIC_OFFERING_PLUS_CONCURRENT_PRIVATE_PLACEMENT",
+      "gross_proceeds_usd": null,
+      "securities": "8,500,000 common shares (initial 424B5) plus a directly-placed tranche of 2,297,794 common shares to an investor at $10.00/share, and a related 10,000,000-share follow-on 424B5 two days later",
+      "evidence_summary": "Three 424B5 prospectus supplements within days of each other: 'We are offering 8,500,000 common shares' (2020-09-09), 'We are offering 2,297,794 common shares directly to the investor in this offering at a price of US$10.00' (2020-09-09), 'We are offering 10,000,000 common shares' (2020-09-11).",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1616212/000106299320004414/"
+      ],
+      "status": "QUALIFIES",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "CO-2024-IRON-DISC0974ASH",
+      "event_date": "2024-12-08",
+      "ticker": "IRON",
+      "issuer": "Disc Medicine, Inc.",
+      "historical_universe_status": "PASS",
+      "financing_date": "2024-11-15",
+      "relative_day": -23,
+      "financing_type": "UNDERWRITTEN_PUBLIC_OFFERING",
+      "gross_proceeds_usd": null,
+      "securities": "Common stock, firm-commitment underwritten shelf takedown",
+      "evidence_summary": "424B5 prospectus supplement (2024-11-15) front cover: 'We are offering to sell, and seeking offers to buy, shares of common stock,' with confirmed 'net proceeds to us' language.",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1816736/000119312524259884/"
+      ],
+      "status": "QUALIFIES",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "CO-2024-NRIX-NX5948ASH",
+      "event_date": "2024-12-09",
+      "ticker": "NRIX",
+      "issuer": "Nurix Therapeutics, Inc.",
+      "historical_universe_status": "PASS",
+      "financing_date": "2024-10-31",
+      "relative_day": -39,
+      "financing_type": "UNDERWRITTEN_PUBLIC_OFFERING",
+      "gross_proceeds_usd": null,
+      "securities": "Common stock, shelf takedown",
+      "evidence_summary": "424B5 prospectus supplement (2024-10-31) confirms 'net proceeds to us' language for a primary common stock offering under the company's effective shelf registration.",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1549595/000119312524248749/"
+      ],
+      "status": "QUALIFIES",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "EC-2021-NTLA-NTLA2001",
+      "event_date": "2021-06-26",
+      "ticker": "NTLA",
+      "issuer": "Intellia Therapeutics, Inc.",
+      "historical_universe_status": "PASS",
+      "financing_date": "2021-06-28",
+      "relative_day": 2,
+      "financing_type": "UNDERWRITTEN_PUBLIC_OFFERING",
+      "gross_proceeds_usd": 400000000,
+      "securities": "4,137,931 shares of common stock (base offering); prospectus supplement caps the raise at $400,000,000",
+      "evidence_summary": "424B5 (2021-06-28): 'We are offering $400,000,000 of shares of our common stock.' A second 424B5 (2021-07-01) states 'We are offering 4,137,931 shares of our common stock.'",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1652130/000119312521201898/"
+      ],
+      "status": "QUALIFIES",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2018-GWPH-GWP42006",
+      "event_date": "2018-02-21",
+      "ticker": "GWPH",
+      "issuer": "GW Pharmaceuticals plc",
+      "historical_universe_status": "PASS",
+      "financing_date": "2017-12-05",
+      "relative_day": -78,
+      "financing_type": "UNDERWRITTEN_PUBLIC_OFFERING",
+      "gross_proceeds_usd": 276000000,
+      "securities": "2,400,000 American Depositary Shares (representing 28,800,000 ordinary shares) at $115.00/ADS, plus a 360,000-ADS underwriters' option",
+      "evidence_summary": "424B5 prospectus supplement cover page and SEC registration-fee table: 'Prospectus Supplement...2,400,000 American Depositary Shares GW Pharmaceuticals plc,' with a Calculation of Registration Fee table showing 33,120,000 new ordinary shares (inclusive of the underwriters' option) being registered for sale at $115.00/ADS ($317.4M maximum aggregate offering price including the option).",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1351288/000114420417062869/tv480962_424b5.htm"
+      ],
+      "status": "QUALIFIES",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2019-AXSM-AXS05-SMOKING",
+      "event_date": "2019-04-15",
+      "ticker": "AXSM",
+      "issuer": "Axsome Therapeutics, Inc.",
+      "historical_universe_status": "PASS",
+      "financing_date": "2019-05-09",
+      "relative_day": 24,
+      "financing_type": "UNDERWRITTEN_PUBLIC_OFFERING",
+      "gross_proceeds_usd": null,
+      "securities": "Common stock, shelf takedown",
+      "evidence_summary": "424B5 prospectus supplement (2019-05-09) confirms 'net proceeds' language for a primary common stock offering.",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1579428/000155837019004723/"
+      ],
+      "status": "QUALIFIES",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2023-AKRO-SYMMETRY-COHORT-D",
+      "event_date": "2023-06-05",
+      "ticker": "AKRO",
+      "issuer": "Akero Therapeutics, Inc.",
+      "historical_universe_status": "PASS",
+      "financing_date": "2023-05-17",
+      "relative_day": -19,
+      "financing_type": "UNDERWRITTEN_PUBLIC_OFFERING",
+      "gross_proceeds_usd": null,
+      "securities": "5,238,500 shares of common stock",
+      "evidence_summary": "424B5 (2023-05-17): 'We are offering 5,238,500 shares of our common stock,' with confirmed net-proceeds-to-us language.",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1744659/000119312523147070/"
+      ],
+      "status": "QUALIFIES",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2023-APLS-MERIDIAN",
+      "event_date": "2023-05-25",
+      "ticker": "APLS",
+      "issuer": "Apellis Pharmaceuticals, Inc.",
+      "historical_universe_status": "PASS",
+      "financing_date": "2023-02-24",
+      "relative_day": -90,
+      "financing_type": "UNDERWRITTEN_PUBLIC_OFFERING",
+      "gross_proceeds_usd": null,
+      "securities": "3,174,603 shares of common stock, plus pre-funded warrants for up to 2,380,956 additional shares",
+      "evidence_summary": "424B5 (2023-02-24): 'We are offering 3,174,603 shares of our common stock and, in lieu of common stock to investors who so choose, pre-funded warrants to purchase up to 2,380,956 shares of our common stock,' with confirmed net-proceeds-to-us language.",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1492422/000119312523048395/"
+      ],
+      "status": "QUALIFIES",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2023-ATAI-PCN101",
+      "event_date": "2023-01-06",
+      "ticker": "ATAI",
+      "issuer": "atai Life Sciences N.V.",
+      "historical_universe_status": "PASS",
+      "financing_date": "2022-11-10",
+      "relative_day": -57,
+      "financing_type": "UNDERWRITTEN_PUBLIC_OFFERING",
+      "gross_proceeds_usd": null,
+      "securities": "Common shares, shelf takedown",
+      "evidence_summary": "424B5 (2022-11-10) front cover: 'We are offering to sell, and seeking offers to buy, our common shares.'",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1840904/000119312522281974/"
+      ],
+      "status": "QUALIFIES",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2023-TERN-DUET",
+      "event_date": "2023-08-08",
+      "ticker": "TERN",
+      "issuer": "Terns Pharmaceuticals, Inc.",
+      "historical_universe_status": "PASS",
+      "financing_date": "2023-05-15",
+      "relative_day": -85,
+      "financing_type": "UNDERWRITTEN_PUBLIC_OFFERING",
+      "gross_proceeds_usd": null,
+      "securities": "Common stock, shelf takedown",
+      "evidence_summary": "424B5 prospectus supplement (2023-05-15) confirms 'net proceeds to us' language for a primary common stock offering.",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1831363/000119312523145020/"
+      ],
+      "status": "QUALIFIES",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2024-ANAB-ANB032",
+      "event_date": "2024-12-11",
+      "ticker": "ANAB",
+      "issuer": "AnaptysBio, Inc.",
+      "historical_universe_status": "PASS",
+      "financing_date": "2024-11-15",
+      "relative_day": -26,
+      "financing_type": "UNDERWRITTEN_PUBLIC_OFFERING",
+      "gross_proceeds_usd": null,
+      "securities": "Common stock, shelf takedown (registered via an S-3 filed 2024-11-05, taken down via 424B5 on 2024-11-15)",
+      "evidence_summary": "424B5 prospectus supplement (2024-11-15) confirms 'net proceeds to us' language for a primary common stock offering under the newly effective shelf.",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1370053/000162828024048092/"
+      ],
+      "status": "QUALIFIES",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P3-2019-NVAX-PREPARE",
+      "event_date": "2019-02-28",
+      "ticker": "NVAX",
+      "issuer": "Novavax, Inc.",
+      "historical_universe_status": "PASS",
+      "financing_date": "2018-12-31",
+      "relative_day": -59,
+      "financing_type": "UNDERWRITTEN_PUBLIC_OFFERING",
+      "gross_proceeds_usd": null,
+      "securities": "Securities offered under shelf registration",
+      "evidence_summary": "424B5 (2018-12-31) front cover: 'We are offering to sell our securities, and seeking offers to buy, only in jurisdictions where offers and sales are permitted,' with confirmed net-proceeds-to-us language.",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1000694/000114420418066754/"
+      ],
+      "status": "QUALIFIES",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P3-2020-CRBP-RESOLVE1",
+      "event_date": "2020-09-08",
+      "ticker": "CRBP",
+      "issuer": "Corbus Pharmaceuticals Holdings, Inc.",
+      "historical_universe_status": "PASS",
+      "financing_date": "2020-08-07",
+      "relative_day": -32,
+      "financing_type": "UNDERWRITTEN_PUBLIC_OFFERING",
+      "gross_proceeds_usd": null,
+      "securities": "Common stock, shelf takedown",
+      "evidence_summary": "424B5 prospectus supplement (2020-08-07, two filings same day) front cover: 'We are offering to sell, and seeking offers to buy, shares of our common stock.' A related 8-K (2020-07-29) announced entry into the underwriting agreement.",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1595097/000149315220014904/"
+      ],
+      "status": "QUALIFIES",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P3-2024-ANNX-ANX005",
+      "event_date": "2024-06-04",
+      "ticker": "ANNX",
+      "issuer": "Annexon, Inc.",
+      "historical_universe_status": "PASS",
+      "financing_date": "2024-06-04",
+      "relative_day": 0,
+      "financing_type": "UNDERWRITTEN_PUBLIC_OFFERING",
+      "gross_proceeds_usd": 125000000,
+      "securities": "13,001,120 shares of common stock; prospectus supplement caps the raise at $125,000,000",
+      "evidence_summary": "424B5 (2024-06-04): 'We are offering $125,000,000 of shares of our common stock.' A second 424B5 (2024-06-07) states 'We are offering 13,001,120 shares of our common stock.'",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1528115/000119312524154391/"
+      ],
+      "status": "QUALIFIES",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P3-2024-NAMS-BROADWAY",
+      "event_date": "2024-12-10",
+      "ticker": "NAMS",
+      "issuer": "NewAmsterdam Pharma Company N.V.",
+      "historical_universe_status": "PASS",
+      "financing_date": "2024-12-10",
+      "relative_day": 0,
+      "financing_type": "UNDERWRITTEN_PUBLIC_OFFERING",
+      "gross_proceeds_usd": 300000000,
+      "securities": "12,117,347 ordinary shares (as ADSs); prospectus supplement caps the raise at $300,000,000",
+      "evidence_summary": "424B5 (2024-12-10): 'We are offering $300 million of our ordinary shares.' A second 424B5 (2024-12-13) states 'We are offering 12,117,347 ordinary shares.'",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1936258/000119312524274386/"
+      ],
+      "status": "QUALIFIES",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P3-2024-NAMS-BROOKLYN",
+      "event_date": "2024-07-29",
+      "ticker": "NAMS",
+      "issuer": "NewAmsterdam Pharma Company N.V.",
+      "historical_universe_status": "PASS",
+      "financing_date": "2024-08-09",
+      "relative_day": 11,
+      "financing_type": "UNDERWRITTEN_PUBLIC_OFFERING",
+      "gross_proceeds_usd": null,
+      "securities": "Ordinary shares (as ADSs), shelf takedown (registered via an S-3 filed 2024-07-03)",
+      "evidence_summary": "424B5 prospectus supplement (2024-08-09) confirms 'net proceeds to us' language for a primary ordinary-share offering under the newly effective shelf.",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1936258/000119312524197964/"
+      ],
+      "status": "QUALIFIES",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2018-ARRY-BRAFTOVI-MEKTOVI",
+      "event_date": "2018-06-27",
+      "ticker": "ARRY",
+      "issuer": "Array BioPharma Inc.",
+      "historical_universe_status": "PASS",
+      "financing_date": "2018-05-09",
+      "relative_day": -49,
+      "financing_type": "UNDERWRITTEN_PUBLIC_OFFERING",
+      "gross_proceeds_usd": null,
+      "securities": "Common stock, shelf takedown",
+      "evidence_summary": "424B5 prospectus supplement (2018-05-09) confirms 'net proceeds to us' language for a primary common stock offering.",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1100412/000104746918003600/"
+      ],
+      "status": "QUALIFIES",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2018-REPH-MELOXICAM-CRL",
+      "event_date": "2018-05-24",
+      "ticker": "REPH",
+      "issuer": "Recro Pharma, Inc.",
+      "historical_universe_status": "PASS",
+      "financing_date": "2018-03-02",
+      "relative_day": -83,
+      "financing_type": "UNDERWRITTEN_PUBLIC_OFFERING",
+      "gross_proceeds_usd": null,
+      "securities": "Common stock, shelf takedown",
+      "evidence_summary": "424B5 prospectus supplement (2018-03-02) confirms 'net proceeds to us' language for a primary common stock offering.",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1588972/000119312518069063/"
+      ],
+      "status": "QUALIFIES",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2021-ARDX-TENAPANOR-CRL",
+      "event_date": "2021-07-29",
+      "ticker": "ARDX",
+      "issuer": "Ardelyx, Inc.",
+      "historical_universe_status": "PASS",
+      "financing_date": "2021-08-13",
+      "relative_day": 15,
+      "financing_type": "UNDERWRITTEN_PUBLIC_OFFERING",
+      "gross_proceeds_usd": null,
+      "securities": "Common stock, shelf takedown",
+      "evidence_summary": "424B5 (2021-08-13) front cover: 'We are offering to sell, and seeking offers to buy, shares of common stock.'",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1437402/000162828021016976/"
+      ],
+      "status": "QUALIFIES",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2022-PRVB-TZIELD",
+      "event_date": "2022-11-17",
+      "ticker": "PRVB",
+      "issuer": "Provention Bio, Inc.",
+      "historical_universe_status": "PASS",
+      "financing_date": "2022-08-31",
+      "relative_day": -78,
+      "financing_type": "DEBT_TERM_LOAN_DRAW",
+      "gross_proceeds_usd": 25000000,
+      "securities": "First tranche of a $125,000,000 term loan facility with Hercules Capital, Inc.",
+      "evidence_summary": "8-K Item 1.01 (2022-08-31): 'The term loan facility provides for up to $125,000,000 of term loans in the aggregate, available to be funded in up to five tranches. The first tranche in an amount equal to $25,000,000 was drawn at closing.'",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1695357/000149315222024774/form8-k.htm"
+      ],
+      "status": "QUALIFIES",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2023-APLS-SYFOVRE",
+      "event_date": "2023-02-17",
+      "ticker": "APLS",
+      "issuer": "Apellis Pharmaceuticals, Inc.",
+      "historical_universe_status": "PASS",
+      "financing_date": "2023-02-22",
+      "relative_day": 5,
+      "financing_type": "UNDERWRITTEN_PUBLIC_OFFERING",
+      "gross_proceeds_usd": null,
+      "securities": "3,174,603 shares of common stock, plus pre-funded warrants for up to 2,380,956 additional shares (same offering as P2-2023-APLS-MERIDIAN, whose window also contains this event)",
+      "evidence_summary": "424B5 (2023-02-24): 'We are offering 3,174,603 shares of our common stock and, in lieu of common stock to investors who so choose, pre-funded warrants to purchase up to 2,380,956 shares of our common stock,' with confirmed net-proceeds-to-us language.",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1492422/000119312523048395/"
+      ],
+      "status": "QUALIFIES",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2024-GERN-RYTELO",
+      "event_date": "2024-06-06",
+      "ticker": "GERN",
+      "issuer": "Geron Corporation",
+      "historical_universe_status": "PASS",
+      "financing_date": "2024-03-20",
+      "relative_day": -78,
+      "financing_type": "UNDERWRITTEN_PUBLIC_OFFERING",
+      "gross_proceeds_usd": null,
+      "securities": "Common stock, shelf takedown",
+      "evidence_summary": "424B5 prospectus supplement (2024-03-20) confirms 'net proceeds to us' language for a primary common stock offering.",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/886744/000119312524071810/"
+      ],
+      "status": "QUALIFIES",
+      "outcome_inspected_for_selection": false
+    }
+  ]
+}

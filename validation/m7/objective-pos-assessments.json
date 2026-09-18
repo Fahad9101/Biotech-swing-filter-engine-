@@ -1,0 +1,1089 @@
+{
+  "assessment_count": 120,
+  "assessments": [
+    {
+      "catalyst_type": "CONF_DATA",
+      "event_id": "CO-2018-ZIOP-ASCO",
+      "high_pct": "85",
+      "low_pct": "55",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "70",
+      "prior_pct": "70"
+    },
+    {
+      "catalyst_type": "CONF_DATA",
+      "event_id": "CO-2019-BGNE-ZANUASH",
+      "high_pct": "60",
+      "low_pct": "30",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "45",
+      "prior_pct": "45"
+    },
+    {
+      "catalyst_type": "CONF_DATA",
+      "event_id": "CO-2019-CNST-MANIFEST",
+      "high_pct": "55",
+      "low_pct": "25",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "40",
+      "prior_pct": "40"
+    },
+    {
+      "catalyst_type": "CONF_DATA",
+      "event_id": "CO-2020-ONCT-CIRLLASH",
+      "high_pct": "60",
+      "low_pct": "30",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "45",
+      "prior_pct": "45"
+    },
+    {
+      "catalyst_type": "CONF_DATA",
+      "event_id": "CO-2020-TRIL-TTI622ASH",
+      "high_pct": "85",
+      "low_pct": "55",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "70",
+      "prior_pct": "70"
+    },
+    {
+      "catalyst_type": "CONF_DATA",
+      "event_id": "CO-2021-HARP-HPN424ASCO",
+      "high_pct": "60",
+      "low_pct": "30",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "45",
+      "prior_pct": "45"
+    },
+    {
+      "catalyst_type": "CONF_DATA",
+      "event_id": "CO-2021-IGMS-IGM2323ASH",
+      "high_pct": "85",
+      "low_pct": "55",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "70",
+      "prior_pct": "70"
+    },
+    {
+      "catalyst_type": "CONF_DATA",
+      "event_id": "CO-2021-IOVA-LIFILEUCELASCO",
+      "high_pct": "55",
+      "low_pct": "25",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "40",
+      "prior_pct": "40"
+    },
+    {
+      "catalyst_type": "CONF_DATA",
+      "event_id": "CO-2022-KROS-KER050ASH",
+      "high_pct": "55",
+      "low_pct": "25",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "40",
+      "prior_pct": "40"
+    },
+    {
+      "catalyst_type": "CONF_DATA",
+      "event_id": "CO-2024-AUTL-OBECELASH",
+      "high_pct": "60",
+      "low_pct": "30",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "45",
+      "prior_pct": "45"
+    },
+    {
+      "catalyst_type": "CONF_DATA",
+      "event_id": "CO-2024-GMAB-TVASCO",
+      "high_pct": "55",
+      "low_pct": "25",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "40",
+      "prior_pct": "40"
+    },
+    {
+      "catalyst_type": "CONF_DATA",
+      "event_id": "CO-2024-IRON-DISC0974ASH",
+      "high_pct": "85",
+      "low_pct": "55",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "70",
+      "prior_pct": "70"
+    },
+    {
+      "catalyst_type": "CONF_DATA",
+      "event_id": "CO-2024-NRIX-NX5948ASH",
+      "high_pct": "85",
+      "low_pct": "55",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "70",
+      "prior_pct": "70"
+    },
+    {
+      "catalyst_type": "CONF_DATA",
+      "event_id": "CO-2025-CRVS-SOQUELITINIBASH",
+      "high_pct": "85",
+      "low_pct": "55",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "70",
+      "prior_pct": "70"
+    },
+    {
+      "catalyst_type": "CONF_DATA",
+      "event_id": "CO-2025-GERN-RYTELOASH",
+      "high_pct": "65",
+      "low_pct": "35",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "50",
+      "prior_pct": "50"
+    },
+    {
+      "catalyst_type": "CLIN_P1",
+      "event_id": "EC-2019-WVE-SUVODIRSEN",
+      "high_pct": "85",
+      "low_pct": "55",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "70",
+      "prior_pct": "70"
+    },
+    {
+      "catalyst_type": "CLIN_P1_2",
+      "event_id": "EC-2020-CRSP-CTX001",
+      "high_pct": "60",
+      "low_pct": "30",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "45",
+      "prior_pct": "45"
+    },
+    {
+      "catalyst_type": "CLIN_P1_2",
+      "event_id": "EC-2021-EDIT-EDIT101",
+      "high_pct": "60",
+      "low_pct": "30",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "45",
+      "prior_pct": "45"
+    },
+    {
+      "catalyst_type": "CLIN_P1",
+      "event_id": "EC-2021-KURA-KO539-HOLD",
+      "high_pct": "85",
+      "low_pct": "55",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "70",
+      "prior_pct": "70"
+    },
+    {
+      "catalyst_type": "CLIN_P1_2",
+      "event_id": "EC-2021-SGTX-SIG001",
+      "high_pct": "60",
+      "low_pct": "30",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "45",
+      "prior_pct": "45"
+    },
+    {
+      "catalyst_type": "CLIN_P1_2",
+      "event_id": "EC-2021-TPTX-TPX0046",
+      "high_pct": "60",
+      "low_pct": "30",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "45",
+      "prior_pct": "45"
+    },
+    {
+      "catalyst_type": "CLIN_P1",
+      "event_id": "EC-2022-ALEC-AL101",
+      "high_pct": "85",
+      "low_pct": "55",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "70",
+      "prior_pct": "70"
+    },
+    {
+      "catalyst_type": "CLIN_P1",
+      "event_id": "EC-2022-AVXL-ANAVEX371",
+      "high_pct": "85",
+      "low_pct": "55",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "70",
+      "prior_pct": "70"
+    },
+    {
+      "catalyst_type": "CLIN_P1",
+      "event_id": "EC-2022-VTYX-VTX958",
+      "high_pct": "85",
+      "low_pct": "55",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "70",
+      "prior_pct": "70"
+    },
+    {
+      "catalyst_type": "CLIN_P1",
+      "event_id": "EC-2023-IMTX-IMA203",
+      "high_pct": "85",
+      "low_pct": "55",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "70",
+      "prior_pct": "70"
+    },
+    {
+      "catalyst_type": "CLIN_P1_2",
+      "event_id": "EC-2024-CABA-CABA201",
+      "high_pct": "60",
+      "low_pct": "30",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "45",
+      "prior_pct": "45"
+    },
+    {
+      "catalyst_type": "CLIN_P1",
+      "event_id": "EC-2024-CHRS-CHS114",
+      "high_pct": "85",
+      "low_pct": "55",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "70",
+      "prior_pct": "70"
+    },
+    {
+      "catalyst_type": "CLIN_P1_2",
+      "event_id": "EC-2024-TSHA-TSHA102",
+      "high_pct": "60",
+      "low_pct": "30",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "45",
+      "prior_pct": "45"
+    },
+    {
+      "catalyst_type": "CLIN_P1",
+      "event_id": "EC-2025-MRSN-XMT1660",
+      "high_pct": "85",
+      "low_pct": "55",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "70",
+      "prior_pct": "70"
+    },
+    {
+      "catalyst_type": "CLIN_P1",
+      "event_id": "EC-2025-MTSR-MET233I",
+      "high_pct": "85",
+      "low_pct": "55",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "70",
+      "prior_pct": "70"
+    },
+    {
+      "catalyst_type": "CLIN_P2",
+      "event_id": "NEG-P2-2018-IDRA-IMO8400",
+      "high_pct": "55",
+      "low_pct": "25",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "40",
+      "prior_pct": "40"
+    },
+    {
+      "catalyst_type": "CLIN_P2",
+      "event_id": "NEG-P2-2021-ANAB-POPLAR",
+      "high_pct": "55",
+      "low_pct": "25",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "40",
+      "prior_pct": "40"
+    },
+    {
+      "catalyst_type": "CLIN_P2",
+      "event_id": "NEG-P2-2022-NGM-CATALINA",
+      "high_pct": "55",
+      "low_pct": "25",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "40",
+      "prior_pct": "40"
+    },
+    {
+      "catalyst_type": "CLIN_P2",
+      "event_id": "NEG-P2-2024-SAGE-LIGHTWAVE",
+      "high_pct": "55",
+      "low_pct": "25",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "40",
+      "prior_pct": "40"
+    },
+    {
+      "catalyst_type": "CLIN_P2",
+      "event_id": "NEG-P2-2024-SAGE-PRECEDENT",
+      "high_pct": "55",
+      "low_pct": "25",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "40",
+      "prior_pct": "40"
+    },
+    {
+      "catalyst_type": "CLIN_P3",
+      "event_id": "NEG-P3-2021-DCPH-INTRIGUE",
+      "high_pct": "70",
+      "low_pct": "40",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "55",
+      "prior_pct": "55"
+    },
+    {
+      "catalyst_type": "CLIN_P3",
+      "event_id": "NEG-P3-2022-NKTR-PIVOTIO001",
+      "high_pct": "70",
+      "low_pct": "40",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "55",
+      "prior_pct": "55"
+    },
+    {
+      "catalyst_type": "CLIN_P3",
+      "event_id": "NEG-P3-2023-KOD-GLEAMGLIMMER",
+      "high_pct": "70",
+      "low_pct": "40",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "55",
+      "prior_pct": "55"
+    },
+    {
+      "catalyst_type": "CLIN_P3",
+      "event_id": "NEG-P3-2023-MRTX-SAPPHIRE",
+      "high_pct": "70",
+      "low_pct": "40",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "55",
+      "prior_pct": "55"
+    },
+    {
+      "catalyst_type": "CLIN_P3",
+      "event_id": "NEG-P3-2024-AMLX-PHOENIX",
+      "high_pct": "70",
+      "low_pct": "40",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "55",
+      "prior_pct": "55"
+    },
+    {
+      "catalyst_type": "CLIN_P2",
+      "event_id": "P2-2018-BIIB-BAN2401",
+      "high_pct": "55",
+      "low_pct": "25",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "40",
+      "prior_pct": "40"
+    },
+    {
+      "catalyst_type": "CLIN_P2",
+      "event_id": "P2-2018-ESPR-BA-PCSK9",
+      "high_pct": "55",
+      "low_pct": "25",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "40",
+      "prior_pct": "40"
+    },
+    {
+      "catalyst_type": "CLIN_P2",
+      "event_id": "P2-2018-GWPH-GWP42006",
+      "high_pct": "55",
+      "low_pct": "25",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "40",
+      "prior_pct": "40"
+    },
+    {
+      "catalyst_type": "CLIN_P2",
+      "event_id": "P2-2019-AGIO-DRIVEPK",
+      "high_pct": "55",
+      "low_pct": "25",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "40",
+      "prior_pct": "40"
+    },
+    {
+      "catalyst_type": "CLIN_P2",
+      "event_id": "P2-2019-AXSM-AXS05-SMOKING",
+      "high_pct": "55",
+      "low_pct": "25",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "40",
+      "prior_pct": "40"
+    },
+    {
+      "catalyst_type": "CLIN_P2",
+      "event_id": "P2-2019-MDGL-RESMETIROM",
+      "high_pct": "55",
+      "low_pct": "25",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "40",
+      "prior_pct": "40"
+    },
+    {
+      "catalyst_type": "CLIN_P2",
+      "event_id": "P2-2019-RETA-MOXIE",
+      "high_pct": "55",
+      "low_pct": "25",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "40",
+      "prior_pct": "40"
+    },
+    {
+      "catalyst_type": "CLIN_P2",
+      "event_id": "P2-2019-TGTX-UNITYNHL",
+      "high_pct": "55",
+      "low_pct": "25",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "40",
+      "prior_pct": "40"
+    },
+    {
+      "catalyst_type": "CLIN_P2",
+      "event_id": "P2-2020-CRNX-ACROBAT",
+      "high_pct": "55",
+      "low_pct": "25",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "40",
+      "prior_pct": "40"
+    },
+    {
+      "catalyst_type": "CLIN_P2",
+      "event_id": "P2-2021-BIIB-CONVEY",
+      "high_pct": "55",
+      "low_pct": "25",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "40",
+      "prior_pct": "40"
+    },
+    {
+      "catalyst_type": "CLIN_P2",
+      "event_id": "P2-2021-BIIB-TANGO",
+      "high_pct": "55",
+      "low_pct": "25",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "40",
+      "prior_pct": "40"
+    },
+    {
+      "catalyst_type": "CLIN_P2",
+      "event_id": "P2-2021-GHRS-GH001",
+      "high_pct": "55",
+      "low_pct": "25",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "40",
+      "prior_pct": "40"
+    },
+    {
+      "catalyst_type": "CLIN_P2",
+      "event_id": "P2-2022-AKRO-HARMONY",
+      "high_pct": "55",
+      "low_pct": "25",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "40",
+      "prior_pct": "40"
+    },
+    {
+      "catalyst_type": "CLIN_P2",
+      "event_id": "P2-2022-CINC-BRIGHTN",
+      "high_pct": "55",
+      "low_pct": "25",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "40",
+      "prior_pct": "40"
+    },
+    {
+      "catalyst_type": "CLIN_P2",
+      "event_id": "P2-2022-CINC-HALO",
+      "high_pct": "55",
+      "low_pct": "25",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "40",
+      "prior_pct": "40"
+    },
+    {
+      "catalyst_type": "CLIN_P2",
+      "event_id": "P2-2023-AKRO-SYMMETRY-COHORT-D",
+      "high_pct": "55",
+      "low_pct": "25",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "40",
+      "prior_pct": "40"
+    },
+    {
+      "catalyst_type": "CLIN_P2",
+      "event_id": "P2-2023-AKRO-SYMMETRY-MAIN",
+      "high_pct": "55",
+      "low_pct": "25",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "40",
+      "prior_pct": "40"
+    },
+    {
+      "catalyst_type": "CLIN_P2",
+      "event_id": "P2-2023-APLS-MERIDIAN",
+      "high_pct": "55",
+      "low_pct": "25",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "40",
+      "prior_pct": "40"
+    },
+    {
+      "catalyst_type": "CLIN_P2",
+      "event_id": "P2-2023-ATAI-PCN101",
+      "high_pct": "55",
+      "low_pct": "25",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "40",
+      "prior_pct": "40"
+    },
+    {
+      "catalyst_type": "CLIN_P2",
+      "event_id": "P2-2023-TERN-DUET",
+      "high_pct": "55",
+      "low_pct": "25",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "40",
+      "prior_pct": "40"
+    },
+    {
+      "catalyst_type": "CLIN_P2",
+      "event_id": "P2-2024-BNTX-BNT111",
+      "high_pct": "55",
+      "low_pct": "25",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "40",
+      "prior_pct": "40"
+    },
+    {
+      "catalyst_type": "CLIN_P2",
+      "event_id": "P2-2024-RXRX-SYCAMORE",
+      "high_pct": "55",
+      "low_pct": "25",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "40",
+      "prior_pct": "40"
+    },
+    {
+      "catalyst_type": "CLIN_P2",
+      "event_id": "P2-2024-SAGE-DIMENSION",
+      "high_pct": "55",
+      "low_pct": "25",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "40",
+      "prior_pct": "40"
+    },
+    {
+      "catalyst_type": "CLIN_P2",
+      "event_id": "P2-2025-KALA-CHASE",
+      "high_pct": "55",
+      "low_pct": "25",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "40",
+      "prior_pct": "40"
+    },
+    {
+      "catalyst_type": "CLIN_P2",
+      "event_id": "P2-2025-VTYX-VTX958",
+      "high_pct": "55",
+      "low_pct": "25",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "40",
+      "prior_pct": "40"
+    },
+    {
+      "catalyst_type": "CLIN_P3",
+      "event_id": "P3-2018-RARE-UX007",
+      "high_pct": "70",
+      "low_pct": "40",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "55",
+      "prior_pct": "55"
+    },
+    {
+      "catalyst_type": "CLIN_P3",
+      "event_id": "P3-2019-AXSM-GEMINI",
+      "high_pct": "70",
+      "low_pct": "40",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "55",
+      "prior_pct": "55"
+    },
+    {
+      "catalyst_type": "CLIN_P3",
+      "event_id": "P3-2019-ICPT-REGENERATE",
+      "high_pct": "70",
+      "low_pct": "40",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "55",
+      "prior_pct": "55"
+    },
+    {
+      "catalyst_type": "CLIN_P3",
+      "event_id": "P3-2019-NVAX-PREPARE",
+      "high_pct": "70",
+      "low_pct": "40",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "55",
+      "prior_pct": "55"
+    },
+    {
+      "catalyst_type": "CLIN_P3",
+      "event_id": "P3-2020-AGIO-ACTIVATE",
+      "high_pct": "70",
+      "low_pct": "40",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "55",
+      "prior_pct": "55"
+    },
+    {
+      "catalyst_type": "CLIN_P3",
+      "event_id": "P3-2020-APRE-P3MDS",
+      "high_pct": "70",
+      "low_pct": "40",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "55",
+      "prior_pct": "55"
+    },
+    {
+      "catalyst_type": "CLIN_P3",
+      "event_id": "P3-2020-CRBP-RESOLVE1",
+      "high_pct": "70",
+      "low_pct": "40",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "55",
+      "prior_pct": "55"
+    },
+    {
+      "catalyst_type": "CLIN_P3",
+      "event_id": "P3-2020-GMAB-ANDROMEDA",
+      "high_pct": "70",
+      "low_pct": "40",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "55",
+      "prior_pct": "55"
+    },
+    {
+      "catalyst_type": "CLIN_P3",
+      "event_id": "P3-2020-IMMU-ASCENT",
+      "high_pct": "70",
+      "low_pct": "40",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "55",
+      "prior_pct": "55"
+    },
+    {
+      "catalyst_type": "CLIN_P3",
+      "event_id": "P3-2020-ONTX-INSPIRE",
+      "high_pct": "70",
+      "low_pct": "40",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "55",
+      "prior_pct": "55"
+    },
+    {
+      "catalyst_type": "CLIN_P3",
+      "event_id": "P3-2020-REGN-LIBTAYO-NSCLC",
+      "high_pct": "70",
+      "low_pct": "40",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "55",
+      "prior_pct": "55"
+    },
+    {
+      "catalyst_type": "CLIN_P3",
+      "event_id": "P3-2021-BIIB-STAR",
+      "high_pct": "70",
+      "low_pct": "40",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "55",
+      "prior_pct": "55"
+    },
+    {
+      "catalyst_type": "CLIN_P3",
+      "event_id": "P3-2021-BIIB-VALOR",
+      "high_pct": "70",
+      "low_pct": "40",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "55",
+      "prior_pct": "55"
+    },
+    {
+      "catalyst_type": "CLIN_P3",
+      "event_id": "P3-2022-BGNE-ALPINE",
+      "high_pct": "70",
+      "low_pct": "40",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "55",
+      "prior_pct": "55"
+    },
+    {
+      "catalyst_type": "CLIN_P3",
+      "event_id": "P3-2022-MDGL-MAESTRO-NASH",
+      "high_pct": "70",
+      "low_pct": "40",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "55",
+      "prior_pct": "55"
+    },
+    {
+      "catalyst_type": "CLIN_P3",
+      "event_id": "P3-2023-GERN-IMERGE",
+      "high_pct": "70",
+      "low_pct": "40",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "55",
+      "prior_pct": "55"
+    },
+    {
+      "catalyst_type": "CLIN_P3",
+      "event_id": "P3-2023-GMAB-INNOVATV301",
+      "high_pct": "70",
+      "low_pct": "40",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "55",
+      "prior_pct": "55"
+    },
+    {
+      "catalyst_type": "CLIN_P3",
+      "event_id": "P3-2024-ANNX-ANX005",
+      "high_pct": "70",
+      "low_pct": "40",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "55",
+      "prior_pct": "55"
+    },
+    {
+      "catalyst_type": "CLIN_P3",
+      "event_id": "P3-2024-FULC-REACH",
+      "high_pct": "70",
+      "low_pct": "40",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "55",
+      "prior_pct": "55"
+    },
+    {
+      "catalyst_type": "CLIN_P3",
+      "event_id": "P3-2024-NAMS-BROADWAY",
+      "high_pct": "70",
+      "low_pct": "40",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "55",
+      "prior_pct": "55"
+    },
+    {
+      "catalyst_type": "CLIN_P3",
+      "event_id": "P3-2024-NAMS-BROOKLYN",
+      "high_pct": "70",
+      "low_pct": "40",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "55",
+      "prior_pct": "55"
+    },
+    {
+      "catalyst_type": "CLIN_P3",
+      "event_id": "P3-2024-SAVA-RETHINK",
+      "high_pct": "70",
+      "low_pct": "40",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "55",
+      "prior_pct": "55"
+    },
+    {
+      "catalyst_type": "CLIN_P3",
+      "event_id": "P3-2025-ALEC-INFRONT3",
+      "high_pct": "70",
+      "low_pct": "40",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "55",
+      "prior_pct": "55"
+    },
+    {
+      "catalyst_type": "CLIN_P3",
+      "event_id": "P3-2025-CAPR-HOPE3",
+      "high_pct": "70",
+      "low_pct": "40",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "55",
+      "prior_pct": "55"
+    },
+    {
+      "catalyst_type": "CLIN_P3",
+      "event_id": "P3-2025-SAVA-REFOCUS",
+      "high_pct": "70",
+      "low_pct": "40",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "55",
+      "prior_pct": "55"
+    },
+    {
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2018-AGIO-TIBSOVO",
+      "high_pct": "90",
+      "low_pct": "60",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "75",
+      "prior_pct": "75"
+    },
+    {
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2018-ALNY-ONPATTRO",
+      "high_pct": "90",
+      "low_pct": "60",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "75",
+      "prior_pct": "75"
+    },
+    {
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2018-ARRY-BRAFTOVI-MEKTOVI",
+      "high_pct": "90",
+      "low_pct": "60",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "75",
+      "prior_pct": "75"
+    },
+    {
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2018-FOLD-GALAFOLD",
+      "high_pct": "90",
+      "low_pct": "60",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "75",
+      "prior_pct": "75"
+    },
+    {
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2018-REPH-MELOXICAM-CRL",
+      "high_pct": "90",
+      "low_pct": "60",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "75",
+      "prior_pct": "75"
+    },
+    {
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2019-GBT-OXBRYTA",
+      "high_pct": "90",
+      "low_pct": "60",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "75",
+      "prior_pct": "75"
+    },
+    {
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2019-SAGE-ZULRESSO",
+      "high_pct": "90",
+      "low_pct": "60",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "75",
+      "prior_pct": "75"
+    },
+    {
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2019-SRPT-GOLODIRSEN-CRL",
+      "high_pct": "90",
+      "low_pct": "60",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "75",
+      "prior_pct": "75"
+    },
+    {
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2020-BMRN-VALROX-CRL",
+      "high_pct": "90",
+      "low_pct": "60",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "75",
+      "prior_pct": "75"
+    },
+    {
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2020-ICPT-OCA-CRL",
+      "high_pct": "90",
+      "low_pct": "60",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "75",
+      "prior_pct": "75"
+    },
+    {
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2020-IMMU-TRODELVY",
+      "high_pct": "90",
+      "low_pct": "60",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "75",
+      "prior_pct": "75"
+    },
+    {
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2020-RYTM-IMCIVREE",
+      "high_pct": "90",
+      "low_pct": "60",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "75",
+      "prior_pct": "75"
+    },
+    {
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2020-TCDA-VEVERIMER-CRL",
+      "high_pct": "90",
+      "low_pct": "60",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "75",
+      "prior_pct": "75"
+    },
+    {
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2021-ASND-SKYTROFA",
+      "high_pct": "90",
+      "low_pct": "60",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "75",
+      "prior_pct": "75"
+    },
+    {
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2021-ATNX-ORALPAC-CRL",
+      "high_pct": "90",
+      "low_pct": "60",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "75",
+      "prior_pct": "75"
+    },
+    {
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2021-FGEN-ROXADUSTAT-CRL",
+      "high_pct": "90",
+      "low_pct": "60",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "75",
+      "prior_pct": "75"
+    },
+    {
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2021-INCY-OPZELURA",
+      "high_pct": "90",
+      "low_pct": "60",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "75",
+      "prior_pct": "75"
+    },
+    {
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2021-OMER-NARSOPLIMAB-CRL",
+      "high_pct": "90",
+      "low_pct": "60",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "75",
+      "prior_pct": "75"
+    },
+    {
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2022-AXSM-AXS07-CRL",
+      "high_pct": "90",
+      "low_pct": "60",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "75",
+      "prior_pct": "75"
+    },
+    {
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2022-IMGN-ELAHERE",
+      "high_pct": "90",
+      "low_pct": "60",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "75",
+      "prior_pct": "75"
+    },
+    {
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2022-PRVB-TZIELD",
+      "high_pct": "90",
+      "low_pct": "60",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "75",
+      "prior_pct": "75"
+    },
+    {
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2022-TGTX-BRIUMVI",
+      "high_pct": "90",
+      "low_pct": "60",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "75",
+      "prior_pct": "75"
+    },
+    {
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2023-BLUE-LYFGENIA",
+      "high_pct": "90",
+      "low_pct": "60",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "75",
+      "prior_pct": "75"
+    },
+    {
+      "catalyst_type": "REG_SUBMIT",
+      "event_id": "REG-2023-GERN-IMETELSTAT-NDA-ACCEPT",
+      "high_pct": "95",
+      "low_pct": "70",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "85",
+      "prior_pct": "85"
+    },
+    {
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2023-RETA-SKYCLARYS",
+      "high_pct": "90",
+      "low_pct": "60",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "75",
+      "prior_pct": "75"
+    },
+    {
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2023-SRPT-ELEVIDYS",
+      "high_pct": "90",
+      "low_pct": "60",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "75",
+      "prior_pct": "75"
+    },
+    {
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2024-IOVA-AMTAGVI",
+      "high_pct": "90",
+      "low_pct": "60",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "75",
+      "prior_pct": "75"
+    },
+    {
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2024-RCKT-KRESLADI-CRL",
+      "high_pct": "90",
+      "low_pct": "60",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "75",
+      "prior_pct": "75"
+    },
+    {
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2024-REGN-LINVOSELTAMAB-CRL",
+      "high_pct": "90",
+      "low_pct": "60",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "75",
+      "prior_pct": "75"
+    },
+    {
+      "catalyst_type": "REG_DECISION",
+      "event_id": "REG-2024-VRTX-ALYFTREK",
+      "high_pct": "90",
+      "low_pct": "60",
+      "methodology_version": "M7-OBJECTIVE-POS-1",
+      "mid_pct": "75",
+      "prior_pct": "75"
+    }
+  ],
+  "cohort_sha256": "37f2e70dcc0626b40e97637e34056c9279ae9a5e6daf69d1c2f730e77c114e95",
+  "event_count": 120,
+  "generator": "python scripts/m7_build_objective_pos.py",
+  "methodology": "src/boe/objective_pos_methodology.py"
+}

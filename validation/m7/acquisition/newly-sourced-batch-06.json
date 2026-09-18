@@ -1,0 +1,67 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "role": "NEWLY_SOURCED_CANDIDATES_POST_HANDOFF",
+  "generated_at": "2026-09-16",
+  "sourcing_note": "Targeted specifically at CONFERENCE_OTHER, the one remaining short pool (buffer -3). This is a structurally harder sourcing problem than trial failures or CRLs: the vast majority of biotech 'conference' press releases are pre-conference abstract-preview teasers issued weeks ahead of the actual session (confirmed while researching Agios/mitapivat, BeiGene/BRUKINSA, Legend Biotech/CARVYKTI and Regeneron/ASH candidates, all discarded for this reason), not same-day data reveals at the conference itself - the pattern every existing CONFERENCE_OTHER acquisition entry actually follows (catalyst_type: CONF_DATA, source_role: CONFERENCE_DATA_DISCLOSURE_CANDIDATE). Only two candidates cleared that bar this batch. Deduplicated against the full existing ticker/candidate_id set.",
+  "events": [
+    {
+      "asset": "obe-cel",
+      "candidate_id": "CO-2025-AUTL-CARLYSLEASH",
+      "cik": "1730463",
+      "clinical_phase": "PHASE_1",
+      "cohort_frozen": false,
+      "company": "Autolus Therapeutics plc",
+      "first_public_date": "2025-12-08",
+      "first_public_timestamp": "2025-12-08T16:05:00-05:00",
+      "indication": "severe refractory systemic lupus erythematosus (srSLE)",
+      "negative_event_candidate": false,
+      "outcome_inspected_for_selection": false,
+      "promotion_blockers": [
+        "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+        "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+        "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+      ],
+      "proposed_catalyst_type": "CONF_DATA",
+      "proposed_primary_stratum": "CONFERENCE_OTHER",
+      "result_direction": "SUPPORTIVE_CONFERENCE_CLINICAL_DATA",
+      "source_role": "CONFERENCE_DATA_DISCLOSURE_CANDIDATE",
+      "source_type": "ISSUER_GLOBENEWSWIRE_RELEASE",
+      "source_url": "https://www.globenewswire.com/news-release/2025/12/08/3201963/0/en/autolus-therapeutics-presents-updated-clinical-data-from-the-carlysle-trial-in-patients-with-severe-refractory-systemic-lupus-erythematosus-at-the-american-society-of-hematology-as.html",
+      "source_displayed_time": "December 08, 2025 16:05 ET",
+      "ticker": "AUTL",
+      "timestamp_precision": "EXACT_TO_MINUTE",
+      "notes": "Updated Phase 1 CARLYSLE data presented in an oral session at ASH 2025 (scheduled 11:30am ET); the issuer's own release, distributed after that session and after market close, is used as the first-public timestamp. This is the fifth AUTL candidate in the pool, at the frozen 5-event issuer cap exactly (not over it)."
+    },
+    {
+      "asset": "FT819",
+      "candidate_id": "CO-2025-FATE-FT819ASH",
+      "cik": "1434316",
+      "clinical_phase": "PHASE_1",
+      "cohort_frozen": false,
+      "company": "Fate Therapeutics, Inc.",
+      "first_public_date": "2025-12-08",
+      "first_public_timestamp": "2025-12-08T08:00:00-05:00",
+      "indication": "systemic lupus erythematosus (SLE)",
+      "negative_event_candidate": false,
+      "outcome_inspected_for_selection": false,
+      "promotion_blockers": [
+        "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+        "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+        "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+      ],
+      "proposed_catalyst_type": "CONF_DATA",
+      "proposed_primary_stratum": "CONFERENCE_OTHER",
+      "result_direction": "SUPPORTIVE_CONFERENCE_CLINICAL_DATA",
+      "source_role": "CONFERENCE_DATA_DISCLOSURE_CANDIDATE",
+      "source_type": "ISSUER_GLOBENEWSWIRE_RELEASE",
+      "source_url": "https://www.globenewswire.com/news-release/2025/12/08/3201474/0/en/Fate-Therapeutics-Presents-Updated-Phase-1-Clinical-Data-of-FT819-Off-the-shelf-CAR-T-cell-Product-Candidate-for-Systemic-Lupus-Erythematosus-and-Preclinical-Advances-in-Next-Gener.html",
+      "source_displayed_time": "December 08, 2025 08:00 ET",
+      "ticker": "FATE",
+      "timestamp_precision": "EXACT_TO_MINUTE",
+      "universe_result_preview": "FAILS the liquidity floor (20-session median dollar volume well under $2,000,000) as of the 2025-12-05 cutoff."
+    }
+  ]
+}

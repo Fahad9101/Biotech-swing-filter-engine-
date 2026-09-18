@@ -5,16 +5,21 @@ from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
 from uuid import UUID, uuid4
 
+import pydantic
 import pytest
 
 from boe.catalysts import (
+    CatalystConflictError,
     CatalystObservation,
+    HistoricalCatalystConfirmation,
     HumanCatalystConfirmation,
     HumanConfirmationRequired,
     normalize_catalyst,
+    require_historical_catalyst_confirmation,
     require_human_confirmation,
 )
 from boe.enums import CatalystType, EvidenceTier, TimingConfidence
+from boe.historical_validation import deterministic_record_hash
 from boe.ingestion.clinicaltrials import ClinicalTrialsAdapter
 from boe.ingestion.fda import FDAAdapter
 from boe.ingestion.guidance import extract_catalyst_guidance
@@ -198,6 +203,163 @@ def test_human_confirmation_is_mandatory_and_cutoff_bound() -> None:
     )
     with pytest.raises(HumanConfirmationRequired):
         require_human_confirmation(catalyst, future_confirmation, cutoff=KNOWN_AT)
+
+
+HIST_CUTOFF = datetime(2019, 11, 11, 20, 30, tzinfo=UTC)
+REVIEW_LONG_AFTER = datetime(2026, 9, 16, 10, 0, tzinfo=UTC)
+
+
+def _historical_catalyst() -> tuple:
+    observation = _observation(
+        start=date(2019, 12, 1),
+        end=date(2019, 12, 31),
+        known_at=HIST_CUTOFF - timedelta(days=5),
+    )
+    catalyst = normalize_catalyst((observation,), cutoff=HIST_CUTOFF)
+    return catalyst, observation
+
+
+def _historical_confirmation(catalyst, **overrides) -> HistoricalCatalystConfirmation:
+    fields = {
+        "catalyst_version_id": catalyst.id,
+        "reviewer": "historical-reviewer",
+        "evidence_cutoff": HIST_CUTOFF,
+        "reviewed_at": REVIEW_LONG_AFTER,
+        "decision": "CONFIRMED",
+        "evidence_ids_reviewed": catalyst.supporting_evidence_ids,
+        "conflict_resolution_notes": "No unresolved source conflict.",
+    }
+    fields.update(overrides)
+    return HistoricalCatalystConfirmation(**fields)
+
+
+def test_historical_confirmation_permits_review_long_after_evidence_cutoff() -> None:
+    """A real human reviewing 2019 evidence in 2026 is retrospective review
+    working as intended, not a stale/late confirmation - the opposite of what
+    the live control (require_human_confirmation) would say about the same
+    reviewed_at value.
+    """
+    catalyst, _ = _historical_catalyst()
+    confirmation = _historical_confirmation(catalyst)
+    decision = require_historical_catalyst_confirmation(catalyst, confirmation)
+    assert decision.rankable is True
+
+    # The same wall-clock review time is illegal for the live control, proving
+    # the two paths are genuinely different, not one silently reusing the other.
+    live_confirmation = HumanCatalystConfirmation(
+        catalyst_version_id=catalyst.id,
+        reviewer="historical-reviewer",
+        confirmed_at=REVIEW_LONG_AFTER,
+        decision="CONFIRMED",
+        evidence_ids_reviewed=catalyst.supporting_evidence_ids,
+        conflict_resolution_notes="No unresolved source conflict.",
+    )
+    with pytest.raises(HumanConfirmationRequired):
+        require_human_confirmation(catalyst, live_confirmation, cutoff=HIST_CUTOFF)
+
+
+def test_historical_confirmation_requires_exact_evidence_cutoff_match() -> None:
+    """A reviewer cannot claim a looser or different evidence boundary than the
+    catalyst version's own frozen resolved_at_cutoff - this is what keeps only
+    evidence available by the historical cutoff visible to the reviewer.
+    """
+    catalyst, _ = _historical_catalyst()
+    wrong_cutoff = _historical_confirmation(
+        catalyst, evidence_cutoff=HIST_CUTOFF + timedelta(days=1)
+    )
+    with pytest.raises(HumanConfirmationRequired):
+        require_historical_catalyst_confirmation(catalyst, wrong_cutoff)
+
+
+def test_historical_confirmation_rejects_outcome_data_shown() -> None:
+    """Outcome data must be inaccessible before decision lock; a confirmation
+    that admits outcome data was shown cannot even be constructed.
+    """
+    catalyst, _ = _historical_catalyst()
+    with pytest.raises(pydantic.ValidationError):
+        _historical_confirmation(catalyst, outcome_data_shown=True)
+
+
+def test_historical_confirmation_rejects_backdated_review() -> None:
+    """reviewed_at before evidence_cutoff would mean the reviewer judged
+    evidence before it was even locked in - a backdated timestamp.
+    """
+    catalyst, _ = _historical_catalyst()
+    with pytest.raises(pydantic.ValidationError):
+        _historical_confirmation(catalyst, reviewed_at=HIST_CUTOFF - timedelta(seconds=1))
+
+
+def test_historical_confirmation_records_reviewer_identity_and_is_immutable_and_hashable() -> None:
+    catalyst, _ = _historical_catalyst()
+    confirmation = _historical_confirmation(catalyst, reviewer="dr-jane-reviewer")
+    assert confirmation.reviewer == "dr-jane-reviewer"
+
+    with pytest.raises(pydantic.ValidationError):
+        confirmation.reviewer = "someone-else"  # type: ignore[misc]
+
+    digest_a = deterministic_record_hash(confirmation)
+    digest_b = deterministic_record_hash(
+        _historical_confirmation(catalyst, reviewer="dr-jane-reviewer")
+    )
+    assert digest_a == digest_b
+    digest_different_reviewer = deterministic_record_hash(
+        _historical_confirmation(catalyst, reviewer="dr-jane-reviewer-2")
+    )
+    assert digest_a != digest_different_reviewer
+
+
+def test_historical_confirmation_cannot_reference_wrong_catalyst_version() -> None:
+    catalyst, _ = _historical_catalyst()
+    other_observation = _observation(
+        evidence_id=uuid4(),
+        start=date(2020, 1, 1),
+        end=date(2020, 1, 31),
+        known_at=HIST_CUTOFF - timedelta(days=5),
+    )
+    other_catalyst = normalize_catalyst((other_observation,), cutoff=HIST_CUTOFF)
+    mismatched = _historical_confirmation(other_catalyst)
+    with pytest.raises(HumanConfirmationRequired):
+        require_historical_catalyst_confirmation(catalyst, mismatched)
+
+
+def test_historical_confirmation_requires_all_supporting_evidence_reviewed() -> None:
+    """Later information cannot leak into the reconstructed state via a
+    reviewer who attests to less evidence than the frozen catalyst version
+    actually used - the reviewed set must be a superset.
+    """
+    catalyst, _ = _historical_catalyst()
+    partial = _historical_confirmation(catalyst, evidence_ids_reviewed=(uuid4(),))
+    with pytest.raises(HumanConfirmationRequired):
+        require_historical_catalyst_confirmation(catalyst, partial)
+
+
+def test_historical_confirmation_missing_or_rejected_is_not_rankable() -> None:
+    catalyst, _ = _historical_catalyst()
+    with pytest.raises(HumanConfirmationRequired):
+        require_historical_catalyst_confirmation(catalyst, None)
+
+    rejected = _historical_confirmation(catalyst, decision="REJECTED")
+    decision = require_historical_catalyst_confirmation(catalyst, rejected)
+    assert decision.rankable is False
+
+
+def test_historical_confirmation_unresolved_conflict_requires_notes() -> None:
+    sec = _observation(
+        start=date(2019, 12, 1),
+        end=date(2019, 12, 31),
+        known_at=HIST_CUTOFF - timedelta(days=5),
+    )
+    ctgov = _observation(
+        tier=EvidenceTier.CLINICAL_TRIALS_REGISTRY,
+        start=date(2020, 1, 1),
+        end=date(2020, 1, 31),
+        known_at=HIST_CUTOFF - timedelta(days=5),
+    )
+    catalyst = normalize_catalyst((sec, ctgov), cutoff=HIST_CUTOFF)
+    assert catalyst.has_unresolved_conflict
+    blank_notes = _historical_confirmation(catalyst, conflict_resolution_notes=" ")
+    with pytest.raises(CatalystConflictError):
+        require_historical_catalyst_confirmation(catalyst, blank_notes)
 
 
 def test_scientific_pack_is_manual_review_only_and_point_in_time() -> None:

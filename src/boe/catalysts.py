@@ -130,6 +130,47 @@ class HumanCatalystConfirmation(ContractModel):
         return self
 
 
+class HistoricalCatalystConfirmation(ContractModel):
+    """Retrospective, outcome-blinded confirmation of a catalyst version for
+    Milestone 7 historical reconstruction.
+
+    Distinct from ``HumanCatalystConfirmation`` (live ranking): the live
+    control rejects a ``confirmed_at`` that is in the future relative to a
+    live decision cutoff, which is definitionally impossible for genuine
+    retrospective review performed long after the historical event itself -
+    a reviewer confirming 2019 evidence in 2026 is not "late," that is
+    exactly what retrospective review means. This type instead binds the
+    reviewer's evidence strictly to ``evidence_cutoff`` (the catalyst
+    version's own frozen point-in-time boundary, ``resolved_at_cutoff``),
+    while ``reviewed_at`` freely reflects the real wall-clock time of the
+    actual human review. The record is itself immutable (``ContractModel``
+    is frozen), so ``reviewed_at`` is also this confirmation's own lock
+    moment - no separate "locked_at" field is needed, matching the
+    established ``ManualScienceReview`` convention.
+    """
+
+    catalyst_version_id: UUID
+    reviewer: str = Field(min_length=2)
+    evidence_cutoff: datetime
+    reviewed_at: datetime
+    decision: str = Field(pattern=r"^(CONFIRMED|REJECTED|NEEDS_REVIEW)$")
+    evidence_ids_reviewed: tuple[UUID, ...] = Field(min_length=1)
+    conflict_resolution_notes: str = Field(min_length=1)
+    outcome_data_shown: bool = False
+
+    @model_validator(mode="after")
+    def validate_confirmation(self) -> Self:
+        _require_aware(self.evidence_cutoff, "evidence_cutoff")
+        _require_aware(self.reviewed_at, "reviewed_at")
+        if len(set(self.evidence_ids_reviewed)) != len(self.evidence_ids_reviewed):
+            raise ValueError("reviewed evidence ids must be unique")
+        if self.reviewed_at < self.evidence_cutoff:
+            raise ValueError("historical review cannot occur before its own evidence cutoff")
+        if self.outcome_data_shown:
+            raise ValueError("historical catalyst confirmation must not have seen outcome data")
+        return self
+
+
 class RankabilityDecision(ContractModel):
     rankable: bool
     reason: str = Field(min_length=1)
@@ -242,6 +283,52 @@ def require_human_confirmation(
     return RankabilityDecision(
         rankable=True,
         reason="human-confirmed point-in-time catalyst",
+        catalyst_version_id=catalyst.id,
+    )
+
+
+def require_historical_catalyst_confirmation(
+    catalyst: CatalystVersion,
+    confirmation: HistoricalCatalystConfirmation | None,
+) -> RankabilityDecision:
+    """Enforce the Milestone 7 historical-reconstruction invariant: a genuine,
+    outcome-blind, evidence-cutoff-bound human review exists for this exact
+    catalyst version, locked before any outcome data is attached.
+
+    Deliberately does not weaken or reuse ``require_human_confirmation``'s
+    "not in the future" check - that check is specific to live ranking. Here,
+    the confirmation's stated ``evidence_cutoff`` must match the catalyst
+    version's own frozen ``resolved_at_cutoff`` exactly, so a reviewer cannot
+    claim to have judged a wider evidence window than the catalyst version
+    actually used; ``reviewed_at`` (the real wall-clock review time) is not
+    otherwise constrained relative to "now."
+    """
+
+    if confirmation is None:
+        raise HumanConfirmationRequired(
+            "rankable historical catalyst requires an explicit retrospective human confirmation"
+        )
+    if confirmation.catalyst_version_id != catalyst.id:
+        raise HumanConfirmationRequired("confirmation refers to a different catalyst version")
+    if confirmation.evidence_cutoff != catalyst.resolved_at_cutoff:
+        raise HumanConfirmationRequired(
+            "confirmation evidence_cutoff does not match this catalyst version's frozen cutoff"
+        )
+    if not set(catalyst.supporting_evidence_ids).issubset(set(confirmation.evidence_ids_reviewed)):
+        raise HumanConfirmationRequired(
+            "reviewer did not confirm all evidence used by catalyst version"
+        )
+    if confirmation.decision != "CONFIRMED":
+        return RankabilityDecision(
+            rankable=False,
+            reason=f"historical human confirmation decision is {confirmation.decision}",
+            catalyst_version_id=catalyst.id,
+        )
+    if catalyst.has_unresolved_conflict and not confirmation.conflict_resolution_notes.strip():
+        raise CatalystConflictError("source conflict requires explicit human resolution notes")
+    return RankabilityDecision(
+        rankable=True,
+        reason="retrospective outcome-blinded human-confirmed historical catalyst",
         catalyst_version_id=catalyst.id,
     )
 

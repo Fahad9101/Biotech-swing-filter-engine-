@@ -1,0 +1,95 @@
+{
+  "acquisition_path": "validation/m7/acquisition/targeted-negative-supplement-02.json",
+  "candidate_id": "REG-2020-ICPT-OCA-CRL",
+  "catalyst_observation": {
+    "asset": "obeticholic acid",
+    "catalyst_type": "REG_DECISION",
+    "clinical_phase": "REGULATORY_DECISION",
+    "evidence_id": "6c3fd5d8-a84c-53e8-9c23-a81a44fbf1f7",
+    "external_event_id": "REG-2020-ICPT-OCA-CRL",
+    "indication": "fibrosis due to nonalcoholic steatohepatitis",
+    "issuer_id": "0001270073",
+    "known_at": "2020-06-29T07:00:00-04:00",
+    "source_statement": "Intercept issuer release distributed by GlobeNewswire at 07:00 ET; FDA CRL declined accelerated approval in the NDA's then-current form.",
+    "source_tier": 5,
+    "timing_confidence": "HIGH",
+    "title": "Intercept Pharmaceuticals, Inc. - obeticholic acid (fibrosis due to nonalcoholic steatohepatitis)",
+    "window_end": "2020-06-29",
+    "window_start": "2020-06-29"
+  },
+  "catalyst_version": {
+    "asset": "obeticholic acid",
+    "canonical_key": "0001270073|obeticholic acid|fibrosis due to nonalcoholic steatohepatitis|REG_DECISION",
+    "catalyst_type": "REG_DECISION",
+    "clinical_phase": "REGULATORY_DECISION",
+    "conflicts": [],
+    "id": "5074a244-34fe-546f-a105-969feae2602c",
+    "indication": "fibrosis due to nonalcoholic steatohepatitis",
+    "issuer_id": "0001270073",
+    "known_at": "2020-06-29T07:00:00-04:00",
+    "primary_evidence_id": "6c3fd5d8-a84c-53e8-9c23-a81a44fbf1f7",
+    "resolved_at_cutoff": "2020-06-29T07:00:00-04:00",
+    "supporting_evidence_ids": [
+      "6c3fd5d8-a84c-53e8-9c23-a81a44fbf1f7"
+    ],
+    "timing_confidence": "HIGH",
+    "title": "Intercept Pharmaceuticals, Inc. - obeticholic acid (fibrosis due to nonalcoholic steatohepatitis)",
+    "version": 1,
+    "version_sha256": "624516c77afeb2f319a6eca27197ee63b4a898ed4569c708e77e7ff01fceea6c",
+    "window_end": "2020-06-29",
+    "window_start": "2020-06-29"
+  },
+  "company": "Intercept Pharmaceuticals, Inc.",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": true,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "c1f6600f9a2078b02801f8611c8f6cce4c020423541e6f6d4c019e97ef0875ca",
+  "promotion_blockers": [
+    "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2020-06-29T07:00:00-04:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "obeticholic acid",
+    "blinded": null,
+    "catalyst_version_id": "5074a244-34fe-546f-a105-969feae2602c",
+    "clinical_phase": "REGULATORY_DECISION",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2020-06-29T07:00:00-04:00",
+    "evidence_ids": [
+      "6c3fd5d8-a84c-53e8-9c23-a81a44fbf1f7"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "39291963-7704-5883-8824-a4bc0cd5d532",
+    "indication": "fibrosis due to nonalcoholic steatohepatitis",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://www.globenewswire.com/news-release/2020/06/29/2054576/0/en/Intercept-Receives-Complete-Response-Letter-from-FDA-for-Obeticholic-Acid-for-the-Treatment-of-Fibrosis-Due-to-NASH.html"
+  ],
+  "stratum": "REGULATORY",
+  "ticker": "ICPT",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-20.json"
+}

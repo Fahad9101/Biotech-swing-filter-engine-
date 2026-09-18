@@ -1,0 +1,40 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-15",
+  "role": "PREFREEZE_FINANCING_QUOTA_RESERVE_SUPPLEMENT",
+  "market_outcomes_inspected": false,
+  "cohort_frozen": false,
+  "rows": [
+    {
+      "candidate_id": "P3-2023-GERN-IMERGE",
+      "event_date": "2023-01-04",
+      "ticker": "GERN",
+      "issuer": "Geron Corporation",
+      "financing_date": "2023-01-05",
+      "financing_type": "UNDERWRITTEN_PUBLIC_OFFERING_COMMON_STOCK_AND_PREFUNDED_WARRANTS",
+      "relative_day": 1,
+      "shares_or_units": "55,876,297 common shares and pre-funded warrants for 25,000,000 common shares, plus a 12,131,444-share underwriter option subsequently exercised in full",
+      "gross_or_net_proceeds": {
+        "net_cash_proceeds_usd": 213300000,
+        "basis": "completed offering including full underwriter option; excludes future proceeds from exercise of the pre-funded warrant"
+      },
+      "evidence_summary": "Geron entered the underwriting agreement on January 5, 2023, one day after the January 4 IMerge Phase 3 event. The offering was completed January 10 and Geron's 2022 Form 10-K reports approximately $213.3 million net cash proceeds. This is actual issuer equity dilution inside the frozen T-90 through T+30 financing window, not unused financing capacity.",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/886744/000095017023000349/gern-20230105.htm",
+        "https://www.sec.gov/Archives/edgar/data/886744/000095017023000348/gern010623.htm",
+        "https://www.sec.gov/Archives/edgar/data/886744/000095017023008437/gern-20221231.htm"
+      ],
+      "status": "QUALIFIES",
+      "historical_universe_status": "PASS",
+      "single_asset_status": "QUALIFIES",
+      "outcome_inspected_for_selection": false
+    }
+  ],
+  "summary": {
+    "supplemental_financing_qualified": 1,
+    "supplemental_universe_pass": 1,
+    "purpose": "RESTORE_FINANCING_RESERVE_AFTER_NEG_P2_2018_MNLO_ATOMIK_UNIVERSE_ATTRITION"
+  }
+}

@@ -1,0 +1,1742 @@
+{
+  "boe_rules_version": "BOE-1.0.0",
+  "calibration_and_return_metrics": {
+    "base_prior_brier_score": 0.22993055555555555,
+    "bottom_quintile_median_xbi_relative_t20_pct": -7.44,
+    "bottom_quintile_pos_swing_success": {
+      "ci_high": 0.5729038096209293,
+      "ci_low": 0.21159133433631458,
+      "n": 24,
+      "value": 0.375
+    },
+    "brier_beats_naive_prior": false,
+    "brier_score": 0.2497916666666667,
+    "brier_score_by_stratum": {
+      "CONFERENCE_OTHER": {
+        "brier_score": 0.22933333333333336,
+        "n": 15
+      },
+      "EARLY_CLINICAL": {
+        "brier_score": 0.22166666666666668,
+        "n": 15
+      },
+      "PHASE_2_POC": {
+        "brier_score": 0.2733333333333333,
+        "n": 30
+      },
+      "PHASE_3_PIVOTAL": {
+        "brier_score": 0.2558333333333333,
+        "n": 30
+      },
+      "REGULATORY": {
+        "brier_score": 0.2445,
+        "n": 30
+      }
+    },
+    "brier_score_by_validation_period": {
+      "DIAGNOSTIC_2018_2022": {
+        "brier_beats_naive_prior": false,
+        "brier_score": 0.26820000000000005,
+        "n": 75,
+        "naive_prior_pct": 64.0
+      },
+      "HOLDOUT_2025": {
+        "brier_beats_naive_prior": true,
+        "brier_score": 0.18305555555555558,
+        "n": 9,
+        "naive_prior_pct": 55.56
+      },
+      "TEMPORAL_2023_2024": {
+        "brier_beats_naive_prior": false,
+        "brier_score": 0.22812500000000002,
+        "n": 36,
+        "naive_prior_pct": 66.67
+      }
+    },
+    "cohort_sha256": "37f2e70dcc0626b40e97637e34056c9279ae9a5e6daf69d1c2f730e77c114e95",
+    "event_count": 120,
+    "generator": "python scripts/m7_build_objective_calibration.py",
+    "limitations": [
+      "Ground truth for calibration is the scientific/regulatory readout result (negative_event, inverted), not a market outcome - it measures whether the PoS number tracks catalyst success, not whether following it would have been profitable.",
+      "This methodology has no adjustment layer, gates, valuation, or classification - it cannot be compared to BOE-1.0.0's own acceptance criteria (VALIDATION-AND-MILESTONES.md 5.2-5.3), which assume a full scored decision this project does not have.",
+      "The author of this methodology had already seen this cohort's aggregate outcome rates (27 severe losses, 31 swing successes of 120) before designing it. The prior table is BOE-1.0.0's own frozen, pre-existing values, not fitted to this cohort, but perfect blinding cannot be claimed.",
+      "brier_score_by_validation_period reports the 2025 holdout period's numbers for completeness only, per VALIDATION-AND-MILESTONES.md section 6's own discipline - they are not used to justify any change to the methodology here, and none is proposed."
+    ],
+    "methodology": "src/boe/objective_pos_methodology.py",
+    "naive_prior_pct": 64.17,
+    "pos_band_calibration": [
+      {
+        "deviation_pp": 26.67,
+        "mean_predicted_pct": 40.0,
+        "n": 24,
+        "observed_success_rate_pct": 66.67,
+        "pos_mid_pct_range": [
+          40.0,
+          40.0
+        ],
+        "within_20pp": false
+      },
+      {
+        "deviation_pp": 18.13,
+        "mean_predicted_pct": 44.38,
+        "n": 24,
+        "observed_success_rate_pct": 62.5,
+        "pos_mid_pct_range": [
+          40.0,
+          55.0
+        ],
+        "within_20pp": true
+      },
+      {
+        "deviation_pp": 0.83,
+        "mean_predicted_pct": 55.0,
+        "n": 24,
+        "observed_success_rate_pct": 54.17,
+        "pos_mid_pct_range": [
+          55.0,
+          55.0
+        ],
+        "within_20pp": true
+      },
+      {
+        "deviation_pp": 9.79,
+        "mean_predicted_pct": 69.38,
+        "n": 24,
+        "observed_success_rate_pct": 79.17,
+        "pos_mid_pct_range": [
+          55.0,
+          75.0
+        ],
+        "within_20pp": true
+      },
+      {
+        "deviation_pp": 17.08,
+        "mean_predicted_pct": 75.42,
+        "n": 24,
+        "observed_success_rate_pct": 58.33,
+        "pos_mid_pct_range": [
+          75.0,
+          85.0
+        ],
+        "within_20pp": true
+      }
+    ],
+    "top_quintile_median_xbi_relative_t20_pct": -7.1,
+    "top_quintile_pos_swing_success": {
+      "ci_high": 0.49168063658709704,
+      "ci_low": 0.14914460334164278,
+      "n": 24,
+      "value": 0.2916666666666667
+    }
+  },
+  "case_level_predictions_and_outcomes": [
+    {
+      "event_id": "CO-2018-ZIOP-ASCO",
+      "negative_event": false,
+      "pos_high_pct": 85.0,
+      "pos_low_pct": 55.0,
+      "pos_mid_pct": 70.0,
+      "return_t20_pct": -36.809815950920246,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -36.40250524595941
+    },
+    {
+      "event_id": "CO-2019-BGNE-ZANUASH",
+      "negative_event": false,
+      "pos_high_pct": 60.0,
+      "pos_low_pct": 30.0,
+      "pos_mid_pct": 45.0,
+      "return_t20_pct": -13.690348812326128,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -14.940215279583901
+    },
+    {
+      "event_id": "CO-2019-CNST-MANIFEST",
+      "negative_event": false,
+      "pos_high_pct": 55.0,
+      "pos_low_pct": 25.0,
+      "pos_mid_pct": 40.0,
+      "return_t20_pct": -4.5995423340961095,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -5.849408801353881
+    },
+    {
+      "event_id": "CO-2020-ONCT-CIRLLASH",
+      "negative_event": false,
+      "pos_high_pct": 60.0,
+      "pos_low_pct": 30.0,
+      "pos_mid_pct": 45.0,
+      "return_t20_pct": 72.55639097744361,
+      "severe_loss": false,
+      "swing_success": true,
+      "xbi_relative_t20_pct": 67.19898384410041
+    },
+    {
+      "event_id": "CO-2020-TRIL-TTI622ASH",
+      "negative_event": false,
+      "pos_high_pct": 85.0,
+      "pos_low_pct": 55.0,
+      "pos_mid_pct": 70.0,
+      "return_t20_pct": 0.45691906005221933,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -8.120793549918455
+    },
+    {
+      "event_id": "CO-2021-HARP-HPN424ASCO",
+      "negative_event": false,
+      "pos_high_pct": 60.0,
+      "pos_low_pct": 30.0,
+      "pos_mid_pct": 45.0,
+      "return_t20_pct": -33.61986628462273,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -41.32866272793807
+    },
+    {
+      "event_id": "CO-2021-IGMS-IGM2323ASH",
+      "negative_event": false,
+      "pos_high_pct": 85.0,
+      "pos_low_pct": 55.0,
+      "pos_mid_pct": 70.0,
+      "return_t20_pct": -49.979935794542534,
+      "severe_loss": true,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -44.5047480999811
+    },
+    {
+      "event_id": "CO-2021-IOVA-LIFILEUCELASCO",
+      "negative_event": false,
+      "pos_high_pct": 55.0,
+      "pos_low_pct": 25.0,
+      "pos_mid_pct": 40.0,
+      "return_t20_pct": 51.894374282433986,
+      "severe_loss": false,
+      "swing_success": true,
+      "xbi_relative_t20_pct": 44.18557783911864
+    },
+    {
+      "event_id": "CO-2022-KROS-KER050ASH",
+      "negative_event": false,
+      "pos_high_pct": 55.0,
+      "pos_low_pct": 25.0,
+      "pos_mid_pct": 40.0,
+      "return_t20_pct": -2.9772681553007443,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -9.076217921212423
+    },
+    {
+      "event_id": "CO-2024-AUTL-OBECELASH",
+      "negative_event": false,
+      "pos_high_pct": 60.0,
+      "pos_low_pct": 30.0,
+      "pos_mid_pct": 45.0,
+      "return_t20_pct": -20.0,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -11.041112701984046
+    },
+    {
+      "event_id": "CO-2024-GMAB-TVASCO",
+      "negative_event": false,
+      "pos_high_pct": 55.0,
+      "pos_low_pct": 25.0,
+      "pos_mid_pct": 40.0,
+      "return_t20_pct": -11.702127659574469,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -14.32093339385599
+    },
+    {
+      "event_id": "CO-2024-IRON-DISC0974ASH",
+      "negative_event": false,
+      "pos_high_pct": 85.0,
+      "pos_low_pct": 55.0,
+      "pos_mid_pct": 70.0,
+      "return_t20_pct": -3.5174328910829993,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": 3.3640913817456215
+    },
+    {
+      "event_id": "CO-2024-NRIX-NX5948ASH",
+      "negative_event": false,
+      "pos_high_pct": 85.0,
+      "pos_low_pct": 55.0,
+      "pos_mid_pct": 70.0,
+      "return_t20_pct": -11.713455953533398,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -2.754568655517444
+    },
+    {
+      "event_id": "CO-2025-CRVS-SOQUELITINIBASH",
+      "negative_event": false,
+      "pos_high_pct": 85.0,
+      "pos_low_pct": 55.0,
+      "pos_mid_pct": 70.0,
+      "return_t20_pct": -19.409761634506243,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -22.201102780339575
+    },
+    {
+      "event_id": "CO-2025-GERN-RYTELOASH",
+      "negative_event": false,
+      "pos_high_pct": 65.0,
+      "pos_low_pct": 35.0,
+      "pos_mid_pct": 50.0,
+      "return_t20_pct": 4.580152671755725,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": 1.7888115259223918
+    },
+    {
+      "event_id": "EC-2019-WVE-SUVODIRSEN",
+      "negative_event": true,
+      "pos_high_pct": 85.0,
+      "pos_low_pct": 55.0,
+      "pos_mid_pct": 70.0,
+      "return_t20_pct": -78.80319148936171,
+      "severe_loss": true,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -79.83989941277225
+    },
+    {
+      "event_id": "EC-2020-CRSP-CTX001",
+      "negative_event": false,
+      "pos_high_pct": 60.0,
+      "pos_low_pct": 30.0,
+      "pos_mid_pct": 45.0,
+      "return_t20_pct": 44.438860971524285,
+      "severe_loss": false,
+      "swing_success": true,
+      "xbi_relative_t20_pct": 31.300546834331342
+    },
+    {
+      "event_id": "EC-2021-EDIT-EDIT101",
+      "negative_event": false,
+      "pos_high_pct": 60.0,
+      "pos_low_pct": 30.0,
+      "pos_mid_pct": 45.0,
+      "return_t20_pct": -29.837940896091517,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -25.52060062980301
+    },
+    {
+      "event_id": "EC-2021-KURA-KO539-HOLD",
+      "negative_event": true,
+      "pos_high_pct": 85.0,
+      "pos_low_pct": 55.0,
+      "pos_mid_pct": 70.0,
+      "return_t20_pct": -3.253012048192771,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -2.2751818197513987
+    },
+    {
+      "event_id": "EC-2021-SGTX-SIG001",
+      "negative_event": true,
+      "pos_high_pct": 60.0,
+      "pos_low_pct": 30.0,
+      "pos_mid_pct": 45.0,
+      "return_t20_pct": -46.96969696969697,
+      "severe_loss": true,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -43.468018605339324
+    },
+    {
+      "event_id": "EC-2021-TPTX-TPX0046",
+      "negative_event": false,
+      "pos_high_pct": 60.0,
+      "pos_low_pct": 30.0,
+      "pos_mid_pct": 45.0,
+      "return_t20_pct": -19.688715953307394,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -13.32257193472435
+    },
+    {
+      "event_id": "EC-2022-ALEC-AL101",
+      "negative_event": false,
+      "pos_high_pct": 85.0,
+      "pos_low_pct": 55.0,
+      "pos_mid_pct": 70.0,
+      "return_t20_pct": 17.623497997329775,
+      "severe_loss": false,
+      "swing_success": true,
+      "xbi_relative_t20_pct": 18.659505577873045
+    },
+    {
+      "event_id": "EC-2022-AVXL-ANAVEX371",
+      "negative_event": false,
+      "pos_high_pct": 85.0,
+      "pos_low_pct": 55.0,
+      "pos_mid_pct": 70.0,
+      "return_t20_pct": -28.52543464262717,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -18.763855592402432
+    },
+    {
+      "event_id": "EC-2022-VTYX-VTX958",
+      "negative_event": false,
+      "pos_high_pct": 85.0,
+      "pos_low_pct": 55.0,
+      "pos_mid_pct": 70.0,
+      "return_t20_pct": 108.06451612903226,
+      "severe_loss": false,
+      "swing_success": true,
+      "xbi_relative_t20_pct": 118.40385865289228
+    },
+    {
+      "event_id": "EC-2023-IMTX-IMA203",
+      "negative_event": false,
+      "pos_high_pct": 85.0,
+      "pos_low_pct": 55.0,
+      "pos_mid_pct": 70.0,
+      "return_t20_pct": -7.63819095477387,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -20.21733827431798
+    },
+    {
+      "event_id": "EC-2024-CABA-CABA201",
+      "negative_event": false,
+      "pos_high_pct": 60.0,
+      "pos_low_pct": 30.0,
+      "pos_mid_pct": 45.0,
+      "return_t20_pct": -37.4203821656051,
+      "severe_loss": true,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -46.10670924335309
+    },
+    {
+      "event_id": "EC-2024-CHRS-CHS114",
+      "negative_event": false,
+      "pos_high_pct": 85.0,
+      "pos_low_pct": 55.0,
+      "pos_mid_pct": 70.0,
+      "return_t20_pct": -21.393034825870647,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -25.74135069835009
+    },
+    {
+      "event_id": "EC-2024-TSHA-TSHA102",
+      "negative_event": false,
+      "pos_high_pct": 60.0,
+      "pos_low_pct": 30.0,
+      "pos_mid_pct": 45.0,
+      "return_t20_pct": -43.92059553349876,
+      "severe_loss": true,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -51.717130406888366
+    },
+    {
+      "event_id": "EC-2025-MRSN-XMT1660",
+      "negative_event": false,
+      "pos_high_pct": 85.0,
+      "pos_low_pct": 55.0,
+      "pos_mid_pct": 70.0,
+      "return_t20_pct": -46.15384615384615,
+      "severe_loss": true,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -44.02062891396805
+    },
+    {
+      "event_id": "EC-2025-MTSR-MET233I",
+      "negative_event": false,
+      "pos_high_pct": 85.0,
+      "pos_low_pct": 55.0,
+      "pos_mid_pct": 70.0,
+      "return_t20_pct": 28.483084758093852,
+      "severe_loss": false,
+      "swing_success": true,
+      "xbi_relative_t20_pct": 24.190727538587474
+    },
+    {
+      "event_id": "NEG-P2-2018-IDRA-IMO8400",
+      "negative_event": true,
+      "pos_high_pct": 55.0,
+      "pos_low_pct": 25.0,
+      "pos_mid_pct": 40.0,
+      "return_t20_pct": -43.523316062176164,
+      "severe_loss": true,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -47.63420464655479
+    },
+    {
+      "event_id": "NEG-P2-2021-ANAB-POPLAR",
+      "negative_event": true,
+      "pos_high_pct": 55.0,
+      "pos_low_pct": 25.0,
+      "pos_mid_pct": 40.0,
+      "return_t20_pct": -26.782077393075358,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -24.090941458068826
+    },
+    {
+      "event_id": "NEG-P2-2022-NGM-CATALINA",
+      "negative_event": true,
+      "pos_high_pct": 55.0,
+      "pos_low_pct": 25.0,
+      "pos_mid_pct": 40.0,
+      "return_t20_pct": -49.35064935064935,
+      "severe_loss": true,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -57.3811679074837
+    },
+    {
+      "event_id": "NEG-P2-2024-SAGE-LIGHTWAVE",
+      "negative_event": true,
+      "pos_high_pct": 55.0,
+      "pos_low_pct": 25.0,
+      "pos_mid_pct": 40.0,
+      "return_t20_pct": -11.607142857142858,
+      "severe_loss": false,
+      "swing_success": true,
+      "xbi_relative_t20_pct": -16.061090911800207
+    },
+    {
+      "event_id": "NEG-P2-2024-SAGE-PRECEDENT",
+      "negative_event": true,
+      "pos_high_pct": 55.0,
+      "pos_low_pct": 25.0,
+      "pos_mid_pct": 40.0,
+      "return_t20_pct": -25.07997440818938,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -33.24779671398324
+    },
+    {
+      "event_id": "NEG-P3-2021-DCPH-INTRIGUE",
+      "negative_event": true,
+      "pos_high_pct": 70.0,
+      "pos_low_pct": 40.0,
+      "pos_mid_pct": 55.0,
+      "return_t20_pct": -77.69444444444444,
+      "severe_loss": true,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -59.95628625150042
+    },
+    {
+      "event_id": "NEG-P3-2022-NKTR-PIVOTIO001",
+      "negative_event": true,
+      "pos_high_pct": 70.0,
+      "pos_low_pct": 40.0,
+      "pos_mid_pct": 55.0,
+      "return_t20_pct": -47.318908748824086,
+      "severe_loss": true,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -50.51824271647394
+    },
+    {
+      "event_id": "NEG-P3-2023-KOD-GLEAMGLIMMER",
+      "negative_event": true,
+      "pos_high_pct": 70.0,
+      "pos_low_pct": 40.0,
+      "pos_mid_pct": 55.0,
+      "return_t20_pct": -67.48971193415638,
+      "severe_loss": true,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -59.74456745286789
+    },
+    {
+      "event_id": "NEG-P3-2023-MRTX-SAPPHIRE",
+      "negative_event": true,
+      "pos_high_pct": 70.0,
+      "pos_low_pct": 40.0,
+      "pos_mid_pct": 55.0,
+      "return_t20_pct": -14.986313868613138,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -11.936460496179121
+    },
+    {
+      "event_id": "NEG-P3-2024-AMLX-PHOENIX",
+      "negative_event": true,
+      "pos_high_pct": 70.0,
+      "pos_low_pct": 40.0,
+      "pos_mid_pct": 55.0,
+      "return_t20_pct": -85.81971534001055,
+      "severe_loss": true,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -77.32597870695218
+    },
+    {
+      "event_id": "P2-2018-BIIB-BAN2401",
+      "negative_event": false,
+      "pos_high_pct": 55.0,
+      "pos_low_pct": 25.0,
+      "pos_mid_pct": 40.0,
+      "return_t20_pct": 15.193601285097554,
+      "severe_loss": false,
+      "swing_success": true,
+      "xbi_relative_t20_pct": 18.041866432689474
+    },
+    {
+      "event_id": "P2-2018-ESPR-BA-PCSK9",
+      "negative_event": false,
+      "pos_high_pct": 55.0,
+      "pos_low_pct": 25.0,
+      "pos_mid_pct": 40.0,
+      "return_t20_pct": -3.5380972280261873,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": 1.6216897227061693
+    },
+    {
+      "event_id": "P2-2018-GWPH-GWP42006",
+      "negative_event": true,
+      "pos_high_pct": 55.0,
+      "pos_low_pct": 25.0,
+      "pos_mid_pct": 40.0,
+      "return_t20_pct": -9.839038766719565,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -9.039571744734221
+    },
+    {
+      "event_id": "P2-2019-AGIO-DRIVEPK",
+      "negative_event": false,
+      "pos_high_pct": 55.0,
+      "pos_low_pct": 25.0,
+      "pos_mid_pct": 40.0,
+      "return_t20_pct": -2.9896619167365186,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": 0.18312095788121843
+    },
+    {
+      "event_id": "P2-2019-AXSM-AXS05-SMOKING",
+      "negative_event": false,
+      "pos_high_pct": 55.0,
+      "pos_low_pct": 25.0,
+      "pos_mid_pct": 40.0,
+      "return_t20_pct": 61.51560178306092,
+      "severe_loss": false,
+      "swing_success": true,
+      "xbi_relative_t20_pct": 70.55958742040383
+    },
+    {
+      "event_id": "P2-2019-MDGL-RESMETIROM",
+      "negative_event": false,
+      "pos_high_pct": 55.0,
+      "pos_low_pct": 25.0,
+      "pos_mid_pct": 40.0,
+      "return_t20_pct": -4.335232210099449,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -16.979880233243133
+    },
+    {
+      "event_id": "P2-2019-RETA-MOXIE",
+      "negative_event": false,
+      "pos_high_pct": 55.0,
+      "pos_low_pct": 25.0,
+      "pos_mid_pct": 40.0,
+      "return_t20_pct": 81.75762998309972,
+      "severe_loss": false,
+      "swing_success": true,
+      "xbi_relative_t20_pct": 72.61904338286371
+    },
+    {
+      "event_id": "P2-2019-TGTX-UNITYNHL",
+      "negative_event": false,
+      "pos_high_pct": 55.0,
+      "pos_low_pct": 25.0,
+      "pos_mid_pct": 40.0,
+      "return_t20_pct": 43.737957610789984,
+      "severe_loss": false,
+      "swing_success": true,
+      "xbi_relative_t20_pct": 45.28002935064918
+    },
+    {
+      "event_id": "P2-2020-CRNX-ACROBAT",
+      "negative_event": false,
+      "pos_high_pct": 55.0,
+      "pos_low_pct": 25.0,
+      "pos_mid_pct": 40.0,
+      "return_t20_pct": 2.7468448403860433,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -9.1573310559139
+    },
+    {
+      "event_id": "P2-2021-BIIB-CONVEY",
+      "negative_event": false,
+      "pos_high_pct": 55.0,
+      "pos_low_pct": 25.0,
+      "pos_mid_pct": 40.0,
+      "return_t20_pct": -4.662277330303132,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -2.1084620382731956
+    },
+    {
+      "event_id": "P2-2021-BIIB-TANGO",
+      "negative_event": true,
+      "pos_high_pct": 55.0,
+      "pos_low_pct": 25.0,
+      "pos_mid_pct": 40.0,
+      "return_t20_pct": -17.042753826889168,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -11.317706745909883
+    },
+    {
+      "event_id": "P2-2021-GHRS-GH001",
+      "negative_event": false,
+      "pos_high_pct": 55.0,
+      "pos_low_pct": 25.0,
+      "pos_mid_pct": 40.0,
+      "return_t20_pct": 13.655244029075805,
+      "severe_loss": false,
+      "swing_success": true,
+      "xbi_relative_t20_pct": 11.983064683247065
+    },
+    {
+      "event_id": "P2-2022-AKRO-HARMONY",
+      "negative_event": false,
+      "pos_high_pct": 55.0,
+      "pos_low_pct": 25.0,
+      "pos_mid_pct": 40.0,
+      "return_t20_pct": 210.10594947025265,
+      "severe_loss": false,
+      "swing_success": true,
+      "xbi_relative_t20_pct": 221.8399485623997
+    },
+    {
+      "event_id": "P2-2022-CINC-BRIGHTN",
+      "negative_event": false,
+      "pos_high_pct": 55.0,
+      "pos_low_pct": 25.0,
+      "pos_mid_pct": 40.0,
+      "return_t20_pct": 27.377398720682304,
+      "severe_loss": false,
+      "swing_success": true,
+      "xbi_relative_t20_pct": 39.25049073987114
+    },
+    {
+      "event_id": "P2-2022-CINC-HALO",
+      "negative_event": true,
+      "pos_high_pct": 55.0,
+      "pos_low_pct": 25.0,
+      "pos_mid_pct": 40.0,
+      "return_t20_pct": -58.386732001507724,
+      "severe_loss": true,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -55.27065503068215
+    },
+    {
+      "event_id": "P2-2023-AKRO-SYMMETRY-COHORT-D",
+      "negative_event": false,
+      "pos_high_pct": 55.0,
+      "pos_low_pct": 25.0,
+      "pos_mid_pct": 40.0,
+      "return_t20_pct": -3.5951209073400383,
+      "severe_loss": false,
+      "swing_success": true,
+      "xbi_relative_t20_pct": 0.363430728473211
+    },
+    {
+      "event_id": "P2-2023-AKRO-SYMMETRY-MAIN",
+      "negative_event": false,
+      "pos_high_pct": 55.0,
+      "pos_low_pct": 25.0,
+      "pos_mid_pct": 40.0,
+      "return_t20_pct": -67.92336217552534,
+      "severe_loss": true,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -67.7267605746266
+    },
+    {
+      "event_id": "P2-2023-APLS-MERIDIAN",
+      "negative_event": true,
+      "pos_high_pct": 55.0,
+      "pos_low_pct": 25.0,
+      "pos_mid_pct": 40.0,
+      "return_t20_pct": -2.4604366408686613,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": 0.5894167315653563
+    },
+    {
+      "event_id": "P2-2023-ATAI-PCN101",
+      "negative_event": true,
+      "pos_high_pct": 55.0,
+      "pos_low_pct": 25.0,
+      "pos_mid_pct": 40.0,
+      "return_t20_pct": -26.61596958174905,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -35.31109153296856
+    },
+    {
+      "event_id": "P2-2023-TERN-DUET",
+      "negative_event": false,
+      "pos_high_pct": 55.0,
+      "pos_low_pct": 25.0,
+      "pos_mid_pct": 40.0,
+      "return_t20_pct": -25.17882689556509,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -24.468437449922572
+    },
+    {
+      "event_id": "P2-2024-BNTX-BNT111",
+      "negative_event": false,
+      "pos_high_pct": 55.0,
+      "pos_low_pct": 25.0,
+      "pos_mid_pct": 40.0,
+      "return_t20_pct": 0.5773005426625101,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -0.2244633378746717
+    },
+    {
+      "event_id": "P2-2024-RXRX-SYCAMORE",
+      "negative_event": false,
+      "pos_high_pct": 55.0,
+      "pos_low_pct": 25.0,
+      "pos_mid_pct": 40.0,
+      "return_t20_pct": -15.247252747252746,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -12.012162938778003
+    },
+    {
+      "event_id": "P2-2024-SAGE-DIMENSION",
+      "negative_event": true,
+      "pos_high_pct": 55.0,
+      "pos_low_pct": 25.0,
+      "pos_mid_pct": 40.0,
+      "return_t20_pct": 1.8329938900203666,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": 5.434848737426815
+    },
+    {
+      "event_id": "P2-2025-KALA-CHASE",
+      "negative_event": true,
+      "pos_high_pct": 55.0,
+      "pos_low_pct": 25.0,
+      "pos_mid_pct": 40.0,
+      "return_t20_pct": -95.77007874015749,
+      "severe_loss": true,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -109.69399958502572
+    },
+    {
+      "event_id": "P2-2025-VTYX-VTX958",
+      "negative_event": true,
+      "pos_high_pct": 55.0,
+      "pos_low_pct": 25.0,
+      "pos_mid_pct": 40.0,
+      "return_t20_pct": -19.883040935672515,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -14.156507631649653
+    },
+    {
+      "event_id": "P3-2018-RARE-UX007",
+      "negative_event": true,
+      "pos_high_pct": 70.0,
+      "pos_low_pct": 40.0,
+      "pos_mid_pct": 55.0,
+      "return_t20_pct": -6.485849056603773,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -6.059356332067898
+    },
+    {
+      "event_id": "P3-2019-AXSM-GEMINI",
+      "negative_event": false,
+      "pos_high_pct": 70.0,
+      "pos_low_pct": 40.0,
+      "pos_mid_pct": 55.0,
+      "return_t20_pct": 93.82346655268219,
+      "severe_loss": false,
+      "swing_success": true,
+      "xbi_relative_t20_pct": 92.78675862927165
+    },
+    {
+      "event_id": "P3-2019-ICPT-REGENERATE",
+      "negative_event": false,
+      "pos_high_pct": 70.0,
+      "pos_low_pct": 40.0,
+      "pos_mid_pct": 55.0,
+      "return_t20_pct": 1.0377188233170909,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -4.333363548813866
+    },
+    {
+      "event_id": "P3-2019-NVAX-PREPARE",
+      "negative_event": true,
+      "pos_high_pct": 70.0,
+      "pos_low_pct": 40.0,
+      "pos_mid_pct": 55.0,
+      "return_t20_pct": -74.64788732394366,
+      "severe_loss": true,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -73.10581558408445
+    },
+    {
+      "event_id": "P3-2020-AGIO-ACTIVATE",
+      "negative_event": false,
+      "pos_high_pct": 70.0,
+      "pos_low_pct": 40.0,
+      "pos_mid_pct": 55.0,
+      "return_t20_pct": -3.8860103626943006,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -12.178361123078654
+    },
+    {
+      "event_id": "P3-2020-APRE-P3MDS",
+      "negative_event": true,
+      "pos_high_pct": 70.0,
+      "pos_low_pct": 40.0,
+      "pos_mid_pct": 55.0,
+      "return_t20_pct": -78.55719410123555,
+      "severe_loss": true,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -80.16219040772941
+    },
+    {
+      "event_id": "P3-2020-CRBP-RESOLVE1",
+      "negative_event": true,
+      "pos_high_pct": 70.0,
+      "pos_low_pct": 40.0,
+      "pos_mid_pct": 55.0,
+      "return_t20_pct": -86.91891891891892,
+      "severe_loss": true,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -96.12478154943908
+    },
+    {
+      "event_id": "P3-2020-GMAB-ANDROMEDA",
+      "negative_event": false,
+      "pos_high_pct": 70.0,
+      "pos_low_pct": 40.0,
+      "pos_mid_pct": 55.0,
+      "return_t20_pct": 12.226338834624453,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": 1.9057073172284873
+    },
+    {
+      "event_id": "P3-2020-IMMU-ASCENT",
+      "negative_event": false,
+      "pos_high_pct": 70.0,
+      "pos_low_pct": 40.0,
+      "pos_mid_pct": 55.0,
+      "return_t20_pct": 18.30047948854555,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": 17.389195650432445
+    },
+    {
+      "event_id": "P3-2020-ONTX-INSPIRE",
+      "negative_event": true,
+      "pos_high_pct": 70.0,
+      "pos_low_pct": 40.0,
+      "pos_mid_pct": 55.0,
+      "return_t20_pct": -68.32343234323433,
+      "severe_loss": true,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -69.53599229256018
+    },
+    {
+      "event_id": "P3-2020-REGN-LIBTAYO-NSCLC",
+      "negative_event": false,
+      "pos_high_pct": 70.0,
+      "pos_low_pct": 40.0,
+      "pos_mid_pct": 55.0,
+      "return_t20_pct": -3.709976467232404,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -10.448044471807636
+    },
+    {
+      "event_id": "P3-2021-BIIB-STAR",
+      "negative_event": true,
+      "pos_high_pct": 70.0,
+      "pos_low_pct": 40.0,
+      "pos_mid_pct": 55.0,
+      "return_t20_pct": -13.315605456246615,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -5.466982278511376
+    },
+    {
+      "event_id": "P3-2021-BIIB-VALOR",
+      "negative_event": true,
+      "pos_high_pct": 70.0,
+      "pos_low_pct": 40.0,
+      "pos_mid_pct": 55.0,
+      "return_t20_pct": -3.3322664390625554,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -2.3828738893803605
+    },
+    {
+      "event_id": "P3-2022-BGNE-ALPINE",
+      "negative_event": false,
+      "pos_high_pct": 70.0,
+      "pos_low_pct": 40.0,
+      "pos_mid_pct": 55.0,
+      "return_t20_pct": 40.41112261971158,
+      "severe_loss": false,
+      "swing_success": true,
+      "xbi_relative_t20_pct": 41.78679760042641
+    },
+    {
+      "event_id": "P3-2022-MDGL-MAESTRO-NASH",
+      "negative_event": false,
+      "pos_high_pct": 70.0,
+      "pos_low_pct": 40.0,
+      "pos_mid_pct": 55.0,
+      "return_t20_pct": 369.3573667711599,
+      "severe_loss": false,
+      "swing_success": true,
+      "xbi_relative_t20_pct": 364.50963526090504
+    },
+    {
+      "event_id": "P3-2023-GERN-IMERGE",
+      "negative_event": false,
+      "pos_high_pct": 70.0,
+      "pos_low_pct": 40.0,
+      "pos_mid_pct": 55.0,
+      "return_t20_pct": 39.166666666666664,
+      "severe_loss": false,
+      "swing_success": true,
+      "xbi_relative_t20_pct": 26.367357854027812
+    },
+    {
+      "event_id": "P3-2023-GMAB-INNOVATV301",
+      "negative_event": false,
+      "pos_high_pct": 70.0,
+      "pos_low_pct": 40.0,
+      "pos_mid_pct": 55.0,
+      "return_t20_pct": -11.099531005732151,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": 1.9369363720897284
+    },
+    {
+      "event_id": "P3-2024-ANNX-ANX005",
+      "negative_event": false,
+      "pos_high_pct": 70.0,
+      "pos_low_pct": 40.0,
+      "pos_mid_pct": 55.0,
+      "return_t20_pct": 4.6943231441048034,
+      "severe_loss": false,
+      "swing_success": true,
+      "xbi_relative_t20_pct": 5.167578702106124
+    },
+    {
+      "event_id": "P3-2024-FULC-REACH",
+      "negative_event": true,
+      "pos_high_pct": 70.0,
+      "pos_low_pct": 40.0,
+      "pos_mid_pct": 55.0,
+      "return_t20_pct": -63.05084745762712,
+      "severe_loss": true,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -60.35830529140074
+    },
+    {
+      "event_id": "P3-2024-NAMS-BROADWAY",
+      "negative_event": false,
+      "pos_high_pct": 70.0,
+      "pos_low_pct": 40.0,
+      "pos_mid_pct": 55.0,
+      "return_t20_pct": 34.71922246220302,
+      "severe_loss": false,
+      "swing_success": true,
+      "xbi_relative_t20_pct": 43.67810976021898
+    },
+    {
+      "event_id": "P3-2024-NAMS-BROOKLYN",
+      "negative_event": false,
+      "pos_high_pct": 70.0,
+      "pos_low_pct": 40.0,
+      "pos_mid_pct": 55.0,
+      "return_t20_pct": -11.134676564156946,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -11.293029691631213
+    },
+    {
+      "event_id": "P3-2024-SAVA-RETHINK",
+      "negative_event": true,
+      "pos_high_pct": 70.0,
+      "pos_low_pct": 40.0,
+      "pos_mid_pct": 55.0,
+      "return_t20_pct": -91.16314199395771,
+      "severe_loss": true,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -86.73679268818466
+    },
+    {
+      "event_id": "P3-2025-ALEC-INFRONT3",
+      "negative_event": true,
+      "pos_high_pct": 70.0,
+      "pos_low_pct": 40.0,
+      "pos_mid_pct": 55.0,
+      "return_t20_pct": -61.993769470404985,
+      "severe_loss": true,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -66.50380705405152
+    },
+    {
+      "event_id": "P3-2025-CAPR-HOPE3",
+      "negative_event": false,
+      "pos_high_pct": 70.0,
+      "pos_low_pct": 40.0,
+      "pos_mid_pct": 55.0,
+      "return_t20_pct": 345.12578616352204,
+      "severe_loss": false,
+      "swing_success": true,
+      "xbi_relative_t20_pct": 342.2008179566547
+    },
+    {
+      "event_id": "P3-2025-SAVA-REFOCUS",
+      "negative_event": true,
+      "pos_high_pct": 70.0,
+      "pos_low_pct": 40.0,
+      "pos_mid_pct": 55.0,
+      "return_t20_pct": -40.714285714285715,
+      "severe_loss": true,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -29.765298043207782
+    },
+    {
+      "event_id": "REG-2018-AGIO-TIBSOVO",
+      "negative_event": false,
+      "pos_high_pct": 90.0,
+      "pos_low_pct": 60.0,
+      "pos_mid_pct": 75.0,
+      "return_t20_pct": -16.63742048694889,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -10.251017992731855
+    },
+    {
+      "event_id": "REG-2018-ALNY-ONPATTRO",
+      "negative_event": false,
+      "pos_high_pct": 90.0,
+      "pos_low_pct": 60.0,
+      "pos_mid_pct": 75.0,
+      "return_t20_pct": 10.610079575596817,
+      "severe_loss": false,
+      "swing_success": true,
+      "xbi_relative_t20_pct": 9.231939005258642
+    },
+    {
+      "event_id": "REG-2018-ARRY-BRAFTOVI-MEKTOVI",
+      "negative_event": false,
+      "pos_high_pct": 90.0,
+      "pos_low_pct": 60.0,
+      "pos_mid_pct": 75.0,
+      "return_t20_pct": -11.675675675675675,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -12.573379224736218
+    },
+    {
+      "event_id": "REG-2018-FOLD-GALAFOLD",
+      "negative_event": false,
+      "pos_high_pct": 90.0,
+      "pos_low_pct": 60.0,
+      "pos_mid_pct": 75.0,
+      "return_t20_pct": -23.192182410423452,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -24.86168474985348
+    },
+    {
+      "event_id": "REG-2018-REPH-MELOXICAM-CRL",
+      "negative_event": true,
+      "pos_high_pct": 90.0,
+      "pos_low_pct": 60.0,
+      "pos_mid_pct": 75.0,
+      "return_t20_pct": -57.729468599033815,
+      "severe_loss": true,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -64.98709238305393
+    },
+    {
+      "event_id": "REG-2019-GBT-OXBRYTA",
+      "negative_event": false,
+      "pos_high_pct": 90.0,
+      "pos_low_pct": 60.0,
+      "pos_mid_pct": 75.0,
+      "return_t20_pct": 36.54712260216847,
+      "severe_loss": false,
+      "swing_success": true,
+      "xbi_relative_t20_pct": 30.322509582078453
+    },
+    {
+      "event_id": "REG-2019-SAGE-ZULRESSO",
+      "negative_event": false,
+      "pos_high_pct": 90.0,
+      "pos_low_pct": 60.0,
+      "pos_mid_pct": 75.0,
+      "return_t20_pct": 3.4401024983984625,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": 10.461332042847822
+    },
+    {
+      "event_id": "REG-2019-SRPT-GOLODIRSEN-CRL",
+      "negative_event": true,
+      "pos_high_pct": 90.0,
+      "pos_low_pct": 60.0,
+      "pos_mid_pct": 75.0,
+      "return_t20_pct": -30.454658798104894,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -29.740891558811406
+    },
+    {
+      "event_id": "REG-2020-BMRN-VALROX-CRL",
+      "negative_event": true,
+      "pos_high_pct": 90.0,
+      "pos_low_pct": 60.0,
+      "pos_mid_pct": 75.0,
+      "return_t20_pct": -33.895731398683985,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -35.59064665292128
+    },
+    {
+      "event_id": "REG-2020-ICPT-OCA-CRL",
+      "negative_event": true,
+      "pos_high_pct": 90.0,
+      "pos_low_pct": 60.0,
+      "pos_mid_pct": 75.0,
+      "return_t20_pct": -40.76655052264808,
+      "severe_loss": true,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -42.37415008421184
+    },
+    {
+      "event_id": "REG-2020-IMMU-TRODELVY",
+      "negative_event": false,
+      "pos_high_pct": 90.0,
+      "pos_low_pct": 60.0,
+      "pos_mid_pct": 75.0,
+      "return_t20_pct": 60.40515653775322,
+      "severe_loss": false,
+      "swing_success": true,
+      "xbi_relative_t20_pct": 45.69057343268036
+    },
+    {
+      "event_id": "REG-2020-RYTM-IMCIVREE",
+      "negative_event": false,
+      "pos_high_pct": 90.0,
+      "pos_low_pct": 60.0,
+      "pos_mid_pct": 75.0,
+      "return_t20_pct": 21.730132450331126,
+      "severe_loss": false,
+      "swing_success": true,
+      "xbi_relative_t20_pct": 6.107119100045049
+    },
+    {
+      "event_id": "REG-2020-TCDA-VEVERIMER-CRL",
+      "negative_event": true,
+      "pos_high_pct": 90.0,
+      "pos_low_pct": 60.0,
+      "pos_mid_pct": 75.0,
+      "return_t20_pct": -22.734138972809667,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -23.94669892213552
+    },
+    {
+      "event_id": "REG-2021-ASND-SKYTROFA",
+      "negative_event": false,
+      "pos_high_pct": 90.0,
+      "pos_low_pct": 60.0,
+      "pos_mid_pct": 75.0,
+      "return_t20_pct": 38.2299794661191,
+      "severe_loss": false,
+      "swing_success": true,
+      "xbi_relative_t20_pct": 34.06265632132628
+    },
+    {
+      "event_id": "REG-2021-ATNX-ORALPAC-CRL",
+      "negative_event": true,
+      "pos_high_pct": 90.0,
+      "pos_low_pct": 60.0,
+      "pos_mid_pct": 75.0,
+      "return_t20_pct": -66.11570247933884,
+      "severe_loss": true,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -53.5400376490321
+    },
+    {
+      "event_id": "REG-2021-FGEN-ROXADUSTAT-CRL",
+      "negative_event": true,
+      "pos_high_pct": 90.0,
+      "pos_low_pct": 60.0,
+      "pos_mid_pct": 75.0,
+      "return_t20_pct": -10.614101592115238,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -15.626832336863806
+    },
+    {
+      "event_id": "REG-2021-INCY-OPZELURA",
+      "negative_event": false,
+      "pos_high_pct": 90.0,
+      "pos_low_pct": 60.0,
+      "pos_mid_pct": 75.0,
+      "return_t20_pct": -13.753128705045448,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -9.806274465107974
+    },
+    {
+      "event_id": "REG-2021-OMER-NARSOPLIMAB-CRL",
+      "negative_event": true,
+      "pos_high_pct": 90.0,
+      "pos_low_pct": 60.0,
+      "pos_mid_pct": 75.0,
+      "return_t20_pct": 7.244501940491591,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": 8.193894490173786
+    },
+    {
+      "event_id": "REG-2022-AXSM-AXS07-CRL",
+      "negative_event": true,
+      "pos_high_pct": 90.0,
+      "pos_low_pct": 60.0,
+      "pos_mid_pct": 75.0,
+      "return_t20_pct": -27.979539641943735,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -15.829300166269421
+    },
+    {
+      "event_id": "REG-2022-IMGN-ELAHERE",
+      "negative_event": false,
+      "pos_high_pct": 90.0,
+      "pos_low_pct": 60.0,
+      "pos_mid_pct": 75.0,
+      "return_t20_pct": -10.243055555555555,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -9.081935134200515
+    },
+    {
+      "event_id": "REG-2022-PRVB-TZIELD",
+      "negative_event": false,
+      "pos_high_pct": 90.0,
+      "pos_low_pct": 60.0,
+      "pos_mid_pct": 75.0,
+      "return_t20_pct": 7.524271844660194,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": 9.061195498290083
+    },
+    {
+      "event_id": "REG-2022-TGTX-BRIUMVI",
+      "negative_event": false,
+      "pos_high_pct": 90.0,
+      "pos_low_pct": 60.0,
+      "pos_mid_pct": 75.0,
+      "return_t20_pct": 71.39479905437352,
+      "severe_loss": false,
+      "swing_success": true,
+      "xbi_relative_t20_pct": 60.90073547720002
+    },
+    {
+      "event_id": "REG-2023-BLUE-LYFGENIA",
+      "negative_event": false,
+      "pos_high_pct": 90.0,
+      "pos_low_pct": 60.0,
+      "pos_mid_pct": 75.0,
+      "return_t20_pct": -71.51767151767152,
+      "severe_loss": true,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -87.7906373969366
+    },
+    {
+      "event_id": "REG-2023-GERN-IMETELSTAT-NDA-ACCEPT",
+      "negative_event": false,
+      "pos_high_pct": 95.0,
+      "pos_low_pct": 70.0,
+      "pos_mid_pct": 85.0,
+      "return_t20_pct": -16.091954022988507,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -14.105972714577291
+    },
+    {
+      "event_id": "REG-2023-RETA-SKYCLARYS",
+      "negative_event": false,
+      "pos_high_pct": 90.0,
+      "pos_low_pct": 60.0,
+      "pos_mid_pct": 75.0,
+      "return_t20_pct": 188.86750080205326,
+      "severe_loss": false,
+      "swing_success": true,
+      "xbi_relative_t20_pct": 196.7504110413342
+    },
+    {
+      "event_id": "REG-2023-SRPT-ELEVIDYS",
+      "negative_event": false,
+      "pos_high_pct": 90.0,
+      "pos_low_pct": 60.0,
+      "pos_mid_pct": 75.0,
+      "return_t20_pct": -16.55237644833294,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -14.046892093177645
+    },
+    {
+      "event_id": "REG-2024-IOVA-AMTAGVI",
+      "negative_event": false,
+      "pos_high_pct": 90.0,
+      "pos_low_pct": 60.0,
+      "pos_mid_pct": 75.0,
+      "return_t20_pct": 42.14792299898683,
+      "severe_loss": false,
+      "swing_success": true,
+      "xbi_relative_t20_pct": 42.49312256748737
+    },
+    {
+      "event_id": "REG-2024-RCKT-KRESLADI-CRL",
+      "negative_event": true,
+      "pos_high_pct": 90.0,
+      "pos_low_pct": 60.0,
+      "pos_mid_pct": 75.0,
+      "return_t20_pct": 14.073385973060846,
+      "severe_loss": false,
+      "swing_success": true,
+      "xbi_relative_t20_pct": 7.299052567467956
+    },
+    {
+      "event_id": "REG-2024-REGN-LINVOSELTAMAB-CRL",
+      "negative_event": true,
+      "pos_high_pct": 90.0,
+      "pos_low_pct": 60.0,
+      "pos_mid_pct": 75.0,
+      "return_t20_pct": -3.5255867511091545,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": -5.110199069227551
+    },
+    {
+      "event_id": "REG-2024-VRTX-ALYFTREK",
+      "negative_event": false,
+      "pos_high_pct": 90.0,
+      "pos_low_pct": 60.0,
+      "pos_mid_pct": 75.0,
+      "return_t20_pct": 10.863755546591367,
+      "severe_loss": false,
+      "swing_success": false,
+      "xbi_relative_t20_pct": 7.339871443224101
+    }
+  ],
+  "code_sha": "900ff259b6ec83a21e92b7686e2de46dfc568526",
+  "cohort_flow": {
+    "event_count": 120,
+    "financing_count": 38,
+    "negative_count": 43,
+    "single_asset_count": 20,
+    "strata": {
+      "CONFERENCE_OTHER": 15,
+      "EARLY_CLINICAL": 15,
+      "PHASE_2_POC": 30,
+      "PHASE_3_PIVOTAL": 30,
+      "REGULATORY": 30
+    }
+  },
+  "cohort_sha256": "37f2e70dcc0626b40e97637e34056c9279ae9a5e6daf69d1c2f730e77c114e95",
+  "data_cutoffs": {
+    "price_data_benchmark_symbol": "XBI",
+    "price_data_provider": "ALPACA_MARKET_DATA",
+    "price_data_retrieved_at": "2026-09-17T09:56:04.350656+00:00",
+    "snapshot_cutoffs_source": "validation/m7/snapshot-cutoffs.json"
+  },
+  "deviations_and_known_limitations": [
+    "Ground truth for calibration is the scientific/regulatory readout result (negative_event, inverted), not a market outcome - it measures whether the PoS number tracks catalyst success, not whether following it would have been profitable.",
+    "This methodology has no adjustment layer, gates, valuation, or classification - it cannot be compared to BOE-1.0.0's own acceptance criteria (VALIDATION-AND-MILESTONES.md 5.2-5.3), which assume a full scored decision this project does not have.",
+    "The author of this methodology had already seen this cohort's aggregate outcome rates (27 severe losses, 31 swing successes of 120) before designing it. The prior table is BOE-1.0.0's own frozen, pre-existing values, not fitted to this cohort, but perfect blinding cannot be claimed.",
+    "brier_score_by_validation_period reports the 2025 holdout period's numbers for completeness only, per VALIDATION-AND-MILESTONES.md section 6's own discipline - they are not used to justify any change to the methodology here, and none is proposed.",
+    "This is a raw sum of real factor points, not a BOE-1.0.0 score: no weighting, gates, or classification is applied - those all require factors this project does not have.",
+    "The two ranking metrics (swing-success rate vs. median return) can disagree. This disagrees for CATALYST + CASH_DILUTION + TECHNICAL (n=88): its top quintile has a higher swing-success RATE than its bottom quintile, but a WORSE median return - consistent with more variance (bigger wins and bigger losses) rather than a clean, one-directional predictive signal. Both Pearson correlations (-0.0029, -0.0128) are indistinguishable from zero. The honest read of this data is that combining these three real factors alone does not show a clear, reliable predictive signal - consistent with, not contradicting, objective-calibration-report.json's PoS-only finding.",
+    "The ground truth here is the real price outcome (xbi_relative_t20_pct/swing_success/severe_loss), unlike objective-calibration-report.json's PoS calibration, which uses the scientific/regulatory readout result (negative_event). Both are real; they answer different questions.",
+    "The author had already seen this cohort's aggregate outcome rates before any of CATALYST/CASH_DILUTION/TECHNICAL were built, the same disclosed limitation as objective-calibration-report.json - no per-event outcome was consulted while writing the scoring logic in scripts/m7_build_catalyst_scores.py, scripts/m7_build_cash_dilution_scores.py, or scripts/m7_build_technical_snapshots.py, but perfect blinding cannot be claimed.",
+    "Real point-in-time CATALYST, CASH_DILUTION, and TECHNICAL factor scores exist (see partial-scorecard-calibration.json), but VALUATION (rNPV) was never reconstructed for any event, and OWNERSHIP and SENTIMENT were never attempted. Without VALUATION, gates.py's GateInput cannot be built either (it needs base_ev_pct/ conservative_ev_pct/reward_risk, all rNPV-derived) - so no gate evaluation and no real classification exist for any event.",
+    "No decision was locked before outcomes were known, because no decision (in the BOE-1.0.0 sense of a scored, classified, gated HistoricalDecisionLock) was ever produced - the real PoS, CATALYST, CASH_DILUTION, and TECHNICAL scores that do exist were each computed from structural or objectively-sourced facts involving no outcome-dependent judgment, but this report's author did already know this cohort's real outcomes throughout, as disclosed in each component report.",
+    "This report validates a substitute methodology built explicitly because no qualified human reviewer was available (docs/M7-HUMAN-REVIEW-BLOCKER.md) - it is not evidence that BOE-1.0.0 itself, as originally specified, does or does not work.",
+    "A real feasibility pilot for a non-fabricated SCIENCE-factor redesign was run against the full frozen cohort (validation/m7/discovery/science-redesign-pilot.json) after ClinicalTrials.gov's own API was confirmed to return a real, persistent 403 to programmatic access from this environment. Using a free bulk research dataset instead, only 27/120 events (22%) resolve to a genuine, drug-name-verified candidate trial - and even those are missing the allocation/masking fields TRIAL_DESIGN actually needs, leaving only weaker proxies. This does not clear the bar to build a SCIENCE-redesign pipeline; SCIENCE remains MISSING for every event, as it has throughout Milestone 7. VALUATION was not separately piloted: it depends on epidemiological incidence/prevalence data that is, if anything, less centrally available in bulk than clinical-trial data, so the same conclusion is expected to apply and was not worth a second bounded pilot to re-confirm."
+  ],
+  "failure_register": {
+    "definition": "False positive: top PoS quintile with T+20 return <= -20.0%. False negative: bottom PoS quintile with MFE >= 40.0%. Adapted from VALIDATION-AND-MILESTONES.md section 7 by ranking on objective PoS quintile in place of a BOE-1.0.0 classification this project does not have.",
+    "false_negatives": [
+      {
+        "catalyst_type": "CONF_DATA",
+        "event_id": "CO-2021-IOVA-LIFILEUCELASCO",
+        "mfe_t20_pct": 55.166475315729045,
+        "pos_mid_pct": 40.0,
+        "real_analysis_source": "validation/m7/failure-analysis.json",
+        "real_category": "scientific reasoning failure (no science review exists)",
+        "real_category_rationale": "An 86% ORR is a genuinely large, well-above-typical-class efficacy signal visible directly in the trial's own reported numbers - the kind of magnitude a real science/efficacy reviewer (this project's permanently-MISSING EFFICACY_ROBUSTNESS subfactor) exists to distinguish from an average readout, which a flat 40% CLIN_P2-adjacent prior cannot."
+      },
+      {
+        "catalyst_type": "CLIN_P2",
+        "event_id": "P2-2019-AXSM-AXS05-SMOKING",
+        "mfe_t20_pct": 61.51560178306092,
+        "pos_mid_pct": 40.0,
+        "real_analysis_source": "validation/m7/failure-analysis.json",
+        "real_category": "valuation/expectation failure (no valuation exists)",
+        "real_category_rationale": "The effect size itself was real but modest (a 25% relative edge over an active comparator in a 58-patient trial) - not obviously a magnitude that alone explains a 61.5% MFE. The more likely driver is read-through to AXS-05's much larger depression program (a valuation/expectation dynamic this project cannot model, since VALUATION was never built), not the smoking-cessation result in isolation."
+      },
+      {
+        "catalyst_type": "CLIN_P2",
+        "event_id": "P2-2019-RETA-MOXIE",
+        "mfe_t20_pct": 112.88398449150014,
+        "pos_mid_pct": 40.0,
+        "real_analysis_source": "validation/m7/failure-analysis.json",
+        "real_category": "whether information was knowable before the event",
+        "real_category_rationale": "Unlike the other false negatives, contemporaneous industry analysts themselves were surprised by this result (per FierceBiotech's own framing), which argues this was a genuine, largely unpredictable positive surprise rather than a gap this project's objective methodology could plausibly have closed with better inputs - a flat prior is a defensible stance on a genuinely hard-to-call readout, not obviously a modeling failure."
+      },
+      {
+        "catalyst_type": "CLIN_P2",
+        "event_id": "P2-2019-TGTX-UNITYNHL",
+        "mfe_t20_pct": 43.737957610789984,
+        "pos_mid_pct": 40.0,
+        "real_analysis_source": "validation/m7/failure-analysis.json",
+        "real_category": "valuation/expectation failure (no valuation exists)",
+        "real_category_rationale": "The result landed inside management's own pre-announced guidance range - meaning the magnitude was already substantially anticipated. The favorable price move looks more like uncertainty resolution (de-risking an already-likely outcome raises probability-weighted value) than a magnitude surprise a flat CLIN_P2 prior would miss on effect size alone."
+      },
+      {
+        "catalyst_type": "CLIN_P2",
+        "event_id": "P2-2022-AKRO-HARMONY",
+        "mfe_t20_pct": 219.96740016299918,
+        "pos_mid_pct": 40.0,
+        "real_analysis_source": "validation/m7/failure-analysis.json",
+        "real_category": "scientific reasoning failure (no science review exists)",
+        "real_category_rationale": "A multi-dose, multi-endpoint statistically significant result (41% vs 5% placebo on the combined fibrosis-improvement-plus-resolution bar) is an unusually strong, broad efficacy signal - exactly the kind of result magnitude a real EFFICACY_ROBUSTNESS assessment (permanently MISSING in this project) exists to distinguish from an average readout."
+      },
+      {
+        "catalyst_type": "CLIN_P2",
+        "event_id": "P2-2022-CINC-BRIGHTN",
+        "mfe_t20_pct": 66.05543710021323,
+        "pos_mid_pct": 40.0,
+        "real_analysis_source": "validation/m7/failure-analysis.json",
+        "real_category": "scientific reasoning failure (no science review exists)",
+        "real_category_rationale": "A p<0.0001 result in a 248-patient completed trial, later published in NEJM, is a strong, well-powered efficacy signal a real scientific reviewer could plausibly distinguish from a marginal readout - the same gap a flat 40% CLIN_P2 prior cannot capture."
+      }
+    ],
+    "false_positives": [
+      {
+        "catalyst_type": "REG_DECISION",
+        "event_id": "REG-2019-SRPT-GOLODIRSEN-CRL",
+        "pos_mid_pct": 75.0,
+        "real_analysis_source": "validation/m7/failure-analysis.json",
+        "real_category": "scientific reasoning failure (no science review exists)",
+        "real_category_rationale": "The CRL's core objection - a surrogate endpoint (dystrophin) with no demonstrated functional correlation - was a real, pre-existing characteristic of the submitted data package, not a new external shock. A human scientific reviewer evaluating trial-design quality (the same TRIAL_DESIGN subfactor this project could never build - see validation/m7/discovery/science-redesign-pilot.json) could plausibly have flagged this as elevated regulatory risk before the decision date.",
+        "return_t20_pct": -30.454658798104894
+      },
+      {
+        "catalyst_type": "REG_DECISION",
+        "event_id": "REG-2020-BMRN-VALROX-CRL",
+        "pos_mid_pct": 75.0,
+        "real_analysis_source": "validation/m7/failure-analysis.json",
+        "real_category": "unmodeled external event",
+        "real_category_rationale": "By the company's own account this was a genuinely new requirement introduced only in the CRL, not previously signaled in FDA interactions - a regulatory-process surprise, not a defect visible in the pre-event trial design or data that a scientific reviewer could have flagged.",
+        "return_t20_pct": -33.895731398683985
+      },
+      {
+        "catalyst_type": "REG_DECISION",
+        "event_id": "REG-2020-ICPT-OCA-CRL",
+        "pos_mid_pct": 75.0,
+        "real_analysis_source": "validation/m7/failure-analysis.json",
+        "real_category": "scientific reasoning failure (no science review exists)",
+        "real_category_rationale": "The benefit/risk uncertainty the CRL cites - a surrogate histology endpoint weighed against a drug with an already-documented real hepatotoxicity signal - was public information well before this event, not a new discovery.",
+        "return_t20_pct": -40.76655052264808
+      },
+      {
+        "catalyst_type": "REG_DECISION",
+        "event_id": "REG-2020-TCDA-VEVERIMER-CRL",
+        "pos_mid_pct": 75.0,
+        "real_analysis_source": "validation/m7/failure-analysis.json",
+        "real_category": "scientific reasoning failure (no science review exists)",
+        "real_category_rationale": "Same pattern as ICPT/OCA: the submission relied on a surrogate marker (serum bicarbonate) whose link to real clinical benefit (cardiovascular/renal outcomes) was the actual open scientific question - visible in the trial design itself, not a hidden fact.",
+        "return_t20_pct": -22.734138972809667
+      },
+      {
+        "catalyst_type": "REG_DECISION",
+        "event_id": "REG-2021-ATNX-ORALPAC-CRL",
+        "pos_mid_pct": 75.0,
+        "real_analysis_source": "validation/m7/failure-analysis.json",
+        "real_category": "scientific reasoning failure (no science review exists)",
+        "real_category_rationale": "The trial-population-generalizability concern was a real, visible characteristic of the pivotal trial's design before the decision, not new information - the kind of trial-design scrutiny a real science reviewer's TRIAL_DESIGN assessment exists to catch.",
+        "return_t20_pct": -66.11570247933884
+      },
+      {
+        "catalyst_type": "REG_DECISION",
+        "event_id": "REG-2022-AXSM-AXS07-CRL",
+        "pos_mid_pct": 75.0,
+        "real_analysis_source": "validation/m7/failure-analysis.json",
+        "real_category": "unmodeled external event",
+        "real_category_rationale": "A pure CMC/manufacturing deficiency is orthogonal to clinical science and to every input this project's objective methodology or a hypothetical SCIENCE reviewer would assess - there was no clinical-data weakness to catch. This is the one false positive this project's approach (real or redesigned) could not plausibly have anticipated.",
+        "return_t20_pct": -27.979539641943735
+      },
+      {
+        "catalyst_type": "REG_DECISION",
+        "event_id": "REG-2023-BLUE-LYFGENIA",
+        "pos_mid_pct": 75.0,
+        "real_analysis_source": "validation/m7/failure-analysis.json",
+        "real_category": "valuation/expectation failure (no valuation exists)",
+        "real_category_rationale": "This is the one false positive that is not really a PoS/scientific miss at all: the drug was approved, meaning the REG_DECISION catalyst resolved favorably in the narrowest sense. The 20-day loss came from the market re-pricing commercial value - a worse-than-hoped label (boxed warning, monitoring burden) and a missed PRV - which is exactly the kind of expectation-versus-reality gap VALUATION exists to capture and that this project has never built. Distinct from the other 6, which were genuine regulatory rejections.",
+        "return_t20_pct": -71.51767151767152
+      }
+    ],
+    "note": "Beyond the structural pattern above, real per-event categorization now exists - see failure_register_real_analysis below and validation/m7/failure-analysis.json - built from live-sourced FDA/company/press research after this register was computed, not fabricated.",
+    "structural_pattern": "All 7 false positives are ['REG_DECISION'] events, and all 6 false negatives are ['CLIN_P2', 'CONF_DATA'] events. This is not a coincidence needing per-event research to explain: this methodology assigns every event of a given catalyst_type the same prior (e.g. every REG_DECISION gets 75%, every CLIN_P2 gets 40%), so it cannot distinguish an FDA approval from a CRL within REG_DECISION, or a strong Phase 2 readout from a weak one within CLIN_P2 - both land in the same PoS band regardless of which it turns out to be. This single structural limitation - a per-catalyst-type constant, not a per-event judgment - accounts for the entire false-positive and false-negative register and is the direct, evidenced cause of the calibration failure in objective-calibration-report.json. It is the one root cause this script CAN support without new per-event research, because it is visible directly in already-computed data, not inferred about any single company."
+  },
+  "failure_register_real_analysis": {
+    "cross_cutting_observations": [
+      "5 of 7 false positives (SRPT, ICPT, TCDA, ATNX, and arguably BMRN/AXSM by a different route) trace to real, pre-existing weaknesses visible in trial design or drug safety history - the kind of gap a genuine SCIENCE TRIAL_DESIGN/scientific reasoning review exists to catch, and which this project's real SCIENCE-redesign pilot (validation/m7/discovery/science-redesign-pilot.json) confirmed it cannot build at adequate coverage.",
+      "2 of 7 false positives (BMRN's new 2-year-durability bar, AXSM's pure CMC issue) were genuine regulatory-process surprises unrelated to clinical science - not something any realistic SCIENCE methodology, real or objective, would have caught.",
+      "1 of 7 false positives (BLUE/Lyfgenia) was not really a PoS miss at all - the drug was approved; the loss came from commercial/label expectations, which is a VALUATION-shaped gap, not a SCIENCE-shaped one.",
+      "3 of 6 false negatives (IOVA, AKRO, CINC) show a common, clean pattern: unusually strong efficacy signals (86% ORR, 41% vs 5% placebo, p<0.0001) that a real EFFICACY_ROBUSTNESS assessment could plausibly have distinguished from an average readout - this project's permanently-MISSING subfactor, confirmed unbuildable at scale by the same SCIENCE-redesign pilot.",
+      "1 of 6 false negatives (RETA) was, by contemporaneous analysts' own account, a genuine surprise - not clearly a methodology gap at all.",
+      "2 of 6 false negatives (AXSM smoking cessation, TGTX) look more like VALUATION/expectation dynamics (platform read-through; de-risking an already-guided outcome) than raw scientific-magnitude misses - another gap this project's missing VALUATION factor, not SCIENCE, would need to close.",
+      "Taken together, this supports (does not merely repeat) the structural finding already in validation-report.json: the single dominant, catalyst_type-constant-prior limitation explains the register mechanically, and the two factors most of the real per-event research points to as the actual missing ingredients - real SCIENCE judgment and real VALUATION - are exactly the two factors this project has now confirmed, through real pilots and real point-in-time data work, that it cannot honestly build at this project's scale."
+    ],
+    "methodology": "Each row's real_facts and sources come from live web search of public FDA/company/press records, not from prior knowledge asserted without a citation. category is a judgment call informed by those real facts (not fabricated), drawn from the same taxonomy already listed in validation-report.json's failure_register.*.categories_not_assessed. This file was built AFTER the frozen cohort and AFTER all real outcomes were known - it is retrospective post-mortem research on already-fixed events, not new input to select events or to redesign scoring. It must never be fed back into src/boe/objective_pos_methodology.py, src/boe/scoring.py, or any BOE-1.0.0 rule: doing so would be fitting a methodology to outcomes it was supposed to predict, which this project treats as a hard prohibition, not a style preference.",
+    "role": "POST_HOC_REAL_EVENT_RESEARCH_NOT_METHODOLOGY_INPUT",
+    "source": "validation/m7/failure-analysis.json"
+  },
+  "generator": "python scripts/m7_build_validation_report.py",
+  "manifest_frozen_at": "2026-09-17T12:09:29.781712+03:00",
+  "milestone": 7,
+  "missingness_and_source_conflicts": {
+    "cash_dilution_score_missing": 32,
+    "catalyst_score_missing": 0,
+    "objective_pos_missing": 0,
+    "outcomes_failed": 0,
+    "outcomes_missing": 0,
+    "snapshot_cutoffs_missing": 0,
+    "technical_score_missing": 0
+  },
+  "objective_methodology_version": "src/boe/objective_pos_methodology.py",
+  "partial_scorecard_calibration": {
+    "catalyst_cash_dilution_technical": {
+      "bottom_quintile_median_xbi_relative_t20_pct": -18.76,
+      "bottom_quintile_severe_loss": {
+        "ci_high": 0.5313353332621391,
+        "ci_low": 0.132797938655564,
+        "n": 17,
+        "value": 0.29411764705882354
+      },
+      "bottom_quintile_swing_success": {
+        "ci_high": 0.269825452035628,
+        "ci_low": 0.01046013064516424,
+        "n": 17,
+        "value": 0.058823529411764705
+      },
+      "label": "CATALYST + CASH_DILUTION + TECHNICAL (n=88)",
+      "mean_points_pct": 46.21,
+      "median_return_ranks_correctly": false,
+      "n": 88,
+      "pearson_r_points_vs_xbi_relative_t20_return": -0.012761732892005094,
+      "swing_success_rate_ranks_correctly": true,
+      "top_quintile_median_xbi_relative_t20_pct": -29.74,
+      "top_quintile_severe_loss": {
+        "ci_high": 0.5870003327878818,
+        "ci_low": 0.17309486143904904,
+        "n": 17,
+        "value": 0.35294117647058826
+      },
+      "top_quintile_swing_success": {
+        "ci_high": 0.41029929017375777,
+        "ci_low": 0.0619101371254899,
+        "n": 17,
+        "value": 0.17647058823529413
+      }
+    },
+    "catalyst_technical": {
+      "bottom_quintile_median_xbi_relative_t20_pct": -15.11,
+      "bottom_quintile_severe_loss": {
+        "ci_high": 0.40470844485235474,
+        "ci_low": 0.0924468910478809,
+        "n": 24,
+        "value": 0.20833333333333334
+      },
+      "bottom_quintile_swing_success": {
+        "ci_high": 0.3585347038786943,
+        "ci_low": 0.06678568000728924,
+        "n": 24,
+        "value": 0.16666666666666666
+      },
+      "label": "CATALYST + TECHNICAL (n=120)",
+      "mean_points_pct": 47.52,
+      "median_return_ranks_correctly": true,
+      "n": 120,
+      "pearson_r_points_vs_xbi_relative_t20_return": -0.0028545783968177275,
+      "swing_success_rate_ranks_correctly": true,
+      "top_quintile_median_xbi_relative_t20_pct": -8.16,
+      "top_quintile_severe_loss": {
+        "ci_high": 0.4489982531210644,
+        "ci_low": 0.1199920347934233,
+        "n": 24,
+        "value": 0.25
+      },
+      "top_quintile_swing_success": {
+        "ci_high": 0.4489982531210644,
+        "ci_low": 0.1199920347934233,
+        "n": 24,
+        "value": 0.25
+      }
+    },
+    "cohort_sha256": "37f2e70dcc0626b40e97637e34056c9279ae9a5e6daf69d1c2f730e77c114e95",
+    "factors_included": {
+      "catalyst_cash_dilution_technical": [
+        "CATALYST",
+        "CASH_DILUTION",
+        "TECHNICAL"
+      ],
+      "catalyst_technical": [
+        "CATALYST",
+        "TECHNICAL"
+      ]
+    },
+    "factors_not_included": [
+      "SCIENCE (20 pts) - requires a real human scientific reviewer this project does not have.",
+      "MARKET_IMPACT (15 pts) - subfactors need expectation-gap/competitive-position judgment or analyst data not available.",
+      "VALUATION (10 pts) - requires rNPV peak-sales/TAM assumptions per indication this project cannot objectively source at scale.",
+      "OWNERSHIP (5 pts) - requires Form 13F/Form 4 data this project has not sourced.",
+      "SENTIMENT (5 pts) - mostly requires analyst revision data not available; the two subfactors that would be computable (ATTENTION_VOLUME, SECTOR_REGIME) were not built here."
+    ],
+    "generator": "python scripts/m7_build_partial_scorecard_calibration.py",
+    "limitations": [
+      "This is a raw sum of real factor points, not a BOE-1.0.0 score: no weighting, gates, or classification is applied - those all require factors this project does not have.",
+      "The two ranking metrics (swing-success rate vs. median return) can disagree. This disagrees for CATALYST + CASH_DILUTION + TECHNICAL (n=88): its top quintile has a higher swing-success RATE than its bottom quintile, but a WORSE median return - consistent with more variance (bigger wins and bigger losses) rather than a clean, one-directional predictive signal. Both Pearson correlations (-0.0029, -0.0128) are indistinguishable from zero. The honest read of this data is that combining these three real factors alone does not show a clear, reliable predictive signal - consistent with, not contradicting, objective-calibration-report.json's PoS-only finding.",
+      "The ground truth here is the real price outcome (xbi_relative_t20_pct/swing_success/severe_loss), unlike objective-calibration-report.json's PoS calibration, which uses the scientific/regulatory readout result (negative_event). Both are real; they answer different questions.",
+      "The author had already seen this cohort's aggregate outcome rates before any of CATALYST/CASH_DILUTION/TECHNICAL were built, the same disclosed limitation as objective-calibration-report.json - no per-event outcome was consulted while writing the scoring logic in scripts/m7_build_catalyst_scores.py, scripts/m7_build_cash_dilution_scores.py, or scripts/m7_build_technical_snapshots.py, but perfect blinding cannot be claimed."
+    ]
+  },
+  "recommendation": "PROPOSE RECALIBRATION IN A NEW BOE VERSION - the review-free PoS methodology as built does not beat a naive constant-rate baseline (Brier 0.2498 vs 0.2299) and does not rank correctly (top-quintile swing success 0.292 vs bottom-quintile 0.375); it is not a substitute for a genuine human scientific review and should not inform live decisions in its current form.",
+  "registry_sha256": "a75c778daf2fcbb4ace2f405889f0c5bf184e9e00ccdbd7586e1354d6226026b",
+  "report_subject": "Real, objectively-computed substitutes for the parts of BOE-1.0.0 that do not require a human scientific/catalyst reviewer or rNPV commercial assumptions: an objective PoS methodology (src/boe/objective_pos_methodology.py), and real CATALYST, CASH_DILUTION, and TECHNICAL factor scores. NOT the full BOE-1.0.0 engine, which was never exercised end-to-end - SCIENCE needs a real human reviewer this project does not have (docs/M7-HUMAN-REVIEW-BLOCKER.md), and VALUATION needs real peak-sales/TAM assumptions this project cannot objectively source at scale, which also blocks gates and real classification since they depend on VALUATION's output.",
+  "score_and_gate_distributions": "NO FULL BOE-1.0.0 SCORE, GATE, OR CLASSIFICATION EXISTS for any event - those need SCIENCE, MARKET_IMPACT, VALUATION, OWNERSHIP, and SENTIMENT, which this project does not have (see partial-scorecard-calibration.json's factors_not_included for why each one). What DOES exist, real and not fabricated: an objective PoS estimate for all 120 events; a real CATALYST factor score for all 120 events; a real TECHNICAL factor score for all 120 events; a real CASH_DILUTION factor score for 88 events (SEC XBRL coverage is narrower than price data coverage). See partial-scorecard-calibration.json for their combined calibration against real outcomes."
+}

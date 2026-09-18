@@ -1,0 +1,96 @@
+{
+  "acquisition_path": "validation/m7/acquisition/regulatory-primary-batch-01.json",
+  "candidate_id": "REG-2023-TVTX-FILSPARI",
+  "catalyst_observation": {
+    "asset": "FILSPARI (sparsentan)",
+    "catalyst_type": "REG_DECISION",
+    "clinical_phase": "REGULATORY_DECISION",
+    "evidence_id": "e1827741-4de3-588c-b079-64faa10b9b91",
+    "external_event_id": "REG-2023-TVTX-FILSPARI",
+    "indication": "reduction of proteinuria in primary IgA nephropathy",
+    "issuer_id": "0001438533",
+    "known_at": "2023-02-17T16:04:00-05:00",
+    "source_statement": "Issuer announcement with explicit publication time; CIK unresolved.",
+    "source_tier": 5,
+    "timing_confidence": "HIGH",
+    "title": "Travere Therapeutics, Inc. - FILSPARI (sparsentan) (reduction of proteinuria in primary IgA nephropathy)",
+    "window_end": "2023-02-17",
+    "window_start": "2023-02-17"
+  },
+  "catalyst_version": {
+    "asset": "FILSPARI (sparsentan)",
+    "canonical_key": "0001438533|filspari (sparsentan)|reduction of proteinuria in primary iga nephropathy|REG_DECISION",
+    "catalyst_type": "REG_DECISION",
+    "clinical_phase": "REGULATORY_DECISION",
+    "conflicts": [],
+    "id": "1c35606b-cf11-59a6-80d9-64267ab5b4a7",
+    "indication": "reduction of proteinuria in primary IgA nephropathy",
+    "issuer_id": "0001438533",
+    "known_at": "2023-02-17T16:04:00-05:00",
+    "primary_evidence_id": "e1827741-4de3-588c-b079-64faa10b9b91",
+    "resolved_at_cutoff": "2023-02-17T16:04:00-05:00",
+    "supporting_evidence_ids": [
+      "e1827741-4de3-588c-b079-64faa10b9b91"
+    ],
+    "timing_confidence": "HIGH",
+    "title": "Travere Therapeutics, Inc. - FILSPARI (sparsentan) (reduction of proteinuria in primary IgA nephropathy)",
+    "version": 1,
+    "version_sha256": "d469af6d479c7de768aed4da6622fefa96c2b281e80e9e431c8eec9517d05184",
+    "window_end": "2023-02-17",
+    "window_start": "2023-02-17"
+  },
+  "company": "Travere Therapeutics, Inc.",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": false,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "89d00397dbf0f22f7fd55c5bb9503b7513cc77910c904022d2ef3d4e4524b26f",
+  "promotion_blockers": [
+    "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
+    "RESOLVE_NEGATIVE_EVENT_STATUS",
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2023-02-17T16:04:00-05:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "FILSPARI (sparsentan)",
+    "blinded": null,
+    "catalyst_version_id": "1c35606b-cf11-59a6-80d9-64267ab5b4a7",
+    "clinical_phase": "REGULATORY_DECISION",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2023-02-17T16:04:00-05:00",
+    "evidence_ids": [
+      "e1827741-4de3-588c-b079-64faa10b9b91"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "48aaaad1-815a-5596-8605-b9eba0116df7",
+    "indication": "reduction of proteinuria in primary IgA nephropathy",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://www.globenewswire.com/news-release/2023/02/17/2610963/0/en/Travere-Therapeutics-Announces-FDA-Accelerated-Approval-of-FILSPARI-sparsentan-the-First-and-Only-Non-immunosuppressive-Therapy-for-the-Reduction-of-Proteinuria-in-IgA-Nephropathy.html"
+  ],
+  "stratum": "REGULATORY",
+  "ticker": "TVTX",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-19.json"
+}

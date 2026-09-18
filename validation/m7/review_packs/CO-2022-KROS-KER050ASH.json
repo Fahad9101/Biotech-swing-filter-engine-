@@ -1,0 +1,98 @@
+{
+  "acquisition_path": "validation/m7/acquisition/conference-other-primary-batch-01.json",
+  "candidate_id": "CO-2022-KROS-KER050ASH",
+  "catalyst_observation": {
+    "asset": "KER-050 / KER-047",
+    "catalyst_type": "CONF_DATA",
+    "clinical_phase": "PHASE_2",
+    "evidence_id": "35ede3fd-0c90-55e1-bdf7-b59a1ec270eb",
+    "external_event_id": "CO-2022-KROS-KER050ASH",
+    "indication": "MDS, myelofibrosis and IRIDA",
+    "issuer_id": "TICKER:KROS",
+    "known_at": "2022-12-12T10:00:00-05:00",
+    "source_statement": "Keros Therapeutics, Inc. - CONFERENCE_DATA_DISCLOSURE_CANDIDATE dated 2022-12-12.",
+    "source_tier": 5,
+    "timing_confidence": "HIGH",
+    "title": "Keros Therapeutics, Inc. - KER-050 / KER-047 (MDS, myelofibrosis and IRIDA)",
+    "window_end": "2022-12-12",
+    "window_start": "2022-12-12"
+  },
+  "catalyst_version": {
+    "asset": "KER-050 / KER-047",
+    "canonical_key": "ticker:kros|ker-050 / ker-047|mds, myelofibrosis and irida|CONF_DATA",
+    "catalyst_type": "CONF_DATA",
+    "clinical_phase": "PHASE_2",
+    "conflicts": [],
+    "id": "79dce945-4ef6-58de-bcba-bcf72c7862f0",
+    "indication": "MDS, myelofibrosis and IRIDA",
+    "issuer_id": "TICKER:KROS",
+    "known_at": "2022-12-12T10:00:00-05:00",
+    "primary_evidence_id": "35ede3fd-0c90-55e1-bdf7-b59a1ec270eb",
+    "resolved_at_cutoff": "2022-12-12T10:00:00-05:00",
+    "supporting_evidence_ids": [
+      "35ede3fd-0c90-55e1-bdf7-b59a1ec270eb"
+    ],
+    "timing_confidence": "HIGH",
+    "title": "Keros Therapeutics, Inc. - KER-050 / KER-047 (MDS, myelofibrosis and IRIDA)",
+    "version": 1,
+    "version_sha256": "a0a3dd24821ced2003c31d7924801c15c7463e99878e2cd42bc7c3ee0e29d6e8",
+    "window_end": "2022-12-12",
+    "window_start": "2022-12-12"
+  },
+  "company": "Keros Therapeutics, Inc.",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": false,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "94a7396ccad248ca1f04ba2ceea44e6c4ab063b57a00a7184b487e6920736df7",
+  "promotion_blockers": [
+    "RESOLVE_CIK_AND_HISTORICAL_SECURITY_IDENTITY",
+    "VERIFY_CONFERENCE_FIRST_PUBLIC_AVAILABILITY",
+    "VERIFY_UNDERLYING_CLINICAL_PHASE_AND_EVENT_DEDUPLICATION",
+    "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2022-12-12T10:00:00-05:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "KER-050 / KER-047",
+    "blinded": null,
+    "catalyst_version_id": "79dce945-4ef6-58de-bcba-bcf72c7862f0",
+    "clinical_phase": "PHASE_2",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2022-12-12T10:00:00-05:00",
+    "evidence_ids": [
+      "35ede3fd-0c90-55e1-bdf7-b59a1ec270eb"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "d52f9341-10c5-55d3-b68a-872deac05e88",
+    "indication": "MDS, myelofibrosis and IRIDA",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://www.globenewswire.com/news-release/2022/12/12/2572031/0/en/Keros-Therapeutics-Presents-Clinical-Data-from-its-KER-050-and-KER-047-Programs-and-Preclinical-Data-from-its-KER-050-and-ALK2-Inhibitor-Programs-at-the-64th-American-Society-of-He.html"
+  ],
+  "stratum": "CONFERENCE_OTHER",
+  "ticker": "KROS",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-19.json"
+}

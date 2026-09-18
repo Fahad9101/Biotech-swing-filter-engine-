@@ -1,0 +1,95 @@
+{
+  "acquisition_path": "validation/m7/acquisition/newly-sourced-batch-08.json",
+  "candidate_id": "NEG-P3-2024-AMLX-PHOENIX",
+  "catalyst_observation": {
+    "asset": "AMX0035 (RELYVRIO/ALBRIOZA)",
+    "catalyst_type": "CLIN_P3",
+    "clinical_phase": "PHASE_3",
+    "evidence_id": "3d40a8e0-db56-52e0-b00d-1f17678c9eef",
+    "external_event_id": "NEG-P3-2024-AMLX-PHOENIX",
+    "indication": "amyotrophic lateral sclerosis (ALS)",
+    "issuer_id": "0001658551",
+    "known_at": "2024-03-08T07:10:02-05:00",
+    "source_statement": "Global Phase 3 PHOENIX trial (664 ALS patients) of AMX0035 did not meet its prespecified primary endpoint (ALSFRS-R change from baseline, p=0.667) or any secondary endpoint. Amylyx subsequently withdrew RELYVRIO/ALBRIOZA from the market in April 2024. Release did not carry its own HH:MM dateline; the SEC 8-K acceptance timestamp (07:10:02 ET, pre-market) is used as the primary-source clock, matching the EXACT_TO_MINUTE_SEC_ACCEPTANCE_PROXY convention already used elsewhere in this pool (e.g. NEG-P3-2018-VTVT-STEADFAST).",
+    "source_tier": 2,
+    "timing_confidence": "HIGH",
+    "title": "Amylyx Pharmaceuticals, Inc. - AMX0035 (RELYVRIO/ALBRIOZA) (amyotrophic lateral sclerosis (ALS))",
+    "window_end": "2024-03-08",
+    "window_start": "2024-03-08"
+  },
+  "catalyst_version": {
+    "asset": "AMX0035 (RELYVRIO/ALBRIOZA)",
+    "canonical_key": "0001658551|amx0035 (relyvrio/albrioza)|amyotrophic lateral sclerosis (als)|CLIN_P3",
+    "catalyst_type": "CLIN_P3",
+    "clinical_phase": "PHASE_3",
+    "conflicts": [],
+    "id": "6a98e037-c2d8-5c34-83b6-cbdbc12ed32c",
+    "indication": "amyotrophic lateral sclerosis (ALS)",
+    "issuer_id": "0001658551",
+    "known_at": "2024-03-08T07:10:02-05:00",
+    "primary_evidence_id": "3d40a8e0-db56-52e0-b00d-1f17678c9eef",
+    "resolved_at_cutoff": "2024-03-08T07:10:02-05:00",
+    "supporting_evidence_ids": [
+      "3d40a8e0-db56-52e0-b00d-1f17678c9eef"
+    ],
+    "timing_confidence": "HIGH",
+    "title": "Amylyx Pharmaceuticals, Inc. - AMX0035 (RELYVRIO/ALBRIOZA) (amyotrophic lateral sclerosis (ALS))",
+    "version": 1,
+    "version_sha256": "14adbec4d4eefe27e4ea6ae2c9fd832380131ac76be2967ff1e4295d3c1faef0",
+    "window_end": "2024-03-08",
+    "window_start": "2024-03-08"
+  },
+  "company": "Amylyx Pharmaceuticals, Inc.",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": true,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "32335c5e7fc90e51cd1009808ae045f3b14aa1d6f89ad330035b4c20ddbf567c",
+  "promotion_blockers": [
+    "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2024-03-08T07:10:02-05:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "AMX0035 (RELYVRIO/ALBRIOZA)",
+    "blinded": null,
+    "catalyst_version_id": "6a98e037-c2d8-5c34-83b6-cbdbc12ed32c",
+    "clinical_phase": "PHASE_3",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2024-03-08T07:10:02-05:00",
+    "evidence_ids": [
+      "3d40a8e0-db56-52e0-b00d-1f17678c9eef"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "6e58c509-46c3-5c95-9358-b72c77896a35",
+    "indication": "amyotrophic lateral sclerosis (ALS)",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://www.sec.gov/Archives/edgar/data/1658551/000119312524062878/d787565dex991.htm"
+  ],
+  "stratum": "PHASE_3_PIVOTAL",
+  "ticker": "AMLX",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-40.json"
+}

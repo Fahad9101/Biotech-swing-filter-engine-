@@ -1,0 +1,97 @@
+{
+  "acquisition_path": "validation/m7/acquisition/phase2-primary-batch-01.json",
+  "candidate_id": "P2-2020-CRNX-ACROBAT",
+  "catalyst_observation": {
+    "asset": "paltusotine (CRN00808)",
+    "catalyst_type": "CLIN_P2",
+    "clinical_phase": "PHASE_2",
+    "evidence_id": "51b8943e-c3bc-5f49-aec8-73ee6742669c",
+    "external_event_id": "P2-2020-CRNX-ACROBAT",
+    "indication": "acromegaly",
+    "issuer_id": "0001658247",
+    "known_at": "2020-11-06T08:30:00-05:00",
+    "source_statement": "Crinetics Pharmaceuticals, Inc. - FIRST_PUBLIC_RESULT_DISCLOSURE_CANDIDATE dated 2020-11-06.",
+    "source_tier": 2,
+    "timing_confidence": "MODERATE",
+    "title": "Crinetics Pharmaceuticals, Inc. - paltusotine (CRN00808) (acromegaly)",
+    "window_end": "2020-11-06",
+    "window_start": "2020-11-06"
+  },
+  "catalyst_version": {
+    "asset": "paltusotine (CRN00808)",
+    "canonical_key": "0001658247|paltusotine (crn00808)|acromegaly|CLIN_P2",
+    "catalyst_type": "CLIN_P2",
+    "clinical_phase": "PHASE_2",
+    "conflicts": [],
+    "id": "6dd7e826-deb7-5eeb-bd0d-ec83cd236040",
+    "indication": "acromegaly",
+    "issuer_id": "0001658247",
+    "known_at": "2020-11-06T08:30:00-05:00",
+    "primary_evidence_id": "51b8943e-c3bc-5f49-aec8-73ee6742669c",
+    "resolved_at_cutoff": "2020-11-06T08:30:00-05:00",
+    "supporting_evidence_ids": [
+      "51b8943e-c3bc-5f49-aec8-73ee6742669c"
+    ],
+    "timing_confidence": "MODERATE",
+    "title": "Crinetics Pharmaceuticals, Inc. - paltusotine (CRN00808) (acromegaly)",
+    "version": 1,
+    "version_sha256": "eace3a68d6a56664d25d1c5d6431637096a1bf6cd21558fabe3f260f53622b37",
+    "window_end": "2020-11-06",
+    "window_start": "2020-11-06"
+  },
+  "company": "Crinetics Pharmaceuticals, Inc.",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": false,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "57b1603e4a24a4c1fbe23f72f649373eb8ab7739fd1d8e1db7480b67194938bc",
+  "promotion_blockers": [
+    "RESOLVE_EXACT_FIRST_PUBLIC_TIMESTAMP",
+    "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+    "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2020-11-06T08:30:00-05:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "paltusotine (CRN00808)",
+    "blinded": null,
+    "catalyst_version_id": "6dd7e826-deb7-5eeb-bd0d-ec83cd236040",
+    "clinical_phase": "PHASE_2",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2020-11-06T08:30:00-05:00",
+    "evidence_ids": [
+      "51b8943e-c3bc-5f49-aec8-73ee6742669c"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "3fb13fef-23b2-5cbe-9e6c-34d2410e2129",
+    "indication": "acromegaly",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://www.sec.gov/Archives/edgar/data/1658247/000156459020051684/crnx-ex991_6.htm"
+  ],
+  "stratum": "PHASE_2_POC",
+  "ticker": "CRNX",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-35.json"
+}

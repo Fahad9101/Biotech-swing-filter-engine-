@@ -1,0 +1,97 @@
+{
+  "acquisition_path": "validation/m7/acquisition/phase2-primary-batch-01.json",
+  "candidate_id": "P2-2018-GWPH-GWP42006",
+  "catalyst_observation": {
+    "asset": "GWP42006",
+    "catalyst_type": "CLIN_P2",
+    "clinical_phase": "PHASE_2",
+    "evidence_id": "48740d5c-5025-5f8f-875d-490a8403a50f",
+    "external_event_id": "P2-2018-GWPH-GWP42006",
+    "indication": "focal seizures",
+    "issuer_id": "0001351288",
+    "known_at": "2018-02-21T16:01:00-05:00",
+    "source_statement": "GW Pharmaceuticals plc - FIRST_PUBLIC_RESULT_DISCLOSURE_CANDIDATE dated 2018-02-21.",
+    "source_tier": 2,
+    "timing_confidence": "HIGH",
+    "title": "GW Pharmaceuticals plc - GWP42006 (focal seizures)",
+    "window_end": "2018-02-21",
+    "window_start": "2018-02-21"
+  },
+  "catalyst_version": {
+    "asset": "GWP42006",
+    "canonical_key": "0001351288|gwp42006|focal seizures|CLIN_P2",
+    "catalyst_type": "CLIN_P2",
+    "clinical_phase": "PHASE_2",
+    "conflicts": [],
+    "id": "aeba3532-4c8e-5562-b3fd-6997d2c46029",
+    "indication": "focal seizures",
+    "issuer_id": "0001351288",
+    "known_at": "2018-02-21T16:01:00-05:00",
+    "primary_evidence_id": "48740d5c-5025-5f8f-875d-490a8403a50f",
+    "resolved_at_cutoff": "2018-02-21T16:01:00-05:00",
+    "supporting_evidence_ids": [
+      "48740d5c-5025-5f8f-875d-490a8403a50f"
+    ],
+    "timing_confidence": "HIGH",
+    "title": "GW Pharmaceuticals plc - GWP42006 (focal seizures)",
+    "version": 1,
+    "version_sha256": "afe1b5673e3709f39b52957b2686ca2eb40ec6853c2a495dc7de37ab0f666238",
+    "window_end": "2018-02-21",
+    "window_start": "2018-02-21"
+  },
+  "company": "GW Pharmaceuticals plc",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": true,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "6083eda0854d5cfd4313368ba7daaa4339e24915a7671e58f0087ada2a81bc61",
+  "promotion_blockers": [
+    "RESOLVE_CIK_AND_HISTORICAL_SECURITY_IDENTITY",
+    "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+    "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2018-02-21T16:01:00-05:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "GWP42006",
+    "blinded": null,
+    "catalyst_version_id": "aeba3532-4c8e-5562-b3fd-6997d2c46029",
+    "clinical_phase": "PHASE_2",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2018-02-21T16:01:00-05:00",
+    "evidence_ids": [
+      "48740d5c-5025-5f8f-875d-490a8403a50f"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "31874fc3-b026-5e1c-b27f-fdd39cd6583f",
+    "indication": "focal seizures",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://www.globenewswire.com/news-release/2018/02/21/1372900/0/en/gw-pharmaceuticals-announces-preliminary-results-of-phase-2a-study-for-its-pipeline-compound-gwp42006.html"
+  ],
+  "stratum": "PHASE_2_POC",
+  "ticker": "GWPH",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-39.json"
+}

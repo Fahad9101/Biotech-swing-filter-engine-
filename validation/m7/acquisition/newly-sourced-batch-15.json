@@ -1,0 +1,36 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "role": "NEWLY_SOURCED_CANDIDATES_POST_HANDOFF",
+  "generated_at": "2026-09-17",
+  "sourcing_note": "Targeted sourcing to add real margin above the frozen 40-negative-event floor before attempting the actual cohort freeze. With the real HistoricalEvent registry now buildable (see scripts/m7_build_historical_event_registry.py), the real (non-simulated) select_frozen_cohort(seed=100100) was called directly - not reproduced in a standalone script - with one hypothetical extra negative candidate tested against every populated (stratum, year) slot in the real 150-event eligible pool. Several slots showed a real +1 delta; REGULATORY/2022 was chosen since this workstream already has strong CRL-sourcing experience in that stratum. Sourced Axsome Therapeutics' April 2022 Complete Response Letter for AXS-07 (a different compound from the already-pooled AXS-05 events, so no asset/ticker duplication) - independently verified against SEC filings and passing all historical-universe floors with very large margin ($1.5B market cap). After adding this candidate to the real registry and re-running the actual select_frozen_cohort function (not a simulation), the selected-cohort negative count moved from 40 to 41, confirmed directly rather than predicted.",
+  "events": [
+    {
+      "asset": "AXS-07 (MoSEIC meloxicam/rizatriptan)",
+      "candidate_id": "REG-2022-AXSM-AXS07-CRL",
+      "cik": "1579428",
+      "clinical_phase": "REGULATORY_DECISION",
+      "cohort_frozen": false,
+      "company": "Axsome Therapeutics, Inc.",
+      "first_public_date": "2022-04-25",
+      "first_public_timestamp": "2022-04-25T07:02:01-04:00",
+      "indication": "acute treatment of migraine",
+      "negative_event_candidate": true,
+      "outcome_inspected_for_selection": false,
+      "promotion_blockers": [
+        "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+      ],
+      "proposed_catalyst_type": "REG_DECISION",
+      "proposed_primary_stratum": "REGULATORY",
+      "result_direction": "NEGATIVE_CRL",
+      "source_role": "FIRST_PUBLIC_REGULATORY_DISCLOSURE_CANDIDATE",
+      "source_type": "ISSUER_SEC_8K",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1579428/000095017022006038/axsm-20220422.htm",
+      "source_displayed_time": "SEC 8-K accepted 2022-04-25 07:02:01 ET (Item 8.01, pre-market)",
+      "ticker": "AXSM",
+      "timestamp_precision": "EXACT_TO_MINUTE_SEC_ACCEPTANCE_PROXY",
+      "notes": "8-K (2022-04-25): 'chemistry, manufacturing, and controls (CMC) issues identified during the FDA's review of the Company's New Drug Application for its AXS-07 product candidate for the acute treatment of migraine are unresolved...the Company expects to receive a Complete Response Letter with respect to this NDA on or about the Prescription Drug User Fee Act target action date of April 30, 2022.' Used as the first-public event date/time rather than the later formal-confirmation 8-K (filed 2022-05-02, bundled with Q1 earnings), since the market already had the substantive negative CMC information as of April 25. A follow-up 8-K (2022-05-02) confirms the formal CRL was received April 29, 2022, and explicitly states 'The CRL did not identify or raise any concerns about the clinical efficacy or safety data in the NDA' - a CMC-only rejection, comparable in kind to the already-pooled RCKT-KRESLADI-CRL. AXS-07 is a distinct compound from AXS-05 (already in the pool via P2-2019-AXSM-AXS05-SMOKING and P3-2019-AXSM-GEMINI); Axsome now has 3 pool events, well under the 5-event issuer cap, and 0 prior REGULATORY-stratum events for this issuer."
+    }
+  ]
+}

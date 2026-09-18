@@ -1,0 +1,96 @@
+{
+  "acquisition_path": "validation/m7/acquisition/targeted-single-asset-replacement-02.json",
+  "candidate_id": "REG-2023-GERN-IMETELSTAT-NDA-ACCEPT",
+  "catalyst_observation": {
+    "asset": "imetelstat",
+    "catalyst_type": "REG_SUBMIT",
+    "clinical_phase": "REGULATORY_FILING_ACCEPTANCE",
+    "evidence_id": "87057c56-c64c-573c-80cc-c4f7d1b26b43",
+    "external_event_id": "REG-2023-GERN-IMETELSTAT-NDA-ACCEPT",
+    "indication": "transfusion-dependent anemia in lower-risk myelodysplastic syndromes",
+    "issuer_id": "0000886744",
+    "known_at": "2023-08-21T08:00:00-04:00",
+    "source_statement": "Geron Corporation - FIRST_PUBLIC_REGULATORY_DISCLOSURE_CANDIDATE dated 2023-08-21.",
+    "source_tier": 5,
+    "timing_confidence": "HIGH",
+    "title": "Geron Corporation - imetelstat (transfusion-dependent anemia in lower-risk myelodysplastic syndromes)",
+    "window_end": "2023-08-21",
+    "window_start": "2023-08-21"
+  },
+  "catalyst_version": {
+    "asset": "imetelstat",
+    "canonical_key": "0000886744|imetelstat|transfusion-dependent anemia in lower-risk myelodysplastic syndromes|REG_SUBMIT",
+    "catalyst_type": "REG_SUBMIT",
+    "clinical_phase": "REGULATORY_FILING_ACCEPTANCE",
+    "conflicts": [],
+    "id": "9d6c6363-9591-5469-8746-3af383312de4",
+    "indication": "transfusion-dependent anemia in lower-risk myelodysplastic syndromes",
+    "issuer_id": "0000886744",
+    "known_at": "2023-08-21T08:00:00-04:00",
+    "primary_evidence_id": "87057c56-c64c-573c-80cc-c4f7d1b26b43",
+    "resolved_at_cutoff": "2023-08-21T08:00:00-04:00",
+    "supporting_evidence_ids": [
+      "87057c56-c64c-573c-80cc-c4f7d1b26b43"
+    ],
+    "timing_confidence": "HIGH",
+    "title": "Geron Corporation - imetelstat (transfusion-dependent anemia in lower-risk myelodysplastic syndromes)",
+    "version": 1,
+    "version_sha256": "313f8e19ea8757300e3c7c64fead24776afca8add3a82672a1c04878180a6c54",
+    "window_end": "2023-08-21",
+    "window_start": "2023-08-21"
+  },
+  "company": "Geron Corporation",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": false,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "8eb6dfc10299d473b71df8b1dc03f3b1eb38e7246de1e668a535e52a1a210b92",
+  "promotion_blockers": [
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE",
+    "FINAL_CONCENTRATION_AND_REGISTRY_CHECK"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2023-08-21T08:00:00-04:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "imetelstat",
+    "blinded": null,
+    "catalyst_version_id": "9d6c6363-9591-5469-8746-3af383312de4",
+    "clinical_phase": "REGULATORY_FILING_ACCEPTANCE",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2023-08-21T08:00:00-04:00",
+    "evidence_ids": [
+      "87057c56-c64c-573c-80cc-c4f7d1b26b43"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "006a4541-9631-500c-9457-0d095683de89",
+    "indication": "transfusion-dependent anemia in lower-risk myelodysplastic syndromes",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://www.sec.gov/Archives/edgar/data/886744/000095017023043949/gern-20230821.htm",
+    "https://www.geron.com/about/history/",
+    "https://www.businesswire.com/news/home/20230821960985/en/"
+  ],
+  "stratum": "REGULATORY",
+  "ticker": "GERN",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-13.json"
+}

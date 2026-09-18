@@ -1,0 +1,95 @@
+{
+  "acquisition_path": "validation/m7/acquisition/targeted-negative-supplement-02.json",
+  "candidate_id": "REG-2021-ATNX-ORALPAC-CRL",
+  "catalyst_observation": {
+    "asset": "oral paclitaxel plus encequidar",
+    "catalyst_type": "REG_DECISION",
+    "clinical_phase": "REGULATORY_DECISION",
+    "evidence_id": "756c8759-ed43-5f2d-8250-e501af7e92bd",
+    "external_event_id": "REG-2021-ATNX-ORALPAC-CRL",
+    "indication": "metastatic breast cancer",
+    "issuer_id": "0001300699",
+    "known_at": "2021-03-01T07:00:00-05:00",
+    "source_statement": "Athenex issuer release distributed by GlobeNewswire at 07:00 ET; FDA CRL stated the NDA was not ready for approval and raised safety and efficacy concerns.",
+    "source_tier": 5,
+    "timing_confidence": "HIGH",
+    "title": "Athenex, Inc. - oral paclitaxel plus encequidar (metastatic breast cancer)",
+    "window_end": "2021-03-01",
+    "window_start": "2021-03-01"
+  },
+  "catalyst_version": {
+    "asset": "oral paclitaxel plus encequidar",
+    "canonical_key": "0001300699|oral paclitaxel plus encequidar|metastatic breast cancer|REG_DECISION",
+    "catalyst_type": "REG_DECISION",
+    "clinical_phase": "REGULATORY_DECISION",
+    "conflicts": [],
+    "id": "edb4a426-b578-5d5e-9ba7-d65a65c15645",
+    "indication": "metastatic breast cancer",
+    "issuer_id": "0001300699",
+    "known_at": "2021-03-01T07:00:00-05:00",
+    "primary_evidence_id": "756c8759-ed43-5f2d-8250-e501af7e92bd",
+    "resolved_at_cutoff": "2021-03-01T07:00:00-05:00",
+    "supporting_evidence_ids": [
+      "756c8759-ed43-5f2d-8250-e501af7e92bd"
+    ],
+    "timing_confidence": "HIGH",
+    "title": "Athenex, Inc. - oral paclitaxel plus encequidar (metastatic breast cancer)",
+    "version": 1,
+    "version_sha256": "8d71ac5f72a754cdb05b43b66249682a2e795ff935336497c274b74c7b870fd5",
+    "window_end": "2021-03-01",
+    "window_start": "2021-03-01"
+  },
+  "company": "Athenex, Inc.",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": true,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "dccf5a04298a59b04f2198c1ccbc2d91cea8faa2469b3e9cbdc20ceac5340115",
+  "promotion_blockers": [
+    "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2021-03-01T07:00:00-05:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "oral paclitaxel plus encequidar",
+    "blinded": null,
+    "catalyst_version_id": "edb4a426-b578-5d5e-9ba7-d65a65c15645",
+    "clinical_phase": "REGULATORY_DECISION",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2021-03-01T07:00:00-05:00",
+    "evidence_ids": [
+      "756c8759-ed43-5f2d-8250-e501af7e92bd"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "8d2c59f7-adbc-549c-b69b-6980beec1a4e",
+    "indication": "metastatic breast cancer",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://www.globenewswire.com/news-release/2021/03/01/2184118/0/en/athenex-receives-fda-complete-response-letter-for-oral-paclitaxel-plus-encequidar-for-the-treatment-of-metastatic-breast-cancer.html"
+  ],
+  "stratum": "REGULATORY",
+  "ticker": "ATNX",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-20.json"
+}

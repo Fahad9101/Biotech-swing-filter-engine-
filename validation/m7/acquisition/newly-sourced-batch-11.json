@@ -1,0 +1,38 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "role": "NEWLY_SOURCED_CANDIDATES_POST_HANDOFF",
+  "generated_at": "2026-09-16",
+  "sourcing_note": "Follow-up to newly-sourced-batch-10.json: after sourcing 3 candidates for the REGULATORY/2018, REGULATORY/2019 and REGULATORY/2024 slots identified by the original greedy simulation, re-running the exact same dry-run against the updated real pool showed the selected-cohort negative count reached 39, not the predicted 40 - the non-linear RNG-cascading effect documented in the same simulation (adding real candidates with different candidate_id/issuer_id values than the simulation's placeholder IDs perturbs the shuffle differently) meant one of the three additions landed one negative short of the target. Re-ran the greedy search against the actual post-batch-10 pool and it identified several equally-good alternative single-slot fixes, including REGULATORY/2022 (2 real candidates tried and rejected on floor failures: AKBA on price, CRMD on liquidity) before REGULATORY/2021 (Ardelyx) confirmed as a clean pass. CORRECTION (see newly-sourced-batch-13.json for the full account): the re-verification described above was an isolated single-candidate-addition dry-run, not a full end-to-end selected-set diff against the real pool. When actually committed, ARDX landed in the same (stratum, year) bucket - REGULATORY/2021 - as an already-selected negative candidate (REG-2021-OMER-NARSOPLIMAB-CRL); the RNG cascade this addition triggered displaced OMER from the selected set, a like-for-like negative-for-negative swap with zero net gain (selected-cohort negative count stayed at 39, confirmed via a corrected full-selection-diff methodology). ARDX remains a genuine, floor-passing, well-documented negative candidate and is kept in the pool; the gap-closing work continued in batch-12 (LQDA) and batch-13 (KURA).",
+  "events": [
+    {
+      "asset": "tenapanor",
+      "candidate_id": "REG-2021-ARDX-TENAPANOR-CRL",
+      "cik": "1437402",
+      "clinical_phase": "REGULATORY_DECISION",
+      "cohort_frozen": false,
+      "company": "Ardelyx, Inc.",
+      "first_public_date": "2021-07-29",
+      "first_public_timestamp": "2021-07-29T18:52:42-04:00",
+      "indication": "control of serum phosphorus in chronic kidney disease patients on dialysis",
+      "negative_event_candidate": true,
+      "outcome_inspected_for_selection": false,
+      "promotion_blockers": [
+        "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+        "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+        "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+      ],
+      "proposed_catalyst_type": "REG_DECISION",
+      "proposed_primary_stratum": "REGULATORY",
+      "result_direction": "NEGATIVE_CRL",
+      "source_role": "FIRST_PUBLIC_REGULATORY_DISCLOSURE_CANDIDATE",
+      "source_type": "ISSUER_SEC_8K",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1437402/000162828021014943/ardx-20210728.htm",
+      "source_displayed_time": "SEC 8-K accepted 2021-07-29 18:52:42 ET (Item 1.01/8.01, after close)",
+      "ticker": "ARDX",
+      "timestamp_precision": "EXACT_TO_MINUTE_SEC_ACCEPTANCE_PROXY",
+      "notes": "FDA CRL for tenapanor (CKD-on-dialysis phosphorus control) received 2021-07-28, publicly announced by the issuer 2021-07-29. The 8-K states the FDA agreed the data were 'effective' but characterized the treatment-effect magnitude as 'small and of unclear clinical significance,' requiring an additional trial - an efficacy-magnitude rejection with 'no safety, clinical pharmacology/biopharmaceutics, chemistry, manufacturing, and controls or non-clinical issues identified,' i.e. a genuine NDA rejection, not a CMC-only or mixed disclosure."
+    }
+  ]
+}

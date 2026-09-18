@@ -1,0 +1,98 @@
+{
+  "acquisition_path": "validation/m7/acquisition/phase2-primary-batch-01.json",
+  "candidate_id": "P2-2024-ANAB-ANB032",
+  "catalyst_observation": {
+    "asset": "ANB032",
+    "catalyst_type": "CLIN_P2",
+    "clinical_phase": "PHASE_2",
+    "evidence_id": "65f50cf6-d2e0-57ff-b0fb-f3de2c8a5bcf",
+    "external_event_id": "P2-2024-ANAB-ANB032",
+    "indication": "moderate-to-severe atopic dermatitis",
+    "issuer_id": "0001370053",
+    "known_at": "2024-12-11T16:06:00-05:00",
+    "source_statement": "AnaptysBio, Inc. - FIRST_PUBLIC_RESULT_DISCLOSURE_CANDIDATE dated 2024-12-11.",
+    "source_tier": 2,
+    "timing_confidence": "MODERATE",
+    "title": "AnaptysBio, Inc. - ANB032 (moderate-to-severe atopic dermatitis)",
+    "window_end": "2024-12-11",
+    "window_start": "2024-12-11"
+  },
+  "catalyst_version": {
+    "asset": "ANB032",
+    "canonical_key": "0001370053|anb032|moderate-to-severe atopic dermatitis|CLIN_P2",
+    "catalyst_type": "CLIN_P2",
+    "clinical_phase": "PHASE_2",
+    "conflicts": [],
+    "id": "ca4cf842-e35f-5482-943b-d006cbb83b91",
+    "indication": "moderate-to-severe atopic dermatitis",
+    "issuer_id": "0001370053",
+    "known_at": "2024-12-11T16:06:00-05:00",
+    "primary_evidence_id": "65f50cf6-d2e0-57ff-b0fb-f3de2c8a5bcf",
+    "resolved_at_cutoff": "2024-12-11T16:06:00-05:00",
+    "supporting_evidence_ids": [
+      "65f50cf6-d2e0-57ff-b0fb-f3de2c8a5bcf"
+    ],
+    "timing_confidence": "MODERATE",
+    "title": "AnaptysBio, Inc. - ANB032 (moderate-to-severe atopic dermatitis)",
+    "version": 1,
+    "version_sha256": "c368394e91e78ca00f5ae0660de3fc57dfe236bd6674a1a41d1670f0f648353c",
+    "window_end": "2024-12-11",
+    "window_start": "2024-12-11"
+  },
+  "company": "AnaptysBio, Inc.",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": true,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "b6116bb880727636c06d5ec0a90b575121db0f712131a83516bcbdf7d0bd9213",
+  "promotion_blockers": [
+    "RESOLVE_CIK_AND_HISTORICAL_SECURITY_IDENTITY",
+    "RESOLVE_EXACT_FIRST_PUBLIC_TIMESTAMP",
+    "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+    "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2024-12-11T16:06:00-05:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "ANB032",
+    "blinded": null,
+    "catalyst_version_id": "ca4cf842-e35f-5482-943b-d006cbb83b91",
+    "clinical_phase": "PHASE_2",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2024-12-11T16:06:00-05:00",
+    "evidence_ids": [
+      "65f50cf6-d2e0-57ff-b0fb-f3de2c8a5bcf"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "38efe0c8-6b05-546c-9e6a-e2ec9d5b7439",
+    "indication": "moderate-to-severe atopic dermatitis",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://ir.anaptysbio.com/news-releases/news-release-details/anaptys-announces-phase-2b-trial-anb032-btla-agonist-did-not"
+  ],
+  "stratum": "PHASE_2_POC",
+  "ticker": "ANAB",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-35.json"
+}

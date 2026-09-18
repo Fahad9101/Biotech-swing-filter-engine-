@@ -1,0 +1,97 @@
+{
+  "acquisition_path": "validation/m7/acquisition/phase3-primary-batch-01.json",
+  "candidate_id": "P3-2024-FULC-REACH",
+  "catalyst_observation": {
+    "asset": "losmapimod",
+    "catalyst_type": "CLIN_P3",
+    "clinical_phase": "PHASE_3",
+    "evidence_id": "2164cc47-0ee4-5344-abf9-541ea497a884",
+    "external_event_id": "P3-2024-FULC-REACH",
+    "indication": "facioscapulohumeral muscular dystrophy",
+    "issuer_id": "0001680581",
+    "known_at": "2024-09-12T06:55:00-04:00",
+    "source_statement": "Fulcrum Therapeutics, Inc. - FIRST_PUBLIC_RESULT_DISCLOSURE_CANDIDATE dated 2024-09-12.",
+    "source_tier": 5,
+    "timing_confidence": "HIGH",
+    "title": "Fulcrum Therapeutics, Inc. - losmapimod (facioscapulohumeral muscular dystrophy)",
+    "window_end": "2024-09-12",
+    "window_start": "2024-09-12"
+  },
+  "catalyst_version": {
+    "asset": "losmapimod",
+    "canonical_key": "0001680581|losmapimod|facioscapulohumeral muscular dystrophy|CLIN_P3",
+    "catalyst_type": "CLIN_P3",
+    "clinical_phase": "PHASE_3",
+    "conflicts": [],
+    "id": "08e638a5-4522-5da1-ae0d-f5a9ad548acf",
+    "indication": "facioscapulohumeral muscular dystrophy",
+    "issuer_id": "0001680581",
+    "known_at": "2024-09-12T06:55:00-04:00",
+    "primary_evidence_id": "2164cc47-0ee4-5344-abf9-541ea497a884",
+    "resolved_at_cutoff": "2024-09-12T06:55:00-04:00",
+    "supporting_evidence_ids": [
+      "2164cc47-0ee4-5344-abf9-541ea497a884"
+    ],
+    "timing_confidence": "HIGH",
+    "title": "Fulcrum Therapeutics, Inc. - losmapimod (facioscapulohumeral muscular dystrophy)",
+    "version": 1,
+    "version_sha256": "04359ee9ee32d1ffe53ba794c1517deaa59bd37a30dca211da805c599d089281",
+    "window_end": "2024-09-12",
+    "window_start": "2024-09-12"
+  },
+  "company": "Fulcrum Therapeutics, Inc.",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": true,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "cd0e59a7aeee8ac9433688b74a564c4cd081d19ffa62e2a49e184bb36ea41e30",
+  "promotion_blockers": [
+    "RESOLVE_CIK_AND_HISTORICAL_SECURITY_IDENTITY",
+    "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+    "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2024-09-12T06:55:00-04:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "losmapimod",
+    "blinded": null,
+    "catalyst_version_id": "08e638a5-4522-5da1-ae0d-f5a9ad548acf",
+    "clinical_phase": "PHASE_3",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2024-09-12T06:55:00-04:00",
+    "evidence_ids": [
+      "2164cc47-0ee4-5344-abf9-541ea497a884"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "73437327-302c-58d1-b598-b184c38d58cd",
+    "indication": "facioscapulohumeral muscular dystrophy",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://www.globenewswire.com/news-release/2024/09/12/2945039/0/en/fulcrum-therapeutics-announces-topline-results-from-phase-3-reach-clinical-trial-of-losmapimod-in-facioscapulohumeral-muscular-dystrophy-fshd.html"
+  ],
+  "stratum": "PHASE_3_PIVOTAL",
+  "ticker": "FULC",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-22.json"
+}

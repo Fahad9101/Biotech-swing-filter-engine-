@@ -1,0 +1,98 @@
+{
+  "acquisition_path": "validation/m7/acquisition/early-clinical-primary-batch-01.json",
+  "candidate_id": "EC-2024-CABA-CABA201",
+  "catalyst_observation": {
+    "asset": "CABA-201",
+    "catalyst_type": "CLIN_P1_2",
+    "clinical_phase": "PHASE_1_2",
+    "evidence_id": "33a04713-7f0d-50eb-bf7f-e2b7348d29f6",
+    "external_event_id": "EC-2024-CABA-CABA201",
+    "indication": "myositis and systemic lupus erythematosus",
+    "issuer_id": "0001759138",
+    "known_at": "2024-06-14T02:00:00-04:00",
+    "source_statement": "Cabaletta Bio, Inc. - FIRST_PUBLIC_RESULT_DISCLOSURE_CANDIDATE dated 2024-06-14.",
+    "source_tier": 5,
+    "timing_confidence": "MODERATE",
+    "title": "Cabaletta Bio, Inc. - CABA-201 (myositis and systemic lupus erythematosus)",
+    "window_end": "2024-06-14",
+    "window_start": "2024-06-14"
+  },
+  "catalyst_version": {
+    "asset": "CABA-201",
+    "canonical_key": "0001759138|caba-201|myositis and systemic lupus erythematosus|CLIN_P1_2",
+    "catalyst_type": "CLIN_P1_2",
+    "clinical_phase": "PHASE_1_2",
+    "conflicts": [],
+    "id": "3fdda9a2-5e2b-56d9-8915-327ab5929e27",
+    "indication": "myositis and systemic lupus erythematosus",
+    "issuer_id": "0001759138",
+    "known_at": "2024-06-14T02:00:00-04:00",
+    "primary_evidence_id": "33a04713-7f0d-50eb-bf7f-e2b7348d29f6",
+    "resolved_at_cutoff": "2024-06-14T02:00:00-04:00",
+    "supporting_evidence_ids": [
+      "33a04713-7f0d-50eb-bf7f-e2b7348d29f6"
+    ],
+    "timing_confidence": "MODERATE",
+    "title": "Cabaletta Bio, Inc. - CABA-201 (myositis and systemic lupus erythematosus)",
+    "version": 1,
+    "version_sha256": "87e097fe8d863bd2545540e6d585a748f7c11db5dbf5b7464dffd4f4e17f1f1b",
+    "window_end": "2024-06-14",
+    "window_start": "2024-06-14"
+  },
+  "company": "Cabaletta Bio, Inc.",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": false,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "a2dbd2e0000f5946d398cc6b4969a3f790bae7eab9a89f921aa163666c8713a5",
+  "promotion_blockers": [
+    "RESOLVE_CIK_AND_HISTORICAL_SECURITY_IDENTITY",
+    "RESOLVE_EXACT_FIRST_PUBLIC_TIMESTAMP",
+    "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+    "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2024-06-14T02:00:00-04:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "CABA-201",
+    "blinded": null,
+    "catalyst_version_id": "3fdda9a2-5e2b-56d9-8915-327ab5929e27",
+    "clinical_phase": "PHASE_1_2",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2024-06-14T02:00:00-04:00",
+    "evidence_ids": [
+      "33a04713-7f0d-50eb-bf7f-e2b7348d29f6"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "e3e9e4f9-5171-550e-9a37-6da7614c7117",
+    "indication": "myositis and systemic lupus erythematosus",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://www.globenewswire.com/news-release/2024/06/14/2898772/0/en/Cabaletta-Bio-Reports-Positive-Initial-Clinical-Data-from-Phase-1-2-RESET-Myositis-and-RESET-SLE-Trials-of-CABA-201.html"
+  ],
+  "stratum": "EARLY_CLINICAL",
+  "ticker": "CABA",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-36.json"
+}

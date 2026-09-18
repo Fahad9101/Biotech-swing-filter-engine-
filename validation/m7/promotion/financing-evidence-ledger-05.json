@@ -1,0 +1,128 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-16",
+  "role": "PREFREEZE_TARGETED_FINANCING_QUOTA_REPAIR_WITHIN_EXISTING_CANDIDATE_POPULATION",
+  "market_outcomes_inspected": false,
+  "cohort_frozen": false,
+  "trigger": "A dry-run of the frozen select_frozen_cohort(seed=100100) sampling algorithm against the current PASS pool (not touching the real algorithm or any real files - a standalone reproduction, purely to test feasibility before building the real HistoricalEvent registry) showed that meeting the pool-wide financing_reserve aggregate (>=20) does not guarantee the specific 120-event cohort the fixed seed actually selects will itself satisfy validate_cohort()'s >=20 financing requirement: the deterministic seed's stratum/year shuffle only captured 18 of the 20 needed among the 120 it selected, with 102 of those 120 selected candidates still financing_status=PENDING (never individually checked either way). This ledger targets exactly those 102 selected-but-unverified candidates, via a bulk SEC EDGAR submissions-API sweep for 424B2/3/4/5 filings inside each candidate's own T-90/T+30 window, followed by manual content verification of each hit to confirm genuine, already-consummated dilution (not a theoretical ATM/shelf capacity) per the qualification_rule already established in financing-evidence-ledger-03.json and -04.json.",
+  "qualification_rule": "Count only actual issuer equity or equity-linked dilution occurring from T-90 through T+30. Theoretical shelf or ATM capacity without actual issuance is not sufficient. The bulk sweep surfaced 29 candidate offering-form hits across 18 distinct candidates; several were ATM-establishment prospectus supplements with no confirmable in-window actual-sales figure (rejected, matching the AXSM-2019-05-09/ATAI-2022-11-10/TERN-2023-05-15 precedent from financing-evidence-ledger-04.json) and one (EC-2023-IMTX-IMA203) was a resale-registration 424B3 whose underlying private-placement issuance date (2023-07-21) actually falls outside the T-90 window despite the registration filing date falling inside it (rejected on that basis). Six candidates cleared the bar with a firm underwritten public offering ('We are offering N shares...') confirmed directly in the prospectus supplement text, several evidenced by the classic preliminary-then-final 424B5 filing pair two calendar days apart.",
+  "rows": [
+    {
+      "candidate_id": "P3-2019-AXSM-GEMINI",
+      "event_date": "2019-12-16",
+      "ticker": "AXSM",
+      "issuer": "Axsome Therapeutics, Inc.",
+      "historical_universe_status": "PASS",
+      "financing_date": "2019-12-19",
+      "relative_day": 3,
+      "financing_type": "UNDERWRITTEN_PUBLIC_OFFERING",
+      "gross_proceeds_usd": 174000000,
+      "securities": "2,000,000 shares of common stock at $87.00 per share (plus a 300,000-share underwriters' option, $200.1M including full option exercise)",
+      "evidence_summary": "Firm underwritten public offering: prospectus supplement text states 'We are offering 2,000,000 shares of our common stock' at $87.00/share. Filed 2019-12-19 (SEC filing date recorded 2019-12-20), 3 days after the Dec 16 GEMINI Phase 3 topline event.",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1579428/000155837019011631/f424b5.htm"
+      ],
+      "status": "QUALIFIES",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2019-SAGE-ZULRESSO",
+      "event_date": "2019-03-19",
+      "ticker": "SAGE",
+      "issuer": "Sage Therapeutics, Inc.",
+      "historical_universe_status": "PASS",
+      "financing_date": "2019-02-27",
+      "relative_day": -20,
+      "financing_type": "UNDERWRITTEN_PUBLIC_OFFERING",
+      "gross_proceeds_usd": 500000100,
+      "securities": "3,333,334 shares of common stock at $150.00 per share (plus a 500,000-share underwriters' option, $575.0M including full option exercise)",
+      "evidence_summary": "Firm underwritten public offering: prospectus supplement text states 'We are selling 3,333,334 shares of our common stock in this offering.' Filed 2019-02-27, 20 days before the March 19 ZULRESSO approval event.",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1597553/000119312519052905/d703699d424b5.htm"
+      ],
+      "status": "QUALIFIES",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P3-2020-IMMU-ASCENT",
+      "event_date": "2020-07-06",
+      "ticker": "IMMU",
+      "issuer": "Immunomedics, Inc.",
+      "historical_universe_status": "PASS",
+      "financing_date": "2020-04-30",
+      "relative_day": -67,
+      "financing_type": "UNDERWRITTEN_PUBLIC_OFFERING",
+      "gross_proceeds_usd": 420000510,
+      "securities": "14,736,860 shares of common stock at $28.50 per share (plus underwriters' option; proceeds table confirms $420,000,510 gross before expenses)",
+      "evidence_summary": "Firm underwritten public offering: prospectus supplement text states 'We are offering 14,736,860 shares of our common stock in this offering.' Filed 2020-04-30, 67 days before the July 6 ASCENT Phase 3 topline event - within the T-90 window.",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/722830/000110465920054444/a20-17763_1424b5.htm"
+      ],
+      "status": "QUALIFIES",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2020-IMMU-TRODELVY",
+      "event_date": "2020-04-22",
+      "ticker": "IMMU",
+      "issuer": "Immunomedics, Inc.",
+      "historical_universe_status": "PASS",
+      "financing_date": "2020-04-30",
+      "relative_day": 8,
+      "financing_type": "UNDERWRITTEN_PUBLIC_OFFERING",
+      "gross_proceeds_usd": 420000510,
+      "securities": "14,736,860 shares of common stock at $28.50 per share (plus underwriters' option; proceeds table confirms $420,000,510 gross before expenses)",
+      "evidence_summary": "Same underlying Immunomedics offering as P3-2020-IMMU-ASCENT above, evaluated independently against this candidate's own T-90/T+30 window: filed 2020-04-30, 8 days after the April 22 TRODELVY accelerated-approval event - clearly within window.",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/722830/000110465920054444/a20-17763_1424b5.htm"
+      ],
+      "status": "QUALIFIES",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P3-2020-OCUL-DEXTENZA-AC",
+      "event_date": "2020-04-28",
+      "ticker": "OCUL",
+      "issuer": "Ocular Therapeutix, Inc.",
+      "historical_universe_status": "PASS",
+      "financing_date": "2020-05-19",
+      "relative_day": 21,
+      "financing_type": "UNDERWRITTEN_PUBLIC_OFFERING",
+      "gross_proceeds_usd": 45000004.5,
+      "securities": "8,181,819 shares of common stock; public offering price table confirms $5.50 per share, $45,000,004.50 gross total",
+      "evidence_summary": "Firm underwritten public offering: prospectus supplement text states 'We are offering 8,181,819 shares of our common stock' with an explicit pricing table ($5.50/share, $45,000,004.50 gross). Filed 2020-05-19, 21 days after the April 28 DEXTENZA allergic conjunctivitis approval event.",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1393434/000104746920003152/a2241676z424b5.htm"
+      ],
+      "status": "QUALIFIES",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2023-BLUE-LYFGENIA",
+      "event_date": "2023-12-08",
+      "ticker": "BLUE",
+      "issuer": "bluebird bio, Inc.",
+      "historical_universe_status": "PASS",
+      "financing_date": "2023-12-20",
+      "relative_day": 12,
+      "financing_type": "UNDERWRITTEN_PUBLIC_OFFERING",
+      "gross_proceeds_usd": 125000000,
+      "securities": "83,333,333 shares of common stock at $1.50 per share",
+      "evidence_summary": "Firm underwritten public offering: prospectus supplement text states 'We are offering 83,333,333 shares of our common stock at a public offering price of $1.50 per share.' Filed 2023-12-20, 12 days after the December 8 LYFGENIA approval event.",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1293971/000119312523300016/d39295d424b5.htm"
+      ],
+      "status": "QUALIFIES",
+      "outcome_inspected_for_selection": false
+    }
+  ],
+  "summary": {
+    "required_replacement_survivors": 2,
+    "qualified_existing_candidate_replacements": 6,
+    "new_event_acquisition_required": false,
+    "market_outcomes_used_for_selection": 0
+  },
+  "promotion_boundary": "These six rows restore financing-reserve margin specifically within the actual seed=100100 selected cohort (verified by the same standalone dry-run simulation used to discover the gap), not just the pool-wide aggregate. Final financing quota remains provisional until timestamp/conference, point-in-time evidence, concentration, eligible-registry and deterministic cohort-freeze requirements are satisfied. Several other bulk-sweep hits (AXSM 2019-05-09, ATAI 2022-11-10, GWPH 2017-12-05/08, ANNX, TRIL, ARRY, NVAX, REGN, IMTX) remain unverified or were explicitly rejected and are candidates for a future batch if more margin is wanted."
+}

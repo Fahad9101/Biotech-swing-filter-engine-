@@ -1,0 +1,129 @@
+{
+  "base_prior_brier_score": 0.22993055555555555,
+  "bottom_quintile_median_xbi_relative_t20_pct": -7.44,
+  "bottom_quintile_pos_swing_success": {
+    "ci_high": 0.5729038096209293,
+    "ci_low": 0.21159133433631458,
+    "n": 24,
+    "value": 0.375
+  },
+  "brier_beats_naive_prior": false,
+  "brier_score": 0.2497916666666667,
+  "brier_score_by_stratum": {
+    "CONFERENCE_OTHER": {
+      "brier_score": 0.22933333333333336,
+      "n": 15
+    },
+    "EARLY_CLINICAL": {
+      "brier_score": 0.22166666666666668,
+      "n": 15
+    },
+    "PHASE_2_POC": {
+      "brier_score": 0.2733333333333333,
+      "n": 30
+    },
+    "PHASE_3_PIVOTAL": {
+      "brier_score": 0.2558333333333333,
+      "n": 30
+    },
+    "REGULATORY": {
+      "brier_score": 0.2445,
+      "n": 30
+    }
+  },
+  "brier_score_by_validation_period": {
+    "DIAGNOSTIC_2018_2022": {
+      "brier_beats_naive_prior": false,
+      "brier_score": 0.26820000000000005,
+      "n": 75,
+      "naive_prior_pct": 64.0
+    },
+    "HOLDOUT_2025": {
+      "brier_beats_naive_prior": true,
+      "brier_score": 0.18305555555555558,
+      "n": 9,
+      "naive_prior_pct": 55.56
+    },
+    "TEMPORAL_2023_2024": {
+      "brier_beats_naive_prior": false,
+      "brier_score": 0.22812500000000002,
+      "n": 36,
+      "naive_prior_pct": 66.67
+    }
+  },
+  "cohort_sha256": "37f2e70dcc0626b40e97637e34056c9279ae9a5e6daf69d1c2f730e77c114e95",
+  "event_count": 120,
+  "generator": "python scripts/m7_build_objective_calibration.py",
+  "limitations": [
+    "Ground truth for calibration is the scientific/regulatory readout result (negative_event, inverted), not a market outcome - it measures whether the PoS number tracks catalyst success, not whether following it would have been profitable.",
+    "This methodology has no adjustment layer, gates, valuation, or classification - it cannot be compared to BOE-1.0.0's own acceptance criteria (VALIDATION-AND-MILESTONES.md 5.2-5.3), which assume a full scored decision this project does not have.",
+    "The author of this methodology had already seen this cohort's aggregate outcome rates (27 severe losses, 31 swing successes of 120) before designing it. The prior table is BOE-1.0.0's own frozen, pre-existing values, not fitted to this cohort, but perfect blinding cannot be claimed.",
+    "brier_score_by_validation_period reports the 2025 holdout period's numbers for completeness only, per VALIDATION-AND-MILESTONES.md section 6's own discipline - they are not used to justify any change to the methodology here, and none is proposed."
+  ],
+  "methodology": "src/boe/objective_pos_methodology.py",
+  "naive_prior_pct": 64.17,
+  "pos_band_calibration": [
+    {
+      "deviation_pp": 26.67,
+      "mean_predicted_pct": 40.0,
+      "n": 24,
+      "observed_success_rate_pct": 66.67,
+      "pos_mid_pct_range": [
+        40.0,
+        40.0
+      ],
+      "within_20pp": false
+    },
+    {
+      "deviation_pp": 18.13,
+      "mean_predicted_pct": 44.38,
+      "n": 24,
+      "observed_success_rate_pct": 62.5,
+      "pos_mid_pct_range": [
+        40.0,
+        55.0
+      ],
+      "within_20pp": true
+    },
+    {
+      "deviation_pp": 0.83,
+      "mean_predicted_pct": 55.0,
+      "n": 24,
+      "observed_success_rate_pct": 54.17,
+      "pos_mid_pct_range": [
+        55.0,
+        55.0
+      ],
+      "within_20pp": true
+    },
+    {
+      "deviation_pp": 9.79,
+      "mean_predicted_pct": 69.38,
+      "n": 24,
+      "observed_success_rate_pct": 79.17,
+      "pos_mid_pct_range": [
+        55.0,
+        75.0
+      ],
+      "within_20pp": true
+    },
+    {
+      "deviation_pp": 17.08,
+      "mean_predicted_pct": 75.42,
+      "n": 24,
+      "observed_success_rate_pct": 58.33,
+      "pos_mid_pct_range": [
+        75.0,
+        85.0
+      ],
+      "within_20pp": true
+    }
+  ],
+  "top_quintile_median_xbi_relative_t20_pct": -7.1,
+  "top_quintile_pos_swing_success": {
+    "ci_high": 0.49168063658709704,
+    "ci_low": 0.14914460334164278,
+    "n": 24,
+    "value": 0.2916666666666667
+  }
+}

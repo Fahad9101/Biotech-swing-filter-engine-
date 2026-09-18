@@ -1,0 +1,105 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-15",
+  "role": "PREFREEZE_HISTORICAL_UNIVERSE_AND_INVESTABILITY_EVIDENCE",
+  "market_outcomes_inspected": false,
+  "cohort_frozen": false,
+  "method": {
+    "market_data_provider": "Alpaca",
+    "feed": "SIP",
+    "bars": "RAW_AS_TRADED_DAILY",
+    "corporate_actions": "EXPLICIT_SEPARATE_QUERY",
+    "liquidity_threshold_usd": 2000000,
+    "liquidity_window_sessions": 20,
+    "liquidity_ambiguity_rule": "Both raw close x volume and raw VWAP x volume were evaluated for every row; both conventions must independently clear the frozen threshold for a PASS.",
+    "outcome_boundary": "Both events were first public pre-market, so their event-day regular sessions are excluded from eligibility calculations."
+  },
+  "rows": [
+    {
+      "candidate_id": "P3-2025-SAVA-REFOCUS",
+      "event_date": "2025-03-25",
+      "first_public_timestamp": "2025-03-25T08:05:00-04:00",
+      "pre_event_cutoff_session": "2025-03-24",
+      "ticker": "SAVA",
+      "security_identity_status": "CONFIRMED",
+      "source_population_exchange_status": "ELIGIBLE_NASDAQ_COMMON_EQUITY",
+      "last_complete_pre_event_raw_close_usd": 2.80,
+      "price_floor_pass": true,
+      "liquidity_window_start": "2025-02-25",
+      "liquidity_window_end": "2025-03-24",
+      "liquidity_sessions": 20,
+      "median_daily_dollar_volume_close_x_volume_usd": 3901675.56,
+      "median_daily_dollar_volume_vwap_x_volume_usd": 3933925.27,
+      "liquidity_floor_pass": true,
+      "pre_event_shares_outstanding": 48307896,
+      "shares_as_of": "2025-02-27",
+      "pre_event_market_cap_proxy_usd": 135262108.80,
+      "market_cap_floor_pass": true,
+      "valid_session_floor_pass": true,
+      "valid_session_floor_evidence": "SAVA common stock had been Nasdaq-listed for many years before the March 2025 event, far exceeding the frozen >=60 valid-session floor.",
+      "corporate_actions_before_event": [
+        {
+          "type": "spin_off_distribution_of_listed_warrants",
+          "source_symbol": "SAVA",
+          "new_symbol": "SAVAW",
+          "ex_date": "2023-12-21",
+          "process_date": "2023-12-21",
+          "new_rate": 0.4
+        }
+      ],
+      "corporate_action_adjustment_required_for_2025_liquidity_window": false,
+      "continuity_status": "PRE_EVENT_2024_FORM_10_K_IDENTIFIES_SAVA_COMMON_STOCK_ON_NASDAQ_CAPITAL_MARKET_AND_NON_SHELL_STATUS; 2024_YEAR_END_CASH_AND_CASH_EQUIVALENTS_APPROX_128_6M; NO_BANKRUPTCY_OR_UNRESOLVED_GOING_CONCERN_EVENT_PREVENTING_BOUNDED_VALUATION_IDENTIFIED",
+      "continuity_floor_pass": true,
+      "historical_universe_eligible": true,
+      "exclusion_reason": null,
+      "outcome_inspected_for_selection": false,
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1069530/000143774925005919/sava20241231c_10k.htm",
+        "https://www.globenewswire.com/news-release/2025/03/25/3048697/8339/en/Cassava-Sciences-Reports-Topline-Phase-3-REFOCUS-ALZ-Data.html"
+      ]
+    },
+    {
+      "candidate_id": "P3-2022-MDGL-MAESTRO-NASH",
+      "event_date": "2022-12-19",
+      "first_public_timestamp": "2022-12-19T07:00:00-05:00",
+      "pre_event_cutoff_session": "2022-12-16",
+      "ticker": "MDGL",
+      "security_identity_status": "CONFIRMED",
+      "source_population_exchange_status": "ELIGIBLE_NASDAQ_COMMON_EQUITY",
+      "last_complete_pre_event_raw_close_usd": 63.80,
+      "price_floor_pass": true,
+      "liquidity_window_start": "2022-11-18",
+      "liquidity_window_end": "2022-12-16",
+      "liquidity_sessions": 20,
+      "median_daily_dollar_volume_close_x_volume_usd": 30010285.26,
+      "median_daily_dollar_volume_vwap_x_volume_usd": 29855836.37,
+      "liquidity_floor_pass": true,
+      "pre_event_shares_outstanding": 17103395,
+      "shares_as_of": "2022-09-30",
+      "pre_event_market_cap_proxy_usd": 1091196601.00,
+      "market_cap_floor_pass": true,
+      "valid_session_floor_pass": true,
+      "valid_session_floor_evidence": "MDGL had been continuously Nasdaq-listed for years before December 2022, far exceeding the frozen >=60 valid-session requirement.",
+      "corporate_actions_through_cutoff": [],
+      "corporate_action_adjustment_required_for_liquidity_window": false,
+      "continuity_status": "CURRENT_PERIODIC_REPORTING_PRE_EVENT_WITH_Q3_2022_FORM_10_Q_AVAILABLE; NO_RELEVANT_REORGANIZATION_BANKRUPTCY_OR_UNRESOLVED_GOING_CONCERN_BLOCKER_IDENTIFIED",
+      "continuity_floor_pass": true,
+      "historical_universe_eligible": true,
+      "exclusion_reason": null,
+      "outcome_inspected_for_selection": false,
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1157601/000119312522276468/d403221d10q.htm",
+        "https://www.globenewswire.com/news-release/2022/12/19/2576163/0/en/Madrigal-Announces-Positive-Topline-Results-from-the-Pivotal-Phase-3-MAESTRO-NASH-Clinical-Trial-of-Resmetirom-for-the-Treatment-of-NASH-and-Liver-Fibrosis.html"
+      ]
+    }
+  ],
+  "summary": {
+    "evaluated": 2,
+    "eligible": 2,
+    "excluded": 0,
+    "pending": 0,
+    "single_asset_universe_stage_quota_restored_to": 20
+  }
+}

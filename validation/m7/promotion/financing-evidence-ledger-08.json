@@ -1,0 +1,178 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-17",
+  "role": "PREFREEZE_FULL_POOL_FINANCING_SWEEP",
+  "market_outcomes_inspected": false,
+  "cohort_frozen": false,
+  "trigger": "Full-pool financing sweep (see financing-evidence-ledger-06.json for the full methodology and the zero-hit majority, and financing-evidence-ledger-07.json for the confirmed real financings). These 10 candidates had at least one filing land inside their T-90-to-T+30 window that, on individual reading, turned out NOT to represent real financing to the issuer: pure resale registrations, bare shelf registrations with no accompanying takedown, a merger/reorganization proxy, and two same-holder share-for-warrant exchanges that raised no new capital.",
+  "qualification_rule": "Count only actual issuer equity, equity-linked, or debt capital raised from T-90 through T+30. A filing landing in the window is necessary but not sufficient - it must represent genuine new capital to the issuer.",
+  "summary": {
+    "reviewed": 10,
+    "qualifies": 0,
+    "does_not_qualify": 10
+  },
+  "rows": [
+    {
+      "candidate_id": "CO-2025-AUTL-CARLYSLEASH",
+      "event_date": "2025-12-08",
+      "ticker": "AUTL",
+      "issuer": "Autolus Therapeutics plc",
+      "cik": "1730463",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2025-09-09",
+      "financing_window_end": "2026-01-07",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "The only in-window filing is a resale-registration prospectus supplement (424B3, Prospectus Supplement No. 4 to a May 2025 Form S-1 resale registration): \"relate to the resale from time to time by the selling securityholders...of up to 54,584,250 American Depositary Shares.\" This registers existing holders' shares for resale; it is not a new issuance of capital to the company, and no accompanying primary 424B5/S-1 appears in the window.",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1730463/000173046325000090/autl-20251211xprospectussu.htm"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "EC-2023-IMTX-IMA203",
+      "event_date": "2023-11-08",
+      "ticker": "IMTX",
+      "issuer": "Immatics N.V.",
+      "cik": "1809196",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2023-08-10",
+      "financing_window_end": "2023-12-08",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "The only in-window filing (424B3, 2023-09-13) is a resale registration prospectus supplement; the document itself confirms the standard resale disclaimer language (\"we will not receive any of the proceeds\"). Not company financing.",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1809196/000095010323013557/"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "EC-2024-AVTE-IMPAHCT-MISS",
+      "event_date": "2024-06-17",
+      "ticker": "AVTE",
+      "issuer": "Aerovate Therapeutics, Inc.",
+      "cik": "1798749",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2024-03-19",
+      "financing_window_end": "2024-07-17",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "The only in-window filing is an S-3 shelf registration (2024-06-10) with no accompanying prospectus supplement (424B) in the window. A bare shelf registration establishes future capacity to sell securities but confirms no actual issuance or proceeds.",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1798749/000110465924070065/"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "EC-2025-MRSN-XMT1660",
+      "event_date": "2025-01-10",
+      "ticker": "MRSN",
+      "issuer": "Mersana Therapeutics, Inc.",
+      "cik": "1442836",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2024-10-12",
+      "financing_window_end": "2025-02-09",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "The only in-window filing (8-K Item 1.01, 2024-12-19) discloses an exchange agreement in which existing holders (entities affiliated with EcoR1 Capital) exchanged 8,036,688 already-outstanding common shares for economically equivalent pre-funded warrants covering the same share count. No new capital was raised and share count outstanding was not increased by the transaction itself.",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1442836/000110465924130233/tm2431516d1_8k.htm"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "NEG-P3-2023-KOD-GLEAMGLIMMER",
+      "event_date": "2023-07-24",
+      "ticker": "KOD",
+      "issuer": "Kodiak Sciences Inc.",
+      "cik": "1468748",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2023-04-25",
+      "financing_window_end": "2023-08-23",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "The only in-window filing is a bare S-3 shelf registration (2023-05-15) with no accompanying prospectus supplement (424B) in the window - establishes future capacity only, no actual issuance.",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1468748/000119312523145135/"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2023-MLTX-ARGO",
+      "event_date": "2023-11-05",
+      "ticker": "MLTX",
+      "issuer": "MoonLake Immunotherapeutics",
+      "cik": "1821586",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2023-08-07",
+      "financing_window_end": "2023-12-05",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "The only in-window filing is a bare S-3 shelf registration (2023-08-31) with no accompanying prospectus supplement (424B) in the window - establishes future capacity only, no actual issuance.",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1821586/000162828023031149/"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P3-2020-APRE-P3MDS",
+      "event_date": "2020-12-28",
+      "ticker": "APRE",
+      "issuer": "Aprea Therapeutics, Inc.",
+      "cik": "1781983",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2020-09-29",
+      "financing_window_end": "2021-01-27",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "The only in-window filings are a bare S-3 shelf registration (2020-11-12) and its amendment (S-3/A, 2020-11-24), with no accompanying prospectus supplement (424B) in the window - establishes future capacity only, no actual issuance.",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1781983/000110465920124491/"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P3-2020-REGN-LIBTAYO-NSCLC",
+      "event_date": "2020-04-27",
+      "ticker": "REGN",
+      "issuer": "Regeneron Pharmaceuticals, Inc.",
+      "cik": "872589",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2020-01-28",
+      "financing_window_end": "2020-05-27",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "The only in-window filing (424B3, 2020-05-26) is a resale registration prospectus; the document confirms the standard resale disclaimer language (\"we will not receive any of the proceeds\"). Not company financing.",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/872589/000104746920003194/"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P3-2024-FULC-REACH",
+      "event_date": "2024-09-12",
+      "ticker": "FULC",
+      "issuer": "Fulcrum Therapeutics, Inc.",
+      "cik": "1680581",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2024-06-14",
+      "financing_window_end": "2024-10-12",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "The only in-window filing (8-K Item 3.02, 2024-08-22) discloses exchange agreements in which existing institutional holders (RA Capital Healthcare Fund and another existing holder) exchanged an aggregate of 9,350,000 already-outstanding common shares for economically equivalent pre-funded warrants covering the same share count. No new capital was raised.",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1680581/000119312524205347/d98656d8k.htm"
+      ],
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2020-LQDA-LIQ861-CRL",
+      "event_date": "2020-11-25",
+      "ticker": "LQDA",
+      "issuer": "Liquidia Technologies, Inc. (subsidiary of Liquidia Corporation)",
+      "cik": "1819576",
+      "historical_universe_status": "PASS",
+      "financing_window_start": "2020-08-27",
+      "financing_window_end": "2020-12-25",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "The three in-window filings are: an S-3 shelf registration (2020-12-16) and its amendment (S-3/A, 2020-12-21), neither accompanied by an actual prospectus-supplement takedown in the window; and a 424B3 (2020-09-17) that is the proxy statement/prospectus for the Liquidia Technologies-to-Liquidia Corporation holding-company reorganization (a 1-for-1 corporate restructuring, already documented in historical-universe-ledger-44.json) - a merger/reorganization vote, not a capital-raising transaction.",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1819576/000110465920105751/tm2025040-10_424b3.htm"
+      ],
+      "outcome_inspected_for_selection": false
+    }
+  ]
+}

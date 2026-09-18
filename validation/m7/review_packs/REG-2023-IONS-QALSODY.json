@@ -1,0 +1,97 @@
+{
+  "acquisition_path": "validation/m7/acquisition/regulatory-primary-batch-01.json",
+  "candidate_id": "REG-2023-IONS-QALSODY",
+  "catalyst_observation": {
+    "asset": "QALSODY (tofersen)",
+    "catalyst_type": "REG_DECISION",
+    "clinical_phase": "REGULATORY_DECISION",
+    "evidence_id": "eafcf092-9841-54e4-8f4d-705d3b0366eb",
+    "external_event_id": "REG-2023-IONS-QALSODY",
+    "indication": "SOD1-ALS",
+    "issuer_id": "0000874015",
+    "known_at": "2023-04-25T20:40:00-04:00",
+    "source_statement": "Issuer IR page; exact publication clock unresolved.",
+    "source_tier": 5,
+    "timing_confidence": "MODERATE",
+    "title": "Ionis Pharmaceuticals, Inc. - QALSODY (tofersen) (SOD1-ALS)",
+    "window_end": "2023-04-25",
+    "window_start": "2023-04-25"
+  },
+  "catalyst_version": {
+    "asset": "QALSODY (tofersen)",
+    "canonical_key": "0000874015|qalsody (tofersen)|sod1-als|REG_DECISION",
+    "catalyst_type": "REG_DECISION",
+    "clinical_phase": "REGULATORY_DECISION",
+    "conflicts": [],
+    "id": "f2bfc1b5-218c-577b-8860-a48788211548",
+    "indication": "SOD1-ALS",
+    "issuer_id": "0000874015",
+    "known_at": "2023-04-25T20:40:00-04:00",
+    "primary_evidence_id": "eafcf092-9841-54e4-8f4d-705d3b0366eb",
+    "resolved_at_cutoff": "2023-04-25T20:40:00-04:00",
+    "supporting_evidence_ids": [
+      "eafcf092-9841-54e4-8f4d-705d3b0366eb"
+    ],
+    "timing_confidence": "MODERATE",
+    "title": "Ionis Pharmaceuticals, Inc. - QALSODY (tofersen) (SOD1-ALS)",
+    "version": 1,
+    "version_sha256": "9c1c50cb898f2914c687ddd384295ecefb7d52597114f9b1e14f039b865b40f4",
+    "window_end": "2023-04-25",
+    "window_start": "2023-04-25"
+  },
+  "company": "Ionis Pharmaceuticals, Inc.",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": false,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "05d585071ffdf6ee5a20aef12bd7a29b15d701e3463b534821fd74550ee015a6",
+  "promotion_blockers": [
+    "RESOLVE_EXACT_FIRST_PUBLIC_TIMESTAMP",
+    "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
+    "RESOLVE_NEGATIVE_EVENT_STATUS",
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2023-04-25T20:40:00-04:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "QALSODY (tofersen)",
+    "blinded": null,
+    "catalyst_version_id": "f2bfc1b5-218c-577b-8860-a48788211548",
+    "clinical_phase": "REGULATORY_DECISION",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2023-04-25T20:40:00-04:00",
+    "evidence_ids": [
+      "eafcf092-9841-54e4-8f4d-705d3b0366eb"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "70801c53-21d9-534d-8b59-d4a4128f9a48",
+    "indication": "SOD1-ALS",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://ir.ionis.com/news-releases/news-release-details/fda-approves-qalsodytm-tofersen-first-treatment-targeting"
+  ],
+  "stratum": "REGULATORY",
+  "ticker": "IONS",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-34.json"
+}

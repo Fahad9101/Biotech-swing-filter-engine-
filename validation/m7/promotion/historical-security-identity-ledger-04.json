@@ -1,0 +1,105 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-15",
+  "role": "PREFREEZE_HISTORICAL_SECURITY_IDENTITY_EVIDENCE",
+  "market_outcomes_inspected": false,
+  "cohort_frozen": false,
+  "scope": "Fourth identity batch completing all remaining quota-counted single-asset reserve events.",
+  "summary": {
+    "rows": 4,
+    "identity_confirmed": 4,
+    "us_listing_confirmed": 4,
+    "full_boe_historical_universe_eligible": 0,
+    "pending_identity": 0
+  },
+  "rows": [
+    {
+      "candidate_id": "NEG-P2-2020-MNLO-CPUO",
+      "event_date": "2020-02-26",
+      "legal_issuer": "Menlo Therapeutics Inc.",
+      "historical_ticker": "MNLO",
+      "cik": "0001566044",
+      "exchange": "The Nasdaq Stock Market LLC",
+      "security_identity": "Common Stock, par value $0.0001 per share",
+      "listing_evidence": "The pre-event 2019 Form 10-K identifies MNLO common stock as registered on The Nasdaq Stock Market LLC. The later corporate name/ticker change to VYNE occurred in September 2020, after this event.",
+      "ticker_change_or_reorganization_before_event": "NONE_BEFORE_EVENT; LATER_2020_MERGER_AND_SEPTEMBER_NAME_TICKER_CHANGE_TO_VYNE_OCCURRED_AFTER_EVENT",
+      "identity_status": "IDENTITY_CONFIRMED",
+      "us_listing_status": "US_LISTING_CONFIRMED_BOE_UNIVERSE_PENDING",
+      "historical_universe_eligible": null,
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1566044/000156459020008442/mnlo-10k_20191231.htm",
+        "https://www.sec.gov/Archives/edgar/data/1566044/000156604421000010/vyne-20201231.htm"
+      ],
+      "evidence_dates": ["2020-02", "2021"],
+      "ambiguity": "POST_EVENT_CORPORATE_ACTION_REQUIRES_LATER_MARKET_DATA_LINEAGE_BUT_NOT_EVENT_DATE_IDENTITY"
+    },
+    {
+      "candidate_id": "CO-2021-IMRA-IMR687ASH",
+      "event_date": "2021-12-13",
+      "legal_issuer": "Imara Inc.",
+      "historical_ticker": "IMRA",
+      "cik": "0001672619",
+      "exchange": "The Nasdaq Stock Market LLC / Nasdaq Global Market",
+      "security_identity": "Common stock, par value $0.001 per share",
+      "listing_evidence": "The pre-event 2020 Form 10-K identifies IMRA common stock as Section 12(b)-registered on The Nasdaq Stock Market LLC and states it was publicly traded on the Nasdaq Global Market under IMRA.",
+      "ticker_change_or_reorganization_before_event": "NONE_IDENTIFIED_MATERIALLY_AFFECTING_EVENT_SECURITY",
+      "identity_status": "IDENTITY_CONFIRMED",
+      "us_listing_status": "US_LISTING_CONFIRMED_BOE_UNIVERSE_PENDING",
+      "historical_universe_eligible": null,
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1672619/000156459021011098/imra-10k_20201231.htm"
+      ],
+      "evidence_dates": ["2021-03"],
+      "ambiguity": "NONE_MATERIAL_FOR_SECURITY_IDENTITY"
+    },
+    {
+      "candidate_id": "P2-2023-AEON-ABP450",
+      "event_date": "2023-10-19",
+      "legal_issuer": "AEON Biopharma, Inc.",
+      "historical_ticker": "AEON",
+      "cik": "0001837607",
+      "exchange": "NYSE American",
+      "security_identity": "Class A common stock, par value $0.0001 per share",
+      "listing_evidence": "The post-business-combination company transferred its common stock listing from Nasdaq predecessor PMGM to NYSE American. Trading as AEON commenced July 24, 2023, before the October 2023 event.",
+      "ticker_change_or_reorganization_before_event": "JULY_2023_BUSINESS_COMBINATION_AND_TRANSFER_FROM_PREDECESSOR_PMGM_NASDAQ_TO_AEON_NYSE_AMERICAN_COMPLETED_BEFORE_EVENT",
+      "identity_status": "IDENTITY_CONFIRMED",
+      "us_listing_status": "US_LISTING_CONFIRMED_BOE_UNIVERSE_PENDING",
+      "historical_universe_eligible": null,
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1837607/000110465923082985/tm2321617d1_8a12b.htm",
+        "https://www.sec.gov/Archives/edgar/data/1837607/000183760725000022/aeon-20241231x10k.htm"
+      ],
+      "evidence_dates": ["2023-07-21", "2025"],
+      "ambiguity": "NYSE_AMERICAN_NOT_NASDAQ; FULL_BOE_UNIVERSE_RULE_MUST_EXPLICITLY_CONFIRM_EXCHANGE_IS_ADMISSIBLE"
+    },
+    {
+      "candidate_id": "P2-2025-ACTU-ELRAGLUSIB",
+      "event_date": "2025-05-31",
+      "legal_issuer": "Actuate Therapeutics, Inc.",
+      "historical_ticker": "ACTU",
+      "cik": "0001652935",
+      "exchange": "Nasdaq Global Market",
+      "security_identity": "Common stock",
+      "listing_evidence": "Pre-event SEC reporting states Actuate's common shares began trading on the Nasdaq Global Market on August 13, 2024 under ACTU, with the IPO closing August 14, 2024.",
+      "ticker_change_or_reorganization_before_event": "AUGUST_2024_IPO_COMPLETED_BEFORE_EVENT; NO_LATER_EVENT_DATE_SECURITY_CHANGE_IDENTIFIED",
+      "identity_status": "IDENTITY_CONFIRMED",
+      "us_listing_status": "US_LISTING_CONFIRMED_BOE_UNIVERSE_PENDING",
+      "historical_universe_eligible": null,
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1652935/000168316824007971/actuate_i10q-093024.htm",
+        "https://www.sec.gov/Archives/edgar/data/1652935/000168316825001581/R12.htm"
+      ],
+      "evidence_dates": ["2024-11", "2025"],
+      "ambiguity": "NONE_MATERIAL_FOR_SECURITY_IDENTITY"
+    }
+  ],
+  "single_asset_quota_identity_completion": {
+    "single_asset_quota_candidate_count": 20,
+    "identity_confirmed_across_identity_ledgers_01_to_04": 20,
+    "identity_pending_within_single_asset_quota_reserve": 0,
+    "note": "This closes security identity only. Full BOE historical-universe eligibility remains unset for all rows."
+  },
+  "promotion_boundary": "Identity and U.S.-listing confirmation do not establish full BOE historical-universe/investability eligibility."
+}

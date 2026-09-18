@@ -1,0 +1,98 @@
+{
+  "acquisition_path": "validation/m7/acquisition/phase2-primary-batch-01.json",
+  "candidate_id": "P2-2019-TGTX-UNITYNHL",
+  "catalyst_observation": {
+    "asset": "umbralisib",
+    "catalyst_type": "CLIN_P2",
+    "clinical_phase": "PHASE_2",
+    "evidence_id": "8f44eb12-68fe-5bdc-ad4f-68d8134affbb",
+    "external_event_id": "P2-2019-TGTX-UNITYNHL",
+    "indication": "relapsed/refractory marginal zone lymphoma",
+    "issuer_id": "TICKER:TGTX",
+    "known_at": "2019-02-28T07:33:41-05:00",
+    "source_statement": "TG Therapeutics, Inc. - FIRST_PUBLIC_RESULT_DISCLOSURE_CANDIDATE dated 2019-02-28.",
+    "source_tier": 2,
+    "timing_confidence": "MODERATE",
+    "title": "TG Therapeutics, Inc. - umbralisib (relapsed/refractory marginal zone lymphoma)",
+    "window_end": "2019-02-28",
+    "window_start": "2019-02-28"
+  },
+  "catalyst_version": {
+    "asset": "umbralisib",
+    "canonical_key": "ticker:tgtx|umbralisib|relapsed/refractory marginal zone lymphoma|CLIN_P2",
+    "catalyst_type": "CLIN_P2",
+    "clinical_phase": "PHASE_2",
+    "conflicts": [],
+    "id": "2bbc93c6-8fe5-5698-9ff4-533d2869de81",
+    "indication": "relapsed/refractory marginal zone lymphoma",
+    "issuer_id": "TICKER:TGTX",
+    "known_at": "2019-02-28T07:33:41-05:00",
+    "primary_evidence_id": "8f44eb12-68fe-5bdc-ad4f-68d8134affbb",
+    "resolved_at_cutoff": "2019-02-28T07:33:41-05:00",
+    "supporting_evidence_ids": [
+      "8f44eb12-68fe-5bdc-ad4f-68d8134affbb"
+    ],
+    "timing_confidence": "MODERATE",
+    "title": "TG Therapeutics, Inc. - umbralisib (relapsed/refractory marginal zone lymphoma)",
+    "version": 1,
+    "version_sha256": "cf0134f9a9757bb0eb720ffb085c4ec53c16eea370a2bcad334bc88574802ed6",
+    "window_end": "2019-02-28",
+    "window_start": "2019-02-28"
+  },
+  "company": "TG Therapeutics, Inc.",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": false,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "b919c94309eed3688b0f97fbd8717f4538193752bab4d643e8222258dffb02ee",
+  "promotion_blockers": [
+    "RESOLVE_CIK_AND_HISTORICAL_SECURITY_IDENTITY",
+    "RESOLVE_EXACT_FIRST_PUBLIC_TIMESTAMP",
+    "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+    "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2019-02-28T07:33:41-05:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "umbralisib",
+    "blinded": null,
+    "catalyst_version_id": "2bbc93c6-8fe5-5698-9ff4-533d2869de81",
+    "clinical_phase": "PHASE_2",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2019-02-28T07:33:41-05:00",
+    "evidence_ids": [
+      "8f44eb12-68fe-5bdc-ad4f-68d8134affbb"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "9437d25a-67bd-5621-ba12-98b285780e24",
+    "indication": "relapsed/refractory marginal zone lymphoma",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://ir.tgtherapeutics.com/news-releases/news-release-details/tg-therapeutics-announces-positive-outcome-unity-nhl-phase-2b"
+  ],
+  "stratum": "PHASE_2_POC",
+  "ticker": "TGTX",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-19.json"
+}

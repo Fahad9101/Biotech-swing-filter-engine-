@@ -1,0 +1,97 @@
+{
+  "acquisition_path": "validation/m7/acquisition/phase2-primary-batch-01.json",
+  "candidate_id": "P2-2019-AGIO-DRIVEPK",
+  "catalyst_observation": {
+    "asset": "mitapivat (AG-348)",
+    "catalyst_type": "CLIN_P2",
+    "clinical_phase": "PHASE_2",
+    "evidence_id": "758eca3e-bf29-58df-b8a5-136e7ee5f023",
+    "external_event_id": "P2-2019-AGIO-DRIVEPK",
+    "indication": "pyruvate kinase deficiency",
+    "issuer_id": "0001439222",
+    "known_at": "2019-09-04T17:00:00-04:00",
+    "source_statement": "Agios Pharmaceuticals, Inc. - FIRST_PUBLIC_RESULT_DISCLOSURE_CANDIDATE dated 2019-09-04.",
+    "source_tier": 2,
+    "timing_confidence": "HIGH",
+    "title": "Agios Pharmaceuticals, Inc. - mitapivat (AG-348) (pyruvate kinase deficiency)",
+    "window_end": "2019-09-04",
+    "window_start": "2019-09-04"
+  },
+  "catalyst_version": {
+    "asset": "mitapivat (AG-348)",
+    "canonical_key": "0001439222|mitapivat (ag-348)|pyruvate kinase deficiency|CLIN_P2",
+    "catalyst_type": "CLIN_P2",
+    "clinical_phase": "PHASE_2",
+    "conflicts": [],
+    "id": "b457cf84-1a79-5ae4-843b-beeeafece8fc",
+    "indication": "pyruvate kinase deficiency",
+    "issuer_id": "0001439222",
+    "known_at": "2019-09-04T17:00:00-04:00",
+    "primary_evidence_id": "758eca3e-bf29-58df-b8a5-136e7ee5f023",
+    "resolved_at_cutoff": "2019-09-04T17:00:00-04:00",
+    "supporting_evidence_ids": [
+      "758eca3e-bf29-58df-b8a5-136e7ee5f023"
+    ],
+    "timing_confidence": "HIGH",
+    "title": "Agios Pharmaceuticals, Inc. - mitapivat (AG-348) (pyruvate kinase deficiency)",
+    "version": 1,
+    "version_sha256": "9d754e3a7b4ffbc80c3b702745ceb9c79b26b31ed78f488f41ba80725d50f9b2",
+    "window_end": "2019-09-04",
+    "window_start": "2019-09-04"
+  },
+  "company": "Agios Pharmaceuticals, Inc.",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": false,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "c3d9a0c48dc4af5f9f4bc7341a286d921970c0d69514165568f4a11d36e6f35b",
+  "promotion_blockers": [
+    "RESOLVE_CIK_AND_HISTORICAL_SECURITY_IDENTITY",
+    "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+    "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2019-09-04T17:00:00-04:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "mitapivat (AG-348)",
+    "blinded": null,
+    "catalyst_version_id": "b457cf84-1a79-5ae4-843b-beeeafece8fc",
+    "clinical_phase": "PHASE_2",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2019-09-04T17:00:00-04:00",
+    "evidence_ids": [
+      "758eca3e-bf29-58df-b8a5-136e7ee5f023"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "b63196aa-6dbb-5f7d-8f16-e4dc66566bf6",
+    "indication": "pyruvate kinase deficiency",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://www.globenewswire.com/news-release/2019/09/04/1911183/31990/en/Agios-Announces-Publication-of-Data-for-Mitapivat-from-Core-and-Extension-Phases-of-the-DRIVE-PK-Study-in-Patients-with-Pyruvate-Kinase-Deficiency-in-the-New-England-Journal-of-Med.html"
+  ],
+  "stratum": "PHASE_2_POC",
+  "ticker": "AGIO",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-26.json"
+}

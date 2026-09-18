@@ -1,0 +1,97 @@
+{
+  "acquisition_path": "validation/m7/acquisition/phase2-primary-batch-01.json",
+  "candidate_id": "P2-2022-CINC-BRIGHTN",
+  "catalyst_observation": {
+    "asset": "baxdrostat",
+    "catalyst_type": "CLIN_P2",
+    "clinical_phase": "PHASE_2",
+    "evidence_id": "7021ad8e-eb1e-5255-8212-556e52f2b7c8",
+    "external_event_id": "P2-2022-CINC-BRIGHTN",
+    "indication": "treatment-resistant hypertension",
+    "issuer_id": "0001868734",
+    "known_at": "2022-08-08T07:12:17-04:00",
+    "source_statement": "CinCor Pharma, Inc. - FIRST_PUBLIC_RESULT_DISCLOSURE_CANDIDATE dated 2022-08-08.",
+    "source_tier": 2,
+    "timing_confidence": "MODERATE",
+    "title": "CinCor Pharma, Inc. - baxdrostat (treatment-resistant hypertension)",
+    "window_end": "2022-08-08",
+    "window_start": "2022-08-08"
+  },
+  "catalyst_version": {
+    "asset": "baxdrostat",
+    "canonical_key": "0001868734|baxdrostat|treatment-resistant hypertension|CLIN_P2",
+    "catalyst_type": "CLIN_P2",
+    "clinical_phase": "PHASE_2",
+    "conflicts": [],
+    "id": "c15cf658-027e-505f-ab4c-3a680eef7e67",
+    "indication": "treatment-resistant hypertension",
+    "issuer_id": "0001868734",
+    "known_at": "2022-08-08T07:12:17-04:00",
+    "primary_evidence_id": "7021ad8e-eb1e-5255-8212-556e52f2b7c8",
+    "resolved_at_cutoff": "2022-08-08T07:12:17-04:00",
+    "supporting_evidence_ids": [
+      "7021ad8e-eb1e-5255-8212-556e52f2b7c8"
+    ],
+    "timing_confidence": "MODERATE",
+    "title": "CinCor Pharma, Inc. - baxdrostat (treatment-resistant hypertension)",
+    "version": 1,
+    "version_sha256": "755eddb7a6d4cf997dd0ffff8e0b1eb7214e48d6bff65ba231eae249497266c5",
+    "window_end": "2022-08-08",
+    "window_start": "2022-08-08"
+  },
+  "company": "CinCor Pharma, Inc.",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": false,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "c9964346381fce1718efc434222c121079945a2a44dbe907ccaffeead6f24f57",
+  "promotion_blockers": [
+    "RESOLVE_EXACT_FIRST_PUBLIC_TIMESTAMP",
+    "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+    "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2022-08-08T07:12:17-04:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "baxdrostat",
+    "blinded": null,
+    "catalyst_version_id": "c15cf658-027e-505f-ab4c-3a680eef7e67",
+    "clinical_phase": "PHASE_2",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2022-08-08T07:12:17-04:00",
+    "evidence_ids": [
+      "7021ad8e-eb1e-5255-8212-556e52f2b7c8"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "3ddec401-5cc1-5305-845b-e966ae27eda8",
+    "indication": "treatment-resistant hypertension",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://www.sec.gov/Archives/edgar/data/1868734/000095017022015240/cinc-ex99_1.htm"
+  ],
+  "stratum": "PHASE_2_POC",
+  "ticker": "CINC",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-02.json"
+}

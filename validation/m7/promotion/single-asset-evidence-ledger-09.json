@@ -1,0 +1,218 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-16",
+  "role": "PREFREEZE_TARGETED_SINGLE_ASSET_REPLACEMENT_EVIDENCE",
+  "market_outcome_fields_permitted": false,
+  "cohort_frozen": false,
+  "trigger": "Same dry-run of select_frozen_cohort(seed=100100) that surfaced the financing gap (see financing-evidence-ledger-05.json) showed the specific 120-event selected cohort would only contain 18 of the 20 single-asset issuers required, with 102 of the 120 selected candidates still single_asset_status=PENDING. This ledger records genuine per-issuer pipeline research (pre-event 10-K/10-KT 'Item 1. Business' overview) against 8 of those selected-but-unverified candidates, following the qualification discipline already established in single-asset-evidence-ledger-08.json (MDGL/resmetirom): count only a company whose pre-event filings show one meaningful active clinical-stage therapeutic asset, where any other named compound is explicitly framed as a preclinical/backup/potential program rather than a separate active development effort.",
+  "rows": [
+    {
+      "candidate_id": "EC-2021-SGTX-SIG001",
+      "event_date": "2021-07-09",
+      "ticker": "SGTX",
+      "issuer": "Solid Biosciences, Inc.",
+      "asset": "SGT-001",
+      "historical_pipeline_snapshot_date": "2020-12-31",
+      "meaningful_active_therapeutic_assets": [
+        "SGT-001"
+      ],
+      "determination": "QUALIFIES",
+      "status": "QUALIFIES",
+      "evidence_summary": "FY2020 10-K 'Item 1. Business' overview states the company's efforts are focused on 'our lead product candidate, SGT-001,' a Duchenne muscular dystrophy gene transfer candidate. A full-text search of the filing for the SGT-\\d+ naming pattern returns only SGT-001; every other reference to 'other product candidates' is generic forward-looking-statement hedge language ('SGT-001 and our other product candidates, if approved') with no second candidate ever named anywhere in the document - the same pattern that qualified MDGL/resmetirom in single-asset-evidence-ledger-08.json.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1707502/000156459021013153/sldb-10k_20201231.htm"
+      ],
+      "source_dates": [
+        "2021-03-15"
+      ],
+      "post_event_source_role": "NONE",
+      "ambiguity": "NONE",
+      "quota_replacement_candidate": true,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P3-2025-CAPR-HOPE3",
+      "event_date": "2025-12-03",
+      "ticker": "CAPR",
+      "issuer": "Capricor Therapeutics, Inc.",
+      "asset": "deramiocel",
+      "historical_pipeline_snapshot_date": "2024-12-31",
+      "meaningful_active_therapeutic_assets": [
+        "deramiocel",
+        "StealthX exosome platform"
+      ],
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2024 10-K 'Item 1. Business' overview explicitly describes the company as developing 'deramiocel and our other product candidates including our exosomes platform technology,' and separately details an active StealthX exosome R&D program with NIH/NIAID/DoD/JHU collaborations 'developing exosome-based vaccines and therapeutics for infectious disease.' Unlike the MDGL precedent (where the second compound was explicitly called only a potential backup), this is affirmatively described as a distinct, actively funded second platform, not a backup for deramiocel.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1133869/000155837025003707/capr-20241231x10k.htm"
+      ],
+      "source_dates": [
+        "2025-03-26"
+      ],
+      "post_event_source_role": "NONE",
+      "ambiguity": "STEALTHX_PLATFORM_IS_EARLY_STAGE_BUT_AFFIRMATIVELY_DESCRIBED_AS_ACTIVE_NOT_BACKUP",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "NEG-P3-2024-AMLX-PHOENIX",
+      "event_date": "2024-03-08",
+      "ticker": "AMLX",
+      "issuer": "Amylyx Pharmaceuticals, Inc.",
+      "asset": "AMX0035",
+      "historical_pipeline_snapshot_date": "2023-12-31",
+      "meaningful_active_therapeutic_assets": [
+        "AMX0035",
+        "AMX0114"
+      ],
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2023 10-K 'Item 1. Business' overview states the company is 'also developing AMX0114, an antisense oligonucleotide, for the treatment of people living with ALS' - a chemically distinct compound (ASO vs. the AMX0035 small-molecule combination) with its own development program, not merely AMX0035 studied in an additional indication (which would not disqualify single-asset status, as with Amylyx's own AMX0035-in-PSP/Wolfram-syndrome studies).",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1658551/000095017024018447/amlx-20231231.htm"
+      ],
+      "source_dates": [
+        "2024-02-22"
+      ],
+      "post_event_source_role": "NONE",
+      "ambiguity": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P3-2020-CRBP-RESOLVE1",
+      "event_date": "2020-11-19",
+      "ticker": "CRBP",
+      "issuer": "Corbus Pharmaceuticals Holdings, Inc.",
+      "asset": "lenabasum",
+      "historical_pipeline_snapshot_date": "2019-12-31",
+      "meaningful_active_therapeutic_assets": [
+        "lenabasum",
+        "CRB-4001"
+      ],
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2019 10-K 'Item 1. Business' overview states the pipeline 'also includes CRB-4001, a 2nd generation, peripherally restricted cannabinoid receptor type 1 (CB1) inverse agonist designed to treat organ specific fibrotic liver diseases, such as nonalcoholic steatohepatitis' - a distinct compound with a distinct mechanism and distinct target indication from lenabasum, affirmatively named as part of the active pipeline.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1595097/000149315220004077/form10-k.htm"
+      ],
+      "source_dates": [
+        "2020-03-16"
+      ],
+      "post_event_source_role": "NONE",
+      "ambiguity": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "EC-2021-RUBY-RTX240",
+      "event_date": "2021-03-15",
+      "ticker": "RUBY",
+      "issuer": "Rubius Therapeutics, Inc.",
+      "asset": "RTX-240",
+      "historical_pipeline_snapshot_date": "2020-12-31",
+      "meaningful_active_therapeutic_assets": [
+        "RTX-240",
+        "RTX-321"
+      ],
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2020 10-K 'Item 1. Business' overview states the company received IND clearance for both 'our lead oncology program, RTX-240, and our lead artificial antigen presenting cell (aAPC) program, RTX-321' during 2020, with both actively dosing/enrolling. Two separate, named, clinical-stage (IND-cleared) programs.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1709401/000155837021001412/ruby-20201231x10k.htm"
+      ],
+      "source_dates": [
+        "2021-02-23"
+      ],
+      "post_event_source_role": "NONE",
+      "ambiguity": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P3-2024-FULC-REACH",
+      "event_date": "2024-09-12",
+      "ticker": "FULC",
+      "issuer": "Fulcrum Therapeutics, Inc.",
+      "asset": "losmapimod",
+      "historical_pipeline_snapshot_date": "2023-12-31",
+      "meaningful_active_therapeutic_assets": [
+        "losmapimod",
+        "pociredir"
+      ],
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2023 10-K 'Item 1. Business' overview explicitly states the company's 'priorities [are] focused on the development and potential commercialization of our two clinical-stage assets, losmapimod and pociredir' - self-described as two assets in the filing's own language.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1680581/000095017024021074/fulc-20231231.htm"
+      ],
+      "source_dates": [
+        "2024-02-27"
+      ],
+      "post_event_source_role": "NONE",
+      "ambiguity": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "EC-2022-AVXL-ANAVEX371",
+      "event_date": "2022-01-10",
+      "ticker": "AVXL",
+      "issuer": "Anavex Life Sciences Corp.",
+      "asset": "ANAVEX3-71",
+      "historical_pipeline_snapshot_date": "2021-09-30",
+      "meaningful_active_therapeutic_assets": [
+        "ANAVEX2-73",
+        "ANAVEX3-71"
+      ],
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2021 10-K (fiscal year end Sept. 30) 'Overview and Strategy' states the company 'currently [has] two core programs and two seed programs,' with ANAVEX2-73 as lead compound and this candidate's own asset, ANAVEX3-71, as a separate core program - self-described multi-program pipeline, not a single-asset company.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1314052/000173112221002062/e3306_10-k.htm"
+      ],
+      "source_dates": [
+        "2021-11-24"
+      ],
+      "post_event_source_role": "NONE",
+      "ambiguity": "NONE",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P3-2020-APRE-P3MDS",
+      "event_date": "2020-12-28",
+      "ticker": "APRE",
+      "issuer": "Aprea Therapeutics, Inc.",
+      "asset": "APR-246",
+      "historical_pipeline_snapshot_date": "2019-12-31",
+      "meaningful_active_therapeutic_assets": [
+        "APR-246",
+        "APR-548"
+      ],
+      "determination": "DOES_NOT_QUALIFY",
+      "status": "DOES_NOT_QUALIFY",
+      "evidence_summary": "FY2019 10-K states the company is 'also developing a next-generation p53 reactivator, APR-548, for potential use in multiple hematologic malignancy indications.' APR-548 was preclinical at the time (no clinical trials yet initiated) while APR-246 was in pivotal Phase 3, which is a closer call than the other DOES_NOT_QUALIFY rows in this batch - but APR-548 is affirmatively described as a distinct compound under active development ('next-generation... developing'), not framed as only a potential backup the way MDGL's second compound was in single-asset-evidence-ledger-08.json. Treated conservatively as DOES_NOT_QUALIFY rather than stretching the MDGL precedent.",
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1781983/000155837020003257/apre-20191231x10k.htm"
+      ],
+      "source_dates": [
+        "2020-03-27"
+      ],
+      "post_event_source_role": "NONE",
+      "ambiguity": "APR548_PRECLINICAL_BUT_AFFIRMATIVELY_DESCRIBED_AS_ACTIVE_NEXT_GENERATION_COMPOUND_NOT_BACKUP",
+      "quota_replacement_candidate": false,
+      "outcome_inspected_for_selection": false
+    }
+  ],
+  "summary": {
+    "reviewed": 8,
+    "qualifies": 1,
+    "does_not_qualify": 7,
+    "pending": 0
+  },
+  "promotion_boundary": "Single-asset status alone does not establish final M7 eligibility. Historical universe, timestamp, financing, point-in-time evidence, concentration, eligible-registry and deterministic cohort-freeze checks remain mandatory. This batch closes 8 of the 102 selected-but-unverified candidates but only found one genuine QUALIFIES; the selected-cohort single-asset count moves from 18 to 19, still one short of the 20 requirement - more candidates need review."
+}

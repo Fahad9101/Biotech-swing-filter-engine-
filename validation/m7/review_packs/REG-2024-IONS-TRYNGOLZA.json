@@ -1,0 +1,97 @@
+{
+  "acquisition_path": "validation/m7/acquisition/regulatory-primary-batch-01.json",
+  "candidate_id": "REG-2024-IONS-TRYNGOLZA",
+  "catalyst_observation": {
+    "asset": "TRYNGOLZA (olezarsen)",
+    "catalyst_type": "REG_DECISION",
+    "clinical_phase": "REGULATORY_DECISION",
+    "evidence_id": "268c0de0-9c90-5a4b-ab55-9235b20d203f",
+    "external_event_id": "REG-2024-IONS-TRYNGOLZA",
+    "indication": "familial chylomicronemia syndrome",
+    "issuer_id": "0000874015",
+    "known_at": "2024-12-19T18:28:00-05:00",
+    "source_statement": "Contemporaneous SEC exhibit; exact first-public clock unresolved.",
+    "source_tier": 2,
+    "timing_confidence": "MODERATE",
+    "title": "Ionis Pharmaceuticals, Inc. - TRYNGOLZA (olezarsen) (familial chylomicronemia syndrome)",
+    "window_end": "2024-12-19",
+    "window_start": "2024-12-19"
+  },
+  "catalyst_version": {
+    "asset": "TRYNGOLZA (olezarsen)",
+    "canonical_key": "0000874015|tryngolza (olezarsen)|familial chylomicronemia syndrome|REG_DECISION",
+    "catalyst_type": "REG_DECISION",
+    "clinical_phase": "REGULATORY_DECISION",
+    "conflicts": [],
+    "id": "9e4048d7-3c57-53f0-83c2-258d74dd8b15",
+    "indication": "familial chylomicronemia syndrome",
+    "issuer_id": "0000874015",
+    "known_at": "2024-12-19T18:28:00-05:00",
+    "primary_evidence_id": "268c0de0-9c90-5a4b-ab55-9235b20d203f",
+    "resolved_at_cutoff": "2024-12-19T18:28:00-05:00",
+    "supporting_evidence_ids": [
+      "268c0de0-9c90-5a4b-ab55-9235b20d203f"
+    ],
+    "timing_confidence": "MODERATE",
+    "title": "Ionis Pharmaceuticals, Inc. - TRYNGOLZA (olezarsen) (familial chylomicronemia syndrome)",
+    "version": 1,
+    "version_sha256": "dfd6f979320640dc039a04990c10f4ef43414287442d69f5c9ba9de14688089d",
+    "window_end": "2024-12-19",
+    "window_start": "2024-12-19"
+  },
+  "company": "Ionis Pharmaceuticals, Inc.",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": false,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "f9a4b96c1a9e18b3537294500beb66ba89ff9ff86b7b3f9fbc4d2d7bde64d062",
+  "promotion_blockers": [
+    "RESOLVE_EXACT_FIRST_PUBLIC_TIMESTAMP",
+    "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
+    "RESOLVE_NEGATIVE_EVENT_STATUS",
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2024-12-19T18:28:00-05:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "TRYNGOLZA (olezarsen)",
+    "blinded": null,
+    "catalyst_version_id": "9e4048d7-3c57-53f0-83c2-258d74dd8b15",
+    "clinical_phase": "REGULATORY_DECISION",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2024-12-19T18:28:00-05:00",
+    "evidence_ids": [
+      "268c0de0-9c90-5a4b-ab55-9235b20d203f"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "5f641ab4-db8b-5c76-aa79-07f9d2ddcd28",
+    "indication": "familial chylomicronemia syndrome",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://www.sec.gov/Archives/edgar/data/874015/000114036124050057/ef20040455_ex99-1.htm"
+  ],
+  "stratum": "REGULATORY",
+  "ticker": "IONS",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-34.json"
+}

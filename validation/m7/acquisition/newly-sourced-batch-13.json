@@ -1,0 +1,38 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "role": "NEWLY_SOURCED_CANDIDATES_POST_HANDOFF",
+  "generated_at": "2026-09-16",
+  "sourcing_note": "Follow-up to newly-sourced-batch-12.json (LQDA): the LQDA addition (REGULATORY/2020) did not itself get selected, but its insertion cascaded the shared-RNG shuffle order for REGULATORY/2021 as well (same stratum, later year in year_order), which pulled the previously-unselected REG-2021-ARDX-TENAPANOR-CRL into the selected set in place of a non-negative candidate (REG-2021-APLS-EMPAVELI). Net result verified via the full dry-run simulation: negative-in-selection reached exactly 40/40 - the frozen requirement is met, but at zero margin, and via an indirect two-hop cascade rather than a direct addition. To avoid leaving the reserve at a knife's-edge exact match (consistent with this workstream's established preference for real margin over exact quota), re-ran the full-selection-delta search fresh against this new real baseline (all prior real additions included). The best available real slot was EARLY_CLINICAL/2021 through EARLY_CLINICAL/2025 (multiple years tied at +1 net). Two prior candidate ideas for this window were evaluated and rejected before sourcing: Athira Pharma's June/August 2022 ACT-AD Phase 2 topline release (missed primary endpoint, but the company's own disclosure emphasizes a positive post-hoc subgroup finding throughout both the original release and the follow-up earnings recap - a mixed disclosure, set aside on the same grounds as the earlier EOLS candidate) and Solid Biosciences' July 2020 clinical-hold update on SGT-001 (a clean, unambiguous negative disclosure, but SLDB fails the liquidity floor: $690,781 median daily dollar volume vs. the $2,000,000 minimum). The candidate below - Kura Oncology's November 2021 partial clinical hold on KO-539 following a patient death - is a clean, standalone, single-issue negative disclosure with no mixed framing, and passes all universe floors with substantial margin. IMPORTANT METHODOLOGY CORRECTION, discovered while re-verifying this candidate against the real regenerated pool: an isolated pre-commit dry-run (appending a hypothetical KURA-shaped row to the END of the pool list) predicted a clean 41/40 with Kura directly selected. After actually adding the real row to historical-universe-ledger-45.json and regenerating reconciled-candidate-status.json, the row landed at position 21 of 150 in the file's natural order (not the end) - and the full dry-run against that actual file order shows negative-in-selection at exactly 40/40, with Kura Oncology itself NOT selected. A controlled comparison (identical candidate set and seed, differing only in whether the Kura row is placed at its natural file position vs. appended at the end) confirms the cause: random.Random(seed).shuffle() is a Fisher-Yates shuffle whose output depends on the shuffled list's starting order, not just the seed and item set, so where a candidate sits in the pool's iteration order is itself a load-bearing input to select_frozen_cohort's outcome. Because the real HistoricalEvent registry does not exist yet (that is still future, post-freeze work), no fixed pool order exists to simulate against - meaning no simulation run today, including every one in this and the prior three batches, can be treated as a reliable prediction of the real frozen selection's exact composition. What these simulations CAN and do reliably verify is structural, order-independent sufficiency: whether enough real, evidence-backed, floor-passing negative/financing/single-asset candidates exist in the right (stratum, year) buckets in aggregate. On that measure the negative reserve is now solid: pool-wide PASS-status negative count is 47 against a requirement of 40 (margin of 7), spread across the same years/strata exercised by this batch's sourcing. This aggregate margin, not any single simulated selected-cohort count, is the meaningful pre-freeze readiness signal going forward.",
+  "events": [
+    {
+      "asset": "KO-539 (ziftomenib)",
+      "candidate_id": "EC-2021-KURA-KO539-HOLD",
+      "cik": "1422143",
+      "clinical_phase": "PHASE_1",
+      "cohort_frozen": false,
+      "company": "Kura Oncology, Inc.",
+      "first_public_date": "2021-11-24",
+      "first_public_timestamp": "2021-11-24T06:50:58-05:00",
+      "indication": "relapsed or refractory acute myeloid leukemia (AML)",
+      "negative_event_candidate": true,
+      "outcome_inspected_for_selection": false,
+      "promotion_blockers": [
+        "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+        "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+        "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+      ],
+      "proposed_catalyst_type": "CLIN_P1",
+      "proposed_primary_stratum": "EARLY_CLINICAL",
+      "result_direction": "NEGATIVE_SAFETY_HOLD",
+      "source_role": "FIRST_PUBLIC_REGULATORY_DISCLOSURE_CANDIDATE",
+      "source_type": "ISSUER_SEC_8K",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1422143/000119312521339334/d257439d8k.htm",
+      "source_displayed_time": "SEC 8-K accepted 2021-11-24 06:50:58 ET (Item 8.01, pre-market)",
+      "ticker": "KURA",
+      "timestamp_precision": "EXACT_TO_MINUTE_SEC_ACCEPTANCE_PROXY",
+      "notes": "FDA placed the KOMET-001 Phase 1b study of KO-539 (ziftomenib) in relapsed/refractory AML on a partial clinical hold following a Grade 5 serious adverse event (patient death) potentially associated with differentiation syndrome. The company suspended guidance on Phase 1b enrollment completion and Phase 2 dose determination pending resolution - a standalone, single-issue negative disclosure (no bundled positive news, unlike the rejected Beam Therapeutics BEAM-201 clinical-hold disclosure, which was buried inside a broadly positive Q2 earnings release headlined by a $1.2B cash position)."
+    }
+  ]
+}

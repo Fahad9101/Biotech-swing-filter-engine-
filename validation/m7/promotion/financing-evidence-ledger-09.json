@@ -1,0 +1,29 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-17",
+  "role": "PREFREEZE_TARGETED_FINANCING_EVIDENCE",
+  "market_outcomes_inspected": false,
+  "cohort_frozen": false,
+  "qualification_rule": "Count only actual issuer equity or equity-linked dilution occurring from T-90 through T+30. Theoretical shelf or ATM registration capacity without actual issuance is not sufficient.",
+  "summary": {"reviewed": 1, "qualifies": 1, "does_not_qualify": 0},
+  "rows": [
+    {
+      "candidate_id": "REG-2022-AXSM-AXS07-CRL",
+      "event_date": "2022-04-25",
+      "ticker": "AXSM",
+      "issuer": "Axsome Therapeutics, Inc.",
+      "historical_universe_status": "PASS",
+      "financing_date": "2022-05-09",
+      "relative_day": 14,
+      "financing_type": "UNREGISTERED_EQUITY_ISSUANCE_LENDER",
+      "gross_proceeds_usd": 5000048.73,
+      "securities": "Unregistered common stock sold directly to Hercules Capital, Inc. at $32.79/share, issued upon closing of a Second Amendment to the companies' Loan and Security Agreement (in connection with Axsome's acquisition of Sunosi from Jazz Pharmaceuticals)",
+      "evidence_summary": "8-K Item 3.02 (2022-05-09): 'Upon the closing of the Second Amendment, Hercules has purchased $5,000,048.73 of the Company's unregistered common stock...at a share price equal to $32.79 per share, pursuant to a share transfer agreement. The Hercules Equity Issuance is exempt from the registration requirements of the Securities Act...pursuant to...Section 4(a)(2)...and Rule 506 of Regulation D.' A genuine, real unregistered equity sale to a real purchaser (Hercules Capital), 14 days after the event and well within the T+30 window - not a bare shelf registration or resale filing.",
+      "source_urls": ["https://www.sec.gov/Archives/edgar/data/1579428/000119312522144265/d334684d8k.htm"],
+      "status": "QUALIFIES",
+      "outcome_inspected_for_selection": false
+    }
+  ]
+}

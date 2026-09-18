@@ -1,0 +1,59 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-17",
+  "role": "PREFREEZE_FIRST_PUBLIC_AVAILABILITY_EVIDENCE",
+  "batch": "registry-prep-timestamp-resolution-batch-01",
+  "trigger": "While preparing to build the real HistoricalEvent registry, found 5 universe-PASS candidates still carrying only a date-level first_public_date rather than the exact tz-aware timestamp HistoricalEvent.event_at requires. Resolved 3 of the 5 via each issuer's own same-day SEC 8-K acceptance timestamp (a same-day filing exists for these three, consistent with the EXACT_TO_MINUTE_SEC_ACCEPTANCE_PROXY convention used throughout this workstream). The other 2 (MLTX/P2-2023-MLTX-MIRA and AMLX/REG-2022-AMLX-RELYVRIO) were weekend/evening press releases whose own text gives no HH:MM, and whose 8-K was filed the following business day (a different calendar date) - using that later filing's timestamp would misdate the event, and no genuine minute-level evidence for the actual release exists, so those two remain unresolved and are excluded from real registry inclusion rather than assigned a fabricated time.",
+  "rows": [
+    {
+      "candidate_id": "P2-2019-TGTX-UNITYNHL",
+      "event_date": "2019-02-28",
+      "ticker": "TGTX",
+      "first_public_timestamp": "2019-02-28T07:33:41-05:00",
+      "timezone": "America/New_York",
+      "timestamp_precision": "EXACT_TO_MINUTE_SEC_ACCEPTANCE_PROXY",
+      "session_classification": "PRE_MARKET",
+      "last_complete_session_before_event": "2019-02-27",
+      "source_type": "ISSUER_SEC_8K",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1001316/000165495419002047/0001654954-19-002047-index-headers.html",
+      "source_displayed_time": "SEC 8-K accepted 2019-02-28 07:33:41 ET",
+      "evidence_note": "The company's own press release (ir.tgtherapeutics.com) carries no HH:MM dateline; the same-day 8-K's SEC acceptance timestamp is used as the proxy first-public time, consistent with the EXACT_TO_MINUTE_SEC_ACCEPTANCE_PROXY convention.",
+      "status": "RESOLVED",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2022-CINC-BRIGHTN",
+      "event_date": "2022-08-08",
+      "ticker": "CINC",
+      "first_public_timestamp": "2022-08-08T07:12:17-04:00",
+      "timezone": "America/New_York",
+      "timestamp_precision": "EXACT_TO_MINUTE_SEC_ACCEPTANCE_PROXY",
+      "session_classification": "PRE_MARKET",
+      "last_complete_session_before_event": "2022-08-05",
+      "source_type": "ISSUER_SEC_8K_EXHIBIT_991",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1868734/000095017022015240/0000950170-22-015240-index-headers.html",
+      "source_displayed_time": "SEC 8-K accepted 2022-08-08 07:12:17 ET",
+      "evidence_note": "The original acquisition record already cited this same 8-K exhibit as its source_url but had not resolved an exact time; the SEC acceptance timestamp is used as the proxy first-public time.",
+      "status": "RESOLVED",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2023-ETNB-ENLIVEN",
+      "event_date": "2023-03-22",
+      "ticker": "ETNB",
+      "first_public_timestamp": "2023-03-22T07:05:59-04:00",
+      "timezone": "America/New_York",
+      "timestamp_precision": "EXACT_TO_MINUTE_SEC_ACCEPTANCE_PROXY",
+      "session_classification": "PRE_MARKET",
+      "last_complete_session_before_event": "2023-03-21",
+      "source_type": "ISSUER_SEC_8K",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1785173/000119312523076241/0001193125-23-076241-index-headers.html",
+      "source_displayed_time": "SEC 8-K accepted 2023-03-22 07:05:59 ET",
+      "evidence_note": "The company's own press release (ir.89bio.com) carries no HH:MM dateline; the same-day 8-K's SEC acceptance timestamp is used as the proxy first-public time.",
+      "status": "RESOLVED",
+      "outcome_inspected_for_selection": false
+    }
+  ]
+}

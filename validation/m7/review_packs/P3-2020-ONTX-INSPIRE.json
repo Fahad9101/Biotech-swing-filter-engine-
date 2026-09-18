@@ -1,0 +1,97 @@
+{
+  "acquisition_path": "validation/m7/acquisition/phase3-primary-batch-01.json",
+  "candidate_id": "P3-2020-ONTX-INSPIRE",
+  "catalyst_observation": {
+    "asset": "rigosertib",
+    "catalyst_type": "CLIN_P3",
+    "clinical_phase": "PHASE_3",
+    "evidence_id": "ef537bdf-8180-5423-a501-906c8d30888f",
+    "external_event_id": "P3-2020-ONTX-INSPIRE",
+    "indication": "higher-risk myelodysplastic syndromes",
+    "issuer_id": "0001130598",
+    "known_at": "2020-08-24T07:30:00-04:00",
+    "source_statement": "Onconova Therapeutics, Inc. - FIRST_PUBLIC_RESULT_DISCLOSURE_CANDIDATE dated 2020-08-24.",
+    "source_tier": 5,
+    "timing_confidence": "HIGH",
+    "title": "Onconova Therapeutics, Inc. - rigosertib (higher-risk myelodysplastic syndromes)",
+    "window_end": "2020-08-24",
+    "window_start": "2020-08-24"
+  },
+  "catalyst_version": {
+    "asset": "rigosertib",
+    "canonical_key": "0001130598|rigosertib|higher-risk myelodysplastic syndromes|CLIN_P3",
+    "catalyst_type": "CLIN_P3",
+    "clinical_phase": "PHASE_3",
+    "conflicts": [],
+    "id": "50a579b2-0687-5da3-b90d-490fa7a4d584",
+    "indication": "higher-risk myelodysplastic syndromes",
+    "issuer_id": "0001130598",
+    "known_at": "2020-08-24T07:30:00-04:00",
+    "primary_evidence_id": "ef537bdf-8180-5423-a501-906c8d30888f",
+    "resolved_at_cutoff": "2020-08-24T07:30:00-04:00",
+    "supporting_evidence_ids": [
+      "ef537bdf-8180-5423-a501-906c8d30888f"
+    ],
+    "timing_confidence": "HIGH",
+    "title": "Onconova Therapeutics, Inc. - rigosertib (higher-risk myelodysplastic syndromes)",
+    "version": 1,
+    "version_sha256": "8dd2e21444746b95566a0388630223f2931c2a06de6184bba76f08dcb78f6742",
+    "window_end": "2020-08-24",
+    "window_start": "2020-08-24"
+  },
+  "company": "Onconova Therapeutics, Inc.",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": true,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "367fe0deeed2e1dc120b241b79701c90561cac93faf1692bf527f3bc93db57c4",
+  "promotion_blockers": [
+    "RESOLVE_CIK_AND_HISTORICAL_SECURITY_IDENTITY",
+    "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+    "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2020-08-24T07:30:00-04:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "rigosertib",
+    "blinded": null,
+    "catalyst_version_id": "50a579b2-0687-5da3-b90d-490fa7a4d584",
+    "clinical_phase": "PHASE_3",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2020-08-24T07:30:00-04:00",
+    "evidence_ids": [
+      "ef537bdf-8180-5423-a501-906c8d30888f"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "d7ab16ba-3b43-557b-a283-e071ae2405e8",
+    "indication": "higher-risk myelodysplastic syndromes",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://www.globenewswire.com/news-release/2020/08/24/2082504/0/en/Onconova-Therapeutics-Announces-Topline-Results-from-the-Pivotal-Phase-3-INSPIRE-Trial.html"
+  ],
+  "stratum": "PHASE_3_PIVOTAL",
+  "ticker": "ONTX",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-22.json"
+}

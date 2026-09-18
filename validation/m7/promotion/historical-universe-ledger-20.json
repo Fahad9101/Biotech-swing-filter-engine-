@@ -1,0 +1,212 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-15",
+  "role": "PREFREEZE_TARGETED_NEGATIVE_HISTORICAL_UNIVERSE_AND_INVESTABILITY_EVIDENCE",
+  "market_outcomes_inspected": false,
+  "cohort_frozen": false,
+  "method": {
+    "market_data_provider": "Alpaca",
+    "feed": "SIP",
+    "bars": "RAW_AS_TRADED_DAILY",
+    "corporate_actions": "EXPLICIT_SEPARATE_QUERY",
+    "price_floor_usd": 1.0,
+    "liquidity_threshold_usd": 2000000,
+    "liquidity_window_sessions": 20,
+    "market_cap_floor_usd": 50000000,
+    "minimum_valid_sessions": 60,
+    "liquidity_ambiguity_rule": "Both raw close x volume and raw VWAP x volume were evaluated. Eligibility is asserted only when both measures are on the same side of the frozen threshold.",
+    "event_bar_rule": "All six targeted-negative disclosures were pre-market; the prior complete regular session is the cutoff.",
+    "calculation_boundary": "Only sessions at or before the pre-event cutoff are used in threshold calculations. Post-event market outcomes are not selection inputs and are not persisted in this evidence ledger."
+  },
+  "rows": [
+    {
+      "candidate_id": "REG-2020-ICPT-OCA-CRL",
+      "ticker": "ICPT",
+      "event_date": "2020-06-29",
+      "first_public_timestamp": "2020-06-29T07:00:00-04:00",
+      "pre_event_cutoff_session": "2020-06-26",
+      "last_complete_pre_event_raw_close_usd": 77.49,
+      "price_floor_pass": true,
+      "liquidity_sessions": 20,
+      "median_daily_dollar_volume_close_x_volume_usd": 49379737.52,
+      "median_daily_dollar_volume_vwap_x_volume_usd": 49995399.07,
+      "liquidity_floor_pass": true,
+      "pre_event_shares_outstanding": 32853066,
+      "shares_as_of": "2019-12-31",
+      "pre_event_market_cap_proxy_usd": 2545784084.34,
+      "market_cap_floor_pass": true,
+      "valid_session_floor_pass": true,
+      "security_identity_status": "CONFIRMED_NASDAQ_LISTED_COMMON_STOCK",
+      "corporate_action_status": "2023_CASH_MERGER_IS_POST_EVENT_AND_EXCLUDED_FROM_PRE_EVENT_ELIGIBILITY",
+      "historical_universe_eligible": true,
+      "remaining_promotion_blockers": [
+        "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+        "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+      ],
+      "outcome_inspected_for_selection": false,
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1270073/000155837020001314/icpt-20191231x10k93558c.htm"
+      ]
+    },
+    {
+      "candidate_id": "REG-2020-BMRN-VALROX-CRL",
+      "ticker": "BMRN",
+      "event_date": "2020-08-19",
+      "first_public_timestamp": "2020-08-19T08:00:00-04:00",
+      "pre_event_cutoff_session": "2020-08-18",
+      "last_complete_pre_event_raw_close_usd": 118.54,
+      "price_floor_pass": true,
+      "liquidity_sessions": 20,
+      "median_daily_dollar_volume_close_x_volume_usd": 128946211.52,
+      "median_daily_dollar_volume_vwap_x_volume_usd": 128801176.33,
+      "liquidity_floor_pass": true,
+      "pre_event_shares_outstanding": 181349597,
+      "shares_as_of": "2020-07-30",
+      "pre_event_market_cap_proxy_usd": 21497181228.38,
+      "market_cap_floor_pass": true,
+      "valid_session_floor_pass": true,
+      "security_identity_status": "CONFIRMED_NASDAQ_LISTED_COMMON_STOCK",
+      "corporate_action_status": "NO_PRE_EVENT_ACTION_IDENTIFIED_THAT_BREAKS_SECURITY_CONTINUITY",
+      "historical_universe_eligible": true,
+      "remaining_promotion_blockers": [
+        "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+        "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+      ],
+      "outcome_inspected_for_selection": false,
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1048477/000104847720000023/bmrn-20200630.htm"
+      ]
+    },
+    {
+      "candidate_id": "P3-2020-CRBP-RESOLVE1",
+      "ticker": "CRBP",
+      "event_date": "2020-09-08",
+      "first_public_timestamp": "2020-09-08T07:05:00-04:00",
+      "pre_event_cutoff_session": "2020-09-04",
+      "last_complete_pre_event_raw_close_usd": 9.25,
+      "price_floor_pass": true,
+      "liquidity_sessions": 20,
+      "median_daily_dollar_volume_close_x_volume_usd": 16031170.99,
+      "median_daily_dollar_volume_vwap_x_volume_usd": 15979939.05,
+      "liquidity_floor_pass": true,
+      "pre_event_shares_outstanding": 81712134,
+      "shares_as_of": "2020-07-31",
+      "pre_event_market_cap_proxy_usd": 755837239.50,
+      "market_cap_floor_pass": true,
+      "valid_session_floor_pass": true,
+      "security_identity_status": "CONFIRMED_NASDAQ_LISTED_COMMON_STOCK",
+      "corporate_action_status": "2023_REVERSE_SPLIT_IS_POST_EVENT_AND_EXCLUDED_FROM_PRE_EVENT_ELIGIBILITY",
+      "historical_universe_eligible": true,
+      "remaining_promotion_blockers": [
+        "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+        "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE",
+        "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION"
+      ],
+      "outcome_inspected_for_selection": false,
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1595097/000149315220017022/form10-qa.htm"
+      ]
+    },
+    {
+      "candidate_id": "REG-2021-ATNX-ORALPAC-CRL",
+      "ticker": "ATNX",
+      "event_date": "2021-03-01",
+      "first_public_timestamp": "2021-03-01T07:00:00-05:00",
+      "pre_event_cutoff_session": "2021-02-26",
+      "last_complete_pre_event_raw_close_usd": 12.10,
+      "price_floor_pass": true,
+      "liquidity_sessions": 20,
+      "median_daily_dollar_volume_close_x_volume_usd": 18170306.65,
+      "median_daily_dollar_volume_vwap_x_volume_usd": 18093359.14,
+      "liquidity_floor_pass": true,
+      "pre_event_shares_outstanding": 93454700,
+      "shares_as_of": "2021-02-19",
+      "pre_event_market_cap_proxy_usd": 1130801870.00,
+      "market_cap_floor_pass": true,
+      "valid_session_floor_pass": true,
+      "security_identity_status": "CONFIRMED_NASDAQ_LISTED_COMMON_STOCK",
+      "corporate_action_status": "2023_REVERSE_SPLIT_AND_ATNX_TO_ATNXQ_NAME_CHANGE_ARE_POST_EVENT_AND_EXCLUDED_FROM_PRE_EVENT_ELIGIBILITY",
+      "historical_universe_eligible": true,
+      "remaining_promotion_blockers": [
+        "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+        "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+      ],
+      "outcome_inspected_for_selection": false,
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1300699/000156459021009879/atnx-10k_20201231.htm"
+      ]
+    },
+    {
+      "candidate_id": "REG-2021-FGEN-ROXADUSTAT-CRL",
+      "ticker": "FGEN",
+      "event_date": "2021-08-11",
+      "first_public_timestamp": "2021-08-11T07:00:00-04:00",
+      "pre_event_cutoff_session": "2021-08-10",
+      "last_complete_pre_event_raw_close_usd": 13.19,
+      "price_floor_pass": true,
+      "liquidity_sessions": 20,
+      "median_daily_dollar_volume_close_x_volume_usd": 15450344.97,
+      "median_daily_dollar_volume_vwap_x_volume_usd": 15338693.89,
+      "liquidity_floor_pass": true,
+      "pre_event_shares_outstanding": 92621941,
+      "shares_as_of": "2021-07-31",
+      "pre_event_market_cap_proxy_usd": 1221683401.79,
+      "market_cap_floor_pass": true,
+      "valid_session_floor_pass": true,
+      "security_identity_status": "CONFIRMED_NASDAQ_LISTED_COMMON_STOCK",
+      "corporate_action_status": "2025_REVERSE_SPLIT_IS_POST_EVENT_AND_EXCLUDED_FROM_PRE_EVENT_ELIGIBILITY",
+      "historical_universe_eligible": true,
+      "remaining_promotion_blockers": [
+        "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+        "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+      ],
+      "outcome_inspected_for_selection": false,
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/921299/000156459021042639/fgen-10q_20210630.htm"
+      ]
+    },
+    {
+      "candidate_id": "REG-2022-CHRS-TORIPALIMAB-CRL",
+      "ticker": "CHRS",
+      "event_date": "2022-05-02",
+      "first_public_timestamp": "2022-05-02T07:00:00-04:00",
+      "pre_event_cutoff_session": "2022-04-29",
+      "last_complete_pre_event_raw_close_usd": 9.04,
+      "price_floor_pass": true,
+      "liquidity_sessions": 20,
+      "median_daily_dollar_volume_close_x_volume_usd": 9695195.46,
+      "median_daily_dollar_volume_vwap_x_volume_usd": 9672658.28,
+      "liquidity_floor_pass": true,
+      "pre_event_shares_outstanding": 77275299,
+      "shares_as_of": "2022-01-31",
+      "pre_event_market_cap_proxy_usd": 698568702.96,
+      "market_cap_floor_pass": true,
+      "valid_session_floor_pass": true,
+      "security_identity_status": "CONFIRMED_NASDAQ_LISTED_COMMON_STOCK",
+      "corporate_action_status": "2023_STOCK_MERGER_IS_POST_EVENT_AND_EXCLUDED_FROM_PRE_EVENT_ELIGIBILITY",
+      "historical_universe_eligible": true,
+      "remaining_promotion_blockers": [
+        "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+        "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+      ],
+      "outcome_inspected_for_selection": false,
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1512762/000155837022001764/chrs-20211231x10k.htm"
+      ]
+    }
+  ],
+  "summary": {
+    "rows": 6,
+    "historical_universe_pass": 6,
+    "historical_universe_fail": 0,
+    "negative_candidates_added_to_not_yet_excluded_reserve": 6
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "acquisition_path": "validation/m7/acquisition/phase3-primary-batch-01.json",
+  "candidate_id": "P3-2018-RARE-UX007",
+  "catalyst_observation": {
+    "asset": "UX007",
+    "catalyst_type": "CLIN_P3",
+    "clinical_phase": "PHASE_3",
+    "evidence_id": "7687ca96-36be-58d5-ad89-62f755d489e4",
+    "external_event_id": "P3-2018-RARE-UX007",
+    "indication": "Glut1 deficiency syndrome with disabling movement disorders",
+    "issuer_id": "0001515673",
+    "known_at": "2018-10-26T08:00:00-04:00",
+    "source_statement": "Ultragenyx Pharmaceutical Inc. - FIRST_PUBLIC_RESULT_DISCLOSURE_CANDIDATE dated 2018-10-26.",
+    "source_tier": 5,
+    "timing_confidence": "HIGH",
+    "title": "Ultragenyx Pharmaceutical Inc. - UX007 (Glut1 deficiency syndrome with disabling movement disorders)",
+    "window_end": "2018-10-26",
+    "window_start": "2018-10-26"
+  },
+  "catalyst_version": {
+    "asset": "UX007",
+    "canonical_key": "0001515673|ux007|glut1 deficiency syndrome with disabling movement disorders|CLIN_P3",
+    "catalyst_type": "CLIN_P3",
+    "clinical_phase": "PHASE_3",
+    "conflicts": [],
+    "id": "06f508b9-c06c-5479-8e2a-d1fa5f8c37f8",
+    "indication": "Glut1 deficiency syndrome with disabling movement disorders",
+    "issuer_id": "0001515673",
+    "known_at": "2018-10-26T08:00:00-04:00",
+    "primary_evidence_id": "7687ca96-36be-58d5-ad89-62f755d489e4",
+    "resolved_at_cutoff": "2018-10-26T08:00:00-04:00",
+    "supporting_evidence_ids": [
+      "7687ca96-36be-58d5-ad89-62f755d489e4"
+    ],
+    "timing_confidence": "HIGH",
+    "title": "Ultragenyx Pharmaceutical Inc. - UX007 (Glut1 deficiency syndrome with disabling movement disorders)",
+    "version": 1,
+    "version_sha256": "19239f2840efbb9783602b6635348d8e99c630665b8e323d79293dcfd0221461",
+    "window_end": "2018-10-26",
+    "window_start": "2018-10-26"
+  },
+  "company": "Ultragenyx Pharmaceutical Inc.",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": true,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "83865f85ea6435d99e96b6b456356887891ad44cbb6c88d7025bec9d6bfc21c6",
+  "promotion_blockers": [
+    "RESOLVE_CIK_AND_HISTORICAL_SECURITY_IDENTITY",
+    "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+    "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2018-10-26T08:00:00-04:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "UX007",
+    "blinded": null,
+    "catalyst_version_id": "06f508b9-c06c-5479-8e2a-d1fa5f8c37f8",
+    "clinical_phase": "PHASE_3",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2018-10-26T08:00:00-04:00",
+    "evidence_ids": [
+      "7687ca96-36be-58d5-ad89-62f755d489e4"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "c0588072-838b-5367-839f-1498be930b88",
+    "indication": "Glut1 deficiency syndrome with disabling movement disorders",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://www.globenewswire.com/news-release/2018/10/26/1627791/0/en/ultragenyx-announces-negative-topline-results-from-phase-3-study-of-ux007-in-patients-with-glut1-ds-with-disabling-movement-disorders.html"
+  ],
+  "stratum": "PHASE_3_PIVOTAL",
+  "ticker": "RARE",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-21.json"
+}

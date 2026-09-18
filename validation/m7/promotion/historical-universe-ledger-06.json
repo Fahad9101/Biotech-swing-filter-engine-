@@ -1,0 +1,114 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-15",
+  "role": "PREFREEZE_HISTORICAL_UNIVERSE_AND_INVESTABILITY_EVIDENCE",
+  "market_outcomes_inspected": false,
+  "cohort_frozen": false,
+  "method": {
+    "market_data_provider": "Alpaca",
+    "feed": "SIP",
+    "bars": "RAW_AS_TRADED_DAILY",
+    "corporate_actions": "EXPLICIT_SEPARATE_QUERY",
+    "liquidity_check": "20 complete sessions ending at the final complete session before first public result availability; both raw close x volume and raw VWAP x volume must independently exceed the frozen $2,000,000 median threshold.",
+    "outcome_boundary": "Event-session bars are excluded for pre-market events. No post-result bar is used."
+  },
+  "rows": [
+    {
+      "candidate_id": "P3-2024-NAMS-BROOKLYN",
+      "event_date": "2024-07-29",
+      "first_public_timestamp": "2024-07-29T08:00:00-04:00",
+      "pre_event_cutoff_session": "2024-07-26",
+      "ticker": "NAMS",
+      "source_population_exchange": "Nasdaq Global Market",
+      "security_eligibility_pass": true,
+      "last_complete_pre_event_raw_close_usd": 18.86,
+      "price_floor_pass": true,
+      "liquidity_window_start": "2024-06-28",
+      "liquidity_window_end": "2024-07-26",
+      "liquidity_sessions": 20,
+      "median_daily_dollar_volume_close_x_volume_usd": 2910395.015,
+      "median_daily_dollar_volume_vwap_x_volume_usd": 2914553.8615655,
+      "liquidity_floor_pass": true,
+      "shares_outstanding": 89976538,
+      "shares_source_date": "2024-05-03",
+      "shares_source_filed_before_event": true,
+      "pre_event_market_cap_proxy_usd": 1696957506.68,
+      "market_cap_formula": "last_complete_pre_event_raw_close_x_latest_public_pre_event_common_shares_outstanding",
+      "market_cap_floor_pass": true,
+      "valid_session_floor_evidence": "Alpaca SIP returns 82 complete NAMS sessions from 2024-04-01 through 2024-07-26 alone, independently exceeding the frozen >=60-session minimum. The NAMS public security originated in the completed 2022 business combination and predates this shorter proof window.",
+      "valid_session_floor_pass": true,
+      "corporate_actions_through_cutoff": [
+        {
+          "type": "name_change",
+          "old_symbol": "FLAC",
+          "new_symbol": "NAMS",
+          "process_date": "2022-12-20"
+        }
+      ],
+      "corporate_action_adjustment_required_for_liquidity_window": false,
+      "continuity_status": "POST_BUSINESS_COMBINATION_NAMS_SECURITY_CURRENTLY_REPORTING_NON_SHELL; PRE_EVENT_FORM_10_Q_IDENTIFIES_CONTINUING_OPERATIONS_AND_NO_BANKRUPTCY_OR_UNRESOLVED_GOING_CONCERN_EVENT_WAS_IDENTIFIED",
+      "continuity_floor_pass": true,
+      "historical_universe_eligible": true,
+      "outcome_inspected_for_selection": false,
+      "sec_evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1936258/000095017024055767/nams-20240331.htm",
+        "https://www.sec.gov/Archives/edgar/data/1936258/000095017024021668/nams-20231231.htm",
+        "https://www.sec.gov/Archives/edgar/data/1936258/000119312523161639/d486671d424b3.htm"
+      ],
+      "notes": "The May 3 share count was public before the July 29 catalyst and places market capitalization far above the frozen $50 million floor."
+    },
+    {
+      "candidate_id": "P3-2024-NAMS-BROADWAY",
+      "event_date": "2024-12-10",
+      "first_public_timestamp": "2024-12-10T07:00:00-05:00",
+      "pre_event_cutoff_session": "2024-12-09",
+      "ticker": "NAMS",
+      "source_population_exchange": "Nasdaq Global Market",
+      "security_eligibility_pass": true,
+      "last_complete_pre_event_raw_close_usd": 18.52,
+      "price_floor_pass": true,
+      "liquidity_window_start": "2024-11-11",
+      "liquidity_window_end": "2024-12-09",
+      "liquidity_sessions": 20,
+      "median_daily_dollar_volume_close_x_volume_usd": 13592519.415,
+      "median_daily_dollar_volume_vwap_x_volume_usd": 13560373.448415,
+      "liquidity_floor_pass": true,
+      "shares_outstanding": 92385872,
+      "shares_source_date": "2024-10-31",
+      "shares_source_filed_at": "2024-11-06T08:00:20Z",
+      "shares_source_filed_before_event": true,
+      "pre_event_market_cap_proxy_usd": 1710986349.44,
+      "market_cap_formula": "last_complete_pre_event_raw_close_x_latest_public_pre_event_common_shares_outstanding",
+      "market_cap_floor_pass": true,
+      "valid_session_floor_evidence": "The same NAMS security already had 82 complete Alpaca SIP sessions from 2024-04-01 through 2024-07-26 and remained continuously listed through December 9, so the >=60-session minimum is independently satisfied before the December event.",
+      "valid_session_floor_pass": true,
+      "corporate_actions_through_cutoff": [
+        {
+          "type": "name_change",
+          "old_symbol": "FLAC",
+          "new_symbol": "NAMS",
+          "process_date": "2022-12-20"
+        }
+      ],
+      "corporate_action_adjustment_required_for_liquidity_window": false,
+      "continuity_status": "CURRENT_PERIODIC_REPORTING_NON_SHELL; NOVEMBER_6_2024_FORM_10_Q_ACCEPTED_BEFORE_EVENT; NO_BANKRUPTCY_OR_UNRESOLVED_GOING_CONCERN_EVENT_IDENTIFIED_PRE_EVENT",
+      "continuity_floor_pass": true,
+      "historical_universe_eligible": true,
+      "outcome_inspected_for_selection": false,
+      "sec_evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1936258/000095017024121828/nams-20240930.htm",
+        "https://www.sec.gov/Archives/edgar/data/1936258/0000950170-24-121828-index.htm",
+        "https://www.sec.gov/Archives/edgar/data/1936258/000095017024021668/nams-20231231.htm"
+      ],
+      "notes": "The October 31 share count was disclosed in the November 6 10-Q, more than one month before the event, and market capitalization remains far above the frozen floor."
+    }
+  ],
+  "summary": {
+    "evaluated": 2,
+    "eligible": 2,
+    "excluded": 0,
+    "pending": 0
+  }
+}

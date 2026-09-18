@@ -1,0 +1,97 @@
+{
+  "acquisition_path": "validation/m7/acquisition/early-clinical-primary-batch-01.json",
+  "candidate_id": "EC-2019-WVE-SUVODIRSEN",
+  "catalyst_observation": {
+    "asset": "suvodirsen",
+    "catalyst_type": "CLIN_P1",
+    "clinical_phase": "PHASE_1",
+    "evidence_id": "8dbc0a58-e9a1-53c5-a7a2-3533d7f2d082",
+    "external_event_id": "EC-2019-WVE-SUVODIRSEN",
+    "indication": "Duchenne muscular dystrophy",
+    "issuer_id": "0001631574",
+    "known_at": "2019-12-16T07:00:00-05:00",
+    "source_statement": "Wave Life Sciences Ltd. - FIRST_PUBLIC_RESULT_DISCLOSURE_CANDIDATE dated 2019-12-16.",
+    "source_tier": 5,
+    "timing_confidence": "HIGH",
+    "title": "Wave Life Sciences Ltd. - suvodirsen (Duchenne muscular dystrophy)",
+    "window_end": "2019-12-16",
+    "window_start": "2019-12-16"
+  },
+  "catalyst_version": {
+    "asset": "suvodirsen",
+    "canonical_key": "0001631574|suvodirsen|duchenne muscular dystrophy|CLIN_P1",
+    "catalyst_type": "CLIN_P1",
+    "clinical_phase": "PHASE_1",
+    "conflicts": [],
+    "id": "0a0674eb-2b47-56af-a239-55d8d0be1f23",
+    "indication": "Duchenne muscular dystrophy",
+    "issuer_id": "0001631574",
+    "known_at": "2019-12-16T07:00:00-05:00",
+    "primary_evidence_id": "8dbc0a58-e9a1-53c5-a7a2-3533d7f2d082",
+    "resolved_at_cutoff": "2019-12-16T07:00:00-05:00",
+    "supporting_evidence_ids": [
+      "8dbc0a58-e9a1-53c5-a7a2-3533d7f2d082"
+    ],
+    "timing_confidence": "HIGH",
+    "title": "Wave Life Sciences Ltd. - suvodirsen (Duchenne muscular dystrophy)",
+    "version": 1,
+    "version_sha256": "c4f0a941bef3161148041b8ab202929538076b4053febd39f2867aa1144320c4",
+    "window_end": "2019-12-16",
+    "window_start": "2019-12-16"
+  },
+  "company": "Wave Life Sciences Ltd.",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": true,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "6e91f905e9abcf4ac502fc1647f5b94ab2b7aaa889ae08708468dc51f4ac37da",
+  "promotion_blockers": [
+    "RESOLVE_CIK_AND_HISTORICAL_SECURITY_IDENTITY",
+    "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+    "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2019-12-16T07:00:00-05:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "suvodirsen",
+    "blinded": null,
+    "catalyst_version_id": "0a0674eb-2b47-56af-a239-55d8d0be1f23",
+    "clinical_phase": "PHASE_1",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2019-12-16T07:00:00-05:00",
+    "evidence_ids": [
+      "8dbc0a58-e9a1-53c5-a7a2-3533d7f2d082"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "53537ec9-a3ce-58d2-8661-22cc3f9364cb",
+    "indication": "Duchenne muscular dystrophy",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://www.globenewswire.com/news-release/2019/12/16/1960830/0/en/Wave-Life-Sciences-Announces-Discontinuation-of-Suvodirsen-Development-for-Duchenne-Muscular-Dystrophy.html"
+  ],
+  "stratum": "EARLY_CLINICAL",
+  "ticker": "WVE",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-27.json"
+}

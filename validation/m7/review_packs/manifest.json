@@ -1,0 +1,1082 @@
+{
+  "deferred": [
+    {
+      "candidate_id": "P2-2022-CINC-HALO",
+      "reason": "P2-2022-CINC-HALO is missing required field(s) ['indication', 'proposed_catalyst_type'] in validation/m7/promotion/targeted-single-asset-replacement-03.json; cannot build a review pack without fabricating evidence the source does not assert"
+    },
+    {
+      "candidate_id": "P2-2023-AKRO-SYMMETRY-COHORT-D",
+      "reason": "P2-2023-AKRO-SYMMETRY-COHORT-D is missing required field(s) ['indication', 'proposed_catalyst_type'] in validation/m7/promotion/targeted-single-asset-replacement-03.json; cannot build a review pack without fabricating evidence the source does not assert"
+    },
+    {
+      "candidate_id": "P2-2023-AKRO-SYMMETRY-MAIN",
+      "reason": "P2-2023-AKRO-SYMMETRY-MAIN is missing required field(s) ['indication', 'proposed_catalyst_type'] in validation/m7/promotion/targeted-single-asset-replacement-03.json; cannot build a review pack without fabricating evidence the source does not assert"
+    },
+    {
+      "candidate_id": "P2-2023-MLTX-ARGO",
+      "reason": "P2-2023-MLTX-ARGO is missing required field(s) ['indication', 'proposed_catalyst_type'] in validation/m7/promotion/targeted-single-asset-replacement-03.json; cannot build a review pack without fabricating evidence the source does not assert"
+    },
+    {
+      "candidate_id": "P2-2023-MLTX-MIRA",
+      "reason": "universe eligibility used a conservative cutoff assumption but the exact first-public-disclosure timestamp is not yet resolved (RESOLVE_EXACT_FIRST_PUBLIC_TIMESTAMP still open) - packing a review pack on an unresolved point-in-time anchor would risk fabricating precision that does not exist yet"
+    },
+    {
+      "candidate_id": "REG-2022-AMLX-RELYVRIO",
+      "reason": "universe eligibility used a conservative cutoff assumption but the exact first-public-disclosure timestamp is not yet resolved (RESOLVE_EXACT_FIRST_PUBLIC_TIMESTAMP still open) - packing a review pack on an unresolved point-in-time anchor would risk fabricating precision that does not exist yet"
+    }
+  ],
+  "deferred_count": 6,
+  "format_version": "1.0",
+  "generated_at": "2026-09-16T00:00:00+00:00",
+  "manifest_sha256": "c415896a7f2d594668ac83525bb2735b1ff2f573f98509aabd76bd3fdd535649",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "pack_count": 149,
+  "packs": [
+    {
+      "candidate_id": "CO-2018-ZIOP-ASCO",
+      "pack_path": "validation/m7/review_packs/CO-2018-ZIOP-ASCO.json",
+      "pack_sha256": "cb77c7d149672cbb0d2721e94902dca843354be9f2e807d5bdabbf54af94277c",
+      "stratum": "CONFERENCE_OTHER",
+      "ticker": "ZIOP"
+    },
+    {
+      "candidate_id": "CO-2019-BGNE-ZANUASH",
+      "pack_path": "validation/m7/review_packs/CO-2019-BGNE-ZANUASH.json",
+      "pack_sha256": "88e318ed447254ba692ad6dc330216bf9fb589af584cf05e0b7ad9ff2882c521",
+      "stratum": "CONFERENCE_OTHER",
+      "ticker": "BGNE"
+    },
+    {
+      "candidate_id": "CO-2019-CNST-MANIFEST",
+      "pack_path": "validation/m7/review_packs/CO-2019-CNST-MANIFEST.json",
+      "pack_sha256": "ce8c7fd2aad75dbc5811e191e2926013f97c48ad5d58d4ca72bdb9d341d3f9e0",
+      "stratum": "CONFERENCE_OTHER",
+      "ticker": "CNST"
+    },
+    {
+      "candidate_id": "CO-2020-ONCT-CIRLLASH",
+      "pack_path": "validation/m7/review_packs/CO-2020-ONCT-CIRLLASH.json",
+      "pack_sha256": "18510bc200bcf8b2a4ea3347bb50f805a722f38d666b1142269becf319faae74",
+      "stratum": "CONFERENCE_OTHER",
+      "ticker": "ONCT"
+    },
+    {
+      "candidate_id": "CO-2020-TRIL-TTI622ASH",
+      "pack_path": "validation/m7/review_packs/CO-2020-TRIL-TTI622ASH.json",
+      "pack_sha256": "9101ca0cca9b6c7748c55ad327235fa180b90746495f3a3a9d840275286cd109",
+      "stratum": "CONFERENCE_OTHER",
+      "ticker": "TRIL"
+    },
+    {
+      "candidate_id": "CO-2021-HARP-HPN424ASCO",
+      "pack_path": "validation/m7/review_packs/CO-2021-HARP-HPN424ASCO.json",
+      "pack_sha256": "0d8115d361d25264fd03b374e0d406f00eb6a2cda3a9acbce7d3b19fb04e4c8c",
+      "stratum": "CONFERENCE_OTHER",
+      "ticker": "HARP"
+    },
+    {
+      "candidate_id": "CO-2021-IGMS-IGM2323ASH",
+      "pack_path": "validation/m7/review_packs/CO-2021-IGMS-IGM2323ASH.json",
+      "pack_sha256": "035ada21a6b266dddeedcadf44cafe7773217072120115aafea09ac9dcf1a2e7",
+      "stratum": "CONFERENCE_OTHER",
+      "ticker": "IGMS"
+    },
+    {
+      "candidate_id": "CO-2021-IOVA-LIFILEUCELASCO",
+      "pack_path": "validation/m7/review_packs/CO-2021-IOVA-LIFILEUCELASCO.json",
+      "pack_sha256": "c92bf22d03ece4eaf669912750d04e50fca0ad182ea385bf61ae83209ce6cac9",
+      "stratum": "CONFERENCE_OTHER",
+      "ticker": "IOVA"
+    },
+    {
+      "candidate_id": "CO-2022-KROS-KER050ASH",
+      "pack_path": "validation/m7/review_packs/CO-2022-KROS-KER050ASH.json",
+      "pack_sha256": "94a7396ccad248ca1f04ba2ceea44e6c4ab063b57a00a7184b487e6920736df7",
+      "stratum": "CONFERENCE_OTHER",
+      "ticker": "KROS"
+    },
+    {
+      "candidate_id": "CO-2024-AUTL-OBECELASH",
+      "pack_path": "validation/m7/review_packs/CO-2024-AUTL-OBECELASH.json",
+      "pack_sha256": "eea793788c6507286cb6f051f812511c2bf28c825ef6020ce03e7ba7d486fc2c",
+      "stratum": "CONFERENCE_OTHER",
+      "ticker": "AUTL"
+    },
+    {
+      "candidate_id": "CO-2024-GMAB-TVASCO",
+      "pack_path": "validation/m7/review_packs/CO-2024-GMAB-TVASCO.json",
+      "pack_sha256": "29cd9ea0780aa4c0b1d5f8c7e16f977751ec8f7674f323b455741299f6649056",
+      "stratum": "CONFERENCE_OTHER",
+      "ticker": "GMAB"
+    },
+    {
+      "candidate_id": "CO-2024-IRON-DISC0974ASH",
+      "pack_path": "validation/m7/review_packs/CO-2024-IRON-DISC0974ASH.json",
+      "pack_sha256": "ae399745586e5624fd9eb3fa7aab311b531ba3d1f513ce55ec04bd0d15e21351",
+      "stratum": "CONFERENCE_OTHER",
+      "ticker": "IRON"
+    },
+    {
+      "candidate_id": "CO-2024-KROS-ELRITERCEPTASH",
+      "pack_path": "validation/m7/review_packs/CO-2024-KROS-ELRITERCEPTASH.json",
+      "pack_sha256": "ab4d7eaf665405d4a008051874c1af17a89e6794bf856be6b6366fed2ca32f0c",
+      "stratum": "CONFERENCE_OTHER",
+      "ticker": "KROS"
+    },
+    {
+      "candidate_id": "CO-2024-NRIX-NX5948ASH",
+      "pack_path": "validation/m7/review_packs/CO-2024-NRIX-NX5948ASH.json",
+      "pack_sha256": "3664cbeb35b7167ea73b502d8ff35f1d2f153a5cfebda4db6e0fa8e61c1d220c",
+      "stratum": "CONFERENCE_OTHER",
+      "ticker": "NRIX"
+    },
+    {
+      "candidate_id": "CO-2025-AUTL-CARLYSLEASH",
+      "pack_path": "validation/m7/review_packs/CO-2025-AUTL-CARLYSLEASH.json",
+      "pack_sha256": "1b0b79d4f07f19d808de65c6dd4c1daad368fb046948f93359b39a6ac5913047",
+      "stratum": "CONFERENCE_OTHER",
+      "ticker": "AUTL"
+    },
+    {
+      "candidate_id": "CO-2025-CRVS-SOQUELITINIBASH",
+      "pack_path": "validation/m7/review_packs/CO-2025-CRVS-SOQUELITINIBASH.json",
+      "pack_sha256": "bddab301106f8ee33b7f8193ca6330ead3b0d19c13e0e66abdb31bbddacf6be2",
+      "stratum": "CONFERENCE_OTHER",
+      "ticker": "CRVS"
+    },
+    {
+      "candidate_id": "CO-2025-GERN-RYTELOASH",
+      "pack_path": "validation/m7/review_packs/CO-2025-GERN-RYTELOASH.json",
+      "pack_sha256": "9a3f55a4cd2c2781825ef1e139aabe2c9b923dfb1b18e80cabd99ecb8e524ff7",
+      "stratum": "CONFERENCE_OTHER",
+      "ticker": "GERN"
+    },
+    {
+      "candidate_id": "EC-2019-WVE-SUVODIRSEN",
+      "pack_path": "validation/m7/review_packs/EC-2019-WVE-SUVODIRSEN.json",
+      "pack_sha256": "6e91f905e9abcf4ac502fc1647f5b94ab2b7aaa889ae08708468dc51f4ac37da",
+      "stratum": "EARLY_CLINICAL",
+      "ticker": "WVE"
+    },
+    {
+      "candidate_id": "EC-2020-CRSP-CTX001",
+      "pack_path": "validation/m7/review_packs/EC-2020-CRSP-CTX001.json",
+      "pack_sha256": "6b214ae5a650db7b3bedd846febcd96dc1e0194c9e5b4476b009195826f97e3c",
+      "stratum": "EARLY_CLINICAL",
+      "ticker": "CRSP"
+    },
+    {
+      "candidate_id": "EC-2021-EDIT-EDIT101",
+      "pack_path": "validation/m7/review_packs/EC-2021-EDIT-EDIT101.json",
+      "pack_sha256": "131b3cf57ffaeeb64422fb7c948ce12aceabf2b40b5ff42ca3cfe4eeecd04b1e",
+      "stratum": "EARLY_CLINICAL",
+      "ticker": "EDIT"
+    },
+    {
+      "candidate_id": "EC-2021-FATE-FT516FT538",
+      "pack_path": "validation/m7/review_packs/EC-2021-FATE-FT516FT538.json",
+      "pack_sha256": "d9378e32ce1dac69a0dd3ebed305d1a30ff29dcd8d4ef756dc60643e996b52c1",
+      "stratum": "EARLY_CLINICAL",
+      "ticker": "FATE"
+    },
+    {
+      "candidate_id": "EC-2021-KURA-KO539-HOLD",
+      "pack_path": "validation/m7/review_packs/EC-2021-KURA-KO539-HOLD.json",
+      "pack_sha256": "ae760bade09edb1460522f87279a19c689e61fb8a8dcd038dbe1daefc673a7a9",
+      "stratum": "EARLY_CLINICAL",
+      "ticker": "KURA"
+    },
+    {
+      "candidate_id": "EC-2021-NTLA-NTLA2001",
+      "pack_path": "validation/m7/review_packs/EC-2021-NTLA-NTLA2001.json",
+      "pack_sha256": "5c116fb5c637cf54796517b3c2720d512014bc9ad8a0a794f6c24bf04a7bc1e6",
+      "stratum": "EARLY_CLINICAL",
+      "ticker": "NTLA"
+    },
+    {
+      "candidate_id": "EC-2021-RUBY-RTX240",
+      "pack_path": "validation/m7/review_packs/EC-2021-RUBY-RTX240.json",
+      "pack_sha256": "f0a20dd1722f7e11fa4dbc6a4ff860576138178821a804177968270862f11f78",
+      "stratum": "EARLY_CLINICAL",
+      "ticker": "RUBY"
+    },
+    {
+      "candidate_id": "EC-2021-SGTX-SIG001",
+      "pack_path": "validation/m7/review_packs/EC-2021-SGTX-SIG001.json",
+      "pack_sha256": "6272c6295cda8051f682494f111f9f2aa9a412558bae269a7012e1400ef5b190",
+      "stratum": "EARLY_CLINICAL",
+      "ticker": "SGTX"
+    },
+    {
+      "candidate_id": "EC-2021-TPTX-TPX0046",
+      "pack_path": "validation/m7/review_packs/EC-2021-TPTX-TPX0046.json",
+      "pack_sha256": "3c9e476625d3116db90af17646e6fd0981fd33fac5b6f041aed4086bf6104c60",
+      "stratum": "EARLY_CLINICAL",
+      "ticker": "TPTX"
+    },
+    {
+      "candidate_id": "EC-2022-ALEC-AL101",
+      "pack_path": "validation/m7/review_packs/EC-2022-ALEC-AL101.json",
+      "pack_sha256": "67d10d69575b221395f313b489f173ed808182d90efdbdbedd89e5cdca0c1ef9",
+      "stratum": "EARLY_CLINICAL",
+      "ticker": "ALEC"
+    },
+    {
+      "candidate_id": "EC-2022-AVXL-ANAVEX371",
+      "pack_path": "validation/m7/review_packs/EC-2022-AVXL-ANAVEX371.json",
+      "pack_sha256": "a2f94f6d6f175c93a87f0333080681c116eda2b898ab01e383863b6da2b99b8a",
+      "stratum": "EARLY_CLINICAL",
+      "ticker": "AVXL"
+    },
+    {
+      "candidate_id": "EC-2022-VTYX-VTX958",
+      "pack_path": "validation/m7/review_packs/EC-2022-VTYX-VTX958.json",
+      "pack_sha256": "038ccc0c7ce260d8a0702c6f576b4859d5272ced0cbd3d5234ec66a80bf4ed94",
+      "stratum": "EARLY_CLINICAL",
+      "ticker": "VTYX"
+    },
+    {
+      "candidate_id": "EC-2023-IMTX-IMA203",
+      "pack_path": "validation/m7/review_packs/EC-2023-IMTX-IMA203.json",
+      "pack_sha256": "57267445eb9c693bf70cde5823824fea12c46f7a7328adbfe9975507342e0cb3",
+      "stratum": "EARLY_CLINICAL",
+      "ticker": "IMTX"
+    },
+    {
+      "candidate_id": "EC-2024-AVTE-IMPAHCT-MISS",
+      "pack_path": "validation/m7/review_packs/EC-2024-AVTE-IMPAHCT-MISS.json",
+      "pack_sha256": "4e5f8e3b4c1d400b3412be1cbea81d9be1310d72d049262a6c61a839bed3f3af",
+      "stratum": "EARLY_CLINICAL",
+      "ticker": "AVTE"
+    },
+    {
+      "candidate_id": "EC-2024-CABA-CABA201",
+      "pack_path": "validation/m7/review_packs/EC-2024-CABA-CABA201.json",
+      "pack_sha256": "a2dbd2e0000f5946d398cc6b4969a3f790bae7eab9a89f921aa163666c8713a5",
+      "stratum": "EARLY_CLINICAL",
+      "ticker": "CABA"
+    },
+    {
+      "candidate_id": "EC-2024-CHRS-CHS114",
+      "pack_path": "validation/m7/review_packs/EC-2024-CHRS-CHS114.json",
+      "pack_sha256": "54f63898b64ba6157373c303bef7d199c45054e420756a19776aa4a1a2c15cc5",
+      "stratum": "EARLY_CLINICAL",
+      "ticker": "CHRS"
+    },
+    {
+      "candidate_id": "EC-2024-TSHA-TSHA102",
+      "pack_path": "validation/m7/review_packs/EC-2024-TSHA-TSHA102.json",
+      "pack_sha256": "edc7bd8426366835e6e4036b7c94164dee52777e4dcdf82a51ee6938c7253e7e",
+      "stratum": "EARLY_CLINICAL",
+      "ticker": "TSHA"
+    },
+    {
+      "candidate_id": "EC-2025-MRSN-XMT1660",
+      "pack_path": "validation/m7/review_packs/EC-2025-MRSN-XMT1660.json",
+      "pack_sha256": "cd0fa43ca08e3761df5170f74341869e48e4a5465c8b091fd63bb9fe1f7ad25e",
+      "stratum": "EARLY_CLINICAL",
+      "ticker": "MRSN"
+    },
+    {
+      "candidate_id": "EC-2025-MTSR-MET233I",
+      "pack_path": "validation/m7/review_packs/EC-2025-MTSR-MET233I.json",
+      "pack_sha256": "29b3f3545cfc679f27ce4650bd16e2f976a6994c37f7c4ed06206f341da1cee7",
+      "stratum": "EARLY_CLINICAL",
+      "ticker": "MTSR"
+    },
+    {
+      "candidate_id": "NEG-P2-2018-IDRA-IMO8400",
+      "pack_path": "validation/m7/review_packs/NEG-P2-2018-IDRA-IMO8400.json",
+      "pack_sha256": "cda557b53ba12c103bc943471b93227c93cc88378ceb5e70970dabb81a2fa7cd",
+      "stratum": "PHASE_2_POC",
+      "ticker": "IDRA"
+    },
+    {
+      "candidate_id": "NEG-P2-2019-APTX-NYX2925",
+      "pack_path": "validation/m7/review_packs/NEG-P2-2019-APTX-NYX2925.json",
+      "pack_sha256": "157d0cf0d6451ac23e529c19535ffc4345d21d3b9f0e1ffd0f678d1b4b158908",
+      "stratum": "PHASE_2_POC",
+      "ticker": "APTX"
+    },
+    {
+      "candidate_id": "NEG-P2-2021-ANAB-POPLAR",
+      "pack_path": "validation/m7/review_packs/NEG-P2-2021-ANAB-POPLAR.json",
+      "pack_sha256": "866a9b26598acc00b24c9f456d5dad0447bd691500da14a3d38a8e162317bc23",
+      "stratum": "PHASE_2_POC",
+      "ticker": "ANAB"
+    },
+    {
+      "candidate_id": "NEG-P2-2022-NGM-CATALINA",
+      "pack_path": "validation/m7/review_packs/NEG-P2-2022-NGM-CATALINA.json",
+      "pack_sha256": "e5e602213a906ef9f75e948d0ca0d884a2e2d9931ee9b78a2c4f62b03a8e07c5",
+      "stratum": "PHASE_2_POC",
+      "ticker": "NGM"
+    },
+    {
+      "candidate_id": "NEG-P2-2024-EYPT-PAVIA",
+      "pack_path": "validation/m7/review_packs/NEG-P2-2024-EYPT-PAVIA.json",
+      "pack_sha256": "bad71c9b11e796899d8d7802f5ae2d6b96b4a2c7e356aeb10619246edd1150aa",
+      "stratum": "PHASE_2_POC",
+      "ticker": "EYPT"
+    },
+    {
+      "candidate_id": "NEG-P2-2024-SAGE-LIGHTWAVE",
+      "pack_path": "validation/m7/review_packs/NEG-P2-2024-SAGE-LIGHTWAVE.json",
+      "pack_sha256": "153de614a578082ec02f4dae6b9f2500e1b73e5553291c01fffc1290601cde12",
+      "stratum": "PHASE_2_POC",
+      "ticker": "SAGE"
+    },
+    {
+      "candidate_id": "NEG-P2-2024-SAGE-PRECEDENT",
+      "pack_path": "validation/m7/review_packs/NEG-P2-2024-SAGE-PRECEDENT.json",
+      "pack_sha256": "6114fbcdf7fccea2071eff1688518974d38be9f3391a89acd6709ffe9f7ef025",
+      "stratum": "PHASE_2_POC",
+      "ticker": "SAGE"
+    },
+    {
+      "candidate_id": "NEG-P3-2020-BPMC-VOYAGER",
+      "pack_path": "validation/m7/review_packs/NEG-P3-2020-BPMC-VOYAGER.json",
+      "pack_sha256": "4147abcf1f76c32926cc98eb556b8a3e7e37133642bb81019955384559e0d462",
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "BPMC"
+    },
+    {
+      "candidate_id": "NEG-P3-2021-DCPH-INTRIGUE",
+      "pack_path": "validation/m7/review_packs/NEG-P3-2021-DCPH-INTRIGUE.json",
+      "pack_sha256": "7f3c8130b645506281cba4b636ef124432defd3c5a4cce12cf4f1428ab581b47",
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "DCPH"
+    },
+    {
+      "candidate_id": "NEG-P3-2022-NKTR-PIVOTIO001",
+      "pack_path": "validation/m7/review_packs/NEG-P3-2022-NKTR-PIVOTIO001.json",
+      "pack_sha256": "1929d1b277b75bc0d3ad2813460cc28b4cf4f0c8757d8278051d9973c1ada899",
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "NKTR"
+    },
+    {
+      "candidate_id": "NEG-P3-2023-KOD-GLEAMGLIMMER",
+      "pack_path": "validation/m7/review_packs/NEG-P3-2023-KOD-GLEAMGLIMMER.json",
+      "pack_sha256": "996dd1f165e1832a12e2e2b2a9c2e0472285859343ce22e0b09833cc9ea7b812",
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "KOD"
+    },
+    {
+      "candidate_id": "NEG-P3-2023-MRTX-SAPPHIRE",
+      "pack_path": "validation/m7/review_packs/NEG-P3-2023-MRTX-SAPPHIRE.json",
+      "pack_sha256": "51fa1cfc49a2be7765f512a557292c06bc415481f53468e6e9087fa3ad1666cb",
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "MRTX"
+    },
+    {
+      "candidate_id": "NEG-P3-2024-AMLX-PHOENIX",
+      "pack_path": "validation/m7/review_packs/NEG-P3-2024-AMLX-PHOENIX.json",
+      "pack_sha256": "32335c5e7fc90e51cd1009808ae045f3b14aa1d6f89ad330035b4c20ddbf567c",
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "AMLX"
+    },
+    {
+      "candidate_id": "P2-2018-BIIB-BAN2401",
+      "pack_path": "validation/m7/review_packs/P2-2018-BIIB-BAN2401.json",
+      "pack_sha256": "9f6f33530f32f0c0dea12ab94e3e1f42870a08d429d6f53708e48c9df2c9a2fa",
+      "stratum": "PHASE_2_POC",
+      "ticker": "BIIB"
+    },
+    {
+      "candidate_id": "P2-2018-ESPR-BA-PCSK9",
+      "pack_path": "validation/m7/review_packs/P2-2018-ESPR-BA-PCSK9.json",
+      "pack_sha256": "8fea93c504551dd1271e407e23ab708c28f0f40039d2ba4231f764b49455a3d0",
+      "stratum": "PHASE_2_POC",
+      "ticker": "ESPR"
+    },
+    {
+      "candidate_id": "P2-2018-GWPH-GWP42006",
+      "pack_path": "validation/m7/review_packs/P2-2018-GWPH-GWP42006.json",
+      "pack_sha256": "6083eda0854d5cfd4313368ba7daaa4339e24915a7671e58f0087ada2a81bc61",
+      "stratum": "PHASE_2_POC",
+      "ticker": "GWPH"
+    },
+    {
+      "candidate_id": "P2-2019-AGIO-DRIVEPK",
+      "pack_path": "validation/m7/review_packs/P2-2019-AGIO-DRIVEPK.json",
+      "pack_sha256": "c3d9a0c48dc4af5f9f4bc7341a286d921970c0d69514165568f4a11d36e6f35b",
+      "stratum": "PHASE_2_POC",
+      "ticker": "AGIO"
+    },
+    {
+      "candidate_id": "P2-2019-AXSM-AXS05-SMOKING",
+      "pack_path": "validation/m7/review_packs/P2-2019-AXSM-AXS05-SMOKING.json",
+      "pack_sha256": "54f87ab1028525b4e9ebf07b37d4c8e6a7aec7c94e150caf6fb038aac2f0f855",
+      "stratum": "PHASE_2_POC",
+      "ticker": "AXSM"
+    },
+    {
+      "candidate_id": "P2-2019-BIIB-LILAC",
+      "pack_path": "validation/m7/review_packs/P2-2019-BIIB-LILAC.json",
+      "pack_sha256": "c454fd631ffb4e78d5ccb4c159f38b4a309317f8e66a06874ab14f19f46852cc",
+      "stratum": "PHASE_2_POC",
+      "ticker": "BIIB"
+    },
+    {
+      "candidate_id": "P2-2019-MDGL-RESMETIROM",
+      "pack_path": "validation/m7/review_packs/P2-2019-MDGL-RESMETIROM.json",
+      "pack_sha256": "bcdf628d6a9c50796f7e66434f22d6a37ce1d7d311116595f9fbb8196a5fa3dc",
+      "stratum": "PHASE_2_POC",
+      "ticker": "MDGL"
+    },
+    {
+      "candidate_id": "P2-2019-RETA-MOXIE",
+      "pack_path": "validation/m7/review_packs/P2-2019-RETA-MOXIE.json",
+      "pack_sha256": "d774bf313061587a1d160596ba4ad0c7ac6accf698decbfcccbc6f966a4a0c7a",
+      "stratum": "PHASE_2_POC",
+      "ticker": "RETA"
+    },
+    {
+      "candidate_id": "P2-2019-TGTX-UNITYNHL",
+      "pack_path": "validation/m7/review_packs/P2-2019-TGTX-UNITYNHL.json",
+      "pack_sha256": "b919c94309eed3688b0f97fbd8717f4538193752bab4d643e8222258dffb02ee",
+      "stratum": "PHASE_2_POC",
+      "ticker": "TGTX"
+    },
+    {
+      "candidate_id": "P2-2020-CRNX-ACROBAT",
+      "pack_path": "validation/m7/review_packs/P2-2020-CRNX-ACROBAT.json",
+      "pack_sha256": "57b1603e4a24a4c1fbe23f72f649373eb8ab7739fd1d8e1db7480b67194938bc",
+      "stratum": "PHASE_2_POC",
+      "ticker": "CRNX"
+    },
+    {
+      "candidate_id": "P2-2021-BIIB-CONVEY",
+      "pack_path": "validation/m7/review_packs/P2-2021-BIIB-CONVEY.json",
+      "pack_sha256": "378c4e557be28748122034c2a7243d7e61879ad6dc9cb3f715d7129fbe3e270e",
+      "stratum": "PHASE_2_POC",
+      "ticker": "BIIB"
+    },
+    {
+      "candidate_id": "P2-2021-BIIB-TANGO",
+      "pack_path": "validation/m7/review_packs/P2-2021-BIIB-TANGO.json",
+      "pack_sha256": "bf45b28104cfd6bcdb97c64f9416ff27a9ab5321bca6c72da28c414b1b438943",
+      "stratum": "PHASE_2_POC",
+      "ticker": "BIIB"
+    },
+    {
+      "candidate_id": "P2-2021-GHRS-GH001",
+      "pack_path": "validation/m7/review_packs/P2-2021-GHRS-GH001.json",
+      "pack_sha256": "b005c420161c6436ac565d36689a45130824fb48321d77d3b716adb711ccd0df",
+      "stratum": "PHASE_2_POC",
+      "ticker": "GHRS"
+    },
+    {
+      "candidate_id": "P2-2022-AKRO-HARMONY",
+      "pack_path": "validation/m7/review_packs/P2-2022-AKRO-HARMONY.json",
+      "pack_sha256": "2e9ba004dd4616e6f80266721777568cdb8bac08ccb287c0e2212a4965b278b0",
+      "stratum": "PHASE_2_POC",
+      "ticker": "AKRO"
+    },
+    {
+      "candidate_id": "P2-2022-CINC-BRIGHTN",
+      "pack_path": "validation/m7/review_packs/P2-2022-CINC-BRIGHTN.json",
+      "pack_sha256": "c9964346381fce1718efc434222c121079945a2a44dbe907ccaffeead6f24f57",
+      "stratum": "PHASE_2_POC",
+      "ticker": "CINC"
+    },
+    {
+      "candidate_id": "P2-2023-ALNY-KARDIA1",
+      "pack_path": "validation/m7/review_packs/P2-2023-ALNY-KARDIA1.json",
+      "pack_sha256": "bc7fd161bde4684073e9ab1eee9a28c794ea5e32ac0d0305ac376207c848c75b",
+      "stratum": "PHASE_2_POC",
+      "ticker": "ALNY"
+    },
+    {
+      "candidate_id": "P2-2023-ALT-MOMENTUM",
+      "pack_path": "validation/m7/review_packs/P2-2023-ALT-MOMENTUM.json",
+      "pack_sha256": "b6974e2a79b032d0bf8dfbd611150d59c7d5e85d20a2e19008eae6f43e17a978",
+      "stratum": "PHASE_2_POC",
+      "ticker": "ALT"
+    },
+    {
+      "candidate_id": "P2-2023-APLS-MERIDIAN",
+      "pack_path": "validation/m7/review_packs/P2-2023-APLS-MERIDIAN.json",
+      "pack_sha256": "ef59cd0afe8bbb9faf909d937807c4e023eb162b5f832ca5bacda3b6bda140bb",
+      "stratum": "PHASE_2_POC",
+      "ticker": "APLS"
+    },
+    {
+      "candidate_id": "P2-2023-ATAI-PCN101",
+      "pack_path": "validation/m7/review_packs/P2-2023-ATAI-PCN101.json",
+      "pack_sha256": "02af303f072ed6ed61f19e5c14f5b69327a17ebb1aa612b45b84cc9153dbd5e2",
+      "stratum": "PHASE_2_POC",
+      "ticker": "ATAI"
+    },
+    {
+      "candidate_id": "P2-2023-ETNB-ENLIVEN",
+      "pack_path": "validation/m7/review_packs/P2-2023-ETNB-ENLIVEN.json",
+      "pack_sha256": "aa3520b164f939fcf2b5fe3e7f1f0fdc4e3b62a1a116b8f7c8706e79a1c7fd1a",
+      "stratum": "PHASE_2_POC",
+      "ticker": "ETNB"
+    },
+    {
+      "candidate_id": "P2-2023-TERN-DUET",
+      "pack_path": "validation/m7/review_packs/P2-2023-TERN-DUET.json",
+      "pack_sha256": "22b027453c00c10378abb814746a5dac27b80c390d894d26b09146a64b76e260",
+      "stratum": "PHASE_2_POC",
+      "ticker": "TERN"
+    },
+    {
+      "candidate_id": "P2-2024-ANAB-ANB032",
+      "pack_path": "validation/m7/review_packs/P2-2024-ANAB-ANB032.json",
+      "pack_sha256": "b6116bb880727636c06d5ec0a90b575121db0f712131a83516bcbdf7d0bd9213",
+      "stratum": "PHASE_2_POC",
+      "ticker": "ANAB"
+    },
+    {
+      "candidate_id": "P2-2024-BNTX-BNT111",
+      "pack_path": "validation/m7/review_packs/P2-2024-BNTX-BNT111.json",
+      "pack_sha256": "6b2d045a5a6f1bc643080742ea2db1c4b54037121fe131ae038929926c7151c6",
+      "stratum": "PHASE_2_POC",
+      "ticker": "BNTX"
+    },
+    {
+      "candidate_id": "P2-2024-GPCR-GSBR1290",
+      "pack_path": "validation/m7/review_packs/P2-2024-GPCR-GSBR1290.json",
+      "pack_sha256": "43510b8e517607aed65ff4c2a058e726b68ac7b81d44c2a629ac3e77766b4dde",
+      "stratum": "PHASE_2_POC",
+      "ticker": "GPCR"
+    },
+    {
+      "candidate_id": "P2-2024-RXRX-SYCAMORE",
+      "pack_path": "validation/m7/review_packs/P2-2024-RXRX-SYCAMORE.json",
+      "pack_sha256": "f67c46d5a189c37102383e8d1bac8fd2f70e8475083256cb9501b5a58632ae42",
+      "stratum": "PHASE_2_POC",
+      "ticker": "RXRX"
+    },
+    {
+      "candidate_id": "P2-2024-SAGE-DIMENSION",
+      "pack_path": "validation/m7/review_packs/P2-2024-SAGE-DIMENSION.json",
+      "pack_sha256": "f2d7b10c938e3b590302df91fcf6369378852374b5ca3fc0577565ea21457005",
+      "stratum": "PHASE_2_POC",
+      "ticker": "SAGE"
+    },
+    {
+      "candidate_id": "P2-2025-KALA-CHASE",
+      "pack_path": "validation/m7/review_packs/P2-2025-KALA-CHASE.json",
+      "pack_sha256": "b8b6f6f4078f2e83a19a22e131a5ec98f2ce09102816c4fbadf7d3631e8e5420",
+      "stratum": "PHASE_2_POC",
+      "ticker": "KALA"
+    },
+    {
+      "candidate_id": "P2-2025-VTYX-VTX958",
+      "pack_path": "validation/m7/review_packs/P2-2025-VTYX-VTX958.json",
+      "pack_sha256": "6d78431d70a6e0ba2a095c250096c8323b1dc26995203e3958c49499f40fef48",
+      "stratum": "PHASE_2_POC",
+      "ticker": "VTYX"
+    },
+    {
+      "candidate_id": "P3-2018-RARE-UX007",
+      "pack_path": "validation/m7/review_packs/P3-2018-RARE-UX007.json",
+      "pack_sha256": "83865f85ea6435d99e96b6b456356887891ad44cbb6c88d7025bec9d6bfc21c6",
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "RARE"
+    },
+    {
+      "candidate_id": "P3-2019-AXSM-GEMINI",
+      "pack_path": "validation/m7/review_packs/P3-2019-AXSM-GEMINI.json",
+      "pack_sha256": "9bf2bdad727a3a752fe95017d988d4b6158b76c612ac3b558cbe0333f54c9e56",
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "AXSM"
+    },
+    {
+      "candidate_id": "P3-2019-ICPT-REGENERATE",
+      "pack_path": "validation/m7/review_packs/P3-2019-ICPT-REGENERATE.json",
+      "pack_sha256": "5ef71f6b5c1698acb1f181be7250b82a7dbe974c51c4aeee9e34cd58bc6ea5c5",
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "ICPT"
+    },
+    {
+      "candidate_id": "P3-2019-NVAX-PREPARE",
+      "pack_path": "validation/m7/review_packs/P3-2019-NVAX-PREPARE.json",
+      "pack_sha256": "9fb42c58e03d6d177be23f3c5e46f49c6c24b83e42ca90580110987d81308619",
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "NVAX"
+    },
+    {
+      "candidate_id": "P3-2020-AGIO-ACTIVATE",
+      "pack_path": "validation/m7/review_packs/P3-2020-AGIO-ACTIVATE.json",
+      "pack_sha256": "a50cc3f6351cd1df4efb8970a031bf11f4407b9beb94a280db29c053b75f0a5f",
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "AGIO"
+    },
+    {
+      "candidate_id": "P3-2020-APRE-P3MDS",
+      "pack_path": "validation/m7/review_packs/P3-2020-APRE-P3MDS.json",
+      "pack_sha256": "168c5da8be18461ef616ffc81d9bbb9d157535e16a5544399bb6afc166f354b1",
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "APRE"
+    },
+    {
+      "candidate_id": "P3-2020-CRBP-RESOLVE1",
+      "pack_path": "validation/m7/review_packs/P3-2020-CRBP-RESOLVE1.json",
+      "pack_sha256": "2d237af497a65d8fbcc9c730a255fb36072c9f1fd6e1cb335996a6b6fb4a395c",
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "CRBP"
+    },
+    {
+      "candidate_id": "P3-2020-CYTK-GALACTIC-HF",
+      "pack_path": "validation/m7/review_packs/P3-2020-CYTK-GALACTIC-HF.json",
+      "pack_sha256": "a3de080dfd2e46f8afb763e9d6d9b71752a63286098026ce44b47c9863cfa5e1",
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "CYTK"
+    },
+    {
+      "candidate_id": "P3-2020-GMAB-ANDROMEDA",
+      "pack_path": "validation/m7/review_packs/P3-2020-GMAB-ANDROMEDA.json",
+      "pack_sha256": "e5d2266d62cfd75a76b8329c25ebffcc3948c8b968bf069c31e3a0f1045e5809",
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "GMAB"
+    },
+    {
+      "candidate_id": "P3-2020-IMMU-ASCENT",
+      "pack_path": "validation/m7/review_packs/P3-2020-IMMU-ASCENT.json",
+      "pack_sha256": "a3dfafc7ea81675774c92bbb9b9cd1394fe3fa5f197aeccb9504880582e1fb30",
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "IMMU"
+    },
+    {
+      "candidate_id": "P3-2020-OCUL-DEXTENZA-AC",
+      "pack_path": "validation/m7/review_packs/P3-2020-OCUL-DEXTENZA-AC.json",
+      "pack_sha256": "7ea31564fb099651fca10ad4383b9c5a7f89156b18833fdec8f94859a171d435",
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "OCUL"
+    },
+    {
+      "candidate_id": "P3-2020-ONTX-INSPIRE",
+      "pack_path": "validation/m7/review_packs/P3-2020-ONTX-INSPIRE.json",
+      "pack_sha256": "367fe0deeed2e1dc120b241b79701c90561cac93faf1692bf527f3bc93db57c4",
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "ONTX"
+    },
+    {
+      "candidate_id": "P3-2020-REGN-LIBTAYO-NSCLC",
+      "pack_path": "validation/m7/review_packs/P3-2020-REGN-LIBTAYO-NSCLC.json",
+      "pack_sha256": "09e20c7367acc108678e7ce263104aef24d8451b8cb624b82005b8110f1d3c22",
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "REGN"
+    },
+    {
+      "candidate_id": "P3-2021-BIIB-STAR",
+      "pack_path": "validation/m7/review_packs/P3-2021-BIIB-STAR.json",
+      "pack_sha256": "9ecce6ad44f3aed1be3ff26a56d0a3b286651476b500a48ae6a2e32f8a86fecb",
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "BIIB"
+    },
+    {
+      "candidate_id": "P3-2021-BIIB-VALOR",
+      "pack_path": "validation/m7/review_packs/P3-2021-BIIB-VALOR.json",
+      "pack_sha256": "52c8542a23488fab56a43f106bb6385d756d2ad92b8d26a6117dfd87e218b99c",
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "BIIB"
+    },
+    {
+      "candidate_id": "P3-2022-BGNE-ALPINE",
+      "pack_path": "validation/m7/review_packs/P3-2022-BGNE-ALPINE.json",
+      "pack_sha256": "b5a07e6a3927870ff37efc0c93191bc7efe139de4e4fe7b2f67cc5a0a2f1e56f",
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "BGNE"
+    },
+    {
+      "candidate_id": "P3-2022-MDGL-MAESTRO-NASH",
+      "pack_path": "validation/m7/review_packs/P3-2022-MDGL-MAESTRO-NASH.json",
+      "pack_sha256": "80f7ddb60af6cecbb0a83551b48c6371b1881bc81a6d5eda307ab84b4c6e6212",
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "MDGL"
+    },
+    {
+      "candidate_id": "P3-2023-GERN-IMERGE",
+      "pack_path": "validation/m7/review_packs/P3-2023-GERN-IMERGE.json",
+      "pack_sha256": "0605aad164c9fe73a9a3c180721fb278eb3a68ece757acf90ef61ca47796bd52",
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "GERN"
+    },
+    {
+      "candidate_id": "P3-2023-GMAB-INNOVATV301",
+      "pack_path": "validation/m7/review_packs/P3-2023-GMAB-INNOVATV301.json",
+      "pack_sha256": "50d45fefe8ff37e85fb4ec1ba2322fda646dce69db883991eef0013a04cd1dd8",
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "GMAB"
+    },
+    {
+      "candidate_id": "P3-2024-ANNX-ANX005",
+      "pack_path": "validation/m7/review_packs/P3-2024-ANNX-ANX005.json",
+      "pack_sha256": "2df51bd2e797e5ce0d8b14e26573938eea9c7de1e77f222f2122f86f8ce78074",
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "ANNX"
+    },
+    {
+      "candidate_id": "P3-2024-FULC-REACH",
+      "pack_path": "validation/m7/review_packs/P3-2024-FULC-REACH.json",
+      "pack_sha256": "cd0e59a7aeee8ac9433688b74a564c4cd081d19ffa62e2a49e184bb36ea41e30",
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "FULC"
+    },
+    {
+      "candidate_id": "P3-2024-NAMS-BROADWAY",
+      "pack_path": "validation/m7/review_packs/P3-2024-NAMS-BROADWAY.json",
+      "pack_sha256": "bc8975a46b8d0a25fff97144ff2a21098e5f56a878fbb543ecc4bfee0b99a841",
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "NAMS"
+    },
+    {
+      "candidate_id": "P3-2024-NAMS-BROOKLYN",
+      "pack_path": "validation/m7/review_packs/P3-2024-NAMS-BROOKLYN.json",
+      "pack_sha256": "af8c8e19fcbef9214f49d27a017f1eb5e43e1ebe13c61d57a55bfc25fb6b7c29",
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "NAMS"
+    },
+    {
+      "candidate_id": "P3-2024-SAVA-RETHINK",
+      "pack_path": "validation/m7/review_packs/P3-2024-SAVA-RETHINK.json",
+      "pack_sha256": "85087a051fdf16e18bb8ca54509fc4315055d81ced1d52a15b8462b20c209dea",
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "SAVA"
+    },
+    {
+      "candidate_id": "P3-2025-ALEC-INFRONT3",
+      "pack_path": "validation/m7/review_packs/P3-2025-ALEC-INFRONT3.json",
+      "pack_sha256": "c770cc11b111b32659da01b8430066dd585bee6c60ccb00ad42c0677c9e839ef",
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "ALEC"
+    },
+    {
+      "candidate_id": "P3-2025-CAPR-HOPE3",
+      "pack_path": "validation/m7/review_packs/P3-2025-CAPR-HOPE3.json",
+      "pack_sha256": "5646a75160351bececce4b53db74d1810f94b16f3b39a816ed85735a01a488e8",
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "CAPR"
+    },
+    {
+      "candidate_id": "P3-2025-SAVA-REFOCUS",
+      "pack_path": "validation/m7/review_packs/P3-2025-SAVA-REFOCUS.json",
+      "pack_sha256": "443b11545867c00e989400c724ee700247930f1ab9a4736cdd41e14f8a0a35cf",
+      "stratum": "PHASE_3_PIVOTAL",
+      "ticker": "SAVA"
+    },
+    {
+      "candidate_id": "REG-2018-AGIO-TIBSOVO",
+      "pack_path": "validation/m7/review_packs/REG-2018-AGIO-TIBSOVO.json",
+      "pack_sha256": "c529a7748f0f817dd813615e790eea8f212f2f80429f29d42094fa8ddb196b87",
+      "stratum": "REGULATORY",
+      "ticker": "AGIO"
+    },
+    {
+      "candidate_id": "REG-2018-ALNY-ONPATTRO",
+      "pack_path": "validation/m7/review_packs/REG-2018-ALNY-ONPATTRO.json",
+      "pack_sha256": "9d484b369cab1079ee7329fb0f0595a4b9adcd0b35c88245ad6f70ea7129d010",
+      "stratum": "REGULATORY",
+      "ticker": "ALNY"
+    },
+    {
+      "candidate_id": "REG-2018-ARRY-BRAFTOVI-MEKTOVI",
+      "pack_path": "validation/m7/review_packs/REG-2018-ARRY-BRAFTOVI-MEKTOVI.json",
+      "pack_sha256": "86a1737d11bac88609d19a8b87af35b62f09c940e27f53f728167297a45e0a8b",
+      "stratum": "REGULATORY",
+      "ticker": "ARRY"
+    },
+    {
+      "candidate_id": "REG-2018-FOLD-GALAFOLD",
+      "pack_path": "validation/m7/review_packs/REG-2018-FOLD-GALAFOLD.json",
+      "pack_sha256": "23f0490f24432f341aa70fe2040e851465787ec775fc94198becb76518b81e19",
+      "stratum": "REGULATORY",
+      "ticker": "FOLD"
+    },
+    {
+      "candidate_id": "REG-2018-REPH-MELOXICAM-CRL",
+      "pack_path": "validation/m7/review_packs/REG-2018-REPH-MELOXICAM-CRL.json",
+      "pack_sha256": "e0e1fb734d4a2a561ccf05c918ab43dfce1cb4aedb23ae24312333a94a00d72c",
+      "stratum": "REGULATORY",
+      "ticker": "REPH"
+    },
+    {
+      "candidate_id": "REG-2019-GBT-OXBRYTA",
+      "pack_path": "validation/m7/review_packs/REG-2019-GBT-OXBRYTA.json",
+      "pack_sha256": "c359015138b244758944bc59734e98464f87e7a5e4797be711c654ea3bab20fd",
+      "stratum": "REGULATORY",
+      "ticker": "GBT"
+    },
+    {
+      "candidate_id": "REG-2019-SAGE-ZULRESSO",
+      "pack_path": "validation/m7/review_packs/REG-2019-SAGE-ZULRESSO.json",
+      "pack_sha256": "c35be3c508e0520b88b68c86f030da1d8bd7f4d62db4add6572bc4739ccc5042",
+      "stratum": "REGULATORY",
+      "ticker": "SAGE"
+    },
+    {
+      "candidate_id": "REG-2019-SRPT-GOLODIRSEN-CRL",
+      "pack_path": "validation/m7/review_packs/REG-2019-SRPT-GOLODIRSEN-CRL.json",
+      "pack_sha256": "381ddc6164ff1ce7d5233383243a2a1ad7f488fac51295a97ceabc2eb605ace9",
+      "stratum": "REGULATORY",
+      "ticker": "SRPT"
+    },
+    {
+      "candidate_id": "REG-2020-BMRN-VALROX-CRL",
+      "pack_path": "validation/m7/review_packs/REG-2020-BMRN-VALROX-CRL.json",
+      "pack_sha256": "fee800b278e9296df76b18911c4ee47062596236c7bb03989a5d3fa87d264cfd",
+      "stratum": "REGULATORY",
+      "ticker": "BMRN"
+    },
+    {
+      "candidate_id": "REG-2020-ICPT-OCA-CRL",
+      "pack_path": "validation/m7/review_packs/REG-2020-ICPT-OCA-CRL.json",
+      "pack_sha256": "c1f6600f9a2078b02801f8611c8f6cce4c020423541e6f6d4c019e97ef0875ca",
+      "stratum": "REGULATORY",
+      "ticker": "ICPT"
+    },
+    {
+      "candidate_id": "REG-2020-IMMU-TRODELVY",
+      "pack_path": "validation/m7/review_packs/REG-2020-IMMU-TRODELVY.json",
+      "pack_sha256": "c607264692d463144d7dccf18ba6651aace26880c7a49681e6aa8ee6644b9f7d",
+      "stratum": "REGULATORY",
+      "ticker": "IMMU"
+    },
+    {
+      "candidate_id": "REG-2020-LQDA-LIQ861-CRL",
+      "pack_path": "validation/m7/review_packs/REG-2020-LQDA-LIQ861-CRL.json",
+      "pack_sha256": "942713855e1168e7307295062ca3339f7414e19bfd7d5567db04cfebd34889b0",
+      "stratum": "REGULATORY",
+      "ticker": "LQDA"
+    },
+    {
+      "candidate_id": "REG-2020-RYTM-IMCIVREE",
+      "pack_path": "validation/m7/review_packs/REG-2020-RYTM-IMCIVREE.json",
+      "pack_sha256": "229cf281d5c5121ffa6ec8a2a2c65d467faa18b938e429da370c14806bb5d0fe",
+      "stratum": "REGULATORY",
+      "ticker": "RYTM"
+    },
+    {
+      "candidate_id": "REG-2020-TCDA-VEVERIMER-CRL",
+      "pack_path": "validation/m7/review_packs/REG-2020-TCDA-VEVERIMER-CRL.json",
+      "pack_sha256": "d3a3a287c2a719f6f5263ff7f6afd58bb932ffd07df38f254bf8eea0360b8158",
+      "stratum": "REGULATORY",
+      "ticker": "TCDA"
+    },
+    {
+      "candidate_id": "REG-2021-APLS-EMPAVELI",
+      "pack_path": "validation/m7/review_packs/REG-2021-APLS-EMPAVELI.json",
+      "pack_sha256": "ecb9383fb45d943de2cc797b54cefdd5aa0010033b59d8a0a92a32242a1f1b8a",
+      "stratum": "REGULATORY",
+      "ticker": "APLS"
+    },
+    {
+      "candidate_id": "REG-2021-ARDX-TENAPANOR-CRL",
+      "pack_path": "validation/m7/review_packs/REG-2021-ARDX-TENAPANOR-CRL.json",
+      "pack_sha256": "d6a476ee2d366e50d4ef0dbe36b651a619f63e5258ddf2bbb654a3a35af7f589",
+      "stratum": "REGULATORY",
+      "ticker": "ARDX"
+    },
+    {
+      "candidate_id": "REG-2021-ASND-SKYTROFA",
+      "pack_path": "validation/m7/review_packs/REG-2021-ASND-SKYTROFA.json",
+      "pack_sha256": "bb98bee8fd16b25b80fb24e55dc725bfa171b606f00592ac6e9d6419f1f13810",
+      "stratum": "REGULATORY",
+      "ticker": "ASND"
+    },
+    {
+      "candidate_id": "REG-2021-ATNX-ORALPAC-CRL",
+      "pack_path": "validation/m7/review_packs/REG-2021-ATNX-ORALPAC-CRL.json",
+      "pack_sha256": "dccf5a04298a59b04f2198c1ccbc2d91cea8faa2469b3e9cbdc20ceac5340115",
+      "stratum": "REGULATORY",
+      "ticker": "ATNX"
+    },
+    {
+      "candidate_id": "REG-2021-FGEN-ROXADUSTAT-CRL",
+      "pack_path": "validation/m7/review_packs/REG-2021-FGEN-ROXADUSTAT-CRL.json",
+      "pack_sha256": "bec3d4491e814e8b1338cc0096ff205321200b0954f23771d05b8c42d3a26689",
+      "stratum": "REGULATORY",
+      "ticker": "FGEN"
+    },
+    {
+      "candidate_id": "REG-2021-INCY-OPZELURA",
+      "pack_path": "validation/m7/review_packs/REG-2021-INCY-OPZELURA.json",
+      "pack_sha256": "4054ada610786b2ebe5ec8980f112ce97cb1b514bddd282653fb99050e14b809",
+      "stratum": "REGULATORY",
+      "ticker": "INCY"
+    },
+    {
+      "candidate_id": "REG-2021-OMER-NARSOPLIMAB-CRL",
+      "pack_path": "validation/m7/review_packs/REG-2021-OMER-NARSOPLIMAB-CRL.json",
+      "pack_sha256": "1aef7427256c37301c6275c529f644be8d9588de7da65b22ed6d64039bd09fee",
+      "stratum": "REGULATORY",
+      "ticker": "OMER"
+    },
+    {
+      "candidate_id": "REG-2022-AXSM-AXS07-CRL",
+      "pack_path": "validation/m7/review_packs/REG-2022-AXSM-AXS07-CRL.json",
+      "pack_sha256": "e4dc91323ccd7604a0ab8edc4afd278d85f17e8eab8549a9adad44f0943108ed",
+      "stratum": "REGULATORY",
+      "ticker": "AXSM"
+    },
+    {
+      "candidate_id": "REG-2022-CHRS-TORIPALIMAB-CRL",
+      "pack_path": "validation/m7/review_packs/REG-2022-CHRS-TORIPALIMAB-CRL.json",
+      "pack_sha256": "e885b7b4a8b2101160c48ffe931393b581d2cbde083a2754e87a9d9936fe9a00",
+      "stratum": "REGULATORY",
+      "ticker": "CHRS"
+    },
+    {
+      "candidate_id": "REG-2022-IMGN-ELAHERE",
+      "pack_path": "validation/m7/review_packs/REG-2022-IMGN-ELAHERE.json",
+      "pack_sha256": "b4119fb5576682794cd68825feda468bcbe2b4df52863b873e067426d0749b37",
+      "stratum": "REGULATORY",
+      "ticker": "IMGN"
+    },
+    {
+      "candidate_id": "REG-2022-PRVB-TZIELD",
+      "pack_path": "validation/m7/review_packs/REG-2022-PRVB-TZIELD.json",
+      "pack_sha256": "f436174680c22fc9588f505bc37db93cfe8aac02c3c48ff77cbf388a7def80a0",
+      "stratum": "REGULATORY",
+      "ticker": "PRVB"
+    },
+    {
+      "candidate_id": "REG-2022-TGTX-BRIUMVI",
+      "pack_path": "validation/m7/review_packs/REG-2022-TGTX-BRIUMVI.json",
+      "pack_sha256": "d5e786a22d02c8a8e7394dd77dd2e8ead8d1ae08b8109cf45c11de3285f1981b",
+      "stratum": "REGULATORY",
+      "ticker": "TGTX"
+    },
+    {
+      "candidate_id": "REG-2023-APLS-SYFOVRE",
+      "pack_path": "validation/m7/review_packs/REG-2023-APLS-SYFOVRE.json",
+      "pack_sha256": "0e279ed50298865a12cce4ace03b148bb253306da032753024cbd1c3845a05c2",
+      "stratum": "REGULATORY",
+      "ticker": "APLS"
+    },
+    {
+      "candidate_id": "REG-2023-BLUE-LYFGENIA",
+      "pack_path": "validation/m7/review_packs/REG-2023-BLUE-LYFGENIA.json",
+      "pack_sha256": "288798d0a1cb4903ec5f824c7a800431bf67ad19c38dfc269a169cf812d66208",
+      "stratum": "REGULATORY",
+      "ticker": "BLUE"
+    },
+    {
+      "candidate_id": "REG-2023-BMRN-ROCTAVIAN",
+      "pack_path": "validation/m7/review_packs/REG-2023-BMRN-ROCTAVIAN.json",
+      "pack_sha256": "95cdf7a4f944e5b8509ecc467e397bcf39cfcc8330d6442854706ce8db07f6f2",
+      "stratum": "REGULATORY",
+      "ticker": "BMRN"
+    },
+    {
+      "candidate_id": "REG-2023-GERN-IMETELSTAT-NDA-ACCEPT",
+      "pack_path": "validation/m7/review_packs/REG-2023-GERN-IMETELSTAT-NDA-ACCEPT.json",
+      "pack_sha256": "8eb6dfc10299d473b71df8b1dc03f3b1eb38e7246de1e668a535e52a1a210b92",
+      "stratum": "REGULATORY",
+      "ticker": "GERN"
+    },
+    {
+      "candidate_id": "REG-2023-IONS-QALSODY",
+      "pack_path": "validation/m7/review_packs/REG-2023-IONS-QALSODY.json",
+      "pack_sha256": "05d585071ffdf6ee5a20aef12bd7a29b15d701e3463b534821fd74550ee015a6",
+      "stratum": "REGULATORY",
+      "ticker": "IONS"
+    },
+    {
+      "candidate_id": "REG-2023-RETA-SKYCLARYS",
+      "pack_path": "validation/m7/review_packs/REG-2023-RETA-SKYCLARYS.json",
+      "pack_sha256": "7b393ae0174e1f24e995471e3074e88e70741d17214e75b473d7671d6ca25cfa",
+      "stratum": "REGULATORY",
+      "ticker": "RETA"
+    },
+    {
+      "candidate_id": "REG-2023-SRPT-ELEVIDYS",
+      "pack_path": "validation/m7/review_packs/REG-2023-SRPT-ELEVIDYS.json",
+      "pack_sha256": "d7004f8643b0af977b7dbac7d90f314357da00ccc8e74f304e4ac09be2b988bf",
+      "stratum": "REGULATORY",
+      "ticker": "SRPT"
+    },
+    {
+      "candidate_id": "REG-2023-TVTX-FILSPARI",
+      "pack_path": "validation/m7/review_packs/REG-2023-TVTX-FILSPARI.json",
+      "pack_sha256": "89d00397dbf0f22f7fd55c5bb9503b7513cc77910c904022d2ef3d4e4524b26f",
+      "stratum": "REGULATORY",
+      "ticker": "TVTX"
+    },
+    {
+      "candidate_id": "REG-2024-APLT-GOVORESTAT-CRL",
+      "pack_path": "validation/m7/review_packs/REG-2024-APLT-GOVORESTAT-CRL.json",
+      "pack_sha256": "bfb7e704919f6b670473459bf15a49700e38e85bc9a132c8842a8896f75dfe22",
+      "stratum": "REGULATORY",
+      "ticker": "APLT"
+    },
+    {
+      "candidate_id": "REG-2024-BBIO-ATTRUBY",
+      "pack_path": "validation/m7/review_packs/REG-2024-BBIO-ATTRUBY.json",
+      "pack_sha256": "17c0fa0a3151832474c0a88f84cf81dbeddcc00c50cedeaa45bb06488a2b0e1d",
+      "stratum": "REGULATORY",
+      "ticker": "BBIO"
+    },
+    {
+      "candidate_id": "REG-2024-DAWN-OJEMDA",
+      "pack_path": "validation/m7/review_packs/REG-2024-DAWN-OJEMDA.json",
+      "pack_sha256": "8b4fc5216ceff503ae673be77079aaa03d2729495604758b92f834886d101137",
+      "stratum": "REGULATORY",
+      "ticker": "DAWN"
+    },
+    {
+      "candidate_id": "REG-2024-GERN-RYTELO",
+      "pack_path": "validation/m7/review_packs/REG-2024-GERN-RYTELO.json",
+      "pack_sha256": "71e4c976261d58ce4203dd10652f46a2288a51bd13eb368298d32f98e88102d9",
+      "stratum": "REGULATORY",
+      "ticker": "GERN"
+    },
+    {
+      "candidate_id": "REG-2024-IONS-TRYNGOLZA",
+      "pack_path": "validation/m7/review_packs/REG-2024-IONS-TRYNGOLZA.json",
+      "pack_sha256": "f9a4b96c1a9e18b3537294500beb66ba89ff9ff86b7b3f9fbc4d2d7bde64d062",
+      "stratum": "REGULATORY",
+      "ticker": "IONS"
+    },
+    {
+      "candidate_id": "REG-2024-IOVA-AMTAGVI",
+      "pack_path": "validation/m7/review_packs/REG-2024-IOVA-AMTAGVI.json",
+      "pack_sha256": "5be122d5652a84978ff8a35ec020ec244c7264a43d2abdcd56d296e6212df23a",
+      "stratum": "REGULATORY",
+      "ticker": "IOVA"
+    },
+    {
+      "candidate_id": "REG-2024-RCKT-KRESLADI-CRL",
+      "pack_path": "validation/m7/review_packs/REG-2024-RCKT-KRESLADI-CRL.json",
+      "pack_sha256": "4701e930a962de9e2a2e103aad6c1401b99dfd86da51d5de9f98aa7b29cf521a",
+      "stratum": "REGULATORY",
+      "ticker": "RCKT"
+    },
+    {
+      "candidate_id": "REG-2024-REGN-LINVOSELTAMAB-CRL",
+      "pack_path": "validation/m7/review_packs/REG-2024-REGN-LINVOSELTAMAB-CRL.json",
+      "pack_sha256": "12d47a36bbc5741a404a058841cf978737017a1e44e0d337ae07f44749a3c08e",
+      "stratum": "REGULATORY",
+      "ticker": "REGN"
+    },
+    {
+      "candidate_id": "REG-2024-SNDX-REVUFORJ",
+      "pack_path": "validation/m7/review_packs/REG-2024-SNDX-REVUFORJ.json",
+      "pack_sha256": "a6a97d249772978de8e1954779e71c5e813c2955d9bcaa736d680f689280d38b",
+      "stratum": "REGULATORY",
+      "ticker": "SNDX"
+    },
+    {
+      "candidate_id": "REG-2024-VRNA-OHTUVAYRE",
+      "pack_path": "validation/m7/review_packs/REG-2024-VRNA-OHTUVAYRE.json",
+      "pack_sha256": "9f4e9fe50ca64042c7e7b5e867fa0b55dc86375698e07418bbfc7c295a535aa4",
+      "stratum": "REGULATORY",
+      "ticker": "VRNA"
+    },
+    {
+      "candidate_id": "REG-2024-VRTX-ALYFTREK",
+      "pack_path": "validation/m7/review_packs/REG-2024-VRTX-ALYFTREK.json",
+      "pack_sha256": "296d33d0cc7f4fad44166f80d393cb355c063b71c6f1b410a542b8d2f19274a0",
+      "stratum": "REGULATORY",
+      "ticker": "VRTX"
+    }
+  ],
+  "role": "OUTCOME_BLIND_REVIEW_PACK_MANIFEST",
+  "rules_version": "BOE-1.0.0"
+}

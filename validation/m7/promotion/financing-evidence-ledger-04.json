@@ -1,0 +1,38 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-16",
+  "role": "PREFREEZE_TARGETED_FINANCING_QUOTA_REPAIR_WITHIN_EXISTING_CANDIDATE_POPULATION",
+  "market_outcomes_inspected": false,
+  "cohort_frozen": false,
+  "trigger": "Financing reserve stood at exactly 20/20 pass with zero PENDING candidates left in the pipeline behind it - the tightest, most brittle remaining constraint (unlike other reserves/strata still carrying a positive buffer or open PENDING determinations that could still convert). Searched the existing PASS-but-financing-PENDING candidate population (119 candidates) for actual, already-consummated equity dilution inside T-90..T+30, rather than reopening event acquisition.",
+  "qualification_rule": "Count only actual issuer equity or equity-linked dilution occurring from T-90 through T+30. Theoretical shelf or ATM capacity without actual issuance is not sufficient - matches financing-evidence-ledger-03.json's qualification_rule exactly. Several ATM-establishment prospectus supplements were found and rejected on this basis (AXSM 2019-05-09, ATAI 2022-11-10, TERN 2023-05-15) because no in-window actual-sales disclosure could be confirmed for them; only Capricor's below has a directly disclosed, non-inferred, in-window dollar figure.",
+  "rows": [
+    {
+      "candidate_id": "P3-2025-CAPR-HOPE3",
+      "event_date": "2025-12-03",
+      "ticker": "CAPR",
+      "issuer": "Capricor Therapeutics, Inc.",
+      "historical_universe_status": "PASS",
+      "financing_date": "2025-09-10 to 2025-12-05 (cumulative ATM sales period, wholly inside the T-90/T+30 window of 2025-09-04 to 2026-01-02)",
+      "relative_day": null,
+      "financing_type": "ATM_COMMON_STOCK_SALES",
+      "gross_proceeds_usd": 77500000,
+      "securities": "2,682,307 shares of common stock sold under the equity distribution (ATM) agreement with Piper Sandler & Co. and Oppenheimer & Co. Inc., dated September 10, 2025",
+      "evidence_summary": "Capricor established a $150,000,000 ATM Facility on September 10, 2025 (reduced to $125,000,000 as of December 5, 2025). Prospectus Supplement No. 1, filed December 5, 2025, directly discloses that as of that date 2,682,307 shares had been sold under the ATM Facility for aggregate gross proceeds of approximately $77.5 million. The ATM's entire life to date (Sept. 10 - Dec. 5, 2025) falls inside the T-90/T+30 window around the Dec. 3, 2025 HOPE-3 topline event (window: Sept. 4, 2025 - Jan. 2, 2026), so this is a directly reported in-window figure, not a quarterly-report inference.",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1133869/000110465925118588/capr-20251205x424b3.htm"
+      ],
+      "status": "QUALIFIES",
+      "outcome_inspected_for_selection": false
+    }
+  ],
+  "summary": {
+    "required_replacement_survivors": 1,
+    "qualified_existing_candidate_replacements": 1,
+    "new_event_acquisition_required": false,
+    "market_outcomes_used_for_selection": 0
+  },
+  "promotion_boundary": "This row restores one unit of financing-reserve margin only because the candidate already has historical-universe PASS. Final financing quota remains provisional until timestamp/conference, point-in-time evidence, concentration, eligible-registry and deterministic cohort-freeze requirements are satisfied. Financing reserve remains thin (21/20 after this row) and should continue to be a sourcing priority."
+}

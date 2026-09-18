@@ -1,0 +1,98 @@
+{
+  "acquisition_path": "validation/m7/acquisition/conference-other-primary-batch-01.json",
+  "candidate_id": "CO-2020-TRIL-TTI622ASH",
+  "catalyst_observation": {
+    "asset": "TTI-622",
+    "catalyst_type": "CONF_DATA",
+    "clinical_phase": "PHASE_1",
+    "evidence_id": "aed1e6d3-b6a1-5f37-ab22-b20df94c81dd",
+    "external_event_id": "CO-2020-TRIL-TTI622ASH",
+    "indication": "hematologic malignancies",
+    "issuer_id": "0001616212",
+    "known_at": "2020-12-07T16:05:00-05:00",
+    "source_statement": "Trillium Therapeutics Inc. - CONFERENCE_DATA_DISCLOSURE_CANDIDATE dated 2020-12-07.",
+    "source_tier": 5,
+    "timing_confidence": "HIGH",
+    "title": "Trillium Therapeutics Inc. - TTI-622 (hematologic malignancies)",
+    "window_end": "2020-12-07",
+    "window_start": "2020-12-07"
+  },
+  "catalyst_version": {
+    "asset": "TTI-622",
+    "canonical_key": "0001616212|tti-622|hematologic malignancies|CONF_DATA",
+    "catalyst_type": "CONF_DATA",
+    "clinical_phase": "PHASE_1",
+    "conflicts": [],
+    "id": "7b698962-24fe-56e7-ad69-9a6d03f5b4e8",
+    "indication": "hematologic malignancies",
+    "issuer_id": "0001616212",
+    "known_at": "2020-12-07T16:05:00-05:00",
+    "primary_evidence_id": "aed1e6d3-b6a1-5f37-ab22-b20df94c81dd",
+    "resolved_at_cutoff": "2020-12-07T16:05:00-05:00",
+    "supporting_evidence_ids": [
+      "aed1e6d3-b6a1-5f37-ab22-b20df94c81dd"
+    ],
+    "timing_confidence": "HIGH",
+    "title": "Trillium Therapeutics Inc. - TTI-622 (hematologic malignancies)",
+    "version": 1,
+    "version_sha256": "5e23816900af3eed4c22b0cabd8f6ac691cb7f0e11e9c584e5eb5cbd1990d34e",
+    "window_end": "2020-12-07",
+    "window_start": "2020-12-07"
+  },
+  "company": "Trillium Therapeutics Inc.",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": false,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "9101ca0cca9b6c7748c55ad327235fa180b90746495f3a3a9d840275286cd109",
+  "promotion_blockers": [
+    "RESOLVE_CIK_AND_HISTORICAL_SECURITY_IDENTITY",
+    "VERIFY_CONFERENCE_FIRST_PUBLIC_AVAILABILITY",
+    "VERIFY_UNDERLYING_CLINICAL_PHASE_AND_EVENT_DEDUPLICATION",
+    "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2020-12-07T16:05:00-05:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "TTI-622",
+    "blinded": null,
+    "catalyst_version_id": "7b698962-24fe-56e7-ad69-9a6d03f5b4e8",
+    "clinical_phase": "PHASE_1",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2020-12-07T16:05:00-05:00",
+    "evidence_ids": [
+      "aed1e6d3-b6a1-5f37-ab22-b20df94c81dd"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "45d2e171-4c03-5cdf-9da0-0d6ce578c186",
+    "indication": "hematologic malignancies",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://www.globenewswire.com/de/news-release/2020/12/07/2140908/0/en/Trillium-Therapeutics-Presented-Clinical-Data-at-the-62nd-ASH-Annual-Meeting-and-Provides-Guidance-for-2021.html"
+  ],
+  "stratum": "CONFERENCE_OTHER",
+  "ticker": "TRIL",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-28.json"
+}

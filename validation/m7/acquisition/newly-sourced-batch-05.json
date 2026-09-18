@@ -1,0 +1,38 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "role": "NEWLY_SOURCED_CANDIDATES_POST_HANDOFF",
+  "generated_at": "2026-09-16",
+  "sourcing_note": "One targeted candidate to close the remaining negative-event reserve gap (buffer was -1 after the previous two batches). Deciphera Pharmaceuticals' INTRIGUE Phase 3 miss is a well-documented, decisively negative, in-window event at a company large enough to clear the investability floor comfortably. Deduplicated against the full existing ticker/candidate_id set (DCPH was not previously in the pool). While researching this candidate, a superficially similar lead (an Ionis/AstraZeneca eplontersen Phase 3 readout) was checked and discarded because its actual date was July 2026, outside the frozen 2018-2025 sampling frame - noted here since that check happened in the same research session as this addition.",
+  "events": [
+    {
+      "asset": "ripretinib (QINLOCK)",
+      "candidate_id": "NEG-P3-2021-DCPH-INTRIGUE",
+      "cik": "1654151",
+      "clinical_phase": "PHASE_3",
+      "cohort_frozen": false,
+      "company": "Deciphera Pharmaceuticals, Inc.",
+      "first_public_date": "2021-11-05",
+      "first_public_timestamp": "2021-11-05T07:10:00-04:00",
+      "indication": "second-line gastrointestinal stromal tumor (GIST)",
+      "negative_event_candidate": true,
+      "outcome_inspected_for_selection": false,
+      "promotion_blockers": [
+        "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+        "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+        "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+        "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+      ],
+      "proposed_catalyst_type": "CLIN_P3",
+      "proposed_primary_stratum": "PHASE_3_PIVOTAL",
+      "result_direction": "NEGATIVE_PRIMARY",
+      "source_role": "FIRST_PUBLIC_RESULT_DISCLOSURE_CANDIDATE",
+      "source_type": "ISSUER_SEC_8K_EXHIBIT_991",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1654151/000119312521320901/d252692dex991.htm",
+      "corroborating_sec_accepted": "2021-11-05 07:10:10 ET (Form 8-K, CIK 0001654151, accession 0001193125-21-320901)",
+      "ticker": "DCPH",
+      "timestamp_precision": "EXACT_TO_MINUTE_SEC_ACCEPTANCE_PROXY",
+      "notes": "453-patient INTRIGUE trial (ripretinib vs. sunitinib, second-line GIST) missed its primary endpoint of progression-free survival in the intention-to-treat population (8.0 vs. 8.3 months, HR 1.05, nominal p=0.72). QINLOCK's existing third-line-plus approval was unaffected; this was specifically a second-line expansion failure."
+    }
+  ]
+}

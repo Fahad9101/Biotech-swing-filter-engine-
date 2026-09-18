@@ -1,0 +1,154 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-15",
+  "role": "PREFREEZE_FIRST_PUBLIC_AVAILABILITY_AND_SOURCE_CONFLICT_EVIDENCE",
+  "market_outcomes_inspected": false,
+  "cohort_frozen": false,
+  "timezone_policy": "Store source-local Eastern Time with explicit UTC offset where the source supplies an exact publication clock. Session classification follows U.S. regular-session timing.",
+  "rows": [
+    {
+      "candidate_id": "NEG-P2-2020-MNLO-CPUO",
+      "event_date": "2020-02-26",
+      "ticker": "MNLO",
+      "first_public_timestamp": "2020-02-26T07:30:00-05:00",
+      "timestamp_precision": "EXACT_TO_MINUTE",
+      "session_classification": "PRE_MARKET",
+      "last_complete_session_before_event": "2020-02-25",
+      "source_type": "ISSUER_AUTHORIZED_GLOBENEWSWIRE_RELEASE",
+      "source_url": "https://www.globenewswire.com/news-release/2020/02/26/1990868/0/en/Menlo-Therapeutics-Announces-Results-from-Phase-2-Trial-of-Serlopitant-in-Patients-with-Chronic-Pruritus-of-Unknown-Origin.html",
+      "source_displayed_time": "February 26, 2020 07:30 ET",
+      "status": "RESOLVED",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2024-GERN-RYTELO",
+      "event_date": "2024-06-06",
+      "ticker": "GERN",
+      "first_public_timestamp": "2024-06-06T08:00:00-04:00",
+      "timestamp_precision": "EXACT_TO_MINUTE",
+      "session_classification": "PRE_MARKET",
+      "last_complete_session_before_event": "2024-06-05",
+      "source_type": "ISSUER_IR_BUSINESS_WIRE_RELEASE",
+      "source_url": "https://ir.geron.com/news-releases/news-release-details/geron-announces-fda-approval-rytelotm-imetelstat-first-class",
+      "source_displayed_time": "Thu, 06/06/2024 - 08:00",
+      "status": "RESOLVED",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "REG-2024-VRNA-OHTUVAYRE",
+      "event_date": "2024-06-26",
+      "ticker": "VRNA",
+      "first_public_timestamp": "2024-06-26T16:57:00-04:00",
+      "timestamp_precision": "EXACT_TO_MINUTE",
+      "session_classification": "AFTER_HOURS",
+      "last_complete_session_before_event": "2024-06-26",
+      "source_type": "ISSUER_AUTHORIZED_GLOBENEWSWIRE_RELEASE",
+      "source_url": "https://rss.globenewswire.com/news-release/2024/06/26/2904839/0/en/Verona-Pharma-Announces-US-FDA-Approval-of-Ohtuvayre-ensifentrine.html",
+      "source_displayed_time": "June 26, 2024 16:57 ET",
+      "status": "RESOLVED",
+      "notes": "Because disclosure occurred after the regular session closed, the June 26 regular session is the final complete pre-event session.",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2023-AEON-ABP450",
+      "event_date": "2023-10-19",
+      "ticker": "AEON",
+      "first_public_timestamp": "2023-10-19T16:05:00-04:00",
+      "timestamp_precision": "EXACT_TO_MINUTE",
+      "session_classification": "AFTER_HOURS",
+      "last_complete_session_before_event": "2023-10-19",
+      "source_type": "ISSUER_AUTHORIZED_GLOBENEWSWIRE_RELEASE",
+      "source_url": "https://www.globenewswire.com/news-release/2023/10/19/2763684/0/en/aeon-biopharma-announces-topline-results-from-phase-2-trial-of-abp-450-prabotulinumtoxina-for-the-preventive-treatment-of-episodic-migraine.html",
+      "source_displayed_time": "October 19, 2023 16:05 ET",
+      "status": "RESOLVED",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2023-PRDS-POMOTRELVIR",
+      "event_date": "2023-04-03",
+      "ticker": "PRDS",
+      "first_public_timestamp": "2023-04-03T08:00:00-04:00",
+      "timestamp_precision": "EXACT_TO_MINUTE",
+      "session_classification": "PRE_MARKET",
+      "last_complete_session_before_event": "2023-03-31",
+      "source_type": "ISSUER_AUTHORIZED_GLOBENEWSWIRE_RELEASE",
+      "source_url": "https://www.globenewswire.com/news-release/2023/04/03/2639526/0/en/Pardes-Biosciences-Announces-Top-line-Results-from-Phase-2-Trial-Evaluating-Pomotrelvir-for-the-Treatment-of-COVID-19.html",
+      "source_displayed_time": "April 03, 2023 08:00 ET",
+      "status": "RESOLVED",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "EC-2024-TSHA-TSHA102",
+      "event_date": "2024-06-18",
+      "ticker": "TSHA",
+      "first_public_timestamp": "2024-06-18T07:30:00-04:00",
+      "timestamp_precision": "EXACT_TO_MINUTE",
+      "session_classification": "PRE_MARKET",
+      "last_complete_session_before_event": "2024-06-17",
+      "source_type": "ISSUER_AUTHORIZED_GLOBENEWSWIRE_RELEASE",
+      "source_url": "https://www.globenewswire.com/news-release/2024/06/18/2900309/0/en/taysha-gene-therapies-announces-positive-clinical-data-across-adult-and-pediatric-patients-from-low-dose-cohort-in-ongoing-reveal-phase-1-2-trials-evaluating-tsha-102-in-rett-syndr.html",
+      "source_displayed_time": "June 18, 2024 07:30 ET",
+      "status": "RESOLVED",
+      "notes": "A June 12 preview announced that new data would be presented on June 18 but did not disclose the result dataset; the material clinical data release occurred at 07:30 ET on June 18, before the company webcast and later conference presentations.",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P3-2025-OPT-COAST",
+      "event_date": "2025-03-24",
+      "ticker": "OPT",
+      "first_public_timestamp": "2025-03-24T00:01:00-04:00",
+      "timestamp_precision": "EXACT_TO_MINUTE",
+      "session_classification": "PRE_MARKET",
+      "last_complete_session_before_event": "2025-03-21",
+      "source_type": "ISSUER_AUTHORIZED_GLOBENEWSWIRE_RELEASE",
+      "source_url": "https://www.globenewswire.com/news-release/2025/03/24/3047520/0/en/opthea-announces-coast-phase-3-trial-topline-results.html",
+      "source_displayed_time": "March 24, 2025 00:01 ET",
+      "status": "RESOLVED",
+      "outcome_inspected_for_selection": false
+    },
+    {
+      "candidate_id": "P2-2025-ACTU-ELRAGLUSIB",
+      "acquisition_event_date": "2025-05-31",
+      "ticker": "ACTU",
+      "earliest_material_result_timestamp": "2025-05-06T08:00:00-04:00",
+      "timestamp_precision": "EXACT_TO_MINUTE",
+      "session_classification": "PRE_MARKET",
+      "last_complete_session_before_earliest_material_result": "2025-05-05",
+      "source_type": "ISSUER_AUTHORIZED_GLOBENEWSWIRE_RELEASE",
+      "source_url": "https://www.globenewswire.com/news-release/2025/05/06/3074989/0/en/actuate-therapeutics-announces-statistically-significant-topline-results-from-global-phase-2-trial-of-elraglusib-in-first-line-treatment-of-metastatic-pancreatic-cancer.html",
+      "source_displayed_time": "May 06, 2025 08:00 ET",
+      "later_acquisition_source_url": "https://www.globenewswire.com/news-release/2025/05/31/3091442/0/en/index.html",
+      "later_acquisition_source_displayed_time": "May 31, 2025 16:30 ET",
+      "status": "EVENT_DATE_RENORMALIZATION_REQUIRED_BEFORE_PROMOTION",
+      "source_conflict_resolution": "The May 6 issuer release states that the Phase 2 trial met the primary endpoint, reports statistically significant overall-survival topline results, and explicitly says the dataset would later be presented at ASCO on May 31. Therefore May 31 is not the first public disclosure of the underlying topline result. The existing May 31 acquisition row cannot be promoted as the first-public Phase 2 result event without deterministic event renormalization. A separate May 31 conference event may only be considered if incremental information is later shown to be materially distinct under the duplicate/materiality rules.",
+      "outcome_inspected_for_selection": false
+    }
+  ],
+  "pending_primary_clock_resolution": [
+    {
+      "candidate_id": "REG-2022-AMLX-RELYVRIO",
+      "event_date": "2022-09-29",
+      "reason": "The Business Wire and issuer pages confirm the approval date but the accessible primary/distributor rendering does not expose a publication clock. Do not invent a time; remain pending until a defensible primary timestamp or source-conflict method resolves earliest public availability."
+    },
+    {
+      "candidate_id": "REG-2022-MRNS-ZTALMY",
+      "event_date": "2022-03-18",
+      "reason": "The Business Wire and issuer pages confirm the approval date but the accessible primary/distributor rendering does not expose a publication clock, and third-party mirrors disagree. Do not use third-party clocks as authoritative; remain pending."
+    },
+    {
+      "candidate_id": "CO-2021-IMRA-IMR687ASH",
+      "event_date": "2021-12-13",
+      "issuer_release_timestamp": "2021-12-13T07:00:00-05:00",
+      "reason": "This is a conference-data candidate. The issuer-release clock is known, but M7 requires verification of whether the ASH abstract/poster/oral material was publicly available earlier. Earliest material conference availability remains pending."
+    }
+  ],
+  "summary": {
+    "resolved_rows": 7,
+    "event_date_conflicts_requiring_renormalization": 1,
+    "pending_primary_clock_or_conference_earliest_availability": 3,
+    "new_exact_cutoffs_usable_for_prefreeze_promotion": 7
+  },
+  "promotion_boundary": "Resolved clocks may establish point-in-time cutoffs only. ACTU is explicitly blocked from promotion under its current May 31 acquisition date. Pending clocks are not to be fabricated or inferred from conflicting third-party mirrors. No market outcomes were used."
+}

@@ -1,0 +1,97 @@
+{
+  "acquisition_path": "validation/m7/acquisition/phase3-primary-batch-01.json",
+  "candidate_id": "P3-2020-REGN-LIBTAYO-NSCLC",
+  "catalyst_observation": {
+    "asset": "Libtayo (cemiplimab)",
+    "catalyst_type": "CLIN_P3",
+    "clinical_phase": "PHASE_3",
+    "evidence_id": "bac139b7-61c6-591d-9e32-0dfb880e78cf",
+    "external_event_id": "P3-2020-REGN-LIBTAYO-NSCLC",
+    "indication": "first-line advanced non-small cell lung cancer with high PD-L1",
+    "issuer_id": "0000872589",
+    "known_at": "2020-04-27T06:59:00-04:00",
+    "source_statement": "Regeneron Pharmaceuticals, Inc. - FIRST_PUBLIC_RESULT_DISCLOSURE_CANDIDATE dated 2020-04-27.",
+    "source_tier": 5,
+    "timing_confidence": "HIGH",
+    "title": "Regeneron Pharmaceuticals, Inc. - Libtayo (cemiplimab) (first-line advanced non-small cell lung cancer with high PD-L1)",
+    "window_end": "2020-04-27",
+    "window_start": "2020-04-27"
+  },
+  "catalyst_version": {
+    "asset": "Libtayo (cemiplimab)",
+    "canonical_key": "0000872589|libtayo (cemiplimab)|first-line advanced non-small cell lung cancer with high pd-l1|CLIN_P3",
+    "catalyst_type": "CLIN_P3",
+    "clinical_phase": "PHASE_3",
+    "conflicts": [],
+    "id": "45b10566-218e-5c4c-b03d-67e99919ad56",
+    "indication": "first-line advanced non-small cell lung cancer with high PD-L1",
+    "issuer_id": "0000872589",
+    "known_at": "2020-04-27T06:59:00-04:00",
+    "primary_evidence_id": "bac139b7-61c6-591d-9e32-0dfb880e78cf",
+    "resolved_at_cutoff": "2020-04-27T06:59:00-04:00",
+    "supporting_evidence_ids": [
+      "bac139b7-61c6-591d-9e32-0dfb880e78cf"
+    ],
+    "timing_confidence": "HIGH",
+    "title": "Regeneron Pharmaceuticals, Inc. - Libtayo (cemiplimab) (first-line advanced non-small cell lung cancer with high PD-L1)",
+    "version": 1,
+    "version_sha256": "ec52845474f1f3bb74f6e7b16cd8aa9130b2f44c91a2f72266b8492b22c46862",
+    "window_end": "2020-04-27",
+    "window_start": "2020-04-27"
+  },
+  "company": "Regeneron Pharmaceuticals, Inc.",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": false,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "09e20c7367acc108678e7ce263104aef24d8451b8cb624b82005b8110f1d3c22",
+  "promotion_blockers": [
+    "RESOLVE_CIK_AND_HISTORICAL_SECURITY_IDENTITY",
+    "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+    "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2020-04-27T06:59:00-04:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "Libtayo (cemiplimab)",
+    "blinded": null,
+    "catalyst_version_id": "45b10566-218e-5c4c-b03d-67e99919ad56",
+    "clinical_phase": "PHASE_3",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2020-04-27T06:59:00-04:00",
+    "evidence_ids": [
+      "bac139b7-61c6-591d-9e32-0dfb880e78cf"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "f0760f71-00b3-524a-8ee1-57490cbf5fd7",
+    "indication": "first-line advanced non-small cell lung cancer with high PD-L1",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://investor.regeneron.com/news-releases/news-release-details/phase-3-trial-libtayor-cemiplimab-monotherapy-first-line"
+  ],
+  "stratum": "PHASE_3_PIVOTAL",
+  "ticker": "REGN",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-23.json"
+}

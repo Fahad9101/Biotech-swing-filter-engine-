@@ -1,0 +1,97 @@
+{
+  "acquisition_path": "validation/m7/acquisition/phase2-primary-batch-01.json",
+  "candidate_id": "P2-2023-ALT-MOMENTUM",
+  "catalyst_observation": {
+    "asset": "pemvidutide",
+    "catalyst_type": "CLIN_P2",
+    "clinical_phase": "PHASE_2",
+    "evidence_id": "c1f17367-6943-5982-8e2f-6164c7f7633d",
+    "external_event_id": "P2-2023-ALT-MOMENTUM",
+    "indication": "obesity or overweight",
+    "issuer_id": "0001326190",
+    "known_at": "2023-11-30T16:28:00-05:00",
+    "source_statement": "Altimmune, Inc. - FIRST_PUBLIC_RESULT_DISCLOSURE_CANDIDATE dated 2023-11-30.",
+    "source_tier": 2,
+    "timing_confidence": "MODERATE",
+    "title": "Altimmune, Inc. - pemvidutide (obesity or overweight)",
+    "window_end": "2023-11-30",
+    "window_start": "2023-11-30"
+  },
+  "catalyst_version": {
+    "asset": "pemvidutide",
+    "canonical_key": "0001326190|pemvidutide|obesity or overweight|CLIN_P2",
+    "catalyst_type": "CLIN_P2",
+    "clinical_phase": "PHASE_2",
+    "conflicts": [],
+    "id": "c36c45af-b05d-58b3-8169-7ac4c729a976",
+    "indication": "obesity or overweight",
+    "issuer_id": "0001326190",
+    "known_at": "2023-11-30T16:28:00-05:00",
+    "primary_evidence_id": "c1f17367-6943-5982-8e2f-6164c7f7633d",
+    "resolved_at_cutoff": "2023-11-30T16:28:00-05:00",
+    "supporting_evidence_ids": [
+      "c1f17367-6943-5982-8e2f-6164c7f7633d"
+    ],
+    "timing_confidence": "MODERATE",
+    "title": "Altimmune, Inc. - pemvidutide (obesity or overweight)",
+    "version": 1,
+    "version_sha256": "5f75fd9ea051819701f069d5ff2f9cc832d679999d54524ead12930ec1f7f3de",
+    "window_end": "2023-11-30",
+    "window_start": "2023-11-30"
+  },
+  "company": "Altimmune, Inc.",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": false,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "b6974e2a79b032d0bf8dfbd611150d59c7d5e85d20a2e19008eae6f43e17a978",
+  "promotion_blockers": [
+    "RESOLVE_EXACT_FIRST_PUBLIC_TIMESTAMP",
+    "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+    "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2023-11-30T16:28:00-05:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "pemvidutide",
+    "blinded": null,
+    "catalyst_version_id": "c36c45af-b05d-58b3-8169-7ac4c729a976",
+    "clinical_phase": "PHASE_2",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2023-11-30T16:28:00-05:00",
+    "evidence_ids": [
+      "c1f17367-6943-5982-8e2f-6164c7f7633d"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "6e9a12fc-920d-5cfd-8bc8-7f0745d0c5df",
+    "indication": "obesity or overweight",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://www.sec.gov/Archives/edgar/data/1326190/000132619023000050/alt-20231130xex99d1.htm"
+  ],
+  "stratum": "PHASE_2_POC",
+  "ticker": "ALT",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-35.json"
+}

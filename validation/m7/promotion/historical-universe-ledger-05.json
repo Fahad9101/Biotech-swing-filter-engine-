@@ -1,0 +1,65 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-15",
+  "role": "PREFREEZE_HISTORICAL_UNIVERSE_AND_INVESTABILITY_EVIDENCE",
+  "market_outcomes_inspected": false,
+  "cohort_frozen": false,
+  "method": {
+    "market_data_provider": "Alpaca",
+    "feed": "SIP",
+    "bars": "RAW_AS_TRADED_DAILY",
+    "corporate_actions": "EXPLICIT_SEPARATE_QUERY",
+    "liquidity_check": "20 complete pre-event sessions. Because the frozen specification does not state whether daily dollar volume uses close or session VWAP, both raw_close_x_volume and raw_vwap_x_volume were calculated; both exceed the frozen $2,000,000 median threshold.",
+    "outcome_boundary": "Event-session and post-event bars are excluded from eligibility calculations."
+  },
+  "rows": [
+    {
+      "candidate_id": "P2-2021-GHRS-GH001",
+      "event_date": "2021-12-06",
+      "first_public_timestamp": "2021-12-06T07:00:00-05:00",
+      "pre_event_cutoff_session": "2021-12-03",
+      "ticker": "GHRS",
+      "source_population_exchange": "Nasdaq Global Market",
+      "security_eligibility_pass": true,
+      "last_complete_pre_event_raw_close_usd": 19.26,
+      "price_floor_pass": true,
+      "liquidity_window_start": "2021-11-05",
+      "liquidity_window_end": "2021-12-03",
+      "liquidity_sessions": 20,
+      "median_daily_dollar_volume_close_x_volume_usd": 2112566.83,
+      "median_daily_dollar_volume_vwap_x_volume_usd": 2189155.48,
+      "liquidity_floor_pass": true,
+      "shares_outstanding": 52020849,
+      "shares_source_date": "2021-06-30",
+      "pre_event_market_cap_proxy_usd": 1001921551.74,
+      "market_cap_formula": "last_complete_pre_event_raw_close_x_pre_event_publicly_disclosed_outstanding_shares",
+      "market_cap_floor_pass": true,
+      "first_trade_session": "2021-06-25",
+      "valid_trading_sessions_through_cutoff": 113,
+      "minimum_valid_sessions_required": 60,
+      "valid_session_floor_pass": true,
+      "corporate_actions_through_cutoff": [],
+      "corporate_action_adjustment_required_for_floor_check": false,
+      "continuity_status": "CURRENT_FOREIGN_PRIVATE_ISSUER_REPORTING; SEPTEMBER_2021_INTERIM STATEMENT SHOWED_APPROX_280_745M_CASH_AND_2_033M_TOTAL_LIABILITIES; NO_BANKRUPTCY_OR_UNRESOLVED_GOING_CONCERN_EVENT_IDENTIFIED_PRE_EVENT",
+      "continuity_floor_pass": true,
+      "historical_universe_eligible": true,
+      "outcome_inspected_for_selection": false,
+      "sec_evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1855129/000114036121021557/nt10022430x4_f1a.htm",
+        "https://www.sec.gov/Archives/edgar/data/1855129/000095010321014497/dp158172_ex9901.htm",
+        "https://www.sec.gov/Archives/edgar/data/1855129/000114036121040385/ny20001270x7_ex99-1.htm",
+        "https://www.sec.gov/Archives/edgar/data/1855129/000114036121040383/ny20001270x9_6k.htm"
+      ],
+      "notes": "The June 2021 share count was public before the catalyst and alone establishes market capitalization far above $50 million. The pre-event corporate reorganization/share consolidation occurred before listed trading and therefore does not break the >=60-session post-listing continuity test. The corporate-action query returned no post-listing corporate actions through the event cutoff."
+    }
+  ],
+  "summary": {
+    "evaluated": 1,
+    "eligible": 1,
+    "excluded": 0,
+    "pending": 0,
+    "targeted_single_asset_replacement_survived_investability": 1
+  }
+}

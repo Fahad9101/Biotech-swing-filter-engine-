@@ -1,0 +1,97 @@
+{
+  "acquisition_path": "validation/m7/acquisition/phase2-primary-batch-01.json",
+  "candidate_id": "P2-2018-ESPR-BA-PCSK9",
+  "catalyst_observation": {
+    "asset": "bempedoic acid",
+    "catalyst_type": "CLIN_P2",
+    "clinical_phase": "PHASE_2",
+    "evidence_id": "ddcd6da7-a4e1-5ae6-b615-825cfb292024",
+    "external_event_id": "P2-2018-ESPR-BA-PCSK9",
+    "indication": "hypercholesterolemia on PCSK9 inhibitor therapy",
+    "issuer_id": "0001434868",
+    "known_at": "2018-03-27T07:30:00-04:00",
+    "source_statement": "Esperion Therapeutics, Inc. - FIRST_PUBLIC_RESULT_DISCLOSURE_CANDIDATE dated 2018-03-27.",
+    "source_tier": 2,
+    "timing_confidence": "HIGH",
+    "title": "Esperion Therapeutics, Inc. - bempedoic acid (hypercholesterolemia on PCSK9 inhibitor therapy)",
+    "window_end": "2018-03-27",
+    "window_start": "2018-03-27"
+  },
+  "catalyst_version": {
+    "asset": "bempedoic acid",
+    "canonical_key": "0001434868|bempedoic acid|hypercholesterolemia on pcsk9 inhibitor therapy|CLIN_P2",
+    "catalyst_type": "CLIN_P2",
+    "clinical_phase": "PHASE_2",
+    "conflicts": [],
+    "id": "dce7d6b1-ac58-561c-a274-9154c554c321",
+    "indication": "hypercholesterolemia on PCSK9 inhibitor therapy",
+    "issuer_id": "0001434868",
+    "known_at": "2018-03-27T07:30:00-04:00",
+    "primary_evidence_id": "ddcd6da7-a4e1-5ae6-b615-825cfb292024",
+    "resolved_at_cutoff": "2018-03-27T07:30:00-04:00",
+    "supporting_evidence_ids": [
+      "ddcd6da7-a4e1-5ae6-b615-825cfb292024"
+    ],
+    "timing_confidence": "HIGH",
+    "title": "Esperion Therapeutics, Inc. - bempedoic acid (hypercholesterolemia on PCSK9 inhibitor therapy)",
+    "version": 1,
+    "version_sha256": "471f35d4c9762cb93d974608665af97cf2663aaec6e41e9a71c9532c87f475b1",
+    "window_end": "2018-03-27",
+    "window_start": "2018-03-27"
+  },
+  "company": "Esperion Therapeutics, Inc.",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": false,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "8fea93c504551dd1271e407e23ab708c28f0f40039d2ba4231f764b49455a3d0",
+  "promotion_blockers": [
+    "RESOLVE_CIK_AND_HISTORICAL_SECURITY_IDENTITY",
+    "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+    "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2018-03-27T07:30:00-04:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "bempedoic acid",
+    "blinded": null,
+    "catalyst_version_id": "dce7d6b1-ac58-561c-a274-9154c554c321",
+    "clinical_phase": "PHASE_2",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2018-03-27T07:30:00-04:00",
+    "evidence_ids": [
+      "ddcd6da7-a4e1-5ae6-b615-825cfb292024"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "f7087174-5e10-5d92-a51e-555e273b7d00",
+    "indication": "hypercholesterolemia on PCSK9 inhibitor therapy",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://www.globenewswire.com/news-release/2018/03/27/1453515/0/en/Esperion-Announces-Positive-Top-Line-Results-from-Phase-2-Study-"
+  ],
+  "stratum": "PHASE_2_POC",
+  "ticker": "ESPR",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-26.json"
+}

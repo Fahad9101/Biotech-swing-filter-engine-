@@ -1,0 +1,98 @@
+{
+  "acquisition_path": "validation/m7/acquisition/conference-other-primary-batch-01.json",
+  "candidate_id": "CO-2024-KROS-ELRITERCEPTASH",
+  "catalyst_observation": {
+    "asset": "elritercept (KER-050)",
+    "catalyst_type": "CONF_DATA",
+    "clinical_phase": "PHASE_2",
+    "evidence_id": "c552a9d3-f702-5b40-b7a7-99a65a046163",
+    "external_event_id": "CO-2024-KROS-ELRITERCEPTASH",
+    "indication": "MDS and myelofibrosis",
+    "issuer_id": "0001664710",
+    "known_at": "2024-12-09T19:30:00-05:00",
+    "source_statement": "Keros Therapeutics, Inc. - CONFERENCE_DATA_DISCLOSURE_CANDIDATE dated 2024-12-09.",
+    "source_tier": 5,
+    "timing_confidence": "HIGH",
+    "title": "Keros Therapeutics, Inc. - elritercept (KER-050) (MDS and myelofibrosis)",
+    "window_end": "2024-12-09",
+    "window_start": "2024-12-09"
+  },
+  "catalyst_version": {
+    "asset": "elritercept (KER-050)",
+    "canonical_key": "0001664710|elritercept (ker-050)|mds and myelofibrosis|CONF_DATA",
+    "catalyst_type": "CONF_DATA",
+    "clinical_phase": "PHASE_2",
+    "conflicts": [],
+    "id": "0cc99eda-6af9-530d-b833-6fa0f7ce15a3",
+    "indication": "MDS and myelofibrosis",
+    "issuer_id": "0001664710",
+    "known_at": "2024-12-09T19:30:00-05:00",
+    "primary_evidence_id": "c552a9d3-f702-5b40-b7a7-99a65a046163",
+    "resolved_at_cutoff": "2024-12-09T19:30:00-05:00",
+    "supporting_evidence_ids": [
+      "c552a9d3-f702-5b40-b7a7-99a65a046163"
+    ],
+    "timing_confidence": "HIGH",
+    "title": "Keros Therapeutics, Inc. - elritercept (KER-050) (MDS and myelofibrosis)",
+    "version": 1,
+    "version_sha256": "ca702ccf2fff3dc3f08537b017a8bc4c1a44cc396cc40a1379e4230c246279a9",
+    "window_end": "2024-12-09",
+    "window_start": "2024-12-09"
+  },
+  "company": "Keros Therapeutics, Inc.",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": false,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "ab4d7eaf665405d4a008051874c1af17a89e6794bf856be6b6366fed2ca32f0c",
+  "promotion_blockers": [
+    "RESOLVE_CIK_AND_HISTORICAL_SECURITY_IDENTITY",
+    "VERIFY_CONFERENCE_FIRST_PUBLIC_AVAILABILITY",
+    "VERIFY_UNDERLYING_CLINICAL_PHASE_AND_EVENT_DEDUPLICATION",
+    "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2024-12-09T19:30:00-05:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "elritercept (KER-050)",
+    "blinded": null,
+    "catalyst_version_id": "0cc99eda-6af9-530d-b833-6fa0f7ce15a3",
+    "clinical_phase": "PHASE_2",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2024-12-09T19:30:00-05:00",
+    "evidence_ids": [
+      "c552a9d3-f702-5b40-b7a7-99a65a046163"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "42ccb271-4893-55b0-9ba3-75310bfd528f",
+    "indication": "MDS and myelofibrosis",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://www.globenewswire.com/fr/news-release/2024/12/10/2994148/0/en/Keros-Therapeutics-Presents-Clinical-Data-from-its-Elritercept-Program-at-the-66th-American-Society-of-Hematology-Annual-Meeting-and-Exposition.html"
+  ],
+  "stratum": "CONFERENCE_OTHER",
+  "ticker": "KROS",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-28.json"
+}

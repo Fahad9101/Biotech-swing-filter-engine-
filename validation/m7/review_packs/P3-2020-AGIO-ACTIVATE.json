@@ -1,0 +1,96 @@
+{
+  "acquisition_path": "validation/m7/acquisition/phase3-primary-batch-01.json",
+  "candidate_id": "P3-2020-AGIO-ACTIVATE",
+  "catalyst_observation": {
+    "asset": "mitapivat",
+    "catalyst_type": "CLIN_P3",
+    "clinical_phase": "PHASE_3",
+    "evidence_id": "d0384da6-beb3-5c7d-b887-f76ed40c2a22",
+    "external_event_id": "P3-2020-AGIO-ACTIVATE",
+    "indication": "pyruvate kinase deficiency in adults not regularly transfused",
+    "issuer_id": "0001439222",
+    "known_at": "2020-12-01T07:00:00-05:00",
+    "source_statement": "Agios Pharmaceuticals, Inc. - FIRST_PUBLIC_RESULT_DISCLOSURE_CANDIDATE dated 2020-12-01.",
+    "source_tier": 5,
+    "timing_confidence": "HIGH",
+    "title": "Agios Pharmaceuticals, Inc. - mitapivat (pyruvate kinase deficiency in adults not regularly transfused)",
+    "window_end": "2020-12-01",
+    "window_start": "2020-12-01"
+  },
+  "catalyst_version": {
+    "asset": "mitapivat",
+    "canonical_key": "0001439222|mitapivat|pyruvate kinase deficiency in adults not regularly transfused|CLIN_P3",
+    "catalyst_type": "CLIN_P3",
+    "clinical_phase": "PHASE_3",
+    "conflicts": [],
+    "id": "0cbe1880-b5df-5958-ac7b-001b590cf9c2",
+    "indication": "pyruvate kinase deficiency in adults not regularly transfused",
+    "issuer_id": "0001439222",
+    "known_at": "2020-12-01T07:00:00-05:00",
+    "primary_evidence_id": "d0384da6-beb3-5c7d-b887-f76ed40c2a22",
+    "resolved_at_cutoff": "2020-12-01T07:00:00-05:00",
+    "supporting_evidence_ids": [
+      "d0384da6-beb3-5c7d-b887-f76ed40c2a22"
+    ],
+    "timing_confidence": "HIGH",
+    "title": "Agios Pharmaceuticals, Inc. - mitapivat (pyruvate kinase deficiency in adults not regularly transfused)",
+    "version": 1,
+    "version_sha256": "0394fa39c2872838919e6e2190d5fee681249814007a9d4ac9b9fedb2e2577e0",
+    "window_end": "2020-12-01",
+    "window_start": "2020-12-01"
+  },
+  "company": "Agios Pharmaceuticals, Inc.",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": false,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "a50cc3f6351cd1df4efb8970a031bf11f4407b9beb94a280db29c053b75f0a5f",
+  "promotion_blockers": [
+    "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+    "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2020-12-01T07:00:00-05:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "mitapivat",
+    "blinded": null,
+    "catalyst_version_id": "0cbe1880-b5df-5958-ac7b-001b590cf9c2",
+    "clinical_phase": "PHASE_3",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2020-12-01T07:00:00-05:00",
+    "evidence_ids": [
+      "d0384da6-beb3-5c7d-b887-f76ed40c2a22"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "7b2f7b53-e2e9-5f7a-90f0-73a8fe7185a2",
+    "indication": "pyruvate kinase deficiency in adults not regularly transfused",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://www.globenewswire.com/news-release/2020/12/01/2137295/0/en/Agios-Announces-the-Phase-3-ACTIVATE-Trial-of-Mitapivat-Achieved-Its-Primary-Endpoint-in-Adults-with-Pyruvate-Kinase-Deficiency-Who-Are-Not-Regularly-Transfused.html"
+  ],
+  "stratum": "PHASE_3_PIVOTAL",
+  "ticker": "AGIO",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-21.json"
+}

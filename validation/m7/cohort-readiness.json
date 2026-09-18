@@ -1,0 +1,173 @@
+{
+  "accepted_final_state_without_reviewer": true,
+  "authoritative_cohort_manifest_present": true,
+  "authoritative_events_frozen": 120,
+  "blocking_findings": [
+    "Cohort is frozen; investment-rule behavior and cohort membership must not change without a new, separately approved rules version.",
+    "BOE-1.0.0 itself was never scored end-to-end for any event: its SCIENCE factor and PoS calculation require a ManualScienceReview only a real human scientific/catalyst reviewer can honestly produce, and no automated agent may supply or impersonate one (docs/M7-HUMAN-REVIEW-BLOCKER.md). No HistoricalDecisionLock exists or ever will for this cohort under BOE-1.0.0 as specified, absent a real reviewer.",
+    "The project owner explicitly chose to cancel that requirement and accept genuinely different, review-free real substitutes instead of leaving M7 at cohort+outcomes only (docs/M7-OBJECTIVE-METHODOLOGY.md): an objective PoS methodology, plus real CATALYST, CASH_DILUTION, and TECHNICAL factor scores (validation/m7/partial-scorecard-calibration.json). All are real, calibrated against real outcomes, and honestly reported, including that neither the PoS-only nor the combined-factor signal shows a clear, reliable predictive edge - see validation/m7/validation-report.json for the full picture.",
+    "VALUATION (rNPV) was never reconstructed for any event: it needs real peak-sales/TAM assumptions per indication this project cannot objectively source at scale, the same category of problem as SCIENCE. Without it, gates.py's GateInput cannot be built (it needs base_ev_pct/conservative_ev_pct/reward_risk, all rNPV-derived), so no gate evaluation and no real classification exist for any event either - not just unattempted, blocked."
+  ],
+  "candidate_counts": {
+    "fail": 49,
+    "not_yet_excluded": 158,
+    "pass": 155,
+    "pending": 3,
+    "total": 207
+  },
+  "cash_dilution_scores_complete": 88,
+  "cash_dilution_scores_current": true,
+  "catalyst_scores_complete": 120,
+  "catalyst_scores_current": true,
+  "decision_locks_complete": 0,
+  "eligible_authoritative_registry_count": 153,
+  "financing_reserve": {
+    "fail": 4,
+    "not_yet_excluded": 51,
+    "pass": 51,
+    "pending": 0,
+    "requirement": 20,
+    "total": 55
+  },
+  "frozen_cohort_financing_count": 38,
+  "frozen_cohort_max_issuer_count": 5,
+  "frozen_cohort_negative_count": 43,
+  "frozen_cohort_single_asset_count": 20,
+  "frozen_cohort_strata": {
+    "CONFERENCE_OTHER": 15,
+    "EARLY_CLINICAL": 15,
+    "PHASE_2_POC": 30,
+    "PHASE_3_PIVOTAL": 30,
+    "REGULATORY": 30
+  },
+  "generator": "python scripts/m7_build_authoritative_status.py",
+  "holdout_2025_locked_events": 0,
+  "issuer_concentration_findings": [
+    {
+      "candidate_ids": [
+        "P2-2018-BIIB-BAN2401",
+        "P2-2019-BIIB-LILAC",
+        "P2-2021-BIIB-CONVEY",
+        "P2-2021-BIIB-TANGO",
+        "P3-2021-BIIB-STAR",
+        "P3-2021-BIIB-VALOR"
+      ],
+      "cap": 5,
+      "pass_count": 6,
+      "scope": "OVERALL",
+      "ticker": "BIIB"
+    },
+    {
+      "candidate_ids": [
+        "CO-2024-AUTL-OBECELASH",
+        "CO-2025-AUTL-CARLYSLEASH"
+      ],
+      "cap_share": 0.1,
+      "pass_count": 2,
+      "scope": "CONFERENCE_OTHER",
+      "share": 0.1176,
+      "stratum_pass_total": 17,
+      "ticker": "AUTL"
+    },
+    {
+      "candidate_ids": [
+        "CO-2022-KROS-KER050ASH",
+        "CO-2024-KROS-ELRITERCEPTASH"
+      ],
+      "cap_share": 0.1,
+      "pass_count": 2,
+      "scope": "CONFERENCE_OTHER",
+      "share": 0.1176,
+      "stratum_pass_total": 17,
+      "ticker": "KROS"
+    }
+  ],
+  "manifest_cohort_sha256": "37f2e70dcc0626b40e97637e34056c9279ae9a5e6daf69d1c2f730e77c114e95",
+  "manifest_frozen_at": "2026-09-17T12:09:29.781712+03:00",
+  "manifest_path": "validation/m7/cohort-manifest.json",
+  "manifest_registry_sha256": "a75c778daf2fcbb4ace2f405889f0c5bf184e9e00ccdbd7586e1354d6226026b",
+  "manifest_seed": 100100,
+  "merge_ready": false,
+  "milestone": 7,
+  "milestone_8_allowed": false,
+  "milestone_complete": false,
+  "negative_reserve": {
+    "fail": 19,
+    "not_yet_excluded": 53,
+    "pass": 52,
+    "pending": 1,
+    "requirement": 40,
+    "total": 72
+  },
+  "objective_calibration_brier_beats_naive_prior": false,
+  "objective_calibration_current": true,
+  "objective_pos_assessments_complete": 120,
+  "objective_pos_current": true,
+  "objective_pos_methodology_version": "src/boe/objective_pos_methodology.py",
+  "objective_validation_report_current": true,
+  "objective_validation_report_recommendation": "PROPOSE RECALIBRATION IN A NEW BOE VERSION - the review-free PoS methodology as built does not beat a naive constant-rate baseline (Brier 0.2498 vs 0.2299) and does not rank correctly (top-quintile swing success 0.292 vs bottom-quintile 0.375); it is not a substitute for a genuine human scientific review and should not inform live decisions in its current form.",
+  "partial_scorecard_calibration_current": true,
+  "real_four_snapshot_reconstructions_complete": 0,
+  "real_outcomes_complete": 120,
+  "real_outcomes_current": true,
+  "real_outcomes_failed_count": 0,
+  "rebuilt_registry_sha256": "a75c778daf2fcbb4ace2f405889f0c5bf184e9e00ccdbd7586e1354d6226026b",
+  "registry_unchanged_since_freeze": true,
+  "required_action": "BOE-1.0.0 proper remains permanently blocked on a real human scientific/catalyst reviewer this project does not have; re-run this script if that changes. The objective substitute methodology's own recommendation is to recalibrate, not to use it live. Do not merge PR #5 or start Milestone 8 without explicit owner approval regardless.",
+  "required_minimum_events": 120,
+  "rules_version": "BOE-1.0.0",
+  "single_asset_reserve": {
+    "fail": 9,
+    "not_yet_excluded": 30,
+    "pass": 29,
+    "pending": 1,
+    "requirement": 20,
+    "total": 39
+  },
+  "snapshot_cutoffs_computed": 120,
+  "snapshot_cutoffs_current": true,
+  "strata": {
+    "CONFERENCE_OTHER": {
+      "fail": 15,
+      "not_yet_excluded": 17,
+      "pass": 17,
+      "pending": 0,
+      "requirement": 15,
+      "total": 32
+    },
+    "EARLY_CLINICAL": {
+      "fail": 14,
+      "not_yet_excluded": 19,
+      "pass": 19,
+      "pending": 0,
+      "requirement": 15,
+      "total": 33
+    },
+    "PHASE_2_POC": {
+      "fail": 11,
+      "not_yet_excluded": 41,
+      "pass": 40,
+      "pending": 1,
+      "requirement": 30,
+      "total": 52
+    },
+    "PHASE_3_PIVOTAL": {
+      "fail": 8,
+      "not_yet_excluded": 33,
+      "pass": 33,
+      "pending": 0,
+      "requirement": 30,
+      "total": 41
+    },
+    "REGULATORY": {
+      "fail": 1,
+      "not_yet_excluded": 48,
+      "pass": 46,
+      "pending": 2,
+      "requirement": 30,
+      "total": 49
+    }
+  },
+  "technical_scores_complete": 120,
+  "technical_scores_current": true
+}

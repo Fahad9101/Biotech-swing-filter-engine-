@@ -1,0 +1,97 @@
+{
+  "acquisition_path": "validation/m7/acquisition/phase3-primary-batch-01.json",
+  "candidate_id": "P3-2019-NVAX-PREPARE",
+  "catalyst_observation": {
+    "asset": "ResVax",
+    "catalyst_type": "CLIN_P3",
+    "clinical_phase": "PHASE_3",
+    "evidence_id": "0d16ed51-4b3e-515c-9234-515d919fc945",
+    "external_event_id": "P3-2019-NVAX-PREPARE",
+    "indication": "prevention of RSV disease in infants via maternal immunization",
+    "issuer_id": "0001000694",
+    "known_at": "2019-02-28T07:00:00-05:00",
+    "source_statement": "Novavax, Inc. - FIRST_PUBLIC_RESULT_DISCLOSURE_CANDIDATE dated 2019-02-28.",
+    "source_tier": 5,
+    "timing_confidence": "HIGH",
+    "title": "Novavax, Inc. - ResVax (prevention of RSV disease in infants via maternal immunization)",
+    "window_end": "2019-02-28",
+    "window_start": "2019-02-28"
+  },
+  "catalyst_version": {
+    "asset": "ResVax",
+    "canonical_key": "0001000694|resvax|prevention of rsv disease in infants via maternal immunization|CLIN_P3",
+    "catalyst_type": "CLIN_P3",
+    "clinical_phase": "PHASE_3",
+    "conflicts": [],
+    "id": "ced36078-99f7-54f2-937a-2a2cf5a5629b",
+    "indication": "prevention of RSV disease in infants via maternal immunization",
+    "issuer_id": "0001000694",
+    "known_at": "2019-02-28T07:00:00-05:00",
+    "primary_evidence_id": "0d16ed51-4b3e-515c-9234-515d919fc945",
+    "resolved_at_cutoff": "2019-02-28T07:00:00-05:00",
+    "supporting_evidence_ids": [
+      "0d16ed51-4b3e-515c-9234-515d919fc945"
+    ],
+    "timing_confidence": "HIGH",
+    "title": "Novavax, Inc. - ResVax (prevention of RSV disease in infants via maternal immunization)",
+    "version": 1,
+    "version_sha256": "d1a72e59814c93fe2434f1e567bc0aadb5069d0f669a7a2d271493ff3c4dc40f",
+    "window_end": "2019-02-28",
+    "window_start": "2019-02-28"
+  },
+  "company": "Novavax, Inc.",
+  "format_version": "1.0",
+  "market_outcomes_inspected": false,
+  "milestone": 7,
+  "negative_event_candidate": true,
+  "outcome_inspected_for_selection": false,
+  "pack_sha256": "9fb42c58e03d6d177be23f3c5e46f49c6c24b83e42ca90580110987d81308619",
+  "promotion_blockers": [
+    "RESOLVE_CIK_AND_HISTORICAL_SECURITY_IDENTITY",
+    "VERIFY_TRIAL_IDENTITY_AND_HISTORICAL_REGISTRY_VERSION",
+    "VERIFY_HISTORICAL_BOE_UNIVERSE_AT_EVENT",
+    "RESOLVE_FINANCING_T_MINUS_90_TO_T_PLUS_30",
+    "RESOLVE_SINGLE_ASSET_ISSUER_STATUS",
+    "VERIFY_POINT_IN_TIME_SCIENCE_AND_CAPITAL_STRUCTURE"
+  ],
+  "review": {
+    "historical_catalyst_confirmation_status": "NOT_YET_REVIEWED",
+    "manual_science_review_status": "NOT_YET_REVIEWED",
+    "note": "A HistoricalCatalystConfirmation must bind evidence_cutoff exactly to 2019-02-28T07:00:00-05:00 (this pack's catalyst_version.resolved_at_cutoff) and review all of catalyst_version.supporting_evidence_ids; outcome_data_shown must be false. Do not fabricate, backdate, or synthesize either record - only a genuine human review performed against this pack's evidence may populate them.",
+    "reviewed_at": null,
+    "reviewer": null
+  },
+  "role": "OUTCOME_BLIND_HUMAN_REVIEW_PACK",
+  "rules_version": "BOE-1.0.0",
+  "scientific_evidence_pack": {
+    "asset": "ResVax",
+    "blinded": null,
+    "catalyst_version_id": "ced36078-99f7-54f2-937a-2a2cf5a5629b",
+    "clinical_phase": "PHASE_3",
+    "comparator": null,
+    "enrollment": null,
+    "evidence_cutoff": "2019-02-28T07:00:00-05:00",
+    "evidence_ids": [
+      "0d16ed51-4b3e-515c-9234-515d919fc945"
+    ],
+    "generated_at": "2026-09-16T00:00:00Z",
+    "id": "9bebe732-c414-5de4-b638-dbed8940bf1c",
+    "indication": "prevention of RSV disease in infants via maternal immunization",
+    "manual_review_required": true,
+    "primary_completion_date": null,
+    "primary_endpoints": [],
+    "randomized": null,
+    "regulatory_context": [],
+    "safety_signals": [],
+    "secondary_endpoints": [],
+    "study_design": "NOT_YET_REVIEWED",
+    "study_status": null,
+    "trial_ids": []
+  },
+  "source_citations": [
+    "https://www.globenewswire.com/news-release/2019/02/28/1744163/0/en/Novavax-Announces-Topline-Results-from-Phase-3-PrepareTM-Trial-of-ResVax-for-Prevention-of-RSV-Disease-in-Infants-via-Maternal-Immunization.html"
+  ],
+  "stratum": "PHASE_3_PIVOTAL",
+  "ticker": "NVAX",
+  "universe_evidence_path": "validation/m7/promotion/historical-universe-ledger-21.json"
+}

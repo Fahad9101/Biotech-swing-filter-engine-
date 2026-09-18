@@ -1,0 +1,43 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "rules_version": "BOE-1.0.0",
+  "generated_at": "2026-09-15",
+  "role": "PREFREEZE_HISTORICAL_SECURITY_IDENTITY_EVIDENCE",
+  "market_outcomes_inspected": false,
+  "cohort_frozen": false,
+  "rows": [
+    {
+      "candidate_id": "P3-2022-MDGL-MAESTRO-NASH",
+      "event_date": "2022-12-19",
+      "legal_issuer": "Madrigal Pharmaceuticals, Inc.",
+      "historical_ticker": "MDGL",
+      "cik": "0001157601",
+      "exchange": "The Nasdaq Stock Market LLC",
+      "security_identity": "Common Stock, $0.0001 par value per share",
+      "listing_evidence": "The pre-event Q3 2022 Form 10-Q identifies Madrigal as an SEC reporting issuer and MDGL common stock as its U.S.-listed common equity. No event-date ticker change or reorganization is identified.",
+      "ticker_change_or_reorganization_before_event": "NONE_IDENTIFIED_MATERIALLY_AFFECTING_EVENT_SECURITY",
+      "identity_status": "IDENTITY_CONFIRMED",
+      "us_listing_status": "US_LISTING_CONFIRMED",
+      "historical_universe_eligible": true,
+      "pre_event_share_count_reference": {
+        "shares_outstanding": 17103395,
+        "as_of": "2022-09-30",
+        "source": "Q3 2022 Form 10-Q balance-sheet disclosure"
+      },
+      "evidence_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1157601/000119312522276468/d403221d10q.htm",
+        "https://www.sec.gov/Archives/edgar/data/1157601/0001193125-22-307935-index.html"
+      ],
+      "evidence_dates": ["2022-11-03", "2022-12-19"],
+      "ambiguity": "NONE_MATERIAL_FOR_EVENT_DATE_SECURITY_IDENTITY",
+      "outcome_inspected_for_selection": false
+    }
+  ],
+  "summary": {
+    "rows": 1,
+    "identity_confirmed": 1,
+    "us_listing_confirmed": 1,
+    "historical_boe_universe_eligible_confirmed": 1
+  }
+}
