@@ -77,6 +77,27 @@ def alpaca_validation_license(reviewed_at: datetime) -> MarketDataLicenseAudit:
     )
 
 
+def _require_valid_header_value(value: str, name: str) -> None:
+    """Real diagnosis, not a guess: stripping leading/trailing whitespace
+    (above) was not enough to fix a live GitHub Actions failure
+    (httpcore.LocalProtocolError: Illegal header value), so the illegal
+    character is somewhere else - embedded mid-string, or not whitespace
+    at all (e.g. a smart quote or other character substituted by whatever
+    the secret was copied from). Valid HTTP header field values are
+    printable ASCII 0x20-0x7E only; report exactly which positions and
+    Unicode codepoints are invalid without ever printing the surrounding
+    characters, so this is diagnosable without exposing the secret."""
+    bad = [(i, ch) for i, ch in enumerate(value) if not ("\x20" <= ch <= "\x7e")]
+    if bad:
+        details = ", ".join(f"position {i}: U+{ord(ch):04X}" for i, ch in bad[:5])
+        more = f" (+{len(bad) - 5} more)" if len(bad) > 5 else ""
+        raise ValueError(
+            f"{name} contains {len(bad)} character(s) that are not valid inside an HTTP "
+            f"header value: {details}{more}. Re-check how this credential was copied/pasted "
+            "into its source (e.g. GitHub Actions secret) - the value itself is never logged."
+        )
+
+
 def credentials_from_env() -> tuple[str, str, str]:
     """Read (api_key_id, api_secret_key, data_url) from the environment.
 
@@ -97,6 +118,8 @@ def credentials_from_env() -> tuple[str, str, str]:
         raise ValueError(
             "ALPACA_API_KEY_ID and ALPACA_API_SECRET_KEY must be set in the environment"
         )
+    _require_valid_header_value(key_id, "ALPACA_API_KEY_ID")
+    _require_valid_header_value(secret_key, "ALPACA_API_SECRET_KEY")
     data_url = os.environ.get("ALPACA_DATA_URL", DEFAULT_DATA_URL).strip()
     return key_id, secret_key, data_url
 
