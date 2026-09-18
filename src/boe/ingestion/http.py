@@ -19,6 +19,7 @@ ALLOWED_HOSTS = frozenset(
         "api.fda.gov",
         "clinicaltrials.gov",
         "data.sec.gov",
+        "efts.sec.gov",
         "nasdaqtrader.com",
         "www.clinicaltrials.gov",
         "www.fda.gov",
@@ -26,7 +27,7 @@ ALLOWED_HOSTS = frozenset(
         "www.sec.gov",
     }
 )
-SEC_HOSTS = frozenset({"data.sec.gov", "www.sec.gov"})
+SEC_HOSTS = frozenset({"data.sec.gov", "efts.sec.gov", "www.sec.gov"})
 RETRYABLE_STATUS_CODES = frozenset({429, 500, 502, 503, 504})
 
 
