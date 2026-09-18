@@ -54,16 +54,20 @@ class EdgarFullTextSearchAdapter:
         forms: str = "8-K",
         start_date: date,
         end_date: date,
+        from_: int = 0,
     ) -> str:
         if not phrase.strip():
             raise ValueError("phrase is required")
         if end_date < start_date:
             raise ValueError("end_date cannot be before start_date")
+        if from_ < 0:
+            raise ValueError("from_ cannot be negative")
         query = quote(f'"{phrase.strip()}"')
-        return (
+        url = (
             f"{EDGAR_FTS_API}?q={query}&forms={forms}"
             f"&startdt={start_date.isoformat()}&enddt={end_date.isoformat()}"
         )
+        return url if from_ == 0 else f"{url}&from={from_}"
 
     def search(
         self,
@@ -72,21 +76,27 @@ class EdgarFullTextSearchAdapter:
         forms: str = "8-K",
         start_date: date,
         end_date: date,
-    ) -> tuple[FetchedPayload, tuple[FilingHit, ...]]:
+        from_: int = 0,
+    ) -> tuple[FetchedPayload, int, tuple[FilingHit, ...]]:
         payload = self._client.fetch(
-            self.search_url(phrase, forms=forms, start_date=start_date, end_date=end_date)
+            self.search_url(
+                phrase, forms=forms, start_date=start_date, end_date=end_date, from_=from_
+            )
         )
-        return payload, self.parse_results(payload.content)
+        total, hits = self.parse_results(payload.content)
+        return payload, total, hits
 
     @classmethod
-    def parse_results(cls, content: bytes | str) -> tuple[FilingHit, ...]:
+    def parse_results(cls, content: bytes | str) -> tuple[int, tuple[FilingHit, ...]]:
         raw = json.loads(content)
         if not isinstance(raw, dict):
             raise ValueError("EDGAR full-text search response must be an object")
         hits_block = raw.get("hits")
+        total_block = hits_block.get("total") if isinstance(hits_block, dict) else None
+        total = int(total_block["value"]) if isinstance(total_block, dict) else 0
         hits = hits_block.get("hits") if isinstance(hits_block, dict) else None
         if not isinstance(hits, list):
-            return ()
+            return total, ()
         results: list[FilingHit] = []
         for hit in hits:
             if not isinstance(hit, dict):
@@ -94,7 +104,7 @@ class EdgarFullTextSearchAdapter:
             parsed = cls._parse_hit(hit)
             if parsed is not None:
                 results.append(parsed)
-        return tuple(results)
+        return total, tuple(results)
 
     @classmethod
     def _parse_hit(cls, hit: dict[str, Any]) -> FilingHit | None:

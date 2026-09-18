@@ -60,6 +60,17 @@ def test_search_url_quotes_the_phrase_and_sets_date_range():
     assert "enddt=2026-09-18" in url
 
 
+def test_search_url_includes_from_offset_only_when_nonzero():
+    base = EdgarFullTextSearchAdapter.search_url(
+        "PDUFA", start_date=date(2026, 7, 1), end_date=date(2026, 9, 18)
+    )
+    assert "&from=" not in base
+    paged = EdgarFullTextSearchAdapter.search_url(
+        "PDUFA", start_date=date(2026, 7, 1), end_date=date(2026, 9, 18), from_=100
+    )
+    assert paged.endswith("&from=100")
+
+
 def test_search_url_rejects_bad_range_and_empty_phrase():
     with pytest.raises(ValueError, match="phrase is required"):
         EdgarFullTextSearchAdapter.search_url(
@@ -72,7 +83,10 @@ def test_search_url_rejects_bad_range_and_empty_phrase():
 
 
 def test_parse_results_extracts_real_shaped_hits():
-    hits = EdgarFullTextSearchAdapter.parse_results(__import__("json").dumps(REAL_SHAPED_RESPONSE))
+    total, hits = EdgarFullTextSearchAdapter.parse_results(
+        __import__("json").dumps(REAL_SHAPED_RESPONSE)
+    )
+    assert total == 2
     assert len(hits) == 2
     capr, bbio = hits
     assert capr == FilingHit(
@@ -108,7 +122,7 @@ def test_filing_hit_document_url_matches_real_edgar_archive_layout():
 
 def test_parse_results_skips_malformed_hits():
     malformed = {"hits": {"hits": [{"_id": "no-colon-here", "_source": {}}, {"_source": {}}]}}
-    assert EdgarFullTextSearchAdapter.parse_results(__import__("json").dumps(malformed)) == ()
+    assert EdgarFullTextSearchAdapter.parse_results(__import__("json").dumps(malformed)) == (0, ())
 
 
 def test_parse_results_requires_an_object():
@@ -126,9 +140,10 @@ def test_search_fetches_and_parses(monkeypatch: pytest.MonkeyPatch):
     monkeypatch.setattr("boe.ingestion.http.time.sleep", lambda _: None)
     with _client(handler) as client:
         adapter = EdgarFullTextSearchAdapter(client)
-        payload, hits = adapter.search(
+        payload, total, hits = adapter.search(
             "PDUFA", start_date=date(2026, 7, 1), end_date=date(2026, 9, 18)
         )
 
     assert payload.status_code == 200
+    assert total == 2
     assert len(hits) == 2
