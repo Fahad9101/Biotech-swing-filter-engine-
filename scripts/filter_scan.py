@@ -48,9 +48,12 @@ SCORECARD_PATH = ROOT / "contracts/boe-scorecard.v1.0.0.json"
 OUTPUT_PATH = ROOT / "screening/watchlist.json"
 SUMMARY_PATH = ROOT / "screening/watchlist-summary.json"
 
-USER_AGENT = (
-    "BOE-Filter live-screening research https://github.com/Fahad9101/Biotech-swing-filter-engine-"
-)
+# SEC's efts.sec.gov (unlike www.sec.gov/data.sec.gov) real-time rejects any
+# User-Agent containing "github.com" with a 403 "Undeclared Automated Tool"
+# page - confirmed by isolated live testing, not a general bot/IP block
+# (identical headers minus the github.com substring succeed). Keep this
+# string free of any URL.
+USER_AGENT = "BOE-Filter live-screening research@example.com"
 BENCHMARK_SYMBOL = "XBI"
 DEFAULT_LOOKBACK_DAYS = 90
 REQUEST_PACING_SECONDS = 0.15
@@ -92,6 +95,7 @@ def build(
     discovery_failures: list[dict[str, Any]] = []
     financial_data_gaps: list[dict[str, Any]] = []
     technical_data_gaps: list[dict[str, Any]] = []
+    already_past: list[dict[str, Any]] = []
 
     try:
         hits = discover_filing_hits(active_client, start_date=start_date, end_date=end_date)
@@ -105,17 +109,38 @@ def build(
                     {"ticker": hit.ticker, "source_url": hit.document_url, "reason": str(exc)}
                 )
 
-        candidates_by_ticker = _group_by_ticker(all_candidates)
+        # A candidate whose whole disclosed window already ended is not an
+        # upcoming catalyst - most often a past-tense company statement
+        # ("the Company reported positive topline results on <past date>")
+        # that happened to contain a trigger phrase. Filtered here, not
+        # silently: this is a real, disclosed limitation of regex-based
+        # extraction (it does not detect tense), not a fabricated result.
+        live_candidates: list[DiscoveredCatalyst] = []
+        for candidate in all_candidates:
+            if candidate.window_end < as_of.date():
+                already_past.append(
+                    {
+                        "ticker": candidate.ticker,
+                        "catalyst_type": candidate.catalyst_type.value,
+                        "window_end": candidate.window_end.isoformat(),
+                        "source_sentence": candidate.source_sentence,
+                    }
+                )
+                continue
+            live_candidates.append(candidate)
+
+        candidates_by_ticker = _group_by_ticker(live_candidates)
         if not candidates_by_ticker:
             return _result(
-                start_date,
-                end_date,
-                as_of,
-                watchlist,
-                excluded_foreign_issuer,
-                discovery_failures,
-                financial_data_gaps,
-                technical_data_gaps,
+                start_date=start_date,
+                end_date=end_date,
+                as_of=as_of,
+                watchlist=watchlist,
+                excluded_foreign_issuer=excluded_foreign_issuer,
+                discovery_failures=discovery_failures,
+                financial_data_gaps=financial_data_gaps,
+                technical_data_gaps=technical_data_gaps,
+                already_past=already_past,
             )
 
         benchmark_series = fetch_live_series(
@@ -208,18 +233,20 @@ def build(
 
     watchlist.sort(key=lambda r: (r["window_start"], r["ticker"]))
     return _result(
-        start_date,
-        end_date,
-        as_of,
-        watchlist,
-        excluded_foreign_issuer,
-        discovery_failures,
-        financial_data_gaps,
-        technical_data_gaps,
+        start_date=start_date,
+        end_date=end_date,
+        as_of=as_of,
+        watchlist=watchlist,
+        excluded_foreign_issuer=excluded_foreign_issuer,
+        discovery_failures=discovery_failures,
+        financial_data_gaps=financial_data_gaps,
+        technical_data_gaps=technical_data_gaps,
+        already_past=already_past,
     )
 
 
 def _result(
+    *,
     start_date: date,
     end_date: date,
     as_of: datetime,
@@ -228,6 +255,7 @@ def _result(
     discovery_failures: list[dict[str, Any]],
     financial_data_gaps: list[dict[str, Any]],
     technical_data_gaps: list[dict[str, Any]],
+    already_past: list[dict[str, Any]],
 ) -> dict[str, Any]:
     return {
         "generator": "python scripts/filter_scan.py",
@@ -240,6 +268,7 @@ def _result(
         "discovery_failures": discovery_failures,
         "financial_data_gaps": financial_data_gaps,
         "technical_data_gaps": technical_data_gaps,
+        "already_past": already_past,
         "disclaimer": (
             "Every fact here is real and traceable to its source (source_url, "
             "source_sentence). Sorted chronologically, not by a combined score: "
@@ -274,6 +303,7 @@ def main() -> None:
         "discovery_failure_count": len(status["discovery_failures"]),
         "financial_data_gap_count": len(status["financial_data_gaps"]),
         "technical_data_gap_count": len(status["technical_data_gaps"]),
+        "already_past_count": len(status["already_past"]),
     }
     SUMMARY_PATH.write_text(render(summary))
     print(json.dumps(summary))

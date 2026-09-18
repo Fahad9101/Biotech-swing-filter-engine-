@@ -13,7 +13,8 @@ project's 2018-2025 cohort window.
 
 from __future__ import annotations
 
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta
+from zoneinfo import ZoneInfo
 
 # Full-day closures with no fixed observance rule (e.g. national days of
 # mourning). There is exactly one in the 2018-2025 cohort window.
@@ -118,3 +119,18 @@ def last_complete_session_before(event_date: date) -> date:
     while not is_trading_day(current):
         current -= timedelta(days=1)
     return current
+
+
+def expected_latest_session_as_of(as_of: datetime) -> date:
+    """The most recent trading session that should already have a
+    finalized daily bar at ``as_of`` - same real market-close convention
+    already established for event alignment (4pm ET,
+    boe.historical_validation.align_t0_session, on the milestone-7-
+    historical-validation branch): before the close, today's own session
+    (even if it's a trading day) is not finalized yet, so the expected
+    latest session is the last COMPLETE one before today."""
+    eastern = as_of.astimezone(ZoneInfo("America/New_York"))
+    local_date = eastern.date()
+    if is_trading_day(local_date) and eastern.hour >= 16:
+        return local_date
+    return last_complete_session_before(local_date)

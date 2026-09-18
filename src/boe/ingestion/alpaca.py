@@ -102,8 +102,15 @@ def fetch_daily_bars(
     data_url: str = DEFAULT_DATA_URL,
     retrieved_at: datetime | None = None,
     client: httpx.Client | None = None,
+    feed: str = _FEED,
 ) -> MarketSeries:
-    """Fetch and normalize real split/dividend-adjusted daily bars for one symbol."""
+    """Fetch and normalize real split/dividend-adjusted daily bars for one
+    symbol. feed defaults to "sip" (the full consolidated tape, used by
+    Milestone 7's historical reconstruction). Alpaca's free plan rejects
+    "sip" for recent dates ("subscription does not permit querying recent
+    SIP data", confirmed live) - live callers needing recent bars should
+    pass feed="iex" instead (single-exchange coverage, real but narrower
+    than the consolidated tape)."""
     if end < start:
         raise ValueError("end must not precede start")
     parsed_host = urlparse(data_url)
@@ -116,7 +123,13 @@ def fetch_daily_bars(
     http_client = client or httpx.Client(timeout=httpx.Timeout(30.0))
     try:
         pages = _fetch_pages(
-            http_client, symbol, start=start, end=end, headers=headers, data_url=data_url
+            http_client,
+            symbol,
+            start=start,
+            end=end,
+            headers=headers,
+            data_url=data_url,
+            feed=feed,
         )
     finally:
         if owns_client:
@@ -132,7 +145,7 @@ def fetch_daily_bars(
         available_at=stamp,
         raw_blob_sha256=hashlib.sha256(raw_bytes).hexdigest(),
         license_audit_provider=PROVIDER,
-        adjustment_version="ALPACA-SIP-ADJUSTMENT-ALL-1",
+        adjustment_version=f"ALPACA-{feed.upper()}-ADJUSTMENT-ALL-1",
     )
 
 
@@ -257,12 +270,13 @@ def _fetch_pages(
     headers: dict[str, str],
     data_url: str,
     adjustment: str = _ADJUSTMENT,
+    feed: str = _FEED,
 ) -> list[dict[str, Any]]:
     pages: list[dict[str, Any]] = []
     page_token: str | None = None
     while True:
         params: dict[str, str | int] = {
-            "feed": _FEED,
+            "feed": feed,
             "timeframe": "1Day",
             "adjustment": adjustment,
             "start": start.isoformat(),

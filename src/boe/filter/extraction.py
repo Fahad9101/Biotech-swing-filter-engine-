@@ -49,6 +49,18 @@ _QUARTER_ORDINALS = {
     "q4": 4,
 }
 
+# Real press-release sentences run well under this even when compound
+# (the longest genuine example found in development - a PDUFA-extension
+# sentence naming two dates, a BLA, and an indication - is ~260 chars).
+# Fragments longer than this are reliably not a real single sentence: they
+# are what re.split(r"(?<=[.!?])\s+", ...) produces when it hits investor-
+# deck/table HTML with little or no real sentence punctuation to split on
+# (confirmed empirically: a live scan found 56/83 raw candidates over 400
+# chars, versus a clean genuine-press-release median under 150). Skipping
+# them is honest - extracting a plausible-looking date from a slide-deck
+# blob would be a real false positive, not a lower-confidence real fact.
+MAX_SENTENCE_LENGTH = 400
+
 REG_TRIGGERS: tuple[str, ...] = (
     "PDUFA",
     "target action date",
@@ -145,7 +157,8 @@ def _sentences(text: str) -> list[str]:
     normalized = re.sub(r"<[^>]+>", " ", text)
     normalized = re.sub(r"&#8226;|&#x2022;|•", " ", normalized)
     normalized = re.sub(r"\s+", " ", normalized).strip()
-    return [s.strip() for s in re.split(r"(?<=[.!?])\s+", normalized) if s.strip()]
+    fragments = (s.strip() for s in re.split(r"(?<=[.!?])\s+", normalized))
+    return [s for s in fragments if s and len(s) <= MAX_SENTENCE_LENGTH]
 
 
 def _classify_trigger(sentence: str) -> tuple[str, CatalystType] | None:

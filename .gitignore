@@ -12,3 +12,8 @@ build/
 *.db
 .env
 .DS_Store
+
+# scripts/filter_scan.py output - live, re-generated on every real run
+# (unlike validation/m7's frozen historical artifacts), not meant to be
+# committed as a stale snapshot.
+screening/

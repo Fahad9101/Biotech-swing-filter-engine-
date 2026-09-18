@@ -189,6 +189,46 @@ def test_build_produces_a_real_watchlist_entry_from_discovery_through_scoring(
     assert status["excluded_foreign_issuer"] == []
 
 
+def test_build_filters_out_candidates_whose_window_already_ended(
+    monkeypatch: pytest.MonkeyPatch,
+):
+    monkeypatch.setattr("boe.ingestion.http.time.sleep", lambda _: None)
+    monkeypatch.setattr(
+        module,
+        "fetch_live_series",
+        lambda symbol, **_: _fake_series(symbol, base=Decimal("10.00")),
+    )
+    past_tense_text = (
+        "<html><body>The Company reported positive topline Phase 2a results "
+        "on August 12, 2026.</body></html>"
+    )
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        url = str(request.url)
+        if "efts.sec.gov" in url:
+            return httpx.Response(200, content=json.dumps(SEARCH_RESPONSE), request=request)
+        if "capr-ex99d1.htm" in url:
+            return httpx.Response(200, content=past_tense_text, request=request)
+        raise AssertionError(f"unexpected URL in test: {url}")
+
+    with PublicDataClient(
+        "BOE test test@example.com", transport=httpx.MockTransport(handler)
+    ) as client:
+        status = module.build(
+            start_date=date(2026, 7, 1),
+            end_date=date(2026, 9, 18),
+            as_of=AS_OF,
+            client=client,
+            api_key_id="k",
+            api_secret_key="s",
+            data_url="https://data.alpaca.markets",
+        )
+
+    assert status["watchlist_count"] == 0
+    assert len(status["already_past"]) == 1
+    assert status["already_past"][0]["window_end"] == "2026-08-12"
+
+
 def test_build_returns_empty_watchlist_when_nothing_is_discovered(
     monkeypatch: pytest.MonkeyPatch,
 ):

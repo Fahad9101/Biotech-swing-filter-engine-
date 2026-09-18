@@ -25,7 +25,7 @@ from uuid import NAMESPACE_URL, uuid5
 from boe.enums import DataState
 from boe.ingestion.alpaca import fetch_daily_bars
 from boe.market import MarketSeries
-from boe.market_calendar import trading_sessions
+from boe.market_calendar import expected_latest_session_as_of
 from boe.models import FactorScore, ScorecardContract
 from boe.scoring import SubfactorEvidence
 from boe.technicals import (
@@ -46,6 +46,13 @@ def fetch_live_series(
     api_secret_key: str,
     data_url: str,
 ) -> MarketSeries:
+    """feed="iex": Alpaca's free plan rejects the full consolidated tape
+    ("sip") for recent dates (confirmed live: 403 "subscription does not
+    permit querying recent SIP data"). IEX is real but single-exchange -
+    genuinely narrower volume coverage than SIP, not a fabricated
+    substitute; M7's historical reconstruction used "sip" because it only
+    ever queried old, non-recent dates where that restriction doesn't
+    apply."""
     start = (as_of - timedelta(days=FETCH_WINDOW_DAYS)).date()
     end = as_of.date()
     return fetch_daily_bars(
@@ -55,6 +62,7 @@ def fetch_live_series(
         api_key_id=api_key_id,
         api_secret_key=api_secret_key,
         data_url=data_url,
+        feed="iex",
     )
 
 
@@ -83,9 +91,7 @@ def live_technical_score(
     as_of: datetime,
     rules: ScorecardContract,
 ) -> tuple[FactorScore, dict[str, Any]]:
-    window_start = (as_of - timedelta(days=FETCH_WINDOW_DAYS)).date()
-    window_end = as_of.date()
-    expected_latest_session = trading_sessions(window_start, window_end)[-1]
+    expected_latest_session = expected_latest_session_as_of(as_of)
     snapshot = build_technical_snapshot(
         security_series,
         benchmark_series,

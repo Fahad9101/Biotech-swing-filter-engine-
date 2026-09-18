@@ -10,7 +10,12 @@ from __future__ import annotations
 from datetime import date
 
 from boe.enums import CatalystType
-from boe.filter.extraction import DatePrecision, extract_candidates, extract_date_window
+from boe.filter.extraction import (
+    MAX_SENTENCE_LENGTH,
+    DatePrecision,
+    extract_candidates,
+    extract_date_window,
+)
 
 CAPRICOR_SENTENCE = (
     "Food and Drug Administration (FDA) has extended the Prescription Drug User Fee Act "
@@ -140,6 +145,23 @@ def test_extract_candidates_deduplicates_identical_sentence_repeats():
         filing_date=date(2026, 8, 24),
     )
     assert len(candidates) == 1
+
+
+def test_extract_candidates_skips_oversized_non_prose_fragments():
+    # Simulates a slide-deck/table exhibit with no real sentence
+    # punctuation: a single huge run-on fragment containing a trigger and
+    # a date, which is not a genuine disclosure sentence.
+    noisy = "PDUFA " + ("filler bullet content without periods " * 20) + "November 22, 2026"
+    assert len(noisy) > MAX_SENTENCE_LENGTH
+    candidates = extract_candidates(
+        ticker="XYZ",
+        cik="0000000001",
+        company="Example Biotech",
+        document_text=noisy,
+        source_url="https://www.sec.gov/example/xyz.htm",
+        filing_date=None,
+    )
+    assert candidates == ()
 
 
 def test_extract_candidates_ignores_sentences_without_a_trigger():

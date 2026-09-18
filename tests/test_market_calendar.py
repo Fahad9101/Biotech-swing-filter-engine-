@@ -1,8 +1,9 @@
 from __future__ import annotations
 
-from datetime import date
+from datetime import UTC, date, datetime
 
 from boe.market_calendar import (
+    expected_latest_session_as_of,
     is_trading_day,
     last_complete_session_before,
     nyse_holidays,
@@ -95,3 +96,22 @@ def test_last_complete_session_before_skips_weekend_and_holiday() -> None:
 
 def test_last_complete_session_before_plain_weekday() -> None:
     assert last_complete_session_before(date(2024, 3, 6)) == date(2024, 3, 5)
+
+
+def test_expected_latest_session_as_of_before_close_uses_prior_session() -> None:
+    # 2024-03-06 09:00 UTC = 04:00 ET (EST, before market open) - today's
+    # own session is not finalized yet.
+    as_of = datetime(2024, 3, 6, 9, 0, tzinfo=UTC)
+    assert expected_latest_session_as_of(as_of) == date(2024, 3, 5)
+
+
+def test_expected_latest_session_as_of_after_close_uses_todays_session() -> None:
+    # 2024-03-06 23:00 UTC = 18:00 ET (EST, well after the 16:00 close).
+    as_of = datetime(2024, 3, 6, 23, 0, tzinfo=UTC)
+    assert expected_latest_session_as_of(as_of) == date(2024, 3, 6)
+
+
+def test_expected_latest_session_as_of_on_a_weekend_falls_back() -> None:
+    # 2024-03-09 is a Saturday.
+    as_of = datetime(2024, 3, 9, 23, 0, tzinfo=UTC)
+    assert expected_latest_session_as_of(as_of) == date(2024, 3, 8)
