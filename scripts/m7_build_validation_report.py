@@ -334,6 +334,22 @@ def build() -> dict[str, Any]:
             "because no qualified human reviewer was available "
             "(docs/M7-HUMAN-REVIEW-BLOCKER.md) - it is not evidence that "
             "BOE-1.0.0 itself, as originally specified, does or does not work.",
+            "A real feasibility pilot for a non-fabricated SCIENCE-factor "
+            "redesign was run against the full frozen cohort "
+            "(validation/m7/discovery/science-redesign-pilot.json) after "
+            "ClinicalTrials.gov's own API was confirmed to return a real, "
+            "persistent 403 to programmatic access from this environment. "
+            "Using a free bulk research dataset instead, only 27/120 events "
+            "(22%) resolve to a genuine, drug-name-verified candidate trial "
+            "- and even those are missing the allocation/masking fields "
+            "TRIAL_DESIGN actually needs, leaving only weaker proxies. This "
+            "does not clear the bar to build a SCIENCE-redesign pipeline; "
+            "SCIENCE remains MISSING for every event, as it has throughout "
+            "Milestone 7. VALUATION was not separately piloted: it depends "
+            "on epidemiological incidence/prevalence data that is, if "
+            "anything, less centrally available in bulk than clinical-trial "
+            "data, so the same conclusion is expected to apply and was not "
+            "worth a second bounded pilot to re-confirm.",
         ],
         "recommendation": _recommendation(calibration),
     }

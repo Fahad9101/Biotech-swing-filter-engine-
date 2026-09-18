@@ -1,0 +1,1599 @@
+{
+  "cohort_sha256": "37f2e70dcc0626b40e97637e34056c9279ae9a5e6daf69d1c2f730e77c114e95",
+  "conclusion": "27/120 events (22%) resolve to at least one real, drug-name-verified candidate trial via this free dataset. A further 3 events only matched because the asset text happened to contain the company's own ticker as a generic token (e.g. NKTR-214's event matching an unrelated NKTR-102 trial, or three separate SAGE-718 events all matching the same unrelated SAGE-324 trial) - confirmed by manual spot-check, not assumed - so they are excluded from the reliable count above rather than silently accepted. Even for the reliable matches, the metadata CSV does not carry allocation/masking/intervention_model (the fields TRIAL_DESIGN actually needs - see ('allocation', 'masking', 'intervention_model')), only weaker proxies (phase, arm count, study_type). Given a genuine match rate this low and missing the specific fields the redesign was meant to make objective, this path does not clear the bar to build a full SCIENCE-redesign pipeline on top of it. RECOMMENDATION: DO_NOT_PROCEED - document this finding and do not build scripts/m7_build_science_scores.py against this data source.",
+  "data_sources": {
+    "blocked_primary_source": "https://clinicaltrials.gov/api/v2/studies (403 from this environment; see validation/m7/discovery/clinicaltrials-official-candidates.json)",
+    "mapping_url": "https://huggingface.co/datasets/chufangao/CTO/resolve/main/labels_and_tickers/labels_and_tickers.csv",
+    "metadata_url": "https://huggingface.co/datasets/chufangao/CTO/resolve/main/human_labels_2020_2024/human_labels_2020_2024.csv",
+    "outcome_label_column_read": false
+  },
+  "design_fields_absent_from_dataset": [
+    "allocation",
+    "masking",
+    "intervention_model"
+  ],
+  "event_count": 120,
+  "generator": "python scripts/m7_pilot_science_redesign.py",
+  "match_requirement": "candidate trial title (brief_title + official_title, normalized) must contain a normalized token (>=4 chars) from the event's real HistoricalEvent.asset field",
+  "recommendation": "DO_NOT_PROCEED",
+  "results": [
+    {
+      "asset": "Ad-RTS-hIL-12 + veledimex",
+      "event_id": "CO-2018-ZIOP-ASCO",
+      "matched_ncts": [],
+      "stage": "NO_TICKER_COVERAGE",
+      "ticker": "ZIOP"
+    },
+    {
+      "asset": "zanubrutinib",
+      "event_id": "CO-2019-BGNE-ZANUASH",
+      "matched_ncts": [
+        {
+          "brief_title": "Study of BTK Inhibitor Zanubrutinib in Participants With Relapsed/Refractory Non-GCB Type Diffuse Large B Cell Lymphoma",
+          "completion_date": "2020-09-03",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT03145064",
+          "number_of_arms": "1.0",
+          "phase": "PHASE2",
+          "primary_completion_date": "2019-05-24",
+          "study_type": "INTERVENTIONAL"
+        },
+        {
+          "brief_title": "Efficacy and Safety of Zanubrutinib in Relapsed or Refractory Chronic Lymphocytic Leukemia/Small Lymphocytic Lymphoma",
+          "completion_date": "2020-09-10",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT03206918",
+          "number_of_arms": "1.0",
+          "phase": "PHASE2",
+          "primary_completion_date": "2018-06-15",
+          "study_type": "INTERVENTIONAL"
+        },
+        {
+          "brief_title": "Study of Zanubrutinib (BGB-3111) in Participants With Marginal Zone Lymphoma",
+          "completion_date": "2022-05-04",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT03846427",
+          "number_of_arms": "1.0",
+          "phase": "PHASE2",
+          "primary_completion_date": "2022-05-04",
+          "study_type": "INTERVENTIONAL"
+        },
+        {
+          "brief_title": "Covid-19 Infection and Pulmonary Distress Treatment With Zanubrutinib in Hospitalized Participants",
+          "completion_date": "2021-02-01",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT04382586",
+          "number_of_arms": "2.0",
+          "phase": "PHASE2",
+          "primary_completion_date": "2021-02-01",
+          "study_type": "INTERVENTIONAL"
+        },
+        {
+          "brief_title": "The Effect of Moderate CYP3A Inducer Rifabutin on the Pharmacokinetics of Zanubrutinib in Healthy Males",
+          "completion_date": "2020-11-10",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT04470908",
+          "number_of_arms": "1.0",
+          "phase": "PHASE1",
+          "primary_completion_date": "2020-11-10",
+          "study_type": "INTERVENTIONAL"
+        }
+      ],
+      "stage": "ASSET_NAME_MATCHED",
+      "ticker": "BGNE"
+    },
+    {
+      "asset": "CPI-0610",
+      "event_id": "CO-2019-CNST-MANIFEST",
+      "matched_ncts": [],
+      "stage": "NO_TICKER_COVERAGE",
+      "ticker": "CNST"
+    },
+    {
+      "asset": "cirmtuzumab + ibrutinib",
+      "event_id": "CO-2020-ONCT-CIRLLASH",
+      "matched_ncts": [],
+      "stage": "NO_TICKER_COVERAGE",
+      "ticker": "ONCT"
+    },
+    {
+      "asset": "TTI-622",
+      "event_id": "CO-2020-TRIL-TTI622ASH",
+      "matched_ncts": [],
+      "stage": "NO_TICKER_COVERAGE",
+      "ticker": "TRIL"
+    },
+    {
+      "asset": "HPN424",
+      "event_id": "CO-2021-HARP-HPN424ASCO",
+      "matched_ncts": [],
+      "stage": "TICKER_COVERAGE_NO_PHASE_YEAR_CANDIDATE",
+      "ticker": "HARP"
+    },
+    {
+      "asset": "IGM-2323",
+      "event_id": "CO-2021-IGMS-IGM2323ASH",
+      "matched_ncts": [],
+      "stage": "NO_TICKER_COVERAGE",
+      "ticker": "IGMS"
+    },
+    {
+      "asset": "lifileucel + pembrolizumab",
+      "event_id": "CO-2021-IOVA-LIFILEUCELASCO",
+      "matched_ncts": [],
+      "stage": "TICKER_COVERAGE_NO_PHASE_YEAR_CANDIDATE",
+      "ticker": "IOVA"
+    },
+    {
+      "asset": "KER-050 / KER-047",
+      "event_id": "CO-2022-KROS-KER050ASH",
+      "matched_ncts": [],
+      "stage": "NO_TICKER_COVERAGE",
+      "ticker": "KROS"
+    },
+    {
+      "asset": "obe-cel",
+      "event_id": "CO-2024-AUTL-OBECELASH",
+      "matched_ncts": [],
+      "stage": "NO_TICKER_COVERAGE",
+      "ticker": "AUTL"
+    },
+    {
+      "asset": "tisotumab vedotin",
+      "event_id": "CO-2024-GMAB-TVASCO",
+      "matched_ncts": [
+        {
+          "brief_title": "A Trial of Tisotumab Vedotin in Cervical Cancer",
+          "completion_date": "2022-08-02",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT03438396",
+          "number_of_arms": "1.0",
+          "phase": "PHASE2",
+          "primary_completion_date": "2020-02-06",
+          "study_type": "INTERVENTIONAL"
+        }
+      ],
+      "stage": "ASSET_NAME_MATCHED",
+      "ticker": "GMAB"
+    },
+    {
+      "asset": "DISC-0974",
+      "event_id": "CO-2024-IRON-DISC0974ASH",
+      "matched_ncts": [],
+      "stage": "TICKER_COVERAGE_NO_PHASE_YEAR_CANDIDATE",
+      "ticker": "IRON"
+    },
+    {
+      "asset": "NX-5948",
+      "event_id": "CO-2024-NRIX-NX5948ASH",
+      "matched_ncts": [],
+      "stage": "NO_TICKER_COVERAGE",
+      "ticker": "NRIX"
+    },
+    {
+      "asset": "soquelitinib",
+      "event_id": "CO-2025-CRVS-SOQUELITINIBASH",
+      "matched_ncts": [],
+      "stage": "TICKER_COVERAGE_NO_PHASE_YEAR_CANDIDATE",
+      "ticker": "CRVS"
+    },
+    {
+      "asset": "imetelstat (RYTELO)",
+      "event_id": "CO-2025-GERN-RYTELOASH",
+      "matched_ncts": [
+        {
+          "brief_title": "Study to Evaluate Activity of 2 Dose Levels of Imetelstat in Participants With Intermediate-2 or High-Risk Myelofibrosis (MF) Previously Treated With Janus Kinase (JAK) Inhibitor",
+          "completion_date": "2020-02-07",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT02426086",
+          "number_of_arms": "2.0",
+          "phase": "PHASE2",
+          "primary_completion_date": "2018-04-26",
+          "study_type": "INTERVENTIONAL"
+        }
+      ],
+      "stage": "ASSET_NAME_MATCHED",
+      "ticker": "GERN"
+    },
+    {
+      "asset": "suvodirsen",
+      "event_id": "EC-2019-WVE-SUVODIRSEN",
+      "matched_ncts": [],
+      "stage": "TICKER_COVERAGE_NO_PHASE_YEAR_CANDIDATE",
+      "ticker": "WVE"
+    },
+    {
+      "asset": "CTX001",
+      "event_id": "EC-2020-CRSP-CTX001",
+      "matched_ncts": [],
+      "stage": "TICKER_COVERAGE_NO_PHASE_YEAR_CANDIDATE",
+      "ticker": "CRSP"
+    },
+    {
+      "asset": "EDIT-101",
+      "event_id": "EC-2021-EDIT-EDIT101",
+      "matched_ncts": [],
+      "stage": "NO_TICKER_COVERAGE",
+      "ticker": "EDIT"
+    },
+    {
+      "asset": "KO-539 (ziftomenib)",
+      "event_id": "EC-2021-KURA-KO539-HOLD",
+      "matched_ncts": [],
+      "stage": "CANDIDATES_NO_ASSET_NAME_MATCH",
+      "ticker": "KURA"
+    },
+    {
+      "asset": "SIG-001",
+      "event_id": "EC-2021-SGTX-SIG001",
+      "matched_ncts": [],
+      "stage": "NO_TICKER_COVERAGE",
+      "ticker": "SGTX"
+    },
+    {
+      "asset": "TPX-0046",
+      "event_id": "EC-2021-TPTX-TPX0046",
+      "matched_ncts": [],
+      "stage": "NO_TICKER_COVERAGE",
+      "ticker": "TPTX"
+    },
+    {
+      "asset": "AL101",
+      "event_id": "EC-2022-ALEC-AL101",
+      "matched_ncts": [],
+      "stage": "NO_TICKER_COVERAGE",
+      "ticker": "ALEC"
+    },
+    {
+      "asset": "ANAVEX 3-71",
+      "event_id": "EC-2022-AVXL-ANAVEX371",
+      "matched_ncts": [],
+      "stage": "TICKER_COVERAGE_NO_PHASE_YEAR_CANDIDATE",
+      "ticker": "AVXL"
+    },
+    {
+      "asset": "VTX958",
+      "event_id": "EC-2022-VTYX-VTX958",
+      "matched_ncts": [],
+      "stage": "NO_TICKER_COVERAGE",
+      "ticker": "VTYX"
+    },
+    {
+      "asset": "IMA203 / IMA203CD8",
+      "event_id": "EC-2023-IMTX-IMA203",
+      "matched_ncts": [],
+      "stage": "NO_TICKER_COVERAGE",
+      "ticker": "IMTX"
+    },
+    {
+      "asset": "CABA-201",
+      "event_id": "EC-2024-CABA-CABA201",
+      "matched_ncts": [],
+      "stage": "NO_TICKER_COVERAGE",
+      "ticker": "CABA"
+    },
+    {
+      "asset": "CHS-114",
+      "event_id": "EC-2024-CHRS-CHS114",
+      "matched_ncts": [],
+      "stage": "NO_TICKER_COVERAGE",
+      "ticker": "CHRS"
+    },
+    {
+      "asset": "TSHA-102",
+      "event_id": "EC-2024-TSHA-TSHA102",
+      "matched_ncts": [],
+      "stage": "NO_TICKER_COVERAGE",
+      "ticker": "TSHA"
+    },
+    {
+      "asset": "emiltatug ledadotin (XMT-1660)",
+      "event_id": "EC-2025-MRSN-XMT1660",
+      "matched_ncts": [],
+      "stage": "TICKER_COVERAGE_NO_PHASE_YEAR_CANDIDATE",
+      "ticker": "MRSN"
+    },
+    {
+      "asset": "MET-233i",
+      "event_id": "EC-2025-MTSR-MET233I",
+      "matched_ncts": [],
+      "stage": "NO_TICKER_COVERAGE",
+      "ticker": "MTSR"
+    },
+    {
+      "asset": "IMO-8400",
+      "event_id": "NEG-P2-2018-IDRA-IMO8400",
+      "matched_ncts": [],
+      "stage": "NO_TICKER_COVERAGE",
+      "ticker": "IDRA"
+    },
+    {
+      "asset": "imsidolimab",
+      "event_id": "NEG-P2-2021-ANAB-POPLAR",
+      "matched_ncts": [
+        {
+          "brief_title": "A Study to Evaluate the Efficacy and Safety of Imsidolimab (ANB019) in Adults With Palmoplantar Pustulosis",
+          "completion_date": "2021-04-23",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT03633396",
+          "number_of_arms": "2.0",
+          "phase": "PHASE2",
+          "primary_completion_date": "2021-04-23",
+          "study_type": "INTERVENTIONAL"
+        },
+        {
+          "brief_title": "A Study to Evaluate the Efficacy and Safety of Imsidolimab (ANB019) in the Treatment of Participants With Acne Vulgaris",
+          "completion_date": "2022-03-29",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT04856917",
+          "number_of_arms": "3.0",
+          "phase": "PHASE2",
+          "primary_completion_date": "2022-02-01",
+          "study_type": "INTERVENTIONAL"
+        }
+      ],
+      "stage": "ASSET_NAME_MATCHED",
+      "ticker": "ANAB"
+    },
+    {
+      "asset": "NGM621",
+      "event_id": "NEG-P2-2022-NGM-CATALINA",
+      "matched_ncts": [],
+      "stage": "CANDIDATES_NO_ASSET_NAME_MATCH",
+      "ticker": "NGM"
+    },
+    {
+      "asset": "dalzanemdor (SAGE-718)",
+      "event_id": "NEG-P2-2024-SAGE-LIGHTWAVE",
+      "matched_ncts": [
+        {
+          "brief_title": "A Study to Evaluate the Efficacy, Safety, and Tolerability of SAGE-324 in Participants With Essential Tremor",
+          "completion_date": "2021-02-15",
+          "generic_ticker_token_only_match": true,
+          "nct_id": "NCT04305275",
+          "number_of_arms": "2.0",
+          "phase": "PHASE2",
+          "primary_completion_date": "2021-02-01",
+          "study_type": "INTERVENTIONAL"
+        }
+      ],
+      "stage": "GENERIC_TICKER_TOKEN_ONLY_MATCH",
+      "ticker": "SAGE"
+    },
+    {
+      "asset": "dalzanemdor (SAGE-718)",
+      "event_id": "NEG-P2-2024-SAGE-PRECEDENT",
+      "matched_ncts": [
+        {
+          "brief_title": "A Study to Evaluate the Efficacy, Safety, and Tolerability of SAGE-324 in Participants With Essential Tremor",
+          "completion_date": "2021-02-15",
+          "generic_ticker_token_only_match": true,
+          "nct_id": "NCT04305275",
+          "number_of_arms": "2.0",
+          "phase": "PHASE2",
+          "primary_completion_date": "2021-02-01",
+          "study_type": "INTERVENTIONAL"
+        }
+      ],
+      "stage": "GENERIC_TICKER_TOKEN_ONLY_MATCH",
+      "ticker": "SAGE"
+    },
+    {
+      "asset": "ripretinib (QINLOCK)",
+      "event_id": "NEG-P3-2021-DCPH-INTRIGUE",
+      "matched_ncts": [],
+      "stage": "NO_TICKER_COVERAGE",
+      "ticker": "DCPH"
+    },
+    {
+      "asset": "bempegaldesleukin (BEMPEG, NKTR-214)",
+      "event_id": "NEG-P3-2022-NKTR-PIVOTIO001",
+      "matched_ncts": [
+        {
+          "brief_title": "A Study of Etirinotecan Pegol (NKTR-102) Versus Treatment of Physician's Choice (TPC) in Patients With Metastatic Breast Cancer Who Have Stable Brain Metastases and Have Been Previously Treated With an Anthracycline, a Taxane, and Capecitabine",
+          "completion_date": "2020-07-31",
+          "generic_ticker_token_only_match": true,
+          "nct_id": "NCT02915744",
+          "number_of_arms": "2.0",
+          "phase": "PHASE3",
+          "primary_completion_date": "2020-07-31",
+          "study_type": "INTERVENTIONAL"
+        },
+        {
+          "brief_title": "A Study of NKTR-214 Combined With Nivolumab vs Nivolumab Alone in Participants With Previously Untreated Inoperable or Metastatic Melanoma",
+          "completion_date": "2024-03-19",
+          "generic_ticker_token_only_match": true,
+          "nct_id": "NCT03635983",
+          "number_of_arms": "2.0",
+          "phase": "PHASE3",
+          "primary_completion_date": "2021-11-19",
+          "study_type": "INTERVENTIONAL"
+        },
+        {
+          "brief_title": "A Single-Arm Study of Bempegaldesleukin (NKTR-214) Plus Nivolumab in Cisplatin Ineligible Patients Who Have Locally Advanced or Metastatic Urothelial Cancer",
+          "completion_date": "2022-06-30",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT03785925",
+          "number_of_arms": "1.0",
+          "phase": "PHASE2",
+          "primary_completion_date": "2022-02-09",
+          "study_type": "INTERVENTIONAL"
+        },
+        {
+          "brief_title": "A Study of Nivolumab Plus Bempegaldesleukin (Bempeg/NKTR-214) vs Nivolumab Alone vs Standard of Care in Participants With Bladder Cancer That May Have Invaded The Muscle Wall of the Bladder and Who Cannot Get Cisplatin, A Type of Medicine Given To Treat Bladder Cancer",
+          "completion_date": "2023-06-07",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT04209114",
+          "number_of_arms": "3.0",
+          "phase": "PHASE3",
+          "primary_completion_date": "2023-06-07",
+          "study_type": "INTERVENTIONAL"
+        },
+        {
+          "brief_title": "A Study of LY3471851 in Adults With Systemic Lupus Erythematosus (SLE)",
+          "completion_date": "2023-02-16",
+          "generic_ticker_token_only_match": true,
+          "nct_id": "NCT04433585",
+          "number_of_arms": "4.0",
+          "phase": "PHASE2",
+          "primary_completion_date": "2023-01-10",
+          "study_type": "INTERVENTIONAL"
+        }
+      ],
+      "stage": "ASSET_NAME_MATCHED",
+      "ticker": "NKTR"
+    },
+    {
+      "asset": "tarcocimab tedromer (KSI-301)",
+      "event_id": "NEG-P3-2023-KOD-GLEAMGLIMMER",
+      "matched_ncts": [],
+      "stage": "CANDIDATES_NO_ASSET_NAME_MATCH",
+      "ticker": "KOD"
+    },
+    {
+      "asset": "sitravatinib",
+      "event_id": "NEG-P3-2023-MRTX-SAPPHIRE",
+      "matched_ncts": [],
+      "stage": "NO_TICKER_COVERAGE",
+      "ticker": "MRTX"
+    },
+    {
+      "asset": "AMX0035 (RELYVRIO/ALBRIOZA)",
+      "event_id": "NEG-P3-2024-AMLX-PHOENIX",
+      "matched_ncts": [],
+      "stage": "NO_TICKER_COVERAGE",
+      "ticker": "AMLX"
+    },
+    {
+      "asset": "BAN2401 (lecanemab)",
+      "event_id": "P2-2018-BIIB-BAN2401",
+      "matched_ncts": [],
+      "stage": "CANDIDATES_NO_ASSET_NAME_MATCH",
+      "ticker": "BIIB"
+    },
+    {
+      "asset": "bempedoic acid",
+      "event_id": "P2-2018-ESPR-BA-PCSK9",
+      "matched_ncts": [
+        {
+          "brief_title": "Evaluation of Major Cardiovascular Events in Participants With, or at High Risk for, Cardiovascular Disease Who Are Statin Intolerant Treated With Bempedoic Acid (ETC-1002) or Placebo",
+          "completion_date": "2022-11-07",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT02993406",
+          "number_of_arms": "2.0",
+          "phase": "PHASE3",
+          "primary_completion_date": "2022-11-07",
+          "study_type": "INTERVENTIONAL"
+        }
+      ],
+      "stage": "ASSET_NAME_MATCHED",
+      "ticker": "ESPR"
+    },
+    {
+      "asset": "GWP42006",
+      "event_id": "P2-2018-GWPH-GWP42006",
+      "matched_ncts": [],
+      "stage": "NO_TICKER_COVERAGE",
+      "ticker": "GWPH"
+    },
+    {
+      "asset": "mitapivat (AG-348)",
+      "event_id": "P2-2019-AGIO-DRIVEPK",
+      "matched_ncts": [],
+      "stage": "CANDIDATES_NO_ASSET_NAME_MATCH",
+      "ticker": "AGIO"
+    },
+    {
+      "asset": "AXS-05",
+      "event_id": "P2-2019-AXSM-AXS05-SMOKING",
+      "matched_ncts": [],
+      "stage": "CANDIDATES_NO_ASSET_NAME_MATCH",
+      "ticker": "AXSM"
+    },
+    {
+      "asset": "resmetirom (MGL-3196)",
+      "event_id": "P2-2019-MDGL-RESMETIROM",
+      "matched_ncts": [
+        {
+          "brief_title": "A Phase 3 Study to Evaluate Safety and Biomarkers of Resmetirom (MGL-3196) in Non Alcoholic Fatty Liver Disease Patients",
+          "completion_date": "2023-01-06",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT04197479",
+          "number_of_arms": "4.0",
+          "phase": "PHASE3",
+          "primary_completion_date": "2023-01-06",
+          "study_type": "INTERVENTIONAL"
+        }
+      ],
+      "stage": "ASSET_NAME_MATCHED",
+      "ticker": "MDGL"
+    },
+    {
+      "asset": "omaveloxolone",
+      "event_id": "P2-2019-RETA-MOXIE",
+      "matched_ncts": [],
+      "stage": "NO_TICKER_COVERAGE",
+      "ticker": "RETA"
+    },
+    {
+      "asset": "umbralisib",
+      "event_id": "P2-2019-TGTX-UNITYNHL",
+      "matched_ncts": [
+        {
+          "brief_title": "Ublituximab + TGR-1202 Compared to Obinutuzumab + Chlorambucil in Participants With Untreated and Previously Treated Chronic Lymphocytic Leukemia",
+          "completion_date": "2023-02-22",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT02612311",
+          "number_of_arms": "4.0",
+          "phase": "PHASE3",
+          "primary_completion_date": "2023-02-22",
+          "study_type": "INTERVENTIONAL"
+        },
+        {
+          "brief_title": "Evaluate the Efficacy and Safety of TGR-1202 in Participants With Chronic Lymphocytic Leukemia Who Are Intolerant to Prior Therapy",
+          "completion_date": "2021-06-10",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT02742090",
+          "number_of_arms": "1.0",
+          "phase": "PHASE2",
+          "primary_completion_date": "2021-06-10",
+          "study_type": "INTERVENTIONAL"
+        }
+      ],
+      "stage": "ASSET_NAME_MATCHED",
+      "ticker": "TGTX"
+    },
+    {
+      "asset": "paltusotine (CRN00808)",
+      "event_id": "P2-2020-CRNX-ACROBAT",
+      "matched_ncts": [],
+      "stage": "NO_TICKER_COVERAGE",
+      "ticker": "CRNX"
+    },
+    {
+      "asset": "vixotrigine (BIIB074)",
+      "event_id": "P2-2021-BIIB-CONVEY",
+      "matched_ncts": [],
+      "stage": "CANDIDATES_NO_ASSET_NAME_MATCH",
+      "ticker": "BIIB"
+    },
+    {
+      "asset": "gosuranemab (BIIB092)",
+      "event_id": "P2-2021-BIIB-TANGO",
+      "matched_ncts": [],
+      "stage": "CANDIDATES_NO_ASSET_NAME_MATCH",
+      "ticker": "BIIB"
+    },
+    {
+      "asset": "GH001",
+      "event_id": "P2-2021-GHRS-GH001",
+      "matched_ncts": [],
+      "stage": "NO_TICKER_COVERAGE",
+      "ticker": "GHRS"
+    },
+    {
+      "asset": "efruxifermin (EFX)",
+      "event_id": "P2-2022-AKRO-HARMONY",
+      "matched_ncts": [],
+      "stage": "TICKER_COVERAGE_NO_PHASE_YEAR_CANDIDATE",
+      "ticker": "AKRO"
+    },
+    {
+      "asset": "baxdrostat",
+      "event_id": "P2-2022-CINC-BRIGHTN",
+      "matched_ncts": [],
+      "stage": "NO_TICKER_COVERAGE",
+      "ticker": "CINC"
+    },
+    {
+      "asset": "baxdrostat",
+      "event_id": "P2-2022-CINC-HALO",
+      "matched_ncts": [],
+      "stage": "NO_TICKER_COVERAGE",
+      "ticker": "CINC"
+    },
+    {
+      "asset": "efruxifermin (EFX)",
+      "event_id": "P2-2023-AKRO-SYMMETRY-COHORT-D",
+      "matched_ncts": [],
+      "stage": "TICKER_COVERAGE_NO_PHASE_YEAR_CANDIDATE",
+      "ticker": "AKRO"
+    },
+    {
+      "asset": "efruxifermin (EFX)",
+      "event_id": "P2-2023-AKRO-SYMMETRY-MAIN",
+      "matched_ncts": [],
+      "stage": "TICKER_COVERAGE_NO_PHASE_YEAR_CANDIDATE",
+      "ticker": "AKRO"
+    },
+    {
+      "asset": "pegcetacoplan",
+      "event_id": "P2-2023-APLS-MERIDIAN",
+      "matched_ncts": [
+        {
+          "brief_title": "Study to Compare the Efficacy and Safety of Intravitreal APL-2 Therapy With Sham Injections in Patients With Geographic Atrophy (GA) Secondary to Age-Related Macular Degeneration",
+          "completion_date": "2022-06-20",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT03525600",
+          "number_of_arms": "4.0",
+          "phase": "PHASE3",
+          "primary_completion_date": "2021-06-21",
+          "study_type": "INTERVENTIONAL"
+        },
+        {
+          "brief_title": "A Study to Compare the Efficacy and Safety of Intravitreal APL-2 Therapy With Sham Injections in Patients With Geographic Atrophy (GA) Secondary to Age-Related Macular Degeneration",
+          "completion_date": "2022-06-28",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT03525613",
+          "number_of_arms": "4.0",
+          "phase": "PHASE3",
+          "primary_completion_date": "2021-06-28",
+          "study_type": "INTERVENTIONAL"
+        },
+        {
+          "brief_title": "A Study to Evaluate the Efficacy and Safety of Pegcetacoplan in Patients With PNH",
+          "completion_date": "2021-06-23",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT04085601",
+          "number_of_arms": "2.0",
+          "phase": "PHASE3",
+          "primary_completion_date": "2021-06-23",
+          "study_type": "INTERVENTIONAL"
+        }
+      ],
+      "stage": "ASSET_NAME_MATCHED",
+      "ticker": "APLS"
+    },
+    {
+      "asset": "PCN-101 (R-ketamine)",
+      "event_id": "P2-2023-ATAI-PCN101",
+      "matched_ncts": [],
+      "stage": "NO_TICKER_COVERAGE",
+      "ticker": "ATAI"
+    },
+    {
+      "asset": "TERN-501",
+      "event_id": "P2-2023-TERN-DUET",
+      "matched_ncts": [],
+      "stage": "NO_TICKER_COVERAGE",
+      "ticker": "TERN"
+    },
+    {
+      "asset": "BNT111",
+      "event_id": "P2-2024-BNTX-BNT111",
+      "matched_ncts": [],
+      "stage": "CANDIDATES_NO_ASSET_NAME_MATCH",
+      "ticker": "BNTX"
+    },
+    {
+      "asset": "REC-994",
+      "event_id": "P2-2024-RXRX-SYCAMORE",
+      "matched_ncts": [],
+      "stage": "NO_TICKER_COVERAGE",
+      "ticker": "RXRX"
+    },
+    {
+      "asset": "dalzanemdor (SAGE-718)",
+      "event_id": "P2-2024-SAGE-DIMENSION",
+      "matched_ncts": [
+        {
+          "brief_title": "A Study to Evaluate the Efficacy, Safety, and Tolerability of SAGE-324 in Participants With Essential Tremor",
+          "completion_date": "2021-02-15",
+          "generic_ticker_token_only_match": true,
+          "nct_id": "NCT04305275",
+          "number_of_arms": "2.0",
+          "phase": "PHASE2",
+          "primary_completion_date": "2021-02-01",
+          "study_type": "INTERVENTIONAL"
+        }
+      ],
+      "stage": "GENERIC_TICKER_TOKEN_ONLY_MATCH",
+      "ticker": "SAGE"
+    },
+    {
+      "asset": "KPI-012",
+      "event_id": "P2-2025-KALA-CHASE",
+      "matched_ncts": [],
+      "stage": "NO_TICKER_COVERAGE",
+      "ticker": "KALA"
+    },
+    {
+      "asset": "VTX958",
+      "event_id": "P2-2025-VTYX-VTX958",
+      "matched_ncts": [],
+      "stage": "NO_TICKER_COVERAGE",
+      "ticker": "VTYX"
+    },
+    {
+      "asset": "UX007",
+      "event_id": "P3-2018-RARE-UX007",
+      "matched_ncts": [
+        {
+          "brief_title": "Long-Chain Fatty Acid Oxidation Disorders (LC-FAOD) Extension Study for Subjects Previously Enrolled in Triheptanoin Studies",
+          "completion_date": "2020-12-03",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT02214160",
+          "number_of_arms": "1.0",
+          "phase": "PHASE2",
+          "primary_completion_date": "2020-12-03",
+          "study_type": "INTERVENTIONAL"
+        }
+      ],
+      "stage": "ASSET_NAME_MATCHED",
+      "ticker": "RARE"
+    },
+    {
+      "asset": "AXS-05",
+      "event_id": "P3-2019-AXSM-GEMINI",
+      "matched_ncts": [],
+      "stage": "CANDIDATES_NO_ASSET_NAME_MATCH",
+      "ticker": "AXSM"
+    },
+    {
+      "asset": "obeticholic acid",
+      "event_id": "P3-2019-ICPT-REGENERATE",
+      "matched_ncts": [],
+      "stage": "NO_TICKER_COVERAGE",
+      "ticker": "ICPT"
+    },
+    {
+      "asset": "ResVax",
+      "event_id": "P3-2019-NVAX-PREPARE",
+      "matched_ncts": [],
+      "stage": "CANDIDATES_NO_ASSET_NAME_MATCH",
+      "ticker": "NVAX"
+    },
+    {
+      "asset": "mitapivat",
+      "event_id": "P3-2020-AGIO-ACTIVATE",
+      "matched_ncts": [],
+      "stage": "CANDIDATES_NO_ASSET_NAME_MATCH",
+      "ticker": "AGIO"
+    },
+    {
+      "asset": "eprenetapopt + azacitidine",
+      "event_id": "P3-2020-APRE-P3MDS",
+      "matched_ncts": [
+        {
+          "brief_title": "APR-246 in Combination With Azacitidine for TP53 Mutated AML (Acute Myeloid Leukemia) or MDS (Myelodysplastic Syndromes) Following Allogeneic Stem Cell Transplant",
+          "completion_date": "2022-01-14",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT03931291",
+          "number_of_arms": "1.0",
+          "phase": "PHASE2",
+          "primary_completion_date": "2021-08-27",
+          "study_type": "INTERVENTIONAL"
+        },
+        {
+          "brief_title": "APR-246 in Combination With Venetoclax and Azacitidine in TP53-Mutant Myeloid Malignancies",
+          "completion_date": "2022-01-14",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT04214860",
+          "number_of_arms": "1.0",
+          "phase": "PHASE1",
+          "primary_completion_date": "2022-01-14",
+          "study_type": "INTERVENTIONAL"
+        }
+      ],
+      "stage": "ASSET_NAME_MATCHED",
+      "ticker": "APRE"
+    },
+    {
+      "asset": "lenabasum",
+      "event_id": "P3-2020-CRBP-RESOLVE1",
+      "matched_ncts": [],
+      "stage": "NO_TICKER_COVERAGE",
+      "ticker": "CRBP"
+    },
+    {
+      "asset": "subcutaneous daratumumab",
+      "event_id": "P3-2020-GMAB-ANDROMEDA",
+      "matched_ncts": [],
+      "stage": "CANDIDATES_NO_ASSET_NAME_MATCH",
+      "ticker": "GMAB"
+    },
+    {
+      "asset": "Trodelvy (sacituzumab govitecan-hziy)",
+      "event_id": "P3-2020-IMMU-ASCENT",
+      "matched_ncts": [],
+      "stage": "NO_TICKER_COVERAGE",
+      "ticker": "IMMU"
+    },
+    {
+      "asset": "rigosertib",
+      "event_id": "P3-2020-ONTX-INSPIRE",
+      "matched_ncts": [
+        {
+          "brief_title": "Phase II Part 2 Expansion of Oral Rigosertib in Combination With Azacitidine",
+          "completion_date": "2021-02-16",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT01926587",
+          "number_of_arms": "1.0",
+          "phase": "PHASE1/PHASE2",
+          "primary_completion_date": "2020-12-08",
+          "study_type": "INTERVENTIONAL"
+        }
+      ],
+      "stage": "ASSET_NAME_MATCHED",
+      "ticker": "ONTX"
+    },
+    {
+      "asset": "Libtayo (cemiplimab)",
+      "event_id": "P3-2020-REGN-LIBTAYO-NSCLC",
+      "matched_ncts": [
+        {
+          "brief_title": "Study of Cemiplimab in Adults With Cervical Cancer",
+          "completion_date": "2023-04-20",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT03257267",
+          "number_of_arms": "2.0",
+          "phase": "PHASE3",
+          "primary_completion_date": "2021-03-15",
+          "study_type": "INTERVENTIONAL"
+        }
+      ],
+      "stage": "ASSET_NAME_MATCHED",
+      "ticker": "REGN"
+    },
+    {
+      "asset": "timrepigene emparvovec",
+      "event_id": "P3-2021-BIIB-STAR",
+      "matched_ncts": [],
+      "stage": "CANDIDATES_NO_ASSET_NAME_MATCH",
+      "ticker": "BIIB"
+    },
+    {
+      "asset": "tofersen",
+      "event_id": "P3-2021-BIIB-VALOR",
+      "matched_ncts": [
+        {
+          "brief_title": "An Efficacy, Safety, Tolerability, Pharmacokinetics and Pharmacodynamics Study of BIIB067 (Tofersen) in Adults With Inherited Amyotrophic Lateral Sclerosis (ALS)",
+          "completion_date": "2021-07-16",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT02623699",
+          "number_of_arms": "12.0",
+          "phase": "PHASE3",
+          "primary_completion_date": "2021-07-16",
+          "study_type": "INTERVENTIONAL"
+        }
+      ],
+      "stage": "ASSET_NAME_MATCHED",
+      "ticker": "BIIB"
+    },
+    {
+      "asset": "zanubrutinib",
+      "event_id": "P3-2022-BGNE-ALPINE",
+      "matched_ncts": [
+        {
+          "brief_title": "Study of BTK Inhibitor Zanubrutinib in Participants With Relapsed/Refractory Non-GCB Type Diffuse Large B Cell Lymphoma",
+          "completion_date": "2020-09-03",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT03145064",
+          "number_of_arms": "1.0",
+          "phase": "PHASE2",
+          "primary_completion_date": "2019-05-24",
+          "study_type": "INTERVENTIONAL"
+        },
+        {
+          "brief_title": "Efficacy and Safety of Zanubrutinib in Relapsed or Refractory Chronic Lymphocytic Leukemia/Small Lymphocytic Lymphoma",
+          "completion_date": "2020-09-10",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT03206918",
+          "number_of_arms": "1.0",
+          "phase": "PHASE2",
+          "primary_completion_date": "2018-06-15",
+          "study_type": "INTERVENTIONAL"
+        },
+        {
+          "brief_title": "Study of Zanubrutinib (BGB-3111) in Participants With Marginal Zone Lymphoma",
+          "completion_date": "2022-05-04",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT03846427",
+          "number_of_arms": "1.0",
+          "phase": "PHASE2",
+          "primary_completion_date": "2022-05-04",
+          "study_type": "INTERVENTIONAL"
+        },
+        {
+          "brief_title": "Covid-19 Infection and Pulmonary Distress Treatment With Zanubrutinib in Hospitalized Participants",
+          "completion_date": "2021-02-01",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT04382586",
+          "number_of_arms": "2.0",
+          "phase": "PHASE2",
+          "primary_completion_date": "2021-02-01",
+          "study_type": "INTERVENTIONAL"
+        },
+        {
+          "brief_title": "The Effect of Moderate CYP3A Inducer Rifabutin on the Pharmacokinetics of Zanubrutinib in Healthy Males",
+          "completion_date": "2020-11-10",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT04470908",
+          "number_of_arms": "1.0",
+          "phase": "PHASE1",
+          "primary_completion_date": "2020-11-10",
+          "study_type": "INTERVENTIONAL"
+        }
+      ],
+      "stage": "ASSET_NAME_MATCHED",
+      "ticker": "BGNE"
+    },
+    {
+      "asset": "resmetirom",
+      "event_id": "P3-2022-MDGL-MAESTRO-NASH",
+      "matched_ncts": [
+        {
+          "brief_title": "A Phase 3 Study to Evaluate Safety and Biomarkers of Resmetirom (MGL-3196) in Non Alcoholic Fatty Liver Disease Patients",
+          "completion_date": "2023-01-06",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT04197479",
+          "number_of_arms": "4.0",
+          "phase": "PHASE3",
+          "primary_completion_date": "2023-01-06",
+          "study_type": "INTERVENTIONAL"
+        }
+      ],
+      "stage": "ASSET_NAME_MATCHED",
+      "ticker": "MDGL"
+    },
+    {
+      "asset": "imetelstat",
+      "event_id": "P3-2023-GERN-IMERGE",
+      "matched_ncts": [
+        {
+          "brief_title": "Study to Evaluate Activity of 2 Dose Levels of Imetelstat in Participants With Intermediate-2 or High-Risk Myelofibrosis (MF) Previously Treated With Janus Kinase (JAK) Inhibitor",
+          "completion_date": "2020-02-07",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT02426086",
+          "number_of_arms": "2.0",
+          "phase": "PHASE2",
+          "primary_completion_date": "2018-04-26",
+          "study_type": "INTERVENTIONAL"
+        }
+      ],
+      "stage": "ASSET_NAME_MATCHED",
+      "ticker": "GERN"
+    },
+    {
+      "asset": "Tivdak (tisotumab vedotin-tftv)",
+      "event_id": "P3-2023-GMAB-INNOVATV301",
+      "matched_ncts": [
+        {
+          "brief_title": "A Trial of Tisotumab Vedotin in Cervical Cancer",
+          "completion_date": "2022-08-02",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT03438396",
+          "number_of_arms": "1.0",
+          "phase": "PHASE2",
+          "primary_completion_date": "2020-02-06",
+          "study_type": "INTERVENTIONAL"
+        }
+      ],
+      "stage": "ASSET_NAME_MATCHED",
+      "ticker": "GMAB"
+    },
+    {
+      "asset": "ANX005",
+      "event_id": "P3-2024-ANNX-ANX005",
+      "matched_ncts": [],
+      "stage": "TICKER_COVERAGE_NO_PHASE_YEAR_CANDIDATE",
+      "ticker": "ANNX"
+    },
+    {
+      "asset": "losmapimod",
+      "event_id": "P3-2024-FULC-REACH",
+      "matched_ncts": [
+        {
+          "brief_title": "Efficacy and Safety of Losmapimod in Subjects With Facioscapulohumeral Muscular Dystrophy (FSHD)",
+          "completion_date": "2021-01-28",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT04003974",
+          "number_of_arms": "2.0",
+          "phase": "PHASE2",
+          "primary_completion_date": "2021-01-28",
+          "study_type": "INTERVENTIONAL"
+        }
+      ],
+      "stage": "ASSET_NAME_MATCHED",
+      "ticker": "FULC"
+    },
+    {
+      "asset": "obicetrapib",
+      "event_id": "P3-2024-NAMS-BROADWAY",
+      "matched_ncts": [
+        {
+          "brief_title": "Randomized Study of Obicetrapib as an Adjunct to Statin Therapy",
+          "completion_date": "2021-08-30",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT04753606",
+          "number_of_arms": "3.0",
+          "phase": "PHASE2",
+          "primary_completion_date": "2021-05-24",
+          "study_type": "INTERVENTIONAL"
+        },
+        {
+          "brief_title": "Randomized Study of Obicetrapib in Combination With Ezetimibe",
+          "completion_date": "2021-06-30",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT04770389",
+          "number_of_arms": "4.0",
+          "phase": "PHASE2",
+          "primary_completion_date": "2021-05-07",
+          "study_type": "INTERVENTIONAL"
+        },
+        {
+          "brief_title": "Study to Evaluate the Effect of Obicetrapib in Combination With Ezetimibe as an Adjunct to HIS Therapy",
+          "completion_date": "2022-09-08",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT05266586",
+          "number_of_arms": "3.0",
+          "phase": "PHASE2",
+          "primary_completion_date": "2022-08-12",
+          "study_type": "INTERVENTIONAL"
+        },
+        {
+          "brief_title": "A Dose-Finding Study in Japanese Patients to Evaluate the Effect of Obicetrapib as an Adjunct to Stable Statin Therapy.",
+          "completion_date": "2023-04-21",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT05421078",
+          "number_of_arms": "4.0",
+          "phase": "PHASE2",
+          "primary_completion_date": "2023-03-24",
+          "study_type": "INTERVENTIONAL"
+        }
+      ],
+      "stage": "ASSET_NAME_MATCHED",
+      "ticker": "NAMS"
+    },
+    {
+      "asset": "obicetrapib",
+      "event_id": "P3-2024-NAMS-BROOKLYN",
+      "matched_ncts": [
+        {
+          "brief_title": "Randomized Study of Obicetrapib as an Adjunct to Statin Therapy",
+          "completion_date": "2021-08-30",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT04753606",
+          "number_of_arms": "3.0",
+          "phase": "PHASE2",
+          "primary_completion_date": "2021-05-24",
+          "study_type": "INTERVENTIONAL"
+        },
+        {
+          "brief_title": "Randomized Study of Obicetrapib in Combination With Ezetimibe",
+          "completion_date": "2021-06-30",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT04770389",
+          "number_of_arms": "4.0",
+          "phase": "PHASE2",
+          "primary_completion_date": "2021-05-07",
+          "study_type": "INTERVENTIONAL"
+        },
+        {
+          "brief_title": "Study to Evaluate the Effect of Obicetrapib in Combination With Ezetimibe as an Adjunct to HIS Therapy",
+          "completion_date": "2022-09-08",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT05266586",
+          "number_of_arms": "3.0",
+          "phase": "PHASE2",
+          "primary_completion_date": "2022-08-12",
+          "study_type": "INTERVENTIONAL"
+        },
+        {
+          "brief_title": "A Dose-Finding Study in Japanese Patients to Evaluate the Effect of Obicetrapib as an Adjunct to Stable Statin Therapy.",
+          "completion_date": "2023-04-21",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT05421078",
+          "number_of_arms": "4.0",
+          "phase": "PHASE2",
+          "primary_completion_date": "2023-03-24",
+          "study_type": "INTERVENTIONAL"
+        }
+      ],
+      "stage": "ASSET_NAME_MATCHED",
+      "ticker": "NAMS"
+    },
+    {
+      "asset": "simufilam",
+      "event_id": "P3-2024-SAVA-RETHINK",
+      "matched_ncts": [],
+      "stage": "CANDIDATES_NO_ASSET_NAME_MATCH",
+      "ticker": "SAVA"
+    },
+    {
+      "asset": "latozinemab",
+      "event_id": "P3-2025-ALEC-INFRONT3",
+      "matched_ncts": [],
+      "stage": "NO_TICKER_COVERAGE",
+      "ticker": "ALEC"
+    },
+    {
+      "asset": "deramiocel",
+      "event_id": "P3-2025-CAPR-HOPE3",
+      "matched_ncts": [],
+      "stage": "NO_TICKER_COVERAGE",
+      "ticker": "CAPR"
+    },
+    {
+      "asset": "simufilam",
+      "event_id": "P3-2025-SAVA-REFOCUS",
+      "matched_ncts": [],
+      "stage": "CANDIDATES_NO_ASSET_NAME_MATCH",
+      "ticker": "SAVA"
+    },
+    {
+      "asset": "TIBSOVO (ivosidenib)",
+      "event_id": "REG-2018-AGIO-TIBSOVO",
+      "matched_ncts": [],
+      "stage": "CANDIDATES_NO_ASSET_NAME_MATCH",
+      "ticker": "AGIO"
+    },
+    {
+      "asset": "ONPATTRO (patisiran)",
+      "event_id": "REG-2018-ALNY-ONPATTRO",
+      "matched_ncts": [
+        {
+          "brief_title": "The Study of an Investigational Drug, Patisiran (ALN-TTR02), for the Treatment of Transthyretin (TTR)-Mediated Amyloidosis in Participants Who Have Already Been Treated With ALN-TTR02 (Patisiran)",
+          "completion_date": "2022-11-23",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT02510261",
+          "number_of_arms": "3.0",
+          "phase": "PHASE3",
+          "primary_completion_date": "2022-11-23",
+          "study_type": "INTERVENTIONAL"
+        }
+      ],
+      "stage": "ASSET_NAME_MATCHED",
+      "ticker": "ALNY"
+    },
+    {
+      "asset": "BRAFTOVI (encorafenib) + MEKTOVI (binimetinib)",
+      "event_id": "REG-2018-ARRY-BRAFTOVI-MEKTOVI",
+      "matched_ncts": [],
+      "stage": "NO_TICKER_COVERAGE",
+      "ticker": "ARRY"
+    },
+    {
+      "asset": "GALAFOLD (migalastat)",
+      "event_id": "REG-2018-FOLD-GALAFOLD",
+      "matched_ncts": [],
+      "stage": "CANDIDATES_NO_ASSET_NAME_MATCH",
+      "ticker": "FOLD"
+    },
+    {
+      "asset": "IV meloxicam",
+      "event_id": "REG-2018-REPH-MELOXICAM-CRL",
+      "matched_ncts": [],
+      "stage": "NO_TICKER_COVERAGE",
+      "ticker": "REPH"
+    },
+    {
+      "asset": "OXBRYTA (voxelotor)",
+      "event_id": "REG-2019-GBT-OXBRYTA",
+      "matched_ncts": [],
+      "stage": "NO_TICKER_COVERAGE",
+      "ticker": "GBT"
+    },
+    {
+      "asset": "ZULRESSO (brexanolone)",
+      "event_id": "REG-2019-SAGE-ZULRESSO",
+      "matched_ncts": [],
+      "stage": "CANDIDATES_NO_ASSET_NAME_MATCH",
+      "ticker": "SAGE"
+    },
+    {
+      "asset": "golodirsen (VYONDYS 53)",
+      "event_id": "REG-2019-SRPT-GOLODIRSEN-CRL",
+      "matched_ncts": [],
+      "stage": "TICKER_COVERAGE_NO_PHASE_YEAR_CANDIDATE",
+      "ticker": "SRPT"
+    },
+    {
+      "asset": "valoctocogene roxaparvovec",
+      "event_id": "REG-2020-BMRN-VALROX-CRL",
+      "matched_ncts": [],
+      "stage": "CANDIDATES_NO_ASSET_NAME_MATCH",
+      "ticker": "BMRN"
+    },
+    {
+      "asset": "obeticholic acid",
+      "event_id": "REG-2020-ICPT-OCA-CRL",
+      "matched_ncts": [],
+      "stage": "NO_TICKER_COVERAGE",
+      "ticker": "ICPT"
+    },
+    {
+      "asset": "TRODELVY (sacituzumab govitecan-hziy)",
+      "event_id": "REG-2020-IMMU-TRODELVY",
+      "matched_ncts": [],
+      "stage": "NO_TICKER_COVERAGE",
+      "ticker": "IMMU"
+    },
+    {
+      "asset": "IMCIVREE (setmelanotide)",
+      "event_id": "REG-2020-RYTM-IMCIVREE",
+      "matched_ncts": [
+        {
+          "brief_title": "Setmelanotide for the Treatment of Early-Onset Pro-Opiomelanocortin (POMC) Deficiency Obesity",
+          "completion_date": "2020-05-25",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT02896192",
+          "number_of_arms": "1.0",
+          "phase": "PHASE3",
+          "primary_completion_date": "2020-05-25",
+          "study_type": "INTERVENTIONAL"
+        },
+        {
+          "brief_title": "Setmelanotide for the Treatment of Leptin Receptor (LEPR) Deficiency Obesity",
+          "completion_date": "2020-09-25",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT03287960",
+          "number_of_arms": "1.0",
+          "phase": "PHASE3",
+          "primary_completion_date": "2020-09-25",
+          "study_type": "INTERVENTIONAL"
+        },
+        {
+          "brief_title": "Setmelanotide (RM-493), Melanocortin-4 Receptor (MC4R) Agonist, in Bardet-Biedl Syndrome (BBS) and Alstr\u00f6m Syndrome (AS) Participants With Moderate to Severe Obesity",
+          "completion_date": "2021-03-08",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT03746522",
+          "number_of_arms": "3.0",
+          "phase": "PHASE3",
+          "primary_completion_date": "2020-11-16",
+          "study_type": "INTERVENTIONAL"
+        },
+        {
+          "brief_title": "Open-Label Study of Setmelanotide in Hypothalamic Obesity",
+          "completion_date": "2022-06-28",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT04725240",
+          "number_of_arms": "1.0",
+          "phase": "PHASE2",
+          "primary_completion_date": "2022-06-28",
+          "study_type": "INTERVENTIONAL"
+        }
+      ],
+      "stage": "ASSET_NAME_MATCHED",
+      "ticker": "RYTM"
+    },
+    {
+      "asset": "veverimer (TRC101)",
+      "event_id": "REG-2020-TCDA-VEVERIMER-CRL",
+      "matched_ncts": [],
+      "stage": "NO_TICKER_COVERAGE",
+      "ticker": "TCDA"
+    },
+    {
+      "asset": "SKYTROFA (lonapegsomatropin-tcgd)",
+      "event_id": "REG-2021-ASND-SKYTROFA",
+      "matched_ncts": [],
+      "stage": "TICKER_COVERAGE_NO_PHASE_YEAR_CANDIDATE",
+      "ticker": "ASND"
+    },
+    {
+      "asset": "oral paclitaxel plus encequidar",
+      "event_id": "REG-2021-ATNX-ORALPAC-CRL",
+      "matched_ncts": [],
+      "stage": "NO_TICKER_COVERAGE",
+      "ticker": "ATNX"
+    },
+    {
+      "asset": "roxadustat",
+      "event_id": "REG-2021-FGEN-ROXADUSTAT-CRL",
+      "matched_ncts": [],
+      "stage": "CANDIDATES_NO_ASSET_NAME_MATCH",
+      "ticker": "FGEN"
+    },
+    {
+      "asset": "OPZELURA (ruxolitinib) cream",
+      "event_id": "REG-2021-INCY-OPZELURA",
+      "matched_ncts": [
+        {
+          "brief_title": "A Study of INCB050465 in Combination With Ruxolitinib in Subjects With Myelofibrosis",
+          "completion_date": "2022-04-29",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT02718300",
+          "number_of_arms": "4.0",
+          "phase": "PHASE2",
+          "primary_completion_date": "2021-01-28",
+          "study_type": "INTERVENTIONAL"
+        },
+        {
+          "brief_title": "A Study of INCB018424 Phosphate Cream in Subjects With Vitiligo",
+          "completion_date": "2021-09-08",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT03099304",
+          "number_of_arms": "5.0",
+          "phase": "PHASE2",
+          "primary_completion_date": "2018-09-12",
+          "study_type": "INTERVENTIONAL"
+        },
+        {
+          "brief_title": "A Study of Ruxolitinib vs Best Available Therapy (BAT) in Patients With Steroid-refractory Chronic Graft vs. Host Disease (GvHD) After Bone Marrow Transplantation (REACH3)",
+          "completion_date": "2022-12-15",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT03112603",
+          "number_of_arms": "2.0",
+          "phase": "PHASE3",
+          "primary_completion_date": "2020-05-08",
+          "study_type": "INTERVENTIONAL"
+        },
+        {
+          "brief_title": "Topical Ruxolitinib Evaluation in Atopic Dermatitis Study 1 (TRuE AD1) - An Efficacy and Safety Study of Ruxolitinib Cream in Adolescents and Adults With Atopic Dermatitis",
+          "completion_date": "2020-12-01",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT03745638",
+          "number_of_arms": "7.0",
+          "phase": "PHASE3",
+          "primary_completion_date": "2019-12-23",
+          "study_type": "INTERVENTIONAL"
+        },
+        {
+          "brief_title": "TRuE AD2 - An Efficacy and Safety Study of Ruxolitinib Cream in Adolescents and Adults With Atopic Dermatitis",
+          "completion_date": "2020-11-09",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT03745651",
+          "number_of_arms": "7.0",
+          "phase": "PHASE3",
+          "primary_completion_date": "2019-11-18",
+          "study_type": "INTERVENTIONAL"
+        },
+        {
+          "brief_title": "Topical Ruxolitinib Evaluation in Vitiligo Study 1 (TRuE-V1)",
+          "completion_date": "2021-10-21",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT04052425",
+          "number_of_arms": "4.0",
+          "phase": "PHASE3",
+          "primary_completion_date": "2021-03-18",
+          "study_type": "INTERVENTIONAL"
+        },
+        {
+          "brief_title": "Topical Ruxolitinib Evaluation in Vitiligo Study 2 (TRuE-V2)",
+          "completion_date": "2021-10-01",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT04057573",
+          "number_of_arms": "4.0",
+          "phase": "PHASE3",
+          "primary_completion_date": "2021-03-15",
+          "study_type": "INTERVENTIONAL"
+        },
+        {
+          "brief_title": "Study to Assess the Efficacy and Safety of Ruxolitinib in Patients With COVID-19 Associated Cytokine Storm",
+          "completion_date": "2020-10-17",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT04362137",
+          "number_of_arms": "2.0",
+          "phase": "PHASE3",
+          "primary_completion_date": "2020-10-17",
+          "study_type": "INTERVENTIONAL"
+        },
+        {
+          "brief_title": "Assess the Long Term Efficacy and Safety of Ruxolitinib Cream in Participants With Vitiligo",
+          "completion_date": "2022-11-14",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT04530344",
+          "number_of_arms": "3.0",
+          "phase": "PHASE3",
+          "primary_completion_date": "2022-11-14",
+          "study_type": "INTERVENTIONAL"
+        },
+        {
+          "brief_title": "Ruxolitinib Cream in Participants With Facial and/or Neck Atopic Dermatitis Involvement",
+          "completion_date": "2023-09-29",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT05127421",
+          "number_of_arms": "2.0",
+          "phase": "PHASE2",
+          "primary_completion_date": "2023-08-03",
+          "study_type": "INTERVENTIONAL"
+        }
+      ],
+      "stage": "ASSET_NAME_MATCHED",
+      "ticker": "INCY"
+    },
+    {
+      "asset": "narsoplimab",
+      "event_id": "REG-2021-OMER-NARSOPLIMAB-CRL",
+      "matched_ncts": [],
+      "stage": "TICKER_COVERAGE_NO_PHASE_YEAR_CANDIDATE",
+      "ticker": "OMER"
+    },
+    {
+      "asset": "AXS-07 (MoSEIC meloxicam/rizatriptan)",
+      "event_id": "REG-2022-AXSM-AXS07-CRL",
+      "matched_ncts": [],
+      "stage": "CANDIDATES_NO_ASSET_NAME_MATCH",
+      "ticker": "AXSM"
+    },
+    {
+      "asset": "ELAHERE (mirvetuximab soravtansine-gynx)",
+      "event_id": "REG-2022-IMGN-ELAHERE",
+      "matched_ncts": [],
+      "stage": "NO_TICKER_COVERAGE",
+      "ticker": "IMGN"
+    },
+    {
+      "asset": "TZIELD (teplizumab-mzwv)",
+      "event_id": "REG-2022-PRVB-TZIELD",
+      "matched_ncts": [],
+      "stage": "NO_TICKER_COVERAGE",
+      "ticker": "PRVB"
+    },
+    {
+      "asset": "BRIUMVI (ublituximab-xiiy)",
+      "event_id": "REG-2022-TGTX-BRIUMVI",
+      "matched_ncts": [
+        {
+          "brief_title": "Ublituximab in Combination With Ibrutinib Versus Ibrutinib Alone in Participants With Previously Treated High-Risk Chronic Lymphocytic Leukemia (CLL)",
+          "completion_date": "2020-04-01",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT02301156",
+          "number_of_arms": "2.0",
+          "phase": "PHASE3",
+          "primary_completion_date": "2020-04-01",
+          "study_type": "INTERVENTIONAL"
+        },
+        {
+          "brief_title": "Ublituximab + TGR-1202 Compared to Obinutuzumab + Chlorambucil in Participants With Untreated and Previously Treated Chronic Lymphocytic Leukemia",
+          "completion_date": "2023-02-22",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT02612311",
+          "number_of_arms": "4.0",
+          "phase": "PHASE3",
+          "primary_completion_date": "2023-02-22",
+          "study_type": "INTERVENTIONAL"
+        },
+        {
+          "brief_title": "Study to Assess the Efficacy and Safety of Ublituximab in Participants With Relapsing Forms of Multiple Sclerosis (RMS)",
+          "completion_date": "2020-11-12",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT03277248",
+          "number_of_arms": "2.0",
+          "phase": "PHASE3",
+          "primary_completion_date": "2020-08-04",
+          "study_type": "INTERVENTIONAL"
+        },
+        {
+          "brief_title": "Study to Assess the Efficacy and Safety of Ublituximab in Participants With Relapsing Forms of Multiple Sclerosis (RMS) ( ULTIMATE 1 )",
+          "completion_date": "2020-11-06",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT03277261",
+          "number_of_arms": "2.0",
+          "phase": "PHASE3",
+          "primary_completion_date": "2020-07-23",
+          "study_type": "INTERVENTIONAL"
+        }
+      ],
+      "stage": "ASSET_NAME_MATCHED",
+      "ticker": "TGTX"
+    },
+    {
+      "asset": "LYFGENIA (lovotibeglogene autotemcel)",
+      "event_id": "REG-2023-BLUE-LYFGENIA",
+      "matched_ncts": [],
+      "stage": "TICKER_COVERAGE_NO_PHASE_YEAR_CANDIDATE",
+      "ticker": "BLUE"
+    },
+    {
+      "asset": "imetelstat",
+      "event_id": "REG-2023-GERN-IMETELSTAT-NDA-ACCEPT",
+      "matched_ncts": [
+        {
+          "brief_title": "Study to Evaluate Activity of 2 Dose Levels of Imetelstat in Participants With Intermediate-2 or High-Risk Myelofibrosis (MF) Previously Treated With Janus Kinase (JAK) Inhibitor",
+          "completion_date": "2020-02-07",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT02426086",
+          "number_of_arms": "2.0",
+          "phase": "PHASE2",
+          "primary_completion_date": "2018-04-26",
+          "study_type": "INTERVENTIONAL"
+        }
+      ],
+      "stage": "ASSET_NAME_MATCHED",
+      "ticker": "GERN"
+    },
+    {
+      "asset": "SKYCLARYS (omaveloxolone)",
+      "event_id": "REG-2023-RETA-SKYCLARYS",
+      "matched_ncts": [],
+      "stage": "NO_TICKER_COVERAGE",
+      "ticker": "RETA"
+    },
+    {
+      "asset": "ELEVIDYS (delandistrogene moxeparvovec-rokl)",
+      "event_id": "REG-2023-SRPT-ELEVIDYS",
+      "matched_ncts": [],
+      "stage": "TICKER_COVERAGE_NO_PHASE_YEAR_CANDIDATE",
+      "ticker": "SRPT"
+    },
+    {
+      "asset": "AMTAGVI (lifileucel)",
+      "event_id": "REG-2024-IOVA-AMTAGVI",
+      "matched_ncts": [],
+      "stage": "TICKER_COVERAGE_NO_PHASE_YEAR_CANDIDATE",
+      "ticker": "IOVA"
+    },
+    {
+      "asset": "KRESLADI (marnetegragene autotemcel)",
+      "event_id": "REG-2024-RCKT-KRESLADI-CRL",
+      "matched_ncts": [],
+      "stage": "NO_TICKER_COVERAGE",
+      "ticker": "RCKT"
+    },
+    {
+      "asset": "linvoseltamab (LYNOZYFIC)",
+      "event_id": "REG-2024-REGN-LINVOSELTAMAB-CRL",
+      "matched_ncts": [],
+      "stage": "CANDIDATES_NO_ASSET_NAME_MATCH",
+      "ticker": "REGN"
+    },
+    {
+      "asset": "ALYFTREK (vanzacaftor/tezacaftor/deutivacaftor)",
+      "event_id": "REG-2024-VRTX-ALYFTREK",
+      "matched_ncts": [
+        {
+          "brief_title": "A Study Evaluating the Efficacy and Safety of VX-445/Tezacaftor/Ivacaftor in Cystic Fibrosis Subjects, Homozygous for F508del",
+          "completion_date": "2020-07-24",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT04105972",
+          "number_of_arms": "2.0",
+          "phase": "PHASE3",
+          "primary_completion_date": "2020-07-24",
+          "study_type": "INTERVENTIONAL"
+        },
+        {
+          "brief_title": "A Study Evaluating Efficacy and Safety of Elexacaftor/Tezacaftor/Ivacaftor in Subjects 6 Through 11 Years of Age With Cystic Fibrosis and F/MF Genotypes",
+          "completion_date": "2021-05-17",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT04353817",
+          "number_of_arms": "2.0",
+          "phase": "PHASE3",
+          "primary_completion_date": "2021-05-17",
+          "study_type": "INTERVENTIONAL"
+        },
+        {
+          "brief_title": "Evaluation of Efficacy and Safety of Elexacaftor/Tezacaftor/Ivacaftor (ELX/TEZ/IVA) in Cystic Fibrosis Subjects Without an F508del Mutation",
+          "completion_date": "2023-07-05",
+          "generic_ticker_token_only_match": false,
+          "nct_id": "NCT05274269",
+          "number_of_arms": "2.0",
+          "phase": "PHASE3",
+          "primary_completion_date": "2023-07-05",
+          "study_type": "INTERVENTIONAL"
+        }
+      ],
+      "stage": "ASSET_NAME_MATCHED",
+      "ticker": "VRTX"
+    }
+  ],
+  "role": "FEASIBILITY_PILOT_NOT_A_SCORED_FACTOR",
+  "stage_counts": {
+    "ASSET_NAME_MATCHED": 27,
+    "CANDIDATES_NO_ASSET_NAME_MATCH": 23,
+    "GENERIC_TICKER_TOKEN_ONLY_MATCH": 3,
+    "NO_TICKER_COVERAGE": 49,
+    "TICKER_COVERAGE_NO_PHASE_YEAR_CANDIDATE": 18
+  }
+}

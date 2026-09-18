@@ -1,0 +1,13 @@
+{
+  "conclusion": "27/120 events (22%) resolve to at least one real, drug-name-verified candidate trial via this free dataset. A further 3 events only matched because the asset text happened to contain the company's own ticker as a generic token (e.g. NKTR-214's event matching an unrelated NKTR-102 trial, or three separate SAGE-718 events all matching the same unrelated SAGE-324 trial) - confirmed by manual spot-check, not assumed - so they are excluded from the reliable count above rather than silently accepted. Even for the reliable matches, the metadata CSV does not carry allocation/masking/intervention_model (the fields TRIAL_DESIGN actually needs - see ('allocation', 'masking', 'intervention_model')), only weaker proxies (phase, arm count, study_type). Given a genuine match rate this low and missing the specific fields the redesign was meant to make objective, this path does not clear the bar to build a full SCIENCE-redesign pipeline on top of it. RECOMMENDATION: DO_NOT_PROCEED - document this finding and do not build scripts/m7_build_science_scores.py against this data source.",
+  "event_count": 120,
+  "generator": "python scripts/m7_pilot_science_redesign.py",
+  "recommendation": "DO_NOT_PROCEED",
+  "stage_counts": {
+    "ASSET_NAME_MATCHED": 27,
+    "CANDIDATES_NO_ASSET_NAME_MATCH": 23,
+    "GENERIC_TICKER_TOKEN_ONLY_MATCH": 3,
+    "NO_TICKER_COVERAGE": 49,
+    "TICKER_COVERAGE_NO_PHASE_YEAR_CANDIDATE": 18
+  }
+}

@@ -1451,7 +1451,7 @@
       "xbi_relative_t20_pct": 7.339871443224101
     }
   ],
-  "code_sha": "575a6bee506e81c52fb5d28415962c1b57211feb",
+  "code_sha": "e9b8f66a8414275b7ee7d773ef096b25dc366ce4",
   "cohort_flow": {
     "event_count": 120,
     "financing_count": 38,
@@ -1483,7 +1483,8 @@
     "The author had already seen this cohort's aggregate outcome rates before any of CATALYST/CASH_DILUTION/TECHNICAL were built, the same disclosed limitation as objective-calibration-report.json - no per-event outcome was consulted while writing the scoring logic in scripts/m7_build_catalyst_scores.py, scripts/m7_build_cash_dilution_scores.py, or scripts/m7_build_technical_snapshots.py, but perfect blinding cannot be claimed.",
     "Real point-in-time CATALYST, CASH_DILUTION, and TECHNICAL factor scores exist (see partial-scorecard-calibration.json), but VALUATION (rNPV) was never reconstructed for any event, and OWNERSHIP and SENTIMENT were never attempted. Without VALUATION, gates.py's GateInput cannot be built either (it needs base_ev_pct/ conservative_ev_pct/reward_risk, all rNPV-derived) - so no gate evaluation and no real classification exist for any event.",
     "No decision was locked before outcomes were known, because no decision (in the BOE-1.0.0 sense of a scored, classified, gated HistoricalDecisionLock) was ever produced - the real PoS, CATALYST, CASH_DILUTION, and TECHNICAL scores that do exist were each computed from structural or objectively-sourced facts involving no outcome-dependent judgment, but this report's author did already know this cohort's real outcomes throughout, as disclosed in each component report.",
-    "This report validates a substitute methodology built explicitly because no qualified human reviewer was available (docs/M7-HUMAN-REVIEW-BLOCKER.md) - it is not evidence that BOE-1.0.0 itself, as originally specified, does or does not work."
+    "This report validates a substitute methodology built explicitly because no qualified human reviewer was available (docs/M7-HUMAN-REVIEW-BLOCKER.md) - it is not evidence that BOE-1.0.0 itself, as originally specified, does or does not work.",
+    "A real feasibility pilot for a non-fabricated SCIENCE-factor redesign was run against the full frozen cohort (validation/m7/discovery/science-redesign-pilot.json) after ClinicalTrials.gov's own API was confirmed to return a real, persistent 403 to programmatic access from this environment. Using a free bulk research dataset instead, only 27/120 events (22%) resolve to a genuine, drug-name-verified candidate trial - and even those are missing the allocation/masking fields TRIAL_DESIGN actually needs, leaving only weaker proxies. This does not clear the bar to build a SCIENCE-redesign pipeline; SCIENCE remains MISSING for every event, as it has throughout Milestone 7. VALUATION was not separately piloted: it depends on epidemiological incidence/prevalence data that is, if anything, less centrally available in bulk than clinical-trial data, so the same conclusion is expected to apply and was not worth a second bounded pilot to re-confirm."
   ],
   "failure_register": {
     "definition": "False positive: top PoS quintile with T+20 return <= -20.0%. False negative: bottom PoS quintile with MFE >= 40.0%. Adapted from VALIDATION-AND-MILESTONES.md section 7 by ranking on objective PoS quintile in place of a BOE-1.0.0 classification this project does not have.",
