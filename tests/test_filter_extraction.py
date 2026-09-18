@@ -157,6 +157,38 @@ def test_extract_candidates_classifies_new_clinical_triggers_as_clin_p2():
         assert candidates[0].catalyst_type == CatalystType.CLIN_P2
 
 
+def test_extract_candidates_rejects_internal_advisory_board_not_fda_adcom():
+    # Real false-match found in live testing: a company's own internal
+    # KOL/medical advisory board meeting, not an FDA Advisory Committee.
+    sentence = (
+        "Also in June 2026, we hosted an advisory committee meeting with "
+        "several leading key opinion leaders at the inaugural SOLAR conference."
+    )
+    candidates = extract_candidates(
+        ticker="XYZ",
+        cik="0000000001",
+        company="Example Biotech",
+        document_text=sentence,
+        source_url="https://www.sec.gov/example/xyz.htm",
+        filing_date=None,
+    )
+    assert candidates == ()
+
+
+def test_extract_candidates_accepts_fda_advisory_committee():
+    sentence = "The FDA has scheduled an Advisory Committee meeting for March 15, 2027."
+    candidates = extract_candidates(
+        ticker="XYZ",
+        cik="0000000001",
+        company="Example Biotech",
+        document_text=sentence,
+        source_url="https://www.sec.gov/example/xyz.htm",
+        filing_date=None,
+    )
+    assert len(candidates) == 1
+    assert candidates[0].catalyst_type == CatalystType.REG_DECISION
+
+
 def test_extract_candidates_classifies_registrational_trial_as_phase_3():
     candidates = extract_candidates(
         ticker="PRAX",

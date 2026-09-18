@@ -171,8 +171,17 @@ def _sentences(text: str) -> list[str]:
 def _classify_trigger(sentence: str) -> tuple[str, CatalystType] | None:
     lowered = sentence.lower()
     for trigger in REG_TRIGGERS:
-        if trigger.lower() in lowered:
-            return trigger, CatalystType.REG_DECISION
+        if trigger.lower() not in lowered:
+            continue
+        # "Advisory Committee" alone is ambiguous - companies also host
+        # their own internal medical/KOL advisory boards (confirmed as a
+        # real false match in live testing: "we hosted an advisory
+        # committee meeting with... key opinion leaders"). PDUFA/target
+        # action date/CRL/Priority Review are FDA-specific terms with no
+        # such alternate meaning and need no extra check.
+        if trigger == "Advisory Committee" and "fda" not in lowered:
+            continue
+        return trigger, CatalystType.REG_DECISION
     for trigger in CLINICAL_TRIGGERS:
         if trigger.lower() in lowered:
             is_phase_3 = any(
