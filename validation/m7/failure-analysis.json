@@ -1,0 +1,217 @@
+{
+  "format_version": "1.0",
+  "milestone": 7,
+  "role": "POST_HOC_REAL_EVENT_RESEARCH_NOT_METHODOLOGY_INPUT",
+  "generated_at": "2026-09-18",
+  "cohort_sha256": "37f2e70dcc0626b40e97637e34056c9279ae9a5e6daf69d1c2f730e77c114e95",
+  "trigger": "validation/m7/validation-report.json's failure_register flagged 7 false positives and 6 false negatives by objective PoS quintile vs. real T+20 return/MFE, and explicitly left per-event categorization unassessed ('assigning them ... for a specific real event without new per-event research would be fabrication, not analysis'). This file is that new per-event research: real facts about what actually happened, sourced from FDA/company press releases, SEC 8-K exhibits, and reputable biotech press, gathered live via web search this session.",
+  "methodology": "Each row's real_facts and sources come from live web search of public FDA/company/press records, not from prior knowledge asserted without a citation. category is a judgment call informed by those real facts (not fabricated), drawn from the same taxonomy already listed in validation-report.json's failure_register.*.categories_not_assessed. This file was built AFTER the frozen cohort and AFTER all real outcomes were known - it is retrospective post-mortem research on already-fixed events, not new input to select events or to redesign scoring. It must never be fed back into src/boe/objective_pos_methodology.py, src/boe/scoring.py, or any BOE-1.0.0 rule: doing so would be fitting a methodology to outcomes it was supposed to predict, which this project treats as a hard prohibition, not a style preference.",
+  "category_taxonomy": [
+    "source/data failure",
+    "catalyst timing failure",
+    "scientific reasoning failure (no science review exists)",
+    "valuation/expectation failure (no valuation exists)",
+    "dilution/capital-structure failure",
+    "technical/entry failure",
+    "unmodeled external event",
+    "classification/gate interaction (no classification exists)",
+    "whether information was knowable before the event"
+  ],
+  "false_positives": [
+    {
+      "event_id": "REG-2019-SRPT-GOLODIRSEN-CRL",
+      "real_facts": [
+        "FDA's Complete Response Letter cited renal toxicity seen in preclinical models (at doses ~10x the clinical dose) and a class-wide antisense-oligonucleotide renal risk, plus IV-infusion-port infection risk.",
+        "The CRL also noted that 6-minute-walk-test data from the pivotal study showed progressive loss of physical function in essentially all boys, with no correlation between maintained function and the magnitude of (surrogate) dystrophin production.",
+        "The NDA relied on an accelerated-approval surrogate endpoint (dystrophin production) without a demonstrated functional correlation - a gamble Sarepta had already taken once before with eteplirsen.",
+        "Sarepta disputed the CRL, and the same application was approved four months later (December 2019) after a formal dispute-resolution process."
+      ],
+      "sources": [
+        {"title": "Sarepta Therapeutics Receives Complete Response Letter from the US FDA for Golodirsen NDA", "url": "https://www.globenewswire.com/news-release/2019/08/19/1903797/0/en/Sarepta-Therapeutics-Receives-Complete-Response-Letter-from-the-US-Food-and-Drug-Administration-for-Golodirsen-New-Drug-Application.html"},
+        {"title": "FDA Publishes Initial Rejection Letter of Sarepta's Vyondys 53 for DMD", "url": "https://www.biospace.com/fda-comes-clean-on-sarepta-s-golodirsen-for-duchenne-muscular-dystrophy"}
+      ],
+      "category": "scientific reasoning failure (no science review exists)",
+      "category_rationale": "The CRL's core objection - a surrogate endpoint (dystrophin) with no demonstrated functional correlation - was a real, pre-existing characteristic of the submitted data package, not a new external shock. A human scientific reviewer evaluating trial-design quality (the same TRIAL_DESIGN subfactor this project could never build - see validation/m7/discovery/science-redesign-pilot.json) could plausibly have flagged this as elevated regulatory risk before the decision date.",
+      "knowable_before_event": "PLAUSIBLY_YES - the surrogate-endpoint gap was in the public trial design, not hidden information; whether a specific reviewer would have flagged it as CRL-level risk in advance cannot be proven after the fact."
+    },
+    {
+      "event_id": "REG-2020-BMRN-VALROX-CRL",
+      "real_facts": [
+        "The CRL introduced a new FDA recommendation for two years of durability data (Annualized Bleeding Rate) from the ongoing Phase 3 (270-301) study.",
+        "BioMarin stated the FDA had not raised this two-year-durability requirement at any prior interaction during development or review - it was a new bar introduced only in the CRL itself.",
+        "BioMarin has stated it believed it had prior agreement with the FDA on what data would be sufficient to support approval."
+      ],
+      "sources": [
+        {"title": "BioMarin Receives Complete Response Letter (CRL) from FDA for Valoctocogene Roxaparvovec Gene Therapy for Severe Hemophilia A", "url": "https://www.biomarin.com/news/press-releases/biomarin-receives-complete-response-letter-crl-from-fda-for-valoctocogene-roxaparvovec-gene-therapy-for-severe-hemophilia-a/"},
+        {"title": "Update on FDA approval for valoctocogene roxaparvovec gene therapy for severe hemophilia A", "url": "https://wfh.org/article/update-on-fda-approval-for-valoctocogene-roxaparvovec-gene-therapy-for-severe-hemophilia-a/"}
+      ],
+      "category": "unmodeled external event",
+      "category_rationale": "By the company's own account this was a genuinely new requirement introduced only in the CRL, not previously signaled in FDA interactions - a regulatory-process surprise, not a defect visible in the pre-event trial design or data that a scientific reviewer could have flagged.",
+      "knowable_before_event": "NO - the company itself represents this as an unprecedented, previously-uncommunicated FDA requirement."
+    },
+    {
+      "event_id": "REG-2020-ICPT-OCA-CRL",
+      "real_facts": [
+        "The CRL stated the predicted benefit of obeticholic acid, based on a surrogate histopathologic endpoint, remained uncertain and did not sufficiently outweigh potential risk to support accelerated approval.",
+        "The FDA recommended additional post-interim-analysis efficacy/safety data from the ongoing REGENERATE study.",
+        "OCA already carried a real, publicly known hepatotoxicity risk history: the FDA had added a Boxed Warning in 2017 after fatal liver injury cases tied to dosing errors in NASH/PBC patients, well before this 2020 decision."
+      ],
+      "sources": [
+        {"title": "Intercept Receives Complete Response Letter from FDA for Obeticholic Acid as a Treatment for Pre-Cirrhotic Fibrosis due to NASH", "url": "https://www.biospace.com/intercept-receives-complete-response-letter-from-fda-for-obeticholic-acid-as-a-treatment-for-pre-cirrhotic-fibrosis-due-to-nash"},
+        {"title": "FDA issues complete response letter for obeticholic acid for fibrosis due to NASH", "url": "https://www.healio.com/news/hepatology/20200629/fda-issues-complete-response-letter-for-obeticholic-acid-for-fibrosis-due-to-nash"}
+      ],
+      "category": "scientific reasoning failure (no science review exists)",
+      "category_rationale": "The benefit/risk uncertainty the CRL cites - a surrogate histology endpoint weighed against a drug with an already-documented real hepatotoxicity signal - was public information well before this event, not a new discovery.",
+      "knowable_before_event": "PLAUSIBLY_YES - OCA's safety profile and the surrogate-endpoint basis of the filing were both public well in advance."
+    },
+    {
+      "event_id": "REG-2020-TCDA-VEVERIMER-CRL",
+      "real_facts": [
+        "The CRL asked for more data on the magnitude and durability of veverimer's effect on serum bicarbonate (a surrogate marker) and whether that effect size was reasonably likely to predict real clinical benefit.",
+        "The FDA also questioned the applicability of the submitted trial population to the broader U.S. population.",
+        "The FDA left the door open to an Accelerated Approval path pending further data, rather than a full rejection of the drug's premise."
+      ],
+      "sources": [
+        {"title": "Tricida Receives Complete Response Letter from the FDA for its New Drug Application for Veverimer", "url": "https://www.businesswire.com/news/home/20200824005200/en/Tricida-Receives-Complete-Response-Letter-from-the-FDA-for-its-New-Drug-Application-for-Veverimer-for-the-Treatment-of-Metabolic-Acidosis-and-Slowing-of-Kidney-Disease-Progression-in-Patients-with-Metabolic-Acidosis-Associated-with-CKD"}
+      ],
+      "category": "scientific reasoning failure (no science review exists)",
+      "category_rationale": "Same pattern as ICPT/OCA: the submission relied on a surrogate marker (serum bicarbonate) whose link to real clinical benefit (cardiovascular/renal outcomes) was the actual open scientific question - visible in the trial design itself, not a hidden fact.",
+      "knowable_before_event": "PLAUSIBLY_YES - the surrogate-endpoint basis of the filing was public before the decision."
+    },
+    {
+      "event_id": "REG-2021-ATNX-ORALPAC-CRL",
+      "real_facts": [
+        "The CRL cited three issues: safety concerns (increased neutropenia-related sequelae), concerns with the primary-endpoint assessment methodology (Blinded Independent Central Review), and a recommendation for a new trial in a patient population more representative of the U.S.",
+        "The pivotal trial had enrolled patients predominantly outside the U.S. (including Russia and India) - a population-representativeness concern that oncology commentators had already raised as a likely FDA sticking point before the decision."
+      ],
+      "sources": [
+        {"title": "Athenex Receives FDA Complete Response Letter for Oral Paclitaxel Plus Encequidar for the Treatment of Metastatic Breast Cancer", "url": "https://www.biospace.com/athenex-receives-fda-complete-response-letter-for-oral-paclitaxel-plus-encequidar-for-the-treatment-of-metastatic-breast-cancer"},
+        {"title": "FDA Issues Complete Response Letter for Oral Paclitaxel Plus Encequidar for Metastatic Breast Cancer", "url": "https://www.onclive.com/view/fda-issues-complete-response-letter-for-oral-paclitaxel-plus-encequidar-for-metastatic-breast-cancer"}
+      ],
+      "category": "scientific reasoning failure (no science review exists)",
+      "category_rationale": "The trial-population-generalizability concern was a real, visible characteristic of the pivotal trial's design before the decision, not new information - the kind of trial-design scrutiny a real science reviewer's TRIAL_DESIGN assessment exists to catch.",
+      "knowable_before_event": "PLAUSIBLY_YES - the trial's geographic enrollment pattern was public before the decision."
+    },
+    {
+      "event_id": "REG-2022-AXSM-AXS07-CRL",
+      "real_facts": [
+        "The CRL's stated reasons were entirely Chemistry, Manufacturing, and Controls (CMC) - additional CMC data on the drug product and manufacturing process.",
+        "The FDA explicitly did not raise any concerns about clinical efficacy or safety data, and did not request new clinical trials."
+      ],
+      "sources": [
+        {"title": "As Expected, FDA Rejects Axsome Therapeutics' Migraine Candidate", "url": "https://finance.yahoo.com/news/expected-fda-rejects-axsome-therapeutics-132038674.html"},
+        {"title": "FDA Accepts Resubmitted New Drug Application for Migraine Treatment AXS-07", "url": "https://www.neurologylive.com/view/fda-accepts-resubmitted-new-drug-application-migraine-treatment-axs-07"}
+      ],
+      "category": "unmodeled external event",
+      "category_rationale": "A pure CMC/manufacturing deficiency is orthogonal to clinical science and to every input this project's objective methodology or a hypothetical SCIENCE reviewer would assess - there was no clinical-data weakness to catch. This is the one false positive this project's approach (real or redesigned) could not plausibly have anticipated.",
+      "knowable_before_event": "NO - manufacturing/CMC deficiencies are not visible from public clinical-trial or catalyst data."
+    },
+    {
+      "event_id": "REG-2023-BLUE-LYFGENIA",
+      "real_facts": [
+        "LYFGENIA was actually APPROVED by the FDA on 2023-12-08 - this was a positive regulatory decision, not a rejection.",
+        "The approval carries the FDA's strictest boxed warning, for hematologic malignancy risk, requiring blood-count monitoring at least every six months for at least 15 years plus periodic viral-vector integration-site analysis.",
+        "The stock fell 40.5% the same day, driven by the boxed warning and by the FDA's decision not to grant a Priority Review Voucher bluebird had been expected to receive alongside approval.",
+        "Insertional-oncogenesis/malignancy risk from lentiviral-vector gene therapy was an actively debated, publicly known class concern before this event, including from bluebird's own earlier LentiGlobin program."
+      ],
+      "sources": [
+        {"title": "bluebird bio Announces FDA Approval of LYFGENIA", "url": "https://investor.bluebirdbio.com/news-releases/news-release-details/bluebird-bio-announces-fda-approval-lyfgeniatm-lovotibeglogene"},
+        {"title": "Bluebird Stock (BLUE) Sinks After Lyfgenia Sickle-Cell Therapy Gets FDA Warning", "url": "https://www.bloomberg.com/news/articles/2023-12-08/bluebird-sinks-after-gene-therapy-gets-fda-s-strictest-warning"}
+      ],
+      "category": "valuation/expectation failure (no valuation exists)",
+      "category_rationale": "This is the one false positive that is not really a PoS/scientific miss at all: the drug was approved, meaning the REG_DECISION catalyst resolved favorably in the narrowest sense. The 20-day loss came from the market re-pricing commercial value - a worse-than-hoped label (boxed warning, monitoring burden) and a missed PRV - which is exactly the kind of expectation-versus-reality gap VALUATION exists to capture and that this project has never built. Distinct from the other 6, which were genuine regulatory rejections.",
+      "knowable_before_event": "MIXED - the malignancy-risk class concern was plausibly knowable in advance; the PRV denial specifically was a discrete regulatory-agency decision not fully predictable from public information."
+    }
+  ],
+  "false_negatives": [
+    {
+      "event_id": "CO-2021-IOVA-LIFILEUCELASCO",
+      "real_facts": [
+        "At ASCO 2021, lifileucel + pembrolizumab in ICI-naive advanced melanoma (IOV-COM-202 study) showed an 86% Overall Response Rate and 43% Complete Response Rate.",
+        "These figures are materially higher than typical response rates for pembrolizumab monotherapy in first-line advanced melanoma (historically roughly 40-45% ORR)."
+      ],
+      "sources": [
+        {"title": "Iovance Biotherapeutics Announces Clinical Data Updates for Lifileucel in Advanced Melanoma at Upcoming ASCO 2021 Annual Meeting", "url": "https://finance.yahoo.com/news/iovance-biotherapeutics-announces-clinical-data-210400349.html"}
+      ],
+      "category": "scientific reasoning failure (no science review exists)",
+      "category_rationale": "An 86% ORR is a genuinely large, well-above-typical-class efficacy signal visible directly in the trial's own reported numbers - the kind of magnitude a real science/efficacy reviewer (this project's permanently-MISSING EFFICACY_ROBUSTNESS subfactor) exists to distinguish from an average readout, which a flat 40% CLIN_P2-adjacent prior cannot.",
+      "knowable_before_event": "NO in advance of the readout itself - the data did not exist before the event; the point is that once the data existed, a real reviewer's judgment (not this project's flat prior) could have distinguished its strength."
+    },
+    {
+      "event_id": "P2-2019-AXSM-AXS05-SMOKING",
+      "real_facts": [
+        "AXS-05 met its primary endpoint in a Phase 2 smoking-cessation study versus active comparator bupropion (not placebo): 8.49 vs 6.79 average daily cigarette reduction, a 25% greater decrease (n=58, 3-week active-controlled trial).",
+        "AXS-05 was simultaneously Axsome's lead asset in a separate, larger depression program - this smoking-cessation readout was a secondary/platform-validating catalyst, not the company's primary value driver at the time."
+      ],
+      "sources": [
+        {"title": "Axsome Therapeutics Announces AXS-05 Achieves Primary Endpoint in Phase 2 Trial in Smoking Cessation", "url": "https://www.globenewswire.com/news-release/2019/04/15/1803810/0/en/Axsome-Therapeutics-Announces-AXS-05-Achieves-Primary-Endpoint-in-Phase-2-Trial-in-Smoking-Cessation.html"}
+      ],
+      "category": "valuation/expectation failure (no valuation exists)",
+      "category_rationale": "The effect size itself was real but modest (a 25% relative edge over an active comparator in a 58-patient trial) - not obviously a magnitude that alone explains a 61.5% MFE. The more likely driver is read-through to AXS-05's much larger depression program (a valuation/expectation dynamic this project cannot model, since VALUATION was never built), not the smoking-cessation result in isolation.",
+      "knowable_before_event": "UNCERTAIN - distinguishing 'this specific trial's effect size' from 'platform-level read-through' requires the VALUATION and MARKET_IMPACT context this project does not have."
+    },
+    {
+      "event_id": "P2-2019-RETA-MOXIE",
+      "real_facts": [
+        "Omaveloxolone showed a statistically significant, placebo-corrected 2.40-point improvement in mFARS at 48 weeks (p=0.014), versus a natural-history decline of 1-2 points/year in untreated patients.",
+        "FierceBiotech's own contemporaneous headline described the result as a surprise to analysts: 'Reata shocks analysts with pivotal win in Friedreich's ataxia.'"
+      ],
+      "sources": [
+        {"title": "Reata shocks analysts with pivotal win in Friedreich's ataxia", "url": "https://www.fiercebiotech.com/biotech/reata-shocks-analysts-pivotal-win-friedreich-s-ataxia"},
+        {"title": "Reata Announces Positive Topline Results from the MOXIe Registrational Trial", "url": "https://www.globenewswire.com/news-release/2019/10/14/1929336/0/en/Reata-Announces-Positive-Topline-Results-from-the-MOXIe-Registrational-Trial-of-Omaveloxolone-in-Patients-with-Friedreich-s-Ataxia.html"}
+      ],
+      "category": "whether information was knowable before the event",
+      "category_rationale": "Unlike the other false negatives, contemporaneous industry analysts themselves were surprised by this result (per FierceBiotech's own framing), which argues this was a genuine, largely unpredictable positive surprise rather than a gap this project's objective methodology could plausibly have closed with better inputs - a flat prior is a defensible stance on a genuinely hard-to-call readout, not obviously a modeling failure.",
+      "knowable_before_event": "NO - described as a surprise by contemporaneous industry analysts, not just by this project's own flat prior."
+    },
+    {
+      "event_id": "P2-2019-TGTX-UNITYNHL",
+      "real_facts": [
+        "The UNITY-NHL marginal zone lymphoma cohort met its ORR primary endpoint, landing within the company's own previously stated target guidance range of 40-50% ORR.",
+        "Umbralisib already held FDA Breakthrough Therapy Designation for this indication before this readout."
+      ],
+      "sources": [
+        {"title": "TG Therapeutics Announces Positive Outcome From UNITY-NHL Phase 2b Pivotal Trial Evaluating Umbralisib In Patients With Relapsed/Refractory Marginal Zone Lymphoma", "url": "https://www.clinicalleader.com/doc/tg-therapeutics-announces-positive-outcome-from-unity-nhl-phase-b-pivotal-trial-0001"}
+      ],
+      "category": "valuation/expectation failure (no valuation exists)",
+      "category_rationale": "The result landed inside management's own pre-announced guidance range - meaning the magnitude was already substantially anticipated. The favorable price move looks more like uncertainty resolution (de-risking an already-likely outcome raises probability-weighted value) than a magnitude surprise a flat CLIN_P2 prior would miss on effect size alone.",
+      "knowable_before_event": "PLAUSIBLY_YES on magnitude (guidance was public) - the remaining uncertainty was mainly whether the trial would succeed at all, which is closer to a probability-of-success question than a scientific-reasoning gap."
+    },
+    {
+      "event_id": "P2-2022-AKRO-HARMONY",
+      "real_facts": [
+        "Both efruxifermin doses (28mg and 50mg) achieved statistical significance on the primary AND secondary histology endpoints at 24 weeks - 41% (50mg) and 29% (28mg) achieved fibrosis improvement plus NASH resolution, versus 5% placebo.",
+        "EFX received FDA Breakthrough Therapy Designation shortly after this readout."
+      ],
+      "sources": [
+        {"title": "In Akero Therapeutics' Phase 2b HARMONY Study, Both the 50mg and 28mg EFX Doses Achieved Statistical Significance on Primary and Secondary Histology Endpoints after 24 Weeks", "url": "https://www.globenewswire.com/news-release/2022/09/13/2514749/0/en/In-Akero-Therapeutics-Phase-2b-HARMONY-Study-Both-the-50mg-and-28mg-EFX-Doses-Achieved-Statistical-Significance-on-Primary-and-Secondary-Histology-Endpoints-after-24-Weeks.html"}
+      ],
+      "category": "scientific reasoning failure (no science review exists)",
+      "category_rationale": "A multi-dose, multi-endpoint statistically significant result (41% vs 5% placebo on the combined fibrosis-improvement-plus-resolution bar) is an unusually strong, broad efficacy signal - exactly the kind of result magnitude a real EFFICACY_ROBUSTNESS assessment (permanently MISSING in this project) exists to distinguish from an average readout.",
+      "knowable_before_event": "NO in advance of the readout itself - same reasoning as IOVA: the data did not exist beforehand, but a real reviewer could have recognized its strength once it did, where this project's flat prior cannot."
+    },
+    {
+      "event_id": "P2-2022-CINC-BRIGHTN",
+      "real_facts": [
+        "Baxdrostat met its primary endpoint with an 11 mmHg placebo-adjusted systolic blood pressure reduction (p<0.0001) at the 2mg dose, in a well-powered, dose-ranging trial (275 randomized, 248 completed).",
+        "The trial results were later published in the New England Journal of Medicine, indicating a result considered credible and significant enough for top-tier peer review."
+      ],
+      "sources": [
+        {"title": "CinCor Pharma Announces Publication in the New England Journal of Medicine of Phase 2 BrigHtn Data", "url": "https://www.biospace.com/cincor-pharma-announces-publication-in-the-new-england-journal-of-medicine-of-phase-2-brightn-data-on-selective-aldosterone-synthase-inhibitor-baxdrostat-in-treatment-resistant-hypertension"},
+        {"title": "Phase 2 Trial of Baxdrostat for Treatment-Resistant Hypertension | New England Journal of Medicine", "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2213169"}
+      ],
+      "category": "scientific reasoning failure (no science review exists)",
+      "category_rationale": "A p<0.0001 result in a 248-patient completed trial, later published in NEJM, is a strong, well-powered efficacy signal a real scientific reviewer could plausibly distinguish from a marginal readout - the same gap a flat 40% CLIN_P2 prior cannot capture.",
+      "knowable_before_event": "NO in advance of the readout itself, same reasoning as IOVA/AKRO."
+    }
+  ],
+  "cross_cutting_observations": [
+    "5 of 7 false positives (SRPT, ICPT, TCDA, ATNX, and arguably BMRN/AXSM by a different route) trace to real, pre-existing weaknesses visible in trial design or drug safety history - the kind of gap a genuine SCIENCE TRIAL_DESIGN/scientific reasoning review exists to catch, and which this project's real SCIENCE-redesign pilot (validation/m7/discovery/science-redesign-pilot.json) confirmed it cannot build at adequate coverage.",
+    "2 of 7 false positives (BMRN's new 2-year-durability bar, AXSM's pure CMC issue) were genuine regulatory-process surprises unrelated to clinical science - not something any realistic SCIENCE methodology, real or objective, would have caught.",
+    "1 of 7 false positives (BLUE/Lyfgenia) was not really a PoS miss at all - the drug was approved; the loss came from commercial/label expectations, which is a VALUATION-shaped gap, not a SCIENCE-shaped one.",
+    "3 of 6 false negatives (IOVA, AKRO, CINC) show a common, clean pattern: unusually strong efficacy signals (86% ORR, 41% vs 5% placebo, p<0.0001) that a real EFFICACY_ROBUSTNESS assessment could plausibly have distinguished from an average readout - this project's permanently-MISSING subfactor, confirmed unbuildable at scale by the same SCIENCE-redesign pilot.",
+    "1 of 6 false negatives (RETA) was, by contemporaneous analysts' own account, a genuine surprise - not clearly a methodology gap at all.",
+    "2 of 6 false negatives (AXSM smoking cessation, TGTX) look more like VALUATION/expectation dynamics (platform read-through; de-risking an already-guided outcome) than raw scientific-magnitude misses - another gap this project's missing VALUATION factor, not SCIENCE, would need to close.",
+    "Taken together, this supports (does not merely repeat) the structural finding already in validation-report.json: the single dominant, catalyst_type-constant-prior limitation explains the register mechanically, and the two factors most of the real per-event research points to as the actual missing ingredients - real SCIENCE judgment and real VALUATION - are exactly the two factors this project has now confirmed, through real pilots and real point-in-time data work, that it cannot honestly build at this project's scale."
+  ]
+}

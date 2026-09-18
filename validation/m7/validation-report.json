@@ -1451,7 +1451,7 @@
       "xbi_relative_t20_pct": 7.339871443224101
     }
   ],
-  "code_sha": "e9b8f66a8414275b7ee7d773ef096b25dc366ce4",
+  "code_sha": "900ff259b6ec83a21e92b7686e2de46dfc568526",
   "cohort_flow": {
     "event_count": 120,
     "financing_count": 38,
@@ -1491,269 +1491,140 @@
     "false_negatives": [
       {
         "catalyst_type": "CONF_DATA",
-        "categories_not_assessed": [
-          "source/data failure",
-          "catalyst timing failure",
-          "scientific reasoning failure (no science review exists)",
-          "valuation/expectation failure (no valuation exists)",
-          "dilution/capital-structure failure",
-          "technical/entry failure",
-          "unmodeled external event",
-          "classification/gate interaction (no classification exists)",
-          "whether information was knowable before the event"
-        ],
-        "categories_supportable_without_new_evidence": [
-          "PoS calibration failure - see objective-calibration-report.json"
-        ],
         "event_id": "CO-2021-IOVA-LIFILEUCELASCO",
         "mfe_t20_pct": 55.166475315729045,
-        "pos_mid_pct": 40.0
+        "pos_mid_pct": 40.0,
+        "real_analysis_source": "validation/m7/failure-analysis.json",
+        "real_category": "scientific reasoning failure (no science review exists)",
+        "real_category_rationale": "An 86% ORR is a genuinely large, well-above-typical-class efficacy signal visible directly in the trial's own reported numbers - the kind of magnitude a real science/efficacy reviewer (this project's permanently-MISSING EFFICACY_ROBUSTNESS subfactor) exists to distinguish from an average readout, which a flat 40% CLIN_P2-adjacent prior cannot."
       },
       {
         "catalyst_type": "CLIN_P2",
-        "categories_not_assessed": [
-          "source/data failure",
-          "catalyst timing failure",
-          "scientific reasoning failure (no science review exists)",
-          "valuation/expectation failure (no valuation exists)",
-          "dilution/capital-structure failure",
-          "technical/entry failure",
-          "unmodeled external event",
-          "classification/gate interaction (no classification exists)",
-          "whether information was knowable before the event"
-        ],
-        "categories_supportable_without_new_evidence": [
-          "PoS calibration failure - see objective-calibration-report.json"
-        ],
         "event_id": "P2-2019-AXSM-AXS05-SMOKING",
         "mfe_t20_pct": 61.51560178306092,
-        "pos_mid_pct": 40.0
+        "pos_mid_pct": 40.0,
+        "real_analysis_source": "validation/m7/failure-analysis.json",
+        "real_category": "valuation/expectation failure (no valuation exists)",
+        "real_category_rationale": "The effect size itself was real but modest (a 25% relative edge over an active comparator in a 58-patient trial) - not obviously a magnitude that alone explains a 61.5% MFE. The more likely driver is read-through to AXS-05's much larger depression program (a valuation/expectation dynamic this project cannot model, since VALUATION was never built), not the smoking-cessation result in isolation."
       },
       {
         "catalyst_type": "CLIN_P2",
-        "categories_not_assessed": [
-          "source/data failure",
-          "catalyst timing failure",
-          "scientific reasoning failure (no science review exists)",
-          "valuation/expectation failure (no valuation exists)",
-          "dilution/capital-structure failure",
-          "technical/entry failure",
-          "unmodeled external event",
-          "classification/gate interaction (no classification exists)",
-          "whether information was knowable before the event"
-        ],
-        "categories_supportable_without_new_evidence": [
-          "PoS calibration failure - see objective-calibration-report.json"
-        ],
         "event_id": "P2-2019-RETA-MOXIE",
         "mfe_t20_pct": 112.88398449150014,
-        "pos_mid_pct": 40.0
+        "pos_mid_pct": 40.0,
+        "real_analysis_source": "validation/m7/failure-analysis.json",
+        "real_category": "whether information was knowable before the event",
+        "real_category_rationale": "Unlike the other false negatives, contemporaneous industry analysts themselves were surprised by this result (per FierceBiotech's own framing), which argues this was a genuine, largely unpredictable positive surprise rather than a gap this project's objective methodology could plausibly have closed with better inputs - a flat prior is a defensible stance on a genuinely hard-to-call readout, not obviously a modeling failure."
       },
       {
         "catalyst_type": "CLIN_P2",
-        "categories_not_assessed": [
-          "source/data failure",
-          "catalyst timing failure",
-          "scientific reasoning failure (no science review exists)",
-          "valuation/expectation failure (no valuation exists)",
-          "dilution/capital-structure failure",
-          "technical/entry failure",
-          "unmodeled external event",
-          "classification/gate interaction (no classification exists)",
-          "whether information was knowable before the event"
-        ],
-        "categories_supportable_without_new_evidence": [
-          "PoS calibration failure - see objective-calibration-report.json"
-        ],
         "event_id": "P2-2019-TGTX-UNITYNHL",
         "mfe_t20_pct": 43.737957610789984,
-        "pos_mid_pct": 40.0
+        "pos_mid_pct": 40.0,
+        "real_analysis_source": "validation/m7/failure-analysis.json",
+        "real_category": "valuation/expectation failure (no valuation exists)",
+        "real_category_rationale": "The result landed inside management's own pre-announced guidance range - meaning the magnitude was already substantially anticipated. The favorable price move looks more like uncertainty resolution (de-risking an already-likely outcome raises probability-weighted value) than a magnitude surprise a flat CLIN_P2 prior would miss on effect size alone."
       },
       {
         "catalyst_type": "CLIN_P2",
-        "categories_not_assessed": [
-          "source/data failure",
-          "catalyst timing failure",
-          "scientific reasoning failure (no science review exists)",
-          "valuation/expectation failure (no valuation exists)",
-          "dilution/capital-structure failure",
-          "technical/entry failure",
-          "unmodeled external event",
-          "classification/gate interaction (no classification exists)",
-          "whether information was knowable before the event"
-        ],
-        "categories_supportable_without_new_evidence": [
-          "PoS calibration failure - see objective-calibration-report.json"
-        ],
         "event_id": "P2-2022-AKRO-HARMONY",
         "mfe_t20_pct": 219.96740016299918,
-        "pos_mid_pct": 40.0
+        "pos_mid_pct": 40.0,
+        "real_analysis_source": "validation/m7/failure-analysis.json",
+        "real_category": "scientific reasoning failure (no science review exists)",
+        "real_category_rationale": "A multi-dose, multi-endpoint statistically significant result (41% vs 5% placebo on the combined fibrosis-improvement-plus-resolution bar) is an unusually strong, broad efficacy signal - exactly the kind of result magnitude a real EFFICACY_ROBUSTNESS assessment (permanently MISSING in this project) exists to distinguish from an average readout."
       },
       {
         "catalyst_type": "CLIN_P2",
-        "categories_not_assessed": [
-          "source/data failure",
-          "catalyst timing failure",
-          "scientific reasoning failure (no science review exists)",
-          "valuation/expectation failure (no valuation exists)",
-          "dilution/capital-structure failure",
-          "technical/entry failure",
-          "unmodeled external event",
-          "classification/gate interaction (no classification exists)",
-          "whether information was knowable before the event"
-        ],
-        "categories_supportable_without_new_evidence": [
-          "PoS calibration failure - see objective-calibration-report.json"
-        ],
         "event_id": "P2-2022-CINC-BRIGHTN",
         "mfe_t20_pct": 66.05543710021323,
-        "pos_mid_pct": 40.0
+        "pos_mid_pct": 40.0,
+        "real_analysis_source": "validation/m7/failure-analysis.json",
+        "real_category": "scientific reasoning failure (no science review exists)",
+        "real_category_rationale": "A p<0.0001 result in a 248-patient completed trial, later published in NEJM, is a strong, well-powered efficacy signal a real scientific reviewer could plausibly distinguish from a marginal readout - the same gap a flat 40% CLIN_P2 prior cannot capture."
       }
     ],
     "false_positives": [
       {
         "catalyst_type": "REG_DECISION",
-        "categories_not_assessed": [
-          "source/data failure",
-          "catalyst timing failure",
-          "scientific reasoning failure (no science review exists)",
-          "valuation/expectation failure (no valuation exists)",
-          "dilution/capital-structure failure",
-          "technical/entry failure",
-          "unmodeled external event",
-          "classification/gate interaction (no classification exists)",
-          "whether information was knowable before the event"
-        ],
-        "categories_supportable_without_new_evidence": [
-          "PoS calibration failure - see objective-calibration-report.json"
-        ],
         "event_id": "REG-2019-SRPT-GOLODIRSEN-CRL",
         "pos_mid_pct": 75.0,
+        "real_analysis_source": "validation/m7/failure-analysis.json",
+        "real_category": "scientific reasoning failure (no science review exists)",
+        "real_category_rationale": "The CRL's core objection - a surrogate endpoint (dystrophin) with no demonstrated functional correlation - was a real, pre-existing characteristic of the submitted data package, not a new external shock. A human scientific reviewer evaluating trial-design quality (the same TRIAL_DESIGN subfactor this project could never build - see validation/m7/discovery/science-redesign-pilot.json) could plausibly have flagged this as elevated regulatory risk before the decision date.",
         "return_t20_pct": -30.454658798104894
       },
       {
         "catalyst_type": "REG_DECISION",
-        "categories_not_assessed": [
-          "source/data failure",
-          "catalyst timing failure",
-          "scientific reasoning failure (no science review exists)",
-          "valuation/expectation failure (no valuation exists)",
-          "dilution/capital-structure failure",
-          "technical/entry failure",
-          "unmodeled external event",
-          "classification/gate interaction (no classification exists)",
-          "whether information was knowable before the event"
-        ],
-        "categories_supportable_without_new_evidence": [
-          "PoS calibration failure - see objective-calibration-report.json"
-        ],
         "event_id": "REG-2020-BMRN-VALROX-CRL",
         "pos_mid_pct": 75.0,
+        "real_analysis_source": "validation/m7/failure-analysis.json",
+        "real_category": "unmodeled external event",
+        "real_category_rationale": "By the company's own account this was a genuinely new requirement introduced only in the CRL, not previously signaled in FDA interactions - a regulatory-process surprise, not a defect visible in the pre-event trial design or data that a scientific reviewer could have flagged.",
         "return_t20_pct": -33.895731398683985
       },
       {
         "catalyst_type": "REG_DECISION",
-        "categories_not_assessed": [
-          "source/data failure",
-          "catalyst timing failure",
-          "scientific reasoning failure (no science review exists)",
-          "valuation/expectation failure (no valuation exists)",
-          "dilution/capital-structure failure",
-          "technical/entry failure",
-          "unmodeled external event",
-          "classification/gate interaction (no classification exists)",
-          "whether information was knowable before the event"
-        ],
-        "categories_supportable_without_new_evidence": [
-          "PoS calibration failure - see objective-calibration-report.json"
-        ],
         "event_id": "REG-2020-ICPT-OCA-CRL",
         "pos_mid_pct": 75.0,
+        "real_analysis_source": "validation/m7/failure-analysis.json",
+        "real_category": "scientific reasoning failure (no science review exists)",
+        "real_category_rationale": "The benefit/risk uncertainty the CRL cites - a surrogate histology endpoint weighed against a drug with an already-documented real hepatotoxicity signal - was public information well before this event, not a new discovery.",
         "return_t20_pct": -40.76655052264808
       },
       {
         "catalyst_type": "REG_DECISION",
-        "categories_not_assessed": [
-          "source/data failure",
-          "catalyst timing failure",
-          "scientific reasoning failure (no science review exists)",
-          "valuation/expectation failure (no valuation exists)",
-          "dilution/capital-structure failure",
-          "technical/entry failure",
-          "unmodeled external event",
-          "classification/gate interaction (no classification exists)",
-          "whether information was knowable before the event"
-        ],
-        "categories_supportable_without_new_evidence": [
-          "PoS calibration failure - see objective-calibration-report.json"
-        ],
         "event_id": "REG-2020-TCDA-VEVERIMER-CRL",
         "pos_mid_pct": 75.0,
+        "real_analysis_source": "validation/m7/failure-analysis.json",
+        "real_category": "scientific reasoning failure (no science review exists)",
+        "real_category_rationale": "Same pattern as ICPT/OCA: the submission relied on a surrogate marker (serum bicarbonate) whose link to real clinical benefit (cardiovascular/renal outcomes) was the actual open scientific question - visible in the trial design itself, not a hidden fact.",
         "return_t20_pct": -22.734138972809667
       },
       {
         "catalyst_type": "REG_DECISION",
-        "categories_not_assessed": [
-          "source/data failure",
-          "catalyst timing failure",
-          "scientific reasoning failure (no science review exists)",
-          "valuation/expectation failure (no valuation exists)",
-          "dilution/capital-structure failure",
-          "technical/entry failure",
-          "unmodeled external event",
-          "classification/gate interaction (no classification exists)",
-          "whether information was knowable before the event"
-        ],
-        "categories_supportable_without_new_evidence": [
-          "PoS calibration failure - see objective-calibration-report.json"
-        ],
         "event_id": "REG-2021-ATNX-ORALPAC-CRL",
         "pos_mid_pct": 75.0,
+        "real_analysis_source": "validation/m7/failure-analysis.json",
+        "real_category": "scientific reasoning failure (no science review exists)",
+        "real_category_rationale": "The trial-population-generalizability concern was a real, visible characteristic of the pivotal trial's design before the decision, not new information - the kind of trial-design scrutiny a real science reviewer's TRIAL_DESIGN assessment exists to catch.",
         "return_t20_pct": -66.11570247933884
       },
       {
         "catalyst_type": "REG_DECISION",
-        "categories_not_assessed": [
-          "source/data failure",
-          "catalyst timing failure",
-          "scientific reasoning failure (no science review exists)",
-          "valuation/expectation failure (no valuation exists)",
-          "dilution/capital-structure failure",
-          "technical/entry failure",
-          "unmodeled external event",
-          "classification/gate interaction (no classification exists)",
-          "whether information was knowable before the event"
-        ],
-        "categories_supportable_without_new_evidence": [
-          "PoS calibration failure - see objective-calibration-report.json"
-        ],
         "event_id": "REG-2022-AXSM-AXS07-CRL",
         "pos_mid_pct": 75.0,
+        "real_analysis_source": "validation/m7/failure-analysis.json",
+        "real_category": "unmodeled external event",
+        "real_category_rationale": "A pure CMC/manufacturing deficiency is orthogonal to clinical science and to every input this project's objective methodology or a hypothetical SCIENCE reviewer would assess - there was no clinical-data weakness to catch. This is the one false positive this project's approach (real or redesigned) could not plausibly have anticipated.",
         "return_t20_pct": -27.979539641943735
       },
       {
         "catalyst_type": "REG_DECISION",
-        "categories_not_assessed": [
-          "source/data failure",
-          "catalyst timing failure",
-          "scientific reasoning failure (no science review exists)",
-          "valuation/expectation failure (no valuation exists)",
-          "dilution/capital-structure failure",
-          "technical/entry failure",
-          "unmodeled external event",
-          "classification/gate interaction (no classification exists)",
-          "whether information was knowable before the event"
-        ],
-        "categories_supportable_without_new_evidence": [
-          "PoS calibration failure - see objective-calibration-report.json"
-        ],
         "event_id": "REG-2023-BLUE-LYFGENIA",
         "pos_mid_pct": 75.0,
+        "real_analysis_source": "validation/m7/failure-analysis.json",
+        "real_category": "valuation/expectation failure (no valuation exists)",
+        "real_category_rationale": "This is the one false positive that is not really a PoS/scientific miss at all: the drug was approved, meaning the REG_DECISION catalyst resolved favorably in the narrowest sense. The 20-day loss came from the market re-pricing commercial value - a worse-than-hoped label (boxed warning, monitoring burden) and a missed PRV - which is exactly the kind of expectation-versus-reality gap VALUATION exists to capture and that this project has never built. Distinct from the other 6, which were genuine regulatory rejections.",
         "return_t20_pct": -71.51767151767152
       }
     ],
-    "note": "Beyond the structural pattern above, per-event categories are NOT assessed: assigning them (source failure, timing failure, unmodeled event, etc.) for a specific real event without new per-event research would be fabrication, not analysis. Investigating any single event further is real, doable follow-up work - deliberately not attempted here rather than guessed at.",
+    "note": "Beyond the structural pattern above, real per-event categorization now exists - see failure_register_real_analysis below and validation/m7/failure-analysis.json - built from live-sourced FDA/company/press research after this register was computed, not fabricated.",
     "structural_pattern": "All 7 false positives are ['REG_DECISION'] events, and all 6 false negatives are ['CLIN_P2', 'CONF_DATA'] events. This is not a coincidence needing per-event research to explain: this methodology assigns every event of a given catalyst_type the same prior (e.g. every REG_DECISION gets 75%, every CLIN_P2 gets 40%), so it cannot distinguish an FDA approval from a CRL within REG_DECISION, or a strong Phase 2 readout from a weak one within CLIN_P2 - both land in the same PoS band regardless of which it turns out to be. This single structural limitation - a per-catalyst-type constant, not a per-event judgment - accounts for the entire false-positive and false-negative register and is the direct, evidenced cause of the calibration failure in objective-calibration-report.json. It is the one root cause this script CAN support without new per-event research, because it is visible directly in already-computed data, not inferred about any single company."
+  },
+  "failure_register_real_analysis": {
+    "cross_cutting_observations": [
+      "5 of 7 false positives (SRPT, ICPT, TCDA, ATNX, and arguably BMRN/AXSM by a different route) trace to real, pre-existing weaknesses visible in trial design or drug safety history - the kind of gap a genuine SCIENCE TRIAL_DESIGN/scientific reasoning review exists to catch, and which this project's real SCIENCE-redesign pilot (validation/m7/discovery/science-redesign-pilot.json) confirmed it cannot build at adequate coverage.",
+      "2 of 7 false positives (BMRN's new 2-year-durability bar, AXSM's pure CMC issue) were genuine regulatory-process surprises unrelated to clinical science - not something any realistic SCIENCE methodology, real or objective, would have caught.",
+      "1 of 7 false positives (BLUE/Lyfgenia) was not really a PoS miss at all - the drug was approved; the loss came from commercial/label expectations, which is a VALUATION-shaped gap, not a SCIENCE-shaped one.",
+      "3 of 6 false negatives (IOVA, AKRO, CINC) show a common, clean pattern: unusually strong efficacy signals (86% ORR, 41% vs 5% placebo, p<0.0001) that a real EFFICACY_ROBUSTNESS assessment could plausibly have distinguished from an average readout - this project's permanently-MISSING subfactor, confirmed unbuildable at scale by the same SCIENCE-redesign pilot.",
+      "1 of 6 false negatives (RETA) was, by contemporaneous analysts' own account, a genuine surprise - not clearly a methodology gap at all.",
+      "2 of 6 false negatives (AXSM smoking cessation, TGTX) look more like VALUATION/expectation dynamics (platform read-through; de-risking an already-guided outcome) than raw scientific-magnitude misses - another gap this project's missing VALUATION factor, not SCIENCE, would need to close.",
+      "Taken together, this supports (does not merely repeat) the structural finding already in validation-report.json: the single dominant, catalyst_type-constant-prior limitation explains the register mechanically, and the two factors most of the real per-event research points to as the actual missing ingredients - real SCIENCE judgment and real VALUATION - are exactly the two factors this project has now confirmed, through real pilots and real point-in-time data work, that it cannot honestly build at this project's scale."
+    ],
+    "methodology": "Each row's real_facts and sources come from live web search of public FDA/company/press records, not from prior knowledge asserted without a citation. category is a judgment call informed by those real facts (not fabricated), drawn from the same taxonomy already listed in validation-report.json's failure_register.*.categories_not_assessed. This file was built AFTER the frozen cohort and AFTER all real outcomes were known - it is retrospective post-mortem research on already-fixed events, not new input to select events or to redesign scoring. It must never be fed back into src/boe/objective_pos_methodology.py, src/boe/scoring.py, or any BOE-1.0.0 rule: doing so would be fitting a methodology to outcomes it was supposed to predict, which this project treats as a hard prohibition, not a style preference.",
+    "role": "POST_HOC_REAL_EVENT_RESEARCH_NOT_METHODOLOGY_INPUT",
+    "source": "validation/m7/failure-analysis.json"
   },
   "generator": "python scripts/m7_build_validation_report.py",
   "manifest_frozen_at": "2026-09-17T12:09:29.781712+03:00",

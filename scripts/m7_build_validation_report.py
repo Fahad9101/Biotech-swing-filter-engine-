@@ -39,6 +39,7 @@ CATALYST_PATH = ROOT / "validation/m7/catalyst-scores.json"
 CASH_DILUTION_PATH = ROOT / "validation/m7/cash-dilution-scores.json"
 TECHNICAL_PATH = ROOT / "validation/m7/technical-snapshots.json"
 PARTIAL_SCORECARD_PATH = ROOT / "validation/m7/partial-scorecard-calibration.json"
+FAILURE_ANALYSIS_PATH = ROOT / "validation/m7/failure-analysis.json"
 OUTPUT_PATH = ROOT / "validation/m7/validation-report.json"
 
 # Objective, pre-registered thresholds for the failure register below -
@@ -67,10 +68,21 @@ def _git_head_sha() -> str:
     return result.stdout.strip()
 
 
+def _require_analysis(analysis_by_id: dict[str, dict[str, Any]], event_id: str) -> dict[str, Any]:
+    if event_id not in analysis_by_id:
+        raise ValueError(
+            f"{event_id} is flagged in the false_positive/false_negative register but has no "
+            "row in validation/m7/failure-analysis.json - re-research it before trusting this "
+            "report (see FAILURE_ANALYSIS_PATH's methodology note for why this can't be guessed)"
+        )
+    return analysis_by_id[event_id]
+
+
 def _failure_register(
     pos_by_id: dict[str, dict[str, Any]],
     outcomes_by_id: dict[str, dict[str, Any]],
     events_by_id: dict[str, dict[str, Any]],
+    analysis_by_id: dict[str, dict[str, Any]],
 ) -> dict[str, Any]:
     ordered = sorted(pos_by_id.values(), key=lambda a: (float(a["mid_pct"]), a["event_id"]))
     quintile = max(1, len(ordered) // 5)
@@ -87,20 +99,11 @@ def _failure_register(
                     "catalyst_type": events_by_id[event_id]["catalyst_type"],
                     "pos_mid_pct": float(pos_by_id[event_id]["mid_pct"]),
                     "return_t20_pct": float(outcome["return_t20_pct"]),
-                    "categories_supportable_without_new_evidence": [
-                        "PoS calibration failure - see objective-calibration-report.json"
+                    "real_category": _require_analysis(analysis_by_id, event_id)["category"],
+                    "real_category_rationale": _require_analysis(analysis_by_id, event_id)[
+                        "category_rationale"
                     ],
-                    "categories_not_assessed": [
-                        "source/data failure",
-                        "catalyst timing failure",
-                        "scientific reasoning failure (no science review exists)",
-                        "valuation/expectation failure (no valuation exists)",
-                        "dilution/capital-structure failure",
-                        "technical/entry failure",
-                        "unmodeled external event",
-                        "classification/gate interaction (no classification exists)",
-                        "whether information was knowable before the event",
-                    ],
+                    "real_analysis_source": "validation/m7/failure-analysis.json",
                 }
             )
     false_negatives = []
@@ -113,20 +116,11 @@ def _failure_register(
                     "catalyst_type": events_by_id[event_id]["catalyst_type"],
                     "pos_mid_pct": float(pos_by_id[event_id]["mid_pct"]),
                     "mfe_t20_pct": float(outcome["mfe_t20_pct"]),
-                    "categories_supportable_without_new_evidence": [
-                        "PoS calibration failure - see objective-calibration-report.json"
+                    "real_category": _require_analysis(analysis_by_id, event_id)["category"],
+                    "real_category_rationale": _require_analysis(analysis_by_id, event_id)[
+                        "category_rationale"
                     ],
-                    "categories_not_assessed": [
-                        "source/data failure",
-                        "catalyst timing failure",
-                        "scientific reasoning failure (no science review exists)",
-                        "valuation/expectation failure (no valuation exists)",
-                        "dilution/capital-structure failure",
-                        "technical/entry failure",
-                        "unmodeled external event",
-                        "classification/gate interaction (no classification exists)",
-                        "whether information was knowable before the event",
-                    ],
+                    "real_analysis_source": "validation/m7/failure-analysis.json",
                 }
             )
     fp_catalyst_types = sorted({f["catalyst_type"] for f in false_positives})
@@ -158,13 +152,10 @@ def _failure_register(
         "false_negatives": false_negatives,
         "structural_pattern": structural_pattern,
         "note": (
-            "Beyond the structural pattern above, per-event categories are NOT "
-            "assessed: assigning them (source failure, timing failure, "
-            "unmodeled event, etc.) for a specific real event without new "
-            "per-event research would be fabrication, not analysis. "
-            "Investigating any single event further is real, doable "
-            "follow-up work - deliberately not attempted here rather than "
-            "guessed at."
+            "Beyond the structural pattern above, real per-event categorization now "
+            "exists - see failure_register_real_analysis below and "
+            "validation/m7/failure-analysis.json - built from live-sourced FDA/company/"
+            "press research after this register was computed, not fabricated."
         ),
     }
 
@@ -225,7 +216,28 @@ def build() -> dict[str, Any]:
     events_by_id = {e["event_id"]: e for e in manifest["events"]}
     pos_by_id = {a["event_id"]: a for a in pos_data["assessments"]}
     outcomes_by_id = {o["event_id"]: o for o in outcomes_data["outcomes"]}
-    failure_register = _failure_register(pos_by_id, outcomes_by_id, events_by_id)
+
+    failure_analysis = _load(
+        FAILURE_ANALYSIS_PATH, "hand-authored real per-event failure research (no script builds it)"
+    )
+    if failure_analysis["cohort_sha256"] != cohort_sha256:
+        raise ValueError("failure-analysis.json was researched against a different cohort freeze")
+    analysis_by_id = {
+        r["event_id"]: r
+        for r in failure_analysis["false_positives"] + failure_analysis["false_negatives"]
+    }
+
+    failure_register = _failure_register(pos_by_id, outcomes_by_id, events_by_id, analysis_by_id)
+    analyzed_ids = set(analysis_by_id)
+    register_ids = {f["event_id"] for f in failure_register["false_positives"]} | {
+        f["event_id"] for f in failure_register["false_negatives"]
+    }
+    if analyzed_ids != register_ids:
+        raise ValueError(
+            "failure-analysis.json has stale rows for events no longer in the current "
+            f"false_positive/false_negative register: {sorted(analyzed_ids - register_ids)} - "
+            "remove them (or re-research the new register) before trusting this report"
+        )
 
     return {
         "generator": "python scripts/m7_build_validation_report.py",
@@ -312,6 +324,12 @@ def build() -> dict[str, Any]:
             for event_id in sorted(pos_by_id)
         ],
         "failure_register": failure_register,
+        "failure_register_real_analysis": {
+            "source": "validation/m7/failure-analysis.json",
+            "role": failure_analysis["role"],
+            "methodology": failure_analysis["methodology"],
+            "cross_cutting_observations": failure_analysis["cross_cutting_observations"],
+        },
         "deviations_and_known_limitations": [
             *calibration["limitations"],
             *partial_scorecard["limitations"],

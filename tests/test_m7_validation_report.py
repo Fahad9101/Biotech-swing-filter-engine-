@@ -94,6 +94,62 @@ def test_structural_pattern_is_computed_from_real_catalyst_types() -> None:
     assert "not a coincidence" in register["structural_pattern"]
 
 
+def test_failure_register_entries_carry_real_analysis() -> None:
+    status = module.build()
+    register = status["failure_register"]
+    analysis = json.loads(module.FAILURE_ANALYSIS_PATH.read_bytes())
+    by_id = {r["event_id"]: r for r in analysis["false_positives"] + analysis["false_negatives"]}
+    for entry in register["false_positives"] + register["false_negatives"]:
+        assert entry["real_category"] == by_id[entry["event_id"]]["category"]
+        assert entry["real_category"] in analysis["category_taxonomy"]
+        assert entry["real_analysis_source"] == "validation/m7/failure-analysis.json"
+
+
+def test_failure_register_real_analysis_is_embedded_and_cohort_matched() -> None:
+    status = module.build()
+    assert (
+        status["failure_register_real_analysis"]["source"] == "validation/m7/failure-analysis.json"
+    )
+    analysis = json.loads(module.FAILURE_ANALYSIS_PATH.read_bytes())
+    assert analysis["cohort_sha256"] == status["cohort_sha256"]
+
+
+def test_refuses_when_failure_analysis_is_missing_a_flagged_event(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    real_analysis = json.loads(module.FAILURE_ANALYSIS_PATH.read_bytes())
+    tampered = json.loads(json.dumps(real_analysis))
+    tampered["false_positives"] = tampered["false_positives"][1:]  # drop one flagged event
+
+    def fake_load(path: Path, what: str) -> dict:
+        if path == module.FAILURE_ANALYSIS_PATH:
+            return tampered
+        return json.loads(path.read_bytes())
+
+    monkeypatch.setattr(module, "_load", fake_load)
+    with pytest.raises(ValueError, match="no row in validation/m7/failure-analysis.json"):
+        module.build()
+
+
+def test_refuses_when_failure_analysis_has_stale_extra_rows(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    real_analysis = json.loads(module.FAILURE_ANALYSIS_PATH.read_bytes())
+    tampered = json.loads(json.dumps(real_analysis))
+    stale_row = dict(tampered["false_positives"][0])
+    stale_row["event_id"] = "NOT-A-REAL-FLAGGED-EVENT"
+    tampered["false_positives"].append(stale_row)
+
+    def fake_load(path: Path, what: str) -> dict:
+        if path == module.FAILURE_ANALYSIS_PATH:
+            return tampered
+        return json.loads(path.read_bytes())
+
+    monkeypatch.setattr(module, "_load", fake_load)
+    with pytest.raises(ValueError, match="stale rows"):
+        module.build()
+
+
 def test_main_regenerates_the_committed_report(monkeypatch: pytest.MonkeyPatch) -> None:
     import sys
 
