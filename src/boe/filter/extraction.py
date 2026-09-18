@@ -64,12 +64,19 @@ MAX_SENTENCE_LENGTH = 400
 REG_TRIGGERS: tuple[str, ...] = (
     "PDUFA",
     "target action date",
+    "Complete Response Letter",
+    "Advisory Committee",
+    "Priority Review",
 )
 CLINICAL_TRIGGERS: tuple[str, ...] = (
     "topline",
     "top-line",
     "readout",
     "primary endpoint data",
+    "interim analysis",
+    "interim data",
+    "data update",
+    "complete enrollment",
 )
 
 

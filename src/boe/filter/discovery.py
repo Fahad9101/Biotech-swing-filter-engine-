@@ -15,8 +15,16 @@ BIOTECH_PHARMA_SICS = frozenset({"2834", "2836", "8731"})
 DEFAULT_SEARCH_PHRASES: tuple[str, ...] = (
     "PDUFA",
     "target action date",
+    "Complete Response Letter",
+    "Advisory Committee",
+    "Priority Review",
     "topline",
     "readout",
+    "primary endpoint data",
+    "interim analysis",
+    "interim data",
+    "data update",
+    "complete enrollment",
 )
 PAGE_SIZE = 100
 MAX_HITS_PER_PHRASE = 500

@@ -120,6 +120,43 @@ def test_extract_candidates_finds_two_distinct_indications_same_drug():
     assert dates == [date(2026, 11, 30), date(2026, 12, 30)]
 
 
+def test_extract_candidates_classifies_new_regulatory_triggers_as_reg_decision():
+    for sentence in (
+        "The FDA has scheduled an Advisory Committee meeting for March 15, 2027.",
+        "The Company received a Complete Response Letter and plans to resubmit "
+        "the application by June 1, 2027.",
+        "The FDA granted Priority Review with a target date of April 3, 2027.",
+    ):
+        candidates = extract_candidates(
+            ticker="XYZ",
+            cik="0000000001",
+            company="Example Biotech",
+            document_text=sentence,
+            source_url="https://www.sec.gov/example/xyz.htm",
+            filing_date=None,
+        )
+        assert len(candidates) == 1, sentence
+        assert candidates[0].catalyst_type == CatalystType.REG_DECISION
+
+
+def test_extract_candidates_classifies_new_clinical_triggers_as_clin_p2():
+    for sentence in (
+        "The Company expects to report interim analysis results in the third quarter of 2027.",
+        "A data update on the ongoing study is expected in 2027.",
+        "The Company expects to complete enrollment in the fourth quarter of 2027.",
+    ):
+        candidates = extract_candidates(
+            ticker="XYZ",
+            cik="0000000001",
+            company="Example Biotech",
+            document_text=sentence,
+            source_url="https://www.sec.gov/example/xyz.htm",
+            filing_date=None,
+        )
+        assert len(candidates) == 1, sentence
+        assert candidates[0].catalyst_type == CatalystType.CLIN_P2
+
+
 def test_extract_candidates_classifies_registrational_trial_as_phase_3():
     candidates = extract_candidates(
         ticker="PRAX",
