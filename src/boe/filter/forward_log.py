@@ -88,28 +88,45 @@ def record_new_entries(
     benchmark_close: Decimal,
     shortlist_definition: str,
     shortlist_parameters: dict[str, Any],
-) -> tuple[list[dict[str, Any]], list[str]]:
+) -> tuple[list[dict[str, Any]], list[str], list[dict[str, Any]]]:
     """Append one entry per candidate_id not already logged. Existing
     entries are returned unmodified - re-running this on a candidate
     still in this week's shortlist must never touch its frozen entry
-    price."""
+    price.
+
+    SHORTLIST-1.0 deliberately keeps a candidate whose technicals are
+    unavailable (flagged, not dropped - see boe.filter.shortlist), so a
+    shortlisted row is not guaranteed to have a real close. Rather than
+    fabricate an entry price for it (new_entry() correctly refuses to),
+    that single candidate is skipped here - not logged this run, not
+    excluded either: it will be picked up on a later run once real
+    technical data is available for it, same as any other data gap
+    elsewhere in this tool.
+    """
     known_ids = {entry["candidate_id"] for entry in existing}
     added: list[str] = []
+    skipped: list[dict[str, Any]] = []
     updated = list(existing)
     for row in shortlist_rows:
         if row["candidate_id"] in known_ids:
             continue
-        entry = new_entry(
-            row,
-            as_of=as_of,
-            benchmark_close=benchmark_close,
-            shortlist_definition=shortlist_definition,
-            shortlist_parameters=shortlist_parameters,
-        )
+        try:
+            entry = new_entry(
+                row,
+                as_of=as_of,
+                benchmark_close=benchmark_close,
+                shortlist_definition=shortlist_definition,
+                shortlist_parameters=shortlist_parameters,
+            )
+        except ValueError as exc:
+            skipped.append(
+                {"candidate_id": row["candidate_id"], "ticker": row["ticker"], "reason": str(exc)}
+            )
+            continue
         updated.append(entry)
         known_ids.add(entry["candidate_id"])
         added.append(entry["candidate_id"])
-    return updated, added
+    return updated, added, skipped
 
 
 def due_checkpoints(entry: dict[str, Any], *, today: date) -> list[int]:
