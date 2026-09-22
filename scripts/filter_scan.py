@@ -38,8 +38,16 @@ from boe.filter.discovery import discover_candidates_from_hit, discover_filing_h
 from boe.filter.extraction import DiscoveredCatalyst  # noqa: E402
 from boe.filter.live_catalyst import live_catalyst_score  # noqa: E402
 from boe.filter.live_financials import ForeignPrivateIssuer, live_cash_dilution_score  # noqa: E402
-from boe.filter.live_technical import fetch_live_series, live_technical_score  # noqa: E402
+from boe.filter.live_technical import (  # noqa: E402
+    benchmark_facts,
+    fetch_live_series,
+    live_technical_score,
+)
 from boe.filter.report import render_html  # noqa: E402
+from boe.filter.shortlist import (  # noqa: E402
+    DEFAULT_PARAMETERS as SHORTLIST_DEFAULT_PARAMETERS,
+)
+from boe.filter.shortlist import SHORTLIST_DEFINITION, apply_shortlist  # noqa: E402
 from boe.financials import FinancialDataError  # noqa: E402
 from boe.ingestion.alpaca import credentials_from_env  # noqa: E402
 from boe.ingestion.http import PublicDataClient  # noqa: E402
@@ -141,6 +149,8 @@ def build(
                 financial_data_gaps=financial_data_gaps,
                 technical_data_gaps=technical_data_gaps,
                 already_past=already_past,
+                shortlist=[],
+                benchmark=None,
             )
 
         benchmark_series = fetch_live_series(
@@ -242,6 +252,8 @@ def build(
         financial_data_gaps=financial_data_gaps,
         technical_data_gaps=technical_data_gaps,
         already_past=already_past,
+        shortlist=apply_shortlist(watchlist, today=as_of.date()),
+        benchmark=benchmark_facts(benchmark_series, as_of=as_of),
     )
 
 
@@ -256,7 +268,10 @@ def _result(
     financial_data_gaps: list[dict[str, Any]],
     technical_data_gaps: list[dict[str, Any]],
     already_past: list[dict[str, Any]],
+    shortlist: list[dict[str, Any]],
+    benchmark: dict[str, Any] | None,
 ) -> dict[str, Any]:
+    shortlisted = [row for row in shortlist if row["shortlisted"]]
     return {
         "generator": "python scripts/filter_scan.py",
         "role": "SCREENING_FACTS_NOT_A_RECOMMENDATION",
@@ -269,12 +284,23 @@ def _result(
         "financial_data_gaps": financial_data_gaps,
         "technical_data_gaps": technical_data_gaps,
         "already_past": already_past,
+        "shortlist_definition": SHORTLIST_DEFINITION,
+        "shortlist_parameters": SHORTLIST_DEFAULT_PARAMETERS.as_dict(),
+        "shortlist_count": len(shortlisted),
+        "shortlist": shortlisted,
+        "shortlist_not_selected": [row for row in shortlist if not row["shortlisted"]],
+        "benchmark": benchmark,
         "disclaimer": (
             "Every fact here is real and traceable to its source (source_url, "
             "source_sentence). Sorted chronologically, not by a combined score: "
             "the historical validation of these same combined factors found ~0 "
             "correlation with actual returns, so a ranked score here would imply "
-            "predictive power that has not been demonstrated. No SCIENCE review, "
+            "predictive power that has not been demonstrated. The shortlist "
+            f"({SHORTLIST_DEFINITION}) narrows the full watchlist to catalysts dated "
+            "inside the trading horizon, sized and liquid enough to plausibly move "
+            "20% and be traded - a fit filter on real facts, not a probability "
+            "ranking; it has no proven correlation with returns either and should "
+            "not be read as one. No SCIENCE review, "
             "VALUATION, gates, or classification exist - this is not a "
             "recommendation, and the user is expected to do their own research "
             "(trial design, competitive landscape, charts) before acting on anything."

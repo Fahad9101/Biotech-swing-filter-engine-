@@ -1,9 +1,12 @@
 name: Catalyst filter scan
 
-# Runs scripts/filter_scan.py on a schedule and commits the refreshed
-# report back into this (private) repo - never published anywhere public.
-# Requires two repository secrets (Settings -> Secrets and variables ->
-# Actions): ALPACA_API_KEY_ID and ALPACA_API_SECRET_KEY.
+# Runs scripts/filter_scan.py on a schedule, then scripts/forward_measure.py
+# (which freezes a forward-log entry for every new shortlisted candidate and
+# measures any 1/2/4/8/12-week checkpoints that have come due for entries
+# already being tracked), and commits both refreshed reports back into this
+# (private) repo - never published anywhere public. Requires two repository
+# secrets (Settings -> Secrets and variables -> Actions): ALPACA_API_KEY_ID
+# and ALPACA_API_SECRET_KEY.
 
 on:
   schedule:
@@ -36,7 +39,20 @@ jobs:
           ALPACA_API_SECRET_KEY: ${{ secrets.ALPACA_API_SECRET_KEY }}
         run: python scripts/filter_scan.py --output-dir reports
 
-      - name: Commit refreshed report
+      - name: Run shortlist forward-measurement
+        env:
+          ALPACA_API_KEY_ID: ${{ secrets.ALPACA_API_KEY_ID }}
+          ALPACA_API_SECRET_KEY: ${{ secrets.ALPACA_API_SECRET_KEY }}
+        run: >
+          python scripts/forward_measure.py
+          --watchlist-path reports/watchlist.json
+          --output-dir reports/forward-log
+
+      - name: Commit refreshed reports
+        # Runs even if forward-measurement above failed (e.g. a transient
+        # Alpaca error), so a good filter_scan.py refresh is never lost -
+        # the job itself still shows red so a real failure stays visible.
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"

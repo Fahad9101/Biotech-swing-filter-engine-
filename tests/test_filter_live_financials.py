@@ -47,7 +47,7 @@ def _quarter_fact(value: int, *, start: str, end: str, filed: str, fy: int, fp: 
     }
 
 
-def _companyfacts(*, debt_free: bool) -> dict:
+def _companyfacts(*, debt_free: bool, shares_outstanding: int | None = 20_000_000) -> dict:
     gaap = {
         "CashAndCashEquivalentsAtCarryingValue": {
             "units": {"USD": [_instant(10_000_000, "2026-06-30", "2026-08-01")]}
@@ -77,7 +77,14 @@ def _companyfacts(*, debt_free: bool) -> dict:
     }
     if not debt_free:
         gaap["LongTermDebt"] = {"units": {"USD": [_instant(1_000_000, "2026-06-30", "2026-08-01")]}}
-    return {"facts": {"us-gaap": gaap}}
+    payload: dict = {"facts": {"us-gaap": gaap}}
+    if shares_outstanding is not None:
+        payload["facts"]["dei"] = {
+            "EntityCommonStockSharesOutstanding": {
+                "units": {"shares": [_instant(shares_outstanding, "2026-08-01", "2026-08-01")]}
+            }
+        }
+    return payload
 
 
 def _client(*, forms: list[str], companyfacts: dict) -> PublicDataClient:
@@ -119,6 +126,27 @@ def test_live_cash_dilution_score_real_debt_free_issuer(monkeypatch: pytest.Monk
         )
     assert facts["debt_free_confirmed_by_absence"] is True
     assert 0 <= factor_score.points <= factor_score.max_points
+    assert facts["shares_outstanding"] == "20000000"
+
+
+def test_live_cash_dilution_score_shares_outstanding_missing_is_none_not_fabricated(
+    monkeypatch: pytest.MonkeyPatch,
+):
+    monkeypatch.setattr("boe.ingestion.http.time.sleep", lambda _: None)
+    companyfacts = _companyfacts(debt_free=True, shares_outstanding=None)
+    with _client(forms=["10-K", "10-Q"], companyfacts=companyfacts) as client:
+        _, facts = live_cash_dilution_score(
+            client=client,
+            ticker="XYZ",
+            cik="0000000001",
+            as_of=datetime(2026, 9, 18, tzinfo=UTC),
+            catalyst_latest_date=date(2026, 11, 22),
+            rules=RULES,
+            candidate_id="test-candidate-shares-missing",
+        )
+    # a missing share count must not block the rest of the factor score -
+    # it degrades to "unknown", it doesn't raise.
+    assert facts["shares_outstanding"] is None
 
 
 def test_live_cash_dilution_score_raises_for_foreign_private_issuer(

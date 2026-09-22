@@ -11,10 +11,11 @@ committed report.
 from __future__ import annotations
 
 import json
+from decimal import Decimal
 from html import escape
 from typing import Any
 
-_CSS = """
+REPORT_CSS = """
 :root {
   color-scheme: light dark;
   --bg: #ffffff; --fg: #1a1a1a; --muted: #6b7280; --border: #e5e7eb;
@@ -57,7 +58,7 @@ summary { cursor: pointer; font-weight: 600; }
 summary .count { color: var(--muted); font-weight: 400; }
 """
 
-_JS = """
+REPORT_JS = """
 document.querySelectorAll('table[data-sortable] th').forEach(function (th, idx) {
   th.addEventListener('click', function () {
     var table = th.closest('table');
@@ -79,7 +80,7 @@ document.querySelectorAll('table[data-sortable] th').forEach(function (th, idx) 
 """
 
 
-def _cell(value: Any) -> str:
+def render_cell(value: Any) -> str:
     return escape(str(value)) if value is not None else ""
 
 
@@ -91,19 +92,52 @@ def _watchlist_rows(watchlist: list[dict[str, Any]]) -> str:
         window = f"{row['window_start']}" + (
             f" to {row['window_end']}" if row["window_start"] != row["window_end"] else ""
         )
+        window_start_cell = render_cell(row["window_start"])
         rows.append(
             "<tr>"
-            f'<td class="ticker">{_cell(row["ticker"])}</td>'
-            f"<td>{_cell(row['company'])}</td>"
-            f"<td>{_cell(row['catalyst_type'])}</td>"
-            f'<td class="mono" data-sort="{_cell(row["window_start"])}">{_cell(window)}</td>'
-            f"<td>{_cell(row['date_precision'])}</td>"
-            f'<td class="mono">{_cell(row["objective_pos_low_pct"])}'
-            f"-{_cell(row['objective_pos_high_pct'])}%</td>"
-            f'<td class="mono">{_cell(cash.get("runway_months"))}</td>'
-            f'<td class="mono">{_cell(tech.get("close"))}</td>'
-            f'<td class="sentence">{_cell(row["source_sentence"])}</td>'
-            f'<td><a href="{_cell(row["source_url"])}" target="_blank" '
+            f'<td class="ticker">{render_cell(row["ticker"])}</td>'
+            f"<td>{render_cell(row['company'])}</td>"
+            f"<td>{render_cell(row['catalyst_type'])}</td>"
+            f'<td class="mono" data-sort="{window_start_cell}">{render_cell(window)}</td>'
+            f"<td>{render_cell(row['date_precision'])}</td>"
+            f'<td class="mono">{render_cell(row["objective_pos_low_pct"])}'
+            f"-{render_cell(row['objective_pos_high_pct'])}%</td>"
+            f'<td class="mono">{render_cell(cash.get("runway_months"))}</td>'
+            f'<td class="mono">{render_cell(tech.get("close"))}</td>'
+            f'<td class="sentence">{render_cell(row["source_sentence"])}</td>'
+            f'<td><a href="{render_cell(row["source_url"])}" target="_blank" '
+            f'rel="noopener">source</a></td>'
+            "</tr>"
+        )
+    return "\n".join(rows)
+
+
+def _shortlist_rows(shortlist: list[dict[str, Any]]) -> str:
+    rows = []
+    for row in shortlist:
+        cash = row.get("cash_dilution_facts") or {}
+        tech = row.get("technical_facts") or {}
+        window = f"{row['window_start']}" + (
+            f" to {row['window_end']}" if row["window_start"] != row["window_end"] else ""
+        )
+        cap = row.get("market_cap_usd")
+        cap_display = f"{int(Decimal(cap)) // 1_000_000:,}M" if cap is not None else ""
+        flags = ", ".join(row.get("flags") or [])
+        window_start_cell = render_cell(row["window_start"])
+        rows.append(
+            "<tr>"
+            f'<td class="ticker">{render_cell(row["ticker"])}</td>'
+            f"<td>{render_cell(row['company'])}</td>"
+            f'<td class="mono">{render_cell(row["tier"])}</td>'
+            f"<td>{render_cell(row['catalyst_type'])}</td>"
+            f'<td class="mono" data-sort="{window_start_cell}">{render_cell(window)}</td>'
+            f"<td>{render_cell(row['date_precision'])}</td>"
+            f'<td class="mono" data-sort="{render_cell(cap or 0)}">{render_cell(cap_display)}</td>'
+            f'<td class="mono">{render_cell(cash.get("runway_at_catalyst_months"))}</td>'
+            f'<td class="mono">{render_cell(tech.get("close"))}</td>'
+            f'<td class="mono">{render_cell(tech.get("rsi14"))}</td>'
+            f'<td class="sentence">{render_cell(flags)}</td>'
+            f'<td><a href="{render_cell(row["source_url"])}" target="_blank" '
             f'rel="noopener">source</a></td>'
             "</tr>"
         )
@@ -114,8 +148,8 @@ def _gap_section(title: str, rows: list[dict[str, Any]]) -> str:
     if not rows:
         return ""
     items = "\n".join(
-        f"<li><strong>{_cell(r.get('ticker'))}</strong> - "
-        f"{_cell(r.get('reason') or r.get('source_sentence') or '')}</li>"
+        f"<li><strong>{render_cell(r.get('ticker'))}</strong> - "
+        f"{render_cell(r.get('reason') or r.get('source_sentence') or '')}</li>"
         for r in rows
     )
     return (
@@ -125,23 +159,61 @@ def _gap_section(title: str, rows: list[dict[str, Any]]) -> str:
     )
 
 
+_SHORTLIST_HEADER_COLS = (
+    "Ticker",
+    "Company",
+    "Tier",
+    "Catalyst type",
+    "Window",
+    "Precision",
+    "Market cap",
+    "Runway @ catalyst (mo)",
+    "Close",
+    "RSI14",
+    "Flags",
+    "Link",
+)
+
+_WATCHLIST_HEADER_COLS = (
+    "Ticker",
+    "Company",
+    "Catalyst type",
+    "Window",
+    "Precision",
+    "PoS range",
+    "Runway (mo)",
+    "Close",
+    "Source sentence",
+    "Link",
+)
+
+
+def _not_selected_row(row: dict[str, Any]) -> str:
+    ticker = render_cell(row.get("ticker"))
+    tier = render_cell(row.get("tier"))
+    reasons = ", ".join(row.get("exclusion_reasons") or []) or ", ".join(row.get("flags") or [])
+    return f"<li><strong>{ticker}</strong> (tier {tier}) - {render_cell(reasons)}</li>"
+
+
+def _not_selected_gap_section(rows: list[dict[str, Any]]) -> str:
+    if not rows:
+        return ""
+    items = "\n".join(_not_selected_row(r) for r in rows)
+    return (
+        "<details><summary>Not shortlisted "
+        f'<span class="count">({len(rows)})</span></summary>'
+        f"<ul>{items}</ul></details>"
+    )
+
+
 def render_html(status: dict[str, Any]) -> str:
     watchlist = status["watchlist"]
-    header_cols = (
-        "Ticker",
-        "Company",
-        "Catalyst type",
-        "Window",
-        "Precision",
-        "PoS range",
-        "Runway (mo)",
-        "Close",
-        "Source sentence",
-        "Link",
-    )
-    thead = "".join(f"<th>{escape(c)}</th>" for c in header_cols)
+    shortlist = status.get("shortlist")
+    shortlist_thead = "".join(f"<th>{escape(c)}</th>" for c in _SHORTLIST_HEADER_COLS)
+    watchlist_thead = "".join(f"<th>{escape(c)}</th>" for c in _WATCHLIST_HEADER_COLS)
     gaps = "".join(
         [
+            _not_selected_gap_section(status.get("shortlist_not_selected", [])),
             _gap_section("Already past (filtered out)", status.get("already_past", [])),
             _gap_section("Excluded - foreign private issuer", status["excluded_foreign_issuer"]),
             _gap_section("Financial data gaps", status["financial_data_gaps"]),
@@ -149,6 +221,43 @@ def render_html(status: dict[str, Any]) -> str:
             _gap_section("Discovery failures", status["discovery_failures"]),
         ]
     )
+
+    if shortlist is None:
+        # Legacy status payload (no shortlist computed): fall back to the
+        # single always-visible watchlist table, unchanged.
+        shortlist_section = ""
+        watchlist_section = f"""<table data-sortable>
+<thead><tr>{watchlist_thead}</tr></thead>
+<tbody>
+{_watchlist_rows(watchlist)}
+</tbody>
+</table>"""
+    else:
+        definition = escape(str(status.get("shortlist_definition", "")))
+        shortlist_meta = (
+            "Catalysts dated inside the trading horizon, sized and liquid enough to "
+            "plausibly move and be traded. A fit filter on real facts, not a probability "
+            "ranking - sorted soonest first within each tier, never by score."
+        )
+        shortlist_section = f"""<h2>Shortlist <span class="count">\
+({len(shortlist)} of {len(watchlist)}, {definition})</span></h2>
+<div class="meta">{shortlist_meta}</div>
+<table data-sortable>
+<thead><tr>{shortlist_thead}</tr></thead>
+<tbody>
+{_shortlist_rows(shortlist)}
+</tbody>
+</table>"""
+        watchlist_section = f"""<details>
+<summary>Full watchlist (unfiltered) <span class="count">({len(watchlist)})</span></summary>
+<table data-sortable>
+<thead><tr>{watchlist_thead}</tr></thead>
+<tbody>
+{_watchlist_rows(watchlist)}
+</tbody>
+</table>
+</details>"""
+
     # Escape "<" so a real filing sentence that happens to contain the
     # literal text "</script>" can never prematurely close this tag and
     # inject markup - < is a valid JSON string escape that decodes
@@ -161,7 +270,7 @@ def render_html(status: dict[str, Any]) -> str:
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Catalyst filter watchlist</title>
-<style>{_CSS}</style>
+<style>{REPORT_CSS}</style>
 </head>
 <body>
 <h1>Catalyst filter watchlist</h1>
@@ -169,15 +278,11 @@ def render_html(status: dict[str, Any]) -> str:
 {escape(status["search_window"]["start_date"])} to {escape(status["search_window"]["end_date"])}
 - {len(watchlist)} candidates</div>
 <div class="disclaimer">{escape(status["disclaimer"])}</div>
-<table data-sortable>
-<thead><tr>{thead}</tr></thead>
-<tbody>
-{_watchlist_rows(watchlist)}
-</tbody>
-</table>
+{shortlist_section}
+{watchlist_section}
 {gaps}
 <script id="filter-scan-data" type="application/json">{embedded}</script>
-<script>{_JS}</script>
+<script>{REPORT_JS}</script>
 </body>
 </html>
 """

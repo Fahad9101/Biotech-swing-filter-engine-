@@ -24,6 +24,7 @@ from boe.financials import (
     build_cash_position,
     calculate_survival,
     derive_quarterly_operating_cash_flow,
+    latest_basic_shares_outstanding,
     normalize_cash_burn,
 )
 from boe.ingestion.http import PublicDataClient
@@ -113,6 +114,8 @@ def live_cash_dilution_score(
         as_of=as_of,
     )
 
+    shares_outstanding = latest_basic_shares_outstanding(facts, as_of)
+
     debt_free_confirmed = zero_debt_evidence is not None
     restrictive_obligations = False if debt_free_confirmed else None
     score_input = CashDilutionScoreInput(
@@ -158,5 +161,6 @@ def live_cash_dilution_score(
         "runway_at_catalyst_months": str(survival.runway_at_catalyst_months),
         "burn_method": burn.method,
         "burn_confidence": burn.confidence,
+        "shares_outstanding": str(shares_outstanding) if shares_outstanding is not None else None,
     }
     return factor_score, facts_out
