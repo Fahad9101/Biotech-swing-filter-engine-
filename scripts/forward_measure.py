@@ -84,17 +84,19 @@ def measure(
     api_key_id: str,
     api_secret_key: str,
     data_url: str,
-) -> tuple[list[dict[str, Any]], list[str], int]:
+) -> tuple[list[dict[str, Any]], list[str], list[dict[str, Any]], int]:
     """Returns (updated_entries, newly_added_candidate_ids,
-    checkpoints_measured_this_run). Mutates entry dicts in place for
-    checkpoints/measurement_errors, same objects as in updated_entries."""
+    skipped_new_entries, checkpoints_measured_this_run). Mutates entry
+    dicts in place for checkpoints/measurement_errors, same objects as in
+    updated_entries."""
     shortlist = watchlist_status.get("shortlist") or []
     benchmark = watchlist_status.get("benchmark")
 
     entries = existing_entries
     added: list[str] = []
+    skipped: list[dict[str, Any]] = []
     if shortlist and benchmark:
-        entries, added = record_new_entries(
+        entries, added, skipped = record_new_entries(
             entries,
             shortlist,
             as_of=as_of,
@@ -107,7 +109,7 @@ def measure(
     due = [(entry, due_checkpoints(entry, today=today)) for entry in entries]
     due = [(entry, weeks) for entry, weeks in due if weeks]
     if not due:
-        return entries, added, 0
+        return entries, added, skipped, 0
 
     earliest_entry_date = min(date.fromisoformat(entry["entry_date"]) for entry, _ in due)
     benchmark_series = _fetch_full_series(
@@ -152,7 +154,7 @@ def measure(
             entry["checkpoints"][str(week)] = result
             measured_count += 1
 
-    return entries, added, measured_count
+    return entries, added, skipped, measured_count
 
 
 def main() -> None:
@@ -174,7 +176,7 @@ def main() -> None:
     existing_entries = json.loads(entries_path.read_text()) if entries_path.exists() else []
 
     api_key_id, api_secret_key, data_url = credentials_from_env()
-    entries, added, checkpoints_measured = measure(
+    entries, added, skipped, checkpoints_measured = measure(
         watchlist_status=watchlist_status,
         existing_entries=existing_entries,
         as_of=as_of,
@@ -191,6 +193,7 @@ def main() -> None:
     report = {
         "as_of": as_of.isoformat(),
         "entries_added": added,
+        "entries_skipped": skipped,
         "entry_count": len(entries),
         "checkpoints_measured_this_run": checkpoints_measured,
     }

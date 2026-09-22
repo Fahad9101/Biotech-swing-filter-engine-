@@ -90,7 +90,7 @@ def _watchlist_status(*, shortlist: list[dict], as_of: datetime = AS_OF) -> dict
 
 def test_measure_records_new_entries_from_a_fresh_shortlist(monkeypatch: pytest.MonkeyPatch):
     status = _watchlist_status(shortlist=[_shortlist_row("AAA", close="10.00")])
-    entries, added, measured = module.measure(
+    entries, added, skipped, measured = module.measure(
         watchlist_status=status,
         existing_entries=[],
         as_of=AS_OF,
@@ -99,6 +99,7 @@ def test_measure_records_new_entries_from_a_fresh_shortlist(monkeypatch: pytest.
         data_url="https://data.alpaca.markets",
     )
     assert added == ["AAA-REG_DECISION-2026-10-01"]
+    assert skipped == []
     assert entries[0]["entry_close"] == "10.00"
     assert entries[0]["entry_xbi_close"] == "100.00"
     assert measured == 0  # nothing due yet on entry day
@@ -131,7 +132,7 @@ def test_measure_computes_a_due_checkpoint_from_real_fetched_bars(
     monkeypatch.setattr(module, "_fetch_full_series", fake_fetch)
 
     status = _watchlist_status(shortlist=[], as_of=datetime.combine(today, AS_OF.timetz()))
-    entries, added, measured = module.measure(
+    entries, added, skipped, measured = module.measure(
         watchlist_status=status,
         existing_entries=existing,
         as_of=datetime.combine(today, AS_OF.timetz()),
@@ -140,6 +141,7 @@ def test_measure_computes_a_due_checkpoint_from_real_fetched_bars(
         data_url="https://data.alpaca.markets",
     )
     assert added == []
+    assert skipped == []
     assert measured == 1
     checkpoint = entries[0]["checkpoints"]["1"]
     assert Decimal(checkpoint["return_pct"]) > 0
@@ -171,7 +173,7 @@ def test_measure_records_a_fetch_error_instead_of_crashing(monkeypatch: pytest.M
     monkeypatch.setattr(module, "_fetch_full_series", fake_fetch)
 
     status = _watchlist_status(shortlist=[], as_of=datetime.combine(today, AS_OF.timetz()))
-    entries, added, measured = module.measure(
+    entries, added, skipped, measured = module.measure(
         watchlist_status=status,
         existing_entries=existing,
         as_of=datetime.combine(today, AS_OF.timetz()),
@@ -180,13 +182,14 @@ def test_measure_records_a_fetch_error_instead_of_crashing(monkeypatch: pytest.M
         data_url="https://data.alpaca.markets",
     )
     assert measured == 0
+    assert skipped == []
     assert entries[0]["checkpoints"] == {}
     assert "simulated Alpaca outage" in entries[0]["measurement_errors"][0]["reason"]
 
 
 def test_measure_skips_entries_when_shortlist_is_empty_and_no_checkpoints_due():
     status = _watchlist_status(shortlist=[])
-    entries, added, measured = module.measure(
+    entries, added, skipped, measured = module.measure(
         watchlist_status=status,
         existing_entries=[],
         as_of=AS_OF,
@@ -196,6 +199,7 @@ def test_measure_skips_entries_when_shortlist_is_empty_and_no_checkpoints_due():
     )
     assert entries == []
     assert added == []
+    assert skipped == []
     assert measured == 0
 
 
@@ -211,7 +215,7 @@ def test_measure_never_overwrites_a_frozen_entry_on_a_rerun():
             "checkpoints": {},
         }
     ]
-    entries, added, measured = module.measure(
+    entries, added, skipped, measured = module.measure(
         watchlist_status=status,
         existing_entries=existing,
         as_of=AS_OF,
@@ -220,4 +224,32 @@ def test_measure_never_overwrites_a_frozen_entry_on_a_rerun():
         data_url="https://data.alpaca.markets",
     )
     assert added == []
+    assert skipped == []
     assert entries[0]["entry_close"] == "10.00"
+
+
+def test_measure_skips_a_shortlisted_candidate_with_no_real_close_without_crashing(
+    monkeypatch: pytest.MonkeyPatch,
+):
+    # Real failure reproduced live (BRNS, run #10 of the "Catalyst filter
+    # scan" workflow, 2026-09-22): a candidate kept in the shortlist
+    # despite unavailable technicals (SHORTLIST-1.0's own "unknown is not
+    # a failure" rule) has no real close to freeze as an entry price.
+    # This must be skipped and reported, not crash forward_measure.py.
+    good = _shortlist_row("AAA", close="10.00")
+    no_close = _shortlist_row("BRNS", close="10.00")
+    no_close["technical_facts"] = None
+    status = _watchlist_status(shortlist=[good, no_close])
+    entries, added, skipped, measured = module.measure(
+        watchlist_status=status,
+        existing_entries=[],
+        as_of=AS_OF,
+        api_key_id="k",
+        api_secret_key="s",
+        data_url="https://data.alpaca.markets",
+    )
+    assert added == ["AAA-REG_DECISION-2026-10-01"]
+    assert len(entries) == 1
+    assert len(skipped) == 1
+    assert skipped[0]["ticker"] == "BRNS"
+    assert measured == 0

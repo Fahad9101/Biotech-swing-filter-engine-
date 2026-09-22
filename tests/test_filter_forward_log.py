@@ -105,7 +105,7 @@ def test_record_new_entries_adds_new_and_never_touches_existing():
         }
     ]
     rows = [_shortlist_row("AAA", close="50.00"), _shortlist_row("BBB", close="7.00")]
-    updated, added = record_new_entries(
+    updated, added, skipped = record_new_entries(
         existing,
         rows,
         as_of=AS_OF,
@@ -114,9 +114,34 @@ def test_record_new_entries_adds_new_and_never_touches_existing():
         shortlist_parameters={},
     )
     assert added == ["BBB-REG_DECISION-2026-10-01"]
+    assert skipped == []
     assert len(updated) == 2
     aaa = next(e for e in updated if e["candidate_id"] == "AAA-REG_DECISION-2026-10-01")
     assert aaa["entry_close"] == "9.99"  # untouched, not recomputed to 50.00
+
+
+def test_record_new_entries_skips_a_candidate_with_no_real_close_without_crashing():
+    # Real failure reproduced live: SHORTLIST-1.0 deliberately keeps a
+    # candidate whose technicals are unavailable (flagged, not dropped),
+    # so a shortlisted row is not guaranteed to have a real close. This
+    # must not crash the whole run - it should be skipped and reported,
+    # to be picked up again once real technical data exists.
+    good = _shortlist_row("AAA", close="10.00")
+    no_close = _shortlist_row("BRNS", close="10.00")
+    no_close["technical_facts"] = None
+    updated, added, skipped = record_new_entries(
+        [],
+        [good, no_close],
+        as_of=AS_OF,
+        benchmark_close=Decimal("95.00"),
+        shortlist_definition="SHORTLIST-1.0",
+        shortlist_parameters={},
+    )
+    assert added == ["AAA-REG_DECISION-2026-10-01"]
+    assert len(updated) == 1
+    assert len(skipped) == 1
+    assert skipped[0]["ticker"] == "BRNS"
+    assert "without a real close" in skipped[0]["reason"]
 
 
 def test_due_checkpoints_only_returns_elapsed_unmeasured_weeks():
