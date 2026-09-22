@@ -188,6 +188,19 @@ def test_build_produces_a_real_watchlist_entry_from_discovery_through_scoring(
     )
     assert status["excluded_foreign_issuer"] == []
 
+    # shortlist wiring: CAPR's window_start (2026-11-22) is ~65 days past
+    # AS_OF (2026-09-18), beyond the default 56-day shortlist horizon - a
+    # real, computed exclusion, not a stub.
+    assert status["shortlist_definition"] == "SHORTLIST-1.0"
+    assert status["shortlist"] == []
+    assert status["shortlist_not_selected"][0]["ticker"] == "CAPR"
+    assert "OUTSIDE_TIME_WINDOW" in status["shortlist_not_selected"][0]["exclusion_reasons"]
+
+    # benchmark facts wiring: real XBI close from the same fetched series,
+    # not a placeholder.
+    assert status["benchmark"]["symbol"] == "XBI"
+    assert Decimal(status["benchmark"]["close"]) > 0
+
 
 def test_build_filters_out_candidates_whose_window_already_ended(
     monkeypatch: pytest.MonkeyPatch,
@@ -256,3 +269,4 @@ def test_build_returns_empty_watchlist_when_nothing_is_discovered(
 
     assert status["watchlist_count"] == 0
     assert status["watchlist"] == []
+    assert status["benchmark"] is None

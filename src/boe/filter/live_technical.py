@@ -24,13 +24,14 @@ from uuid import NAMESPACE_URL, uuid5
 
 from boe.enums import DataState
 from boe.ingestion.alpaca import fetch_daily_bars
-from boe.market import MarketSeries
+from boe.market import MarketSeries, point_in_time_series
 from boe.market_calendar import expected_latest_session_as_of
 from boe.models import FactorScore, ScorecardContract
 from boe.scoring import SubfactorEvidence
 from boe.technicals import (
     MIN_REQUIRED_SESSIONS,
     build_technical_snapshot,
+    investability_market_inputs,
     score_snapshot_technicals,
 )
 
@@ -102,6 +103,13 @@ def live_technical_score(
     factor_score = score_snapshot_technicals(
         snapshot, base_success_target=None, evidence=evidence, rules=rules
     )
+    # Same session used by the snapshot itself (point-in-time safe): a
+    # liquidity read of "as of today", not a future-leaking one.
+    market_inputs = investability_market_inputs(
+        security_series,
+        as_of_session=snapshot.session_date,
+        expected_latest_session=expected_latest_session,
+    )
     facts = {
         "close": str(snapshot.close),
         "sma20": str(snapshot.sma20),
@@ -110,13 +118,31 @@ def live_technical_score(
         "xbi_relative_return_20d_pct": str(snapshot.xbi_relative_return_20d_pct),
         "stale": snapshot.stale,
         "latest_session": snapshot.session_date.isoformat(),
+        "median_dollar_volume_20d": str(market_inputs.median_dollar_volume_20d),
     }
     return factor_score, facts
+
+
+def benchmark_facts(series: MarketSeries, *, as_of: datetime) -> dict[str, Any]:
+    """The benchmark's own real close as of today - not a technical score
+    (a symbol can't be scored relative to itself), just the anchor point
+    the forward-measurement log needs to compute XBI-relative returns
+    later without leaking future bars. point_in_time_series() itself
+    raises (no bars / snapshot post-dates cutoff) if there is nothing
+    real to report."""
+    trimmed = point_in_time_series(series, as_of.date())
+    latest = trimmed.bars[-1]
+    return {
+        "symbol": series.symbol,
+        "close": str(latest.adjusted_close),
+        "session_date": latest.session_date.isoformat(),
+    }
 
 
 __all__ = [
     "FETCH_WINDOW_DAYS",
     "MIN_REQUIRED_SESSIONS",
+    "benchmark_facts",
     "fetch_live_series",
     "live_technical_score",
 ]

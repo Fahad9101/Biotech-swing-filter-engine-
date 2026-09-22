@@ -570,6 +570,22 @@ def normalize_cash_burn(
     )
 
 
+def latest_basic_shares_outstanding(
+    facts: tuple[FinancialFact, ...],
+    as_of: datetime,
+) -> Decimal | None:
+    """Same source and as-of discipline as build_capital_structure_snapshot's
+    ``basic`` fact, but non-raising: callers that only need a market-cap
+    estimate (not a full dilution snapshot) should degrade to "unknown"
+    when a company hasn't reported EntityCommonStockSharesOutstanding by
+    ``as_of``, not lose an entire unrelated factor over it."""
+    eligible = financial_facts_as_of(facts, as_of)
+    basic = _latest_instant_fact(eligible, BASIC_SHARES_CONCEPTS, "shares")
+    if basic is None or basic.value <= 0:
+        return None
+    return basic.value
+
+
 def build_capital_structure_snapshot(
     *,
     issuer_id: str,

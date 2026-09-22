@@ -94,3 +94,63 @@ def test_render_html_includes_disclaimer_and_is_self_contained():
     # no external script/style references - fully self-contained
     assert "<link " not in html
     assert 'src="http' not in html
+
+
+SHORTLIST_STATUS = {
+    **STATUS,
+    "shortlist_definition": "SHORTLIST-1.0",
+    "shortlist_count": 1,
+    "shortlist": [
+        {
+            "ticker": "CAPR",
+            "company": "Capricor Therapeutics, Inc.",
+            "tier": 1,
+            "catalyst_type": "REG_DECISION",
+            "window_start": "2026-11-22",
+            "window_end": "2026-11-22",
+            "date_precision": "EXACT_DATE",
+            "market_cap_usd": "548000000",
+            "cash_dilution_facts": {"runway_at_catalyst_months": "20.6"},
+            "technical_facts": {"close": "9.43", "rsi14": "52.3"},
+            "flags": [],
+            "exclusion_reasons": [],
+            "source_url": "https://www.sec.gov/example/capr.htm",
+        }
+    ],
+    "shortlist_not_selected": [
+        {
+            "ticker": "GILD",
+            "tier": 1,
+            "exclusion_reasons": ["MARKET_CAP_ABOVE_MAX"],
+            "flags": [],
+        }
+    ],
+}
+
+
+def test_render_html_shows_shortlist_section_as_the_primary_view():
+    html = render_html(SHORTLIST_STATUS)
+    assert "<h2>Shortlist" in html
+    assert "1 of 1, SHORTLIST-1.0" in html
+    shortlist_block = html.split("<h2>Shortlist", 1)[1].split("<details>", 1)[0]
+    assert "CAPR" in shortlist_block
+
+
+def test_render_html_wraps_full_watchlist_in_collapsed_details_when_shortlist_present():
+    html = render_html(SHORTLIST_STATUS)
+    assert "<details>" in html
+    assert "Full watchlist (unfiltered)" in html
+
+
+def test_render_html_shows_not_selected_reasons():
+    html = render_html(SHORTLIST_STATUS)
+    assert "Not shortlisted" in html
+    assert "GILD" in html
+    assert "MARKET_CAP_ABOVE_MAX" in html
+
+
+def test_render_html_without_shortlist_key_keeps_the_legacy_single_table_layout():
+    html = render_html(STATUS)
+    assert "<h2>Shortlist" not in html
+    assert "Full watchlist (unfiltered)" not in html
+    assert "Not shortlisted" not in html
