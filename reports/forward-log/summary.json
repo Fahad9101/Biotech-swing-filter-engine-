@@ -1,0 +1,21 @@
+{
+  "by_checkpoint_week": {
+    "1": {
+      "measured_count": 0
+    },
+    "12": {
+      "measured_count": 0
+    },
+    "2": {
+      "measured_count": 0
+    },
+    "4": {
+      "measured_count": 0
+    },
+    "8": {
+      "measured_count": 0
+    }
+  },
+  "entry_count": 36,
+  "forward_log_definition": "FORWARD-LOG-1.0"
+}
